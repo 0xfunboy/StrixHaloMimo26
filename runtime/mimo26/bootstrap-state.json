@@ -1,0 +1,18 @@
+{
+  "schema": "strixhalomimo26-bootstrap-state-v1",
+  "started_at": "2026-09-22T07:18:06+02:00",
+  "source_commit": "a52b867f1b285c6a660ea182f297e4ad271c898c",
+  "branch": "mimo26/main",
+  "model1": "COMPLETE",
+  "model2": "WAITING_UPSTREAM",
+  "ds41_production_modified": false,
+  "ds41_services_modified": false,
+  "cuda_or_3090_used": false,
+  "finished_at": "2026-09-22T09:21:10+0200",
+  "model1_revision": "5711b268169967567844e1e560e8a3966da959b1",
+  "model1_total_bytes": 177767644228,
+  "model1_files": 90,
+  "model2_revision": "f6af40169a5e4624821773ef4486a5beec4d1da8",
+  "model2_gguf_count": 0,
+  "disk_free_after_bytes": 338769039360
+}

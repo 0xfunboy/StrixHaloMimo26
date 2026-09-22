@@ -1,0 +1,11 @@
+{
+  "schema": "mimo26-mixed-gguf-gate-v1",
+  "repo": "Baekpica/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF",
+  "revision": "f6af40169a5e4624821773ef4486a5beec4d1da8",
+  "files": 3,
+  "total_bytes": 18289,
+  "gguf_count": 0,
+  "ggufs": [],
+  "status": "WAITING_UPSTREAM",
+  "checked_at": "2026-09-22T08:56:49+0200"
+}

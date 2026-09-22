@@ -27,3 +27,6 @@ hosts.yml
 .cache/
 __pycache__/
 *.pyc
+*.bin
+*.pt
+*.pth

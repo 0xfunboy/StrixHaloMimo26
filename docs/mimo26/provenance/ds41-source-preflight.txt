@@ -1,0 +1,12 @@
+StrixHaloMimo26 bootstrap provenance
+captured_at=2026-09-22T07:18:06+02:00
+source_path=/home/funboy/StrixHaloClusterDS41
+source_head=a52b867f1b285c6a660ea182f297e4ad271c898c
+source_branch=exp/ds41-q2-001
+source_origin=https://github.com/0xfunboy/StrixHaloClusterDS41.git
+source_status_untracked_count=35
+new_path=/home/funboy/StrixHaloMimo26
+new_remote=https://github.com/0xfunboy/StrixHaloMimo26.git
+new_branch=mimo26/main
+disk_free_before_bytes=516557967360
+hardware=01-EVO-X3 + 02-EVO-X3 (Strix Halo only)
