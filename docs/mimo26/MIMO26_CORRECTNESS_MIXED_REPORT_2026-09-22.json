@@ -1,0 +1,112 @@
+{
+  "schema": "mimo26-correctness-mixed-report-v2",
+  "date": "2026-09-22",
+  "final_status": "PASS_CORRECTNESS_GATES",
+  "r6": {
+    "model_load": "PASS",
+    "quality": "NOT_EVALUATED",
+    "cause": "HARNESS_PROMPT_TOKEN_IDS_TYPE_ERROR",
+    "k2_restore": "PASS"
+  },
+  "r7": {
+    "model_load": "PASS",
+    "quality": "NOT_EVALUATED_OR_NOT_PERSISTED",
+    "run_completion": "INTERRUPTED",
+    "initial_stop_cause": "CAUSE_UNDETERMINED_EXTERNAL_STOP_OBSERVED",
+    "wrapper_runtime_max": "3h",
+    "wrapper_timeout_stop": "90s",
+    "cleanup_timeout": "YES_AFTER_INITIAL_STOP",
+    "k2_restore": "PASS"
+  },
+  "runner": {
+    "status": "PASS",
+    "exec_stop_post": true,
+    "progressive_load_quality": true,
+    "smoke_real_runner": "PASS"
+  },
+  "qkv": {
+    "status": "PASS",
+    "reference": "vllm#57508",
+    "merge_commit": "211e252d0b4f8429f9b15fc52bdfed07782c7f70",
+    "ckpt_tp": 4,
+    "patch_sha256": "eeb66fefbf1b63459e5712c031399f2d24d9ac05956c97b4e979ad03b901be72",
+    "tp4_exact": true,
+    "old_global_patch_negative": true,
+    "real_full_tp2_rel_l2": [
+      0.01045525074005127,
+      0.006900100503116846
+    ],
+    "real_swa_tp2_rel_l2": [
+      4.428077460261193e-8,
+      4.2375408071393394e-8
+    ]
+  },
+  "original": {
+    "revision": "5711b268169967567844e1e560e8a3966da959b1",
+    "run": "orig-tp2-qkv57508-sanity-001",
+    "load": "PASS",
+    "load_s": 277.7162857759977,
+    "tp": 2,
+    "pp": 1,
+    "model_memory_gib_per_rank": 79.44,
+    "kv_bytes_per_rank": 1073741824,
+    "quality": "PASS",
+    "sanity_passed": 6,
+    "sanity_total": 6,
+    "performance": "NOT_MEASURED_BY_DESIGN",
+    "cleanup": "PASS"
+  },
+  "mixed": {
+    "repo": "Baekpica/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF",
+    "revision": "b3794b22b6276f8120c340f52639f5eaa354a3fd",
+    "source_revision": "3b38d063180c3e4aed9691fdc735f3d10b266ee4",
+    "source_comparable": true,
+    "weight_files_identical": 67,
+    "integrity": "PASS",
+    "main_tensor_payload_bytes": 88771782144,
+    "all_weight_bytes": 93092184576,
+    "run": "mixed-single-correctness-002",
+    "node": "01-EVO-X3",
+    "runtime_commit": "58367713a6935c0810103378144008df32e3d5db",
+    "load": "PASS",
+    "load_s": 102.09575893999136,
+    "ctx": 4096,
+    "gpu_layers": "all",
+    "split_mode": "none",
+    "mem_available_before_gib": 119.33901977539062,
+    "mem_available_after_load_gib": 36.54961013793945,
+    "mem_available_delta_gib": 82.78940963745117,
+    "process_vm_swap_kb": 0,
+    "quality": "PASS",
+    "sanity_passed": 6,
+    "sanity_total": 6,
+    "sanity_prompt_tps_median_diagnostic": 57.02004473880432,
+    "sanity_decode_tps_median_diagnostic": 20.24988356316951,
+    "performance": "NOT_QUALIFIED_BENCHMARK",
+    "cleanup": "PASS",
+    "parallel": 1,
+    "mem_available_before_bytes": 127883239424,
+    "mem_available_after_load_bytes": 39059042304,
+    "mem_available_delta_bytes": 88824197120,
+    "confirmation_run": {
+      "run": "mixed-tp1-llama-sanity-001",
+      "runtime_commit": "97845c4f1ffae096d22ad772df396550f9f78306",
+      "quality": "PASS",
+      "sanity_passed": 5,
+      "sanity_total": 5,
+      "load_s": 110.11661194199405,
+      "diagnostic_prompt_tps_median": 57.02004473880432,
+      "diagnostic_decode_tps_median": 20.24988356316951,
+      "note": "Independent confirmation only; not the qualified performance campaign."
+    }
+  },
+  "final_state": {
+    "k2": "READY",
+    "rank0_http": 200,
+    "rank1_http": 200,
+    "paired_backend_http": 200,
+    "residual_mimo_model_processes": 0,
+    "compute_lock_held": false
+  },
+  "decision": "BENCHMARK_CORRECT_BASELINES_NEXT; SPECULATIVE_ONLY_AFTER_BASELINES"
+}

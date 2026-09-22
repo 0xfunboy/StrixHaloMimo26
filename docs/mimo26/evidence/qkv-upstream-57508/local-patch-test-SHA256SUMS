@@ -1,0 +1,3 @@
+eeb66fefbf1b63459e5712c031399f2d24d9ac05956c97b4e979ad03b901be72  /home/funboy/StrixHaloMimo26/benchmarks/mimo26/vllm_patch.py
+4fbebe4f82f7acb2c66a3cbdb15a488b1da237b17fb57ddd82e02ba57ca5e0c4  /home/funboy/StrixHaloMimo26/benchmarks/mimo26/test_qkv_57508_backport.py
+3b9b3ee33a2395b3e93e7e160c722d4a427bb1d679d72698dea8f77661a74942  /home/funboy/StrixHaloMimo26/benchmarks/mimo26/regressions/vllm_patch_global_qkv_wrong.py

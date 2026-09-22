@@ -1,0 +1,22 @@
+{
+  "epoch": "1790097752369426342",
+  "owner": "DS41",
+  "owner_state": "RUNNING",
+  "paired_backend_http": "200",
+  "preset": "dspark-k2-gfx1151",
+  "ranks": [
+    {
+      "active": true,
+      "health_http": "200",
+      "rank": 0
+    },
+    {
+      "active": true,
+      "health_http": "200",
+      "rank": 1
+    }
+  ],
+  "reason": "",
+  "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513",
+  "state": "READY"
+}

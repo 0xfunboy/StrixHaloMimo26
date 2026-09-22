@@ -1,0 +1,377 @@
+{
+  "cleanup": {
+    "at": "2026-09-22T19:27:25+0200",
+    "k2_state": "READY",
+    "status": "PASS"
+  },
+  "initial_cause": "NORMAL_COMPLETION",
+  "load": {
+    "command": [
+      "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/llama-server",
+      "-m",
+      "/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00001-of-00004.gguf",
+      "--device",
+      "ROCm0",
+      "--split-mode",
+      "none",
+      "-ngl",
+      "all",
+      "-c",
+      "4096",
+      "-b",
+      "512",
+      "-ub",
+      "128",
+      "-np",
+      "1",
+      "--no-cont-batching",
+      "-fa",
+      "auto",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "18331",
+      "--reasoning",
+      "off",
+      "--metrics"
+    ],
+    "finished_at": "2026-09-22T19:22:24+0200",
+    "load_s": 102.09575893999136,
+    "memavailable_delta_bytes": 88824197120,
+    "memory_accounting_note": "Host/UMA share physical memory; process PSS and MemAvailable delta are reported separately and are not summed.",
+    "memory_after": {
+      "Active": 2037350400,
+      "Active(anon)": 1453993984,
+      "Active(file)": 583356416,
+      "AnonHugePages": 0,
+      "AnonPages": 1403777024,
+      "Balloon": 0,
+      "Bounce": 0,
+      "Buffers": 24170496,
+      "Cached": 35131256832,
+      "CmaFree": 669396992,
+      "CmaTotal": 0,
+      "CommitLimit": 74194989056,
+      "Committed_AS": 7727329280,
+      "DirectMap1G": 114890375168,
+      "DirectMap2M": 20721958912,
+      "DirectMap4k": 374546432,
+      "Dirty": 1142784,
+      "FileHugePages": 2097152,
+      "FilePmdMapped": 0,
+      "HardwareCorrupted": 0,
+      "HugePages_Free": 0,
+      "HugePages_Rsvd": 0,
+      "HugePages_Surp": 0,
+      "HugePages_Total": 0,
+      "Hugepagesize": 2097152,
+      "Hugetlb": 0,
+      "Inactive": 34480635904,
+      "Inactive(anon)": 707678208,
+      "Inactive(file)": 33772957696,
+      "KReclaimable": 740085760,
+      "KernelStack": 15073280,
+      "Mapped": 1149878272,
+      "MemAvailable": 39059042304,
+      "MemFree": 5174198272,
+      "MemTotal": 131210121216,
+      "Mlocked": 0,
+      "NFS_Unstable": 0,
+      "PageTables": 62566400,
+      "Percpu": 37224448,
+      "SReclaimable": 740085760,
+      "SUnreclaim": 404156416,
+      "SecPageTables": 6701056,
+      "Shmem": 797032448,
+      "ShmemHugePages": 0,
+      "ShmemPmdMapped": 0,
+      "Slab": 1144242176,
+      "SwapCached": 576532480,
+      "SwapFree": 6288277504,
+      "SwapTotal": 8589930496,
+      "Unaccepted": 0,
+      "Unevictable": 67088384,
+      "VmallocChunk": 0,
+      "VmallocTotal": 35184372087808,
+      "VmallocUsed": 422371328,
+      "Writeback": 0,
+      "WritebackTmp": 0,
+      "Zswap": 0,
+      "Zswapped": 0
+    },
+    "memory_before": {
+      "Active": 1206296576,
+      "Active(anon)": 470470656,
+      "Active(file)": 735825920,
+      "AnonHugePages": 0,
+      "AnonPages": 1158135808,
+      "Balloon": 0,
+      "Bounce": 0,
+      "Buffers": 28860416,
+      "Cached": 9865232384,
+      "CmaFree": 3620016128,
+      "CmaTotal": 0,
+      "CommitLimit": 74194989056,
+      "Committed_AS": 5961076736,
+      "DirectMap1G": 114890375168,
+      "DirectMap2M": 20721958912,
+      "DirectMap4k": 374546432,
+      "Dirty": 1495040,
+      "FileHugePages": 2097152,
+      "FilePmdMapped": 0,
+      "HardwareCorrupted": 0,
+      "HugePages_Free": 0,
+      "HugePages_Rsvd": 0,
+      "HugePages_Surp": 0,
+      "HugePages_Total": 0,
+      "Hugepagesize": 2097152,
+      "Hugetlb": 0,
+      "Inactive": 9873219584,
+      "Inactive(anon)": 726704128,
+      "Inactive(file)": 9146515456,
+      "KReclaimable": 578949120,
+      "KernelStack": 14352384,
+      "Mapped": 142417920,
+      "MemAvailable": 127883239424,
+      "MemFree": 118620405760,
+      "MemTotal": 131210121216,
+      "Mlocked": 0,
+      "NFS_Unstable": 0,
+      "PageTables": 59330560,
+      "Percpu": 37224448,
+      "SReclaimable": 578949120,
+      "SUnreclaim": 393998336,
+      "SecPageTables": 6701056,
+      "Shmem": 11464704,
+      "ShmemHugePages": 0,
+      "ShmemPmdMapped": 0,
+      "Slab": 972947456,
+      "SwapCached": 572194816,
+      "SwapFree": 6287015936,
+      "SwapTotal": 8589930496,
+      "Unaccepted": 0,
+      "Unevictable": 0,
+      "VmallocChunk": 0,
+      "VmallocTotal": 35184372087808,
+      "VmallocUsed": 79245312,
+      "Writeback": 0,
+      "WritebackTmp": 0,
+      "Zswap": 0,
+      "Zswapped": 0
+    },
+    "model_id": "/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00001-of-00004.gguf",
+    "phase": "SERVER_HEALTHY",
+    "pid": 402253,
+    "process_smaps": {
+      "592d12804000-7ffc5bc4a000 ---p 00000000 00": 0,
+      "AnonHugePages": 0,
+      "Anonymous": 222949376,
+      "FilePmdMapped": 0,
+      "KSM": 0,
+      "LazyFree": 0,
+      "Locked": 0,
+      "Private_Clean": 285048832,
+      "Private_Dirty": 941408256,
+      "Private_Hugetlb": 0,
+      "Pss": 1227632640,
+      "Pss_Anon": 222949376,
+      "Pss_Dirty": 941408256,
+      "Pss_File": 219115520,
+      "Pss_Shmem": 785567744,
+      "Referenced": 1224011776,
+      "Rss": 1231286272,
+      "Shared_Clean": 4829184,
+      "Shared_Dirty": 0,
+      "Shared_Hugetlb": 0,
+      "ShmemPmdMapped": 0,
+      "Swap": 0,
+      "SwapPss": 0
+    },
+    "runtime_commit": "58367713a6935c0810103378144008df32e3d5db",
+    "server_log": "/home/funboy/.local/state/strixhalomimo26/windows/mixed-single-correctness-002/server.log",
+    "status": "PASS"
+  },
+  "quality": {
+    "persisted_at": "2026-09-22T19:22:30+0200",
+    "status": "PASS",
+    "tests": [
+      {
+        "finish_reason": "stop",
+        "name": "arithmetic",
+        "pass": true,
+        "prompt": "Compute 17*19. Return only the integer.",
+        "raw_choice": {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "323",
+            "role": "assistant"
+          }
+        },
+        "reason": "PASS",
+        "reasoning_content": null,
+        "text": "323",
+        "usage": {
+          "completion_tokens": 4,
+          "prompt_tokens": 22,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 26
+        },
+        "wall_s": 0.6497987369948532
+      },
+      {
+        "finish_reason": "stop",
+        "name": "extract",
+        "pass": true,
+        "prompt": "Read this exact token: ZEBRA-4821. Return only that token.",
+        "raw_choice": {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "ZEBRA-4821",
+            "role": "assistant"
+          }
+        },
+        "reason": "PASS",
+        "reasoning_content": null,
+        "text": "ZEBRA-4821",
+        "usage": {
+          "completion_tokens": 9,
+          "prompt_tokens": 28,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 37
+        },
+        "wall_s": 0.9012798049952835
+      },
+      {
+        "finish_reason": "stop",
+        "name": "json",
+        "pass": true,
+        "prompt": "Return only valid JSON with exactly these values: alpha is integer 7 and beta is string \"blue\".",
+        "raw_choice": {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "{\"alpha\": 7, \"beta\": \"blue\"}",
+            "role": "assistant"
+          }
+        },
+        "reason": "PASS",
+        "reasoning_content": null,
+        "text": "{\"alpha\": 7, \"beta\": \"blue\"}",
+        "usage": {
+          "completion_tokens": 13,
+          "prompt_tokens": 30,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 43
+        },
+        "wall_s": 1.1095987939916085
+      },
+      {
+        "finish_reason": "stop",
+        "name": "italian",
+        "pass": true,
+        "prompt": "Nel testo seguente il colore dichiarato \u00e8 cobalto. Rispondi solo con il nome del colore.",
+        "raw_choice": {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "Cobalto",
+            "role": "assistant"
+          }
+        },
+        "reason": "PASS",
+        "reasoning_content": null,
+        "text": "Cobalto",
+        "usage": {
+          "completion_tokens": 4,
+          "prompt_tokens": 34,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 38
+        },
+        "wall_s": 0.6758840779948514
+      },
+      {
+        "finish_reason": "stop",
+        "name": "english",
+        "pass": true,
+        "prompt": "Alice is first and Bob is second. Who is second? Return only the name.",
+        "raw_choice": {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "Bob",
+            "role": "assistant"
+          }
+        },
+        "reason": "PASS",
+        "reasoning_content": null,
+        "text": "Bob",
+        "usage": {
+          "completion_tokens": 2,
+          "prompt_tokens": 26,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 28
+        },
+        "wall_s": 0.5074780330032809
+      },
+      {
+        "finish_reason": "stop",
+        "name": "code_clamp",
+        "pass": true,
+        "prompt": "Return only Python code defining clamp(x, lo, hi). It must return lo when x < lo, hi when x > hi, otherwise x. Do not import anything and do not call other functions.",
+        "raw_choice": {
+          "finish_reason": "stop",
+          "index": 0,
+          "message": {
+            "content": "def clamp(x, lo, hi):\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x",
+            "role": "assistant"
+          }
+        },
+        "reason": "PASS",
+        "reasoning_content": null,
+        "text": "def clamp(x, lo, hi):\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x",
+        "usage": {
+          "completion_tokens": 32,
+          "prompt_tokens": 50,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 82
+        },
+        "wall_s": 2.1339806269970722
+      }
+    ],
+    "tests_completed": 6,
+    "thinking": false
+  },
+  "run_completion": "PASS",
+  "run_id": "mixed-single-correctness-002",
+  "schema": "mimo26-window-result-v1",
+  "workers": {
+    "rank0": {
+      "ActiveState": "inactive",
+      "ExecMainStatus": "0",
+      "InvocationID": "",
+      "Result": "success",
+      "SubState": "dead"
+    },
+    "rank1": {
+      "ActiveState": "not-applicable",
+      "ExecMainStatus": "0",
+      "InvocationID": "",
+      "Result": "not-applicable",
+      "SubState": "not-applicable"
+    }
+  }
+}

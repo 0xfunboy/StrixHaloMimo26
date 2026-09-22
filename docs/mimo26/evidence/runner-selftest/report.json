@@ -1,0 +1,44 @@
+{
+  "schema": "mimo26-runner-selftest-report-v1",
+  "status": "PASS",
+  "k2_real_touched": false,
+  "cases": {
+    "normal-001": {
+      "run_completion": "PASS",
+      "initial_cause": "NORMAL_COMPLETION",
+      "quality_status": "PASS",
+      "cleanup_status": "PASS",
+      "launch_count": 1
+    },
+    "worker-error-001": {
+      "run_completion": "FAILED",
+      "initial_cause": "WORKER_EXIT_7",
+      "quality_status": "NOT_EVALUATED",
+      "cleanup_status": "PASS",
+      "launch_count": 1
+    },
+    "work-timeout-001": {
+      "run_completion": "TIMEOUT",
+      "initial_cause": "WORK_TIMEOUT",
+      "quality_status": "NOT_EVALUATED",
+      "cleanup_status": "PASS",
+      "launch_count": 1
+    },
+    "interrupt-001": {
+      "run_completion": "INTERRUPTED",
+      "initial_cause": "COORDINATOR_INTERRUPTED",
+      "quality_status": "NOT_EVALUATED",
+      "cleanup_status": "PASS",
+      "launch_count": 1
+    }
+  },
+  "assertions": {
+    "normal_quality_persisted_before_cleanup": true,
+    "worker_error_not_overwritten": true,
+    "timeout_not_overwritten": true,
+    "interrupt_not_overwritten": true,
+    "missing_quality_not_evaluated": true,
+    "cleanup_pass_all": true,
+    "readback_does_not_relaunch": true
+  }
+}

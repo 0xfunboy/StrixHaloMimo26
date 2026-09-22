@@ -1,0 +1,19 @@
+{"event": "RUN_START", "iso": "2026-09-22T20:05:42+0200", "pid": 412954, "ts": 1790100342.170176}
+{"event": "K2_PRESTATE", "iso": "2026-09-22T20:05:42+0200", "state": "READY", "ts": 1790100342.360878}
+{"event": "K2_QUIESCE_START", "iso": "2026-09-22T20:05:42+0200", "ts": 1790100342.3616714}
+{"event": "K2_QUIESCED", "iso": "2026-09-22T20:05:52+0200", "ts": 1790100352.6405396}
+{"event": "COMPUTE_LOCK_ACQUIRED", "iso": "2026-09-22T20:05:52+0200", "ts": 1790100352.6421955}
+{"event": "RANK1_STARTED", "invocation": "21bee10b81ab4c47bbda94b88a01b065", "iso": "2026-09-22T20:05:53+0200", "ts": 1790100353.0541337}
+{"event": "RANK0_STARTED", "invocation": "ad2de9cacf764596b7ce6a633fa446dd", "iso": "2026-09-22T20:05:55+0200", "ts": 1790100355.0737731}
+{"event": "LOAD_OBSERVED", "iso": "2026-09-22T20:06:00+0200", "status": "IN_PROGRESS", "ts": 1790100360.9409623}
+{"event": "LOAD_OBSERVED", "iso": "2026-09-22T20:10:38+0200", "status": "PASS", "ts": 1790100638.4496078}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T20:10:38+0200", "status": "IN_PROGRESS", "tests_completed": 0, "ts": 1790100638.4508069}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T20:10:40+0200", "status": "IN_PROGRESS", "tests_completed": 1, "ts": 1790100640.7310479}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T20:10:44+0200", "status": "IN_PROGRESS", "tests_completed": 2, "ts": 1790100644.1609828}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T20:10:48+0200", "status": "IN_PROGRESS", "tests_completed": 3, "ts": 1790100648.7230144}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T20:10:49+0200", "status": "IN_PROGRESS", "tests_completed": 4, "ts": 1790100649.8940787}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T20:10:51+0200", "status": "IN_PROGRESS", "tests_completed": 5, "ts": 1790100651.080645}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T20:11:01+0200", "status": "PASS", "tests_completed": 6, "ts": 1790100661.3847506}
+{"event": "WORK_COMPLETE", "iso": "2026-09-22T20:11:08+0200", "r0": 0, "r1": 0, "ts": 1790100668.2593317}
+{"event": "CLEANUP_START", "iso": "2026-09-22T20:11:08+0200", "ts": 1790100668.3545725}
+{"event": "CLEANUP_DONE", "iso": "2026-09-22T20:16:02+0200", "k2_state": "READY", "status": "PASS", "ts": 1790100962.0467646}

@@ -1,0 +1,164 @@
+{
+  "status": "PASS",
+  "thinking": false,
+  "tests_completed": 6,
+  "tests": [
+    {
+      "name": "arithmetic",
+      "prompt": "Compute 17*19. Return only the integer.",
+      "pass": true,
+      "reason": "PASS",
+      "text": "323",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "wall_s": 0.6497987369948532,
+      "usage": {
+        "completion_tokens": 4,
+        "prompt_tokens": 22,
+        "total_tokens": 26,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "raw_choice": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "323"
+        }
+      }
+    },
+    {
+      "name": "extract",
+      "prompt": "Read this exact token: ZEBRA-4821. Return only that token.",
+      "pass": true,
+      "reason": "PASS",
+      "text": "ZEBRA-4821",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "wall_s": 0.9012798049952835,
+      "usage": {
+        "completion_tokens": 9,
+        "prompt_tokens": 28,
+        "total_tokens": 37,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "raw_choice": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "ZEBRA-4821"
+        }
+      }
+    },
+    {
+      "name": "json",
+      "prompt": "Return only valid JSON with exactly these values: alpha is integer 7 and beta is string \"blue\".",
+      "pass": true,
+      "reason": "PASS",
+      "text": "{\"alpha\": 7, \"beta\": \"blue\"}",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "wall_s": 1.1095987939916085,
+      "usage": {
+        "completion_tokens": 13,
+        "prompt_tokens": 30,
+        "total_tokens": 43,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "raw_choice": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"alpha\": 7, \"beta\": \"blue\"}"
+        }
+      }
+    },
+    {
+      "name": "italian",
+      "prompt": "Nel testo seguente il colore dichiarato è cobalto. Rispondi solo con il nome del colore.",
+      "pass": true,
+      "reason": "PASS",
+      "text": "Cobalto",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "wall_s": 0.6758840779948514,
+      "usage": {
+        "completion_tokens": 4,
+        "prompt_tokens": 34,
+        "total_tokens": 38,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "raw_choice": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Cobalto"
+        }
+      }
+    },
+    {
+      "name": "english",
+      "prompt": "Alice is first and Bob is second. Who is second? Return only the name.",
+      "pass": true,
+      "reason": "PASS",
+      "text": "Bob",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "wall_s": 0.5074780330032809,
+      "usage": {
+        "completion_tokens": 2,
+        "prompt_tokens": 26,
+        "total_tokens": 28,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "raw_choice": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Bob"
+        }
+      }
+    },
+    {
+      "name": "code_clamp",
+      "prompt": "Return only Python code defining clamp(x, lo, hi). It must return lo when x < lo, hi when x > hi, otherwise x. Do not import anything and do not call other functions.",
+      "pass": true,
+      "reason": "PASS",
+      "text": "def clamp(x, lo, hi):\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x",
+      "reasoning_content": null,
+      "finish_reason": "stop",
+      "wall_s": 2.1339806269970722,
+      "usage": {
+        "completion_tokens": 32,
+        "prompt_tokens": 50,
+        "total_tokens": 82,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "raw_choice": {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "def clamp(x, lo, hi):\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x"
+        }
+      }
+    }
+  ],
+  "persisted_at": "2026-09-22T19:22:30+0200"
+}

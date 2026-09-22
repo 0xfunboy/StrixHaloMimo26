@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "/home/funboy/.local/build/llama.cpp-mimo26-gfx1151/bin/llama-server",
+    "--model",
+    "/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00001-of-00004.gguf",
+    "--ctx-size",
+    "4096",
+    "--n-gpu-layers",
+    "all",
+    "--split-mode",
+    "none",
+    "--device",
+    "ROCm0",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18090",
+    "--jinja",
+    "--chat-template-kwargs",
+    "{\"enable_thinking\":false}"
+  ],
+  "pid": 420389
+}

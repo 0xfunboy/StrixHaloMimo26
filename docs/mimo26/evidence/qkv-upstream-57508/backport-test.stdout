@@ -1,0 +1,487 @@
+{
+  "schema": "mimo26-qkv-57508-backport-test-v1",
+  "ckpt_tp": 4,
+  "tolerance_relative_l2": 0.06,
+  "synthetic": [
+    {
+      "source": "synthetic",
+      "kind": "full",
+      "tp": 1,
+      "rank": 0,
+      "relative_l2": 0.0268514733761549,
+      "max_abs": 0.8656435012817383,
+      "exact_checkpoint_chunk": null
+    },
+    {
+      "source": "synthetic",
+      "kind": "full",
+      "tp": 2,
+      "rank": 0,
+      "relative_l2": 0.026958007365465164,
+      "max_abs": 0.5510396957397461,
+      "exact_checkpoint_chunk": null
+    },
+    {
+      "source": "synthetic",
+      "kind": "full",
+      "tp": 2,
+      "rank": 1,
+      "relative_l2": 0.026830563321709633,
+      "max_abs": 0.8656435012817383,
+      "exact_checkpoint_chunk": null
+    },
+    {
+      "source": "synthetic",
+      "kind": "full",
+      "tp": 4,
+      "rank": 0,
+      "relative_l2": 0.026424549520015717,
+      "max_abs": 0.17719197273254395,
+      "exact_checkpoint_chunk": true
+    },
+    {
+      "source": "synthetic",
+      "kind": "full",
+      "tp": 4,
+      "rank": 1,
+      "relative_l2": 0.02644326351583004,
+      "max_abs": 0.34053611755371094,
+      "exact_checkpoint_chunk": true
+    },
+    {
+      "source": "synthetic",
+      "kind": "full",
+      "tp": 4,
+      "rank": 2,
+      "relative_l2": 0.026456722989678383,
+      "max_abs": 0.5398244857788086,
+      "exact_checkpoint_chunk": true
+    },
+    {
+      "source": "synthetic",
+      "kind": "full",
+      "tp": 4,
+      "rank": 3,
+      "relative_l2": 0.02644289843738079,
+      "max_abs": 0.7088375091552734,
+      "exact_checkpoint_chunk": true
+    },
+    {
+      "source": "synthetic",
+      "kind": "swa",
+      "tp": 1,
+      "rank": 0,
+      "relative_l2": 0.026475775986909866,
+      "max_abs": 0.6542797088623047,
+      "exact_checkpoint_chunk": null
+    },
+    {
+      "source": "synthetic",
+      "kind": "swa",
+      "tp": 2,
+      "rank": 0,
+      "relative_l2": 0.02645815908908844,
+      "max_abs": 0.3215036392211914,
+      "exact_checkpoint_chunk": null
+    },
+    {
+      "source": "synthetic",
+      "kind": "swa",
+      "tp": 2,
+      "rank": 1,
+      "relative_l2": 0.026480039581656456,
+      "max_abs": 0.6542797088623047,
+      "exact_checkpoint_chunk": null
+    },
+    {
+      "source": "synthetic",
+      "kind": "swa",
+      "tp": 4,
+      "rank": 0,
+      "relative_l2": 0.026487303897738457,
+      "max_abs": 0.17240309715270996,
+      "exact_checkpoint_chunk": true
+    },
+    {
+      "source": "synthetic",
+      "kind": "swa",
+      "tp": 4,
+      "rank": 1,
+      "relative_l2": 0.026451032608747482,
+      "max_abs": 0.3215036392211914,
+      "exact_checkpoint_chunk": true
+    },
+    {
+      "source": "synthetic",
+      "kind": "swa",
+      "tp": 4,
+      "rank": 2,
+      "relative_l2": 0.02646634541451931,
+      "max_abs": 0.5540266036987305,
+      "exact_checkpoint_chunk": true
+    },
+    {
+      "source": "synthetic",
+      "kind": "swa",
+      "tp": 4,
+      "rank": 3,
+      "relative_l2": 0.0264879297465086,
+      "max_abs": 0.6542797088623047,
+      "exact_checkpoint_chunk": true
+    }
+  ],
+  "real": [
+    {
+      "source": "real",
+      "kind": "full",
+      "layer": 0,
+      "file": "model_pp0_ep0_shard0.safetensors",
+      "weight_shape": [
+        13568,
+        4096
+      ],
+      "scale_shape": [
+        108,
+        32
+      ],
+      "rows_per_chunk": 3392,
+      "scale_rows_per_chunk": 27,
+      "tp": 1,
+      "rank": 0,
+      "relative_l2": 0.0085755018517375,
+      "max_abs": 0.021052926778793335,
+      "mean_abs": 2.9207461921032518e-05,
+      "exact_checkpoint_chunk": null
+    },
+    {
+      "source": "real",
+      "kind": "full",
+      "layer": 0,
+      "file": "model_pp0_ep0_shard0.safetensors",
+      "weight_shape": [
+        13568,
+        4096
+      ],
+      "scale_shape": [
+        108,
+        32
+      ],
+      "rows_per_chunk": 3392,
+      "scale_rows_per_chunk": 27,
+      "tp": 2,
+      "rank": 0,
+      "relative_l2": 0.01045525074005127,
+      "max_abs": 0.01773509383201599,
+      "mean_abs": 3.2786418159957975e-05,
+      "exact_checkpoint_chunk": null
+    },
+    {
+      "source": "real",
+      "kind": "full",
+      "layer": 0,
+      "file": "model_pp0_ep0_shard0.safetensors",
+      "weight_shape": [
+        13568,
+        4096
+      ],
+      "scale_shape": [
+        108,
+        32
+      ],
+      "rows_per_chunk": 3392,
+      "scale_rows_per_chunk": 27,
+      "tp": 2,
+      "rank": 1,
+      "relative_l2": 0.006900100503116846,
+      "max_abs": 0.021052926778793335,
+      "mean_abs": 2.5628509320085868e-05,
+      "exact_checkpoint_chunk": null
+    },
+    {
+      "source": "real",
+      "kind": "full",
+      "layer": 0,
+      "file": "model_pp0_ep0_shard0.safetensors",
+      "weight_shape": [
+        13568,
+        4096
+      ],
+      "scale_shape": [
+        108,
+        32
+      ],
+      "rows_per_chunk": 3392,
+      "scale_rows_per_chunk": 27,
+      "tp": 4,
+      "rank": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "exact_checkpoint_chunk": true
+    },
+    {
+      "source": "real",
+      "kind": "full",
+      "layer": 0,
+      "file": "model_pp0_ep0_shard0.safetensors",
+      "weight_shape": [
+        13568,
+        4096
+      ],
+      "scale_shape": [
+        108,
+        32
+      ],
+      "rows_per_chunk": 3392,
+      "scale_rows_per_chunk": 27,
+      "tp": 4,
+      "rank": 1,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "exact_checkpoint_chunk": true
+    },
+    {
+      "source": "real",
+      "kind": "full",
+      "layer": 0,
+      "file": "model_pp0_ep0_shard0.safetensors",
+      "weight_shape": [
+        13568,
+        4096
+      ],
+      "scale_shape": [
+        108,
+        32
+      ],
+      "rows_per_chunk": 3392,
+      "scale_rows_per_chunk": 27,
+      "tp": 4,
+      "rank": 2,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "exact_checkpoint_chunk": true
+    },
+    {
+      "source": "real",
+      "kind": "full",
+      "layer": 0,
+      "file": "model_pp0_ep0_shard0.safetensors",
+      "weight_shape": [
+        13568,
+        4096
+      ],
+      "scale_shape": [
+        108,
+        32
+      ],
+      "rows_per_chunk": 3392,
+      "scale_rows_per_chunk": 27,
+      "tp": 4,
+      "rank": 3,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "exact_checkpoint_chunk": true
+    },
+    {
+      "source": "real",
+      "kind": "swa",
+      "layer": 1,
+      "file": "model_pp0_ep0_shard0.safetensors",
+      "weight_shape": [
+        14848,
+        4096
+      ],
+      "scale_shape": [
+        116,
+        32
+      ],
+      "rows_per_chunk": 3712,
+      "scale_rows_per_chunk": 29,
+      "tp": 1,
+      "rank": 0,
+      "relative_l2": 4.727354863121036e-08,
+      "max_abs": 1.4901161193847656e-08,
+      "mean_abs": 1.126015253261059e-10,
+      "exact_checkpoint_chunk": null
+    },
+    {
+      "source": "real",
+      "kind": "swa",
+      "layer": 1,
+      "file": "model_pp0_ep0_shard0.safetensors",
+      "weight_shape": [
+        14848,
+        4096
+      ],
+      "scale_shape": [
+        116,
+        32
+      ],
+      "rows_per_chunk": 3712,
+      "scale_rows_per_chunk": 29,
+      "tp": 2,
+      "rank": 0,
+      "relative_l2": 4.591483815374886e-08,
+      "max_abs": 7.450580596923828e-09,
+      "mean_abs": 1.1328173121771812e-10,
+      "exact_checkpoint_chunk": null
+    },
+    {
+      "source": "real",
+      "kind": "swa",
+      "layer": 1,
+      "file": "model_pp0_ep0_shard0.safetensors",
+      "weight_shape": [
+        14848,
+        4096
+      ],
+      "scale_shape": [
+        116,
+        32
+      ],
+      "rows_per_chunk": 3712,
+      "scale_rows_per_chunk": 29,
+      "tp": 2,
+      "rank": 1,
+      "relative_l2": 4.8625103943322756e-08,
+      "max_abs": 1.4901161193847656e-08,
+      "mean_abs": 1.1192131249559978e-10,
+      "exact_checkpoint_chunk": null
+    },
+    {
+      "source": "real",
+      "kind": "swa",
+      "layer": 1,
+      "file": "model_pp0_ep0_shard0.safetensors",
+      "weight_shape": [
+        14848,
+        4096
+      ],
+      "scale_shape": [
+        116,
+        32
+      ],
+      "rows_per_chunk": 3712,
+      "scale_rows_per_chunk": 29,
+      "tp": 4,
+      "rank": 0,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "exact_checkpoint_chunk": true
+    },
+    {
+      "source": "real",
+      "kind": "swa",
+      "layer": 1,
+      "file": "model_pp0_ep0_shard0.safetensors",
+      "weight_shape": [
+        14848,
+        4096
+      ],
+      "scale_shape": [
+        116,
+        32
+      ],
+      "rows_per_chunk": 3712,
+      "scale_rows_per_chunk": 29,
+      "tp": 4,
+      "rank": 1,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "exact_checkpoint_chunk": true
+    },
+    {
+      "source": "real",
+      "kind": "swa",
+      "layer": 1,
+      "file": "model_pp0_ep0_shard0.safetensors",
+      "weight_shape": [
+        14848,
+        4096
+      ],
+      "scale_shape": [
+        116,
+        32
+      ],
+      "rows_per_chunk": 3712,
+      "scale_rows_per_chunk": 29,
+      "tp": 4,
+      "rank": 2,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "exact_checkpoint_chunk": true
+    },
+    {
+      "source": "real",
+      "kind": "swa",
+      "layer": 1,
+      "file": "model_pp0_ep0_shard0.safetensors",
+      "weight_shape": [
+        14848,
+        4096
+      ],
+      "scale_shape": [
+        116,
+        32
+      ],
+      "rows_per_chunk": 3712,
+      "scale_rows_per_chunk": 29,
+      "tp": 4,
+      "rank": 3,
+      "relative_l2": 0.0,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "exact_checkpoint_chunk": true
+    }
+  ],
+  "negative_global_patch": [
+    {
+      "kind": "full",
+      "tp": 1,
+      "rank": 0,
+      "status": "WRONG_NUMERIC",
+      "relative_l2": 1.3706947565078735
+    },
+    {
+      "kind": "full",
+      "tp": 2,
+      "rank": 0,
+      "status": "WRONG_NUMERIC",
+      "relative_l2": 1.129177212715149
+    },
+    {
+      "kind": "full",
+      "tp": 2,
+      "rank": 1,
+      "status": "WRONG_NUMERIC",
+      "relative_l2": 1.5152335166931152
+    },
+    {
+      "kind": "swa",
+      "tp": 1,
+      "rank": 0,
+      "status": "WRONG_NUMERIC",
+      "relative_l2": 1.231715202331543
+    },
+    {
+      "kind": "swa",
+      "tp": 2,
+      "rank": 0,
+      "status": "WRONG_NUMERIC",
+      "relative_l2": 1.0493243932724
+    },
+    {
+      "kind": "swa",
+      "tp": 2,
+      "rank": 1,
+      "status": "WRONG_NUMERIC",
+      "relative_l2": 1.4243043661117554
+    }
+  ]
+}

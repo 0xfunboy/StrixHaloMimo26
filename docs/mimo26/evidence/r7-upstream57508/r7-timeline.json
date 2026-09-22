@@ -1,0 +1,104 @@
+{
+  "schema": "mimo26-r7-timeline-v1",
+  "run": "tp2-eager-triton-r7-upstream57508",
+  "wrapper_invocation": "cc3cca8e2002480d8a636ad12b7f1ae9",
+  "classification": {
+    "model_load": "PASS",
+    "quality": "NOT_EVALUATED_OR_NOT_PERSISTED",
+    "run_completion": "INTERRUPTED",
+    "k2_restore": "PASS",
+    "loader_correctness_end_to_end": "NOT_QUALIFIED",
+    "initial_stop_cause": "CAUSE_UNDETERMINED_EXTERNAL_STOP_WITH_CONCURRENT_RCCL_TIMEOUT"
+  },
+  "events": [
+    {
+      "time": "2026-09-22T15:25:00+02:00",
+      "event": "wrapper_active"
+    },
+    {
+      "time": "2026-09-22T15:25:10+02:00",
+      "event": "K2_off_recorded"
+    },
+    {
+      "time": "2026-09-22T15:25:11+02:00",
+      "event": "rank1_worker_started"
+    },
+    {
+      "time": "2026-09-22T15:25:13+02:00",
+      "event": "rank0_worker_started"
+    },
+    {
+      "time": "2026-09-22T15:29:43+02:00",
+      "event": "rank0_weights_loaded",
+      "detail": "255.18s"
+    },
+    {
+      "time": "2026-09-22T15:29:48+02:00",
+      "event": "rank0_model_loaded",
+      "detail": "79.44 GiB, 264.88s"
+    },
+    {
+      "time": "2026-09-22T15:35:09.989+02:00",
+      "event": "systemd_wrapper_stop_begins",
+      "detail": "source/caller not present in available logs"
+    },
+    {
+      "time": "2026-09-22T15:35:10+02:00",
+      "event": "rank1_collective_timeout_dump"
+    },
+    {
+      "time": "2026-09-22T15:35:10+02:00",
+      "event": "rank1_rccl_collective_timeout",
+      "detail": "ProcessGroupNCCL ALLGATHER_BASE timeout 600000ms; remote process exited/network error"
+    },
+    {
+      "time": "2026-09-22T15:35:10+02:00",
+      "event": "runner_enters_restore",
+      "detail": "runner_rc=143"
+    },
+    {
+      "time": "2026-09-22T15:35:11.884+02:00",
+      "event": "rank0_worker_exits",
+      "detail": "status=1"
+    },
+    {
+      "time": "2026-09-22T15:35:14.351+02:00",
+      "event": "rank1_worker_exits",
+      "detail": "status=1"
+    },
+    {
+      "time": "2026-09-22T15:35:20+02:00",
+      "event": "K2_rank_restart_begins"
+    },
+    {
+      "time": "2026-09-22T15:36:39.995+02:00",
+      "event": "wrapper_stop_timeout",
+      "detail": "TimeoutStopSec=90s -> SIGKILL"
+    }
+  ],
+  "systemd": {
+    "wrapper": {
+      "Type": "simple",
+      "RuntimeMaxSec": "3h",
+      "TimeoutStartSec": "90s",
+      "TimeoutStopSec": "90s",
+      "KillMode": "control-group",
+      "Result": "timeout",
+      "ExecMainCode": "killed",
+      "ExecMainStatus": "9/KILL"
+    },
+    "workers": {
+      "RuntimeMaxSec": "3600s at launch per runner script",
+      "KillMode": "control-group"
+    }
+  },
+  "interpretation": [
+    "Wrapper RuntimeMaxSec=3h did not expire.",
+    "The first control-plane journal event is systemd beginning to stop the wrapper at 15:35:09.989.",
+    "At effectively the same time rank1 reports a 600s RCCL/NCCL ALLGATHER_BASE timeout and remote-process/network-error condition.",
+    "Available user journals do not identify the caller that requested the wrapper stop, and do not establish whether the stop caused the collective failure or vice versa.",
+    "runner_rc=143 is the coordinator receiving SIGTERM after the stop began.",
+    "The later systemd Result=timeout refers to TimeoutStopSec=90s expiring during cleanup, followed by SIGKILL; it is not evidence of the initial cause.",
+    "Therefore the initial interruption cause remains undetermined."
+  ]
+}

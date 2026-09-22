@@ -1,0 +1,8 @@
+LoadState=loaded
+ActiveState=failed
+SubState=failed
+InvocationID=4f5cd34e04ed4fe8a07fb9dd738eab98
+Result=exit-code
+ExecMainCode=1
+ExecMainStatus=1
+ExecStart={ path=/home/funboy/.local/state/strixhalomimo26/perf/run-tp2-eager-triton-r6-qkv-global.sh ; argv[]=/home/funboy/.local/state/strixhalomimo26/perf/run-tp2-eager-triton-r6-qkv-global.sh ; ignore_errors=no ; start_time=[Tue 2026-09-22 13:23:53 CEST] ; stop_time=[Tue 2026-09-22 13:33:59 CEST] ; pid=289846 ; code=exited ; status=1 }

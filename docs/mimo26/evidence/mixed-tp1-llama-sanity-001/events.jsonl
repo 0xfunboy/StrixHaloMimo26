@@ -1,0 +1,18 @@
+{"event": "RUN_START", "iso": "2026-09-22T20:19:31+0200", "pid": 419989, "ts": 1790101171.7158756}
+{"event": "K2_PRESTATE", "iso": "2026-09-22T20:19:31+0200", "state": "READY", "ts": 1790101171.9228082}
+{"event": "K2_QUIESCE_START", "iso": "2026-09-22T20:19:31+0200", "ts": 1790101171.9292548}
+{"event": "K2_QUIESCED", "iso": "2026-09-22T20:19:40+0200", "ts": 1790101180.3490934}
+{"event": "COMPUTE_LOCK_ACQUIRED", "iso": "2026-09-22T20:19:40+0200", "ts": 1790101180.3506908}
+{"event": "RANK1_NOT_APPLICABLE", "iso": "2026-09-22T20:19:40+0200", "ts": 1790101180.3515081}
+{"event": "RANK0_STARTED", "invocation": "70454fa38ad64fc78984c5b9526cb9fd", "iso": "2026-09-22T20:19:40+0200", "ts": 1790101180.3617737}
+{"event": "LOAD_OBSERVED", "iso": "2026-09-22T20:19:41+0200", "status": "IN_PROGRESS", "ts": 1790101181.3724108}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T20:19:41+0200", "status": "NOT_EVALUATED", "tests_completed": 0, "ts": 1790101181.3757722}
+{"event": "LOAD_OBSERVED", "iso": "2026-09-22T20:21:30+0200", "status": "PASS", "ts": 1790101290.9852433}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T20:21:30+0200", "status": "IN_PROGRESS", "tests_completed": 0, "ts": 1790101290.986271}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T20:21:31+0200", "status": "IN_PROGRESS", "tests_completed": 1, "ts": 1790101291.994439}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T20:21:33+0200", "status": "IN_PROGRESS", "tests_completed": 2, "ts": 1790101293.0047312}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T20:21:34+0200", "status": "IN_PROGRESS", "tests_completed": 4, "ts": 1790101294.012747}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T20:21:35+0200", "status": "PASS", "tests_completed": 5, "ts": 1790101295.021555}
+{"event": "WORK_COMPLETE", "iso": "2026-09-22T20:21:36+0200", "r0": 0, "r1": 0, "ts": 1790101296.0335326}
+{"event": "CLEANUP_START", "iso": "2026-09-22T20:21:36+0200", "ts": 1790101296.094607}
+{"event": "CLEANUP_DONE", "iso": "2026-09-22T20:26:24+0200", "k2_state": "READY", "status": "PASS", "ts": 1790101584.391593}

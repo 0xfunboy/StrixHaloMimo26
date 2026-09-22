@@ -1,0 +1,299 @@
+{
+  "cleanup": {
+    "at": "2026-09-22T20:26:24+0200",
+    "k2_state": "READY",
+    "status": "PASS"
+  },
+  "initial_cause": "NORMAL_COMPLETION",
+  "load": {
+    "ctx_size": 4096,
+    "device": "ROCm0",
+    "finished_at": "2026-09-22T20:21:30+0200",
+    "gpu_layers": "all",
+    "load_s": 110.11661194199405,
+    "memory_after_load": {
+      "MemAvailable": "38325044 kB",
+      "MemTotal": "128134884 kB",
+      "SwapFree": "6208728 kB",
+      "SwapTotal": "8388604 kB"
+    },
+    "mlock": false,
+    "mmap_default": true,
+    "process_after_load": {
+      "RssAnon": "217916 kB",
+      "RssFile": "208468 kB",
+      "VmRSS": "1211664 kB",
+      "VmSize": "94181980 kB",
+      "VmSwap": "0 kB",
+      "majflt": 821,
+      "minflt": 247664,
+      "pid": 420389
+    },
+    "server_health": {
+      "status": "ok"
+    },
+    "split_mode": "none",
+    "status": "PASS"
+  },
+  "quality": {
+    "finished_at": "2026-09-22T20:21:34+0200",
+    "status": "PASS",
+    "tests": [
+      {
+        "finish_reason": "stop",
+        "http_status": 200,
+        "name": "arithmetic",
+        "pass": true,
+        "prompt": "Compute 17*19. Return only the integer.",
+        "reason": "PASS",
+        "reasoning": null,
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "323",
+                "role": "assistant"
+              }
+            }
+          ],
+          "created": 1790101291,
+          "id": "chatcmpl-4NavGCBfapsshJA3gIMTYbyzZ2FPU2WL",
+          "model": "/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00001-of-00004.gguf",
+          "object": "chat.completion",
+          "system_fingerprint": "b11098-97845c4f1",
+          "timings": {
+            "cache_n": 0,
+            "predicted_ms": 150.964,
+            "predicted_n": 4,
+            "predicted_per_second": 19.87228743276543,
+            "predicted_per_token_ms": 50.321333333333335,
+            "prompt_ms": 496.406,
+            "prompt_n": 22,
+            "prompt_per_second": 44.318561822379266,
+            "prompt_per_token_ms": 22.563909090909092
+          },
+          "usage": {
+            "completion_tokens": 4,
+            "prompt_tokens": 22,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 26
+          }
+        },
+        "text": "323",
+        "wall_s": 0.6665348410024308
+      },
+      {
+        "finish_reason": "stop",
+        "http_status": 200,
+        "name": "extract",
+        "pass": true,
+        "prompt": "Read this exact token: ZEBRA-4821. Return only that token.",
+        "reason": "PASS",
+        "reasoning": null,
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "ZEBRA-4821",
+                "role": "assistant"
+              }
+            }
+          ],
+          "created": 1790101292,
+          "id": "chatcmpl-oaN493HI2W7wr24Y1Zg5o2VZrKoE1wTG",
+          "model": "/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00001-of-00004.gguf",
+          "object": "chat.completion",
+          "system_fingerprint": "b11098-97845c4f1",
+          "timings": {
+            "cache_n": 0,
+            "predicted_ms": 393.101,
+            "predicted_n": 9,
+            "predicted_per_second": 20.351003940463137,
+            "predicted_per_token_ms": 49.137625,
+            "prompt_ms": 498.579,
+            "prompt_n": 28,
+            "prompt_per_second": 56.15960559911268,
+            "prompt_per_token_ms": 17.806392857142857
+          },
+          "usage": {
+            "completion_tokens": 9,
+            "prompt_tokens": 28,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 37
+          }
+        },
+        "text": "ZEBRA-4821",
+        "wall_s": 0.8977830650110263
+      },
+      {
+        "finish_reason": "stop",
+        "http_status": 200,
+        "name": "json",
+        "pass": true,
+        "prompt": "Return only valid JSON with exactly these values: alpha is integer 7 and beta is string \"blue\".",
+        "reason": "PASS",
+        "reasoning": null,
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "{\"alpha\": 7, \"beta\": \"blue\"}",
+                "role": "assistant"
+              }
+            }
+          ],
+          "created": 1790101293,
+          "id": "chatcmpl-IAHdTHb7hLRuEdh1U3jgy0qEEiP1kd2A",
+          "model": "/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00001-of-00004.gguf",
+          "object": "chat.completion",
+          "system_fingerprint": "b11098-97845c4f1",
+          "timings": {
+            "cache_n": 0,
+            "predicted_ms": 592.596,
+            "predicted_n": 13,
+            "predicted_per_second": 20.24988356316951,
+            "predicted_per_token_ms": 49.383,
+            "prompt_ms": 521.669,
+            "prompt_n": 30,
+            "prompt_per_second": 57.507729997373815,
+            "prompt_per_token_ms": 17.388966666666665
+          },
+          "usage": {
+            "completion_tokens": 13,
+            "prompt_tokens": 30,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 43
+          }
+        },
+        "text": "{\"alpha\": 7, \"beta\": \"blue\"}",
+        "wall_s": 1.12094438400527
+      },
+      {
+        "finish_reason": "stop",
+        "http_status": 200,
+        "name": "italian",
+        "pass": true,
+        "prompt": "Nel testo seguente il colore dichiarato \u00e8 cobalto. Rispondi solo con il nome del colore.",
+        "reason": "PASS",
+        "reasoning": null,
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "Cobalto",
+                "role": "assistant"
+              }
+            }
+          ],
+          "created": 1790101293,
+          "id": "chatcmpl-vEi5ZBdjN8uIBY36FZtSgfg8qDUzvArF",
+          "model": "/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00001-of-00004.gguf",
+          "object": "chat.completion",
+          "system_fingerprint": "b11098-97845c4f1",
+          "timings": {
+            "cache_n": 0,
+            "predicted_ms": 156.086,
+            "predicted_n": 4,
+            "predicted_per_second": 19.220173494099406,
+            "predicted_per_token_ms": 52.02866666666667,
+            "prompt_ms": 516.163,
+            "prompt_n": 34,
+            "prompt_per_second": 65.87066488686713,
+            "prompt_per_token_ms": 15.181264705882354
+          },
+          "usage": {
+            "completion_tokens": 4,
+            "prompt_tokens": 34,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 38
+          }
+        },
+        "text": "Cobalto",
+        "wall_s": 0.6791976139938924
+      },
+      {
+        "finish_reason": "stop",
+        "http_status": 200,
+        "name": "english",
+        "pass": true,
+        "prompt": "Alice is first and Bob is second. Who is second? Return only the name.",
+        "reason": "PASS",
+        "reasoning": null,
+        "response": {
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "Bob",
+                "role": "assistant"
+              }
+            }
+          ],
+          "created": 1790101294,
+          "id": "chatcmpl-dqf8PYnqB6Y08mcKw3um2e4mmdeGfsam",
+          "model": "/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00001-of-00004.gguf",
+          "object": "chat.completion",
+          "system_fingerprint": "b11098-97845c4f1",
+          "timings": {
+            "cache_n": 0,
+            "predicted_ms": 48.325,
+            "predicted_n": 2,
+            "predicted_per_second": 20.693222969477496,
+            "predicted_per_token_ms": 48.325,
+            "prompt_ms": 455.98,
+            "prompt_n": 26,
+            "prompt_per_second": 57.02004473880432,
+            "prompt_per_token_ms": 17.537692307692307
+          },
+          "usage": {
+            "completion_tokens": 2,
+            "prompt_tokens": 26,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 28
+          }
+        },
+        "text": "Bob",
+        "wall_s": 0.5112656279961811
+      }
+    ],
+    "thinking": false
+  },
+  "run_completion": "PASS",
+  "run_id": "mixed-tp1-llama-sanity-001",
+  "schema": "mimo26-window-result-v1",
+  "workers": {
+    "rank0": {
+      "ActiveState": "inactive",
+      "ExecMainStatus": "0",
+      "InvocationID": "",
+      "Result": "success",
+      "SubState": "dead"
+    },
+    "rank1": {
+      "ActiveState": "not-applicable",
+      "ExecMainStatus": "0",
+      "InvocationID": "",
+      "Result": "not-applicable",
+      "SubState": "not-applicable"
+    }
+  }
+}

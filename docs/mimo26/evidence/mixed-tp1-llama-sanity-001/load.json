@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "load_s": 110.11661194199405,
+  "finished_at": "2026-09-22T20:21:30+0200",
+  "server_health": {
+    "status": "ok"
+  },
+  "memory_after_load": {
+    "MemTotal": "128134884 kB",
+    "MemAvailable": "38325044 kB",
+    "SwapTotal": "8388604 kB",
+    "SwapFree": "6208728 kB"
+  },
+  "process_after_load": {
+    "pid": 420389,
+    "VmSize": "94181980 kB",
+    "VmRSS": "1211664 kB",
+    "RssAnon": "217916 kB",
+    "RssFile": "208468 kB",
+    "VmSwap": "0 kB",
+    "minflt": 247664,
+    "majflt": 821
+  },
+  "ctx_size": 4096,
+  "gpu_layers": "all",
+  "split_mode": "none",
+  "device": "ROCm0",
+  "mmap_default": true,
+  "mlock": false
+}

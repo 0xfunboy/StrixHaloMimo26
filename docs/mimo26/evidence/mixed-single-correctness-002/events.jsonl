@@ -1,0 +1,18 @@
+{"event": "RUN_START", "iso": "2026-09-22T19:20:31+0200", "pid": 401850, "ts": 1790097631.122835}
+{"event": "K2_PRESTATE", "iso": "2026-09-22T19:20:31+0200", "state": "READY", "ts": 1790097631.3257077}
+{"event": "K2_QUIESCE_START", "iso": "2026-09-22T19:20:31+0200", "ts": 1790097631.3265297}
+{"event": "K2_QUIESCED", "iso": "2026-09-22T19:20:42+0200", "ts": 1790097642.2651982}
+{"event": "COMPUTE_LOCK_ACQUIRED", "iso": "2026-09-22T19:20:42+0200", "ts": 1790097642.2667737}
+{"event": "RANK1_NOT_APPLICABLE", "iso": "2026-09-22T19:20:42+0200", "ts": 1790097642.2674177}
+{"event": "RANK0_STARTED", "invocation": "b908525d65ef40159c58d5ab69db8e0f", "iso": "2026-09-22T19:20:42+0200", "ts": 1790097642.2778249}
+{"event": "LOAD_OBSERVED", "iso": "2026-09-22T19:20:43+0200", "status": "IN_PROGRESS", "ts": 1790097643.287946}
+{"event": "LOAD_OBSERVED", "iso": "2026-09-22T19:22:24+0200", "status": "PASS", "ts": 1790097744.8611984}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T19:22:24+0200", "status": "IN_PROGRESS", "tests_completed": 0, "ts": 1790097744.8628092}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T19:22:25+0200", "status": "IN_PROGRESS", "tests_completed": 1, "ts": 1790097745.87157}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T19:22:26+0200", "status": "IN_PROGRESS", "tests_completed": 2, "ts": 1790097746.8812048}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T19:22:27+0200", "status": "IN_PROGRESS", "tests_completed": 4, "ts": 1790097747.8926857}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T19:22:28+0200", "status": "IN_PROGRESS", "tests_completed": 5, "ts": 1790097748.9038842}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-22T19:22:30+0200", "status": "PASS", "tests_completed": 6, "ts": 1790097750.921609}
+{"event": "WORK_COMPLETE", "iso": "2026-09-22T19:22:31+0200", "r0": 0, "r1": 0, "ts": 1790097751.9336479}
+{"event": "CLEANUP_START", "iso": "2026-09-22T19:22:31+0200", "ts": 1790097751.990138}
+{"event": "CLEANUP_DONE", "iso": "2026-09-22T19:27:25+0200", "k2_state": "READY", "status": "PASS", "ts": 1790098045.5294182}

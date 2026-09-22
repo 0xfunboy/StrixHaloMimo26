@@ -1,0 +1,392 @@
+{
+  "repo": "Baekpica/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF",
+  "revision": "b3794b22b6276f8120c340f52639f5eaa354a3fd",
+  "files": [
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-DFlash-Q8_0.gguf",
+      "size": 1565911104,
+      "lfs_sha256": "06a56d466017739918f2e1c9b771f08ac5cb92d7ea2173bbb5537a82284a7d8c"
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00001-of-00004.gguf",
+      "size": 22470644192,
+      "lfs_sha256": "388d09c34fc87f3ef990a19c670efbf3a542b28a0a8c619140a3a299321dae9d"
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00002-of-00004.gguf",
+      "size": 22464695232,
+      "lfs_sha256": "83bd3c37bff0541c5b9b76462a50ba112c506f80f8ab48a6d28e55830035ee3f"
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00003-of-00004.gguf",
+      "size": 22464695232,
+      "lfs_sha256": "aafd233222b53d1e17bc4a1419d5dc6c58e8a1db352b0078e72425d9c296baef"
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00004-of-00004.gguf",
+      "size": 21377729024,
+      "lfs_sha256": "940833b0947024b26fe64149c54c78c489065fdcb84ec596ecd262425c0ff7f6"
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/SHA256SUMS",
+      "size": 7419,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/artifact-manifest.json",
+      "size": 1503,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/calibration/SOURCE-LICENSES.md",
+      "size": 2774,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/calibration/imatrix.gguf",
+      "size": 496247072,
+      "lfs_sha256": "265cc19bc1470b95a9157d3b2fab893f325a9e2b6ef414cdbdfac4326c9ef8e3"
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/calibration/licenses/Apache-2.0.txt",
+      "size": 11358,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/calibration/licenses/GPL-3.0.txt",
+      "size": 35147,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/calibration/media-manifest.json",
+      "size": 635296,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/calibration/sources.json",
+      "size": 1753,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/calibration/text-manifest.json",
+      "size": 178909,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/chat_template.jinja",
+      "size": 3868,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/dflash-audit.json",
+      "size": 11718,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/dflash/config.json",
+      "size": 1246,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/dflash/dflash.py",
+      "size": 14255,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/dflash/mask_embedding.pt",
+      "size": 9882,
+      "lfs_sha256": "b35b379fe0497ffdc0d6407f502622237d9346e0d03f457ec574be60f6c2cee0"
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/dflash/runtime-contract.json",
+      "size": 1311,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/expected-mixed-inventory.json",
+      "size": 73775,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/final-imatrix-coverage.json",
+      "size": 574871,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/heldout-input-audit.json",
+      "size": 11871,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/imatrix-merge-audit.json",
+      "size": 918,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/mixed-artifact-audit.json",
+      "size": 51832,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/mmproj-MiMo-V2.6-Flash-RL-BF16.gguf",
+      "size": 2748509792,
+      "lfs_sha256": "7fd51cbab2e7a7c73b1d4dd2d7457dcf8175cb84db75ca8e96ff1750760b3709"
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/native-media-first-checkpoint-audit.json",
+      "size": 302,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/native-media-input-audit.json",
+      "size": 496,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/native-media-smoke-audit.json",
+      "size": 604,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/projector-bounds-audit.json",
+      "size": 502,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/python-toolchain.json",
+      "size": 470,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/quality-status.json",
+      "size": 105,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/quant-recipe.json",
+      "size": 831,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reference-holdout-review.json",
+      "size": 2253,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/README.md",
+      "size": 1946,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/audit_holdout_inputs.py",
+      "size": 3888,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/audit_imatrix_coverage.py",
+      "size": 2516,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/audit_reference.py",
+      "size": 2272,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/build_embedding_imatrix.sh",
+      "size": 465,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/build_finevideo.py",
+      "size": 2722,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/build_media.py",
+      "size": 2159,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/build_media_holdout.py",
+      "size": 2486,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/check_conversion.py",
+      "size": 1981,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/check_gguf_shards.py",
+      "size": 1652,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/compare_holdout.py",
+      "size": 4452,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/convert_mimo.py",
+      "size": 4675,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/download_source.sh",
+      "size": 382,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/embedding_imatrix.cpp",
+      "size": 5890,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/llama.cpp-LICENSE",
+      "size": 1078,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/merge_and_audit_imatrix.py",
+      "size": 2097,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/native_audio.py",
+      "size": 4029,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/native_vision.py",
+      "size": 4252,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/prepare_audio_embeddings.py",
+      "size": 2249,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/prepare_av_embeddings.py",
+      "size": 4022,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/prepare_visual_embeddings.py",
+      "size": 5998,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/reference-code/SGlang-LICENSE",
+      "size": 11346,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/reference-code/manifest.json",
+      "size": 1108,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/reference-code/sglang-dflash.py",
+      "size": 49865,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/reference-code/sglang-mimo-v2-processor.py",
+      "size": 92014,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/reference-code/sglang-mimo_v2.py",
+      "size": 66398,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/reference-code/sglang-mimo_vl.py",
+      "size": 18857,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/reference-code/sglang-models-mimo_audio.py",
+      "size": 52173,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/reference-code/sglang-multimodal-processors-mimo_audio.py",
+      "size": 12042,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/reference-code/sglang-qwen_vl.py",
+      "size": 48216,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/restore_finevideo_audio.py",
+      "size": 1941,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/run_mixed_quantization.sh",
+      "size": 1511,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/run_native_media_calibration.sh",
+      "size": 3001,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/run_text_calibration.sh",
+      "size": 668,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/test_media_contract.py",
+      "size": 1546,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/reproduction/verify_mixed_artifacts.py",
+      "size": 4540,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/tensor-types.txt",
+      "size": 17967,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/text-final-coverage.json",
+      "size": 568854,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/text-normalization-audit.json",
+      "size": 1202,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/toolchain-pins.json",
+      "size": 178,
+      "lfs_sha256": null
+    },
+    {
+      "path": "MQ-IQ2-XXS-XS-Q8-MM-BF16/video-patch-weight-audit.json",
+      "size": 575,
+      "lfs_sha256": null
+    },
+    {
+      "path": "README.md",
+      "size": 13016,
+      "lfs_sha256": null
+    },
+    {
+      "path": "chat_template.jinja",
+      "size": 3868,
+      "lfs_sha256": null
+    }
+  ],
+  "total_bytes": 93591099014
+}
