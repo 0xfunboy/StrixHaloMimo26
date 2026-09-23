@@ -1,0 +1,30 @@
+{
+  "schema": "mimo26-quality-delivery-verification-v1",
+  "verified_at": "2026-09-23T14:10:45+0200",
+  "source_freeze": {
+    "status": "PASS",
+    "files_checked": 30,
+    "index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337"
+  },
+  "original_run_artifacts_unchanged": 276,
+  "byte_identical_archived_files": 276,
+  "resident_lifecycle_files_unchanged": 3,
+  "frozen_evaluator_recomputed": "PASS",
+  "frozen_evaluator_command": [
+    "/usr/bin/python3",
+    "/home/funboy/StrixHaloMimo26/docs/mimo26/quality-retention-001/sources/evaluate.py",
+    "--root",
+    "/home/funboy/StrixHaloMimo26/docs/mimo26/quality-retention-001",
+    "--check"
+  ],
+  "check_stdout_sha256": "51ca04a2e658c9052c92909f6eea5447acec4c3c58f086634e8ccda9ea8796cc",
+  "preparation_commit": "6c32e7509db1920c2e78c985ff913c8c8d83af18",
+  "paired_evaluable_cases": 24,
+  "peer_rank1_crosscheck": "PASS",
+  "report_sha256": "f5ee941a5b1bdc25cf1ab63cb0d07914dda93e85c6a8baf69f19f70b9ea69b54",
+  "summary_sha256": "b2d7cd94287424411cd251861a30ff6db84d9902601c6c66f98327a4498d89c2",
+  "source_index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337",
+  "new_gpu_calls_during_verification": 0,
+  "push_or_deployment": false,
+  "packaging_scripts_role": "Posthoc delivery metadata only, not preregistered inference collectors or modified scoring rules."
+}

@@ -1,9 +1,5 @@
 {
-  "campaign": "QUALITY-RETENTION-001",
-  "phase": "TERMINAL_COMPLETE",
-  "updated_at": "2026-09-23T14:10:45+0200",
-  "preparation_commit": "6c32e7509db1920c2e78c985ff913c8c8d83af18",
-  "source_index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337",
+  "status": "QUALITY_EVALUATION_CHECK_PASS",
   "gates": {
     "EXPERIMENT_COMPLETION": "COMPLETE",
     "SOURCE_FREEZE": "PASS",
@@ -42,13 +38,13 @@
       "final_live": "PASS"
     }
   },
-  "pair_counts": {
+  "paired": {
     "BOTH_PASS": 20,
     "A_PASS_B_FAIL": 1,
     "BOTH_FAIL": 2,
     "A_FAIL_B_PASS": 1
   },
-  "run_A": "quality-retention-001-A-mixed-001",
-  "run_B": "quality-retention-001-B-original-001",
-  "next_exact_action": "Deliver verified results and preserve all artifacts and K2. No new GPU work, retries, tuning, deployment or push authorized."
+  "regressions": [
+    "REASON-03"
+  ]
 }

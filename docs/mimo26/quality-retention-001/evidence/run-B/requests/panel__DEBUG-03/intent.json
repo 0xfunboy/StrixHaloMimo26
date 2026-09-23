@@ -1,0 +1,24 @@
+{
+  "campaign": "QUALITY-RETENTION-001",
+  "run_id": "quality-retention-001-B-original-001",
+  "request_id": "quality-retention-001-B-original-001/B/panel/DEBUG-03",
+  "case_id": "DEBUG-03",
+  "arm": "B",
+  "rank": 0,
+  "phase": "panel",
+  "state": "IN_FLIGHT",
+  "created_at": "2026-09-23T13:45:28+0200",
+  "source_index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337",
+  "input_ids_sha256": "3284322996d11cf0dd689a6276f7fbebb9e0ba727522e057274efc43b8bbe6e5",
+  "output_cap": 1024,
+  "sampling": {
+    "temperature": 0.0,
+    "seed": 1,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "ignore_eos": false,
+    "thinking": false,
+    "prefix_reuse": false
+  }
+}

@@ -1,0 +1,2898 @@
+{
+  "schema": "mimo26-quality-paired-summary-v1",
+  "campaign": "QUALITY-RETENTION-001",
+  "source_freeze": {
+    "status": "PASS",
+    "files_checked": 30,
+    "index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337"
+  },
+  "preregistration": {
+    "frozen_at": "2026-09-23T13:23:07+0200",
+    "case_order": [
+      "CODE-01",
+      "CODE-02",
+      "CODE-03",
+      "CODE-04",
+      "DEBUG-01",
+      "DEBUG-02",
+      "DEBUG-03",
+      "DEBUG-04",
+      "STRUCT-01",
+      "STRUCT-02",
+      "STRUCT-03",
+      "STRUCT-04",
+      "DOC-01",
+      "DOC-02",
+      "DOC-03",
+      "DOC-04",
+      "OPS-01",
+      "OPS-02",
+      "OPS-03",
+      "OPS-04",
+      "REASON-01",
+      "REASON-02",
+      "REASON-03",
+      "REASON-04"
+    ],
+    "cap_per_arm": 16384
+  },
+  "planned_cases_per_arm": 24,
+  "planned_completions": 48,
+  "evaluable_pairs": 24,
+  "pair_counts": {
+    "BOTH_PASS": 20,
+    "A_PASS_B_FAIL": 1,
+    "BOTH_FAIL": 2,
+    "A_FAIL_B_PASS": 1
+  },
+  "per_family": {
+    "Codice": {
+      "planned": 4,
+      "A": {
+        "PASS": 4
+      },
+      "B": {
+        "PASS": 4
+      },
+      "paired": {
+        "BOTH_PASS": 4
+      }
+    },
+    "Debugging": {
+      "planned": 4,
+      "A": {
+        "PASS": 4
+      },
+      "B": {
+        "PASS": 4
+      },
+      "paired": {
+        "BOTH_PASS": 4
+      }
+    },
+    "Dati strutturati": {
+      "planned": 4,
+      "A": {
+        "PASS": 4
+      },
+      "B": {
+        "PASS": 4
+      },
+      "paired": {
+        "BOTH_PASS": 4
+      }
+    },
+    "Documenti": {
+      "planned": 4,
+      "A": {
+        "PASS": 4
+      },
+      "B": {
+        "PASS": 3,
+        "FAIL_SEMANTIC": 1
+      },
+      "paired": {
+        "BOTH_PASS": 3,
+        "A_PASS_B_FAIL": 1
+      }
+    },
+    "Diagnosi e pianificazione": {
+      "planned": 4,
+      "A": {
+        "PASS": 4
+      },
+      "B": {
+        "PASS": 4
+      },
+      "paired": {
+        "BOTH_PASS": 4
+      }
+    },
+    "Ragionamento vincolato": {
+      "planned": 4,
+      "A": {
+        "PASS": 1,
+        "FAIL_SEMANTIC": 2,
+        "FAIL_FORMAT": 1
+      },
+      "B": {
+        "PASS": 2,
+        "FAIL_SEMANTIC": 2
+      },
+      "paired": {
+        "BOTH_PASS": 1,
+        "BOTH_FAIL": 2,
+        "A_FAIL_B_PASS": 1
+      }
+    }
+  },
+  "regressions": [
+    "REASON-03"
+  ],
+  "critical_regressions": [],
+  "critical_violations_by_arm": {
+    "A": [],
+    "B": []
+  },
+  "arms": {
+    "A": {
+      "run_id": "quality-retention-001-A-mixed-001",
+      "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/raw-results.jsonl",
+      "raw_sha256": "9021b395ab8e3f398921fddfdc3c9e92700cff2922687b271677b3a605762575",
+      "raw_records": 36,
+      "issues": [],
+      "sanity": {
+        "preflight": {
+          "status": "PASS",
+          "cases": [
+            {
+              "case_id": "SANITY-arithmetic",
+              "status": "PASS",
+              "critical_violations": [],
+              "request_id": "quality-retention-001-A-mixed-001/A/preflight/SANITY-arithmetic",
+              "record_sha256": "b22c06c6a504a529cfa87f5637fb513f367cbc40df23455a621ae3c95c6c9125",
+              "output_tokens": 4,
+              "finish_reason": "eos",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/preflight__SANITY-arithmetic/result.json"
+            },
+            {
+              "case_id": "SANITY-extract",
+              "status": "PASS",
+              "critical_violations": [],
+              "request_id": "quality-retention-001-A-mixed-001/A/preflight/SANITY-extract",
+              "record_sha256": "a74c809e17af55cf79ce2c71a6c0d6f9e0232929a0410d9d85fa2b704d16a676",
+              "output_tokens": 9,
+              "finish_reason": "eos",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/preflight__SANITY-extract/result.json"
+            },
+            {
+              "case_id": "SANITY-json",
+              "status": "PASS",
+              "critical_violations": [],
+              "parsed": {
+                "alpha": 7,
+                "beta": "blue"
+              },
+              "request_id": "quality-retention-001-A-mixed-001/A/preflight/SANITY-json",
+              "record_sha256": "8d011ad223bc00e294d0ec782287e156e3ca189f05984b107019d05d463d7bd6",
+              "output_tokens": 13,
+              "finish_reason": "eos",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/preflight__SANITY-json/result.json"
+            },
+            {
+              "case_id": "SANITY-italian",
+              "status": "PASS",
+              "critical_violations": [],
+              "request_id": "quality-retention-001-A-mixed-001/A/preflight/SANITY-italian",
+              "record_sha256": "43ff9b63cc106c575f3528934180e8f2b85ff30d177ba34f6fd62e41c05937a7",
+              "output_tokens": 4,
+              "finish_reason": "eos",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/preflight__SANITY-italian/result.json"
+            },
+            {
+              "case_id": "SANITY-english",
+              "status": "PASS",
+              "critical_violations": [],
+              "request_id": "quality-retention-001-A-mixed-001/A/preflight/SANITY-english",
+              "record_sha256": "4084a850023690a33a7fab43952852e7e1e61c9c6ea2e6486120c8fa81b77b72",
+              "output_tokens": 2,
+              "finish_reason": "eos",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/preflight__SANITY-english/result.json"
+            },
+            {
+              "case_id": "SANITY-code_clamp",
+              "status": "PASS",
+              "tests": [
+                {
+                  "index": 0,
+                  "pass": true,
+                  "input_unchanged": true,
+                  "actual_type": "int",
+                  "actual_preview": "5"
+                },
+                {
+                  "index": 1,
+                  "pass": true,
+                  "input_unchanged": true,
+                  "actual_type": "int",
+                  "actual_preview": "0"
+                },
+                {
+                  "index": 2,
+                  "pass": true,
+                  "input_unchanged": true,
+                  "actual_type": "int",
+                  "actual_preview": "10"
+                },
+                {
+                  "index": 3,
+                  "pass": true,
+                  "input_unchanged": true,
+                  "actual_type": "int",
+                  "actual_preview": "3"
+                }
+              ],
+              "critical_violations": [],
+              "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+              "code_sha256": "68561f3d134a950c8c5669ffa883345016359926ccd75c1c19bc25676245b757",
+              "request_id": "quality-retention-001-A-mixed-001/A/preflight/SANITY-code_clamp",
+              "record_sha256": "7ba41bd0438312be24dbdf330d0dfafa2d9ac079d25be7e901907e6c7429cf57",
+              "output_tokens": 32,
+              "finish_reason": "eos",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/preflight__SANITY-code_clamp/result.json"
+            }
+          ]
+        },
+        "postflight": {
+          "status": "PASS",
+          "cases": [
+            {
+              "case_id": "SANITY-arithmetic",
+              "status": "PASS",
+              "critical_violations": [],
+              "request_id": "quality-retention-001-A-mixed-001/A/postflight/SANITY-arithmetic",
+              "record_sha256": "525c166f0abfcb467789737379e22075ea2d64d16cea266c8aeac1967bb1aa33",
+              "output_tokens": 4,
+              "finish_reason": "eos",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/postflight__SANITY-arithmetic/result.json"
+            },
+            {
+              "case_id": "SANITY-extract",
+              "status": "PASS",
+              "critical_violations": [],
+              "request_id": "quality-retention-001-A-mixed-001/A/postflight/SANITY-extract",
+              "record_sha256": "3e21ad6b38bfde8255855e26d8a9ef54d6633ceb7540a51bc3231e763f0a43fc",
+              "output_tokens": 9,
+              "finish_reason": "eos",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/postflight__SANITY-extract/result.json"
+            },
+            {
+              "case_id": "SANITY-json",
+              "status": "PASS",
+              "critical_violations": [],
+              "parsed": {
+                "alpha": 7,
+                "beta": "blue"
+              },
+              "request_id": "quality-retention-001-A-mixed-001/A/postflight/SANITY-json",
+              "record_sha256": "76e825b58a37d3e0c8f66012f7753e6ea24708aa43c34d02e9dec80cb76ee853",
+              "output_tokens": 13,
+              "finish_reason": "eos",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/postflight__SANITY-json/result.json"
+            },
+            {
+              "case_id": "SANITY-italian",
+              "status": "PASS",
+              "critical_violations": [],
+              "request_id": "quality-retention-001-A-mixed-001/A/postflight/SANITY-italian",
+              "record_sha256": "b4825db743efa723e7afc5ebbe9367799ae2169fa410c639c79e6c88a10953cb",
+              "output_tokens": 4,
+              "finish_reason": "eos",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/postflight__SANITY-italian/result.json"
+            },
+            {
+              "case_id": "SANITY-english",
+              "status": "PASS",
+              "critical_violations": [],
+              "request_id": "quality-retention-001-A-mixed-001/A/postflight/SANITY-english",
+              "record_sha256": "bc30fc1c2e896c37a7cd53da4328b628276b94bffebdd20f4173706ac9975eb1",
+              "output_tokens": 2,
+              "finish_reason": "eos",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/postflight__SANITY-english/result.json"
+            },
+            {
+              "case_id": "SANITY-code_clamp",
+              "status": "PASS",
+              "tests": [
+                {
+                  "index": 0,
+                  "pass": true,
+                  "input_unchanged": true,
+                  "actual_type": "int",
+                  "actual_preview": "5"
+                },
+                {
+                  "index": 1,
+                  "pass": true,
+                  "input_unchanged": true,
+                  "actual_type": "int",
+                  "actual_preview": "0"
+                },
+                {
+                  "index": 2,
+                  "pass": true,
+                  "input_unchanged": true,
+                  "actual_type": "int",
+                  "actual_preview": "10"
+                },
+                {
+                  "index": 3,
+                  "pass": true,
+                  "input_unchanged": true,
+                  "actual_type": "int",
+                  "actual_preview": "3"
+                }
+              ],
+              "critical_violations": [],
+              "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+              "code_sha256": "68561f3d134a950c8c5669ffa883345016359926ccd75c1c19bc25676245b757",
+              "request_id": "quality-retention-001-A-mixed-001/A/postflight/SANITY-code_clamp",
+              "record_sha256": "ce7bcd4e1d6f3b057cf36e952102dc5a36cbdbef9081771de6ef292e009121fe",
+              "output_tokens": 32,
+              "finish_reason": "eos",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/postflight__SANITY-code_clamp/result.json"
+            }
+          ]
+        }
+      },
+      "run_completion": "PASS",
+      "initial_cause": "NORMAL_COMPLETION",
+      "cleanup": {
+        "at": "2026-09-23T13:33:46+0200",
+        "k2_state": "READY",
+        "status": "PASS"
+      },
+      "restore_receipt": {
+        "epoch": "1790162943675581168",
+        "owner": "DS41",
+        "owner_state": "RUNNING",
+        "paired_backend_http": "200",
+        "preset": "dspark-k2-gfx1151",
+        "ranks": [
+          {
+            "active": true,
+            "health_http": "200",
+            "rank": 0
+          },
+          {
+            "active": true,
+            "health_http": "200",
+            "rank": 1
+          }
+        ],
+        "reason": "",
+        "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513",
+        "state": "READY"
+      },
+      "restore_pass": true,
+      "launch_count": 1,
+      "load": {
+        "status": "PASS",
+        "load_s": 113.45737157599069,
+        "finished_at": "2026-09-23T13:26:36+0200",
+        "pid": 631703,
+        "runtime_commit": "58367713a6935c0810103378144008df32e3d5db",
+        "binary_sha256": "5898a81b08e919c507e09fb4252265c5ee3b8373cef13edc475cf267415cd8c7",
+        "command": [
+          "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/llama-server",
+          "-m",
+          "/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00001-of-00004.gguf",
+          "--device",
+          "ROCm0",
+          "--split-mode",
+          "none",
+          "-ngl",
+          "all",
+          "-c",
+          "4096",
+          "-b",
+          "512",
+          "-ub",
+          "128",
+          "-np",
+          "1",
+          "--no-cont-batching",
+          "-fa",
+          "auto",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "18342",
+          "--reasoning",
+          "off",
+          "--metrics"
+        ],
+        "memory_before": {
+          "observed_at": "2026-09-23T13:24:43+0200",
+          "mem_bytes": {
+            "MemTotal": 131210121216,
+            "MemAvailable": 127167447040,
+            "SwapTotal": 8589930496,
+            "SwapFree": 7017377792
+          },
+          "process": {
+            "VmSize": 37310464,
+            "VmRSS": 26210304,
+            "VmSwap": 0,
+            "pid": 631700,
+            "minflt": 4669,
+            "majflt": 1,
+            "io": {
+              "rchar": 2928438,
+              "wchar": 877,
+              "syscr": 386,
+              "syscw": 5,
+              "read_bytes": 831488,
+              "write_bytes": 8192,
+              "cancelled_write_bytes": 0
+            }
+          }
+        },
+        "memory_after": {
+          "observed_at": "2026-09-23T13:26:36+0200",
+          "mem_bytes": {
+            "MemTotal": 131210121216,
+            "MemAvailable": 38719889408,
+            "SwapTotal": 8589930496,
+            "SwapFree": 7013040128
+          },
+          "process": {
+            "VmSize": 96140251136,
+            "VmRSS": 1232343040,
+            "VmSwap": 0,
+            "pid": 631703,
+            "minflt": 242901,
+            "majflt": 423,
+            "io": {
+              "rchar": 87735729027,
+              "wchar": 305384,
+              "syscr": 87508,
+              "syscw": 194,
+              "read_bytes": 87780048896,
+              "write_bytes": 12288,
+              "cancelled_write_bytes": 0
+            }
+          }
+        },
+        "source_freeze": {
+          "status": "PASS",
+          "files_checked": 30,
+          "index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337"
+        },
+        "input_checks": "input-checks.json"
+      }
+    },
+    "B": {
+      "run_id": "quality-retention-001-B-original-001",
+      "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/raw-results.jsonl",
+      "raw_sha256": "bc5deeab16979d3dd473b8cb98a56760663ae83156c46fc33cbdbe8232015351",
+      "raw_records": 36,
+      "issues": [],
+      "sanity": {
+        "preflight": {
+          "status": "PASS",
+          "cases": [
+            {
+              "case_id": "SANITY-arithmetic",
+              "status": "PASS",
+              "critical_violations": [],
+              "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-arithmetic",
+              "record_sha256": "92a4840247ca4de7658a1b3fd382efd161d6813b4ea257a3fab6329bc49cedab",
+              "output_tokens": 4,
+              "finish_reason": "stop",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/preflight__SANITY-arithmetic/result.json"
+            },
+            {
+              "case_id": "SANITY-extract",
+              "status": "PASS",
+              "critical_violations": [],
+              "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-extract",
+              "record_sha256": "2f611a8ab3e10d974383eef140e93b36d25fa1d24e2552e8004c9c47d3fcf82e",
+              "output_tokens": 9,
+              "finish_reason": "stop",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/preflight__SANITY-extract/result.json"
+            },
+            {
+              "case_id": "SANITY-json",
+              "status": "PASS",
+              "critical_violations": [],
+              "parsed": {
+                "alpha": 7,
+                "beta": "blue"
+              },
+              "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-json",
+              "record_sha256": "ecf98c9d70947039d10b56978c5973fed1f0a621e063b40a8dc9f8bbb8cc07cd",
+              "output_tokens": 13,
+              "finish_reason": "stop",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/preflight__SANITY-json/result.json"
+            },
+            {
+              "case_id": "SANITY-italian",
+              "status": "PASS",
+              "critical_violations": [],
+              "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-italian",
+              "record_sha256": "c8aacddc1c95e50c3a1cb6c1f0a1e50e12144ca8dfe9c5203f53de2b46675ee5",
+              "output_tokens": 4,
+              "finish_reason": "stop",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/preflight__SANITY-italian/result.json"
+            },
+            {
+              "case_id": "SANITY-english",
+              "status": "PASS",
+              "critical_violations": [],
+              "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-english",
+              "record_sha256": "f4a96e517378fd70698596c613e4f365055778bd0edcc894bc5730c1204b3c2d",
+              "output_tokens": 2,
+              "finish_reason": "stop",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/preflight__SANITY-english/result.json"
+            },
+            {
+              "case_id": "SANITY-code_clamp",
+              "status": "PASS",
+              "tests": [
+                {
+                  "index": 0,
+                  "pass": true,
+                  "input_unchanged": true,
+                  "actual_type": "int",
+                  "actual_preview": "5"
+                },
+                {
+                  "index": 1,
+                  "pass": true,
+                  "input_unchanged": true,
+                  "actual_type": "int",
+                  "actual_preview": "0"
+                },
+                {
+                  "index": 2,
+                  "pass": true,
+                  "input_unchanged": true,
+                  "actual_type": "int",
+                  "actual_preview": "10"
+                },
+                {
+                  "index": 3,
+                  "pass": true,
+                  "input_unchanged": true,
+                  "actual_type": "int",
+                  "actual_preview": "3"
+                }
+              ],
+              "critical_violations": [],
+              "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+              "code_sha256": "68561f3d134a950c8c5669ffa883345016359926ccd75c1c19bc25676245b757",
+              "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-code_clamp",
+              "record_sha256": "b5cbecf96410a840db3e3b93d5e453091d6f2edcb1337d2c42d0fa3a74b048b8",
+              "output_tokens": 32,
+              "finish_reason": "stop",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/preflight__SANITY-code_clamp/result.json"
+            }
+          ]
+        },
+        "postflight": {
+          "status": "PASS",
+          "cases": [
+            {
+              "case_id": "SANITY-arithmetic",
+              "status": "PASS",
+              "critical_violations": [],
+              "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-arithmetic",
+              "record_sha256": "a8a87fca10f98ed79af3fa7c83711732a24890d5d38ccdda4f092797ce15a0fb",
+              "output_tokens": 4,
+              "finish_reason": "stop",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/postflight__SANITY-arithmetic/result.json"
+            },
+            {
+              "case_id": "SANITY-extract",
+              "status": "PASS",
+              "critical_violations": [],
+              "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-extract",
+              "record_sha256": "af7696af860f2baf2cc7f92ccc53f878b446925f1a84798798142685979a44d1",
+              "output_tokens": 9,
+              "finish_reason": "stop",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/postflight__SANITY-extract/result.json"
+            },
+            {
+              "case_id": "SANITY-json",
+              "status": "PASS",
+              "critical_violations": [],
+              "parsed": {
+                "alpha": 7,
+                "beta": "blue"
+              },
+              "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-json",
+              "record_sha256": "0844aa6342b096664857d09cb899e8a722c7ec4daa8a1f0233a6cf54f96c3f8c",
+              "output_tokens": 13,
+              "finish_reason": "stop",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/postflight__SANITY-json/result.json"
+            },
+            {
+              "case_id": "SANITY-italian",
+              "status": "PASS",
+              "critical_violations": [],
+              "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-italian",
+              "record_sha256": "b40d223b6484e67d2891fd9f751ac1018f4abc154ea60a2e3ec04a463258094d",
+              "output_tokens": 4,
+              "finish_reason": "stop",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/postflight__SANITY-italian/result.json"
+            },
+            {
+              "case_id": "SANITY-english",
+              "status": "PASS",
+              "critical_violations": [],
+              "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-english",
+              "record_sha256": "162671c36a9ec2e7107707522ce03b458a9ea6b03f2fa0ce3ca51a8004d83577",
+              "output_tokens": 2,
+              "finish_reason": "stop",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/postflight__SANITY-english/result.json"
+            },
+            {
+              "case_id": "SANITY-code_clamp",
+              "status": "PASS",
+              "tests": [
+                {
+                  "index": 0,
+                  "pass": true,
+                  "input_unchanged": true,
+                  "actual_type": "int",
+                  "actual_preview": "5"
+                },
+                {
+                  "index": 1,
+                  "pass": true,
+                  "input_unchanged": true,
+                  "actual_type": "int",
+                  "actual_preview": "0"
+                },
+                {
+                  "index": 2,
+                  "pass": true,
+                  "input_unchanged": true,
+                  "actual_type": "int",
+                  "actual_preview": "10"
+                },
+                {
+                  "index": 3,
+                  "pass": true,
+                  "input_unchanged": true,
+                  "actual_type": "int",
+                  "actual_preview": "3"
+                }
+              ],
+              "critical_violations": [],
+              "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+              "code_sha256": "68561f3d134a950c8c5669ffa883345016359926ccd75c1c19bc25676245b757",
+              "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-code_clamp",
+              "record_sha256": "6e7f682ecc02e814c2f3aa2fa9c630cff24c38b904c35f6b534770025dac5ec5",
+              "output_tokens": 32,
+              "finish_reason": "stop",
+              "completion_status": "COMPLETE",
+              "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/postflight__SANITY-code_clamp/result.json"
+            }
+          ]
+        }
+      },
+      "run_completion": "PASS",
+      "initial_cause": "NORMAL_COMPLETION",
+      "cleanup": {
+        "at": "2026-09-23T13:55:22+0200",
+        "k2_state": "READY",
+        "status": "PASS"
+      },
+      "restore_receipt": {
+        "epoch": "1790164228979629195",
+        "owner": "DS41",
+        "owner_state": "RUNNING",
+        "paired_backend_http": "200",
+        "preset": "dspark-k2-gfx1151",
+        "ranks": [
+          {
+            "active": true,
+            "health_http": "200",
+            "rank": 0
+          },
+          {
+            "active": true,
+            "health_http": "200",
+            "rank": 1
+          }
+        ],
+        "reason": "",
+        "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513",
+        "state": "READY"
+      },
+      "restore_pass": true,
+      "launch_count": 1,
+      "load": {
+        "status": "PASS",
+        "load_s": 280.5116270959843,
+        "finished_at": "2026-09-23T13:40:20+0200",
+        "pid": 637819,
+        "rank": 0,
+        "runtime_versions": {
+          "vllm": "0.1.0rc2.dev9+g9255fd9fb9.rocm100",
+          "torch": "2.13.0+rocm10.0.0",
+          "transformers": "5.16.1"
+        },
+        "kwargs": {
+          "model": "/home/funboy/models/MiMo-V2.6/official/MiMo-V2.6-Flash-RL",
+          "runner": "generate",
+          "trust_remote_code": true,
+          "language_model_only": true,
+          "tensor_parallel_size": 2,
+          "pipeline_parallel_size": 1,
+          "distributed_executor_backend": "external_launcher",
+          "dtype": "bfloat16",
+          "max_model_len": 4096,
+          "max_num_seqs": 1,
+          "max_num_batched_tokens": 512,
+          "kv_cache_memory_bytes": 1073741824,
+          "enforce_eager": true,
+          "disable_custom_all_reduce": true,
+          "enable_expert_parallel": false,
+          "enable_prefix_caching": false,
+          "seed": 1,
+          "moe_backend": "triton_unfused",
+          "disable_log_stats": false
+        },
+        "patch_sha256": "eeb66fefbf1b63459e5712c031399f2d24d9ac05956c97b4e979ad03b901be72",
+        "memory_before": {
+          "observed_at": "2026-09-23T13:35:34+0200",
+          "mem_bytes": {
+            "MemTotal": 131210121216,
+            "MemAvailable": 127494074368,
+            "SwapTotal": 8589930496,
+            "SwapFree": 6253793280
+          },
+          "process": {
+            "VmSize": 46985216,
+            "VmRSS": 24178688,
+            "VmSwap": 0,
+            "pid": 637819,
+            "minflt": 3502,
+            "majflt": 3,
+            "io": {
+              "rchar": 3007489,
+              "wchar": 0,
+              "syscr": 332,
+              "syscw": 0,
+              "read_bytes": 49152,
+              "write_bytes": 0,
+              "cancelled_write_bytes": 0
+            }
+          }
+        },
+        "memory_after": {
+          "observed_at": "2026-09-23T13:40:20+0200",
+          "mem_bytes": {
+            "MemTotal": 131210121216,
+            "MemAvailable": 38335557632,
+            "SwapTotal": 8589930496,
+            "SwapFree": 4301897728
+          },
+          "process": {
+            "VmSize": 109432913920,
+            "VmRSS": 2328399872,
+            "VmSwap": 843059200,
+            "pid": 637819,
+            "minflt": 26462529,
+            "majflt": 396379,
+            "io": {
+              "rchar": 1618937731,
+              "wchar": 22195467,
+              "syscr": 65097,
+              "syscw": 1042,
+              "read_bytes": 131465654272,
+              "write_bytes": 331776,
+              "cancelled_write_bytes": 0
+            }
+          }
+        },
+        "source_freeze": {
+          "status": "PASS",
+          "files_checked": 30,
+          "index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337"
+        }
+      },
+      "peer_crosscheck": {
+        "status": "PASS",
+        "record_count": 36,
+        "sha256": "bbdfce9fdd30635790ea8117d261809a057236e6607f13fdb7435f357840ce8f",
+        "receipt": {
+          "schema": "mimo26-quality-peer-copy-v1",
+          "status": "BYTE_IDENTICAL_COPY_VERIFIED",
+          "observed_at": "2026-09-23T13:52:56+02:00",
+          "node": "02-EVO-X3",
+          "source": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/rank1-raw-results.jsonl",
+          "destination": "evidence/B-rank1-raw-results.jsonl",
+          "sha256": "bbdfce9fdd30635790ea8117d261809a057236e6607f13fdb7435f357840ce8f",
+          "records": 36,
+          "copied_from": "NODE01 via the pre-existing SSH alias 02-evo-x3-tb",
+          "native_primary_vs_peer_comparison": "PENDING_FROZEN_PAIRED_EVALUATOR",
+          "not_additional_generations": true
+        }
+      }
+    }
+  },
+  "gates": {
+    "EXPERIMENT_COMPLETION": "COMPLETE",
+    "SOURCE_FREEZE": "PASS",
+    "INPUT_COMPARABILITY": "PASS",
+    "SANITY_PREFLIGHT": {
+      "A": "PASS",
+      "B": "PASS"
+    },
+    "SANITY_POSTFLIGHT": {
+      "A": "PASS",
+      "B": "PASS"
+    },
+    "QUALITY_PANEL_A": {
+      "PASS": 21,
+      "FAIL_SEMANTIC": 2,
+      "FAIL_FORMAT": 1
+    },
+    "QUALITY_PANEL_B": {
+      "PASS": 21,
+      "FAIL_SEMANTIC": 3
+    },
+    "PAIRED_REGRESSIONS": 1,
+    "CRITICAL_REGRESSIONS": 0,
+    "INCOMPLETE_CASES": 0,
+    "TECHNICAL_ERRORS": 0,
+    "REVIEW_REQUIRED": 0,
+    "GENERAL_QUALITY_EQUIVALENCE": "NOT_ESTABLISHED",
+    "QUANTIZATION_ONLY_EFFECT": "NOT_ISOLATED",
+    "LONG_CONTEXT": "NOT_EVALUATED",
+    "CONCURRENCY": "NOT_EVALUATED",
+    "MTP_DFLASH": "NOT_EVALUATED",
+    "PRODUCTION_PROMOTION": "NOT_PERFORMED",
+    "RESTORE_STATUS": {
+      "A": "PASS",
+      "B": "PASS",
+      "final_live": "PASS"
+    }
+  },
+  "pairs": [
+    {
+      "case_id": "CODE-01",
+      "family": "Codice",
+      "language": "it",
+      "input_tokens": 195,
+      "output_cap": 1024,
+      "oracle_sha256": "c2cdbf6b966027914a97529f8077f31ee15a47dd947e997f509ca71ba35b542a",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/CODE-01",
+        "record_sha256": "ca985d017f5aa17909fa7bb3d6dff30a4e78101c1b7bcf3d31a8f6b73a6f601c",
+        "output_tokens": 139,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__CODE-01/result.json",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[[1, 7]]"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[[-5, 1], [4, 8]]"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "start > end"
+          },
+          {
+            "index": 5,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[[0, 9], [11, 12]]"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "12faf2e8e56a181968c1e318e9d6083cbd22538febb693dbf2473721d6076489"
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/CODE-01",
+        "record_sha256": "c2ebc9982e7ae8147369b0f39711006168c325051b97dba759a05824ad4a0cbf",
+        "output_tokens": 132,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__CODE-01/result.json",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[[1, 7]]"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[[-5, 1], [4, 8]]"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "Invalid interval: start is greater than end"
+          },
+          {
+            "index": 5,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[[0, 9], [11, 12]]"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "ce2b4657a73f7c91d6ad8e92a5c746d11691e534586b6112aa850bf41262de29"
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "CODE-02",
+      "family": "Codice",
+      "language": "en",
+      "input_tokens": 163,
+      "output_cap": 1024,
+      "oracle_sha256": "cf8eaae0302a88830dfb61d03e81e4efe7a0b11796569e221e946f939e0ecc5f",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/CODE-02",
+        "record_sha256": "ecec5741102c4ae70a7bd46cb03db5f461d3b86435fec4426907ec70af7d626d",
+        "output_tokens": 82,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__CODE-02/result.json",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[{'id': 'z', 'value': 'first', 'version': 2}, {'id': 'a', 'value': 8, 'version': 3}]"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[{'id': 'q', 'value': None, 'version': 5}]"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[{'id': 'b', 'value': [2], 'version': -1}]"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "fdfc421c25262e564147228bdf7999ebfceb5f25a815e71d6cc79a3d11fb523f"
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/CODE-02",
+        "record_sha256": "e8012612c58aa57ef09454d92237c840eb39f973ceb2d68f65e816369521b70d",
+        "output_tokens": 104,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__CODE-02/result.json",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[{'id': 'z', 'value': 'first', 'version': 2}, {'id': 'a', 'value': 8, 'version': 3}]"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[{'id': 'q', 'value': None, 'version': 5}]"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[{'id': 'b', 'value': [2], 'version': -1}]"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "61d2440ce010ccca198ed0128bb50fa6e7aac409abcaf1b5b81d37171efd1bb3"
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "CODE-03",
+      "family": "Codice",
+      "language": "it",
+      "input_tokens": 228,
+      "output_cap": 1024,
+      "oracle_sha256": "7090c183a0043313b851bb2410acaac95ef5af59d2677e97db62bcb979a58f8a",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/CODE-03",
+        "record_sha256": "0c7081a463d1f5d693c278108aca34bff4812d1c8a6ed3266149e898953acbb3",
+        "output_tokens": 218,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__CODE-03/result.json",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[4, 3, 3]"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[0, 1, 1, 0]"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[0, 0]"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[1, 2, 4]"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[4503599627370497, 4503599627370496]"
+          },
+          {
+            "index": 5,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "total must be non-negative"
+          },
+          {
+            "index": 6,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "weights must be non-empty"
+          },
+          {
+            "index": 7,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "sum of weights must be positive"
+          },
+          {
+            "index": 8,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "weights must be non-negative"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "ff5fe75ea41cbae427a1a74e9c59371f6fa8acea04480df80371a9f9b76528a2"
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/CODE-03",
+        "record_sha256": "946ea2e5f7ae8a96ee1feead8ca1d17f378274b27d1efc57ba5d76ff54285f51",
+        "output_tokens": 214,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__CODE-03/result.json",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[4, 3, 3]"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[0, 1, 1, 0]"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[0, 0]"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[1, 2, 4]"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[4503599627370497, 4503599627370496]"
+          },
+          {
+            "index": 5,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "total must be non-negative"
+          },
+          {
+            "index": 6,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "weights must be non-empty"
+          },
+          {
+            "index": 7,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "sum of weights must be positive"
+          },
+          {
+            "index": 8,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "weights must be non-negative"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "099b87fb9bc70d8122df10ff74b24a7cc566b6f79afad1effcc69759b7ff5c47"
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "CODE-04",
+      "family": "Codice",
+      "language": "en",
+      "input_tokens": 210,
+      "output_cap": 1024,
+      "oracle_sha256": "29eb7af59ca38344ae931cb2d8c5b1c2e221931d6af4443fccc50bcb6ff027c4",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/CODE-04",
+        "record_sha256": "768ab88253653fe6640dc918550bee952fde1f2b4565058e91fca557f053f521",
+        "output_tokens": 246,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__CODE-04/result.json",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': [], 'errors': []}"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': ['a', 'a'], 'errors': []}"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': [], 'errors': [{'index': 0, 'codes': ['id', 'count', 'enabled', 'extra']}]}"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': [], 'errors': [{'index': 0, 'codes': ['id', 'count']}, {'index': 1, 'codes': ['count']}, {'index': 2, 'codes': ['id']}]}"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': [], 'errors': [{'index': 0, 'codes': ['count']}]}"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "1b5805d70d2f42ac16fec1109163f9db600e94dee1b3963291d05670622f7abc"
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/CODE-04",
+        "record_sha256": "afc6698d97a5b9c9239439222b2c02acc88952baa7edca9a3036cff423e27da7",
+        "output_tokens": 238,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__CODE-04/result.json",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': [], 'errors': []}"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': ['a', 'a'], 'errors': []}"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': [], 'errors': [{'index': 0, 'codes': ['id', 'count', 'enabled', 'extra']}]}"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': [], 'errors': [{'index': 0, 'codes': ['id', 'count']}, {'index': 1, 'codes': ['count']}, {'index': 2, 'codes': ['id']}]}"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': [], 'errors': [{'index': 0, 'codes': ['count']}]}"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "20f34c673310cc8225c21d97bd49d75017c57d8e19c83a2d4cd3cce8e9df46d8"
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "DEBUG-01",
+      "family": "Debugging",
+      "language": "en",
+      "input_tokens": 192,
+      "output_cap": 1024,
+      "oracle_sha256": "af4fb1f12c7817df27afc0b8d5f340a6688df0d6432ae569508cba897456bce1",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/DEBUG-01",
+        "record_sha256": "275239f1e8d8a4b0e370094468a6a44f3c6f36b6ebc51e2e94f970d969036201",
+        "output_tokens": 88,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__DEBUG-01/result.json",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{}"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'a': 'last', 'b': ''}"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'token': 'a=b=c'}"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "segment missing '='"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "empty key"
+          },
+          {
+            "index": 5,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "segment missing '='"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "b8610e58f0947ad6ef3155f37515e450928e6c0b66556e0d4cfb1bf229fddf8f"
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/DEBUG-01",
+        "record_sha256": "8dc913e8673ebbd6db30f5fbd1ac8dbf53fba917bd165bb3ceade0949e6e4143",
+        "output_tokens": 98,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__DEBUG-01/result.json",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{}"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'a': 'last', 'b': ''}"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'token': 'a=b=c'}"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "segment missing '=': bad"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "empty key in segment:  =x"
+          },
+          {
+            "index": 5,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "segment missing '=':  broken"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "a07d7e3deda6ce0f0c69d26fc850261a8f74476f4a3d0242a9c72262a1202955"
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "DEBUG-02",
+      "family": "Debugging",
+      "language": "it",
+      "input_tokens": 243,
+      "output_cap": 1024,
+      "oracle_sha256": "84000696cc844d194e2ec56f375392cc6bf41f06154678fa6dbc73582e4fa03b",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/DEBUG-02",
+        "record_sha256": "a4092d875dd0e47e8d28e9539a7b1e32283da60fbb6d9ea8544eb340eaed9936",
+        "output_tokens": 153,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__DEBUG-02/result.json",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'status': 'ok', 'delta': {'read_bytes': 4, 'majflt': 2}}"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'status': 'reset', 'delta': None}"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'status': 'ok', 'delta': {'read_bytes': 0, 'majflt': 0}}"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "read_bytes"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "read_bytes"
+          },
+          {
+            "index": 5,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "read_bytes"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "daa60a2bc84e065d3a053c8d4eeb428119caaf9b5e22e559cce9562fcfa4a7ea"
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/DEBUG-02",
+        "record_sha256": "96aed0b9ba314dfb17427c4d9c000f5714879ebcac89e869fde4deed71f40505",
+        "output_tokens": 153,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__DEBUG-02/result.json",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'status': 'ok', 'delta': {'read_bytes': 4, 'majflt': 2}}"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'status': 'reset', 'delta': None}"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'status': 'ok', 'delta': {'read_bytes': 0, 'majflt': 0}}"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "read_bytes"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "read_bytes"
+          },
+          {
+            "index": 5,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "read_bytes"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "daa60a2bc84e065d3a053c8d4eeb428119caaf9b5e22e559cce9562fcfa4a7ea"
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "DEBUG-03",
+      "family": "Debugging",
+      "language": "en",
+      "input_tokens": 233,
+      "output_cap": 1024,
+      "oracle_sha256": "792b325f0c7f54367a9ffeed8530a206b19a8030b74fdbcf5f3651c0f5732850",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/DEBUG-03",
+        "record_sha256": "5488488232979bef0b744ce193f0836f6c0cf502848aafbf6c2641a3b38535eb",
+        "output_tokens": 83,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__DEBUG-03/result.json",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': True, 'delay': 1}"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': False, 'delay': 0}"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': False, 'delay': 0}"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': False, 'delay': 0}"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': True, 'delay': 30}"
+          },
+          {
+            "index": 5,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': True, 'delay': 2}"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "f92c7d44c8be9cf9678569bbd936a0fed19e168dd965dc67e2986499cac827b8"
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/DEBUG-03",
+        "record_sha256": "a481a2ca2b9f676982077cf53ca54566d70b23e9000e31f54656765869d1acfc",
+        "output_tokens": 76,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__DEBUG-03/result.json",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': True, 'delay': 1}"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': False, 'delay': 0}"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': False, 'delay': 0}"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': False, 'delay': 0}"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': True, 'delay': 30}"
+          },
+          {
+            "index": 5,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': True, 'delay': 2}"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "22f31cfe3fc3c97196b3036c3744ebb36013f3d63f4b5a6958dcb098077d8eab"
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "DEBUG-04",
+      "family": "Debugging",
+      "language": "it",
+      "input_tokens": 233,
+      "output_cap": 1024,
+      "oracle_sha256": "fa579962d3c896387b31abc93375c4ad42cac4190282411c54e5b104a6a395c5",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/DEBUG-04",
+        "record_sha256": "ab00b53b8748571bfcf63d43c0334d3f934840cdebb9d40157a4c879790b6b39",
+        "output_tokens": 86,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__DEBUG-04/result.json",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "['c', 'a']"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "['a', 'z']"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "['b']"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "bb20f887326e389b19634f19cae352750a1a1a4e93d947cda5ccc42d56c7bdea"
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/DEBUG-04",
+        "record_sha256": "b0504b1eb93eabfb6ccf20ec156a2464b852c11a6afe28fb77485a81085e8025",
+        "output_tokens": 87,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__DEBUG-04/result.json",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "['c', 'a']"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "['a', 'z']"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "['b']"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "25be3c1ba10735b4fb46cfc889bc642c5946457e8c6ed8d61b5ce116da90b532"
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "STRUCT-01",
+      "family": "Dati strutturati",
+      "language": "it",
+      "input_tokens": 161,
+      "output_cap": 512,
+      "oracle_sha256": "39a034962a092a1105abee31d5dca9f5432a9524877d4677ecf21dfa391433a7",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/STRUCT-01",
+        "record_sha256": "079607141b040a7fb193f483546f3a8b57d026f4ef88a93505dcbc61bce59508",
+        "output_tokens": 75,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__STRUCT-01/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "id": "INV-07",
+          "date": "2026-09-03",
+          "customer": "Officina Lido",
+          "currency": "EUR",
+          "total_cents": 1450,
+          "paid": false,
+          "vat_id": null
+        }
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/STRUCT-01",
+        "record_sha256": "2bcbacaefae12fffc18cf753a72edf32cc62516235637b6194d2e61230d0e06f",
+        "output_tokens": 75,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__STRUCT-01/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "id": "INV-07",
+          "date": "2026-09-03",
+          "customer": "Officina Lido",
+          "currency": "EUR",
+          "total_cents": 1450,
+          "paid": false,
+          "vat_id": null
+        }
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "STRUCT-02",
+      "family": "Dati strutturati",
+      "language": "en",
+      "input_tokens": 129,
+      "output_cap": 512,
+      "oracle_sha256": "186fe9f94cf5632c176d0628e7d5369db79fd466faa3730bd15079697d61d0c7",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/STRUCT-02",
+        "record_sha256": "522fa1aee2110cf14d48689b245a2655ee5e8d659ee60ec3dd9695702fb6499b",
+        "output_tokens": 55,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__STRUCT-02/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "records": [
+            {
+              "id": "a",
+              "latency_ms": 40,
+              "healthy": false
+            },
+            {
+              "id": "b",
+              "latency_ms": 1250,
+              "healthy": true
+            },
+            {
+              "id": "c",
+              "latency_ms": null,
+              "healthy": null
+            }
+          ]
+        }
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/STRUCT-02",
+        "record_sha256": "8119ad128cbdbea1f47ce88f463b7b0a1ff32918b1322efa9992e994d023667f",
+        "output_tokens": 55,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__STRUCT-02/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "records": [
+            {
+              "id": "a",
+              "latency_ms": 40,
+              "healthy": false
+            },
+            {
+              "id": "b",
+              "latency_ms": 1250,
+              "healthy": true
+            },
+            {
+              "id": "c",
+              "latency_ms": null,
+              "healthy": null
+            }
+          ]
+        }
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "STRUCT-03",
+      "family": "Dati strutturati",
+      "language": "it",
+      "input_tokens": 176,
+      "output_cap": 512,
+      "oracle_sha256": "ffaddf3c95f0c4e695bb3cd324f1f01d41dcd999b63d8bbf4ccc570f927af0fd",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/STRUCT-03",
+        "record_sha256": "e1da51c2c3b84ee17994895745044faa60cdc730855305b71045f5fe6fedbbc8",
+        "output_tokens": 39,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__STRUCT-03/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "id": "T-44",
+          "tags": [
+            "alpha",
+            "beta"
+          ],
+          "enabled": false,
+          "owner": null
+        }
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/STRUCT-03",
+        "record_sha256": "2bbbe202d47eace27cc0be99d2322b83b2a2cb3158f1ab1e2e61dd36a56302aa",
+        "output_tokens": 27,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__STRUCT-03/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "id": "T-44",
+          "tags": [
+            "alpha",
+            "beta"
+          ],
+          "enabled": false,
+          "owner": null
+        }
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "STRUCT-04",
+      "family": "Dati strutturati",
+      "language": "en",
+      "input_tokens": 126,
+      "output_cap": 512,
+      "oracle_sha256": "488404fa1ddc3e3dd571f3b27b9d892bc74b7cc0c6b944592912986c51d5cbcf",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/STRUCT-04",
+        "record_sha256": "374e02583f2c7b502ceec191e9d89e4161cc6b8253f324155fa1e6455db94160",
+        "output_tokens": 23,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__STRUCT-04/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "retry": {
+            "max": 0
+          },
+          "tags": [],
+          "cache": true,
+          "version": 2
+        }
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/STRUCT-04",
+        "record_sha256": "2cf6a2e6fa2f86a4d81413809a6a83e56ca4044452d08fd675331c65bb5ca1fa",
+        "output_tokens": 23,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__STRUCT-04/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "retry": {
+            "max": 0
+          },
+          "tags": [],
+          "cache": true,
+          "version": 2
+        }
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "DOC-01",
+      "family": "Documenti",
+      "language": "it",
+      "input_tokens": 241,
+      "output_cap": 512,
+      "oracle_sha256": "54717d5cd0d313214cd33ce8626d81d8f8db0d00b7502833fdc99ffe5191ddc0",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/DOC-01",
+        "record_sha256": "40666d6cb0baef5498d06e67d99c11b57a31a041c327054c4de1b736896eca77",
+        "output_tokens": 23,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__DOC-01/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "retention_days": 30,
+          "evidence": [
+            "R2"
+          ],
+          "owner": null
+        }
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/DOC-01",
+        "record_sha256": "ec5230faeea89792a2126ddffaba8dedcf368c0ff5a3668c17efea8064f649ca",
+        "output_tokens": 23,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__DOC-01/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "retention_days": 30,
+          "evidence": [
+            "R2"
+          ],
+          "owner": null
+        }
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "DOC-02",
+      "family": "Documenti",
+      "language": "en",
+      "input_tokens": 184,
+      "output_cap": 512,
+      "oracle_sha256": "d49c3be760350c99444fb5d8a030c38e5595b833ef5df9c727c7de4a68d2166b",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/DOC-02",
+        "record_sha256": "8be4bd55f0f77decd09d208351352309c1921a17ccb6f4e0c559ffeb46cfb79d",
+        "output_tokens": 37,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__DOC-02/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "status": "CONFLICT",
+          "stock_observations": [
+            9,
+            12
+          ],
+          "available": null,
+          "reserved": 2,
+          "evidence": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/DOC-02",
+        "record_sha256": "6a4f79b87f82c37680495cae79eca8900411776f6fb67867e97c8c18773d053d",
+        "output_tokens": 37,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__DOC-02/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "status": "CONFLICT",
+          "stock_observations": [
+            9,
+            12
+          ],
+          "available": null,
+          "reserved": 2,
+          "evidence": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "DOC-03",
+      "family": "Documenti",
+      "language": "it",
+      "input_tokens": 211,
+      "output_cap": 512,
+      "oracle_sha256": "8cbf0ca39aae7cbd2e9c16e7d5296b3dcf7b115df3fc9a3f4d013bdcdcecf7f6",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/DOC-03",
+        "record_sha256": "8d5b223394a637dc3017f47bcff35299eda1c3336f0ab29d59522ac2f62b3ae8",
+        "output_tokens": 41,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__DOC-03/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "availability": "HTTP_OK",
+          "functional_validation": "NOT_RUN",
+          "rollback": "COMPLETE",
+          "evidence": {
+            "availability": [
+              "E3"
+            ],
+            "functional_validation": [
+              "E3"
+            ],
+            "rollback": [
+              "E2"
+            ]
+          }
+        }
+      },
+      "B": {
+        "status": "FAIL_SEMANTIC",
+        "request_id": "quality-retention-001-B-original-001/B/panel/DOC-03",
+        "record_sha256": "8d82f4720b7b6798023b4fa747fbf8b18755cf6745c4d9caa8965e85836b0789",
+        "output_tokens": 39,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__DOC-03/result.json",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "availability": "HTTP_OK",
+          "functional_validation": "NOT_RUN",
+          "rollback": "COMPLETE",
+          "evidence": {
+            "availability": [
+              "E3"
+            ],
+            "functional_validation": [],
+            "rollback": [
+              "E2"
+            ]
+          }
+        },
+        "critical_violations": []
+      },
+      "pair_state": "A_PASS_B_FAIL",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "DOC-04",
+      "family": "Documenti",
+      "language": "en",
+      "input_tokens": 180,
+      "output_cap": 512,
+      "oracle_sha256": "3fee3e0be3c44ff4b9407a76ef5a52ea95ed4110ba1111112ff66d1402c845f6",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/DOC-04",
+        "record_sha256": "7be8c3b947092633692087ddf5b9f61f6507f09e355dfa20a51f25db5dc50e52",
+        "output_tokens": 52,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__DOC-04/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "outstanding_cents": 2000,
+          "evidence": [
+            "I1",
+            "C1",
+            "P1"
+          ],
+          "ignored": [
+            "P2"
+          ],
+          "bank_account": null,
+          "due_date": null
+        }
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/DOC-04",
+        "record_sha256": "6db6eecb25b2f14b0ec3731dc3793a08b7ad9bf4d703daf4898cee523a5a6823",
+        "output_tokens": 43,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__DOC-04/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "outstanding_cents": 2000,
+          "evidence": [
+            "I1",
+            "C1",
+            "P1"
+          ],
+          "ignored": [
+            "P2"
+          ],
+          "bank_account": null,
+          "due_date": null
+        }
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "OPS-01",
+      "family": "Diagnosi e pianificazione",
+      "language": "it",
+      "input_tokens": 196,
+      "output_cap": 512,
+      "oracle_sha256": "ff70ef19e8f152e7726ac4941d9eef467b08dfb98512ad06c1fb6b1a9d9cc650",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/OPS-01",
+        "record_sha256": "04740f02e553f0092f10244d5345699a53cedeeb974fdb00f8cf8b5be8b24cd1",
+        "output_tokens": 46,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__OPS-01/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "classification": "IN_FLIGHT",
+          "actions": [
+            {
+              "tool": "read_job",
+              "args": {
+                "job_id": "job-17"
+              }
+            },
+            {
+              "tool": "read_progress",
+              "args": {
+                "run_id": "run-17"
+              }
+            }
+          ],
+          "retry": false
+        }
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/OPS-01",
+        "record_sha256": "b9276fd9ab43f9fe634077e1bb3342b9e211629d50e92b3e48d347f4f8748133",
+        "output_tokens": 50,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__OPS-01/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "classification": "IN_FLIGHT",
+          "actions": [
+            {
+              "tool": "read_job",
+              "args": {
+                "job_id": "job-17"
+              }
+            },
+            {
+              "tool": "read_progress",
+              "args": {
+                "run_id": "run-17"
+              }
+            }
+          ],
+          "retry": false
+        }
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "OPS-02",
+      "family": "Diagnosi e pianificazione",
+      "language": "en",
+      "input_tokens": 165,
+      "output_cap": 512,
+      "oracle_sha256": "0a8dacc4c2e5d2a42dc23800343b253454ba5c6686548af305adf3d289f22557",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/OPS-02",
+        "record_sha256": "39e760d41432b5a7a800cf75524f5b938e261f5771b4422158030576f2fc08ba",
+        "output_tokens": 42,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__OPS-02/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "classification": "PEER_UNKNOWN",
+          "actions": [
+            {
+              "tool": "preserve_result",
+              "args": {
+                "run": "r2"
+              }
+            },
+            {
+              "tool": "read_peer_status",
+              "args": {
+                "node": "N2"
+              }
+            }
+          ],
+          "restore_now": false
+        }
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/OPS-02",
+        "record_sha256": "5d802b7316bda2e571121796ce9bcf3254183116b8189d53aef4bae3993984e8",
+        "output_tokens": 46,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__OPS-02/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "classification": "PEER_UNKNOWN",
+          "actions": [
+            {
+              "tool": "preserve_result",
+              "args": {
+                "run": "r2"
+              }
+            },
+            {
+              "tool": "read_peer_status",
+              "args": {
+                "node": "N2"
+              }
+            }
+          ],
+          "restore_now": false
+        }
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "OPS-03",
+      "family": "Diagnosi e pianificazione",
+      "language": "it",
+      "input_tokens": 242,
+      "output_cap": 512,
+      "oracle_sha256": "aadbaa3af53acd552913da2043ff0688f59c10ede98ddac3d15824fe4ace90a3",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/OPS-03",
+        "record_sha256": "07d56528b85436235251f95cb615b5c2a46985bc61e00d312ab384b1c090527a",
+        "output_tokens": 80,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__OPS-03/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "actions": [
+            {
+              "tool": "drain",
+              "args": {
+                "run": "qx"
+              }
+            },
+            {
+              "tool": "stop_owned",
+              "args": {
+                "run": "qx"
+              }
+            },
+            {
+              "tool": "verify_off",
+              "args": {
+                "nodes": [
+                  "N1",
+                  "N2"
+                ]
+              }
+            },
+            {
+              "tool": "restore",
+              "args": {
+                "release": "r-stable"
+              }
+            },
+            {
+              "tool": "verify_health",
+              "args": {
+                "targets": [
+                  "rank0",
+                  "rank1",
+                  "paired"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/OPS-03",
+        "record_sha256": "aa4c720068fb07e103ca881100d1f9bfbd73d5bf801b58cb1ff21b258666039d",
+        "output_tokens": 80,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__OPS-03/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "actions": [
+            {
+              "tool": "drain",
+              "args": {
+                "run": "qx"
+              }
+            },
+            {
+              "tool": "stop_owned",
+              "args": {
+                "run": "qx"
+              }
+            },
+            {
+              "tool": "verify_off",
+              "args": {
+                "nodes": [
+                  "N1",
+                  "N2"
+                ]
+              }
+            },
+            {
+              "tool": "restore",
+              "args": {
+                "release": "r-stable"
+              }
+            },
+            {
+              "tool": "verify_health",
+              "args": {
+                "targets": [
+                  "rank0",
+                  "rank1",
+                  "paired"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "OPS-04",
+      "family": "Diagnosi e pianificazione",
+      "language": "en",
+      "input_tokens": 213,
+      "output_cap": 512,
+      "oracle_sha256": "1b13887d661fdf318d6a5ca645b32f6d2652f655dffe7963b6e5d498eb8d652d",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/OPS-04",
+        "record_sha256": "6ca3300460c448aa4738288974d4e1644e4a35914892381fd791f72bd7ea7e50",
+        "output_tokens": 50,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__OPS-04/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "disk_io_observed": true,
+          "model_weights_swapped": "UNKNOWN",
+          "prefill_reused": false,
+          "throttling": "UNKNOWN",
+          "next_action": {
+            "tool": "read_io_counters",
+            "args": {
+              "scope": "owned_run"
+            }
+          }
+        }
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/OPS-04",
+        "record_sha256": "b50ab403ce7baba8aaaf9d56aca87bcef573627fd90f0fc876f5e0d06604a7ee",
+        "output_tokens": 50,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__OPS-04/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "disk_io_observed": true,
+          "model_weights_swapped": "UNKNOWN",
+          "prefill_reused": false,
+          "throttling": "UNKNOWN",
+          "next_action": {
+            "tool": "read_io_counters",
+            "args": {
+              "scope": "owned_run"
+            }
+          }
+        }
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "REASON-01",
+      "family": "Ragionamento vincolato",
+      "language": "it",
+      "input_tokens": 201,
+      "output_cap": 512,
+      "oracle_sha256": "7cd3cd3b50ad84aa8d56913b5bde285d81eb36fb54e2d23462fa81fc71bbf17e",
+      "A": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/REASON-01",
+        "record_sha256": "206974691c00cbad8fcdebc44278609f0e83095c072d6f85437b053186d7abcb",
+        "output_tokens": 34,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__REASON-01/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "starts": {
+            "A": 0,
+            "B": 3,
+            "C": 3,
+            "D": 7,
+            "E": 9
+          },
+          "makespan": 10
+        }
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/REASON-01",
+        "record_sha256": "e809efa04ddae0260795a90cc6d0f8071f33a118b0249677a6d9c57b3551ff8e",
+        "output_tokens": 34,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__REASON-01/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "starts": {
+            "A": 0,
+            "B": 3,
+            "C": 3,
+            "D": 7,
+            "E": 9
+          },
+          "makespan": 10
+        }
+      },
+      "pair_state": "BOTH_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "REASON-02",
+      "family": "Ragionamento vincolato",
+      "language": "en",
+      "input_tokens": 148,
+      "output_cap": 512,
+      "oracle_sha256": "0df2f1a29ae5909788c83e0d79d09b520bdb4cd9f1cdb8f609fff5262b80b5a2",
+      "A": {
+        "status": "FAIL_SEMANTIC",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/REASON-02",
+        "record_sha256": "73a118764bc2dc2cccf50aad2933c1dddeb03dc1a3082ed69b9f3d631b01d075",
+        "output_tokens": 17,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__REASON-02/result.json",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "ids": [
+            "A",
+            "C"
+          ],
+          "cost": 6,
+          "value": 13
+        },
+        "critical_violations": []
+      },
+      "B": {
+        "status": "FAIL_SEMANTIC",
+        "request_id": "quality-retention-001-B-original-001/B/panel/REASON-02",
+        "record_sha256": "cf52cfd70fbd1aa633196fef8ea3761c1fe8ccf1b303a1dce8a5440b4a4099e1",
+        "output_tokens": 23,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__REASON-02/result.json",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "ids": [
+            "A",
+            "B",
+            "C"
+          ],
+          "cost": 9,
+          "value": 20
+        },
+        "critical_violations": []
+      },
+      "pair_state": "BOTH_FAIL",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "REASON-03",
+      "family": "Ragionamento vincolato",
+      "language": "it",
+      "input_tokens": 212,
+      "output_cap": 512,
+      "oracle_sha256": "d44c5223e09784bec5a90e962589601bd155ce222e144fe020cbbf39178f5fec",
+      "A": {
+        "status": "FAIL_FORMAT",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/REASON-03",
+        "record_sha256": "ce90d4b032c868253d99c69a2a9a7c3a7360300ae6c832cd56fbc3a21a102eb6",
+        "output_tokens": 36,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__REASON-03/result.json",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "net_lines_cents": [
+            537,
+            400
+          ],
+          "tax_cents": 206,
+          "total_censes": 1293
+        },
+        "critical_violations": []
+      },
+      "B": {
+        "status": "PASS",
+        "request_id": "quality-retention-001-B-original-001/B/panel/REASON-03",
+        "record_sha256": "03897715d4859e54a32e5a61b7c7408a3fb4d56d4b8cd1ab6e3c9e8135d2a71a",
+        "output_tokens": 36,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__REASON-03/result.json",
+        "critical_violations": [],
+        "parsed": {
+          "net_lines_cents": [
+            537,
+            400
+          ],
+          "tax_cents": 206,
+          "total_cents": 1293
+        }
+      },
+      "pair_state": "A_FAIL_B_PASS",
+      "critical_regression": false,
+      "input_ids_equal": true
+    },
+    {
+      "case_id": "REASON-04",
+      "family": "Ragionamento vincolato",
+      "language": "en",
+      "input_tokens": 164,
+      "output_cap": 512,
+      "oracle_sha256": "9c5336b5503c0e2d24041eed5ac58575d1c0904d3c35a0535e2380dacf224e51",
+      "A": {
+        "status": "FAIL_SEMANTIC",
+        "request_id": "quality-retention-001-A-mixed-001/A/panel/REASON-04",
+        "record_sha256": "10261265138fad8f52bfdd216f89c937618986b8138d9a69c17723d10c370d04",
+        "output_tokens": 30,
+        "finish_reason": "eos",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/requests/panel__REASON-04/result.json",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "path": [
+            "A",
+            "B",
+            "C",
+            "E",
+            "D"
+          ],
+          "cost": 6,
+          "risk": 1
+        },
+        "critical_violations": []
+      },
+      "B": {
+        "status": "FAIL_SEMANTIC",
+        "request_id": "quality-retention-001-B-original-001/B/panel/REASON-04",
+        "record_sha256": "02961e5a075cd4c5cb509afdd29b27d314b73940156fa99245cfa8c17c3028a7",
+        "output_tokens": 26,
+        "finish_reason": "stop",
+        "completion_status": "COMPLETE",
+        "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/requests/panel__REASON-04/result.json",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "path": [
+            "A",
+            "B",
+            "C",
+            "E",
+            "D"
+          ],
+          "cost": 7,
+          "risk": 1
+        },
+        "critical_violations": []
+      },
+      "pair_state": "BOTH_FAIL",
+      "critical_regression": false,
+      "input_ids_equal": true
+    }
+  ],
+  "final_live": {
+    "schema": "mimo26-quality-final-live-v1",
+    "status": "PASS",
+    "observation_completed_at": "2026-09-23T14:03:35+02:00",
+    "health_and_unit_checks_at": "2026-09-23T13:58:06+02:00",
+    "original_pid_absence_and_release_path_checks_at": "2026-09-23T14:00:30+02:00",
+    "resident_engine_cgroup_checks_at": "2026-09-23T14:03:35+02:00",
+    "nodes": {
+      "NODE01": {
+        "hostname": "01-EVO-X3",
+        "user": "funboy",
+        "boot_id": "43c6daec-31c3-4ebe-a599-54b69cfa92b6"
+      },
+      "NODE02": {
+        "hostname": "02-EVO-X3",
+        "user": "funboy",
+        "boot_id": "3fd0da44-da79-4480-ac6f-9a73ee121f17",
+        "access": "SSH from NODE01 using 02-evo-x3-tb"
+      }
+    },
+    "controller": {
+      "path": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+      "state": "READY",
+      "preset": "dspark-k2-gfx1151",
+      "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513",
+      "owner": "DS41",
+      "owner_state": "RUNNING",
+      "epoch": "1790164228979629195",
+      "rank0_health_http": 200,
+      "rank1_health_http": 200,
+      "paired_backend_http": 200
+    },
+    "resident_units": {
+      "NODE01_rank0": {
+        "unit": "ds41-rank0.service",
+        "active": true,
+        "pid": 642280,
+        "invocation_id": "9be4424aeadb4a679bc18a18447a71ba"
+      },
+      "NODE02_rank1": {
+        "unit": "ds41-rank1.service",
+        "active": true,
+        "pid": 653577,
+        "invocation_id": "285e8d925fe34124baf38c736bab063a"
+      },
+      "NODE01_paired": {
+        "unit": "ds41-haloclu-pair.service",
+        "active": true,
+        "pid": 257070,
+        "invocation_id": "4facab11bc2242c6b42117c9865c79b0"
+      }
+    },
+    "owner_receipt_invocations_match_units": true,
+    "resident_launch_path_both_nodes": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/launch-node.sh",
+    "own_campaign_units": {
+      "mimo26-qr001-supervisor-a-001.service": "not-found/inactive/MainPID0",
+      "mimo26-qr001-supervisor-b-001.service": "not-found/inactive/MainPID0",
+      "mimo26-qr001-a-r0-001.service": "not-found/inactive/MainPID0",
+      "mimo26-qr001-b-r0-001.service": "not-found/inactive/MainPID0",
+      "NODE02:mimo26-qr001-b-r1-001.service": "not-found/inactive/MainPID0"
+    },
+    "original_model_pids_confirmed_absent": {
+      "NODE01": [
+        631703,
+        637819
+      ],
+      "NODE02": [
+        636285
+      ]
+    },
+    "remaining_engine_processes_are_resident_not_mimo_residues": {
+      "NODE01": {
+        "pid": 642546,
+        "name": "VLLM::EngineCor",
+        "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/ds41-rank0.service"
+      },
+      "NODE02": {
+        "pid": 653760,
+        "name": "VLLM::EngineCor",
+        "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/ds41-rank1.service"
+      }
+    },
+    "matching_compute_or_cleanup_lock_holders": [],
+    "native_cleanup_receipts": {
+      "A": "2026-09-23T13:33:46+02:00",
+      "B": "2026-09-23T13:55:22+02:00"
+    },
+    "scope": "Read-only verification after both authorized windows. Separate timestamps are retained for each observation. No additional model generation or lifecycle transition performed for this verification."
+  },
+  "interpretation_limits": [
+    "Independent expected values/tests, not agreement with original B.",
+    "Exploratory synthetic local panel, not general quality retention or statistical non-inferiority.",
+    "Runtime and distribution differ as well as weights; no isolated quantization claim.",
+    "Incidental elapsed times are diagnostics, not a new performance benchmark.",
+    "All 24 cases remain in the denominator, including incomplete, technical and unreviewable states."
+  ]
+}

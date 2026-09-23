@@ -1,0 +1,9 @@
+{
+  "status": "AUXILIARY_GLOBAL_DOCUMENT_UPDATE_NOT_PERFORMED",
+  "observed_at": "2026-09-23T13:26:23+02:00",
+  "tool_result": "This tool call was blocked by OpenAI because we couldn't determine the safety status of the request.",
+  "attempted_scope": "Update global STRIX_CLUSTER_DOCS checkpoint for the ongoing new quality campaign; no lifecycle action was included.",
+  "readback": "CURRENT.md remained the prior PERF recovery snapshot and the proposed archive was absent. The existing A supervisor remained active with its original InvocationID.",
+  "campaign_authority": "/home/funboy/StrixHaloMimo26/docs/mimo26/quality-retention-001/HANDOFF.md and registry.json; per-request progress is in the existing A run directory.",
+  "response": "Did not repeat the blocked mutation or redispatch A; continued read-only reconciliation of the already-running authorized job."
+}

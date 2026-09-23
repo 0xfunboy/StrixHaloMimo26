@@ -1,0 +1,23 @@
+DS41_OFF_VERIFIED
+{
+  "state": "OFF",
+  "preset": "dspark-k2-gfx1151",
+  "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513",
+  "owner": "NONE",
+  "owner_state": "OFF",
+  "epoch": "",
+  "reason": "",
+  "ranks": [
+    {
+      "rank": 0,
+      "active": false,
+      "health_http": "000"
+    },
+    {
+      "rank": 1,
+      "active": false,
+      "health_http": "000"
+    }
+  ],
+  "paired_backend_http": "000"
+}

@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "load_s": 280.5116270959843,
+  "finished_at": "2026-09-23T13:40:20+0200",
+  "pid": 637819,
+  "rank": 0,
+  "runtime_versions": {
+    "vllm": "0.1.0rc2.dev9+g9255fd9fb9.rocm100",
+    "torch": "2.13.0+rocm10.0.0",
+    "transformers": "5.16.1"
+  },
+  "kwargs": {
+    "model": "/home/funboy/models/MiMo-V2.6/official/MiMo-V2.6-Flash-RL",
+    "runner": "generate",
+    "trust_remote_code": true,
+    "language_model_only": true,
+    "tensor_parallel_size": 2,
+    "pipeline_parallel_size": 1,
+    "distributed_executor_backend": "external_launcher",
+    "dtype": "bfloat16",
+    "max_model_len": 4096,
+    "max_num_seqs": 1,
+    "max_num_batched_tokens": 512,
+    "kv_cache_memory_bytes": 1073741824,
+    "enforce_eager": true,
+    "disable_custom_all_reduce": true,
+    "enable_expert_parallel": false,
+    "enable_prefix_caching": false,
+    "seed": 1,
+    "moe_backend": "triton_unfused",
+    "disable_log_stats": false
+  },
+  "patch_sha256": "eeb66fefbf1b63459e5712c031399f2d24d9ac05956c97b4e979ad03b901be72",
+  "memory_before": {
+    "observed_at": "2026-09-23T13:35:34+0200",
+    "mem_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 127494074368,
+      "SwapTotal": 8589930496,
+      "SwapFree": 6253793280
+    },
+    "process": {
+      "VmSize": 46985216,
+      "VmRSS": 24178688,
+      "VmSwap": 0,
+      "pid": 637819,
+      "minflt": 3502,
+      "majflt": 3,
+      "io": {
+        "rchar": 3007489,
+        "wchar": 0,
+        "syscr": 332,
+        "syscw": 0,
+        "read_bytes": 49152,
+        "write_bytes": 0,
+        "cancelled_write_bytes": 0
+      }
+    }
+  },
+  "memory_after": {
+    "observed_at": "2026-09-23T13:40:20+0200",
+    "mem_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 38335557632,
+      "SwapTotal": 8589930496,
+      "SwapFree": 4301897728
+    },
+    "process": {
+      "VmSize": 109432913920,
+      "VmRSS": 2328399872,
+      "VmSwap": 843059200,
+      "pid": 637819,
+      "minflt": 26462529,
+      "majflt": 396379,
+      "io": {
+        "rchar": 1618937731,
+        "wchar": 22195467,
+        "syscr": 65097,
+        "syscw": 1042,
+        "read_bytes": 131465654272,
+        "write_bytes": 331776,
+        "cancelled_write_bytes": 0
+      }
+    }
+  },
+  "source_freeze": {
+    "status": "PASS",
+    "files_checked": 30,
+    "index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337"
+  }
+}

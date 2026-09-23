@@ -1,0 +1,242 @@
+{
+  "schema": "mimo26-quality-request-v1",
+  "campaign": "QUALITY-RETENTION-001",
+  "run_id": "quality-retention-001-B-original-001",
+  "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-english",
+  "case_id": "SANITY-english",
+  "arm": "B",
+  "rank": 0,
+  "phase": "preflight",
+  "family": "sanity",
+  "language": null,
+  "messages": [
+    {
+      "content": "Alice is first and Bob is second. Who is second? Return only the name.",
+      "role": "user"
+    }
+  ],
+  "rendered_text": "<|im_start|>user\nAlice is first and Bob is second. Who is second? Return only the name.<|im_end|><|im_start|>assistant\n<think></think>",
+  "rendered_text_sha256": "643b303d2a3f967d5b8efee21441286485f5e218a4426ea9e332af8b35ffef5e",
+  "input_ids_provided": [
+    151644,
+    872,
+    198,
+    61686,
+    374,
+    1156,
+    323,
+    14261,
+    374,
+    2086,
+    13,
+    10479,
+    374,
+    2086,
+    30,
+    3411,
+    1172,
+    279,
+    829,
+    13,
+    151645,
+    151644,
+    77091,
+    198,
+    151667,
+    151668
+  ],
+  "input_tokens": 26,
+  "input_ids_sha256": "bba401d7133869670d701ced6762313230294485b07d5b39874133250f790ecc",
+  "output_cap": 128,
+  "sampling": {
+    "temperature": 0.0,
+    "seed": 1,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "ignore_eos": false,
+    "thinking": false,
+    "prefix_reuse": false
+  },
+  "source_index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337",
+  "runtime": {
+    "name": "vLLM",
+    "versions": {
+      "vllm": "0.1.0rc2.dev9+g9255fd9fb9.rocm100",
+      "torch": "2.13.0+rocm10.0.0",
+      "transformers": "5.16.1"
+    },
+    "patch_sha256": "eeb66fefbf1b63459e5712c031399f2d24d9ac05956c97b4e979ad03b901be72"
+  },
+  "native_response": {
+    "_native_type": "RequestOutput",
+    "request_id": "4",
+    "prompt": null,
+    "prompt_token_ids": [
+      151644,
+      872,
+      198,
+      61686,
+      374,
+      1156,
+      323,
+      14261,
+      374,
+      2086,
+      13,
+      10479,
+      374,
+      2086,
+      30,
+      3411,
+      1172,
+      279,
+      829,
+      13,
+      151645,
+      151644,
+      77091,
+      198,
+      151667,
+      151668
+    ],
+    "prompt_logprobs": null,
+    "outputs": [
+      {
+        "index": 0,
+        "text": "Bob",
+        "token_ids": [
+          32388,
+          151645
+        ],
+        "cumulative_logprob": null,
+        "logprobs": null,
+        "routed_experts": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "lora_request": null,
+        "sampling_mask": null,
+        "spec_decode_metrics": null
+      }
+    ],
+    "finished": true,
+    "metrics": {
+      "num_generation_tokens": 2,
+      "arrival_time": 1790163631.4952679,
+      "queued_ts": 162511.71656779,
+      "scheduled_ts": 162511.716584361,
+      "first_token_ts": 162512.24924839,
+      "last_token_ts": 162512.541068919,
+      "first_token_latency": 0.533083438873291,
+      "is_corrupted": false
+    },
+    "lora_request": null,
+    "encoder_prompt": null,
+    "encoder_prompt_token_ids": null,
+    "num_cached_tokens": 0,
+    "num_cache_creation_tokens": 0,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null
+  },
+  "final_text": "Bob",
+  "output_tokens": 2,
+  "output_token_ids": [
+    32388,
+    151645
+  ],
+  "native_output_ids_available": true,
+  "native_input_ids_echoed": [
+    151644,
+    872,
+    198,
+    61686,
+    374,
+    1156,
+    323,
+    14261,
+    374,
+    2086,
+    13,
+    10479,
+    374,
+    2086,
+    30,
+    3411,
+    1172,
+    279,
+    829,
+    13,
+    151645,
+    151644,
+    77091,
+    198,
+    151667,
+    151668
+  ],
+  "input_validation": "NATIVE_INPUT_IDS_ECHO_MATCH",
+  "finish_reason": "stop",
+  "completion_status": "COMPLETE",
+  "cache_reused_tokens": 0,
+  "cache_gate_pass": true,
+  "native_prompt_processed": 26,
+  "diagnostic_wall_s": 0.8250754670007154,
+  "diagnostic_clock": "perf_counter around offline LLM.generate on this rank",
+  "t_submit_monotonic": 162511.716203969,
+  "t_done_monotonic": 162512.541279436,
+  "resource_before": {
+    "observed_at": "2026-09-23T13:40:31+0200",
+    "mem_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 38146617344,
+      "SwapTotal": 8589930496,
+      "SwapFree": 4305715200
+    },
+    "process": {
+      "VmSize": 109879709696,
+      "VmRSS": 2392788992,
+      "VmSwap": 841498624,
+      "pid": 637819,
+      "minflt": 26566756,
+      "majflt": 396735,
+      "io": {
+        "rchar": 1627977853,
+        "wchar": 22248063,
+        "syscr": 65719,
+        "syscw": 1103,
+        "read_bytes": 131471200256,
+        "write_bytes": 462848,
+        "cancelled_write_bytes": 0
+      }
+    }
+  },
+  "resource_after": {
+    "observed_at": "2026-09-23T13:40:32+0200",
+    "mem_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 38168526848,
+      "SwapTotal": 8589930496,
+      "SwapFree": 4305809408
+    },
+    "process": {
+      "VmSize": 109879709696,
+      "VmRSS": 2392875008,
+      "VmSwap": 841412608,
+      "pid": 637819,
+      "minflt": 26566760,
+      "majflt": 396752,
+      "io": {
+        "rchar": 1627981507,
+        "wchar": 22248063,
+        "syscr": 65728,
+        "syscw": 1103,
+        "read_bytes": 131471310848,
+        "write_bytes": 462848,
+        "cancelled_write_bytes": 0
+      }
+    }
+  },
+  "collector_consistency_pass": true,
+  "error": null,
+  "persisted_at": "2026-09-23T13:40:32+0200",
+  "record_sha256": "f4a96e517378fd70698596c613e4f365055778bd0edcc894bc5730c1204b3c2d"
+}

@@ -1,0 +1,281 @@
+{
+  "cleanup": {
+    "at": "2026-09-23T13:55:22+0200",
+    "k2_state": "READY",
+    "status": "PASS"
+  },
+  "initial_cause": "NORMAL_COMPLETION",
+  "load": {
+    "finished_at": "2026-09-23T13:40:20+0200",
+    "kwargs": {
+      "disable_custom_all_reduce": true,
+      "disable_log_stats": false,
+      "distributed_executor_backend": "external_launcher",
+      "dtype": "bfloat16",
+      "enable_expert_parallel": false,
+      "enable_prefix_caching": false,
+      "enforce_eager": true,
+      "kv_cache_memory_bytes": 1073741824,
+      "language_model_only": true,
+      "max_model_len": 4096,
+      "max_num_batched_tokens": 512,
+      "max_num_seqs": 1,
+      "model": "/home/funboy/models/MiMo-V2.6/official/MiMo-V2.6-Flash-RL",
+      "moe_backend": "triton_unfused",
+      "pipeline_parallel_size": 1,
+      "runner": "generate",
+      "seed": 1,
+      "tensor_parallel_size": 2,
+      "trust_remote_code": true
+    },
+    "load_s": 280.5116270959843,
+    "memory_after": {
+      "mem_bytes": {
+        "MemAvailable": 38335557632,
+        "MemTotal": 131210121216,
+        "SwapFree": 4301897728,
+        "SwapTotal": 8589930496
+      },
+      "observed_at": "2026-09-23T13:40:20+0200",
+      "process": {
+        "VmRSS": 2328399872,
+        "VmSize": 109432913920,
+        "VmSwap": 843059200,
+        "io": {
+          "cancelled_write_bytes": 0,
+          "rchar": 1618937731,
+          "read_bytes": 131465654272,
+          "syscr": 65097,
+          "syscw": 1042,
+          "wchar": 22195467,
+          "write_bytes": 331776
+        },
+        "majflt": 396379,
+        "minflt": 26462529,
+        "pid": 637819
+      }
+    },
+    "memory_before": {
+      "mem_bytes": {
+        "MemAvailable": 127494074368,
+        "MemTotal": 131210121216,
+        "SwapFree": 6253793280,
+        "SwapTotal": 8589930496
+      },
+      "observed_at": "2026-09-23T13:35:34+0200",
+      "process": {
+        "VmRSS": 24178688,
+        "VmSize": 46985216,
+        "VmSwap": 0,
+        "io": {
+          "cancelled_write_bytes": 0,
+          "rchar": 3007489,
+          "read_bytes": 49152,
+          "syscr": 332,
+          "syscw": 0,
+          "wchar": 0,
+          "write_bytes": 0
+        },
+        "majflt": 3,
+        "minflt": 3502,
+        "pid": 637819
+      }
+    },
+    "patch_sha256": "eeb66fefbf1b63459e5712c031399f2d24d9ac05956c97b4e979ad03b901be72",
+    "pid": 637819,
+    "rank": 0,
+    "runtime_versions": {
+      "torch": "2.13.0+rocm10.0.0",
+      "transformers": "5.16.1",
+      "vllm": "0.1.0rc2.dev9+g9255fd9fb9.rocm100"
+    },
+    "source_freeze": {
+      "files_checked": 30,
+      "index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337",
+      "status": "PASS"
+    },
+    "status": "PASS"
+  },
+  "quality": {
+    "note": "PASS denotes sanity and collection, not independent panel verdicts",
+    "panel_completions": 24,
+    "postflight": {
+      "at": "2026-09-23T13:50:19+0200",
+      "phase": "postflight",
+      "status": "PASS",
+      "tests": [
+        {
+          "case_id": "SANITY-arithmetic",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-arithmetic",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-extract",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-extract",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-json",
+          "critical_violations": [],
+          "parsed": {
+            "alpha": 7,
+            "beta": "blue"
+          },
+          "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-json",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-italian",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-italian",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-english",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-english",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-code_clamp",
+          "code_sha256": "68561f3d134a950c8c5669ffa883345016359926ccd75c1c19bc25676245b757",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-code_clamp",
+          "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+          "status": "PASS",
+          "tests": [
+            {
+              "actual_preview": "5",
+              "actual_type": "int",
+              "index": 0,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "0",
+              "actual_type": "int",
+              "index": 1,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "10",
+              "actual_type": "int",
+              "index": 2,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "3",
+              "actual_type": "int",
+              "index": 3,
+              "input_unchanged": true,
+              "pass": true
+            }
+          ]
+        }
+      ]
+    },
+    "preflight": {
+      "at": "2026-09-23T13:40:43+0200",
+      "phase": "preflight",
+      "status": "PASS",
+      "tests": [
+        {
+          "case_id": "SANITY-arithmetic",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-arithmetic",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-extract",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-extract",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-json",
+          "critical_violations": [],
+          "parsed": {
+            "alpha": 7,
+            "beta": "blue"
+          },
+          "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-json",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-italian",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-italian",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-english",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-english",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-code_clamp",
+          "code_sha256": "68561f3d134a950c8c5669ffa883345016359926ccd75c1c19bc25676245b757",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-code_clamp",
+          "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+          "status": "PASS",
+          "tests": [
+            {
+              "actual_preview": "5",
+              "actual_type": "int",
+              "index": 0,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "0",
+              "actual_type": "int",
+              "index": 1,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "10",
+              "actual_type": "int",
+              "index": 2,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "3",
+              "actual_type": "int",
+              "index": 3,
+              "input_unchanged": true,
+              "pass": true
+            }
+          ]
+        }
+      ]
+    },
+    "status": "PASS"
+  },
+  "run_completion": "PASS",
+  "run_id": "quality-retention-001-B-original-001",
+  "schema": "mimo26-window-result-v1",
+  "workers": {
+    "rank0": {
+      "ActiveState": "inactive",
+      "ExecMainStatus": "0",
+      "InvocationID": "",
+      "Result": "success",
+      "SubState": "dead"
+    },
+    "rank1": {
+      "ActiveState": "inactive",
+      "ExecMainStatus": "0",
+      "InvocationID": "",
+      "Result": "success",
+      "SubState": "dead"
+    }
+  }
+}

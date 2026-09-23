@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "arm": "A",
+  "run_id": "quality-retention-001-A-mixed-001",
+  "historical_cleanup_completed_at": "2026-09-23T13:33:46+02:00",
+  "live_verified_at": "2026-09-23T13:34:53+02:00",
+  "controller_state": "READY",
+  "owner": "DS41",
+  "owner_state": "RUNNING",
+  "epoch": "1790162943675581168",
+  "preset": "dspark-k2-gfx1151",
+  "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513",
+  "rank0_health_http": 200,
+  "rank1_health_http": 200,
+  "paired_health_http": 200,
+  "A_supervisor": "inactive/dead, MainPID0",
+  "A_worker": "not-found/inactive, MainPID0",
+  "llama_server_processes": [],
+  "compute_and_cleanup_lock_holders": [],
+  "evidence": [
+    "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/result.json",
+    "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/k2-after.json",
+    "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/dispatch-preflight.json"
+  ],
+  "note": "Historical inter-arm restoration receipt, not a claim that K2 remains resident during the authorized B window.",
+  "residue_check_context": "Same MCP call immediately before B dispatch at2026-09-23T13:35:20+02:00; exact ps/lslocks timestamp not separately recorded."
+}

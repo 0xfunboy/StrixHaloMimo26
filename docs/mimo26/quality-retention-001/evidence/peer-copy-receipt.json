@@ -1,0 +1,13 @@
+{
+  "schema": "mimo26-quality-peer-copy-v1",
+  "status": "BYTE_IDENTICAL_COPY_VERIFIED",
+  "observed_at": "2026-09-23T13:52:56+02:00",
+  "node": "02-EVO-X3",
+  "source": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-B-original-001/rank1-raw-results.jsonl",
+  "destination": "evidence/B-rank1-raw-results.jsonl",
+  "sha256": "bbdfce9fdd30635790ea8117d261809a057236e6607f13fdb7435f357840ce8f",
+  "records": 36,
+  "copied_from": "NODE01 via the pre-existing SSH alias 02-evo-x3-tb",
+  "native_primary_vs_peer_comparison": "PENDING_FROZEN_PAIRED_EVALUATOR",
+  "not_additional_generations": true
+}

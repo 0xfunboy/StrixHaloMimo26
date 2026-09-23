@@ -1,0 +1,18 @@
+{
+  "status": "COLLECTION_INTEGRITY_PASS_NOT_SEMANTIC_VERDICTS",
+  "arm": "A",
+  "run_id": "quality-retention-001-A-mixed-001",
+  "raw_path": "/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001/raw-results.jsonl",
+  "raw_sha256": "9021b395ab8e3f398921fddfdc3c9e92700cff2922687b271677b3a605762575",
+  "total_records_including_sanity": 36,
+  "panel_records": 24,
+  "panel_output_tokens_native": 1775,
+  "panel_completion_states": {"COMPLETE": 24},
+  "zero_reused_prefill_all_requests": true,
+  "native_output_ids_match_counts_all_requests": true,
+  "sanity_preflight": "PASS_6_OF_6",
+  "sanity_postflight": "PASS_6_OF_6",
+  "last_restore_observed_at": "2026-09-23T13:32:25+02:00",
+  "last_restore_status": "STARTING_FINALIZER_IN_FLIGHT",
+  "semantic_panel_evaluation": "PENDING_PAIRED_CPU_EVALUATION_AFTER_B"
+}

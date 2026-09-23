@@ -1,0 +1,79 @@
+{
+  "phase": "postflight",
+  "status": "PASS",
+  "tests": [
+    {
+      "case_id": "SANITY-arithmetic",
+      "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-arithmetic",
+      "status": "PASS",
+      "critical_violations": []
+    },
+    {
+      "case_id": "SANITY-extract",
+      "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-extract",
+      "status": "PASS",
+      "critical_violations": []
+    },
+    {
+      "case_id": "SANITY-json",
+      "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-json",
+      "status": "PASS",
+      "critical_violations": [],
+      "parsed": {
+        "alpha": 7,
+        "beta": "blue"
+      }
+    },
+    {
+      "case_id": "SANITY-italian",
+      "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-italian",
+      "status": "PASS",
+      "critical_violations": []
+    },
+    {
+      "case_id": "SANITY-english",
+      "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-english",
+      "status": "PASS",
+      "critical_violations": []
+    },
+    {
+      "case_id": "SANITY-code_clamp",
+      "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-code_clamp",
+      "status": "PASS",
+      "tests": [
+        {
+          "index": 0,
+          "pass": true,
+          "input_unchanged": true,
+          "actual_type": "int",
+          "actual_preview": "5"
+        },
+        {
+          "index": 1,
+          "pass": true,
+          "input_unchanged": true,
+          "actual_type": "int",
+          "actual_preview": "0"
+        },
+        {
+          "index": 2,
+          "pass": true,
+          "input_unchanged": true,
+          "actual_type": "int",
+          "actual_preview": "10"
+        },
+        {
+          "index": 3,
+          "pass": true,
+          "input_unchanged": true,
+          "actual_type": "int",
+          "actual_preview": "3"
+        }
+      ],
+      "critical_violations": [],
+      "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+      "code_sha256": "68561f3d134a950c8c5669ffa883345016359926ccd75c1c19bc25676245b757"
+    }
+  ],
+  "at": "2026-09-23T13:50:19+0200"
+}

@@ -1,0 +1,15 @@
+{
+  "state": "DISPATCHED",
+  "at": "2026-09-23T13:35:20+0200",
+  "stdout": "",
+  "stderr": "Running as unit: mimo26-qr001-supervisor-b-001.service; invocation ID: 44d511f358e14e09974a5e29fa871b55\n",
+  "supervisor": {
+    "LoadState": "loaded",
+    "ActiveState": "active",
+    "SubState": "running",
+    "InvocationID": "44d511f358e14e09974a5e29fa871b55",
+    "MainPID": "637328",
+    "Result": "success",
+    "ExecMainStatus": "0"
+  }
+}

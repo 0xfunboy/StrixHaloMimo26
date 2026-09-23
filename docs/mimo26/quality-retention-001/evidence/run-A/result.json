@@ -1,0 +1,285 @@
+{
+  "cleanup": {
+    "at": "2026-09-23T13:33:46+0200",
+    "k2_state": "READY",
+    "status": "PASS"
+  },
+  "initial_cause": "NORMAL_COMPLETION",
+  "load": {
+    "binary_sha256": "5898a81b08e919c507e09fb4252265c5ee3b8373cef13edc475cf267415cd8c7",
+    "command": [
+      "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/llama-server",
+      "-m",
+      "/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00001-of-00004.gguf",
+      "--device",
+      "ROCm0",
+      "--split-mode",
+      "none",
+      "-ngl",
+      "all",
+      "-c",
+      "4096",
+      "-b",
+      "512",
+      "-ub",
+      "128",
+      "-np",
+      "1",
+      "--no-cont-batching",
+      "-fa",
+      "auto",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "18342",
+      "--reasoning",
+      "off",
+      "--metrics"
+    ],
+    "finished_at": "2026-09-23T13:26:36+0200",
+    "input_checks": "input-checks.json",
+    "load_s": 113.45737157599069,
+    "memory_after": {
+      "mem_bytes": {
+        "MemAvailable": 38719889408,
+        "MemTotal": 131210121216,
+        "SwapFree": 7013040128,
+        "SwapTotal": 8589930496
+      },
+      "observed_at": "2026-09-23T13:26:36+0200",
+      "process": {
+        "VmRSS": 1232343040,
+        "VmSize": 96140251136,
+        "VmSwap": 0,
+        "io": {
+          "cancelled_write_bytes": 0,
+          "rchar": 87735729027,
+          "read_bytes": 87780048896,
+          "syscr": 87508,
+          "syscw": 194,
+          "wchar": 305384,
+          "write_bytes": 12288
+        },
+        "majflt": 423,
+        "minflt": 242901,
+        "pid": 631703
+      }
+    },
+    "memory_before": {
+      "mem_bytes": {
+        "MemAvailable": 127167447040,
+        "MemTotal": 131210121216,
+        "SwapFree": 7017377792,
+        "SwapTotal": 8589930496
+      },
+      "observed_at": "2026-09-23T13:24:43+0200",
+      "process": {
+        "VmRSS": 26210304,
+        "VmSize": 37310464,
+        "VmSwap": 0,
+        "io": {
+          "cancelled_write_bytes": 0,
+          "rchar": 2928438,
+          "read_bytes": 831488,
+          "syscr": 386,
+          "syscw": 5,
+          "wchar": 877,
+          "write_bytes": 8192
+        },
+        "majflt": 1,
+        "minflt": 4669,
+        "pid": 631700
+      }
+    },
+    "pid": 631703,
+    "runtime_commit": "58367713a6935c0810103378144008df32e3d5db",
+    "source_freeze": {
+      "files_checked": 30,
+      "index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337",
+      "status": "PASS"
+    },
+    "status": "PASS"
+  },
+  "quality": {
+    "note": "PASS denotes sanity and collection, not independent panel verdicts",
+    "panel_completions": 24,
+    "postflight": {
+      "at": "2026-09-23T13:29:01+0200",
+      "phase": "postflight",
+      "status": "PASS",
+      "tests": [
+        {
+          "case_id": "SANITY-arithmetic",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-A-mixed-001/A/postflight/SANITY-arithmetic",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-extract",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-A-mixed-001/A/postflight/SANITY-extract",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-json",
+          "critical_violations": [],
+          "parsed": {
+            "alpha": 7,
+            "beta": "blue"
+          },
+          "request_id": "quality-retention-001-A-mixed-001/A/postflight/SANITY-json",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-italian",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-A-mixed-001/A/postflight/SANITY-italian",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-english",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-A-mixed-001/A/postflight/SANITY-english",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-code_clamp",
+          "code_sha256": "68561f3d134a950c8c5669ffa883345016359926ccd75c1c19bc25676245b757",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-A-mixed-001/A/postflight/SANITY-code_clamp",
+          "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+          "status": "PASS",
+          "tests": [
+            {
+              "actual_preview": "5",
+              "actual_type": "int",
+              "index": 0,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "0",
+              "actual_type": "int",
+              "index": 1,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "10",
+              "actual_type": "int",
+              "index": 2,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "3",
+              "actual_type": "int",
+              "index": 3,
+              "input_unchanged": true,
+              "pass": true
+            }
+          ]
+        }
+      ]
+    },
+    "preflight": {
+      "at": "2026-09-23T13:26:43+0200",
+      "phase": "preflight",
+      "status": "PASS",
+      "tests": [
+        {
+          "case_id": "SANITY-arithmetic",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-A-mixed-001/A/preflight/SANITY-arithmetic",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-extract",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-A-mixed-001/A/preflight/SANITY-extract",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-json",
+          "critical_violations": [],
+          "parsed": {
+            "alpha": 7,
+            "beta": "blue"
+          },
+          "request_id": "quality-retention-001-A-mixed-001/A/preflight/SANITY-json",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-italian",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-A-mixed-001/A/preflight/SANITY-italian",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-english",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-A-mixed-001/A/preflight/SANITY-english",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-code_clamp",
+          "code_sha256": "68561f3d134a950c8c5669ffa883345016359926ccd75c1c19bc25676245b757",
+          "critical_violations": [],
+          "request_id": "quality-retention-001-A-mixed-001/A/preflight/SANITY-code_clamp",
+          "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+          "status": "PASS",
+          "tests": [
+            {
+              "actual_preview": "5",
+              "actual_type": "int",
+              "index": 0,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "0",
+              "actual_type": "int",
+              "index": 1,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "10",
+              "actual_type": "int",
+              "index": 2,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "3",
+              "actual_type": "int",
+              "index": 3,
+              "input_unchanged": true,
+              "pass": true
+            }
+          ]
+        }
+      ]
+    },
+    "status": "PASS"
+  },
+  "run_completion": "PASS",
+  "run_id": "quality-retention-001-A-mixed-001",
+  "schema": "mimo26-window-result-v1",
+  "workers": {
+    "rank0": {
+      "ActiveState": "inactive",
+      "ExecMainStatus": "0",
+      "InvocationID": "",
+      "Result": "success",
+      "SubState": "dead"
+    },
+    "rank1": {
+      "ActiveState": "not-applicable",
+      "ExecMainStatus": "0",
+      "InvocationID": "",
+      "Result": "not-applicable",
+      "SubState": "not-applicable"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "schema": "mimo26-quality-preparation-receipt-v1",
+  "preparation_commit": "6c32e7509db1920c2e78c985ff913c8c8d83af18",
+  "committed_at": "2026-09-23T13:23:39+0200",
+  "source_index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337",
+  "gpu_launched_before_commit": false
+}

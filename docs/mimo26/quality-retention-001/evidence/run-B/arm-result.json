@@ -1,0 +1,315 @@
+{
+  "schema": "mimo26-quality-arm-v1",
+  "arm": "B",
+  "run_id": "quality-retention-001-B-original-001",
+  "panel": [
+    {
+      "case_id": "CODE-01",
+      "request_id": "quality-retention-001-B-original-001/B/panel/CODE-01",
+      "completion_status": "COMPLETE",
+      "output_tokens": 132
+    },
+    {
+      "case_id": "CODE-02",
+      "request_id": "quality-retention-001-B-original-001/B/panel/CODE-02",
+      "completion_status": "COMPLETE",
+      "output_tokens": 104
+    },
+    {
+      "case_id": "CODE-03",
+      "request_id": "quality-retention-001-B-original-001/B/panel/CODE-03",
+      "completion_status": "COMPLETE",
+      "output_tokens": 214
+    },
+    {
+      "case_id": "CODE-04",
+      "request_id": "quality-retention-001-B-original-001/B/panel/CODE-04",
+      "completion_status": "COMPLETE",
+      "output_tokens": 238
+    },
+    {
+      "case_id": "DEBUG-01",
+      "request_id": "quality-retention-001-B-original-001/B/panel/DEBUG-01",
+      "completion_status": "COMPLETE",
+      "output_tokens": 98
+    },
+    {
+      "case_id": "DEBUG-02",
+      "request_id": "quality-retention-001-B-original-001/B/panel/DEBUG-02",
+      "completion_status": "COMPLETE",
+      "output_tokens": 153
+    },
+    {
+      "case_id": "DEBUG-03",
+      "request_id": "quality-retention-001-B-original-001/B/panel/DEBUG-03",
+      "completion_status": "COMPLETE",
+      "output_tokens": 76
+    },
+    {
+      "case_id": "DEBUG-04",
+      "request_id": "quality-retention-001-B-original-001/B/panel/DEBUG-04",
+      "completion_status": "COMPLETE",
+      "output_tokens": 87
+    },
+    {
+      "case_id": "STRUCT-01",
+      "request_id": "quality-retention-001-B-original-001/B/panel/STRUCT-01",
+      "completion_status": "COMPLETE",
+      "output_tokens": 75
+    },
+    {
+      "case_id": "STRUCT-02",
+      "request_id": "quality-retention-001-B-original-001/B/panel/STRUCT-02",
+      "completion_status": "COMPLETE",
+      "output_tokens": 55
+    },
+    {
+      "case_id": "STRUCT-03",
+      "request_id": "quality-retention-001-B-original-001/B/panel/STRUCT-03",
+      "completion_status": "COMPLETE",
+      "output_tokens": 27
+    },
+    {
+      "case_id": "STRUCT-04",
+      "request_id": "quality-retention-001-B-original-001/B/panel/STRUCT-04",
+      "completion_status": "COMPLETE",
+      "output_tokens": 23
+    },
+    {
+      "case_id": "DOC-01",
+      "request_id": "quality-retention-001-B-original-001/B/panel/DOC-01",
+      "completion_status": "COMPLETE",
+      "output_tokens": 23
+    },
+    {
+      "case_id": "DOC-02",
+      "request_id": "quality-retention-001-B-original-001/B/panel/DOC-02",
+      "completion_status": "COMPLETE",
+      "output_tokens": 37
+    },
+    {
+      "case_id": "DOC-03",
+      "request_id": "quality-retention-001-B-original-001/B/panel/DOC-03",
+      "completion_status": "COMPLETE",
+      "output_tokens": 39
+    },
+    {
+      "case_id": "DOC-04",
+      "request_id": "quality-retention-001-B-original-001/B/panel/DOC-04",
+      "completion_status": "COMPLETE",
+      "output_tokens": 43
+    },
+    {
+      "case_id": "OPS-01",
+      "request_id": "quality-retention-001-B-original-001/B/panel/OPS-01",
+      "completion_status": "COMPLETE",
+      "output_tokens": 50
+    },
+    {
+      "case_id": "OPS-02",
+      "request_id": "quality-retention-001-B-original-001/B/panel/OPS-02",
+      "completion_status": "COMPLETE",
+      "output_tokens": 46
+    },
+    {
+      "case_id": "OPS-03",
+      "request_id": "quality-retention-001-B-original-001/B/panel/OPS-03",
+      "completion_status": "COMPLETE",
+      "output_tokens": 80
+    },
+    {
+      "case_id": "OPS-04",
+      "request_id": "quality-retention-001-B-original-001/B/panel/OPS-04",
+      "completion_status": "COMPLETE",
+      "output_tokens": 50
+    },
+    {
+      "case_id": "REASON-01",
+      "request_id": "quality-retention-001-B-original-001/B/panel/REASON-01",
+      "completion_status": "COMPLETE",
+      "output_tokens": 34
+    },
+    {
+      "case_id": "REASON-02",
+      "request_id": "quality-retention-001-B-original-001/B/panel/REASON-02",
+      "completion_status": "COMPLETE",
+      "output_tokens": 23
+    },
+    {
+      "case_id": "REASON-03",
+      "request_id": "quality-retention-001-B-original-001/B/panel/REASON-03",
+      "completion_status": "COMPLETE",
+      "output_tokens": 36
+    },
+    {
+      "case_id": "REASON-04",
+      "request_id": "quality-retention-001-B-original-001/B/panel/REASON-04",
+      "completion_status": "COMPLETE",
+      "output_tokens": 26
+    }
+  ],
+  "sanity_pre": {
+    "phase": "preflight",
+    "status": "PASS",
+    "tests": [
+      {
+        "case_id": "SANITY-arithmetic",
+        "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-arithmetic",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-extract",
+        "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-extract",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-json",
+        "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-json",
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "alpha": 7,
+          "beta": "blue"
+        }
+      },
+      {
+        "case_id": "SANITY-italian",
+        "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-italian",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-english",
+        "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-english",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-code_clamp",
+        "request_id": "quality-retention-001-B-original-001/B/preflight/SANITY-code_clamp",
+        "status": "PASS",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "int",
+            "actual_preview": "5"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "int",
+            "actual_preview": "0"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "int",
+            "actual_preview": "10"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "int",
+            "actual_preview": "3"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "68561f3d134a950c8c5669ffa883345016359926ccd75c1c19bc25676245b757"
+      }
+    ],
+    "at": "2026-09-23T13:40:43+0200"
+  },
+  "sanity_post": {
+    "phase": "postflight",
+    "status": "PASS",
+    "tests": [
+      {
+        "case_id": "SANITY-arithmetic",
+        "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-arithmetic",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-extract",
+        "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-extract",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-json",
+        "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-json",
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "alpha": 7,
+          "beta": "blue"
+        }
+      },
+      {
+        "case_id": "SANITY-italian",
+        "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-italian",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-english",
+        "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-english",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-code_clamp",
+        "request_id": "quality-retention-001-B-original-001/B/postflight/SANITY-code_clamp",
+        "status": "PASS",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "int",
+            "actual_preview": "5"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "int",
+            "actual_preview": "0"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "int",
+            "actual_preview": "10"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "int",
+            "actual_preview": "3"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "68561f3d134a950c8c5669ffa883345016359926ccd75c1c19bc25676245b757"
+      }
+    ],
+    "at": "2026-09-23T13:50:19+0200"
+  },
+  "source_freeze": {
+    "status": "PASS",
+    "files_checked": 30,
+    "index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337"
+  },
+  "at": "2026-09-23T13:50:19+0200"
+}

@@ -1,0 +1,10 @@
+{
+  "campaign": "QUALITY-RETENTION-001",
+  "run_id": "quality-retention-001-B-original-001",
+  "arm": "B",
+  "last_request": "quality-retention-001-B-original-001/B/postflight/SANITY-code_clamp",
+  "phase": "postflight",
+  "last_case": "SANITY-code_clamp",
+  "last_completion_status": "COMPLETE",
+  "updated_at": "2026-09-23T13:50:18+0200"
+}

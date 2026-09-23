@@ -1,0 +1,46 @@
+{
+  "schema": "mimo26-quality-final-live-v1",
+  "status": "PASS",
+  "observation_completed_at": "2026-09-23T14:03:35+02:00",
+  "health_and_unit_checks_at": "2026-09-23T13:58:06+02:00",
+  "original_pid_absence_and_release_path_checks_at": "2026-09-23T14:00:30+02:00",
+  "resident_engine_cgroup_checks_at": "2026-09-23T14:03:35+02:00",
+  "nodes": {
+    "NODE01": {"hostname": "01-EVO-X3", "user": "funboy", "boot_id": "43c6daec-31c3-4ebe-a599-54b69cfa92b6"},
+    "NODE02": {"hostname": "02-EVO-X3", "user": "funboy", "boot_id": "3fd0da44-da79-4480-ac6f-9a73ee121f17", "access": "SSH from NODE01 using 02-evo-x3-tb"}
+  },
+  "controller": {
+    "path": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+    "state": "READY",
+    "preset": "dspark-k2-gfx1151",
+    "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513",
+    "owner": "DS41",
+    "owner_state": "RUNNING",
+    "epoch": "1790164228979629195",
+    "rank0_health_http": 200,
+    "rank1_health_http": 200,
+    "paired_backend_http": 200
+  },
+  "resident_units": {
+    "NODE01_rank0": {"unit": "ds41-rank0.service", "active": true, "pid": 642280, "invocation_id": "9be4424aeadb4a679bc18a18447a71ba"},
+    "NODE02_rank1": {"unit": "ds41-rank1.service", "active": true, "pid": 653577, "invocation_id": "285e8d925fe34124baf38c736bab063a"},
+    "NODE01_paired": {"unit": "ds41-haloclu-pair.service", "active": true, "pid": 257070, "invocation_id": "4facab11bc2242c6b42117c9865c79b0"}
+  },
+  "owner_receipt_invocations_match_units": true,
+  "resident_launch_path_both_nodes": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/launch-node.sh",
+  "own_campaign_units": {
+    "mimo26-qr001-supervisor-a-001.service": "not-found/inactive/MainPID0",
+    "mimo26-qr001-supervisor-b-001.service": "not-found/inactive/MainPID0",
+    "mimo26-qr001-a-r0-001.service": "not-found/inactive/MainPID0",
+    "mimo26-qr001-b-r0-001.service": "not-found/inactive/MainPID0",
+    "NODE02:mimo26-qr001-b-r1-001.service": "not-found/inactive/MainPID0"
+  },
+  "original_model_pids_confirmed_absent": {"NODE01": [631703, 637819], "NODE02": [636285]},
+  "remaining_engine_processes_are_resident_not_mimo_residues": {
+    "NODE01": {"pid": 642546, "name": "VLLM::EngineCor", "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/ds41-rank0.service"},
+    "NODE02": {"pid": 653760, "name": "VLLM::EngineCor", "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/ds41-rank1.service"}
+  },
+  "matching_compute_or_cleanup_lock_holders": [],
+  "native_cleanup_receipts": {"A": "2026-09-23T13:33:46+02:00", "B": "2026-09-23T13:55:22+02:00"},
+  "scope": "Read-only verification after both authorized windows. Separate timestamps are retained for each observation. No additional model generation or lifecycle transition performed for this verification."
+}

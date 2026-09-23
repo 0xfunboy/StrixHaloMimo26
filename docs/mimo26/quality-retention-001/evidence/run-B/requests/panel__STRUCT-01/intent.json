@@ -1,0 +1,24 @@
+{
+  "campaign": "QUALITY-RETENTION-001",
+  "run_id": "quality-retention-001-B-original-001",
+  "request_id": "quality-retention-001-B-original-001/B/panel/STRUCT-01",
+  "case_id": "STRUCT-01",
+  "arm": "B",
+  "rank": 0,
+  "phase": "panel",
+  "state": "IN_FLIGHT",
+  "created_at": "2026-09-23T13:46:19+0200",
+  "source_index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337",
+  "input_ids_sha256": "53a39442be652a17042e8dadf8e453156a8eb80cd51d97c44386ecfbaabb7428",
+  "output_cap": 512,
+  "sampling": {
+    "temperature": 0.0,
+    "seed": 1,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "ignore_eos": false,
+    "thinking": false,
+    "prefix_reuse": false
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "campaign": "QUALITY-RETENTION-001",
+  "run_id": "quality-retention-001-B-original-001",
+  "request_id": "quality-retention-001-B-original-001/B/panel/DOC-02",
+  "case_id": "DOC-02",
+  "arm": "B",
+  "rank": 0,
+  "phase": "panel",
+  "state": "IN_FLIGHT",
+  "created_at": "2026-09-23T13:47:24+0200",
+  "source_index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337",
+  "input_ids_sha256": "2b71c24aa931f00e6bb9693da75b27cd9c612a4d64f83a4ca565d11174b26aab",
+  "output_cap": 512,
+  "sampling": {
+    "temperature": 0.0,
+    "seed": 1,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "ignore_eos": false,
+    "thinking": false,
+    "prefix_reuse": false
+  }
+}

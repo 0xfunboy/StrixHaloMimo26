@@ -1,0 +1,46 @@
+{
+  "observed_at": "2026-09-23T13:24:26+0200",
+  "controller": {
+    "state": "READY",
+    "preset": "dspark-k2-gfx1151",
+    "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513",
+    "owner": "DS41",
+    "owner_state": "RUNNING",
+    "epoch": "1790127186526215806",
+    "reason": "",
+    "ranks": [
+      {
+        "rank": 0,
+        "active": true,
+        "health_http": "200"
+      },
+      {
+        "rank": 1,
+        "active": true,
+        "health_http": "200"
+      }
+    ],
+    "paired_backend_http": "200"
+  },
+  "paired_health": {
+    "backend": "native-go-tp2",
+    "busy": false,
+    "model": "DeepSeek-V4.1-Flash-MixedQ2-DSpark-K2",
+    "poison": "",
+    "ranks": [
+      true,
+      true
+    ],
+    "status": "ok"
+  },
+  "freeze": {
+    "status": "PASS",
+    "files_checked": 30,
+    "index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337"
+  },
+  "preparation_commit": "6c32e7509db1920c2e78c985ff913c8c8d83af18",
+  "owner_invocations": {
+    "0": "33434044db6a425daf6ad59583f4c983",
+    "1": "3825ea5966684a5b86bd7307cb632878"
+  }
+}
