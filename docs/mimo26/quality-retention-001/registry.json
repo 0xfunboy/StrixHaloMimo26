@@ -1,0 +1,9 @@
+{
+  "campaign": "QUALITY-RETENTION-001",
+  "phase": "FROZEN_CPU_PASS",
+  "updated_at": "2026-09-23T13:23:39+0200",
+  "run_A": "NOT_STARTED",
+  "run_B": "NOT_STARTED",
+  "source_index_sha256": "9f60624b3a68269cae973efc239426a285b13e3c7de982dcb3f662c7b0ebf337",
+  "next_exact_action": "Commit preparation, stage peer and guarded single A dispatch."
+}

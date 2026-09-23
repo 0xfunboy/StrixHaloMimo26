@@ -1,0 +1,11 @@
+[Unit]
+Description=StrixHaloMimo26 controlled window %i
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/funboy/StrixHaloMimo26/scripts/mimo26/window_runner.py %i
+ExecStopPost=/usr/bin/python3 /home/funboy/StrixHaloMimo26/scripts/mimo26/window_cleanup.py %i
+KillMode=control-group
+TimeoutStartSec=120
+TimeoutStopSec=1200
+RuntimeMaxSec=5400

@@ -1,0 +1,2009 @@
+{
+  "schema": "mimo26-quality-cpu-tests-v1",
+  "status": "PASS",
+  "checks_passed": 123,
+  "checks": [
+    {
+      "name": "24_unique_cases",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "six_families_four_each",
+      "pass": true,
+      "detail": {
+        "Debugging": 4,
+        "Dati strutturati": 4,
+        "Documenti": 4,
+        "Ragionamento vincolato": 4,
+        "Diagnosi e pianificazione": 4,
+        "Codice": 4
+      }
+    },
+    {
+      "name": "language_balance",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "caps_preregistered",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "existing_sandbox_no_host_no_network_limits",
+      "pass": true,
+      "detail": {
+        "mode": "probe",
+        "probe": {
+          "uid": 65534,
+          "home_exists": false,
+          "root_ssh_exists": false,
+          "netns": "net:[4026533143]",
+          "network_connect_codes": {
+            "cluster": 111,
+            "peer": 101
+          },
+          "root_writable": false,
+          "devices": [
+            "core",
+            "fd",
+            "full",
+            "mqueue",
+            "null",
+            "ptmx",
+            "pts",
+            "random",
+            "shm",
+            "stderr",
+            "stdin",
+            "stdout",
+            "tty",
+            "urandom",
+            "zero"
+          ],
+          "env_keys": [
+            "HOME",
+            "HOSTNAME",
+            "LC_CTYPE"
+          ],
+          "memory_limit": "268435456",
+          "pids_limit": "32",
+          "cap_eff_zero": true,
+          "no_new_privs": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "name": "CODE-01_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[[1, 7]]"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[[-5, 1], [4, 8]]"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "bounds"
+          },
+          {
+            "index": 5,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[[0, 9], [11, 12]]"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "e76a3a433b2724630ae9672b2df977047b2a4eae35fb46846c7465423a58f3df"
+      }
+    },
+    {
+      "name": "CODE-01_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_CODE_TEST",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 1,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[[1, 3], [2, 4], [3, 5], [5, 7], [9, 9]]"
+          },
+          {
+            "index": 2,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[[-5, -2], [-3, 1], [4, 5], [4, 8]]"
+          },
+          {
+            "index": 3,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[[0, 0], [1, 1]]"
+          },
+          {
+            "index": 4,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[[3, 2]]"
+          },
+          {
+            "index": 5,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[[0, 2], [1, 9], [11, 12]]"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "6c0703bdd1c49882ec10f458e8a0e5f9acacd7f5cbcb516ddcac7ec0ca7babb8"
+      }
+    },
+    {
+      "name": "CODE-01_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CODE-01_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CODE-02_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[{'id': 'z', 'version': 2, 'value': 'first'}, {'id': 'a', 'version': 3, 'value': 8}]"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[{'id': 'q', 'version': 5, 'value': None}]"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[{'id': 'b', 'version': -1, 'value': [2]}]"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "be91b2c9dbd21cade19a7a4c13f9bfae6600f7005098250065f573f260ad1a2a"
+      }
+    },
+    {
+      "name": "CODE-02_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_CODE_TEST",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 1,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[{'id': 'z', 'version': 2, 'value': 'tie'}, {'id': 'a', 'version': 3, 'value': 8}]"
+          },
+          {
+            "index": 2,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[{'id': 'q', 'version': 4, 'value': 1}]"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[{'id': 'b', 'version': -1, 'value': [2]}]"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "b7ec6e74aae0bf0d60d4d9eab80ed25e4a45a06a588526e9324ff27f7f16fc22"
+      }
+    },
+    {
+      "name": "CODE-02_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CODE-02_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CODE-03_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[4, 3, 3]"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[0, 1, 1, 0]"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[0, 0]"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[1, 2, 4]"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[4503599627370497, 4503599627370496]"
+          },
+          {
+            "index": 5,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "invalid"
+          },
+          {
+            "index": 6,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "invalid"
+          },
+          {
+            "index": 7,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "invalid"
+          },
+          {
+            "index": 8,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "invalid"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "9c7c91e9482815e2c5aaf85e5151c4a9f9a4801f474da2fb2b8412be916b761f"
+      }
+    },
+    {
+      "name": "CODE-03_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_CODE_TEST",
+        "tests": [
+          {
+            "index": 0,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[3, 3, 3]"
+          },
+          {
+            "index": 1,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[0, 1, 1, 1]"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[0, 0]"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[1, 2, 4]"
+          },
+          {
+            "index": 4,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[4503599627370496, 4503599627370496]"
+          },
+          {
+            "index": 5,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[-1]"
+          },
+          {
+            "index": 6,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 7,
+            "pass": false,
+            "input_unchanged": true,
+            "exception": "ZeroDivisionError",
+            "message": "division by zero"
+          },
+          {
+            "index": 8,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[6, -3]"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "1959bd7997087c7c76cdcce27755f4e31d63ab86128f0abbe7ac672390422f9f"
+      }
+    },
+    {
+      "name": "CODE-03_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CODE-03_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CODE-04_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': [], 'errors': []}"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': ['a', 'a'], 'errors': []}"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': [], 'errors': [{'index': 0, 'codes': ['id', 'count', 'enabled', 'extra']}]}"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': [], 'errors': [{'index': 0, 'codes': ['id', 'count']}, {'index': 1, 'codes': ['count']}, {'index': 2, 'codes': ['id']}]}"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': [], 'errors': [{'index': 0, 'codes': ['count']}]}"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "90eed007110620b9094cb8dc9642475a4b32765d40fb9ec82a42c1a19cac6b3d"
+      }
+    },
+    {
+      "name": "CODE-04_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_CODE_TEST",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': [], 'errors': []}"
+          },
+          {
+            "index": 1,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': [' a ', 'a'], 'errors': []}"
+          },
+          {
+            "index": 2,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': [' '], 'errors': []}"
+          },
+          {
+            "index": 3,
+            "pass": false,
+            "input_unchanged": true,
+            "exception": "KeyError",
+            "message": "'id'"
+          },
+          {
+            "index": 4,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'valid': ['z'], 'errors': []}"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "5cc0442d8070f141508270d39d3da8e047f62771315a8bf8a8730694645b8092"
+      }
+    },
+    {
+      "name": "CODE-04_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "CODE-04_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DEBUG-01_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{}"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'a': 'last', 'b': ''}"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'token': 'a=b=c'}"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "equals"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "key"
+          },
+          {
+            "index": 5,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "equals"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "9083c34f660fc17c90cd2cb08e7d5274cbbd90a88530603e8e40420dc2eed137"
+      }
+    },
+    {
+      "name": "DEBUG-01_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_CODE_TEST",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{}"
+          },
+          {
+            "index": 1,
+            "pass": false,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "dictionary update sequence element #0 has length 3; 2 is required"
+          },
+          {
+            "index": 2,
+            "pass": false,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "dictionary update sequence element #0 has length 4; 2 is required"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "dictionary update sequence element #0 has length 1; 2 is required"
+          },
+          {
+            "index": 4,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{' ': 'x'}"
+          },
+          {
+            "index": 5,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "dictionary update sequence element #1 has length 1; 2 is required"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "c6000ddf6dee48401eacc40a728cf223ef39d1ce69fd39a4e29b6c57a0a7c1f1"
+      }
+    },
+    {
+      "name": "DEBUG-01_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DEBUG-01_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DEBUG-02_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'status': 'ok', 'delta': {'read_bytes': 4, 'majflt': 2}}"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'status': 'reset', 'delta': None}"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'status': 'ok', 'delta': {'read_bytes': 0, 'majflt': 0}}"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "counter"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "counter"
+          },
+          {
+            "index": 5,
+            "pass": true,
+            "input_unchanged": true,
+            "exception": "ValueError",
+            "message": "counter"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "cb8ec907df20e9764f1e805199079292511f61cc1b5fd11fc2d1d6e5236bc4e2"
+      }
+    },
+    {
+      "name": "DEBUG-02_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_CODE_TEST",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'status': 'ok', 'delta': {'read_bytes': 4, 'majflt': 2}}"
+          },
+          {
+            "index": 1,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'status': 'ok', 'delta': {'read_bytes': 0, 'majflt': 1}}"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'status': 'ok', 'delta': {'read_bytes': 0, 'majflt': 0}}"
+          },
+          {
+            "index": 3,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'status': 'ok', 'delta': {'read_bytes': 1, 'majflt': 0}}"
+          },
+          {
+            "index": 4,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'status': 'ok', 'delta': {'read_bytes': 0, 'majflt': 0}}"
+          },
+          {
+            "index": 5,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'status': 'ok', 'delta': {'read_bytes': 2, 'majflt': 0}}"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "378c357a2b0de883a76a099f99c9f40d2c4b07458c032f811899537e3b80a76a"
+      }
+    },
+    {
+      "name": "DEBUG-02_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DEBUG-02_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DEBUG-03_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': True, 'delay': 1}"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': False, 'delay': 0}"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': False, 'delay': 0}"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': False, 'delay': 0}"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': True, 'delay': 30}"
+          },
+          {
+            "index": 5,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': True, 'delay': 2}"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "6f5e6c96b091988102dfcd3f32132c9bfaf0a96f96471d65c7b697ab127d956e"
+      }
+    },
+    {
+      "name": "DEBUG-03_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_CODE_TEST",
+        "tests": [
+          {
+            "index": 0,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': True, 'delay': 2}"
+          },
+          {
+            "index": 1,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': True, 'delay': 8}"
+          },
+          {
+            "index": 2,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': True, 'delay': 2}"
+          },
+          {
+            "index": 3,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': True, 'delay': 2}"
+          },
+          {
+            "index": 4,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': True, 'delay': 128}"
+          },
+          {
+            "index": 5,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "dict",
+            "actual_preview": "{'retry': True, 'delay': 4}"
+          }
+        ],
+        "critical_violations": [
+          "retry forbidden or non-idempotent operation"
+        ],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "0cc3419a75608d0b8cd6d8b53d8ca9cbd0694883cd90f3620e1b8bfbf724ed8b"
+      }
+    },
+    {
+      "name": "DEBUG-03_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DEBUG-03_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DEBUG-04_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "['c', 'a']"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "['a', 'z']"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "['b']"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "efd3d00754881708e67c6cf8e6caa10b7eed9bdb8c9e47739fdef2032200a941"
+      }
+    },
+    {
+      "name": "DEBUG-04_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_CODE_TEST",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 1,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "['b', 'c']"
+          },
+          {
+            "index": 2,
+            "pass": false,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "['b']"
+          },
+          {
+            "index": 4,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "list",
+            "actual_preview": "[]"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "1c8ee18fbf4a4ebb311a85847274699812e27e4b73cf3af4dfdce5b3cb98288b"
+      }
+    },
+    {
+      "name": "DEBUG-04_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DEBUG-04_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STRUCT-01_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "id": "INV-07",
+          "date": "2026-09-03",
+          "customer": "Officina Lido",
+          "currency": "EUR",
+          "total_cents": 1450,
+          "paid": false,
+          "vat_id": null
+        }
+      }
+    },
+    {
+      "name": "STRUCT-01_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_SEMANTIC",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "id": "INV-07_WRONG",
+          "date": "2026-09-03",
+          "customer": "Officina Lido",
+          "currency": "EUR",
+          "total_cents": 1450,
+          "paid": false,
+          "vat_id": null
+        },
+        "critical_violations": []
+      }
+    },
+    {
+      "name": "STRUCT-01_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STRUCT-01_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STRUCT-02_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "records": [
+            {
+              "id": "a",
+              "latency_ms": 40,
+              "healthy": false
+            },
+            {
+              "id": "b",
+              "latency_ms": 1250,
+              "healthy": true
+            },
+            {
+              "id": "c",
+              "latency_ms": null,
+              "healthy": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "STRUCT-02_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_FORMAT",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "records": [
+            {
+              "id": "a",
+              "latency_ms": 40,
+              "healthy": false
+            },
+            {
+              "id": "b",
+              "latency_ms": 1250,
+              "healthy": true
+            },
+            {
+              "id": "c",
+              "latency_ms": null,
+              "healthy": null
+            },
+            "deliberately_wrong"
+          ]
+        },
+        "critical_violations": []
+      }
+    },
+    {
+      "name": "STRUCT-02_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STRUCT-02_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STRUCT-03_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "id": "T-44",
+          "tags": [
+            "alpha",
+            "beta"
+          ],
+          "enabled": false,
+          "owner": null
+        }
+      }
+    },
+    {
+      "name": "STRUCT-03_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_SEMANTIC",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "id": "T-44_WRONG",
+          "tags": [
+            "alpha",
+            "beta"
+          ],
+          "enabled": false,
+          "owner": null
+        },
+        "critical_violations": []
+      }
+    },
+    {
+      "name": "STRUCT-03_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STRUCT-03_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STRUCT-04_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "retry": {
+            "max": 0
+          },
+          "tags": [],
+          "cache": true,
+          "version": 2
+        }
+      }
+    },
+    {
+      "name": "STRUCT-04_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_SEMANTIC",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "retry": {
+            "max": 1
+          },
+          "tags": [],
+          "cache": true,
+          "version": 2
+        },
+        "critical_violations": []
+      }
+    },
+    {
+      "name": "STRUCT-04_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "STRUCT-04_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DOC-01_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "retention_days": 30,
+          "evidence": [
+            "R2"
+          ],
+          "owner": null
+        }
+      }
+    },
+    {
+      "name": "DOC-01_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_SEMANTIC",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "retention_days": 31,
+          "evidence": [
+            "R2"
+          ],
+          "owner": null
+        },
+        "critical_violations": []
+      }
+    },
+    {
+      "name": "DOC-01_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DOC-01_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DOC-02_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "status": "CONFLICT",
+          "stock_observations": [
+            9,
+            12
+          ],
+          "available": null,
+          "reserved": 2,
+          "evidence": [
+            "S1",
+            "S2"
+          ]
+        }
+      }
+    },
+    {
+      "name": "DOC-02_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_SEMANTIC",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "status": "CONFLICT_WRONG",
+          "stock_observations": [
+            9,
+            12
+          ],
+          "available": null,
+          "reserved": 2,
+          "evidence": [
+            "S1",
+            "S2"
+          ]
+        },
+        "critical_violations": []
+      }
+    },
+    {
+      "name": "DOC-02_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DOC-02_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DOC-03_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "availability": "HTTP_OK",
+          "functional_validation": "NOT_RUN",
+          "rollback": "COMPLETE",
+          "evidence": {
+            "availability": [
+              "E3"
+            ],
+            "functional_validation": [
+              "E3"
+            ],
+            "rollback": [
+              "E2"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "DOC-03_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_SEMANTIC",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "availability": "HTTP_OK_WRONG",
+          "functional_validation": "NOT_RUN",
+          "rollback": "COMPLETE",
+          "evidence": {
+            "availability": [
+              "E3"
+            ],
+            "functional_validation": [
+              "E3"
+            ],
+            "rollback": [
+              "E2"
+            ]
+          }
+        },
+        "critical_violations": []
+      }
+    },
+    {
+      "name": "DOC-03_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DOC-03_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DOC-04_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "outstanding_cents": 2000,
+          "evidence": [
+            "I1",
+            "C1",
+            "P1"
+          ],
+          "ignored": [
+            "P2"
+          ],
+          "bank_account": null,
+          "due_date": null
+        }
+      }
+    },
+    {
+      "name": "DOC-04_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_SEMANTIC",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "outstanding_cents": 2001,
+          "evidence": [
+            "I1",
+            "C1",
+            "P1"
+          ],
+          "ignored": [
+            "P2"
+          ],
+          "bank_account": null,
+          "due_date": null
+        },
+        "critical_violations": []
+      }
+    },
+    {
+      "name": "DOC-04_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "DOC-04_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "OPS-01_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "classification": "IN_FLIGHT",
+          "actions": [
+            {
+              "tool": "read_job",
+              "args": {
+                "job_id": "job-17"
+              }
+            },
+            {
+              "tool": "read_progress",
+              "args": {
+                "run_id": "run-17"
+              }
+            }
+          ],
+          "retry": false
+        }
+      }
+    },
+    {
+      "name": "OPS-01_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_SEMANTIC",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "classification": "IN_FLIGHT_WRONG",
+          "actions": [
+            {
+              "tool": "read_job",
+              "args": {
+                "job_id": "job-17"
+              }
+            },
+            {
+              "tool": "read_progress",
+              "args": {
+                "run_id": "run-17"
+              }
+            }
+          ],
+          "retry": false
+        },
+        "critical_violations": []
+      }
+    },
+    {
+      "name": "OPS-01_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "OPS-01_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "OPS-02_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "classification": "PEER_UNKNOWN",
+          "actions": [
+            {
+              "tool": "preserve_result",
+              "args": {
+                "run": "r2"
+              }
+            },
+            {
+              "tool": "read_peer_status",
+              "args": {
+                "node": "N2"
+              }
+            }
+          ],
+          "restore_now": false
+        }
+      }
+    },
+    {
+      "name": "OPS-02_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_SEMANTIC",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "classification": "PEER_UNKNOWN_WRONG",
+          "actions": [
+            {
+              "tool": "preserve_result",
+              "args": {
+                "run": "r2"
+              }
+            },
+            {
+              "tool": "read_peer_status",
+              "args": {
+                "node": "N2"
+              }
+            }
+          ],
+          "restore_now": false
+        },
+        "critical_violations": []
+      }
+    },
+    {
+      "name": "OPS-02_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "OPS-02_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "OPS-03_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "actions": [
+            {
+              "tool": "drain",
+              "args": {
+                "run": "qx"
+              }
+            },
+            {
+              "tool": "stop_owned",
+              "args": {
+                "run": "qx"
+              }
+            },
+            {
+              "tool": "verify_off",
+              "args": {
+                "nodes": [
+                  "N1",
+                  "N2"
+                ]
+              }
+            },
+            {
+              "tool": "restore",
+              "args": {
+                "release": "r-stable"
+              }
+            },
+            {
+              "tool": "verify_health",
+              "args": {
+                "targets": [
+                  "rank0",
+                  "rank1",
+                  "paired"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "OPS-03_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_FORMAT",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "actions": [
+            {
+              "tool": "drain",
+              "args": {
+                "run": "qx"
+              }
+            },
+            {
+              "tool": "stop_owned",
+              "args": {
+                "run": "qx"
+              }
+            },
+            {
+              "tool": "verify_off",
+              "args": {
+                "nodes": [
+                  "N1",
+                  "N2"
+                ]
+              }
+            },
+            {
+              "tool": "restore",
+              "args": {
+                "release": "r-stable"
+              }
+            },
+            {
+              "tool": "verify_health",
+              "args": {
+                "targets": [
+                  "rank0",
+                  "rank1",
+                  "paired"
+                ]
+              }
+            },
+            "deliberately_wrong"
+          ]
+        },
+        "critical_violations": []
+      }
+    },
+    {
+      "name": "OPS-03_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "OPS-03_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "OPS-04_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "disk_io_observed": true,
+          "model_weights_swapped": "UNKNOWN",
+          "prefill_reused": false,
+          "throttling": "UNKNOWN",
+          "next_action": {
+            "tool": "read_io_counters",
+            "args": {
+              "scope": "owned_run"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "OPS-04_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_SEMANTIC",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "disk_io_observed": false,
+          "model_weights_swapped": "UNKNOWN",
+          "prefill_reused": false,
+          "throttling": "UNKNOWN",
+          "next_action": {
+            "tool": "read_io_counters",
+            "args": {
+              "scope": "owned_run"
+            }
+          }
+        },
+        "critical_violations": []
+      }
+    },
+    {
+      "name": "OPS-04_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "OPS-04_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "REASON-01_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "starts": {
+            "A": 0,
+            "B": 3,
+            "C": 3,
+            "D": 7,
+            "E": 9
+          },
+          "makespan": 10
+        }
+      }
+    },
+    {
+      "name": "REASON-01_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_SEMANTIC",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "starts": {
+            "A": 1,
+            "B": 3,
+            "C": 3,
+            "D": 7,
+            "E": 9
+          },
+          "makespan": 10
+        },
+        "critical_violations": []
+      }
+    },
+    {
+      "name": "REASON-01_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "REASON-01_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "REASON-02_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "ids": [
+            "A",
+            "B",
+            "E"
+          ],
+          "cost": 8,
+          "value": 17
+        }
+      }
+    },
+    {
+      "name": "REASON-02_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_SEMANTIC",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "ids": [
+            "A",
+            "B",
+            "E",
+            "deliberately_wrong"
+          ],
+          "cost": 8,
+          "value": 17
+        },
+        "critical_violations": []
+      }
+    },
+    {
+      "name": "REASON-02_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "REASON-02_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "REASON-03_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "net_lines_cents": [
+            537,
+            400
+          ],
+          "tax_cents": 206,
+          "total_cents": 1293
+        }
+      }
+    },
+    {
+      "name": "REASON-03_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_FORMAT",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "net_lines_cents": [
+            537,
+            400,
+            "deliberately_wrong"
+          ],
+          "tax_cents": 206,
+          "total_cents": 1293
+        },
+        "critical_violations": []
+      }
+    },
+    {
+      "name": "REASON-03_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "REASON-03_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "REASON-04_independent_reference_pass",
+      "pass": true,
+      "detail": {
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "path": [
+            "A",
+            "C",
+            "E",
+            "D"
+          ],
+          "cost": 5,
+          "risk": 0
+        }
+      }
+    },
+    {
+      "name": "REASON-04_deliberate_counterexample_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_SEMANTIC",
+        "reason": "independent expected structure/value mismatch",
+        "parsed": {
+          "path": [
+            "A",
+            "C",
+            "E",
+            "D",
+            "deliberately_wrong"
+          ],
+          "cost": 5,
+          "risk": 0
+        },
+        "critical_violations": []
+      }
+    },
+    {
+      "name": "REASON-04_empty_rejected",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "REASON-04_cap_never_scored_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "invalid_json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "missing_key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wrong_type_bool_as_integer",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "extra_key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "duplicate_key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "truncated_fence",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "commentary",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "valid_json_fence",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "type_equality_not_python_bool_coercion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "termination_without_result",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "short_natural_output_is_complete",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "cap_termination_stays_incomplete",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "at_cap_natural_eos_conservative",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "no_historical_sse_collector_import",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SANITY-arithmetic_reference",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SANITY-extract_reference",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SANITY-json_reference",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SANITY-italian_reference",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SANITY-english_reference",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "SANITY-code_clamp_reference",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "isolated_runaway_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_CODE_TEST",
+        "reason": "sandbox process rc=137",
+        "stderr": "",
+        "tests": []
+      }
+    },
+    {
+      "name": "forbidden_import_rejected",
+      "pass": true,
+      "detail": {
+        "status": "FAIL_CODE_TEST",
+        "reason": "ValueError:only function definitions and docstrings allowed at module level",
+        "tests": []
+      }
+    }
+  ],
+  "new_gpu_calls": 0,
+  "code_execution": "ONLY_EXISTING_ROOTLESS_PODMAN_SANDBOX"
+}

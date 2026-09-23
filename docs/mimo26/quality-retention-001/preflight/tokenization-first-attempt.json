@@ -1,0 +1,5 @@
+{
+  "status": "PREPARATION_ERROR_NO_GPU",
+  "cause": "AutoTokenizer import without qualified ROCm library/PYTHONPATH environment; amdsmi libamd_smi.so lookup failed",
+  "resolution": "Reuse exact qualified environment variables for this CPU subprocess only; no installation or shared-env changes"
+}

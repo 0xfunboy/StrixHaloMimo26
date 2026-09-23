@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/home/funboy/StrixHaloClusterGLM/.engine/venv/bin/python",
+    "/home/funboy/StrixHaloMimo26/scripts/mimo26/quality_retention_001/prepare.py",
+    "build"
+  ],
+  "qualified_process_environment": {
+    "LD_LIBRARY_PATH": "/usr/lib/x86_64-linux-gnu:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_core/lib:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_libraries/lib:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/torch/lib",
+    "PATH": "/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_devel/bin:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib/llvm/bin:/home/funboy/StrixHaloClusterGLM/.engine/venv/bin:/usr/local/bin:/usr/bin:/bin",
+    "ROCM_HOME": "/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_devel",
+    "ROCM_PATH": "/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_devel",
+    "HIP_PATH": "/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_devel",
+    "HIP_DEVICE_LIB_PATH": "/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_core/lib/llvm/amdgcn/bitcode",
+    "PYTHONPATH": "/home/funboy/StrixHaloMimo26/benchmarks/mimo26:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_core/share/amd_smi",
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TOKENIZERS_PARALLELISM": "false",
+    "HIP_VISIBLE_DEVICES": "",
+    "ROCR_VISIBLE_DEVICES": ""
+  },
+  "no_model_load": true
+}

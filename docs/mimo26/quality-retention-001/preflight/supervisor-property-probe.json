@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "observed_at": "2026-09-23T13:18:46.381506+02:00",
+  "unit": "mimo26-qr001-cpu-property-probe-001.service",
+  "invocation_id": "750b4bb7ffb04225b5776b17b992d78f",
+  "exec_start": "/usr/bin/true",
+  "exec_stop_post": "/usr/bin/true",
+  "result": "success",
+  "main_exit_code": 0,
+  "services_or_models_changed": false
+}

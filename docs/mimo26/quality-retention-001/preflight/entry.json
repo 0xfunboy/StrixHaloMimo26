@@ -1,0 +1,34 @@
+{
+  "observed_at": "2026-09-23T12:53:25.440950+02:00",
+  "host": "01-EVO-X3",
+  "user": "funboy",
+  "entry_head": "fb432c37f96c4514e763bb49f57614d9696efe79",
+  "branch": "perf/mimo26-strix",
+  "git_status": "?? benchmarks/mimo26/perf_arm_a_mixed.py\n?? benchmarks/mimo26/perf_arm_b_original.py\n?? benchmarks/mimo26/perf_baseline_common.py\n?? benchmarks/mimo26/test_qkv_backport_57508.py\n?? benchmarks/mimo26/vllm_sanity_suite.py\n?? docs/mimo26/evidence/mixed-b3794b22/MQ-IQ2-XXS-XS-Q8-MM-BF16__SHA256SUMS\n?? docs/mimo26/evidence/mixed-b3794b22/MQ-IQ2-XXS-XS-Q8-MM-BF16__artifact-manifest.json\n?? docs/mimo26/evidence/mixed-b3794b22/MQ-IQ2-XXS-XS-Q8-MM-BF16__mixed-artifact-audit.json\n?? docs/mimo26/evidence/mixed-b3794b22/MQ-IQ2-XXS-XS-Q8-MM-BF16__quality-status.json\n?? docs/mimo26/evidence/mixed-b3794b22/MQ-IQ2-XXS-XS-Q8-MM-BF16__quant-recipe.json\n?? docs/mimo26/evidence/mixed-b3794b22/MQ-IQ2-XXS-XS-Q8-MM-BF16__reproduction__README.md\n?? docs/mimo26/evidence/mixed-b3794b22/MQ-IQ2-XXS-XS-Q8-MM-BF16__toolchain-pins.json\n?? docs/mimo26/evidence/mixed-b3794b22/README.md\n?? docs/mimo26/evidence/mixed-b3794b22/chat_template.jinja\n?? docs/mimo26/evidence/mixed-b3794b22/gguf-metadata.json\n?? docs/mimo26/evidence/mixed-b3794b22/incomplete-inventory.tsv\n?? docs/mimo26/evidence/original-tp2-correctness-001/SHA256SUMS\n?? docs/mimo26/evidence/original-tp2-correctness-001/config.json\n?? docs/mimo26/evidence/original-tp2-correctness-001/events.jsonl\n?? docs/mimo26/evidence/original-tp2-correctness-001/k2-after.json\n?? docs/mimo26/evidence/original-tp2-correctness-001/k2-before.json\n?? docs/mimo26/evidence/original-tp2-correctness-001/load.json\n?? docs/mimo26/evidence/original-tp2-correctness-001/quality.json\n?? docs/mimo26/evidence/original-tp2-correctness-001/result.json\n?? docs/mimo26/evidence/qkv-upstream-57508/dgx-qkv.patch\n?? docs/mimo26/evidence/qkv-upstream-57508/pr-57508.patch\n?? docs/mimo26/evidence/source-revision-compare/comparison.json\n?? docs/mimo26/evidence/source-revision-compare/mixed_source__chat_template.jinja\n?? docs/mimo26/evidence/source-revision-compare/mixed_source__config.json\n?? docs/mimo26/evidence/source-revision-compare/mixed_source__generation_config.json\n?? docs/mimo26/evidence/source-revision-compare/mixed_source__model.safetensors.index.json\n?? docs/mimo26/evidence/source-revision-compare/mixed_source__tokenizer.json\n?? docs/mimo26/evidence/source-revision-compare/mixed_source__tokenizer_config.json\n?? docs/mimo26/evidence/source-revision-compare/ours__chat_template.jinja\n?? docs/mimo26/evidence/source-revision-compare/ours__config.json\n?? docs/mimo26/evidence/source-revision-compare/ours__generation_config.json\n?? docs/mimo26/evidence/source-revision-compare/ours__model.safetensors.index.json\n?? docs/mimo26/evidence/source-revision-compare/ours__tokenizer.json\n?? docs/mimo26/evidence/source-revision-compare/ours__tokenizer_config.json\n?? patches/llama.cpp/0001-mimo2-v26-mxfp4-converter.patch\n?? scripts/mimo26/download_mixed_pinned.sh\n?? scripts/mimo26/restore_e1.sh\n?? scripts/mimo26/run_original_sanity_window.sh\n?? scripts/mimo26/window_runner_single.py",
+  "controller_status": {
+    "state": "READY",
+    "preset": "dspark-k2-gfx1151",
+    "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513",
+    "owner": "DS41",
+    "owner_state": "RUNNING",
+    "epoch": "1790127186526215806",
+    "reason": "",
+    "ranks": [
+      {
+        "rank": 0,
+        "active": true,
+        "health_http": "200"
+      },
+      {
+        "rank": 1,
+        "active": true,
+        "health_http": "200"
+      }
+    ],
+    "paired_backend_http": "200"
+  },
+  "campaign_at_entry": "NONE_FOUND_NODE01_AND_NODE02",
+  "gpu_launched": false,
+  "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+  "sandbox_probe": "PASS_PODMAN_NETWORK_NONE_READ_ONLY_UID65534_NO_HOST_MOUNTS_MEMORY256M_PIDS32_NO_GPU"
+}

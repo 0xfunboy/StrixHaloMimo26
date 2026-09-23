@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "created_at": "2026-09-23T13:12:20+0200",
+  "input_count": 30,
+  "case_input_min": 126,
+  "case_input_max": 243,
+  "case_output_cap_sum": 16384,
+  "reference_tokens_max": 153,
+  "tokenizer_sha256": "ff15eb925890d6b71b5160de4b846fbd13178438ab463b38ecc953e8cd1dcb3e",
+  "template_sha256": "853650bee57bf95020373e4c928bd5a4b41b9915adf964a77711d2b49a291887",
+  "template_roundtrip": "rendered text encoded without automatic BOS exactly equals chat-template IDs"
+}
