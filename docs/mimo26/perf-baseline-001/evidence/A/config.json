@@ -1,0 +1,39 @@
+{
+  "schema": "mimo26-perf-window-v1",
+  "campaign": "PERF-BASELINE-001",
+  "arm": "A_mixed_single_strix",
+  "real_k2": true,
+  "use_compute_lock": true,
+  "allowed_k2_states": [
+    "READY"
+  ],
+  "quiesce_timeout_sec": 300,
+  "worker_runtime_sec": 2400,
+  "worker_stop_sec": 90,
+  "work_timeout_sec": 1800,
+  "restore_timeout_sec": 1200,
+  "rank_stagger_sec": 0,
+  "poll_sec": 1,
+  "rank0": {
+    "unit": "mimo26-perf-a-r0-001",
+    "argv": [
+      "/usr/bin/env",
+      "LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_core/lib:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_libraries/lib:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/torch/lib",
+      "PATH=/home/funboy/StrixHaloClusterGLM/.engine/venv/bin:/usr/local/bin:/usr/bin:/bin",
+      "HIP_VISIBLE_DEVICES=0",
+      "ROCR_VISIBLE_DEVICES=0",
+      "GGML_HIP_GRAPHS=1",
+      "MIMO26_RUN_DIR=/home/funboy/.local/state/strixhalomimo26/windows/perf-baseline-001-A-mixed-001",
+      "MIMO26_LLAMA_SERVER=/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/llama-server",
+      "MIMO26_GGUF_FIRST_SHARD=/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00001-of-00004.gguf",
+      "MIMO26_WORKLOADS=/home/funboy/StrixHaloMimo26/docs/mimo26/perf-baseline-001/workloads.json",
+      "MIMO26_PORT=18341",
+      "MIMO26_LOAD_TIMEOUT=600",
+      "MIMO26_AMD_SMI=/home/funboy/StrixHaloClusterGLM/.engine/venv/bin/amd-smi",
+      "PYTHONPATH=/home/funboy/StrixHaloMimo26/benchmarks/mimo26",
+      "/usr/bin/python3",
+      "/home/funboy/StrixHaloMimo26/benchmarks/mimo26/perf_mixed_llama.py"
+    ]
+  },
+  "rank1": null
+}

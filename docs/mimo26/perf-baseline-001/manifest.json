@@ -1,7 +1,7 @@
 {
   "schema": "mimo26-perf-baseline-001-manifest-v1",
   "campaign": "PERF-BASELINE-001",
-  "created_at": "2026-09-23T05:01:00+02:00",
+  "created_at": "2026-09-23T05:34:50+02:00",
   "repo": "/home/funboy/StrixHaloMimo26",
   "branch": "perf/mimo26-strix",
   "start_commit": "d3b5486b0c75b2718841fc36a61bf4a47579c6db",
@@ -25,6 +25,7 @@
     "temperature": 0.0,
     "seed": 1,
     "max_output_tokens": 128,
+    "ignore_eos": true,
     "thinking": false,
     "prefix_prompt_reuse": false
   },
@@ -72,11 +73,11 @@
       "split_mode": "none",
       "kv_k": "f16",
       "kv_v": "f16",
-      "threads": "default -1",
-      "threads_batch": "same as threads"
+      "threads": "default_-1",
+      "threads_batch": "same_as_threads"
     },
     "request": {
-      "interface": "/completion SSE",
+      "interface": "/completion_SSE",
       "cache_prompt": false,
       "return_tokens": true,
       "return_progress": true,
@@ -112,7 +113,7 @@
     "disable_custom_all_reduce": true,
     "distributed_executor_backend": "external_launcher",
     "request": {
-      "interface": "offline LLM.generate",
+      "interface": "offline_LLM.generate",
       "client_ttft_observable": false
     }
   },
@@ -129,19 +130,22 @@
       "timings.prompt_n",
       "timings.prompt_ms",
       "timings.predicted_n",
-      "timings.predicted_ms"
+      "timings.predicted_ms",
+      "tokens_cached",
+      "tokens_evaluated"
     ],
     "original_engine": [
       "scheduled_ts",
       "first_token_ts",
       "last_token_ts",
       "engine_ttft_s",
-      "engine_decode_s"
+      "engine_decode_s",
+      "num_cached_tokens"
     ],
     "prefill_rule": "report native/engine only; never N_input/TTFT",
     "cache_gate": "zero reused/cached input tokens for every measured request"
   },
-  "excluded": [
+  "exclusions": [
     "NVIDIA",
     "CUDA",
     "Vulkan",
@@ -151,5 +155,8 @@
     "expert_parallelism",
     "runtime_updates",
     "tuning_sweeps"
-  ]
+  ],
+  "status": "SUPERSEDED_BY_EXECUTION_MANIFEST",
+  "superseded_by": "execution-manifest.json",
+  "note": "Planning manifest created during reconciliation. Actual run configuration and sampling are authoritative in execution-manifest.json and run config/frozen-SHA256SUMS."
 }

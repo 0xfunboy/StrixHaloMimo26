@@ -1,0 +1,57 @@
+{
+  "schema": "mimo26-arm-a-sse-correction-v1",
+  "raw_untouched": true,
+  "cause": "llama.cpp SSE emitted placeholder token-id 0 events not tagged prompt_progress; raw collector counted them as generated.",
+  "authority": "native timings.predicted_n/prompt_n/cache_n plus server print_timing logs",
+  "raw_extra_prefix_ids": {
+    "measure-01-512-r1": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "measure-02-2048-r1": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "measure-03-2048-r2": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "measure-04-512-r2": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "measure-05-512-r3": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "measure-06-2048-r3": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "all_extra_prefix_ids_are_zero": true,
+  "all_native_predicted_n_128": true,
+  "all_native_cache_n_zero": true,
+  "client_ttft": "N/A for this arm because placeholder output events precede real generation and raw SSE did not preserve sufficient event typing to reconstruct TTFT retrospectively."
+}

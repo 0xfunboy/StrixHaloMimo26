@@ -1,0 +1,92 @@
+{
+  "schema": "mimo26-perf-baseline-001-execution-manifest-v1",
+  "campaign": "PERF-BASELINE-001",
+  "actual_order": [
+    {
+      "arm": "A_mixed_single_strix",
+      "run": "perf-baseline-001-A-mixed-001",
+      "started_at": "2026-09-23T03:10:59+02:00",
+      "completed_restore_at": "2026-09-23T03:20:12+02:00"
+    },
+    {
+      "arm": "B_original_tp2",
+      "run": "perf-baseline-001-B-original-001",
+      "started_at": "2026-09-23T03:21:32+02:00",
+      "completed_restore_at": "2026-09-23T03:37:54+02:00"
+    }
+  ],
+  "workloads_sha256": "905e3214673560903f60a396546e0e624f9851eccaea8c3cdd369924aecad5c6",
+  "request_order": [
+    512,
+    2048,
+    2048,
+    512,
+    512,
+    2048
+  ],
+  "warmup_order": [
+    512,
+    2048
+  ],
+  "sampling_actual": {
+    "temperature": 0.0,
+    "seed": 1,
+    "max_output_tokens": 128,
+    "ignore_eos": false,
+    "repeat_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "thinking": false
+  },
+  "A": {
+    "config_sha256": "1c38cdfbbd8dcc606564386fe2b1fd02eec978705a7a3073077e64781988f56e",
+    "frozen_sources": {
+      "/home/funboy/.local/state/strixhalomimo26/windows/perf-baseline-001-A-mixed-001/config.json": "1c38cdfbbd8dcc606564386fe2b1fd02eec978705a7a3073077e64781988f56e",
+      "/home/funboy/StrixHaloMimo26/docs/mimo26/perf-baseline-001/workloads.json": "905e3214673560903f60a396546e0e624f9851eccaea8c3cdd369924aecad5c6",
+      "/home/funboy/StrixHaloMimo26/benchmarks/mimo26/perf_mixed_llama.py": "952c5583b5eda447862c9f803b2ecc14de6fc20a84e33bc16d03d6b2176a39c9",
+      "/home/funboy/StrixHaloMimo26/benchmarks/mimo26/perf_measure_common.py": "a580585b901d15ecf70f65adb7c2510f0983a87be21ff81ea2e437ea8839d364"
+    },
+    "runtime_commit": "58367713a6935c0810103378144008df32e3d5db",
+    "llama_server_sha256": "5898a81b08e919c507e09fb4252265c5ee3b8373cef13edc475cf267415cd8c7",
+    "sampling": {
+      "ignore_eos": false,
+      "cache_prompt": false
+    },
+    "cache_gate_actual": "native timings.cache_n == 0 plus full prompt_n/tokens_evaluated",
+    "sse_adapter_posthoc_correction": "raw collector counted placeholder zero token IDs; native predicted_n=128 is authoritative. Raw file unchanged.",
+    "source_recovery_note": "Frozen source hashes are authoritative; current perf_mixed_llama.py and perf_measure_common.py changed after the run and no byte-identical copy was found."
+  },
+  "B": {
+    "config_sha256": "aae84cc229a0d35ca309ee93c134e5902ce4e412e205233c1033b45daf08260e",
+    "frozen_sources": {
+      "/home/funboy/.local/state/strixhalomimo26/windows/perf-baseline-001-B-original-001/config.json": "aae84cc229a0d35ca309ee93c134e5902ce4e412e205233c1033b45daf08260e",
+      "/home/funboy/StrixHaloMimo26/docs/mimo26/perf-baseline-001/workloads.json": "905e3214673560903f60a396546e0e624f9851eccaea8c3cdd369924aecad5c6",
+      "/home/funboy/StrixHaloMimo26/benchmarks/mimo26/perf_original_vllm.py": "7c6b0053ee96d32d3f11ed1d1feebe163c3d7d89adcf502fd2fa5dfbb68e8b97",
+      "/home/funboy/StrixHaloMimo26/benchmarks/mimo26/perf_measure_common.py": "a580585b901d15ecf70f65adb7c2510f0983a87be21ff81ea2e437ea8839d364",
+      "/home/funboy/StrixHaloMimo26/benchmarks/mimo26/vllm_patch.py": "eeb66fefbf1b63459e5712c031399f2d24d9ac05956c97b4e979ad03b901be72"
+    },
+    "runtime": "vLLM 0.1.0rc2.dev9+g9255fd9fb9.rocm100",
+    "patch_sha256": "eeb66fefbf1b63459e5712c031399f2d24d9ac05956c97b4e979ad03b901be72",
+    "sampling": {
+      "ignore_eos": false,
+      "prefix_cache": false
+    },
+    "node2_hashes_verified": true,
+    "client_ttft": "N/A_OFFLINE_GENERATE"
+  },
+  "completion": {
+    "A": {
+      "run_completion": "PASS",
+      "sanity_pre": "PASS",
+      "sanity_post": "PASS",
+      "k2_restore": "PASS"
+    },
+    "B": {
+      "run_completion": "PASS",
+      "sanity_pre": "PASS",
+      "sanity_post": "PASS",
+      "k2_restore": "PASS"
+    },
+    "final_k2": "READY"
+  }
+}
