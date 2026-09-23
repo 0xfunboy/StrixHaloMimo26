@@ -1,0 +1,9 @@
+{
+  "observed_at": "2026-09-23T11:18:57.905841+02:00",
+  "source_host": "02-EVO-X3",
+  "source_path": "/home/funboy/perf_measure_common.py",
+  "destination": "/home/funboy/StrixHaloMimo26/docs/mimo26/perf-baseline-001/recovery-audit/perf_measure_common.frozen.py",
+  "sha256": "a580585b901d15ecf70f65adb7c2510f0983a87be21ff81ea2e437ea8839d364",
+  "matches_original_A_and_B_frozen": true,
+  "method": "SSH read/copy only, no execution/import"
+}

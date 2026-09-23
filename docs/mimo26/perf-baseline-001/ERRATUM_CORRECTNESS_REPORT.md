@@ -1,56 +1,29 @@
-# Erratum — MIMO26 correctness report before PERF-BASELINE-001
+# Erratum — MiMo correctness reporting, verified recovery 2026-09-23
 
-Date: 2026-09-23
+This does not replace the original September 22 correctness report or its raw files. The earlier erratum is preserved under `recovery-audit/prior-reports/`.
 
-This file does not replace or delete the 2026-09-22 correctness report. It records two reporting corrections derived from the original raw artifacts before the performance campaign.
+## Principal mixed run: resolved
 
-## 1. Mixed principal-run memory accounting
+`mixed-single-correctness-002`, llama.cpp `58367713a6935c0810103378144008df32e3d5db`; source `load.json`, finished 2026-09-22T19:22:24+0200.
 
-Authoritative principal run:
+| Observation | Bytes | GiB, bytes / 2**30 |
+|---|---:|---:|
+| Before | 127883239424 | 119.10054779052734 |
+| After | 39059042304 | 36.37656784057617 |
+| Difference | 88824197120 | 82.72397994995117 |
 
-- run: mixed-single-correctness-002
-- llama.cpp: 58367713a6935c0810103378144008df32e3d5db
-- source: /home/funboy/.local/state/strixhalomimo26/windows/mixed-single-correctness-002/load.json
+These are system MemAvailable observations, not exact GPU allocation or additive with RSS/PSS/GTT on UMA.
 
-Raw counters from that run:
+## Alternative GiB values: only partially resolved
 
-- MemAvailable before: 127883239424 bytes
-- MemAvailable after load: 39059042304 bytes
-- delta: 88824197120 bytes
+The after-load value 36.54961013793945 GiB is exactly 38325044 kB from `mixed-tp1-llama-sanity-001/load.json`, finished 2026-09-22T20:21:30+0200.
 
-Conversions generated directly from those byte counters with divisor 2**30:
+No supporting raw receipt was found for the older before value 119.33901977539062 GiB (128139296768 bytes) or delta 82.78940963745117 GiB (88894451712 bytes) in the inspected confirmation load/result/events/logs. Their provenance remains **UNRESOLVED**. Arithmetic consistency with the after-value is not evidence of the observation that produced them. The preceding erratum's definite attribution of all three values to the confirmation run is therefore withdrawn.
 
-- before: 119.10054779052734 GiB
-- after: 36.37656784057617 GiB
-- delta: 82.72397994995117 GiB
+## Diagnostic timing attribution: resolved
 
-The older JSON fields 119.33901977539062 / 36.54961013793945 / 82.78940963745117 GiB do not belong to these principal-run byte counters. The after-load value 36.54961013793945 GiB maps to the confirmation run mixed-tp1-llama-sanity-001 raw value 38325044 kB. The corresponding older before/delta values came from that confirmation-run observation, not from the principal-run load.json.
+Recomputing medians from the five `quality.json` native timing records of `mixed-tp1-llama-sanity-001` gives prompt 57.02004473880432 tok/s and decode 20.24988356316951 tok/s. Every response identifies the confirmation runtime fingerprint `b11098-97845c4f1`.
 
-For PERF-BASELINE-001, all GiB values are generated from byte counters from the same structured record and run.
+Those values do not belong to the principal mixed runtime and are not included in PERF-BASELINE-001. Principal pre-campaign performance remains NOT_MEASURED; its six correctness sanity passes are unchanged.
 
-## 2. Diagnostic timing attribution
-
-The diagnostic medians:
-
-- prompt throughput: 57.02004473880432 tok/s
-- decode throughput: 20.24988356316951 tok/s
-
-belong only to:
-
-- run: mixed-tp1-llama-sanity-001
-- runtime: 97845c4f1ffae096d22ad772df396550f9f78306
-
-They are not measurements of the principal mixed run mixed-single-correctness-002 on runtime 58367713a6935c0810103378144008df32e3d5db.
-
-The principal mixed run therefore has no qualified performance result before PERF-BASELINE-001.
-
-## 3. Correctness status unchanged
-
-These are reporting corrections only. They do not change:
-
-- original TP2 correctness sanity: 6/6 PASS;
-- mixed single-Strix correctness sanity: 6/6 PASS;
-- quality retention vs original: NOT EVALUATED;
-- long context: NOT EVALUATED;
-- concurrency: NOT EVALUATED;
-- MTP/DFlash: NOT EVALUATED.
+Structured counterpart: `correctness-erratum.json`. Current performance audit: `REPORT.md` / `summary.json`.

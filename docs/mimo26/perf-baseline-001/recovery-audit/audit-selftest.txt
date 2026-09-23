@@ -1,0 +1,15 @@
+test_actual_canonical_set_and_client_gaps (__main__.RecoveryAuditTests.test_actual_canonical_set_and_client_gaps) ... ok
+test_corrected_count_and_raw_unchanged (__main__.RecoveryAuditTests.test_corrected_count_and_raw_unchanged) ... ok
+test_empty_series_rejected (__main__.RecoveryAuditTests.test_empty_series_rejected) ... ok
+test_ignore_eos_change_rejected (__main__.RecoveryAuditTests.test_ignore_eos_change_rejected) ... ok
+test_incomplete_request_rejected (__main__.RecoveryAuditTests.test_incomplete_request_rejected) ... ok
+test_median_not_best_of (__main__.RecoveryAuditTests.test_median_not_best_of) ... ok
+test_never_remove_nonzero_prefix (__main__.RecoveryAuditTests.test_never_remove_nonzero_prefix) ... ok
+test_progress_count_must_match (__main__.RecoveryAuditTests.test_progress_count_must_match) ... ok
+test_reused_cache_is_rejected (__main__.RecoveryAuditTests.test_reused_cache_is_rejected) ... ok
+test_short_output_not_filled (__main__.RecoveryAuditTests.test_short_output_not_filled) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.019s
+
+OK

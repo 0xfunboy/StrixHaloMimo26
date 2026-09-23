@@ -54,7 +54,7 @@
     },
     "cache_gate_actual": "native timings.cache_n == 0 plus full prompt_n/tokens_evaluated",
     "sse_adapter_posthoc_correction": "raw collector counted placeholder zero token IDs; native predicted_n=128 is authoritative. Raw file unchanged.",
-    "source_recovery_note": "Original perf_mixed_llama.py bytes with frozen SHA256 952c5583b5eda447862c9f803b2ecc14de6fc20a84e33bc16d03d6b2176a39c9 were not found in bounded recovery. Original common collector recovered byte-identically from NODE02; see recovery-audit/source-recovery.json. Current edited A script is not substituted for frozen source."
+    "source_recovery_note": "Frozen source hashes are authoritative; current perf_mixed_llama.py and perf_measure_common.py changed after the run and no byte-identical copy was found."
   },
   "B": {
     "config_sha256": "aae84cc229a0d35ca309ee93c134e5902ce4e412e205233c1033b45daf08260e",
@@ -88,24 +88,5 @@
       "k2_restore": "PASS"
     },
     "final_k2": "READY"
-  },
-  "manifest_role": "RECOVERED_EXECUTION_INDEX_NOT_PREREGISTERED_MANIFEST",
-  "recovery_audit": "recovery-audit/audit.json",
-  "recovered_common_source": {
-    "path": "recovery-audit/perf_measure_common.frozen.py",
-    "sha256": "a580585b901d15ecf70f65adb7c2510f0983a87be21ff81ea2e437ea8839d364",
-    "source": "02-EVO-X3:/home/funboy/perf_measure_common.py"
-  },
-  "qualification": {
-    "CORRECTNESS_SANITY": "PASS_BOTH_PRE_POST_OUTPUT_REVALIDATED",
-    "PERFORMANCE_MEASUREMENT_COMPLETE": "PARTIAL_12_OF_12_COMPLETIONS_RECOVERED_CLIENT_METRICS_MISSING",
-    "METRICS_COMPARABLE": "PARTIAL_ENGINE_DECODE_ONLY",
-    "CACHE_VERIFIED": "PASS_ALL_12_MEASURED",
-    "SOURCE_FREEZE": "PARTIAL_ORIGINAL_A_COLLECTOR_BYTES_NOT_FOUND",
-    "QUALITY_RETENTION_VS_ORIGINAL": "NOT_EVALUATED",
-    "LONG_CONTEXT": "NOT_EVALUATED",
-    "CONCURRENCY": "NOT_EVALUATED",
-    "MTP_DFLASH": "NOT_EVALUATED",
-    "K2_RESTORE": "PASS_BOTH_HISTORICAL_AND_LIVE"
   }
 }

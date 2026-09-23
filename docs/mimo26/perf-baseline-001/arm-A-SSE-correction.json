@@ -1,8 +1,8 @@
 {
   "schema": "mimo26-arm-a-sse-correction-v1",
   "raw_untouched": true,
-  "cause": "llama.cpp SSE emitted placeholder token-id 0 events not tagged prompt_progress; raw collector counted them as generated.",
-  "authority": "native timings.predicted_n/prompt_n/cache_n plus server print_timing logs",
+  "cause": "Progress chunks ARE tagged prompt_progress. The frozen collector appended progress but fell through to token collection; placeholder zero IDs were counted as generated output and first-token events.",
+  "authority": "Native final timings.predicted_n/prompt_n/cache_n, all saved prompt_progress counters, exact recovered frozen collector and pinned server source; no new inference or fabricated per-token timestamps.",
   "raw_extra_prefix_ids": {
     "measure-01-512-r1": [
       0,
@@ -53,5 +53,7 @@
   "all_extra_prefix_ids_are_zero": true,
   "all_native_predicted_n_128": true,
   "all_native_cache_n_zero": true,
-  "client_ttft": "N/A for this arm because placeholder output events precede real generation and raw SSE did not preserve sufficient event typing to reconstruct TTFT retrospectively."
+  "client_ttft": "N/A: persisted aggregate t_first_token points to a progress placeholder. Progress objects survive, but per-event timestamps and the actual first generated-token timestamp were not retained; no retrospective TTFT is produced.",
+  "cause_correction_basis": "Recovered frozen perf_measure_common.py and pinned llama.cpp server-context.cpp/server-task.cpp; prior contradictory wording preserved in recovery-audit/prior-reports/.",
+  "cache_semantics": "native timings.cache_n and prompt_progress.cache report prefill reuse (all zero); final tokens_cached reports slot prompt context length, not inter-request reuse."
 }
