@@ -1,0 +1,14 @@
+{"event": "RUN_START", "iso": "2026-09-23T03:21:32+0200", "pid": 500582, "ts": 1790126492.7889}
+{"event": "K2_PRESTATE", "iso": "2026-09-23T03:21:32+0200", "state": "READY", "ts": 1790126492.9753025}
+{"event": "K2_QUIESCE_START", "iso": "2026-09-23T03:21:32+0200", "ts": 1790126492.9761236}
+{"event": "K2_QUIESCED", "iso": "2026-09-23T03:21:41+0200", "ts": 1790126501.4600732}
+{"event": "COMPUTE_LOCK_ACQUIRED", "iso": "2026-09-23T03:21:41+0200", "ts": 1790126501.4611003}
+{"event": "RANK1_STARTED", "invocation": "67314989a0164996b1fb4a285314bfc4", "iso": "2026-09-23T03:21:41+0200", "ts": 1790126501.8880334}
+{"event": "RANK0_STARTED", "invocation": "125fd73ce72940caaa2e6e6e470421ee", "iso": "2026-09-23T03:21:43+0200", "ts": 1790126503.904022}
+{"event": "LOAD_OBSERVED", "iso": "2026-09-23T03:21:52+0200", "status": "IN_PROGRESS", "ts": 1790126512.0740416}
+{"event": "LOAD_OBSERVED", "iso": "2026-09-23T03:26:31+0200", "status": "PASS", "ts": 1790126791.314938}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-23T03:26:54+0200", "status": "IN_PROGRESS", "tests_completed": 0, "ts": 1790126814.246089}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-23T03:32:57+0200", "status": "PASS", "tests_completed": 0, "ts": 1790127177.6706119}
+{"event": "WORK_COMPLETE", "iso": "2026-09-23T03:33:05+0200", "r0": 0, "r1": 0, "ts": 1790127185.6975746}
+{"event": "CLEANUP_START", "iso": "2026-09-23T03:33:05+0200", "ts": 1790127185.7760587}
+{"event": "CLEANUP_DONE", "iso": "2026-09-23T03:37:54+0200", "k2_state": "READY", "status": "PASS", "ts": 1790127474.5700808}

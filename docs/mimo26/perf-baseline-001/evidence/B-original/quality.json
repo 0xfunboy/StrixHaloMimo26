@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "preflight": {
+    "phase": "preflight",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "arithmetic",
+        "pass": true,
+        "reason": "PASS",
+        "text": "323",
+        "finish_reason": "stop"
+      },
+      {
+        "name": "extract",
+        "pass": true,
+        "reason": "PASS",
+        "text": "ZEBRA-4821",
+        "finish_reason": "stop"
+      },
+      {
+        "name": "json",
+        "pass": true,
+        "reason": "PASS",
+        "text": "{\"alpha\": 7, \"beta\": \"blue\"}",
+        "finish_reason": "stop"
+      },
+      {
+        "name": "italian",
+        "pass": true,
+        "reason": "PASS",
+        "text": "Cobalto",
+        "finish_reason": "stop"
+      },
+      {
+        "name": "english",
+        "pass": true,
+        "reason": "PASS",
+        "text": "Bob",
+        "finish_reason": "stop"
+      },
+      {
+        "name": "code_clamp",
+        "pass": true,
+        "reason": "PASS",
+        "text": "def clamp(x, lo, hi):\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x",
+        "finish_reason": "stop"
+      }
+    ],
+    "finished_at": "2026-09-23T03:26:53+0200"
+  },
+  "postflight": {
+    "phase": "postflight",
+    "status": "PASS",
+    "tests": [
+      {
+        "name": "arithmetic",
+        "pass": true,
+        "reason": "PASS",
+        "text": "323",
+        "finish_reason": "stop"
+      },
+      {
+        "name": "extract",
+        "pass": true,
+        "reason": "PASS",
+        "text": "ZEBRA-4821",
+        "finish_reason": "stop"
+      },
+      {
+        "name": "json",
+        "pass": true,
+        "reason": "PASS",
+        "text": "{\"alpha\": 7, \"beta\": \"blue\"}",
+        "finish_reason": "stop"
+      },
+      {
+        "name": "italian",
+        "pass": true,
+        "reason": "PASS",
+        "text": "Cobalto",
+        "finish_reason": "stop"
+      },
+      {
+        "name": "english",
+        "pass": true,
+        "reason": "PASS",
+        "text": "Bob",
+        "finish_reason": "stop"
+      },
+      {
+        "name": "code_clamp",
+        "pass": true,
+        "reason": "PASS",
+        "text": "def clamp(x, lo, hi):\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x",
+        "finish_reason": "stop"
+      }
+    ],
+    "finished_at": "2026-09-23T03:32:57+0200"
+  }
+}

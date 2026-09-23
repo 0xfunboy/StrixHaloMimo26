@@ -1,0 +1,31 @@
+{
+  "schema": "mimo26-correctness-report-erratum-v1",
+  "date": "2026-09-23",
+  "principal_mixed_run": {
+    "run": "mixed-single-correctness-002",
+    "runtime_commit": "58367713a6935c0810103378144008df32e3d5db",
+    "raw": {
+      "mem_available_before_bytes": 127883239424,
+      "mem_available_after_load_bytes": 39059042304,
+      "mem_available_delta_bytes": 88824197120
+    },
+    "converted_gib": {
+      "mem_available_before_gib": 119.10054779052734,
+      "mem_available_after_load_gib": 36.37656784057617,
+      "mem_available_delta_gib": 82.72397994995117
+    },
+    "performance": "NOT_MEASURED"
+  },
+  "confirmation_run": {
+    "run": "mixed-tp1-llama-sanity-001",
+    "runtime_commit": "97845c4f1ffae096d22ad772df396550f9f78306",
+    "diagnostic_prompt_tps_median": 57.02004473880432,
+    "diagnostic_decode_tps_median": 20.24988356316951,
+    "attribution": "CONFIRMATION_RUN_ONLY"
+  },
+  "correctness_unchanged": true,
+  "quality_retention_vs_original": "NOT_EVALUATED",
+  "long_context": "NOT_EVALUATED",
+  "concurrency": "NOT_EVALUATED",
+  "mtp_dflash": "NOT_EVALUATED"
+}

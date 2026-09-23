@@ -1,0 +1,18 @@
+{
+  "tokenizer_json_sha256": "ff15eb925890d6b71b5160de4b846fbd13178438ab463b38ecc953e8cd1dcb3e",
+  "chat_template_sha256": "853650bee57bf95020373e4c928bd5a4b41b9915adf964a77711d2b49a291887",
+  "workloads": {
+    "512": {
+      "input_tokens": 512,
+      "rendered_text_sha256": "cd0a0f573ed50e9b4e92852a423abda8b3c75e2685e409ebce23e34ac236f7e2",
+      "token_ids_sha256": "493f138f2b4a01b1b265a43cfd0dd2e93019734628c42f971ddf5baca2c13468",
+      "source_chars": 3012
+    },
+    "2048": {
+      "input_tokens": 2048,
+      "rendered_text_sha256": "2bedf16aeb85ff63ad41866f4e12c3e4f3877b3c57de12ccac17b8e24f15e114",
+      "token_ids_sha256": "a231a3eac529907d19c316a7cae51de6deedcb0dbbc4eea260e9bdfbbfecaa02",
+      "source_chars": 11641
+    }
+  }
+}

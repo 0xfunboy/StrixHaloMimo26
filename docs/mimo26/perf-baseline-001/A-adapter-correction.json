@@ -1,0 +1,24 @@
+{
+  "schema": "mimo26-arm-a-adapter-correction-v1",
+  "source_raw": "/home/funboy/.local/state/strixhalomimo26/windows/perf-baseline-001-A-mixed-001/raw-results.jsonl",
+  "source_preserved": true,
+  "cause": "llama.cpp prompt_progress SSE chunks contained placeholder token id 0; old collector counted them as generated tokens and first-token events",
+  "evidence": {
+    "512_progress_events": 4,
+    "512_raw_stream_ids": 132,
+    "512_native_predicted_n": 128,
+    "2048_progress_events": 7,
+    "2048_raw_stream_ids": 135,
+    "2048_native_predicted_n": 128,
+    "native_cache_gate": "timings.cache_n=0; every prompt_progress.cache=0; tokens_evaluated=prompt_n=input length"
+  },
+  "correction": {
+    "output_ids": "remove exactly one leading placeholder 0 per prompt_progress event",
+    "actual_output_tokens": 128,
+    "cache_reuse": 0,
+    "client_ttft": "N/A; first real token timestamp was not persisted separately",
+    "client_post_first_rate": "N/A for same reason",
+    "native_prompt_decode_timings": "unchanged and valid",
+    "request_latency": "unchanged and valid"
+  }
+}
