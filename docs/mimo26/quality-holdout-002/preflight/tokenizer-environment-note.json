@@ -1,0 +1,5 @@
+{
+  "initial_attempt": "CPU tokenizer import failed: libamd_smi.so not found under incomplete process environment",
+  "remedy": "Reuse exact qualified process-only library/import environment from 001; no venv or infrastructure changes",
+  "new_inference": false
+}

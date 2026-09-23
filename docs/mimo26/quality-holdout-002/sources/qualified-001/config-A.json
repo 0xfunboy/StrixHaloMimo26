@@ -1,0 +1,39 @@
+{
+  "schema": "mimo26-quality-window-v1",
+  "campaign": "QUALITY-RETENTION-001",
+  "arm": "A",
+  "run_id": "quality-retention-001-A-mixed-001",
+  "real_k2": true,
+  "use_compute_lock": true,
+  "allowed_k2_states": [
+    "READY"
+  ],
+  "quiesce_timeout_sec": 720,
+  "worker_runtime_sec": 7320,
+  "worker_stop_sec": 90,
+  "work_timeout_sec": 7200,
+  "restore_timeout_sec": 1200,
+  "rank_stagger_sec": 0,
+  "poll_sec": 2,
+  "rank0": {
+    "unit": "mimo26-qr001-a-r0-001",
+    "argv": [
+      "/usr/bin/env",
+      "LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_core/lib:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_libraries/lib:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/torch/lib",
+      "PATH=/home/funboy/StrixHaloClusterGLM/.engine/venv/bin:/usr/local/bin:/usr/bin:/bin",
+      "HIP_VISIBLE_DEVICES=0",
+      "ROCR_VISIBLE_DEVICES=0",
+      "GGML_HIP_GRAPHS=1",
+      "QR_ROOT=/home/funboy/StrixHaloMimo26/docs/mimo26/quality-retention-001",
+      "QR_RUN_DIR=/home/funboy/.local/state/strixhalomimo26/windows/quality-retention-001-A-mixed-001",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "PYTHONPATH=/home/funboy/StrixHaloMimo26/docs/mimo26/quality-retention-001/sources",
+      "HF_HUB_OFFLINE=1",
+      "TRANSFORMERS_OFFLINE=1",
+      "TOKENIZERS_PARALLELISM=false",
+      "/usr/bin/python3",
+      "/home/funboy/StrixHaloMimo26/docs/mimo26/quality-retention-001/sources/adapter_a.py"
+    ]
+  },
+  "rank1": null
+}

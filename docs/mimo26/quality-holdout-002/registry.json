@@ -1,0 +1,7 @@
+{
+  "campaign": "QUALITY-HOLDOUT-002",
+  "phase": "PREREGISTERED_BEFORE_GPU",
+  "at": "2026-09-23T20:30:33+0200",
+  "source_index_sha256": "8487252d5d42b528dc1ff48ab1e640940bb994ae9c9d464654a527bccfbdd729",
+  "next_exact_action": "Commit preparation locally, stage identical frozen material on NODE02, then guarded A launch. No window exists yet."
+}

@@ -1,0 +1,265 @@
+{
+  "schema": "mimo26-holdout-preregistration-v1",
+  "campaign": "QUALITY-HOLDOUT-002",
+  "frozen_at": "2026-09-23T20:30:33+0200",
+  "base_commit": "0e2ae3708beaeec2adf5e993ce2091c2dba4220d",
+  "entry_commit": "0e2ae3708beaeec2adf5e993ce2091c2dba4220d",
+  "base_001_manifest_sha256": "19aefd631acb0f94fb25722b46dc022a87392638cee2706de1ed65cdaaba1da7",
+  "models": {
+    "A": {
+      "repository": "Baekpica/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF",
+      "revision": "b3794b22b6276f8120c340f52639f5eaa354a3fd",
+      "variant": "MQ-IQ2-XXS-XS-Q8-MM-BF16"
+    },
+    "B": {
+      "repository": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "revision": "5711b268169967567844e1e560e8a3966da959b1",
+      "not_full_bf16": true
+    }
+  },
+  "runtimes": {
+    "A": {
+      "runtime_commit": "58367713a6935c0810103378144008df32e3d5db",
+      "binary": {
+        "path": "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/llama-server",
+        "sha256": "5898a81b08e919c507e09fb4252265c5ee3b8373cef13edc475cf267415cd8c7"
+      },
+      "port": 18343,
+      "load_timeout_s": 600,
+      "command": [
+        "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/llama-server",
+        "-m",
+        "/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00001-of-00004.gguf",
+        "--device",
+        "ROCm0",
+        "--split-mode",
+        "none",
+        "-ngl",
+        "all",
+        "-c",
+        "4096",
+        "-b",
+        "512",
+        "-ub",
+        "128",
+        "-np",
+        "1",
+        "--no-cont-batching",
+        "-fa",
+        "auto",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "18343",
+        "--reasoning",
+        "off",
+        "--metrics"
+      ],
+      "build_flags": [
+        "CMAKE_BUILD_TYPE:STRING=Release",
+        "GGML_HIP:BOOL=ON",
+        "GGML_HIP_GRAPHS:BOOL=ON",
+        "GGML_NATIVE:BOOL=ON",
+        "GGML_RPC:BOOL=OFF",
+        "GGML_VULKAN:BOOL=OFF",
+        "GPU_TARGETS:UNINITIALIZED=gfx1151"
+      ],
+      "shared_library_hashes": {
+        "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/libggml-base.so": "b416c84f3ac01b2bdbe3041d0f546be099c2cc4f47c4062ac3cf82b9af22020a",
+        "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/libggml-cpu.so": "cca02c031ca1cef355d0f432bbf343053d1b3e8576e053beefaa393ca624b777",
+        "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/libggml-hip.so": "53c019809869c0d490ee8a9d3b37e08ac374bebaffb87315f568d8a41c89b317",
+        "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/libggml.so": "0fbc7b8d1899d9d3e4ff7c07c9e0431e57fbf979b92a4b827338e1fcf55b0683",
+        "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/libllama-bench-impl.so": "827bb990f4e5e23c8a96a03206e3920b5532b008fb1a5fbd99816cfb312e684e",
+        "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/libllama-cli-impl.so": "e20e8dcd3294c9c46b3491c953954b24653d00053c94d0b51ae4aed62bd84ad4",
+        "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/libllama-common.so": "35517ef5d210101eab744810394a84bda346176bd118d60e73484de4784650f6",
+        "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/libllama-server-impl.so": "2437cf6ee5818ec1f5454d015d0ce56572bb1ceae7db5da6c02a8eca8e58dedd",
+        "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/libllama.so": "af5c5c0026465d7f668cc82e0970b67f346d6a361a63f8ba904c4711c73e4d1b",
+        "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/libmtmd.so": "49df412922a98125df748ed2e44e32da60b46261e18f504609099a23105347f9"
+      },
+      "shards_stat_only": [
+        {
+          "path": "/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00001-of-00004.gguf",
+          "size": 22470644192
+        },
+        {
+          "path": "/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00002-of-00004.gguf",
+          "size": 22464695232
+        },
+        {
+          "path": "/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00003-of-00004.gguf",
+          "size": 22464695232
+        },
+        {
+          "path": "/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00004-of-00004.gguf",
+          "size": 21377729024
+        }
+      ]
+    },
+    "B": {
+      "versions": {
+        "vllm": "0.1.0rc2.dev9+g9255fd9fb9.rocm100",
+        "torch": "2.13.0+rocm10.0.0",
+        "transformers": "5.16.1"
+      },
+      "patch_sha256": "eeb66fefbf1b63459e5712c031399f2d24d9ac05956c97b4e979ad03b901be72",
+      "master_port": 29642,
+      "binary_hashes": {
+        "/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/vllm/_C.abi3.so": "43df896905540798d519827f080868d38e756f2ed890e79d80cc2fd7fb779d1c",
+        "/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/vllm/_C_stable_libtorch.abi3.so": "6d07da96483c065d6f6d5f3f3346468e97eee79b3e4e711527756082de33f39f",
+        "/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/vllm/_moe_C_stable_libtorch.abi3.so": "ecfdad80eeb882ac74a50a32fe34050636ff1abdf2b8d6eb5d61d33df201942a",
+        "/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/vllm/_rocm_C.abi3.so": "c8e8e5b5df8f10cddb641266f75a4f7ca42f0ea4c3038801c87c1ac365f2994a",
+        "/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/vllm/cumem_allocator.abi3.so": "ce806e78454186bb58eeb15f0cb4098e3443d8cac2124f2e8dc374c5f6d84b25",
+        "/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/vllm/fs_io_C.abi3.so": "9f2ca78a3f45a1e4e2f8d0a079ac213d41ee21b976e0734a5cc35a8381dbfdc0",
+        "/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/vllm/spinloop.abi3.so": "37bda326b8502adc431a371986217705f33c3cc9e7e42d7ff5c501575c27cfc9"
+      },
+      "kwargs": {
+        "model": "/home/funboy/models/MiMo-V2.6/official/MiMo-V2.6-Flash-RL",
+        "runner": "generate",
+        "trust_remote_code": true,
+        "language_model_only": true,
+        "tensor_parallel_size": 2,
+        "pipeline_parallel_size": 1,
+        "distributed_executor_backend": "external_launcher",
+        "dtype": "bfloat16",
+        "max_model_len": 4096,
+        "max_num_seqs": 1,
+        "max_num_batched_tokens": 512,
+        "kv_cache_memory_bytes": 1073741824,
+        "enforce_eager": true,
+        "disable_custom_all_reduce": true,
+        "enable_expert_parallel": false,
+        "enable_prefix_caching": false,
+        "seed": 1,
+        "moe_backend": "triton_unfused",
+        "disable_log_stats": false
+      }
+    }
+  },
+  "runs": {
+    "A": {
+      "run_id": "quality-holdout-002-A-mixed-001",
+      "run_dir": "/home/funboy/.local/state/strixhalomimo26/windows/quality-holdout-002-A-mixed-001",
+      "supervisor_unit": "mimo26-qh002-supervisor-a-001.service",
+      "supervisor_runtime_s": 9240,
+      "supervisor_stop_s": 1200,
+      "config": "config-A.json"
+    },
+    "B": {
+      "run_id": "quality-holdout-002-B-original-001",
+      "run_dir": "/home/funboy/.local/state/strixhalomimo26/windows/quality-holdout-002-B-original-001",
+      "supervisor_unit": "mimo26-qh002-supervisor-b-001.service",
+      "supervisor_runtime_s": 16440,
+      "supervisor_stop_s": 1200,
+      "config": "config-B.json"
+    }
+  },
+  "arm_order": [
+    "A",
+    "RESTORE",
+    "B",
+    "RESTORE"
+  ],
+  "case_order": [
+    "JSON-01",
+    "JSON-02",
+    "JSON-03",
+    "JSON-04",
+    "JSON-05",
+    "JSON-06",
+    "EVIDENCE-01",
+    "EVIDENCE-02",
+    "EVIDENCE-03",
+    "EVIDENCE-04",
+    "EVIDENCE-05",
+    "EVIDENCE-06",
+    "CONSTRAINT-01",
+    "CONSTRAINT-02",
+    "CONSTRAINT-03",
+    "CONSTRAINT-04",
+    "CONSTRAINT-05",
+    "CONSTRAINT-06"
+  ],
+  "panel_cases_per_arm": 18,
+  "sanity_per_phase": 6,
+  "planned_primary_records_per_arm": 30,
+  "panel_output_cap_total_per_arm": 12288,
+  "sampling": {
+    "temperature": 0.0,
+    "seed": 1,
+    "ignore_eos": false,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "thinking": false
+  },
+  "input_contract": {
+    "A": "explicit frozen token IDs; runtime tokenizer crosscheck; API does not echo prompt IDs",
+    "B": "same explicit frozen token IDs plus runtime native echo and tokenizer check",
+    "native_output_ids": {
+      "A": "return_tokens=true nonstreaming tokens array",
+      "B": "CompletionOutput.token_ids"
+    },
+    "cache": "zero reused input tokens each request; final slot context counter is not reuse"
+  },
+  "context_contract": {
+    "size": 4096,
+    "additional_margin": 256,
+    "automatic_truncation": false
+  },
+  "timeout_contract": {
+    "A_work_s": 7200,
+    "B_work_s": 14400,
+    "restore_s": 1200,
+    "per_case": "output cap/2 +240 seconds (496 or752); sanity300",
+    "planning_basis": "conservative 2 output tokens/s for cap12288 plus prompt allowance, load and12 sanity, finite margin; not a performance result",
+    "supervisor": "qualified001 runner/cleanup byte-identical, finite transient unit bounds frozen before both runs"
+  },
+  "sandbox": {
+    "image_id": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+    "network": "none",
+    "host_mounts": [],
+    "uid": 65534,
+    "memory_bytes": 268435456,
+    "pids": 32,
+    "cpu_seconds": 3,
+    "wall_timeout_s": 15,
+    "root_read_only": true,
+    "capabilities": []
+  },
+  "external_lifecycle_hashes": {
+    "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh": "a572ac6c1ac7d13a105ca5b0c46b01cebfe1dd89e0d68b4ea2c13d4f2a02925a",
+    "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/pair.sh": "2450aab6fbef5286865abbf32f2c351030c10f65423194121fa1830044e48801",
+    "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/launch-node.sh": "8ef34bf65bb5ec7c16ed335793acf6a9a92427f58890c9cc2760b8818cbcd083"
+  },
+  "restore": {
+    "controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+    "preset": "dspark-k2-gfx1151",
+    "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"
+  },
+  "tokenizer_files": {
+    "/home/funboy/models/MiMo-V2.6/official/MiMo-V2.6-Flash-RL/tokenizer.json": "ff15eb925890d6b71b5160de4b846fbd13178438ab463b38ecc953e8cd1dcb3e",
+    "/home/funboy/models/MiMo-V2.6/official/MiMo-V2.6-Flash-RL/tokenizer_config.json": "413a7845f52943ccf4de0e5c838414507d16c44dbf573da9e20bc8902b384d06",
+    "/home/funboy/models/MiMo-V2.6/official/MiMo-V2.6-Flash-RL/chat_template.jinja": "853650bee57bf95020373e4c928bd5a4b41b9915adf964a77711d2b49a291887",
+    "/home/funboy/models/MiMo-V2.6/official/MiMo-V2.6-Flash-RL/config.json": "61bea4a0f7a0dd8969f8cae528761e26b697dd12ff63e98804c3f0945492e621",
+    "/home/funboy/models/MiMo-V2.6/official/MiMo-V2.6-Flash-RL/generation_config.json": "eecf00d9701921271c904a916c425ba6db61bcd190902e200d0a322bfd5572dd"
+  },
+  "peer_root": "/home/funboy/.local/state/strixhalomimo26/quality-holdout-002/frozen",
+  "cpu_tests": {
+    "path": "preflight/cpu-tests.json",
+    "sha256": "e982a8df444ba0ae79c04572e0a9deb798aebc1ab00bef4ed2b6dda22850a381"
+  },
+  "freeze_role": "PREREGISTRATION_BEFORE_ANY_HOLDOUT_GPU_LOAD",
+  "closed_campaigns": "QR001 and PERF001 immutable, no benchmarks/recovery reopened",
+  "evaluation": "independent literal JSON references, claim-specific citation sufficiency sets, dual exact constraint oracles; no model judge",
+  "selection_bias": "new instances; families selected using known001 failures; not blind representative sample",
+  "decision_contract": "per-family scoped proposal only; no promotion threshold, deployment, follow-on experiment or repair",
+  "source_adaptations": {
+    "adapters": "A/B exact001 bytes; runtime configs loaded from new manifest",
+    "common": "campaign ID, atomic no-replace publication and loaded-module path/hash proof",
+    "validate": "qualified001 sanity validator; unique sandbox container prefix",
+    "launch": "campaign/path/port and18-case prerequisites only"
+  },
+  "original_collectors_archived": "sources/qualified-001/",
+  "mandate_provenance_sha256": "408492a6da7081baac8958e135da5c2c516ee98538d4509ae92183488d20553d",
+  "mandate_attachment_sha256": "b73f9233798296a75f457dd03acb64c4de9aa423c09f107d9e5e00c464e58431"
+}

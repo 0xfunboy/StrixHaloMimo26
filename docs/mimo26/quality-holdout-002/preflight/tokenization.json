@@ -1,0 +1,284 @@
+{
+  "status": "PASS",
+  "at": "2026-09-23T20:23:08+0200",
+  "cases": [
+    {
+      "case_id": "JSON-01",
+      "family": "JSON",
+      "language": "it",
+      "input_tokens": 1368,
+      "output_cap": 1024,
+      "reference_tokens": 352,
+      "context_with_margin": 2648,
+      "indicative_input_target": [
+        800,
+        1800
+      ],
+      "in_indicative_range": true,
+      "range_note": null
+    },
+    {
+      "case_id": "JSON-02",
+      "family": "JSON",
+      "language": "en",
+      "input_tokens": 861,
+      "output_cap": 512,
+      "reference_tokens": 275,
+      "context_with_margin": 1629,
+      "indicative_input_target": [
+        800,
+        1800
+      ],
+      "in_indicative_range": true,
+      "range_note": null
+    },
+    {
+      "case_id": "JSON-03",
+      "family": "JSON",
+      "language": "it",
+      "input_tokens": 1665,
+      "output_cap": 512,
+      "reference_tokens": 256,
+      "context_with_margin": 2433,
+      "indicative_input_target": [
+        800,
+        1800
+      ],
+      "in_indicative_range": true,
+      "range_note": null
+    },
+    {
+      "case_id": "JSON-04",
+      "family": "JSON",
+      "language": "en",
+      "input_tokens": 1024,
+      "output_cap": 1024,
+      "reference_tokens": 358,
+      "context_with_margin": 2304,
+      "indicative_input_target": [
+        800,
+        1800
+      ],
+      "in_indicative_range": true,
+      "range_note": null
+    },
+    {
+      "case_id": "JSON-05",
+      "family": "JSON",
+      "language": "it",
+      "input_tokens": 1104,
+      "output_cap": 512,
+      "reference_tokens": 202,
+      "context_with_margin": 1872,
+      "indicative_input_target": [
+        800,
+        1800
+      ],
+      "in_indicative_range": true,
+      "range_note": null
+    },
+    {
+      "case_id": "JSON-06",
+      "family": "JSON",
+      "language": "en",
+      "input_tokens": 946,
+      "output_cap": 512,
+      "reference_tokens": 246,
+      "context_with_margin": 1714,
+      "indicative_input_target": [
+        800,
+        1800
+      ],
+      "in_indicative_range": true,
+      "range_note": null
+    },
+    {
+      "case_id": "EVIDENCE-01",
+      "family": "EVIDENCE",
+      "language": "it",
+      "input_tokens": 2507,
+      "output_cap": 1024,
+      "reference_tokens": 106,
+      "context_with_margin": 3787,
+      "indicative_input_target": [
+        1600,
+        2560
+      ],
+      "in_indicative_range": true,
+      "range_note": null
+    },
+    {
+      "case_id": "EVIDENCE-02",
+      "family": "EVIDENCE",
+      "language": "en",
+      "input_tokens": 1985,
+      "output_cap": 512,
+      "reference_tokens": 124,
+      "context_with_margin": 2753,
+      "indicative_input_target": [
+        1600,
+        2560
+      ],
+      "in_indicative_range": true,
+      "range_note": null
+    },
+    {
+      "case_id": "EVIDENCE-03",
+      "family": "EVIDENCE",
+      "language": "it",
+      "input_tokens": 2599,
+      "output_cap": 512,
+      "reference_tokens": 107,
+      "context_with_margin": 3367,
+      "indicative_input_target": [
+        1600,
+        2560
+      ],
+      "in_indicative_range": false,
+      "range_note": "Indicative target only; no filler or input truncation used."
+    },
+    {
+      "case_id": "EVIDENCE-04",
+      "family": "EVIDENCE",
+      "language": "en",
+      "input_tokens": 2100,
+      "output_cap": 1024,
+      "reference_tokens": 136,
+      "context_with_margin": 3380,
+      "indicative_input_target": [
+        1600,
+        2560
+      ],
+      "in_indicative_range": true,
+      "range_note": null
+    },
+    {
+      "case_id": "EVIDENCE-05",
+      "family": "EVIDENCE",
+      "language": "it",
+      "input_tokens": 2479,
+      "output_cap": 512,
+      "reference_tokens": 118,
+      "context_with_margin": 3247,
+      "indicative_input_target": [
+        1600,
+        2560
+      ],
+      "in_indicative_range": true,
+      "range_note": null
+    },
+    {
+      "case_id": "EVIDENCE-06",
+      "family": "EVIDENCE",
+      "language": "en",
+      "input_tokens": 2095,
+      "output_cap": 512,
+      "reference_tokens": 128,
+      "context_with_margin": 2863,
+      "indicative_input_target": [
+        1600,
+        2560
+      ],
+      "in_indicative_range": true,
+      "range_note": null
+    },
+    {
+      "case_id": "CONSTRAINT-01",
+      "family": "CONSTRAINT",
+      "language": "it",
+      "input_tokens": 1147,
+      "output_cap": 1024,
+      "reference_tokens": 55,
+      "context_with_margin": 2427,
+      "indicative_input_target": [
+        800,
+        2000
+      ],
+      "in_indicative_range": true,
+      "range_note": null
+    },
+    {
+      "case_id": "CONSTRAINT-02",
+      "family": "CONSTRAINT",
+      "language": "en",
+      "input_tokens": 903,
+      "output_cap": 512,
+      "reference_tokens": 46,
+      "context_with_margin": 1671,
+      "indicative_input_target": [
+        800,
+        2000
+      ],
+      "in_indicative_range": true,
+      "range_note": null
+    },
+    {
+      "case_id": "CONSTRAINT-03",
+      "family": "CONSTRAINT",
+      "language": "it",
+      "input_tokens": 1009,
+      "output_cap": 512,
+      "reference_tokens": 47,
+      "context_with_margin": 1777,
+      "indicative_input_target": [
+        800,
+        2000
+      ],
+      "in_indicative_range": true,
+      "range_note": null
+    },
+    {
+      "case_id": "CONSTRAINT-04",
+      "family": "CONSTRAINT",
+      "language": "en",
+      "input_tokens": 812,
+      "output_cap": 512,
+      "reference_tokens": 48,
+      "context_with_margin": 1580,
+      "indicative_input_target": [
+        800,
+        2000
+      ],
+      "in_indicative_range": true,
+      "range_note": null
+    },
+    {
+      "case_id": "CONSTRAINT-05",
+      "family": "CONSTRAINT",
+      "language": "it",
+      "input_tokens": 942,
+      "output_cap": 1024,
+      "reference_tokens": 123,
+      "context_with_margin": 2222,
+      "indicative_input_target": [
+        800,
+        2000
+      ],
+      "in_indicative_range": true,
+      "range_note": null
+    },
+    {
+      "case_id": "CONSTRAINT-06",
+      "family": "CONSTRAINT",
+      "language": "en",
+      "input_tokens": 771,
+      "output_cap": 512,
+      "reference_tokens": 24,
+      "context_with_margin": 1539,
+      "indicative_input_target": [
+        800,
+        2000
+      ],
+      "in_indicative_range": false,
+      "range_note": "Indicative target only; no filler or input truncation used."
+    }
+  ],
+  "panel_output_cap_sum": 12288,
+  "input_min": 771,
+  "input_max": 2599,
+  "hard_context_margin": 256,
+  "tokenizer_sha256": "ff15eb925890d6b71b5160de4b846fbd13178438ab463b38ecc953e8cd1dcb3e",
+  "template_sha256": "853650bee57bf95020373e4c928bd5a4b41b9915adf964a77711d2b49a291887",
+  "native_runtime_checks": "performed by frozen collectors before requests; CPU template IDs frozen here",
+  "no_model_initialization": true
+}

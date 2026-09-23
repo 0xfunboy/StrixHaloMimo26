@@ -1,0 +1,86 @@
+[
+  {
+    "case": "JSON-01",
+    "input_tokens": 2086,
+    "reference_tokens": 352,
+    "cap": 1024,
+    "context_with_margin": 3366
+  },
+  {
+    "case": "JSON-02",
+    "input_tokens": 1253,
+    "reference_tokens": 275,
+    "cap": 512,
+    "context_with_margin": 2021
+  },
+  {
+    "case": "JSON-03",
+    "input_tokens": 2228,
+    "reference_tokens": 256,
+    "cap": 512,
+    "context_with_margin": 2996
+  },
+  {
+    "case": "JSON-04",
+    "input_tokens": 1434,
+    "reference_tokens": 358,
+    "cap": 1024,
+    "context_with_margin": 2714
+  },
+  {
+    "case": "JSON-05",
+    "input_tokens": 1542,
+    "reference_tokens": 202,
+    "cap": 512,
+    "context_with_margin": 2310
+  },
+  {
+    "case": "JSON-06",
+    "input_tokens": 1317,
+    "reference_tokens": 246,
+    "cap": 512,
+    "context_with_margin": 2085
+  },
+  {
+    "case": "EVIDENCE-01",
+    "input_tokens": 3259,
+    "reference_tokens": 106,
+    "cap": 1024,
+    "context_with_margin": 4539
+  },
+  {
+    "case": "EVIDENCE-02",
+    "input_tokens": 2596,
+    "reference_tokens": 124,
+    "cap": 512,
+    "context_with_margin": 3364
+  },
+  {
+    "case": "EVIDENCE-03",
+    "input_tokens": 3400,
+    "reference_tokens": 107,
+    "cap": 512,
+    "context_with_margin": 4168
+  },
+  {
+    "case": "EVIDENCE-04",
+    "input_tokens": 2766,
+    "reference_tokens": 136,
+    "cap": 1024,
+    "context_with_margin": 4046
+  },
+  {
+    "case": "EVIDENCE-05",
+    "input_tokens": 3221,
+    "reference_tokens": 118,
+    "cap": 512,
+    "context_with_margin": 3989
+  },
+  {
+    "case": "EVIDENCE-06",
+    "input_tokens": 2767,
+    "reference_tokens": 128,
+    "cap": 512,
+    "context_with_margin": 3535
+  }
+]

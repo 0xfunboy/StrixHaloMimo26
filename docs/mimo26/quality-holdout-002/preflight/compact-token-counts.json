@@ -1,0 +1,128 @@
+[
+  {
+    "case": "JSON-01",
+    "input_tokens": 1368,
+    "reference_tokens": 352,
+    "cap": 1024,
+    "context_with_margin": 2648
+  },
+  {
+    "case": "JSON-02",
+    "input_tokens": 861,
+    "reference_tokens": 275,
+    "cap": 512,
+    "context_with_margin": 1629
+  },
+  {
+    "case": "JSON-03",
+    "input_tokens": 1665,
+    "reference_tokens": 256,
+    "cap": 512,
+    "context_with_margin": 2433
+  },
+  {
+    "case": "JSON-04",
+    "input_tokens": 1024,
+    "reference_tokens": 358,
+    "cap": 1024,
+    "context_with_margin": 2304
+  },
+  {
+    "case": "JSON-05",
+    "input_tokens": 1104,
+    "reference_tokens": 202,
+    "cap": 512,
+    "context_with_margin": 1872
+  },
+  {
+    "case": "JSON-06",
+    "input_tokens": 946,
+    "reference_tokens": 246,
+    "cap": 512,
+    "context_with_margin": 1714
+  },
+  {
+    "case": "EVIDENCE-01",
+    "input_tokens": 2620,
+    "reference_tokens": 106,
+    "cap": 1024,
+    "context_with_margin": 3900
+  },
+  {
+    "case": "EVIDENCE-02",
+    "input_tokens": 1985,
+    "reference_tokens": 124,
+    "cap": 512,
+    "context_with_margin": 2753
+  },
+  {
+    "case": "EVIDENCE-03",
+    "input_tokens": 2712,
+    "reference_tokens": 107,
+    "cap": 512,
+    "context_with_margin": 3480
+  },
+  {
+    "case": "EVIDENCE-04",
+    "input_tokens": 2100,
+    "reference_tokens": 136,
+    "cap": 1024,
+    "context_with_margin": 3380
+  },
+  {
+    "case": "EVIDENCE-05",
+    "input_tokens": 2592,
+    "reference_tokens": 118,
+    "cap": 512,
+    "context_with_margin": 3360
+  },
+  {
+    "case": "EVIDENCE-06",
+    "input_tokens": 2095,
+    "reference_tokens": 128,
+    "cap": 512,
+    "context_with_margin": 2863
+  },
+  {
+    "case": "CONSTRAINT-01",
+    "input_tokens": 1147,
+    "reference_tokens": 55,
+    "cap": 1024,
+    "context_with_margin": 2427
+  },
+  {
+    "case": "CONSTRAINT-02",
+    "input_tokens": 903,
+    "reference_tokens": 46,
+    "cap": 512,
+    "context_with_margin": 1671
+  },
+  {
+    "case": "CONSTRAINT-03",
+    "input_tokens": 1009,
+    "reference_tokens": 47,
+    "cap": 512,
+    "context_with_margin": 1777
+  },
+  {
+    "case": "CONSTRAINT-04",
+    "input_tokens": 812,
+    "reference_tokens": 48,
+    "cap": 512,
+    "context_with_margin": 1580
+  },
+  {
+    "case": "CONSTRAINT-05",
+    "input_tokens": 942,
+    "reference_tokens": 123,
+    "cap": 1024,
+    "context_with_margin": 2222
+  },
+  {
+    "case": "CONSTRAINT-06",
+    "input_tokens": 771,
+    "reference_tokens": 24,
+    "cap": 512,
+    "context_with_margin": 1539
+  }
+]
