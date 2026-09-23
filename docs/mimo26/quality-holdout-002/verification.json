@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "at": "2026-09-23T21:13:40+0200",
+  "CPU_RECALCULATION_CHECK": "PASS",
+  "source_freeze": {
+    "status": "PASS",
+    "files_checked": 47,
+    "index_sha256": "8487252d5d42b528dc1ff48ab1e640940bb994ae9c9d464654a527bccfbdd729",
+    "worker_loaded_modules": {}
+  },
+  "original_files_unchanged": 240,
+  "closed_campaigns_unchanged": [
+    {
+      "campaign": "perf-baseline-001",
+      "files_unchanged": 83
+    },
+    {
+      "campaign": "quality-retention-001",
+      "files_unchanged": 334
+    }
+  ],
+  "preexisting_scratch_files_unchanged": 44,
+  "peer_freeze_files_checked": 47,
+  "resident_sources_unchanged": true,
+  "command": "PYTHONDONTWRITEBYTECODE=1 python3 docs/mimo26/quality-holdout-002/sources/evaluate.py --root docs/mimo26/quality-holdout-002 --check",
+  "dependencies": "original paths on NODE01 and pinned existing Podman image for sanity; no model inference"
+}

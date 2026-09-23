@@ -1,0 +1,24 @@
+{
+  "campaign": "QUALITY-HOLDOUT-002",
+  "run_id": "quality-holdout-002-A-mixed-001",
+  "request_id": "quality-holdout-002-A-mixed-001/A/panel/JSON-02",
+  "case_id": "JSON-02",
+  "arm": "A",
+  "rank": 0,
+  "phase": "panel",
+  "state": "IN_FLIGHT",
+  "created_at": "2026-09-23T20:34:23+0200",
+  "source_index_sha256": "8487252d5d42b528dc1ff48ab1e640940bb994ae9c9d464654a527bccfbdd729",
+  "input_ids_sha256": "fc8c85b93c7113b3e4d2f2999f2f18bf1441c0a436e7d05090474a2b834c564b",
+  "output_cap": 512,
+  "sampling": {
+    "temperature": 0.0,
+    "seed": 1,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "ignore_eos": false,
+    "thinking": false,
+    "prefix_reuse": false
+  }
+}

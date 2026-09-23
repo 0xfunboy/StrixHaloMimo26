@@ -1,13 +1,5 @@
 {
-  "campaign": "QUALITY-HOLDOUT-002",
-  "phase": "TERMINAL_COMPLETE",
-  "at": "2026-09-23T21:13:40+0200",
-  "preparation": {
-    "preparation_commit": "7be9a8ff066fa2b3ce442d5dd38de4e75147ea2b",
-    "source_index_sha256": "8487252d5d42b528dc1ff48ab1e640940bb994ae9c9d464654a527bccfbdd729",
-    "recorded_at": "2026-09-23T20:30:33+0200",
-    "gpu_windows_started": false
-  },
+  "status": "HOLDOUT_EVALUATION_CHECK_PASS",
   "gates": {
     "EXPERIMENT_COMPLETION": "COMPLETE",
     "PREREGISTRATION_AND_SOURCE_FREEZE": "PASS",
@@ -55,6 +47,34 @@
     "CONCURRENCY": "NOT_EVALUATED",
     "MTP_DFLASH": "NOT_EVALUATED"
   },
-  "CPU_RECALCULATION_CHECK": "PASS",
-  "next_exact_action": "Deliver verified per-family decision and stop. No retries, next experiment, tuning, deployment or push."
+  "per_family": {
+    "JSON": {
+      "A": {
+        "FAIL_SEMANTIC": 5,
+        "PASS": 1
+      },
+      "B": {
+        "PASS": 3,
+        "FAIL_SEMANTIC": 3
+      }
+    },
+    "EVIDENCE": {
+      "A": {
+        "PASS": 6
+      },
+      "B": {
+        "PASS": 6
+      }
+    },
+    "CONSTRAINT": {
+      "A": {
+        "PASS": 2,
+        "FAIL_SEMANTIC": 4
+      },
+      "B": {
+        "PASS": 3,
+        "FAIL_SEMANTIC": 3
+      }
+    }
+  }
 }

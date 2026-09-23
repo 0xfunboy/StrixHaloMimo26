@@ -1,0 +1,14 @@
+{
+  "prior_current_archive": "/home/funboy/STRIX_CLUSTER_DOCS/archive/CURRENT_PRE_QUALITY_HOLDOUT_002_2026-09-23.md",
+  "prior_current_sha256": "e4a7fcdf544815d065f87c66cb64592ece0f9c9e57a3ace08d348c67bae02003",
+  "pre_final_current_archive": "/home/funboy/STRIX_CLUSTER_DOCS/archive/CURRENT_PRE_HOLDOUT002_FINAL_2026-09-23.md",
+  "pre_final_current_sha256": "983cc7cb789c29fbb013725c2e725af9ef0bbc1b36229e5d3306f86476c61c26",
+  "current_phase": "TERMINAL_COMPLETE",
+  "latest_live_verified_at": "2026-09-23T21:13:11+0200",
+  "updated_files": [
+    "/home/funboy/STRIX_CLUSTER_DOCS/CURRENT.md",
+    "/home/funboy/STRIX_CLUSTER_DOCS/projects/mimo26/PROJECT.md",
+    "/home/funboy/STRIX_CLUSTER_DOCS/evidence/results/MIMO26_QUALITY_HOLDOUT_002_2026-09-23.md"
+  ],
+  "scope": "Only current checkpoint, new campaign evidence and appended project section. Prior campaign results and DS41 sources/releases preserved. No deployment or push."
+}

@@ -1,0 +1,10 @@
+{
+  "campaign": "QUALITY-HOLDOUT-002",
+  "run_id": "quality-holdout-002-A-mixed-001",
+  "arm": "A",
+  "last_request": "quality-holdout-002-A-mixed-001/A/postflight/SANITY-code_clamp",
+  "phase": "postflight",
+  "last_case": "SANITY-code_clamp",
+  "last_completion_status": "COMPLETE",
+  "updated_at": "2026-09-23T20:39:09+0200"
+}

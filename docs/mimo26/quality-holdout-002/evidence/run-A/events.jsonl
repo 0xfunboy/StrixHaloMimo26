@@ -1,0 +1,14 @@
+{"event": "RUN_START", "iso": "2026-09-23T20:31:42+0200", "pid": 681901, "ts": 1790188302.7187831}
+{"event": "K2_PRESTATE", "iso": "2026-09-23T20:31:42+0200", "state": "READY", "ts": 1790188302.9272692}
+{"event": "K2_QUIESCE_START", "iso": "2026-09-23T20:31:42+0200", "ts": 1790188302.927998}
+{"event": "K2_QUIESCED", "iso": "2026-09-23T20:32:00+0200", "ts": 1790188320.1052783}
+{"event": "COMPUTE_LOCK_ACQUIRED", "iso": "2026-09-23T20:32:00+0200", "ts": 1790188320.1089652}
+{"event": "RANK1_NOT_APPLICABLE", "iso": "2026-09-23T20:32:00+0200", "ts": 1790188320.1095688}
+{"event": "RANK0_STARTED", "invocation": "617aa377ed1b43bb89a2ec3b65ad9342", "iso": "2026-09-23T20:32:00+0200", "ts": 1790188320.1187906}
+{"event": "LOAD_OBSERVED", "iso": "2026-09-23T20:32:02+0200", "status": "IN_PROGRESS", "ts": 1790188322.1316977}
+{"event": "LOAD_OBSERVED", "iso": "2026-09-23T20:33:54+0200", "status": "PASS", "ts": 1790188434.458317}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-23T20:34:00+0200", "status": "IN_PROGRESS", "tests_completed": 0, "ts": 1790188440.4808753}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-23T20:39:10+0200", "status": "PASS", "tests_completed": 0, "ts": 1790188750.0297575}
+{"event": "WORK_COMPLETE", "iso": "2026-09-23T20:39:13+0200", "r0": 0, "r1": 0, "ts": 1790188753.0703998}
+{"event": "CLEANUP_START", "iso": "2026-09-23T20:39:13+0200", "ts": 1790188753.1342852}
+{"event": "CLEANUP_DONE", "iso": "2026-09-23T20:44:01+0200", "k2_state": "READY", "status": "PASS", "ts": 1790189041.606855}

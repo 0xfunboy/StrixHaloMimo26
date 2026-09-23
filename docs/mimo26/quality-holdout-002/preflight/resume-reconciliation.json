@@ -1,0 +1,71 @@
+{
+  "schema": "holdout002-resume-reconciliation-v1",
+  "observed_at": "2026-09-23T20:43:00+0200",
+  "mode": "EXISTING_A_RECOVERY_NO_REPLAY",
+  "head": "7be9a8ff066fa2b3ce442d5dd38de4e75147ea2b",
+  "base_commit_present": true,
+  "frozen": {
+    "status": "PASS",
+    "files_checked": 47,
+    "index_sha256": "8487252d5d42b528dc1ff48ab1e640940bb994ae9c9d464654a527bccfbdd729",
+    "worker_loaded_modules": {}
+  },
+  "A_raw_records": 30,
+  "A_panel_completions": 18,
+  "A_native_errors": [],
+  "A_completion_states": {
+    "COMPLETE": 30
+  },
+  "A_worker_source_freeze": {
+    "status": "PASS",
+    "files_checked": 47,
+    "index_sha256": "8487252d5d42b528dc1ff48ab1e640940bb994ae9c9d464654a527bccfbdd729",
+    "worker_loaded_modules": {
+      "common": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/mimo26/quality-holdout-002/sources/common.py",
+        "sha256": "52afeaa09b374b656a5f9b6fe0bb8bf4833da25ea5ae73bad0a26360242b8075"
+      },
+      "validate": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/mimo26/quality-holdout-002/sources/validate.py",
+        "sha256": "e3a0021efa332889658525c3aa5ad7cff2beeb54c59e894f217e9db3daea73ff"
+      },
+      "__main__": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/mimo26/quality-holdout-002/sources/adapter_a.py",
+        "sha256": "1c6ef85b46179b52ee01be8c9ef8fc97d793567136b1f46d6ebab1ea9eed2a7b"
+      }
+    }
+  },
+  "A_result": {
+    "run_completion": "PASS",
+    "initial_cause": "NORMAL_COMPLETION",
+    "cleanup": {
+      "status": "PENDING"
+    }
+  },
+  "controller": {
+    "state": "STARTING",
+    "preset": "dspark-k2-gfx1151",
+    "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513",
+    "owner": "DS41",
+    "owner_state": "RUNNING",
+    "epoch": "1790188753526304189",
+    "reason": "rank/backend health 000/000/503",
+    "ranks": [
+      {
+        "rank": 0,
+        "active": true,
+        "health_http": "000"
+      },
+      {
+        "rank": 1,
+        "active": true,
+        "health_http": "000"
+      }
+    ],
+    "paired_backend_http": "503"
+  },
+  "A_units": "Id=mimo26-qh002-supervisor-a-001.service\nLoadState=loaded\nActiveState=deactivating\nSubState=stop-post\nInvocationID=9843bc64f6c14de28dc13d5255558252\nMainPID=0\n\nId=mimo26-qh002-a-r0-001.service\nLoadState=not-found\nActiveState=inactive\nSubState=dead\nInvocationID=\nMainPID=0\n",
+  "A_model_pid_absent": true,
+  "B_run_dir_exists": false,
+  "next_exact_action": "Verify A finalizer inactive and K2 restore receipt; then dispatch the preregistered B once."
+}

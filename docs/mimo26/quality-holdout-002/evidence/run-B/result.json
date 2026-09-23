@@ -1,0 +1,295 @@
+{
+  "cleanup": {
+    "at": "2026-09-23T21:07:16+0200",
+    "k2_state": "READY",
+    "status": "PASS"
+  },
+  "initial_cause": "NORMAL_COMPLETION",
+  "load": {
+    "finished_at": "2026-09-23T20:49:09+0200",
+    "kwargs": {
+      "disable_custom_all_reduce": true,
+      "disable_log_stats": false,
+      "distributed_executor_backend": "external_launcher",
+      "dtype": "bfloat16",
+      "enable_expert_parallel": false,
+      "enable_prefix_caching": false,
+      "enforce_eager": true,
+      "kv_cache_memory_bytes": 1073741824,
+      "language_model_only": true,
+      "max_model_len": 4096,
+      "max_num_batched_tokens": 512,
+      "max_num_seqs": 1,
+      "model": "/home/funboy/models/MiMo-V2.6/official/MiMo-V2.6-Flash-RL",
+      "moe_backend": "triton_unfused",
+      "pipeline_parallel_size": 1,
+      "runner": "generate",
+      "seed": 1,
+      "tensor_parallel_size": 2,
+      "trust_remote_code": true
+    },
+    "load_s": 277.77128343097866,
+    "memory_after": {
+      "mem_bytes": {
+        "MemAvailable": 39142944768,
+        "MemTotal": 131210121216,
+        "SwapFree": 6231130112,
+        "SwapTotal": 8589930496
+      },
+      "observed_at": "2026-09-23T20:49:09+0200",
+      "process": {
+        "VmRSS": 2164326400,
+        "VmSize": 109434445824,
+        "VmSwap": 886489088,
+        "io": {
+          "cancelled_write_bytes": 0,
+          "rchar": 1620304368,
+          "read_bytes": 131472515072,
+          "syscr": 65201,
+          "syscw": 1042,
+          "wchar": 22449516,
+          "write_bytes": 585728
+        },
+        "majflt": 396548,
+        "minflt": 26470513,
+        "pid": 687294
+      }
+    },
+    "memory_before": {
+      "mem_bytes": {
+        "MemAvailable": 128307707904,
+        "MemTotal": 131210121216,
+        "SwapFree": 8255160320,
+        "SwapTotal": 8589930496
+      },
+      "observed_at": "2026-09-23T20:44:26+0200",
+      "process": {
+        "VmRSS": 26034176,
+        "VmSize": 48803840,
+        "VmSwap": 0,
+        "io": {
+          "cancelled_write_bytes": 0,
+          "rchar": 4238884,
+          "read_bytes": 0,
+          "syscr": 379,
+          "syscw": 0,
+          "wchar": 0,
+          "write_bytes": 0
+        },
+        "majflt": 0,
+        "minflt": 4083,
+        "pid": 687294
+      }
+    },
+    "patch_sha256": "eeb66fefbf1b63459e5712c031399f2d24d9ac05956c97b4e979ad03b901be72",
+    "pid": 687294,
+    "rank": 0,
+    "runtime_versions": {
+      "torch": "2.13.0+rocm10.0.0",
+      "transformers": "5.16.1",
+      "vllm": "0.1.0rc2.dev9+g9255fd9fb9.rocm100"
+    },
+    "source_freeze": {
+      "files_checked": 47,
+      "index_sha256": "8487252d5d42b528dc1ff48ab1e640940bb994ae9c9d464654a527bccfbdd729",
+      "status": "PASS",
+      "worker_loaded_modules": {
+        "__main__": {
+          "path": "/home/funboy/StrixHaloMimo26/docs/mimo26/quality-holdout-002/sources/adapter_b.py",
+          "sha256": "63a19b2afefe2eb6ef616cd923b6149d510972bdd546dad1d89132c05c4e7f8c"
+        },
+        "common": {
+          "path": "/home/funboy/StrixHaloMimo26/docs/mimo26/quality-holdout-002/sources/common.py",
+          "sha256": "52afeaa09b374b656a5f9b6fe0bb8bf4833da25ea5ae73bad0a26360242b8075"
+        },
+        "validate": {
+          "path": "/home/funboy/StrixHaloMimo26/docs/mimo26/quality-holdout-002/sources/validate.py",
+          "sha256": "e3a0021efa332889658525c3aa5ad7cff2beeb54c59e894f217e9db3daea73ff"
+        }
+      }
+    },
+    "status": "PASS"
+  },
+  "quality": {
+    "note": "PASS denotes sanity and collection, not independent panel verdicts",
+    "panel_completions": 18,
+    "postflight": {
+      "at": "2026-09-23T21:02:19+0200",
+      "phase": "postflight",
+      "status": "PASS",
+      "tests": [
+        {
+          "case_id": "SANITY-arithmetic",
+          "critical_violations": [],
+          "request_id": "quality-holdout-002-B-original-001/B/postflight/SANITY-arithmetic",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-extract",
+          "critical_violations": [],
+          "request_id": "quality-holdout-002-B-original-001/B/postflight/SANITY-extract",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-json",
+          "critical_violations": [],
+          "parsed": {
+            "alpha": 7,
+            "beta": "blue"
+          },
+          "request_id": "quality-holdout-002-B-original-001/B/postflight/SANITY-json",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-italian",
+          "critical_violations": [],
+          "request_id": "quality-holdout-002-B-original-001/B/postflight/SANITY-italian",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-english",
+          "critical_violations": [],
+          "request_id": "quality-holdout-002-B-original-001/B/postflight/SANITY-english",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-code_clamp",
+          "code_sha256": "68561f3d134a950c8c5669ffa883345016359926ccd75c1c19bc25676245b757",
+          "critical_violations": [],
+          "request_id": "quality-holdout-002-B-original-001/B/postflight/SANITY-code_clamp",
+          "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+          "status": "PASS",
+          "tests": [
+            {
+              "actual_preview": "5",
+              "actual_type": "int",
+              "index": 0,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "0",
+              "actual_type": "int",
+              "index": 1,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "10",
+              "actual_type": "int",
+              "index": 2,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "3",
+              "actual_type": "int",
+              "index": 3,
+              "input_unchanged": true,
+              "pass": true
+            }
+          ]
+        }
+      ]
+    },
+    "preflight": {
+      "at": "2026-09-23T20:49:32+0200",
+      "phase": "preflight",
+      "status": "PASS",
+      "tests": [
+        {
+          "case_id": "SANITY-arithmetic",
+          "critical_violations": [],
+          "request_id": "quality-holdout-002-B-original-001/B/preflight/SANITY-arithmetic",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-extract",
+          "critical_violations": [],
+          "request_id": "quality-holdout-002-B-original-001/B/preflight/SANITY-extract",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-json",
+          "critical_violations": [],
+          "parsed": {
+            "alpha": 7,
+            "beta": "blue"
+          },
+          "request_id": "quality-holdout-002-B-original-001/B/preflight/SANITY-json",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-italian",
+          "critical_violations": [],
+          "request_id": "quality-holdout-002-B-original-001/B/preflight/SANITY-italian",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-english",
+          "critical_violations": [],
+          "request_id": "quality-holdout-002-B-original-001/B/preflight/SANITY-english",
+          "status": "PASS"
+        },
+        {
+          "case_id": "SANITY-code_clamp",
+          "code_sha256": "68561f3d134a950c8c5669ffa883345016359926ccd75c1c19bc25676245b757",
+          "critical_violations": [],
+          "request_id": "quality-holdout-002-B-original-001/B/preflight/SANITY-code_clamp",
+          "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+          "status": "PASS",
+          "tests": [
+            {
+              "actual_preview": "5",
+              "actual_type": "int",
+              "index": 0,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "0",
+              "actual_type": "int",
+              "index": 1,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "10",
+              "actual_type": "int",
+              "index": 2,
+              "input_unchanged": true,
+              "pass": true
+            },
+            {
+              "actual_preview": "3",
+              "actual_type": "int",
+              "index": 3,
+              "input_unchanged": true,
+              "pass": true
+            }
+          ]
+        }
+      ]
+    },
+    "status": "PASS"
+  },
+  "run_completion": "PASS",
+  "run_id": "quality-holdout-002-B-original-001",
+  "schema": "mimo26-window-result-v1",
+  "workers": {
+    "rank0": {
+      "ActiveState": "inactive",
+      "ExecMainStatus": "0",
+      "InvocationID": "",
+      "Result": "success",
+      "SubState": "dead"
+    },
+    "rank1": {
+      "ActiveState": "inactive",
+      "ExecMainStatus": "0",
+      "InvocationID": "",
+      "Result": "success",
+      "SubState": "dead"
+    }
+  }
+}

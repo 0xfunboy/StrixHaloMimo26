@@ -1,0 +1,23 @@
+{
+  "state": "DISPATCHING_DO_NOT_RETRY",
+  "at": "2026-09-23T20:31:42+0200",
+  "command": [
+    "systemd-run",
+    "--user",
+    "--unit=mimo26-qh002-supervisor-a-001.service",
+    "--property=Type=simple",
+    "--property=KillMode=control-group",
+    "--property=Restart=no",
+    "--property=TimeoutStartSec=120",
+    "--property=TimeoutStopSec=1200",
+    "--property=RuntimeMaxSec=9240",
+    "--property=Environment=PYTHONDONTWRITEBYTECODE=1",
+    "--property=ExecStopPost=/usr/bin/python3 /home/funboy/StrixHaloMimo26/docs/mimo26/quality-holdout-002/sources/window_cleanup.py quality-holdout-002-A-mixed-001",
+    "--property=StandardOutput=append:/home/funboy/.local/state/strixhalomimo26/windows/quality-holdout-002-A-mixed-001/supervisor.log",
+    "--property=StandardError=append:/home/funboy/.local/state/strixhalomimo26/windows/quality-holdout-002-A-mixed-001/supervisor.log",
+    "--",
+    "/usr/bin/python3",
+    "/home/funboy/StrixHaloMimo26/docs/mimo26/quality-holdout-002/sources/window_runner.py",
+    "quality-holdout-002-A-mixed-001"
+  ]
+}

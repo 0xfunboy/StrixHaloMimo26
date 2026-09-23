@@ -1,0 +1,141 @@
+{
+  "schema": "mimo26-holdout-live-v1",
+  "status": "PASS",
+  "observation_started_at": "2026-09-23T20:44:05+0200",
+  "observation_completed_at": "2026-09-23T20:44:05+0200",
+  "identities": {
+    "NODE01": [
+      "01-EVO-X3",
+      "funboy",
+      "43c6daec-31c3-4ebe-a599-54b69cfa92b6"
+    ],
+    "NODE02": [
+      "02-EVO-X3",
+      "funboy",
+      "3fd0da44-da79-4480-ac6f-9a73ee121f17"
+    ]
+  },
+  "controller": {
+    "state": "READY",
+    "preset": "dspark-k2-gfx1151",
+    "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513",
+    "owner": "DS41",
+    "owner_state": "RUNNING",
+    "epoch": "1790188753526304189",
+    "reason": "",
+    "ranks": [
+      {
+        "rank": 0,
+        "active": true,
+        "health_http": "200"
+      },
+      {
+        "rank": 1,
+        "active": true,
+        "health_http": "200"
+      }
+    ],
+    "paired_backend_http": "200"
+  },
+  "owner": {
+    "owner": "DS41",
+    "state": "RUNNING",
+    "epoch": "1790188753526304189",
+    "rank_invocations": {
+      "0": "d62b3aca2d13413ead426cd80ecb8b2f",
+      "1": "909fdf88eccd426597b681262eb7110d"
+    }
+  },
+  "resident_units": {
+    "0": {
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "SubState": "running",
+      "InvocationID": "d62b3aca2d13413ead426cd80ecb8b2f",
+      "MainPID": "683347",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    },
+    "1": {
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "SubState": "running",
+      "InvocationID": "909fdf88eccd426597b681262eb7110d",
+      "MainPID": "683798",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    }
+  },
+  "own_units": {
+    "mimo26-qh002-supervisor-a-001.service": {
+      "LoadState": "not-found",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "InvocationID": "",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    },
+    "mimo26-qh002-a-r0-001": {
+      "LoadState": "not-found",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "InvocationID": "",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    }
+  },
+  "original_model_pid_absence": {
+    "A:NODE01:682309": "ABSENT"
+  },
+  "matching_lock_holders": [],
+  "remaining_engine_cgroups": {
+    "NODE01": [
+      {
+        "pid": 683599,
+        "name": "VLLM::EngineCor",
+        "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/ds41-rank0.service"
+      }
+    ],
+    "NODE02": [
+      {
+        "pid": 684001,
+        "name": "VLLM::EngineCor",
+        "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/ds41-rank1.service"
+      }
+    ]
+  },
+  "historical_restores": {
+    "A": {
+      "cleanup": {
+        "at": "2026-09-23T20:44:01+0200",
+        "k2_state": "READY",
+        "status": "PASS"
+      },
+      "controller": {
+        "epoch": "1790188753526304189",
+        "owner": "DS41",
+        "owner_state": "RUNNING",
+        "paired_backend_http": "200",
+        "preset": "dspark-k2-gfx1151",
+        "ranks": [
+          {
+            "active": true,
+            "health_http": "200",
+            "rank": 0
+          },
+          {
+            "active": true,
+            "health_http": "200",
+            "rank": 1
+          }
+        ],
+        "reason": "",
+        "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513",
+        "state": "READY"
+      }
+    }
+  },
+  "note": "EngineCore in DS41 cgroups are restored residents, not MiMo residue. Read-only checks, no new generations or lifecycle transitions."
+}

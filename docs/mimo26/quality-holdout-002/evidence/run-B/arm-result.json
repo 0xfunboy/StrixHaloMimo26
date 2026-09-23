@@ -1,0 +1,293 @@
+{
+  "schema": "mimo26-quality-arm-v1",
+  "arm": "B",
+  "run_id": "quality-holdout-002-B-original-001",
+  "panel": [
+    {
+      "case_id": "JSON-01",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/JSON-01",
+      "completion_status": "COMPLETE",
+      "output_tokens": 268
+    },
+    {
+      "case_id": "JSON-02",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/JSON-02",
+      "completion_status": "COMPLETE",
+      "output_tokens": 204
+    },
+    {
+      "case_id": "JSON-03",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/JSON-03",
+      "completion_status": "COMPLETE",
+      "output_tokens": 193
+    },
+    {
+      "case_id": "JSON-04",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/JSON-04",
+      "completion_status": "COMPLETE",
+      "output_tokens": 285
+    },
+    {
+      "case_id": "JSON-05",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/JSON-05",
+      "completion_status": "COMPLETE",
+      "output_tokens": 154
+    },
+    {
+      "case_id": "JSON-06",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/JSON-06",
+      "completion_status": "COMPLETE",
+      "output_tokens": 197
+    },
+    {
+      "case_id": "EVIDENCE-01",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/EVIDENCE-01",
+      "completion_status": "COMPLETE",
+      "output_tokens": 99
+    },
+    {
+      "case_id": "EVIDENCE-02",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/EVIDENCE-02",
+      "completion_status": "COMPLETE",
+      "output_tokens": 86
+    },
+    {
+      "case_id": "EVIDENCE-03",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/EVIDENCE-03",
+      "completion_status": "COMPLETE",
+      "output_tokens": 83
+    },
+    {
+      "case_id": "EVIDENCE-04",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/EVIDENCE-04",
+      "completion_status": "COMPLETE",
+      "output_tokens": 103
+    },
+    {
+      "case_id": "EVIDENCE-05",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/EVIDENCE-05",
+      "completion_status": "COMPLETE",
+      "output_tokens": 109
+    },
+    {
+      "case_id": "EVIDENCE-06",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/EVIDENCE-06",
+      "completion_status": "COMPLETE",
+      "output_tokens": 100
+    },
+    {
+      "case_id": "CONSTRAINT-01",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/CONSTRAINT-01",
+      "completion_status": "COMPLETE",
+      "output_tokens": 43
+    },
+    {
+      "case_id": "CONSTRAINT-02",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/CONSTRAINT-02",
+      "completion_status": "COMPLETE",
+      "output_tokens": 35
+    },
+    {
+      "case_id": "CONSTRAINT-03",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/CONSTRAINT-03",
+      "completion_status": "COMPLETE",
+      "output_tokens": 33
+    },
+    {
+      "case_id": "CONSTRAINT-04",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/CONSTRAINT-04",
+      "completion_status": "COMPLETE",
+      "output_tokens": 35
+    },
+    {
+      "case_id": "CONSTRAINT-05",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/CONSTRAINT-05",
+      "completion_status": "COMPLETE",
+      "output_tokens": 90
+    },
+    {
+      "case_id": "CONSTRAINT-06",
+      "request_id": "quality-holdout-002-B-original-001/B/panel/CONSTRAINT-06",
+      "completion_status": "COMPLETE",
+      "output_tokens": 21
+    }
+  ],
+  "sanity_pre": {
+    "phase": "preflight",
+    "status": "PASS",
+    "tests": [
+      {
+        "case_id": "SANITY-arithmetic",
+        "request_id": "quality-holdout-002-B-original-001/B/preflight/SANITY-arithmetic",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-extract",
+        "request_id": "quality-holdout-002-B-original-001/B/preflight/SANITY-extract",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-json",
+        "request_id": "quality-holdout-002-B-original-001/B/preflight/SANITY-json",
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "alpha": 7,
+          "beta": "blue"
+        }
+      },
+      {
+        "case_id": "SANITY-italian",
+        "request_id": "quality-holdout-002-B-original-001/B/preflight/SANITY-italian",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-english",
+        "request_id": "quality-holdout-002-B-original-001/B/preflight/SANITY-english",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-code_clamp",
+        "request_id": "quality-holdout-002-B-original-001/B/preflight/SANITY-code_clamp",
+        "status": "PASS",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "int",
+            "actual_preview": "5"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "int",
+            "actual_preview": "0"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "int",
+            "actual_preview": "10"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "int",
+            "actual_preview": "3"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "68561f3d134a950c8c5669ffa883345016359926ccd75c1c19bc25676245b757"
+      }
+    ],
+    "at": "2026-09-23T20:49:32+0200"
+  },
+  "sanity_post": {
+    "phase": "postflight",
+    "status": "PASS",
+    "tests": [
+      {
+        "case_id": "SANITY-arithmetic",
+        "request_id": "quality-holdout-002-B-original-001/B/postflight/SANITY-arithmetic",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-extract",
+        "request_id": "quality-holdout-002-B-original-001/B/postflight/SANITY-extract",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-json",
+        "request_id": "quality-holdout-002-B-original-001/B/postflight/SANITY-json",
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "alpha": 7,
+          "beta": "blue"
+        }
+      },
+      {
+        "case_id": "SANITY-italian",
+        "request_id": "quality-holdout-002-B-original-001/B/postflight/SANITY-italian",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-english",
+        "request_id": "quality-holdout-002-B-original-001/B/postflight/SANITY-english",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-code_clamp",
+        "request_id": "quality-holdout-002-B-original-001/B/postflight/SANITY-code_clamp",
+        "status": "PASS",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "int",
+            "actual_preview": "5"
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "int",
+            "actual_preview": "0"
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "int",
+            "actual_preview": "10"
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "actual_type": "int",
+            "actual_preview": "3"
+          }
+        ],
+        "critical_violations": [],
+        "sandbox_image": "a58caff183f8eb10c84fce3d3eb8496e684411369848a77bfcf0af9074cc16c4",
+        "code_sha256": "68561f3d134a950c8c5669ffa883345016359926ccd75c1c19bc25676245b757"
+      }
+    ],
+    "at": "2026-09-23T21:02:19+0200"
+  },
+  "source_freeze": {
+    "status": "PASS",
+    "files_checked": 47,
+    "index_sha256": "8487252d5d42b528dc1ff48ab1e640940bb994ae9c9d464654a527bccfbdd729",
+    "worker_loaded_modules": {
+      "common": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/mimo26/quality-holdout-002/sources/common.py",
+        "sha256": "52afeaa09b374b656a5f9b6fe0bb8bf4833da25ea5ae73bad0a26360242b8075"
+      },
+      "validate": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/mimo26/quality-holdout-002/sources/validate.py",
+        "sha256": "e3a0021efa332889658525c3aa5ad7cff2beeb54c59e894f217e9db3daea73ff"
+      },
+      "__main__": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/mimo26/quality-holdout-002/sources/adapter_b.py",
+        "sha256": "63a19b2afefe2eb6ef616cd923b6149d510972bdd546dad1d89132c05c4e7f8c"
+      }
+    }
+  },
+  "at": "2026-09-23T21:02:19+0200"
+}

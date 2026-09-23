@@ -1,0 +1,42 @@
+{
+  "interface": "offline LLM.generate",
+  "input_token_ids": [
+    151644,
+    872,
+    198,
+    4418,
+    419,
+    4734,
+    3950,
+    25,
+    1863,
+    8264,
+    5609,
+    12,
+    19,
+    23,
+    17,
+    16,
+    13,
+    3411,
+    1172,
+    429,
+    3950,
+    13,
+    151645,
+    151644,
+    77091,
+    198,
+    151667,
+    151668
+  ],
+  "sampling": {
+    "temperature": 0.0,
+    "seed": 1,
+    "max_tokens": 128,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "ignore_eos": false
+  }
+}

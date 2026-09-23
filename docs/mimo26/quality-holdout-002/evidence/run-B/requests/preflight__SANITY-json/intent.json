@@ -1,0 +1,24 @@
+{
+  "campaign": "QUALITY-HOLDOUT-002",
+  "run_id": "quality-holdout-002-B-original-001",
+  "request_id": "quality-holdout-002-B-original-001/B/preflight/SANITY-json",
+  "case_id": "SANITY-json",
+  "arm": "B",
+  "rank": 0,
+  "phase": "preflight",
+  "state": "IN_FLIGHT",
+  "created_at": "2026-09-23T20:49:14+0200",
+  "source_index_sha256": "8487252d5d42b528dc1ff48ab1e640940bb994ae9c9d464654a527bccfbdd729",
+  "input_ids_sha256": "637e01dbc104d1973a606357446f5f014bfebb136556f827a24cdc9f87ac9993",
+  "output_cap": 128,
+  "sampling": {
+    "temperature": 0.0,
+    "seed": 1,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "ignore_eos": false,
+    "thinking": false,
+    "prefix_reuse": false
+  }
+}
