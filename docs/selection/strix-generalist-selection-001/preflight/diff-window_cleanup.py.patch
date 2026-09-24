@@ -1,0 +1,169 @@
+--- qualified-002/window_cleanup.py
++++ sources/window_cleanup.py
+@@ -1,68 +1,106 @@
+ #!/usr/bin/env python3
++"""Selection-scoped ExecStopPost, preserving the qualified K2 restore controller."""
+ from __future__ import annotations
+-import argparse, fcntl, json, os, subprocess, time
++import argparse
++import fcntl
++import json
++import os
+ from pathlib import Path
+-STATE_ROOT=Path("/home/funboy/.local/state/strixhalomimo26/windows")
+-REL=Path("/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6")
+-K2=REL/"runtime/ds41/serve-controller.sh"
+-LOCK=Path("/home/funboy/.local/state/strixhalomimo26/cleanup-global.lock")
++import subprocess
++import time
++from common import atomic,now,sha
++from window_guards import CONTROLLER,REL,SSH,controller_status,unit_state
+ 
+-def atomic(path,obj):
+-    q=path.with_suffix(path.suffix+".tmp"); q.write_text(json.dumps(obj,indent=2,sort_keys=True)+"\n"); os.replace(q,path)
+-def read(path,default=None):
+-    try:return json.loads(path.read_text())
++STATE=Path('/home/funboy/.local/state/strixhalomimo26/windows')
++LOCK=Path('/home/funboy/.local/state/strixhalomimo26/cleanup-global.lock')
++
++
++def read(p,default=None):
++    try:return json.loads(p.read_text())
+     except FileNotFoundError:return default
+-def event(run,kind,**kw):
+-    rec={"ts":time.time(),"iso":time.strftime("%Y-%m-%dT%H:%M:%S%z"),"event":kind,**kw}
+-    with (run/"events.jsonl").open("a") as f:f.write(json.dumps(rec,sort_keys=True)+"\n")
+-def k2status():
+-    cp=subprocess.run([str(K2),"status"],env={**os.environ,"DS41_ROOT":str(REL)},capture_output=True,text=True)
+-    try:return json.loads(cp.stdout)
+-    except:return {"state":"UNKNOWN","rc":cp.returncode}
+-ap=argparse.ArgumentParser();ap.add_argument("run_id");a=ap.parse_args()
+-run=STATE_ROOT/a.run_id; cfg=read(run/"config.json",{})
+-LOCK.parent.mkdir(parents=True,exist_ok=True)
+-lf=LOCK.open("w"); fcntl.flock(lf,fcntl.LOCK_EX)
+-event(run,"CLEANUP_START")
+-# Stop workers idempotently.
+-r0=(cfg.get("rank0") or {}).get("unit")
+-r1=(cfg.get("rank1") or {}).get("unit")
+-if r0:
+-    subprocess.run(["systemctl","--user","stop",r0],timeout=float(cfg.get("worker_stop_sec",30)),check=False)
+-    subprocess.run(["systemctl","--user","reset-failed",r0],check=False)
+-if r1:
+-    subprocess.run(["ssh","-o","IdentityAgent=none","-o","BatchMode=yes","02-evo-x3-tb",
+-                    "systemctl","--user","stop",r1],timeout=float(cfg.get("worker_stop_sec",30)),check=False)
+-    subprocess.run(["ssh","-o","IdentityAgent=none","-o","BatchMode=yes","02-evo-x3-tb",
+-                    "systemctl","--user","reset-failed",r1],check=False)
+-(run/"compute-lock-held").unlink(missing_ok=True)
+ 
+-restore={"status":"SKIPPED","k2_state":None}
+-pre=read(run/"k2-before.json",{})
+-if cfg.get("real_k2",True) and pre.get("state")!="OFF":
+-    budget=float(cfg.get("restore_timeout_sec",900)); deadline=time.monotonic()+budget
+-    while time.monotonic()<deadline:
+-        st=k2status(); state=st.get("state")
+-        if state=="READY":
+-            restore={"status":"PASS","k2_state":"READY"}; break
+-        if state in {"OFF","ERROR"}:
+-            try:
+-                subprocess.run([str(K2),"on"],env={**os.environ,"DS41_ROOT":str(REL)},
+-                               timeout=min(300,max(1,deadline-time.monotonic())),
+-                               capture_output=True,text=True,check=False)
+-            except subprocess.TimeoutExpired: pass
+-        time.sleep(3)
++
++def event(run,kind,**fields):
++    with (run/'events.jsonl').open('a') as f:
++        f.write(json.dumps({'event':kind,'iso':now(),'ts':time.time(),**fields},sort_keys=True)+'\n');f.flush();os.fsync(f.fileno())
++
++
++def cleanup(run):
++    cfg=read(run/'config.json',{});assert cfg.get('campaign')=='STRIX-GENERALIST-SELECTION-001'
++    old=read(run/'result.json',{});existing=old.get('cleanup',{})
++    if existing.get('status')=='PASS' and (run/'k2-after.json').exists():return existing
++    lock=LOCK.open('a');deadline=time.monotonic()+30
++    while True:
++        try:fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB);break
++        except BlockingIOError:
++            if time.monotonic()>deadline:raise RuntimeError('ANOTHER_CLEANUP_OWNS_LOCK')
++            time.sleep(1)
++    event(run,'CLEANUP_START');states={}
++    for key,peer in [('rank0',False),('rank1',True)]:
++        worker=cfg.get(key)
++        if not worker:continue
++        name=worker['unit']
++        if not name.startswith('mimo26-gs001-'):raise RuntimeError('NOT_CAMPAIGN_UNIT:'+name)
++        started=read(run/(key+'-unit-start.json'),{})
++        current=unit_state(name,peer);states[key]={'before':current,'start_receipt':started}
++        if current.get('ActiveState') in ('active','activating','deactivating') or int(current.get('MainPID','0'))>0:
++            if not started.get('InvocationID') or current.get('InvocationID')!=started['InvocationID']:
++                raise RuntimeError('OWNED_WORKER_INVOCATION_NOT_PROVEN:'+key)
++            cmd=['systemctl','--user','stop',name]
++            cp=subprocess.run((SSH+cmd) if peer else cmd,capture_output=True,text=True,timeout=cfg['worker_stop_sec']+20)
++            states[key]['stop']={'rc':cp.returncode,'stdout':cp.stdout[-1000:],'stderr':cp.stderr[-1000:]}
++        final=unit_state(name,peer);states[key]['after']=final
++        if final.get('ActiveState') not in ('inactive','failed') or int(final.get('MainPID','0'))!=0:raise RuntimeError('WORKER_NOT_PROVEN_OFF:'+key)
++    atomic(run/'cleanup-workers.json',states)
++    admission=read(run/'admission.json')
++    events=[json.loads(x) for x in (run/'events.jsonl').read_text().splitlines() if x.strip()]
++    quiesced=any(x.get('event')=='K2_QUIESCED' for x in events)
++    quiesce_started=any(x.get('event')=='K2_QUIESCE_START' for x in events)
++    st=controller_status()
++    if not admission or not quiesce_started:
++        result={'status':'PASS','k2_state':st.get('state'),'at':now(),'note':'No resident transition authorized/performed by this blocked window'}
+     else:
+-        restore={"status":"FAIL","k2_state":k2status().get("state")}
+-else:
+-    restore={"status":"PASS","k2_state":pre.get("state","OFF"),"note":"prestate did not require restore"}
++        target=admission['restore_target']
++        if str(CONTROLLER)!=target['controller'] or str(REL)!=target['release']:raise RuntimeError('SAVED_RESTORE_TARGET_MISMATCH')
++        if st.get('preset')!=target['preset'] or st.get('release_id')!=target['release_id']:raise RuntimeError('CURRENT_RESTORE_IDENTITY_CHANGED')
++        if st.get('owner') not in ('NONE','DS41',None):raise RuntimeError('OTHER_OWNER_NO_RESTORE')
++        budget=float(cfg['restore_timeout_sec']);end=time.monotonic()+budget;on_sent=False
++        while time.monotonic()<end:
++            if st.get('state')=='READY':
++                if st.get('owner')!='DS41' or st.get('owner_state')!='RUNNING' or st.get('paired_backend_http')!='200' or len(st.get('ranks',[]))!=2 or not all(x.get('active') and x.get('health_http')=='200' for x in st['ranks']):raise RuntimeError('INCOMPLETE_RESTORE_HEALTH')
++                owner=read(Path('/home/funboy/.local/state/strix-cluster/owner.json'),{})
++                if owner.get('epoch')!=st.get('epoch'):raise RuntimeError('RESTORE_EPOCH_MISMATCH')
++                resident={}
++                for rank,remote in [('0',False),('1',True)]:
++                    u=unit_state('ds41-rank'+rank+'.service',remote);resident[rank]=u
++                    if u.get('ActiveState')!='active' or u.get('InvocationID')!=owner.get('ranks',{}).get(rank,{}).get('invocation_id'):raise RuntimeError('RESTORE_INVOCATION_MISMATCH:'+rank)
++                atomic(run/'restored-owner.json',{'at':now(),'owner':{k:owner.get(k) for k in ['owner','state','epoch','ranks']},'units':resident})
++                result={'status':'PASS','k2_state':'READY','at':now(),'epoch':st['epoch'],'target':target};break
++            if st.get('state')=='OFF' and not on_sent:
++                if st.get('owner') not in ('NONE',None):raise RuntimeError('OWNER_NOT_RELEASED')
++                atomic(run/'restore-intent.json',{'at':now(),'controller':str(CONTROLLER),'action':'on','one_dispatch_only':True},exclusive=True)
++                on_sent=True
++                try:
++                    cp=subprocess.run([str(CONTROLLER),'on'],env={**os.environ,'DS41_ROOT':str(REL)},capture_output=True,text=True,timeout=min(300,max(1,end-time.monotonic())))
++                    atomic(run/'restore-command.json',{'returncode':cp.returncode,'stdout':cp.stdout,'stderr':cp.stderr,'at':now()})
++                except subprocess.TimeoutExpired as exc:atomic(run/'restore-command.json',{'status':'CALL_TIMEOUT_RECONCILE_NO_REDISPATCH','at':now()})
++            elif st.get('state') not in ('STARTING','DRAINING','STOPPING','OFF'):
++                raise RuntimeError('UNSAFE_RESTORE_STATE:'+str(st.get('state')))
++            time.sleep(3);st=controller_status()
++        else:raise TimeoutError('RESTORE_DEADLINE:'+str(st.get('state')))
++    atomic(run/'k2-after.json',st)
++    current=read(run/'result.json',old);current['cleanup']=result;atomic(run/'result.json',current)
++    event(run,'CLEANUP_DONE',**result)
++    return result
+ 
+-res=read(run/"result.json",{
+- "schema":"mimo26-window-result-v1","run_id":run.name,
+- "run_completion":"UNKNOWN","initial_cause":"UNKNOWN",
+- "quality":{"status":"NOT_EVALUATED"},
+-})
+-res["cleanup"]={**restore,"at":time.strftime("%Y-%m-%dT%H:%M:%S%z")}
+-atomic(run/"result.json",res)
+-atomic(run/"k2-after.json",k2status())
+-event(run,"CLEANUP_DONE",**restore)
++
++def main():
++    p=argparse.ArgumentParser();p.add_argument('run_id');a=p.parse_args()
++    if not a.run_id.startswith('generalist-selection-001-') or '/' in a.run_id:raise ValueError('invalid run')
++    run=STATE/a.run_id
++    try:print(json.dumps(cleanup(run),indent=2))
++    except Exception as exc:
++        result=read(run/'result.json',{});result['cleanup']={'status':'FAIL','at':now(),'error':type(exc).__name__+':'+str(exc)}
++        atomic(run/'result.json',result);event(run,'CLEANUP_BLOCKED',error=result['cleanup']['error']);raise
++
++if __name__=='__main__':main()

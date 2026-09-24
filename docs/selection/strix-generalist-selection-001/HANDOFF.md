@@ -1,6 +1,9 @@
 # STRIX-GENERALIST-SELECTION-001
 
-PHASE: PREFLIGHT_INVENTORY
-Read-only cluster reconciliation completed. K2 READY/DS41 epoch 1790190148187249730; NODE02 reached from NODE01. No existing selection campaign found.
-No model loads or weight transfers. Original closed campaigns and 44 scratch files indexed in preflight/entry.json.
-NEXT EXACT ACTION: resolve upstream pins, allowed files, capacity and existing E1/reasoning adapters before acquisition; do not replay other campaigns.
+PHASE: FROZEN_PENDING_PREPARATION_COMMIT
+BASE: e6a814336e6f37e88b1cd3a5fab23fc5b299635d
+SOURCE_INDEX_SHA256: 06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604
+
+No model window has started. Qwen build and selected acquisition PASS; twelve independent cases and CPU adapter/lifecycle tests PASS. MTP remains BLOCKED_STATIC_CONTROL_CONTRACT; four target profiles proceed spec OFF. K2 is the saved resident, not E1. Read registry/source-manifest before any dispatch.
+
+NEXT: local preparation commit, preparation receipt and peer source verification, then Q via sources/launch.py. Preserve all prior campaigns and scratch. No replay, push or deployment.

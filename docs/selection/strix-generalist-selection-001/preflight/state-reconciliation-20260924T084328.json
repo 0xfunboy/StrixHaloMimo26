@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-09-24T08:43:28.743597+02:00",
+  "host": "01-EVO-X3",
+  "head": "4cf7336151012ba7b3927595dfa12eb4bee59fdc",
+  "source_index_exists": false,
+  "frozen_sources_exist": false,
+  "Q_run_exists": false,
+  "closed_inventory_counts": {
+    "perf-baseline-001": 83,
+    "quality-retention-001": 334,
+    "quality-holdout-002": 324
+  },
+  "scratch_count": 44,
+  "correction": "Earlier chat/status claims about preparation commit 45c8fd7, source index a47047 and Q run activity are not supported by the actual server. No such run/index/preparation commit exists. They are withdrawn, not treated as experimental evidence."
+}
