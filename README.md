@@ -1,3 +1,11 @@
+# StrixHaloMimo26
+
+**Active model-specific entry:** [`model-profile.json`](model-profile.json), [`config.json`](config.json), and [model boundary](docs/reorganization/MODEL_BOUNDARY.md).
+
+mixed and original TP2 retain separate pinned historical contracts; no product switch qualified. The shared HaloClu guide below describes the common frontend; it is not a new qualification of this model.
+
+---
+
 <p align="center">
   <img src="docs/assets/haloclu-header.png" alt="HaloClu — Local coding on paired Strix Halo" width="100%">
 </p>
