@@ -1,0 +1,8 @@
+{
+  "state": "INTENT",
+  "unit": "mimo26-gs001-supervisor-d-001.service",
+  "expected_invocation_id": "fc1b2de966c14058a8e629179516d1bb",
+  "run_id": "generalist-selection-001-D-001",
+  "reason": "Readiness packaging error proved by setup-evidence.json; no inference request exists. Stop only this owned supervisor through systemd, allowing its existing ExecStopPost whole-pair cleanup/restore. No direct resident or unrelated process action.",
+  "next": "Reconcile this exact stop and restore before the single allowed pre-panel packaging recovery."
+}

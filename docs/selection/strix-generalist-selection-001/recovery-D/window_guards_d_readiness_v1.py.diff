@@ -1,0 +1,15 @@
+--- window_guards.py
++++ window_guards_d_readiness_v1.py
+@@ -54,7 +54,11 @@
+     assert cfg['campaign']=='STRIX-GENERALIST-SELECTION-001'
+     manifest=json.loads((root/'source-manifest.json').read_text())
+     freeze=verify_freeze(root)
+-    if sha(run/'config.json')!=sha(root/manifest['runs'][cfg['profile']]['config']):raise RuntimeError('CONFIG_FREEZE_MISMATCH')
++    from d_readiness_recovery_v1 import verify_recovery,effective_manifest,require_consumed_setup_restored
++    verify_recovery(root);require_consumed_setup_restored(root)
++    manifest=effective_manifest(root,manifest)
++    if cfg['profile']!='D' or run.name!=manifest['runs']['D']['run_id']:raise RuntimeError('WRONG_D_RECOVERY_RUN')
++    if sha(run/'config.json')!=sha(root/manifest['runs']['D']['config']):raise RuntimeError('CONFIG_RECOVERY_MISMATCH')
+     if command(['hostname']).strip()!='01-EVO-X3' or command(['id','-un']).strip()!='funboy':raise RuntimeError('NODE01_IDENTITY')
+     peer=command(SSH+['sh','-c',"'hostname; id -un; cat /proc/sys/kernel/random/boot_id'"])
+     if peer.splitlines()[:2]!=['02-EVO-X3','funboy']:raise RuntimeError('NODE02_IDENTITY')

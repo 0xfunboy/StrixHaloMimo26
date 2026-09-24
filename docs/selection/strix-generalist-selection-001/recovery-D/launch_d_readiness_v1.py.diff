@@ -1,0 +1,31 @@
+--- launch.py
++++ launch_d_readiness_v1.py
+@@ -94,13 +94,17 @@
+ 
+ 
+ def dispatch(root,profile):
+-    root=root.resolve();manifest=json.loads((root/'source-manifest.json').read_text());freeze=verify_freeze(root)
++    root=root.resolve()
++    from d_readiness_recovery_v1 import verify_recovery,effective_manifest,require_consumed_setup_restored
++    verify_recovery(root);require_consumed_setup_restored(root)
++    manifest=effective_manifest(root,json.loads((root/'source-manifest.json').read_text()));freeze=verify_freeze(root)
++    if profile not in ('D','O'):raise RuntimeError('RECOVERY_LAUNCH_PROFILE_NOT_ALLOWED')
+     prep=json.loads((root/'preparation.json').read_text())
+     if prep['source_index_sha256']!=freeze['index_sha256']:raise RuntimeError('PREPARATION_INDEX_MISMATCH')
+     if json.loads((root/'preflight/peer-stage.json').read_text())['source_index_sha256']!=freeze['index_sha256']:raise RuntimeError('PEER_NOT_STAGED')
+     info=manifest['runs'][profile];run=Path(info['run_dir']);u=unit_state(info['supervisor_unit'])
+     if run.exists() or u.get('LoadState')!='not-found':
+-        return {'state':'EXISTING_RUN_RECONCILE_NO_REDISPATCH','run':str(run),'supervisor':u,'snapshot':reconcile(root)['profiles'][profile]}
++        return {'state':'EXISTING_RUN_RECONCILE_NO_REDISPATCH','run':str(run),'supervisor':u}
+     for earlier in manifest['order'][:manifest['order'].index(profile)]:
+         previous=Path(manifest['runs'][earlier]['run_dir'])/'result.json'
+         blocks=json.loads((root/'blockers.json').read_text()) if (root/'blockers.json').exists() else {}
+@@ -123,7 +127,7 @@
+           '--property=RuntimeMaxSec='+str(info['supervisor_runtime_s']),'--property=TimeoutStopSec='+str(info['supervisor_stop_s']),
+           '--property=ExecStopPost=/usr/bin/python3 '+str(root/'sources/window_cleanup.py')+' '+info['run_id'],
+           '--property=StandardOutput=append:'+str(run/'supervisor.log'),'--property=StandardError=append:'+str(run/'supervisor.log'),
+-          '--','/usr/bin/python3',str(root/'sources/window_runner.py'),info['run_id']]
++          '--','/usr/bin/python3',str(root/('sources/window_runner_d_readiness_v1.py' if profile=='D' else 'sources/window_runner.py')),info['run_id']]
+     atomic(run/'dispatch.json',{'state':'INTENT','at':now(),'profile':profile,'source_index_sha256':freeze['index_sha256'],'preparation_commit':prep['preparation_commit'],'command':argv},exclusive=True)
+     try:
+         cp=subprocess.run(argv,capture_output=True,text=True,timeout=20)

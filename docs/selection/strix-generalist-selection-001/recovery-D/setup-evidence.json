@@ -1,0 +1,66 @@
+{
+  "status": "SETUP_BLOCKER_CONFIRMED",
+  "at": "2026-09-24T11:14:51+0200",
+  "run_id": "generalist-selection-001-D-001",
+  "unit": {
+    "LoadState": "loaded",
+    "ActiveState": "active",
+    "SubState": "running",
+    "InvocationID": "fc1b2de966c14058a8e629179516d1bb",
+    "MainPID": "769925",
+    "Result": "success",
+    "ExecMainStatus": "0"
+  },
+  "endpoints": {
+    "/health": {
+      "http": 404,
+      "body": {
+        "error": {
+          "message": "unknown endpoint",
+          "type": "invalid_request_error"
+        }
+      }
+    },
+    "/v1/models": {
+      "http": 200,
+      "body": {
+        "object": "list",
+        "data": [
+          {
+            "id": "deepseek-v4.1-flash",
+            "object": "model",
+            "created": 1767225600,
+            "owned_by": "ds4.c",
+            "name": "DeepSeek V4.1 Flash",
+            "context_length": 16384,
+            "top_provider": {
+              "context_length": 16384,
+              "max_completion_tokens": 16384,
+              "is_moderated": false
+            },
+            "supported_parameters": [
+              "tools",
+              "tool_choice",
+              "max_tokens",
+              "temperature",
+              "top_p",
+              "top_k",
+              "min_p",
+              "ignore_eos",
+              "stop",
+              "seed",
+              "stream",
+              "reasoning_effort"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "source": "/home/funboy/ai-exp/strix-generalist-selection-001/e1-source-a8f4473/ds4_server.c",
+  "source_sha256": "76f6dbfde62f50f548421e00e8501472af0c9f27551ccaaef71b02eae3073896",
+  "requests_sent": 0,
+  "cause": "Frozen D adapter polls nonexistent /health although E1 /v1/models is ready. No generated output exists.",
+  "correction_authority": "Original mandate section7: one packaging correction before panel inference with new identity/freeze.",
+  "scope": "readiness admission only; same model/binary/numerics/requests/sampling/context/limits; old run preserved"
+}

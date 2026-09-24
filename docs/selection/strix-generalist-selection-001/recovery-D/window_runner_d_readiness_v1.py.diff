@@ -1,0 +1,11 @@
+--- window_runner.py
++++ window_runner_d_readiness_v1.py
+@@ -12,7 +12,7 @@
+ import time
+ from pathlib import Path
+ 
+-from window_guards import preflight
++from window_guards_d_readiness_v1 import preflight
+ 
+ STATE_ROOT=Path("/home/funboy/.local/state/strixhalomimo26/windows")
+ REL=Path("/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6")

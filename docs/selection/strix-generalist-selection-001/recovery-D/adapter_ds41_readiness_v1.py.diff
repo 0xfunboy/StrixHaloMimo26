@@ -1,0 +1,25 @@
+--- adapter_ds41.py
++++ adapter_ds41_readiness_v1.py
+@@ -76,7 +76,10 @@
+ 
+ def main():
+     root=Path(os.environ['GS_ROOT']).resolve();run=Path(os.environ['GS_RUN_DIR']);profile='D'
+-    frozen=verify_freeze(root);manifest=json.loads((root/'source-manifest.json').read_text());cfg=manifest['profiles']['D']
++    from d_readiness_recovery_v1 import ready_models,verify_recovery,effective_manifest
++    recovery=verify_recovery(root)
++    frozen=verify_freeze(root);manifest=effective_manifest(root,json.loads((root/'source-manifest.json').read_text()));cfg=manifest['profiles']['D']
++    atomic(run/'recovery-source-receipt.json',recovery,exclusive=True)
+     assert sha(cfg['binary']['path'])==cfg['binary']['sha256'],'E1_BINARY_CHANGED'
+     assert Path(cfg['model_path']).stat().st_size==cfg['model_size'],'E1_MODEL_SIZE_CHANGED'
+     requests=read_jsonl(root/'requests-D.jsonl');proc=None;log=None;phase='load';sanity={'preflight':[],'postflight':[]};completed=[]
+@@ -98,8 +101,8 @@
+         while time.monotonic()<deadline:
+             if proc.poll() is not None:raise RuntimeError('E1_SERVER_EXIT_DURING_LOAD:'+str(proc.returncode))
+             try:
+-                health=http(base,'/health',timeout=2)
+-                if health.get('status')=='ok':break
++                health=http(base,'/v1/models',timeout=2)
++                if ready_models(health,cfg['api_model'],16384):break
+             except Exception:pass
+             time.sleep(1)
+         else:raise TimeoutError('E1_LOAD_HEALTH_DEADLINE')

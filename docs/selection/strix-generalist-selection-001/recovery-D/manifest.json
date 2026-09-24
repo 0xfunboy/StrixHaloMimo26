@@ -1,0 +1,23 @@
+{
+  "status": "PREREGISTERED_PACKAGING_RECOVERY",
+  "prior_run": {
+    "run_id": "generalist-selection-001-D-001",
+    "run_dir": "/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-D-001",
+    "config": "config-D.json",
+    "supervisor_unit": "mimo26-gs001-supervisor-d-001.service",
+    "supervisor_runtime_s": 57040,
+    "supervisor_stop_s": 1350
+  },
+  "run": {
+    "run_id": "generalist-selection-001-D-002",
+    "run_dir": "/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-D-002",
+    "config": "recovery-D/config-D.json",
+    "supervisor_unit": "mimo26-gs001-supervisor-d-002.service",
+    "supervisor_runtime_s": 57040,
+    "supervisor_stop_s": 1350
+  },
+  "peer_unit": "mimo26-gs001-d-r1-002",
+  "max_packaging_recoveries": 1,
+  "reason": "Existing /v1/models readiness instead of nonexistent /health; zero prior generated requests.",
+  "preserved": "All cases, expected, tokenizer/input IDs, sampling, budgets, binaries and numerical runtime unchanged."
+}
