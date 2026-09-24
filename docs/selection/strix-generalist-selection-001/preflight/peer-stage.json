@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "files_checked": 74,
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "versions": {
+    "vllm": "0.1.0rc2.dev9+g9255fd9fb9.rocm100",
+    "torch": "2.13.0+rocm10.0.0",
+    "transformers": "5.16.1"
+  },
+  "node": "02-EVO-X3",
+  "peer_root": "/home/funboy/.local/state/strixhalomimo26/strix-generalist-selection-001/frozen",
+  "at": "2026-09-24T10:09:12+0200",
+  "existing_stage": false
+}

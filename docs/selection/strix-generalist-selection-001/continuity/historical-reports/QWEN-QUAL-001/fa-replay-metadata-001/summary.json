@@ -1,0 +1,28 @@
+{
+  "schema": "qwen-fa-replay-v1",
+  "status": "NON_PROMOTED",
+  "performance_qualification": false,
+  "mode": "METADATA_ONLY_NO_GPU",
+  "trace": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/replay-layer3-003/target.1414183.jsonl",
+  "binary": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/replay-layer3-003/target.1414183.fa.bin",
+  "ggml_base": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-bin/libggml-base.so.0.22.0",
+  "ggml_hip": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-bin/libggml-hip.so.0.22.0",
+  "trace_validation": {
+    "jsonl_records": 296,
+    "native_bytes": 805376,
+    "position": 46,
+    "endpoint_name": "kqv_out-3",
+    "observer_controls_exact": true
+  },
+  "operator_evaluations": 0,
+  "scope": "Original native spans/strides/op parameters. No model, network, sampling, promotion or performance measurement.",
+  "causal_limit": "Arms retain their own Q/K/V/mask; future cache rows can differ. Cross-arm difference alone does not isolate dispatch.",
+  "traced_first_query_m1_vs_m4": {
+    "logical_f32_elements": 6144,
+    "different_elements": 6144,
+    "byte_exact": false,
+    "nonfinite_elements": 0,
+    "max_abs": 0.004899084568023682,
+    "exact_finite": false
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "schema": "qwen-iq3-public-speed-v1",
+  "status": "COMPLETE",
+  "error": null,
+  "qualification": "NOT_PROMOTED",
+  "quality_equivalence": "NOT_ESTABLISHED",
+  "categories": {
+    "code": {
+      "measured": 5,
+      "complete": true,
+      "repeat": {
+        "status": "FAIL",
+        "comparisons": [
+          {
+            "status": "FAIL",
+            "first_diff_token_index": 921,
+            "output_text_exact": false
+          },
+          {
+            "status": "FAIL",
+            "first_diff_token_index": 921,
+            "output_text_exact": false
+          },
+          {
+            "status": "FAIL",
+            "first_diff_token_index": 921,
+            "output_text_exact": false
+          },
+          {
+            "status": "FAIL",
+            "first_diff_token_index": 921,
+            "output_text_exact": false
+          }
+        ]
+      },
+      "reference": [
+        {
+          "status": "FAIL",
+          "comparisons": [
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            }
+          ]
+        },
+        {
+          "status": "FAIL",
+          "comparisons": [
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            }
+          ]
+        },
+        {
+          "status": "FAIL",
+          "comparisons": [
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            }
+          ]
+        },
+        {
+          "status": "FAIL",
+          "comparisons": [
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            }
+          ]
+        },
+        {
+          "status": "FAIL",
+          "comparisons": [
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            }
+          ]
+        }
+      ],
+      "reference_status": "FAIL",
+      "exact_screen_pass": false,
+      "observed": {
+        "decode_tps": {
+          "n": 5,
+          "median": 93.15602543243419,
+          "min": 32.31866841133557,
+          "max": 96.67857326039054,
+          "sample_sd": 27.07084634460653,
+          "mad": 3.5225478279563447,
+          "raw": [
+            32.31866841133557,
+            81.00244539814891,
+            94.37942645650885,
+            96.67857326039054,
+            93.15602543243419
+          ]
+        },
+        "http_e2e_tps": {
+          "n": 5,
+          "median": 90.33451488459912,
+          "min": 32.19253891685435,
+          "max": 92.8907069708429,
+          "sample_sd": 25.89926303942385,
+          "mad": 2.556192086243783,
+          "raw": [
+            32.19253891685435,
+            79.95946188969235,
+            92.8907069708429,
+            90.33451488459912,
+            92.42285822743585
+          ]
+        },
+        "http_wall_s": {
+          "n": 5,
+          "median": 11.069965907023288,
+          "min": 10.76533953298349,
+          "max": 31.06309827201767,
+          "sample_sd": 8.87120153215998,
+          "mad": 0.304626374039799,
+          "raw": [
+            31.06309827201767,
+            12.506337291008094,
+            10.76533953298349,
+            11.069965907023288,
+            10.819834174995776
+          ]
+        },
+        "completion_tokens": {
+          "n": 5,
+          "median": 1000,
+          "min": 1000,
+          "max": 1000,
+          "sample_sd": 0.0,
+          "mad": 0,
+          "raw": [
+            1000,
+            1000,
+            1000,
+            1000,
+            1000
+          ]
+        },
+        "prompt_tokens": {
+          "n": 5,
+          "median": 84,
+          "min": 84,
+          "max": 84,
+          "sample_sd": 0.0,
+          "mad": 0,
+          "raw": [
+            84,
+            84,
+            84,
+            84,
+            84
+          ]
+        }
+      },
+      "acceptance": [
+        0.5921787709497207,
+        0.879231473010064,
+        0.9319923371647509,
+        0.9319923371647509,
+        0.9319923371647509
+      ],
+      "finish_reasons": [
+        "length",
+        "length",
+        "length",
+        "length",
+        "length"
+      ],
+      "correctness_screened_decode_median": null,
+      "quality": "SEPARATE_FUNCTIONAL_TASKS_REQUIRED",
+      "client_ttft_ms": null
+    }
+  }
+}

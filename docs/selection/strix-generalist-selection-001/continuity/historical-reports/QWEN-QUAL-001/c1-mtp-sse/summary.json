@@ -1,0 +1,13 @@
+{
+  "pass": false,
+  "http_requests": 1,
+  "errors": [
+    "RuntimeError: Incomplete SSE: missing final/DONE/token event"
+  ],
+  "ttft_ms": null,
+  "qualified_ttft_ms": null,
+  "http_wall_s": null,
+  "no_retry": true,
+  "api_chat_smoke": "SEPARATE",
+  "qualification": "NOT_PROMOTED"
+}

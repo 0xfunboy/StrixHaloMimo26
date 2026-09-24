@@ -1,0 +1,123 @@
+{
+  "schema": "qwen-native-qualification-v1",
+  "phase": "short",
+  "screening_pass": true,
+  "errors": [],
+  "metrics_by_category": {
+    "code": {
+      "category": "code",
+      "measured_requests": 2,
+      "native_validation_pass": true,
+      "repeat_status": "PASS",
+      "reference_status": "NOT_EVALUATED",
+      "observed_median_decode_tps": 18.076459454300803,
+      "correctness_screened_median_decode_tps": 18.076459454300803,
+      "median_http_wall_s": 2.2324930885079084,
+      "median_http_e2e_tps": 14.351596204708592,
+      "acceptance": [
+        null,
+        null
+      ],
+      "ttft_ms": null,
+      "ttft_status": "NOT_MEASURED_NON_STREAMING",
+      "screening_pass": true
+    }
+  },
+  "records": [
+    {
+      "name": "warmup",
+      "category": null,
+      "excluded_warmup": true,
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 32,
+      "token_ID_count": 32,
+      "decode_tps": 17.8990964420638,
+      "http_wall_s": 2.2063758540025447,
+      "http_e2e_tps": 14.503421954128715,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 22,
+        "prompt_ms": 371.835,
+        "prompt_per_token_ms": 16.90159090909091,
+        "prompt_per_second": 59.16602794250139,
+        "predicted_n": 32,
+        "predicted_ms": 1731.931,
+        "predicted_per_token_ms": 55.868741935483875,
+        "predicted_per_second": 17.8990964420638
+      },
+      "acceptance": null,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required"
+    },
+    {
+      "name": "code-1",
+      "category": "code",
+      "excluded_warmup": false,
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 32,
+      "token_ID_count": 32,
+      "decode_tps": 18.019714730477382,
+      "http_wall_s": 2.311215974012157,
+      "http_e2e_tps": 13.845525627987755,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 44,
+        "prompt_ms": 441.098,
+        "prompt_per_token_ms": 10.024954545454547,
+        "prompt_per_second": 99.7510757246689,
+        "predicted_n": 32,
+        "predicted_ms": 1720.338,
+        "predicted_per_token_ms": 55.49477419354839,
+        "predicted_per_second": 18.019714730477382
+      },
+      "acceptance": null,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": null,
+      "reference_comparison": null
+    },
+    {
+      "name": "code-2",
+      "category": "code",
+      "excluded_warmup": false,
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 32,
+      "token_ID_count": 32,
+      "decode_tps": 18.13320417812422,
+      "http_wall_s": 2.15377020300366,
+      "http_e2e_tps": 14.857666781429431,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 44,
+        "prompt_ms": 442.604,
+        "prompt_per_token_ms": 10.059181818181818,
+        "prompt_per_second": 99.41166369937912,
+        "predicted_n": 32,
+        "predicted_ms": 1709.571,
+        "predicted_per_token_ms": 55.147451612903225,
+        "predicted_per_second": 18.13320417812422
+      },
+      "acceptance": null,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      },
+      "reference_comparison": null
+    }
+  ],
+  "reference": null,
+  "qualification": "NOT_PROMOTED",
+  "quality_equivalence": "NOT_ESTABLISHED",
+  "api_smoke": "SEPARATE_REQUIRED",
+  "full_logits_correctness": "NOT_EVALUATED",
+  "runtime_identity_scope": "Controller-supplied pinned JSON, not live process attestation",
+  "request_mode": "raw_native_completion",
+  "no_retry": true,
+  "finished_unix": 1788677102.4074767
+}

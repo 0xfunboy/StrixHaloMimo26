@@ -1,0 +1,307 @@
+{
+  "at": "2026-09-24T09:58:46.303359+02:00",
+  "preparation_commit": "87442a8e1b999e5f33165d0b6b563eac5248ab15",
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "frozen_files_verified": 74,
+  "erratum": "Prior final-answer SHA 06c85aae227c3c2d242a44a2c402a724e300f068540a149ec533cfa97640cd8c was a transcription error; disk index is byte-identical to Git preparation commit. Original freeze unchanged.",
+  "history": {
+    "QWEN-FLASH-NEXT-SINGLE-NODE-001": {
+      "archived_members": 18,
+      "raw_named_members": 0,
+      "selected": [
+        {
+          "archive_member": "ai-exp/reports/qwen-flash-next/QWEN-FLASH-NEXT-SINGLE-NODE-001/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-FLASH-NEXT-SINGLE-NODE-001/summary.json",
+          "bytes": 10424,
+          "sha256": "47e2a0cf8e077d1efd084394c0e9bf59b4b6902e65a0a7b9ec45dceb9b44d6bc"
+        }
+      ]
+    },
+    "QWEN-QUAL-001": {
+      "archived_members": 522,
+      "raw_named_members": 0,
+      "selected": [
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/replay44-requests/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/replay44-requests/summary.json",
+          "bytes": 1630,
+          "sha256": "4cbd05161d3437aca56717ec1a219e88ce55a5eb880fc4f182e9b994a1b7f3f1"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-short/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/c1-target-short/summary.json",
+          "bytes": 3869,
+          "sha256": "a4bae6c85bb6a4b0729a596c43c7c8a193b268cb0436d970a509da0024f4fdb6"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/replay-prefix-requests/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/replay-prefix-requests/summary.json",
+          "bytes": 1630,
+          "sha256": "4cbd05161d3437aca56717ec1a219e88ce55a5eb880fc4f182e9b994a1b7f3f1"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/replay-residual-requests/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/replay-residual-requests/summary.json",
+          "bytes": 1812,
+          "sha256": "5af0e8e1c5aa37779530f5465218165249921fec7342db5605849dda7b52fe01"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/C2-RESIDUAL-BLOCKER.md",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/C2-RESIDUAL-BLOCKER.md",
+          "bytes": 5011,
+          "sha256": "b6b77fcf0ffaa2311f537daa34c53793552ec08d75cb10ea721996de564ab8af"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-api/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/c1-target-api/summary.json",
+          "bytes": 706,
+          "sha256": "6f33115af871052a4c0c682bf2b66068718b5557d9ea3d8c06ce8a0e7d8a6b59"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-sse/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/c1-target-sse/summary.json",
+          "bytes": 1867,
+          "sha256": "2122a13b51e125c3e14dc6de21626b6909ba42d1e8c895ec6394c17f999b8888"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/c2-mtp-short/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/c2-mtp-short/summary.json",
+          "bytes": 8487,
+          "sha256": "e25e8952509f4329783ab0c2bfc8559471da17ad81876afb7d2951345153a9c3"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/c1-target-measure/summary.json",
+          "bytes": 8462,
+          "sha256": "93dd4e04d1415a1aa3e17927fb0119cd8266025408a09ff3cd481e8054bfc1e3"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/C1-RESULT-TABLE.md",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/C1-RESULT-TABLE.md",
+          "bytes": 10416,
+          "sha256": "23be50fde42b1b1ab3337f9a401c958ce318d1dd82e39c056f3005f3fdfd8f6d"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/replay-layer3-requests/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/replay-layer3-requests/summary.json",
+          "bytes": 1630,
+          "sha256": "4cbd05161d3437aca56717ec1a219e88ce55a5eb880fc4f182e9b994a1b7f3f1"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/c2-target-measure/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/c2-target-measure/summary.json",
+          "bytes": 8467,
+          "sha256": "05dfc1f3edc60663aa8cd29564e0052f4305ff585c042edb9678dab0a9468d3c"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-cache-branch/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/c1-cache-branch/summary.json",
+          "bytes": 5048,
+          "sha256": "7d02e88607d05c2010a4d8e88465853b917f189ae2b2e0d0fcd14b76f078ca0f"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-cache-branch/identity.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/c1-cache-branch/identity.json",
+          "bytes": 9939,
+          "sha256": "02d72d7a8e679a5e991077dcdb382293fef7461642c5ed26bfe34a3eab990784"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/c2-mtp-measure/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/c2-mtp-measure/summary.json",
+          "bytes": 5561,
+          "sha256": "5d7d5e49c1f8da7e4f6a0c8950200f5c8b2afb69af77c58747163af26465f99a"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/c1-mtp-measure/summary.json",
+          "bytes": 8999,
+          "sha256": "b015533df298dab33e1742032881fb0193e3d8db61569f7f594a6165a99c5e9c"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-repro32/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/c1-target-repro32/summary.json",
+          "bytes": 3870,
+          "sha256": "b9a886de588cf570ad2051889ee33cb9076e112bdd66ebf13092835f55fb5dcb"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-short/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/c1-mtp-short/summary.json",
+          "bytes": 5082,
+          "sha256": "32fbf9e364edd6a2ab8b9d22cc4cb8fe2b67013b1db3467095fb3b7b9287fb77"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-sse/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/c1-mtp-sse/summary.json",
+          "bytes": 286,
+          "sha256": "22a254dd76b106a5e1f4105d8569b42f769f67104e2aff8641822b971f9591d5"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/fa-replay-c2-on-001/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/fa-replay-c2-on-001/summary.json",
+          "bytes": 5445,
+          "sha256": "320a2d7e72f8934236ad994ffd8ee8e34d8671a71e896c933364eed7b43e0983"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/c2-target-short/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/c2-target-short/summary.json",
+          "bytes": 6347,
+          "sha256": "5c7c8ffef65907f89029bd1bb5319d66749bacab462f50fc8dc5c782942c2300"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/fa-replay-c2-m3-001/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/fa-replay-c2-m3-001/summary.json",
+          "bytes": 6950,
+          "sha256": "3d2146986281eda8d131b544fbb20c4fd74ae83c7d5243f1d58d1d3c034aae49"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/C2-RESULT-TABLE.md",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/C2-RESULT-TABLE.md",
+          "bytes": 7773,
+          "sha256": "510cb106fd2118d904375ca15cc5fd501f9f7b0598cb4d2c07bd52a04ccbb28d"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-long-crossmode-verdict.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/c1-long-crossmode-verdict.json",
+          "bytes": 27898,
+          "sha256": "171c0928cc62f9abcdeaad2496a63620e7bd1229fabf721fdf81541caf6e7324"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/fa-replay-c2-off-001/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/fa-replay-c2-off-001/summary.json",
+          "bytes": 5375,
+          "sha256": "75fec9f8d0137e4ae5c9198077395cb5fb5187c0a8026ca470f8e0974c2694fe"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/fa-replay-c1-001/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/fa-replay-c1-001/summary.json",
+          "bytes": 5375,
+          "sha256": "c163572d2cc774cbd2cc25857fbc6e7f629bc861e86ac6a4703e0dca1c6bbd41"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-QUAL-001/fa-replay-metadata-001/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-QUAL-001/fa-replay-metadata-001/summary.json",
+          "bytes": 1244,
+          "sha256": "5bb66310abfeb7c37e339c8ff8cc5898564b182cf781fff3c654d7867abc3868"
+        }
+      ]
+    },
+    "QWEN-IQ3-SPEED-001": {
+      "archived_members": 226,
+      "raw_named_members": 42,
+      "selected": [
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/b-public/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-SPEED-001/b-public/summary.json",
+          "bytes": 8344,
+          "sha256": "4fef1209243324192e4ae96ba35b562a2d7b842f3eaec9e8a77bb0eca0088ef3"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/CLUSTER-HANDOFF.md",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-SPEED-001/CLUSTER-HANDOFF.md",
+          "bytes": 8196,
+          "sha256": "ffc691437f0b74b705d2bfa86d4c6c22f915058faf37896c213a062ed7f5aabe"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/UTILITY-COMPARISON.md",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-SPEED-001/UTILITY-COMPARISON.md",
+          "bytes": 10464,
+          "sha256": "9af451c6ee9154d671dd5a772011ce0f6951e9269c9d7384978eea8e87f66798"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/a-utility/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-SPEED-001/a-utility/summary.json",
+          "bytes": 17673,
+          "sha256": "c10b22a29a88887808418d18c8a139efbde0f90c4d29a96293f1686673afdb4b"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/a-public/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-SPEED-001/a-public/summary.json",
+          "bytes": 5191,
+          "sha256": "dba6a712394221414f3f6a3563430b4fe48e2df503855f256d7cd8af9184881c"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/b-code5/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-SPEED-001/b-code5/summary.json",
+          "bytes": 5929,
+          "sha256": "33977c494f7f7b458e5be3b08e33e31f9ac82622a8d1e13cc034b165bc0f25c0"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/b-utility/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-SPEED-001/b-utility/summary.json",
+          "bytes": 18464,
+          "sha256": "afa86d4d551998dd606b92c32336d5d403e6a11de892e5e43b98b66cad74a6fa"
+        }
+      ]
+    },
+    "QWEN-IQ3-QUALITY-002": {
+      "archived_members": 236,
+      "raw_named_members": 40,
+      "selected": [
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/manifest-sha256.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-QUALITY-002/manifest-sha256.json",
+          "bytes": 83,
+          "sha256": "39d0ba83ab8e081a8c05ad516dce6e999800c0901cecd129e2de9bfebaa3dccf"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/RESULT.md",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-QUALITY-002/RESULT.md",
+          "bytes": 14394,
+          "sha256": "912d07c4acbd19f8e5eee8fb178ddbc1232b3ddec7d187051994bdd08826280e"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/manifest.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-QUALITY-002/manifest.json",
+          "bytes": 84282,
+          "sha256": "bee9f07b13a17f90c144dfaf6bfc5e4a08ae983cc0ecb7faf1d8cea59a81d9a7"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/audit-results.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-QUALITY-002/audit-results.json",
+          "bytes": 102021,
+          "sha256": "04e6b6e1788110bc8f4cefab33037aaeba5369f242478e484ebab41e106ae539"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-QUALITY-002/a/summary.json",
+          "bytes": 25110,
+          "sha256": "0185d6c3883ad111cd30d25c6618892dc3cfb2bb499e3cd7b9787cf625780e16"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/identity.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-QUALITY-002/a/identity.json",
+          "bytes": 7770,
+          "sha256": "406127bf6aa4c5e81dcfd2dce7b81a7fea885d124b27ad646b1cffbe76aa6508"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-QUALITY-002/b/summary.json",
+          "bytes": 26555,
+          "sha256": "3835022fc23fa9a2e3964fb057b98f6ed2beade8ecdd6d4b5cb5c577183182b5"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/identity.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-QUALITY-002/b/identity.json",
+          "bytes": 8102,
+          "sha256": "4c1d56cf60c24d31432fdb36abba2267c9b8804e1bf45649fee4d06d3b85bc4d"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/tokenizer-preflight.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-QUALITY-002/tokenizer-preflight.json",
+          "bytes": 49673,
+          "sha256": "a12f72cde46833f070f487859a24375aabd5cf3be3bde703a8ca2dd05624388e"
+        },
+        {
+          "archive_member": "ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/historical-code-stress-results/summary.json",
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/historical-reports/QWEN-IQ3-QUALITY-002/historical-code-stress-results/summary.json",
+          "bytes": 18443,
+          "sha256": "934f609844c36fe95c4a2c52d971134526f24cd7ee01ee8c3ae1660b6ad074fa"
+        }
+      ]
+    }
+  },
+  "archive": "/home/funboy/StrixHaloClusterGLM/archives/research-node01-20260910.tar.zst",
+  "archive_exists": true,
+  "new_inference_calls": 0,
+  "archive_size": 12139492936
+}

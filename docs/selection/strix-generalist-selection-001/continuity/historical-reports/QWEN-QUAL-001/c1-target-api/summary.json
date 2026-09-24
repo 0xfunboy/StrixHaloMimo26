@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "expected_alias": "qwen-flash-next-q5",
+  "endpoint": "http://127.0.0.1:18090",
+  "cancel_requested": false,
+  "cancel_idle_confirmed": false,
+  "scope": "Final-answer/API smoke only; not TPS or general quality qualification",
+  "answer": {
+    "reasoning": "We need answer user's request: \"Calcola 17 * 23. Rispondi nella risposta finale soltanto con il numero intero, senza spiegazioni.\" Need final only integer. Compute 17*23 = 391. Ensure final only 391.\n",
+    "content": "391",
+    "ttft_reasoning_ms": 1053.5170000221115,
+    "ttft_content_ms": 4594.555486022728,
+    "finish_reason": "stop",
+    "done": true,
+    "closed_early": false,
+    "wall_s": 4.757406359014567
+  }
+}

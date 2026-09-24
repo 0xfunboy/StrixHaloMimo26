@@ -1,0 +1,29 @@
+# Addendum: real target-only and MTP process configurations
+
+Authorization: user continuity integration of 24 September 2026, original selection mandate section 8. This additive record supersedes only the inference that missing per-request MTP controls make the authorized comparison impossible. It does not edit the 74-file source freeze, primary cases, expected values, scoring, sampling, context, original runtime or weights.
+
+Base preparation commit: 87442a8e1b999e5f33165d0b6b563eac5248ab15. Actual original source-index SHA256: 06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604. A separate additive index and preparation receipt bind the new collector wrappers and their tests before any affected output.
+
+## Process order and bounded requests
+
+The primary order remains Q, restore, M, restore, D, restore, O, restore. Q's 32 primary requests retain their original bytes and order in its primary raw file. After all 32 primary requests, including the final six sanity controls, have completed successfully, the still-loaded Q process collects the already specified six greedy MTP OFF references and six provisional OFF timing references into a separate `mtp-off/` tree. These extra records never enter the 12-case quality score or primary 2K/8K engine medians.
+
+The MTP references reuse all six frozen pairs from `mtp-request-plan.json`; no question is selected after viewing an answer. The two performance workloads are fixed now by reusing existing frozen inputs: the Q 2K-class prose benchmark (2111 native tokens) and MTP-REWRITE-1 code (2636 tokens). Each has three cap128 requests. Counts are not forced to2048 by padding or truncation. Each mode has at most12 requests and2304 output tokens: six equivalence cap256 plus six timing cap128, within section8's existing request budget. No extra warmup, sidecar, search, retry, repair, context enlargement or model load is added. Existing55000s work and separate restore limits remain unchanged.
+
+After all four primary profiles have been processed and their own restores are verified, an eligible Q receives at most ONE additional process load, `generalist-selection-001-QMTP-001`. It uses the same binary, target and f16 KV, plus the exact Q5_K frspec65k sidecar, startup `--spec-type draft-mtp --spec-draft-n-max 3 --spec-draft-p-min 0.0`, draft deviceVulkan0/all layers. The target-only process has no -md argument and explicit `--spec-type none`. Payloads never contain speculative.n_max or any other ignored HTTP toggle.
+
+OFF timing references are collected provisionally in the already authorized target load because the process cannot toggle its drafter. They are not admitted as a comparative performance result until the ON equivalence gate succeeds. This ordering adaptation spends no additional requests or loads. If the gate fails, their costs remain visible but no qualified speedup is calculated.
+
+## Gate and recorded state
+
+CPU checks cover byte-preserving inputs, vocabulary mapping already verified, process flags, fake native-response/count/cache cases, refusal of duplicate collection, pair mismatch detection and performance gating. Existing primary tests are not rerun merely for a new chat.
+
+Both processes use existing `LLAMA_TRACE=1` host logging, not a GPU profiler or numerical patch. For target-only this does not create draft work. The ON logs expose native accepted/proposed step counts, including partial acceptance/checkpoint restoration. The collector snapshots Prometheus draft/accepted counters, slot properties, request IDs, native output IDs, stop reasons, timings, actual inputs and cache0. Negative deltas, missing counters or active drafting in OFF fail closed. Returned output comes from the existing native target-authoritative verification path; that source, not a new algorithm, is used.
+
+All six ON equivalence cases are collected once even if a greedy mismatch is observed; technical errors stop the window. Pair PASS requires identical native IDs, text, stop, input and sampling, with verified zero prefill reuse. The performance gate additionally requires real drafting and a logged step with 0<accepted<proposed. If that branch is not observed, the status is INCOMPLETE_STATE_BRANCH_NOT_EXERCISED, no prompt hunting or substitute request. Otherwise three ON repetitions of each preselected performance workload are admitted. SHORT_OUTPUT stays visible and is not replaced. Timings describe this explicit trace-enabled configuration, not peak uninstrumented public performance.
+
+The six-pair greedy comparison is not evidence of sampled-distribution equivalence at temperature1 and does not alter the primary sampled-quality results. No MTP failure is repaired by changing target math, tolerance or parser after output. On exit, stop only this run's worker and restore the saved K2 through the existing controller.
+
+## Source and lifecycle preservation
+
+New files are append-only siblings with a separate hash index: mtp_process_v1.py, adapter_llama_continuity_v1.py, window_guards_continuity_v1.py, window_runner_continuity_v1.py, launch_continuity_v1.py, additive configs/plan/tests and this record. The small Q adapter delta invokes a separate OFF collector after primary collection and postflight; primary raw ordering is unchanged. An extra-collector failure is recorded separately as mtp-off-blocker.json, prevents the additional MTP load and immediately ends that process; it does not rewrite the already completed primary records or their sanity verdicts. Any interruption still reaches the existing supervised cleanup. The original supervisor and ownership/restore design are reused; guard changes admit only the exact two additive run/config mappings. M, D and O still use their original frozen configs and runner. The unchanged original window_cleanup.py remains ExecStopPost for every window. No modifications to DS41 code, release, driver, shared environment, kernel, network, governor or resident unit definitions.

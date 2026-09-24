@@ -1,0 +1,628 @@
+{
+  "schema": "qwen-offline-cross-mode-verdict-v1",
+  "pass": false,
+  "phase": "measure",
+  "candidate": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure",
+  "reference": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure",
+  "metrics_by_category": {
+    "code": {
+      "repeat_status": "PASS",
+      "reference_status": "FAIL",
+      "native_validation_pass": true,
+      "candidate_observed_median_decode_tps": 27.77430750210186,
+      "target_median_decode_tps": 18.68401246421462,
+      "correctness_screened_median_decode_tps": null,
+      "candidate_median_http_wall_s": 9.803363907994935,
+      "target_median_http_wall_s": 14.23392864500056,
+      "candidate_median_http_e2e_tps": 26.11348537120247,
+      "speedup_decode": null,
+      "acceptance": [
+        0.8791208791208791,
+        0.8791208791208791,
+        0.8791208791208791
+      ],
+      "ttft_ms": null,
+      "exact_comparisons": {
+        "code-1": {
+          "status": "FAIL",
+          "first_diff_token_index": 23,
+          "output_text_exact": false
+        },
+        "code-2": {
+          "status": "FAIL",
+          "first_diff_token_index": 23,
+          "output_text_exact": false
+        },
+        "code-3": {
+          "status": "FAIL",
+          "first_diff_token_index": 23,
+          "output_text_exact": false
+        }
+      },
+      "pass": false
+    },
+    "prose": {
+      "repeat_status": "PASS",
+      "reference_status": "FAIL",
+      "native_validation_pass": true,
+      "candidate_observed_median_decode_tps": 22.150774152183462,
+      "target_median_decode_tps": 18.654304788077223,
+      "correctness_screened_median_decode_tps": null,
+      "candidate_median_http_wall_s": 12.101342938985908,
+      "target_median_http_wall_s": 14.234806443011621,
+      "candidate_median_http_e2e_tps": 21.154676905756112,
+      "speedup_decode": null,
+      "acceptance": [
+        0.8176100628930818,
+        0.8176100628930818,
+        0.8176100628930818
+      ],
+      "ttft_ms": null,
+      "exact_comparisons": {
+        "prose-1": {
+          "status": "FAIL",
+          "first_diff_token_index": 61,
+          "output_text_exact": false
+        },
+        "prose-2": {
+          "status": "FAIL",
+          "first_diff_token_index": 61,
+          "output_text_exact": false
+        },
+        "prose-3": {
+          "status": "FAIL",
+          "first_diff_token_index": 61,
+          "output_text_exact": false
+        }
+      },
+      "pass": false
+    }
+  },
+  "errors": [],
+  "attestations": {
+    "candidate": {
+      "saved_live_attestation": "PASS",
+      "memory": {
+        "remote": {
+          "samples": 60,
+          "pid": 1516764,
+          "starttime_ticks": 39646332,
+          "min_mem_available_bytes": 44201250816,
+          "peak_vm_rss_bytes": 623075328,
+          "peak_vm_swap_bytes": 0,
+          "major_fault_delta": 0
+        },
+        "local": {
+          "samples": 60,
+          "pid": 1361650,
+          "starttime_ticks": 17388595,
+          "min_mem_available_bytes": 100596785152,
+          "peak_vm_rss_bytes": 2802356224,
+          "peak_vm_swap_bytes": 0,
+          "major_fault_delta": 8574
+        }
+      },
+      "scope": "Saved before/after controller attestation and telemetry; no retrospective live process query or weight rehash"
+    },
+    "reference": {
+      "saved_live_attestation": "PASS",
+      "memory": {
+        "remote": {
+          "samples": 77,
+          "pid": 1533831,
+          "starttime_ticks": 39712542,
+          "min_mem_available_bytes": 47074656256,
+          "peak_vm_rss_bytes": 619528192,
+          "peak_vm_swap_bytes": 0,
+          "major_fault_delta": 0
+        },
+        "local": {
+          "samples": 77,
+          "pid": 1368913,
+          "starttime_ticks": 17454799,
+          "min_mem_available_bytes": 100957540352,
+          "peak_vm_rss_bytes": 2413420544,
+          "peak_vm_swap_bytes": 0,
+          "major_fault_delta": 7952
+        }
+      },
+      "scope": "Saved before/after controller attestation and telemetry; no retrospective live process query or weight rehash"
+    }
+  },
+  "candidate_recomputed_records": [
+    {
+      "name": "warmup",
+      "category": null,
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 32,
+      "token_ID_count": 32,
+      "decode_tps": 29.49268771620043,
+      "http_wall_s": 1.699499158974504,
+      "http_e2e_tps": 18.829076690634633,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 22,
+        "prompt_ms": 405.855,
+        "prompt_per_token_ms": 18.447954545454547,
+        "prompt_per_second": 54.20655160094122,
+        "predicted_n": 32,
+        "predicted_ms": 1051.108,
+        "predicted_per_token_ms": 33.90670967741935,
+        "predicted_per_second": 29.49268771620043,
+        "draft_n": 24,
+        "draft_n_accepted": 21
+      },
+      "acceptance": 0.875,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": null
+    },
+    {
+      "name": "code-1",
+      "category": "code",
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 256,
+      "token_ID_count": 256,
+      "decode_tps": 25.04540338765108,
+      "http_wall_s": 10.917387580993818,
+      "http_e2e_tps": 23.44883316643194,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 44,
+        "prompt_ms": 585.675,
+        "prompt_per_token_ms": 13.310795454545454,
+        "prompt_per_second": 75.12699022495413,
+        "predicted_n": 256,
+        "predicted_ms": 10181.509,
+        "predicted_per_token_ms": 39.9274862745098,
+        "predicted_per_second": 25.04540338765108,
+        "draft_n": 182,
+        "draft_n_accepted": 160
+      },
+      "acceptance": 0.8791208791208791,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": null
+    },
+    {
+      "name": "code-2",
+      "category": "code",
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 256,
+      "token_ID_count": 256,
+      "decode_tps": 27.77430750210186,
+      "http_wall_s": 9.803363907994935,
+      "http_e2e_tps": 26.11348537120247,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 44,
+        "prompt_ms": 466.663,
+        "prompt_per_token_ms": 10.605977272727273,
+        "prompt_per_second": 94.28645510786157,
+        "predicted_n": 256,
+        "predicted_ms": 9181.147,
+        "predicted_per_token_ms": 36.00449803921569,
+        "predicted_per_second": 27.77430750210186,
+        "draft_n": 182,
+        "draft_n_accepted": 160
+      },
+      "acceptance": 0.8791208791208791,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      }
+    },
+    {
+      "name": "code-3",
+      "category": "code",
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 256,
+      "token_ID_count": 256,
+      "decode_tps": 27.801815142351288,
+      "http_wall_s": 9.646552416990744,
+      "http_e2e_tps": 26.53797843352823,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 44,
+        "prompt_ms": 472.734,
+        "prompt_per_token_ms": 10.743954545454544,
+        "prompt_per_second": 93.07559853955924,
+        "predicted_n": 256,
+        "predicted_ms": 9172.063,
+        "predicted_per_token_ms": 35.968874509803925,
+        "predicted_per_second": 27.801815142351288,
+        "draft_n": 182,
+        "draft_n_accepted": 160
+      },
+      "acceptance": 0.8791208791208791,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      }
+    },
+    {
+      "name": "prose-1",
+      "category": "prose",
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 256,
+      "token_ID_count": 256,
+      "decode_tps": 20.28446133101544,
+      "http_wall_s": 13.09393433202058,
+      "http_e2e_tps": 19.551037412335607,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 521.081,
+        "prompt_per_token_ms": 19.299296296296298,
+        "prompt_per_second": 51.81536075965157,
+        "predicted_n": 256,
+        "predicted_ms": 12571.199,
+        "predicted_per_token_ms": 49.298819607843136,
+        "predicted_per_second": 20.28446133101544,
+        "draft_n": 159,
+        "draft_n_accepted": 130
+      },
+      "acceptance": 0.8176100628930818,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": null
+    },
+    {
+      "name": "prose-2",
+      "category": "prose",
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 256,
+      "token_ID_count": 256,
+      "decode_tps": 22.150774152183462,
+      "http_wall_s": 12.101342938985908,
+      "http_e2e_tps": 21.154676905756112,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 437.418,
+        "prompt_per_token_ms": 16.200666666666667,
+        "prompt_per_second": 61.72585490309041,
+        "predicted_n": 256,
+        "predicted_ms": 11512.013,
+        "predicted_per_token_ms": 45.14514901960785,
+        "predicted_per_second": 22.150774152183462,
+        "draft_n": 159,
+        "draft_n_accepted": 130
+      },
+      "acceptance": 0.8176100628930818,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      }
+    },
+    {
+      "name": "prose-3",
+      "category": "prose",
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 256,
+      "token_ID_count": 256,
+      "decode_tps": 22.169623703240024,
+      "http_wall_s": 11.939345063001383,
+      "http_e2e_tps": 21.44171214159089,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 435.496,
+        "prompt_per_token_ms": 16.12948148148148,
+        "prompt_per_second": 61.99827323327884,
+        "predicted_n": 256,
+        "predicted_ms": 11502.225,
+        "predicted_per_token_ms": 45.106764705882355,
+        "predicted_per_second": 22.169623703240024,
+        "draft_n": 159,
+        "draft_n_accepted": 130
+      },
+      "acceptance": 0.8176100628930818,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      }
+    }
+  ],
+  "reference_recomputed_records": [
+    {
+      "name": "warmup",
+      "category": null,
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 32,
+      "token_ID_count": 32,
+      "decode_tps": 18.020762243363997,
+      "http_wall_s": 2.3367158279870637,
+      "http_e2e_tps": 13.69443370765628,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 22,
+        "prompt_ms": 613.947,
+        "prompt_per_token_ms": 27.90668181818182,
+        "prompt_per_second": 35.83371203051729,
+        "predicted_n": 32,
+        "predicted_ms": 1720.238,
+        "predicted_per_token_ms": 55.49154838709678,
+        "predicted_per_second": 18.020762243363997
+      },
+      "acceptance": null,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": null
+    },
+    {
+      "name": "code-1",
+      "category": "code",
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 256,
+      "token_ID_count": 256,
+      "decode_tps": 17.680511084640422,
+      "http_wall_s": 15.118388213013532,
+      "http_e2e_tps": 16.933021985745913,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 44,
+        "prompt_ms": 549.722,
+        "prompt_per_token_ms": 12.493681818181818,
+        "prompt_per_second": 80.04045681271626,
+        "predicted_n": 256,
+        "predicted_ms": 14422.66,
+        "predicted_per_token_ms": 56.55945098039216,
+        "predicted_per_second": 17.680511084640422
+      },
+      "acceptance": null,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": null
+    },
+    {
+      "name": "code-2",
+      "category": "code",
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 256,
+      "token_ID_count": 256,
+      "decode_tps": 18.68401246421462,
+      "http_wall_s": 14.23392864500056,
+      "http_e2e_tps": 17.985196243759162,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 44,
+        "prompt_ms": 430.374,
+        "prompt_per_token_ms": 9.781227272727273,
+        "prompt_per_second": 102.23665927774447,
+        "predicted_n": 256,
+        "predicted_ms": 13648.032,
+        "predicted_per_token_ms": 53.52169411764706,
+        "predicted_per_second": 18.68401246421462
+      },
+      "acceptance": null,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      }
+    },
+    {
+      "name": "code-3",
+      "category": "code",
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 256,
+      "token_ID_count": 256,
+      "decode_tps": 18.687583471206167,
+      "http_wall_s": 14.135473418980837,
+      "http_e2e_tps": 18.110465239618236,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 44,
+        "prompt_ms": 487.999,
+        "prompt_per_token_ms": 11.090886363636365,
+        "prompt_per_second": 90.16411918876882,
+        "predicted_n": 256,
+        "predicted_ms": 13645.424,
+        "predicted_per_token_ms": 53.51146666666667,
+        "predicted_per_second": 18.687583471206167
+      },
+      "acceptance": null,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      }
+    },
+    {
+      "name": "prose-1",
+      "category": "prose",
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 256,
+      "token_ID_count": 256,
+      "decode_tps": 17.69040582692831,
+      "http_wall_s": 14.89638883099542,
+      "http_e2e_tps": 17.18537310648955,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 479.908,
+        "prompt_per_token_ms": 17.77437037037037,
+        "prompt_per_second": 56.26078331680239,
+        "predicted_n": 256,
+        "predicted_ms": 14414.593,
+        "predicted_per_token_ms": 56.527815686274515,
+        "predicted_per_second": 17.69040582692831
+      },
+      "acceptance": null,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": null
+    },
+    {
+      "name": "prose-2",
+      "category": "prose",
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 256,
+      "token_ID_count": 256,
+      "decode_tps": 18.654304788077223,
+      "http_wall_s": 14.234806443011621,
+      "http_e2e_tps": 17.984087175676322,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 405.703,
+        "prompt_per_token_ms": 15.026037037037035,
+        "prompt_per_second": 66.5511470213432,
+        "predicted_n": 256,
+        "predicted_ms": 13669.767,
+        "predicted_per_token_ms": 53.6069294117647,
+        "predicted_per_second": 18.654304788077223
+      },
+      "acceptance": null,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      }
+    },
+    {
+      "name": "prose-3",
+      "category": "prose",
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 256,
+      "token_ID_count": 256,
+      "decode_tps": 18.736741000339173,
+      "http_wall_s": 14.01982898399001,
+      "http_e2e_tps": 18.25985183502167,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 408.711,
+        "prompt_per_token_ms": 15.137444444444444,
+        "prompt_per_second": 66.06134897274602,
+        "predicted_n": 256,
+        "predicted_ms": 13609.624,
+        "predicted_per_token_ms": 53.37107450980392,
+        "predicted_per_second": 18.736741000339173
+      },
+      "acceptance": null,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      }
+    }
+  ],
+  "reference_receipt": {
+    "directory": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure",
+    "raw_sha256": {
+      "code-1-request.json": "681357f04a90a1d48efe0e22e80c9783703499e7d7c586bea9c4bd6a2ccee870",
+      "code-1-response.json": "d98e8c18aa3adb76722369082457ec54578e6cb684c547597df89d794d413631",
+      "code-1-result.json": "2c7111d8db3e5a7867caf5001fc44c8332d3a4359b96679b335a067ebb8a6638",
+      "code-2-request.json": "681357f04a90a1d48efe0e22e80c9783703499e7d7c586bea9c4bd6a2ccee870",
+      "code-2-response.json": "41c8434f2a7a792d8881aac1755c201d2acfc314a23e56b62ed6ed332ccd49a6",
+      "code-2-result.json": "6e38176fa67465a2eace57e8f3f53b10ec088b864c42dd23890f8d6802a816a9",
+      "code-3-request.json": "681357f04a90a1d48efe0e22e80c9783703499e7d7c586bea9c4bd6a2ccee870",
+      "code-3-response.json": "2e855862901dfc4851d041f8ddcd06d5dbaa83d168892403562ecc4c9d45b1f7",
+      "code-3-result.json": "0dd2c7755d33ae08f1014f026251cc98e2847df0d6d79597ae38234cee15c06e",
+      "prose-1-request.json": "9a2bfc652eeb364d7674fb100baa848ca72b1c34a86249fb17393118ed211b69",
+      "prose-1-response.json": "a0ad33337872bf94d6a788ed53b9d5843cc89f110fff865a538d6c60cb4090f9",
+      "prose-1-result.json": "cbf7a2c6344056c2cfa8d5634854ff0a1e3d2ffb7a5c8300e6920136f0e37e3c",
+      "prose-2-request.json": "9a2bfc652eeb364d7674fb100baa848ca72b1c34a86249fb17393118ed211b69",
+      "prose-2-response.json": "3509732b17268eac84e0c707dfeedb280ed072f40ec2e90acf230792b1afeb06",
+      "prose-2-result.json": "f93128429a1ed19502b9e9409e31aae722846422b0f7c840cf84a66bf590eba1",
+      "prose-3-request.json": "9a2bfc652eeb364d7674fb100baa848ca72b1c34a86249fb17393118ed211b69",
+      "prose-3-response.json": "5e1218bd704c72f591b3a93183a0ead6062b69bad3c3cb4c94ab2786af467a8a",
+      "prose-3-result.json": "bc65751f1f1d7d61bf5e952a8bed67673b8932446914c644e122b5395d5aee83"
+    },
+    "protocol_sha256": "fb86f14e176790aa8d2244ecf667605f051778e71dbd478c476c161f763edea4"
+  },
+  "raw_sha256": {
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/protocol.json": "78c7052456e66404fc0fc32f94e3fae58810e818f6140d689da4312d50e3e9d0",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure-identity.json": "02d72d7a8e679a5e991077dcdb382293fef7461642c5ed26bfe34a3eab990784",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/protocol.json": "fb86f14e176790aa8d2244ecf667605f051778e71dbd478c476c161f763edea4",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure-identity.json": "e483d68db6d7d3fa90b5ca7818fac7a73ae1c9d682a97747e2bddb2c3b6c6814",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/live-attestation.json": "584c5ab5ed6d8260339cc583a43b7bc0ad87f8bbea41a2134f5efa32dc255882",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure-telemetry.jsonl": "fa0df56dd48eef67e464b4e3dc077e95aca403d14adbcaa3fb72c1784023f1d5",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/live-attestation.json": "caf3fd8848c8e10f78185106d13be8ec17876aececc9e63916fa10fe07573a67",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure-telemetry.jsonl": "da00ae8cb69a08334465f28ecef4a8618b9d693ff90c8d9c55ea4a477d43a248",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/warmup-request.json": "cbe55835b5953e522620adf4c7065a6f76bef613be241e83fa4171042fcefe19",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/warmup-response.json": "f6c75920d56405b12e59ea160a990dd9e841ac2d6fed724b3044e9536fb24b9a",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/warmup-result.json": "a4199d1ea3b1475fe6dcc8ddf4cd2452603d7068509fd152e170c6933d713772",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/code-1-request.json": "681357f04a90a1d48efe0e22e80c9783703499e7d7c586bea9c4bd6a2ccee870",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/code-1-response.json": "c490468cf684bfdb17620508496d52ece8f8ce5c932f3cd0e17461baafad1096",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/code-1-result.json": "90da2e352fbc624fb27fe98ade5eeef335d26eea3cddceea7997c5e9518f92c7",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/code-2-request.json": "681357f04a90a1d48efe0e22e80c9783703499e7d7c586bea9c4bd6a2ccee870",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/code-2-response.json": "5b9179307586b1250cf7fcc532aa50671cee395183f4057b57a5e29e013d6256",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/code-2-result.json": "45b2d59136551f17d2c66b2e9b2d8e8efc4a043d5c669d4f990fed659b8560d4",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/code-3-request.json": "681357f04a90a1d48efe0e22e80c9783703499e7d7c586bea9c4bd6a2ccee870",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/code-3-response.json": "22230c4fb6ed32db65a68976fb71c54739c596d005e8c5486d4ce94028967fac",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/code-3-result.json": "cc962559becd49740a8498d1064e37ace62ae0b2989faeccee59cd8b8f9bf446",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/prose-1-request.json": "9a2bfc652eeb364d7674fb100baa848ca72b1c34a86249fb17393118ed211b69",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/prose-1-response.json": "6c6c0addf6906beb42aece4e6ae5b2ace42fa589f7b99ad3aafc0e5c3a17767e",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/prose-1-result.json": "ea5ca878ad810e6f2e2e7efa1b5e6bcfcf8ac51bb9fcb6583b443a230c01ebdc",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/prose-2-request.json": "9a2bfc652eeb364d7674fb100baa848ca72b1c34a86249fb17393118ed211b69",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/prose-2-response.json": "c13400f17dc1095bafa49c6d9253038238b21280200be6b17d33ad606c82a1c4",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/prose-2-result.json": "3182abb1d65ef0d141585a3b8d0af04b20a3685e3659a9e1ca8e4890deea249d",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/prose-3-request.json": "9a2bfc652eeb364d7674fb100baa848ca72b1c34a86249fb17393118ed211b69",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/prose-3-response.json": "ca74d43e1def8406d0bc3678481e0b8dd01950f7d3ff081b2a4eed5026b93fd0",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-mtp-measure/prose-3-result.json": "5837de598f33767e0c268d299f4f2affaab7539c8e4c0277f0393c6f8c3af09f",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/warmup-request.json": "cbe55835b5953e522620adf4c7065a6f76bef613be241e83fa4171042fcefe19",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/warmup-response.json": "a035a3dcda73c0017cff14fccdb3e29246aacf9a3054090f2cd9816d65fc1d07",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/warmup-result.json": "0fd465d50faf8217bc442ee5e512838a7b725ea585f6a65a81e6a57d7f324a60",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/code-1-request.json": "681357f04a90a1d48efe0e22e80c9783703499e7d7c586bea9c4bd6a2ccee870",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/code-1-response.json": "d98e8c18aa3adb76722369082457ec54578e6cb684c547597df89d794d413631",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/code-1-result.json": "2c7111d8db3e5a7867caf5001fc44c8332d3a4359b96679b335a067ebb8a6638",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/code-2-request.json": "681357f04a90a1d48efe0e22e80c9783703499e7d7c586bea9c4bd6a2ccee870",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/code-2-response.json": "41c8434f2a7a792d8881aac1755c201d2acfc314a23e56b62ed6ed332ccd49a6",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/code-2-result.json": "6e38176fa67465a2eace57e8f3f53b10ec088b864c42dd23890f8d6802a816a9",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/code-3-request.json": "681357f04a90a1d48efe0e22e80c9783703499e7d7c586bea9c4bd6a2ccee870",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/code-3-response.json": "2e855862901dfc4851d041f8ddcd06d5dbaa83d168892403562ecc4c9d45b1f7",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/code-3-result.json": "0dd2c7755d33ae08f1014f026251cc98e2847df0d6d79597ae38234cee15c06e",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/prose-1-request.json": "9a2bfc652eeb364d7674fb100baa848ca72b1c34a86249fb17393118ed211b69",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/prose-1-response.json": "a0ad33337872bf94d6a788ed53b9d5843cc89f110fff865a538d6c60cb4090f9",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/prose-1-result.json": "cbf7a2c6344056c2cfa8d5634854ff0a1e3d2ffb7a5c8300e6920136f0e37e3c",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/prose-2-request.json": "9a2bfc652eeb364d7674fb100baa848ca72b1c34a86249fb17393118ed211b69",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/prose-2-response.json": "3509732b17268eac84e0c707dfeedb280ed072f40ec2e90acf230792b1afeb06",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/prose-2-result.json": "f93128429a1ed19502b9e9409e31aae722846422b0f7c840cf84a66bf590eba1",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/prose-3-request.json": "9a2bfc652eeb364d7674fb100baa848ca72b1c34a86249fb17393118ed211b69",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/prose-3-response.json": "5e1218bd704c72f591b3a93183a0ead6062b69bad3c3cb4c94ab2786af467a8a",
+    "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c1-target-measure/prose-3-result.json": "bc65751f1f1d7d61bf5e952a8bed67673b8932446914c644e122b5395d5aee83"
+  },
+  "historical_summaries_modified": false,
+  "http_requests": 0,
+  "qualification": "BOUNDED_EXACT_NATIVE_SCREENING_ONLY",
+  "api_smoke": "SEPARATE_REQUIRED",
+  "full_logits_correctness": "NOT_EVALUATED",
+  "quality_equivalence": "NOT_ESTABLISHED"
+}

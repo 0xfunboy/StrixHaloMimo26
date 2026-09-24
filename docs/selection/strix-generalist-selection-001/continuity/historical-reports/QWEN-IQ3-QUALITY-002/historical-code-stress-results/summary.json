@@ -1,0 +1,457 @@
+{
+  "schema": "historical-code-stress-result-v1",
+  "scope": "Retrospective SPEED001 thinking-OFF programs, NOT QUALITY002 xhigh tasks or new generations",
+  "source_sha256": "c2dc9047ae56df620954386e8d03e32d12ee1761cab35494d3a3282249464e67",
+  "freeze_sha256": "7a488ad435e8a9e5dfd2568f48bbfab9bb2417c907d2820741ff51b904362670",
+  "new_model_requests": 0,
+  "new_model_tps": null,
+  "rows": [
+    {
+      "mode": "a",
+      "id": "balanced",
+      "source_raw": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/a-utility/balanced-raw.json",
+      "raw_sha256": "3d52c3a22f4e141ee3eae8de67e72cb70732fcd5eca746752ea446d7110c6c13",
+      "code_sha256": "9b0e124857fd1ab5458e886eff0a6bcb11f10530c046160ff88be8f7ab983cd3",
+      "held_test_sha256": "deef02ce0efd6f7a180acec0ac3ab4c2a89a1989511ddff4138fe47ea19a6b5c",
+      "historical_completion_tokens": 98,
+      "result": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LXzYwZDgwODg0MWY5ZDRmYzM4MTE3NjI4ZGMxMDE3OWRjCg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      },
+      "new_model_requests": 0
+    },
+    {
+      "mode": "a",
+      "id": "rle",
+      "source_raw": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/a-utility/rle-raw.json",
+      "raw_sha256": "69f9214a2e6d699c63ba62f1df304cc5389394be7098f3e512bdd74d93f5da7a",
+      "code_sha256": "115e6e1a457536627b79bd2861c986c346ba3bbeea4073b157c149f7f11ca024",
+      "held_test_sha256": "d2363d9be1d31936a7c03b743335f649b1c205980d1c4f24ecca519ea489fde1",
+      "historical_completion_tokens": 106,
+      "result": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LX2RmMzJkMDA4YTU0NjQwODk4YjQ3OWI4ZDJlOWNiMGQ3Cg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      },
+      "new_model_requests": 0
+    },
+    {
+      "mode": "a",
+      "id": "merge_intervals",
+      "source_raw": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/a-utility/merge_intervals-raw.json",
+      "raw_sha256": "5b31b4efc57446d4e8314cc048ff295da0b99bec01973dc270d48201e218f6f6",
+      "code_sha256": "2c8e7defc82f22292e6089d4380aad988a513cbf666d1184205e38e0627d8277",
+      "held_test_sha256": "9b7e094e00218954313482cd701c26a1987c5d76465bd9c404bc04ad97630efd",
+      "historical_completion_tokens": 142,
+      "result": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LXzVjNjVlYmRhMDE3MDRiM2JiMDlhNDYwMmZkMWY1ZjIzCg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      },
+      "new_model_requests": 0
+    },
+    {
+      "mode": "a",
+      "id": "lru",
+      "source_raw": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/a-utility/lru-raw.json",
+      "raw_sha256": "555bee2647a9543c24b73a952b3ef732e8fcfef3d1e67a55be6930a869e3b6ee",
+      "code_sha256": "48cbf283e42290310aff29c9ee473d7acf7d0eb84a263a264db248f5452dab6e",
+      "held_test_sha256": "ec81e0bb205b876fa9ac2e94074e18b160dcbd4b8a22e3f627b0c7599cb35fcc",
+      "historical_completion_tokens": 223,
+      "result": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LX2QyNDQwYTZjZGEzNjQ2ODY4YjFhM2RjOGQ5MzQwMDA3Cg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      },
+      "new_model_requests": 0
+    },
+    {
+      "mode": "a",
+      "id": "csv_sum",
+      "source_raw": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/a-utility/csv_sum-raw.json",
+      "raw_sha256": "963edf170cf9fad5950609d4e5752968dc3add4024e4284acbd6c829c4a6d015",
+      "code_sha256": "a86d9bd1df7e05546f81e7fa369ec73fb8054817b6a1cc499cbde5dea22fba0f",
+      "held_test_sha256": "337389a228d183510056e88cda15314d8b3a54bef0bca34463b2bac5d06e6ac6",
+      "historical_completion_tokens": 84,
+      "result": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LX2JiOTBjNjNjZWJlZjRhMjg4NTQxYWZiZmU5MGEyMjQzCg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      },
+      "new_model_requests": 0
+    },
+    {
+      "mode": "a",
+      "id": "regex_ip",
+      "source_raw": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/a-utility/regex_ip-raw.json",
+      "raw_sha256": "a81302c7e68b250dae4c8d02b6ae35e9b6beb475782abbddf1758430666abea9",
+      "code_sha256": "7b8c6c2fe934637162a78bb25048936ca0e147dc19055840e2b17337a63857f5",
+      "held_test_sha256": "9b6a5cfb9da875bff70d08c772d5062932cd739c35416410422cf19b03c5207e",
+      "historical_completion_tokens": 125,
+      "result": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LX2FiYTNlY2IzMmE4ODQ4ODI4OGQ3MGJjMDhlMWVhYmFkCg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      },
+      "new_model_requests": 0
+    },
+    {
+      "mode": "a",
+      "id": "fib_arith",
+      "source_raw": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/a-utility/fib_arith-raw.json",
+      "raw_sha256": "3f66aae64a7628e9771f313110595498ab4c8d43260be54dc07091988564d10b",
+      "code_sha256": "c4d73192ecc15dd5b3fa5bf9faa878170064f8a64ad129e48c7ea80ee4da0f99",
+      "held_test_sha256": "ce1bf04e239b7f887388978da9619081434b22d1b70ea37505cfbc8fa8b6c50a",
+      "historical_completion_tokens": 94,
+      "result": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LX2MwNTA5ZDk4NDViYTQzOGNiMGUxOTljMGRkNWNiYmRjCg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      },
+      "new_model_requests": 0
+    },
+    {
+      "mode": "a",
+      "id": "topo",
+      "source_raw": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/a-utility/topo-raw.json",
+      "raw_sha256": "ec68fe1497097de5db4269bc1aa8d440e7480f22c15ae71c763faf04f86ad957",
+      "code_sha256": "418473632a9d2a2352252ce5e2047100308fc6296814d73b90a52e3d48d25e1a",
+      "held_test_sha256": "41fb9e776f146fa9b8824266a69a7bd2dce782131be26a34fa63b8eae5013b87",
+      "historical_completion_tokens": 200,
+      "result": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LXzU3NWNjNDVkNThhMjQyYWM4MDNlM2ViODljOTUyOTg3Cg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      },
+      "new_model_requests": 0
+    },
+    {
+      "mode": "b",
+      "id": "balanced",
+      "source_raw": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/b-utility/balanced-raw.json",
+      "raw_sha256": "66f56243c2c379ce3785e72108371a4d07e2ceab6e4705601d3a85eccb58e054",
+      "code_sha256": "9b0e124857fd1ab5458e886eff0a6bcb11f10530c046160ff88be8f7ab983cd3",
+      "held_test_sha256": "deef02ce0efd6f7a180acec0ac3ab4c2a89a1989511ddff4138fe47ea19a6b5c",
+      "historical_completion_tokens": 98,
+      "result": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LXzI0YzI0ZjMzMTY0YjQwYTlhYjU2MmI3MzA4ZDlhZDZhCg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      },
+      "new_model_requests": 0
+    },
+    {
+      "mode": "b",
+      "id": "rle",
+      "source_raw": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/b-utility/rle-raw.json",
+      "raw_sha256": "81e2f3cf2784417dc32784b197b6e0144ecfe4adfc4d844db57153444f75b2d7",
+      "code_sha256": "115e6e1a457536627b79bd2861c986c346ba3bbeea4073b157c149f7f11ca024",
+      "held_test_sha256": "d2363d9be1d31936a7c03b743335f649b1c205980d1c4f24ecca519ea489fde1",
+      "historical_completion_tokens": 106,
+      "result": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LX2ZmZTY3YzU4ODFhMTQxMzU5ZWExZmE3YjBjNjkwOGZkCg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      },
+      "new_model_requests": 0
+    },
+    {
+      "mode": "b",
+      "id": "merge_intervals",
+      "source_raw": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/b-utility/merge_intervals-raw.json",
+      "raw_sha256": "b2997a9fd58cdb6c4d6e51bfd9e8a42ff612be9395fbaa94f189d0bb79908675",
+      "code_sha256": "2c8e7defc82f22292e6089d4380aad988a513cbf666d1184205e38e0627d8277",
+      "held_test_sha256": "9b7e094e00218954313482cd701c26a1987c5d76465bd9c404bc04ad97630efd",
+      "historical_completion_tokens": 142,
+      "result": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LXzBjODA1YzgxZWI1ZTQ1ZmViNjNkNGU1ZDc2NzBjODg2Cg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      },
+      "new_model_requests": 0
+    },
+    {
+      "mode": "b",
+      "id": "lru",
+      "source_raw": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/b-utility/lru-raw.json",
+      "raw_sha256": "59702c9301881537357b814e0c169b7858273f9585118a90a10446b4cb3afbbb",
+      "code_sha256": "b738718493dbc5b79eb3c628ef489858bd1917d5d72f6f56f79a17c5833056e2",
+      "held_test_sha256": "ec81e0bb205b876fa9ac2e94074e18b160dcbd4b8a22e3f627b0c7599cb35fcc",
+      "historical_completion_tokens": 223,
+      "result": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LX2NhNTI3MGVjMTBlYzRlNjk5OGYxNTIwNTg3MTRjOTA0Cg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      },
+      "new_model_requests": 0
+    },
+    {
+      "mode": "b",
+      "id": "csv_sum",
+      "source_raw": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/b-utility/csv_sum-raw.json",
+      "raw_sha256": "47183f49f9eca0a91282f452ba2b051151adb96b5e58ce4e1c1778f073ed5457",
+      "code_sha256": "4996f3cc8b6a8f0311577abaa7ae905a62b14d63d01e9abc08bd37a69d13d38b",
+      "held_test_sha256": "337389a228d183510056e88cda15314d8b3a54bef0bca34463b2bac5d06e6ac6",
+      "historical_completion_tokens": 93,
+      "result": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LX2Y4YjNiNzhjMmEzNTRjNmM5ZWNkNTZlNDAwOTZhMjRhCg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      },
+      "new_model_requests": 0
+    },
+    {
+      "mode": "b",
+      "id": "regex_ip",
+      "source_raw": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/b-utility/regex_ip-raw.json",
+      "raw_sha256": "2f20d8d105e6ee8bf24257703c91c550a445219c6c92f72ec78f2bdba0af55f4",
+      "code_sha256": "a91a7fa3455db03c991b73163f51dcd4b6c64b0a38e5b90ba677d611de2b576a",
+      "held_test_sha256": "9b6a5cfb9da875bff70d08c772d5062932cd739c35416410422cf19b03c5207e",
+      "historical_completion_tokens": 146,
+      "result": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LX2VkMDZiYzg5NGYwYTQyYjY5NDZlZDA3OTM1MzVkOTEyCg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      },
+      "new_model_requests": 0
+    },
+    {
+      "mode": "b",
+      "id": "fib_arith",
+      "source_raw": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/b-utility/fib_arith-raw.json",
+      "raw_sha256": "a2bd6920d9005d4fd7e591ad623061b869dcedcad32cbd3934d52dd7ced74294",
+      "code_sha256": "c4d73192ecc15dd5b3fa5bf9faa878170064f8a64ad129e48c7ea80ee4da0f99",
+      "held_test_sha256": "ce1bf04e239b7f887388978da9619081434b22d1b70ea37505cfbc8fa8b6c50a",
+      "historical_completion_tokens": 94,
+      "result": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LXzdkNWRmMzcyOGJiNDQ0MGNiN2VlMDI1ZTA5NTFjNTFhCg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      },
+      "new_model_requests": 0
+    },
+    {
+      "mode": "b",
+      "id": "topo",
+      "source_raw": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/b-utility/topo-raw.json",
+      "raw_sha256": "30f799d6e918c8f14ca732e949c7e7b1b828bb50ebcbfbdd0d376c2d0b95c3c1",
+      "code_sha256": "a6009d971a9f9a58c064663b665db50437f9342328485d4adec14aabce12655f",
+      "held_test_sha256": "41fb9e776f146fa9b8824266a69a7bd2dce782131be26a34fa63b8eae5013b87",
+      "historical_completion_tokens": 211,
+      "result": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LXzhlODU2YjE3OTFjMDQwZGI5Y2IzMmQ2NmJmYmRmNjUzCg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      },
+      "new_model_requests": 0
+    }
+  ],
+  "counts": {
+    "a": {
+      "PASS": 8,
+      "FAIL": 0,
+      "TIMEOUT": 0,
+      "BLOCKED_SANDBOX": 0
+    },
+    "b": {
+      "PASS": 8,
+      "FAIL": 0,
+      "TIMEOUT": 0,
+      "BLOCKED_SANDBOX": 0
+    }
+  },
+  "finished_utc": "2026-09-06T16:12:54.001203+00:00"
+}

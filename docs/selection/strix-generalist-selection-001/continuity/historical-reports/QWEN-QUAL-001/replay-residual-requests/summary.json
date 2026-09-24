@@ -1,0 +1,61 @@
+{
+  "schema": "qwen-c2-residual-replay-probe-v1",
+  "qualification": "NON_PROMOTED",
+  "performance_status": "NOT_MEASURED_DIAGNOSTIC",
+  "performance_eligible": false,
+  "decode_tps": null,
+  "ttft_ms": null,
+  "warmup_requests": 0,
+  "max_completion_requests": 2,
+  "no_retry": true,
+  "auto_cleanup": false,
+  "records": [
+    {
+      "name": "code-1",
+      "native_valid": true,
+      "native_errors": [],
+      "target_comparison": {
+        "status": "FAIL",
+        "first_diff_token_index": 146,
+        "output_is_exact_historical_text_prefix": false,
+        "compared_token_count": 160
+      },
+      "old_mtp_prefix_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_is_exact_historical_text_prefix": true,
+        "compared_token_count": 160
+      },
+      "first_sample_exact": true,
+      "historical_divergence146_reproduced": true,
+      "performance_eligible": false
+    },
+    {
+      "name": "code-2",
+      "native_valid": true,
+      "native_errors": [],
+      "target_comparison": {
+        "status": "FAIL",
+        "first_diff_token_index": 146,
+        "output_is_exact_historical_text_prefix": false,
+        "compared_token_count": 160
+      },
+      "old_mtp_prefix_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_is_exact_historical_text_prefix": true,
+        "compared_token_count": 160
+      },
+      "first_sample_exact": true,
+      "historical_divergence146_reproduced": true,
+      "performance_eligible": false
+    }
+  ],
+  "errors": [],
+  "native_ladder_and_observer": "SEPARATE_ANALYSIS_REQUIRED",
+  "case": "c2-residual",
+  "requested_output_tokens": 160,
+  "completion_requests_attempted": 2,
+  "transport_native_complete": true,
+  "unselected_historical_link_pass": true
+}

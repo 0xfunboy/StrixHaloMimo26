@@ -1,0 +1,39 @@
+--- adapter_llama.py
++++ adapter_llama_continuity_v1.py
+@@ -9,6 +9,7 @@
+ import urllib.request
+ from common import atomic,base_record,begin_request,completion_state,error_record,now,persist_result,read_jsonl,sha,snapshot,split_reasoning,verify_freeze
+ from validate import sanity_verdict
++from mtp_process_v1 import verify_addendum, collect_off
+ 
+ 
+ def http(base,path,payload=None,timeout=10):
+@@ -21,6 +22,7 @@
+ def main():
+     root=Path(os.environ['GS_ROOT']).resolve();run=Path(os.environ['GS_RUN_DIR']);profile=os.environ['GS_PROFILE']
+     if profile not in ('Q','M'):raise ValueError('invalid llama profile')
++    verify_addendum(root)
+     frozen=verify_freeze(root);manifest=json.loads((root/'source-manifest.json').read_text());cfg=manifest['profiles'][profile]
+     assert sha(cfg['binary']['path'])==cfg['binary']['sha256'],'BINARY_PIN_MISMATCH'
+     for path,value in cfg['library_hashes'].items():assert sha(path)==value,'LIBRARY_PIN_MISMATCH:'+path
+@@ -42,7 +44,7 @@
+     signal.signal(signal.SIGTERM,interrupted);signal.signal(signal.SIGINT,interrupted)
+     sanity={'preflight':[],'postflight':[]};completed=[]
+     try:
+-        log=(run/'server.log').open('x');proc=subprocess.Popen(cfg['command'],stdout=log,stderr=subprocess.STDOUT)
++        log=(run/'server.log').open('x');proc=subprocess.Popen(cfg['command'],stdout=log,stderr=subprocess.STDOUT,env={**os.environ,'LLAMA_TRACE':'1'})
+         deadline=time.monotonic()+cfg['load_timeout_s']
+         while time.monotonic()<deadline:
+             if proc.poll() is not None:raise RuntimeError('SERVER_EXIT_DURING_LOAD:'+str(proc.returncode))
+@@ -117,6 +119,11 @@
+         quality='PASS' if all(x['status']=='PASS' for x in sanity['postflight']) and len(sanity['postflight'])==6 else 'FAIL'
+         atomic(run/'quality.json',{'status':quality,'preflight':sanity['preflight'],'postflight':sanity['postflight'],'note':'Sanity/collection status, not task correctness'})
+         atomic(run/'arm-result.json',{'profile':profile,'run_id':run.name,'source_freeze':frozen,'requests':completed,'sanity':sanity,'status':'COMPLETE','at':now()})
++        if profile=='Q' and quality=='PASS':
++            phase='mtp_off_after_primary_complete'
++            try:collect_off(root,run,base,cfg,proc)
++            except Exception as exc:
++                atomic(run/'mtp-off-blocker.json',{'status':'BLOCKED','phase':phase,'error':type(exc).__name__+':'+str(exc),'primary_records_preserved':len(completed),'at':now()})
+         return 0 if quality=='PASS' else 45
+     except Exception as exc:
+         atomic(run/'fatal.json',{'phase':phase,'status':'TECHNICAL_ERROR','error':type(exc).__name__+':'+str(exc),'at':now()});raise

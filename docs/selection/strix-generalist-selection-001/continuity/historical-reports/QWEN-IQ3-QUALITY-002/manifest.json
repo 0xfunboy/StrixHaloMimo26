@@ -1,0 +1,626 @@
+{
+  "schema": "qwen-iq3-functional-manifest-v1",
+  "campaign": "QWEN-IQ3-QUALITY-002",
+  "frozen_utc": "2026-09-06T14:46:52.132192+00:00",
+  "tasks": [
+    {
+      "id": "ttl_lru_state",
+      "kind": "executable-code",
+      "prompt": "Implement TTLCache(capacity), with put(key,value,ttl,now) and get(key,now,default=None). Capacity is a nonnegative integer (negative raises ValueError); keys are hashable. Times/ttls are finite numbers and operation times are nondecreasing. A put expires at now+ttl; expiration is inclusive: expires<=now is absent. Remove all expired entries before any operation. get of a live key and put/update make it most recently used. Evict least recently used live keys until within capacity. ttl<=0 removes that key, without evicting other keys. Capacity zero stores nothing. get misses return default; put returns None. Return only self-contained Python 3 code using the standard library; no input/output.",
+      "reference": "from collections import OrderedDict\nclass TTLCache:\n    def __init__(self, capacity):\n        if capacity < 0: raise ValueError('capacity')\n        self.capacity = capacity\n        self.data = OrderedDict()\n    def purge(self, now):\n        for key in list(self.data):\n            if self.data[key][1] <= now: del self.data[key]\n    def put(self, key, value, ttl, now):\n        self.purge(now)\n        self.data.pop(key, None)\n        if ttl <= 0 or self.capacity == 0: return\n        self.data[key] = (value, now + ttl)\n        while len(self.data) > self.capacity: self.data.popitem(last=False)\n    def get(self, key, now, default=None):\n        self.purge(now)\n        if key not in self.data: return default\n        self.data.move_to_end(key)\n        return self.data[key][0]\n",
+      "test": "try: TTLCache(-1); raise AssertionError('negative capacity')\nexcept ValueError: pass\nc=TTLCache(2); c.put('a',1,20,0); c.put('b',2,2,0)\nc.put('c',3,20,2); assert c.get('a',2)==1 and c.get('b',2,'X')=='X'\nc.put('d',4,20,2); assert c.get('c',2) is None and c.get('a',2)==1\nc.put('a',8,0,2); assert c.get('a',2) is None and c.get('d',2)==4\nz=TTLCache(0); z.put('x',1,10,0); assert z.get('x',0)==None\nimport random\nr=random.Random(701)\nfor cap in range(4):\n    c=TTLCache(cap); state={}; stamp=0\n    for now in range(180):\n        state={k:v for k,v in state.items() if v[1]>now}\n        key=r.randrange(6)\n        if r.randrange(3):\n            ttl=r.randrange(-1,7); value=r.randrange(100)\n            c.put(key,value,ttl,now); state.pop(key,None)\n            if ttl>0 and cap:\n                stamp+=1; state[key]=(value,now+ttl,stamp)\n                while len(state)>cap: del state[min(state,key=lambda k:state[k][2])]\n        else:\n            want=state.get(key,('missing',))[0]\n            assert c.get(key,now,'missing')==want\n            if key in state:\n                stamp+=1; v,e,_=state[key]; state[key]=(v,e,stamp)\n",
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Implement TTLCache(capacity), with put(key,value,ttl,now) and get(key,now,default=None). Capacity is a nonnegative integer (negative raises ValueError); keys are hashable. Times/ttls are finite numbers and operation times are nondecreasing. A put expires at now+ttl; expiration is inclusive: expires<=now is absent. Remove all expired entries before any operation. get of a live key and put/update make it most recently used. Evict least recently used live keys until within capacity. ttl<=0 removes that key, without evicting other keys. Capacity zero stores nothing. get misses return default; put returns None. Return only self-contained Python 3 code using the standard library; no input/output."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "slot_constraint_schedule",
+      "kind": "reasoning",
+      "prompt": "Six one-slot maintenance jobs A, B, C, D, E, F must occupy slots 1 through 6, one distinct job per slot, with no empty slot. The following constraints all hold: B is earlier than A. C is immediately after A. D is later than both B and C. E is in slot 4. F is neither the first nor the last job. Determine the complete feasible order. The JSON keys are order (the six job labels in slot order), slot_F (its one-based slot), and feasible_orders (the number of orders satisfying every constraint). Return only the final JSON object with exactly the requested keys. Use JSON integers for all numerical values, never floats. Do not put explanations or Markdown around the final JSON.",
+      "expected": {
+        "order": [
+          "B",
+          "A",
+          "C",
+          "E",
+          "F",
+          "D"
+        ],
+        "slot_F": 5,
+        "feasible_orders": 1
+      },
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Six one-slot maintenance jobs A, B, C, D, E, F must occupy slots 1 through 6, one distinct job per slot, with no empty slot. The following constraints all hold: B is earlier than A. C is immediately after A. D is later than both B and C. E is in slot 4. F is neither the first nor the last job. Determine the complete feasible order. The JSON keys are order (the six job labels in slot order), slot_F (its one-based slot), and feasible_orders (the number of orders satisfying every constraint). Return only the final JSON object with exactly the requested keys. Use JSON integers for all numerical values, never floats. Do not put explanations or Markdown around the final JSON."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "subtract_half_open",
+      "kind": "executable-code",
+      "prompt": "Implement subtract_ranges(bounds, blocked). bounds=(lo,hi), lo<=hi, and blocked is a list of integer pairs (a,b), a<=b, representing half-open intervals. Return sorted maximal nonempty half-open tuples covering exactly [lo,hi) minus the union of blocked. Clip outside ranges, ignore zero-length ranges, combine overlapping or touching blocked intervals. Do not mutate inputs. Return only self-contained Python 3 code using the standard library; no input/output.",
+      "reference": "def subtract_ranges(bounds, blocked):\n    lo, hi = bounds\n    cursor = lo\n    result = []\n    for a,b in sorted(blocked):\n        a,b = max(a,lo),min(b,hi)\n        if a >= b: continue\n        if a > cursor: result.append((cursor,a))\n        cursor = max(cursor,b)\n    if cursor < hi: result.append((cursor,hi))\n    return result\n",
+      "test": "assert subtract_ranges((0,10),[(2,5),(4,7),(7,9)])==[(0,2),(9,10)]\nassert subtract_ranges((2,2),[(-4,8)])==[]\nassert subtract_ranges((0,10),[(3,3)])==[(0,10)]\nassert subtract_ranges((0,10),[(-9,-2),(12,20)])==[(0,10)]\nimport random\nr=random.Random(702)\nfor _ in range(160):\n    lo=r.randrange(-5,4); hi=lo+r.randrange(12)\n    blocked=[tuple(sorted((r.randrange(-9,16),r.randrange(-9,16)))) for _ in range(r.randrange(9))]\n    saved=list(blocked); got=subtract_ranges((lo,hi),blocked)\n    available=[x for x in range(lo,hi) if not any(a<=x<b for a,b in blocked)]\n    want=[]\n    for x in available:\n        if want and want[-1][1]==x: want[-1]=(want[-1][0],x+1)\n        else: want.append((x,x+1))\n    assert got==want and blocked==saved\n",
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Implement subtract_ranges(bounds, blocked). bounds=(lo,hi), lo<=hi, and blocked is a list of integer pairs (a,b), a<=b, representing half-open intervals. Return sorted maximal nonempty half-open tuples covering exactly [lo,hi) minus the union of blocked. Clip outside ranges, ignore zero-length ranges, combine overlapping or touching blocked intervals. Do not mutate inputs. Return only self-contained Python 3 code using the standard library; no input/output."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "conditional_urn_fraction",
+      "kind": "reasoning",
+      "prompt": "An urn contains nine distinct balls: red R1,R2,R3,R4; blue B1,B2,B3; green G1,G2. Draw three balls uniformly without replacement. You are told that the draw contains at least one red ball and at least one blue ball. Given that information, find the probability that it contains exactly one green ball. Count unordered three-ball subsets; all such subsets are equally likely. Return eligible_sets (the number meeting the given information), favorable_sets (those also having exactly one green), and numerator and denominator of the reduced conditional probability. Return only the final JSON object with exactly the requested keys. Use JSON integers for all numerical values, never floats. Do not put explanations or Markdown around the final JSON.",
+      "expected": {
+        "eligible_sets": 54,
+        "favorable_sets": 24,
+        "numerator": 4,
+        "denominator": 9
+      },
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "An urn contains nine distinct balls: red R1,R2,R3,R4; blue B1,B2,B3; green G1,G2. Draw three balls uniformly without replacement. You are told that the draw contains at least one red ball and at least one blue ball. Given that information, find the probability that it contains exactly one green ball. Count unordered three-ball subsets; all such subsets are equally likely. Return eligible_sets (the number meeting the given information), favorable_sets (those also having exactly one green), and numerator and denominator of the reduced conditional probability. Return only the final JSON object with exactly the requested keys. Use JSON integers for all numerical values, never floats. Do not put explanations or Markdown around the final JSON."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "negative_path_cost",
+      "kind": "executable-code",
+      "prompt": "Implement shortest_cost(n,edges,src,dst) for a directed graph of vertices 0..n-1 and (u,v,integer_weight) edges, including negative weights and duplicate edges. Weights are exact Python integers and may exceed the finite float range. Return the minimum walk cost, or None if dst is unreachable. Raise ValueError exactly when a negative cycle is reachable from src AND can reach dst (cost is unbounded below). Irrelevant/disconnected negative cycles must not cause errors. Vertices are valid and n>=1. Do not mutate edges. Return only self-contained Python 3 code using the standard library; no input/output.",
+      "reference": "def shortest_cost(n, edges, src, dst):\n    d=[float('inf')]*n; d[src]=0\n    for _ in range(n-1):\n        changed=False\n        for u,v,w in edges:\n            if d[u]!=float('inf') and d[u]+w < d[v]: d[v]=d[u]+w; changed=True\n        if not changed: break\n    bad={v for u,v,w in edges if d[u]!=float('inf') and d[u]+w < d[v]}\n    for _ in range(n):\n        bad.update(v for u,v,w in edges if u in bad)\n    if dst in bad: raise ValueError('unbounded')\n    return None if d[dst]==float('inf') else d[dst]\n",
+      "test": "assert shortest_cost(3,[(0,1,1),(0,2,4),(2,1,-7)],0,1)==-3\nassert shortest_cost(4,[(0,1,3),(0,2,1),(2,2,-1)],0,1)==3\nassert shortest_cost(3,[(1,1,-1)],0,2) is None\nassert shortest_cost(3,[(1,2,10**400)],0,2) is None\nassert shortest_cost(2,[(0,1,10**400)],0,1)==10**400\nassert shortest_cost(1,[],0,0)==0\nfor n,e,s,t in [(1,[(0,0,-1)],0,0),(4,[(0,1,0),(1,2,-2),(2,1,1),(2,3,5)],0,3)]:\n    try: shortest_cost(n,e,s,t); raise AssertionError('missed cycle')\n    except ValueError: pass\nimport random\nr=random.Random(703)\nfor n in range(2,10):\n    for _ in range(15):\n        edges=[(u,v,r.randrange(-8,9)) for u in range(n) for v in range(u+1,n) if r.randrange(3)==0]\n        d=[None]*n; d[0]=0\n        for u in range(n):\n            if d[u] is not None:\n                for a,b,w in edges:\n                    if a==u and (d[b] is None or d[u]+w<d[b]): d[b]=d[u]+w\n        r.shuffle(edges); saved=list(edges)\n        assert shortest_cost(n,edges,0,n-1)==d[-1] and edges==saved\n",
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Implement shortest_cost(n,edges,src,dst) for a directed graph of vertices 0..n-1 and (u,v,integer_weight) edges, including negative weights and duplicate edges. Weights are exact Python integers and may exceed the finite float range. Return the minimum walk cost, or None if dst is unreachable. Raise ValueError exactly when a negative cycle is reachable from src AND can reach dst (cost is unbounded below). Irrelevant/disconnected negative cycles must not cause errors. Vertices are valid and n>=1. Do not mutate edges. Return only self-contained Python 3 code using the standard library; no input/output."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "settlement_largest_remainder",
+      "kind": "reasoning",
+      "prompt": "An escrow holds exactly 10003 cents to allocate to accounts A,B,C with weights 7,5,4. First compute each exact proportional share, floor each to whole cents, then distribute the leftover cents one at a time to the largest fractional remainders; break remainder ties alphabetically. Next A refunds nothing, B refunds one quarter of its integer allocation, and C refunds one sixth of its integer allocation. Round each refund independently to cents, nearest with exact halves rounded UP. Finally charge each account a fee of exactly 2.5 percent of its allocation minus its rounded refund; round each fee independently with the same rule. All refunds and fees leave these accounts; there are no other transfers. Return allocations (an object A,B,C), refund_total, fee_total, and final_balances (an object A,B,C), all amounts in cents. Return only the final JSON object with exactly the requested keys. Use JSON integers for all numerical values, never floats. Do not put explanations or Markdown around the final JSON.",
+      "expected": {
+        "allocations": {
+          "A": 4376,
+          "B": 3126,
+          "C": 2501
+        },
+        "refund_total": 1199,
+        "fee_total": 220,
+        "final_balances": {
+          "A": 4267,
+          "B": 2285,
+          "C": 2032
+        }
+      },
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "An escrow holds exactly 10003 cents to allocate to accounts A,B,C with weights 7,5,4. First compute each exact proportional share, floor each to whole cents, then distribute the leftover cents one at a time to the largest fractional remainders; break remainder ties alphabetically. Next A refunds nothing, B refunds one quarter of its integer allocation, and C refunds one sixth of its integer allocation. Round each refund independently to cents, nearest with exact halves rounded UP. Finally charge each account a fee of exactly 2.5 percent of its allocation minus its rounded refund; round each fee independently with the same rule. All refunds and fees leave these accounts; there are no other transfers. Return allocations (an object A,B,C), refund_total, fee_total, and final_balances (an object A,B,C), all amounts in cents. Return only the final JSON object with exactly the requested keys. Use JSON integers for all numerical values, never floats. Do not put explanations or Markdown around the final JSON."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "escaped_pairs_parser",
+      "kind": "executable-code",
+      "prompt": "Implement parse_pairs(text) returning a list of (key,value) strings in input order, preserving duplicates and whitespace. Records are separated by unescaped semicolons. The first unescaped equals sign separates key from value; later unescaped equals signs belong to the value. Backslash may escape ONLY semicolon, equals sign, or backslash; decode those escapes in both fields. Empty input returns []; empty values are allowed, empty keys/records or a record without a separator are invalid. A dangling or unknown escape is invalid. Raise ValueError for any invalid input. Return only self-contained Python 3 code using the standard library; no input/output.",
+      "reference": "def parse_pairs(text):\n    if text=='': return []\n    out=[]; key=[]; value=[]; separated=False; escaped=False\n    for ch in text+';':\n        if escaped:\n            if ch not in ';=\\\\': raise ValueError('escape')\n            (value if separated else key).append(ch); escaped=False\n        elif ch=='\\\\': escaped=True\n        elif ch==';':\n            if not separated or not key: raise ValueError('record')\n            out.append((''.join(key),''.join(value))); key=[]; value=[]; separated=False\n        elif ch=='=' and not separated: separated=True\n        else: (value if separated else key).append(ch)\n    if escaped or key or value or separated: raise ValueError('unfinished')\n    return out\n",
+      "test": "assert parse_pairs('')==[]\nassert parse_pairs(' a =b=c;x=;x=z')==[(' a ','b=c'),('x',''),('x','z')]\nassert parse_pairs(r'a\\=b=x\\;y;path=c:\\\\tmp')==[('a=b','x;y'),('path','c:\\\\tmp')]\nfor s in [';', 'a', '=v', 'a=;', ';a=b', 'a=;;b=c', 'a=\\\\', r'a=\\q']:\n    try: parse_pairs(s); raise AssertionError('accepted malformed')\n    except ValueError: pass\nimport random\nr=random.Random(704)\ndef esc(s): return ''.join('\\\\'+c if c in ';=\\\\' else c for c in s)\nfor _ in range(120):\n    pairs=[(''.join(r.choice('ab;=\\\\ ') for _ in range(r.randrange(1,8))),\n            ''.join(r.choice('xy;=\\\\ ') for _ in range(r.randrange(8)))) for _ in range(r.randrange(6))]\n    assert parse_pairs(';'.join(esc(k)+'='+esc(v) for k,v in pairs))==pairs\n",
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Implement parse_pairs(text) returning a list of (key,value) strings in input order, preserving duplicates and whitespace. Records are separated by unescaped semicolons. The first unescaped equals sign separates key from value; later unescaped equals signs belong to the value. Backslash may escape ONLY semicolon, equals sign, or backslash; decode those escapes in both fields. Empty input returns []; empty values are allowed, empty keys/records or a record without a separator are invalid. A dangling or unknown escape is invalid. Raise ValueError for any invalid input. Return only self-contained Python 3 code using the standard library; no input/output."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "portfolio_dependency_optimum",
+      "kind": "reasoning",
+      "prompt": "Select a subset of six optional projects; each project can be selected at most once. The (cost,value) pairs are A=(4,7), B=(3,5), C=(5,9), D=(2,4), E=(4,9), F=(1,2). Total cost must be at most 10. D requires B. E requires A. B and C cannot both be selected. Maximize total value; among maximum-value subsets minimize total cost; if still tied choose the lexicographically smallest alphabetically sorted list of project labels. Return items (that selected sorted list), cost, value, and max_value_solution_count (the number of feasible subsets attaining maximum value BEFORE the minimum-cost and lexicographic tie-breaks). Return only the final JSON object with exactly the requested keys. Use JSON integers for all numerical values, never floats. Do not put explanations or Markdown around the final JSON.",
+      "expected": {
+        "items": [
+          "A",
+          "E",
+          "F"
+        ],
+        "cost": 9,
+        "value": 18,
+        "max_value_solution_count": 3
+      },
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Select a subset of six optional projects; each project can be selected at most once. The (cost,value) pairs are A=(4,7), B=(3,5), C=(5,9), D=(2,4), E=(4,9), F=(1,2). Total cost must be at most 10. D requires B. E requires A. B and C cannot both be selected. Maximize total value; among maximum-value subsets minimize total cost; if still tied choose the lexicographically smallest alphabetically sorted list of project labels. Return items (that selected sorted list), cost, value, and max_value_solution_count (the number of feasible subsets attaining maximum value BEFORE the minimum-cost and lexicographic tie-breaks). Return only the final JSON object with exactly the requested keys. Use JSON integers for all numerical values, never floats. Do not put explanations or Markdown around the final JSON."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "stable_room_assignment",
+      "kind": "executable-code",
+      "prompt": "Implement assign_rooms(meetings), where meetings is a list of integer (start,end) pairs with start<end. Meetings occupy [start,end). Return one room ID per input meeting in original order. Process meetings by (start,end,original_index); at each step reuse the smallest nonnegative room ID whose previous meeting has ended (end<=start), otherwise allocate the smallest new ID. Empty input returns []; do not mutate meetings. The resulting assignment uses the minimum room count. Return only self-contained Python 3 code using the standard library; no input/output.",
+      "reference": "import heapq\ndef assign_rooms(meetings):\n    busy=[]; free=[]; count=0; result=[0]*len(meetings)\n    for i,(start,end) in sorted(enumerate(meetings),key=lambda p:(p[1][0],p[1][1],p[0])):\n        while busy and busy[0][0]<=start:\n            _,room=heapq.heappop(busy); heapq.heappush(free,room)\n        if free: room=heapq.heappop(free)\n        else: room=count; count+=1\n        result[i]=room; heapq.heappush(busy,(end,room))\n    return result\n",
+      "test": "assert assign_rooms([])==[]\nassert assign_rooms([(5,9),(0,5),(0,3),(3,5)])==[0,1,0,0]\nimport random\nr=random.Random(705)\nfor _ in range(150):\n    meetings=[(s:=r.randrange(-4,12),s+r.randrange(1,7)) for _ in range(r.randrange(18))]\n    saved=list(meetings); ends=[]; want=[None]*len(meetings)\n    for i in sorted(range(len(meetings)),key=lambda i:(*meetings[i],i)):\n        s,e=meetings[i]; room=next((j for j,x in enumerate(ends) if x<=s),len(ends))\n        if room==len(ends): ends.append(e)\n        else: ends[room]=e\n        want[i]=room\n    assert assign_rooms(meetings)==want and meetings==saved\n",
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Implement assign_rooms(meetings), where meetings is a list of integer (start,end) pairs with start<end. Meetings occupy [start,end). Return one room ID per input meeting in original order. Process meetings by (start,end,original_index); at each step reuse the smallest nonnegative room ID whose previous meeting has ended (end<=start), otherwise allocate the smallest new ID. Empty input returns []; do not mutate meetings. The resulting assignment uses the minimum room count. Return only self-contained Python 3 code using the standard library; no input/output."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "nested_transaction_state",
+      "kind": "reasoning",
+      "prompt": "A tiny machine starts with x=2, y=5 and an empty snapshot stack. BEGIN pushes a copy of both registers. COMMIT removes only the most recent snapshot and keeps the current registers; older snapshots remain unchanged. ROLLBACK restores and removes only the most recent snapshot. ADD dst a b sets dst to a+b, SUB dst a b sets dst to a-b, and MUL dst a b sets dst to a*b; operands are read before the destination is changed, and an operand may be a register or integer. READ_SUM appends x+y to an external log that is NEVER rolled back. Execute this program mentally:\nBEGIN\nADD x x y\nBEGIN\nMUL y x 3\nCOMMIT\nREAD_SUM\nBEGIN\nSUB x y x\nROLLBACK\nSUB y y x\nREAD_SUM\nROLLBACK\nREAD_SUM\nADD x x y\nBEGIN\nADD y x y\nCOMMIT\nREAD_SUM\nReturn x, y, reads (the external log in order), and snapshot_depth. Return only the final JSON object with exactly the requested keys. Use JSON integers for all numerical values, never floats. Do not put explanations or Markdown around the final JSON.",
+      "expected": {
+        "x": 7,
+        "y": 12,
+        "reads": [
+          28,
+          21,
+          7,
+          19
+        ],
+        "snapshot_depth": 0
+      },
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "A tiny machine starts with x=2, y=5 and an empty snapshot stack. BEGIN pushes a copy of both registers. COMMIT removes only the most recent snapshot and keeps the current registers; older snapshots remain unchanged. ROLLBACK restores and removes only the most recent snapshot. ADD dst a b sets dst to a+b, SUB dst a b sets dst to a-b, and MUL dst a b sets dst to a*b; operands are read before the destination is changed, and an operand may be a register or integer. READ_SUM appends x+y to an external log that is NEVER rolled back. Execute this program mentally:\nBEGIN\nADD x x y\nBEGIN\nMUL y x 3\nCOMMIT\nREAD_SUM\nBEGIN\nSUB x y x\nROLLBACK\nSUB y y x\nREAD_SUM\nROLLBACK\nREAD_SUM\nADD x x y\nBEGIN\nADD y x y\nCOMMIT\nREAD_SUM\nReturn x, y, reads (the external log in order), and snapshot_depth. Return only the final JSON object with exactly the requested keys. Use JSON integers for all numerical values, never floats. Do not put explanations or Markdown around the final JSON."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "fragmented_utf8",
+      "kind": "executable-code",
+      "prompt": "Implement decode_utf8(chunks), where chunks is any iterable of bytes objects, possibly empty. Return the strict UTF-8 decoding of their concatenation. Multibyte code points may cross any chunk boundary and empty chunks are valid. Invalid byte sequences, overlong encodings, surrogates, out-of-range code points and incomplete final code points must raise UnicodeDecodeError. Do not replace/ignore errors. No requirement to avoid buffering. Return only self-contained Python 3 code using the standard library; no input/output.",
+      "reference": "import codecs\ndef decode_utf8(chunks):\n    decoder=codecs.getincrementaldecoder('utf-8')('strict')\n    parts=[decoder.decode(chunk,final=False) for chunk in chunks]\n    parts.append(decoder.decode(b'',final=True))\n    return ''.join(parts)\n",
+      "test": "assert decode_utf8(iter([]))=='' and decode_utf8([b'',b'a',b''])=='a'\nfor text in ['café 🦉 終', '\\x00A\\n', '𐀀\\U0010ffff', 'e\\u0301']:\n    data=text.encode()\n    for i in range(len(data)+1):\n        for j in range(i,len(data)+1):\n            assert decode_utf8(iter([data[:i],b'',data[i:j],data[j:]]))==text\nfor data in [b'\\xc3',b'\\xf0\\x9f',b'\\xc0\\xaf',b'\\xed\\xa0\\x80',b'\\xf4\\x90\\x80\\x80',b'\\x80',b'a\\xffb']:\n    for i in range(len(data)+1):\n        try: decode_utf8([data[:i],data[i:]]); raise AssertionError('invalid UTF8')\n        except UnicodeDecodeError: pass\n",
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Implement decode_utf8(chunks), where chunks is any iterable of bytes objects, possibly empty. Return the strict UTF-8 decoding of their concatenation. Multibyte code points may cross any chunk boundary and empty chunks are valid. Invalid byte sequences, overlong encodings, surrogates, out-of-range code points and incomplete final code points must raise UnicodeDecodeError. Do not replace/ignore errors. No requirement to avoid buffering. Return only self-contained Python 3 code using the standard library; no input/output."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "minimal_fault_diagnoses",
+      "kind": "reasoning",
+      "prompt": "Four components U,V,W,X each have one unknown Boolean state: healthy=true, failed=false. Four perfectly reliable probes have these exact Boolean formulas: alpha=U AND V; beta=V OR W; gamma=W AND X; delta=U OR X. Observations are alpha=false, beta=true, gamma=false, delta=true. There are no probe errors and no hidden components. Find the MINIMUM number of failed components consistent with all observations, and list EVERY failed-component set having that minimum size. Return min_faults and diagnoses. Sort labels inside each diagnosis alphabetically, and sort the diagnoses lexicographically. Do not choose one explanation if several are equally minimal. Return only the final JSON object with exactly the requested keys. Use JSON integers for all numerical values, never floats. Do not put explanations or Markdown around the final JSON.",
+      "expected": {
+        "min_faults": 2,
+        "diagnoses": [
+          [
+            "U",
+            "W"
+          ],
+          [
+            "V",
+            "X"
+          ]
+        ]
+      },
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Four components U,V,W,X each have one unknown Boolean state: healthy=true, failed=false. Four perfectly reliable probes have these exact Boolean formulas: alpha=U AND V; beta=V OR W; gamma=W AND X; delta=U OR X. Observations are alpha=false, beta=true, gamma=false, delta=true. There are no probe errors and no hidden components. Find the MINIMUM number of failed components consistent with all observations, and list EVERY failed-component set having that minimum size. Return min_faults and diagnoses. Sort labels inside each diagnosis alphabetically, and sort the diagnoses lexicographically. Do not choose one explanation if several are equally minimal. Return only the final JSON object with exactly the requested keys. Use JSON integers for all numerical values, never floats. Do not put explanations or Markdown around the final JSON."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "strict_netstrings",
+      "kind": "executable-code",
+      "prompt": "Implement parse_netstrings(data: bytes)->list[bytes]. Parse concatenated records LENGTH:PAYLOAD, where LENGTH is one or more ASCII decimal digits, zero allowed but leading zeros forbidden. LENGTH counts bytes, not characters; payload can contain arbitrary bytes including colons/commas. The terminating comma is mandatory. Empty input returns []. Any malformed header, missing bytes, trailing junk or absent comma raises ValueError. No whitespace or signs are allowed in LENGTH. Return only self-contained Python 3 code using the standard library; no input/output.",
+      "reference": "def parse_netstrings(data):\n    result=[]; pos=0\n    while pos<len(data):\n        colon=data.find(b':',pos)\n        if colon<0: raise ValueError('header')\n        header=data[pos:colon]\n        if not header or any(c<48 or c>57 for c in header): raise ValueError('digits')\n        if len(header)>1 and header[0]==48: raise ValueError('leading zero')\n        n=int(header); start=colon+1; end=start+n\n        if end>=len(data) or data[end]!=44: raise ValueError('length/comma')\n        result.append(data[start:end]); pos=end+1\n    return result\n",
+      "test": "assert parse_netstrings(b'0:,3:a,b,2:\\xc3\\xa9,')==[b'',b'a,b','é'.encode()]\nfor data in [b':,',b'01:a,',b'+1:a,',b' 1:a,',b'1:a',b'2:a,',b'1:a,x',b'0:,,',b'2:a:x']:\n    try: parse_netstrings(data); raise AssertionError('malformed')\n    except ValueError: pass\nimport random\nr=random.Random(707)\nfor _ in range(100):\n    values=[bytes(r.randrange(256) for _ in range(r.randrange(30))) for _ in range(r.randrange(8))]\n    encoded=b''.join(str(len(x)).encode()+b':'+x+b',' for x in values)\n    assert parse_netstrings(encoded)==values\n",
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Implement parse_netstrings(data: bytes)->list[bytes]. Parse concatenated records LENGTH:PAYLOAD, where LENGTH is one or more ASCII decimal digits, zero allowed but leading zeros forbidden. LENGTH counts bytes, not characters; payload can contain arbitrary bytes including colons/commas. The terminating comma is mandatory. Empty input returns []. Any malformed header, missing bytes, trailing junk or absent comma raises ValueError. No whitespace or signs are allowed in LENGTH. Return only self-contained Python 3 code using the standard library; no input/output."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "grounded_revision_selection",
+      "kind": "reasoning",
+      "prompt": "Answer only from this policy archive. Select the authoritative record for service Orchid, environment production, region EU, as of 2026-08-15. A record is eligible only if all three scope fields match, status is approved, effective date is on or before the as-of date, and withdrawn is either none or a date strictly after the as-of date. Among eligible records select the HIGHEST revision number. Ineligible records do not suppress earlier eligible ones. Filing order and reviewer prose do not override these rules. All dates are ISO calendar dates.\n\nARCHIVE START\nRecord D01 | service Orchid | environment production | region US | revision 21 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 65 | timeout_ms 1050 | max_retries 3.\nThe operations reviewer checked the document identifier against the archive register. A training copy can remain on a desk after a newer record is filed. The archive does not silently transfer approval between environments or regions. Examples discussed at the review meeting were explanatory and did not amend the numerical settings above.\n\nRecord D02 | service Orchid | environment staging | region EU | revision 22 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 66 | timeout_ms 1100 | max_retries 4.\nThe release coordinator distributed this record to the team named by its scope. Readers must distinguish an approved change from a draft under discussion. Older versions may still be useful when examining historical incidents. No statement in this review note creates an exception to the effective date or withdrawal recorded above.\n\nRecord D03 | service Orchid | environment production | region EU | revision 1 | status approved | effective 2026-07-01 | withdrawn none | batch_limit 48 | timeout_ms 6000 | max_retries 2.\nThe support team keeps separate folders for production and staging material. A copied page may mention another region during a discussion without governing that region. The record header is the authoritative source of scope and settings. All proposed changes must pass through the ordinary approval process before operators can rely on them.\n\nRecord D04 | service Orchid | environment staging | region EU | revision 24 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 68 | timeout_ms 1200 | max_retries 3.\nThe audit desk retained this page to explain the sequence of policy decisions. Document order is the order of filing, not a ranking of current authority. A future effective date must be respected even when a record is approved. A withdrawn record remains in the archive and should not be mistaken for an active one.\n\nRecord D05 | service Orchid | environment production | region US | revision 25 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 69 | timeout_ms 1250 | max_retries 4.\nThe operations reviewer checked the document identifier against the archive register. A training copy can remain on a desk after a newer record is filed. The archive does not silently transfer approval between environments or regions. Examples discussed at the review meeting were explanatory and did not amend the numerical settings above.\n\nRecord D06 | service Orchid | environment staging | region EU | revision 26 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 70 | timeout_ms 1300 | max_retries 2.\nThe release coordinator distributed this record to the team named by its scope. Readers must distinguish an approved change from a draft under discussion. Older versions may still be useful when examining historical incidents. No statement in this review note creates an exception to the effective date or withdrawal recorded above.\n\nRecord D07 | service Orchid | environment production | region EU | revision 3 | status approved | effective 2026-07-18 | withdrawn none | batch_limit 72 | timeout_ms 5000 | max_retries 3.\nThe support team keeps separate folders for production and staging material. A copied page may mention another region during a discussion without governing that region. The record header is the authoritative source of scope and settings. All proposed changes must pass through the ordinary approval process before operators can rely on them.\n\nRecord D08 | service Orchid | environment staging | region EU | revision 28 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 72 | timeout_ms 1400 | max_retries 4.\nThe audit desk retained this page to explain the sequence of policy decisions. Document order is the order of filing, not a ranking of current authority. A future effective date must be respected even when a record is approved. A withdrawn record remains in the archive and should not be mistaken for an active one.\n\nRecord D09 | service Orchid | environment production | region US | revision 29 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 73 | timeout_ms 1450 | max_retries 2.\nThe operations reviewer checked the document identifier against the archive register. A training copy can remain on a desk after a newer record is filed. The archive does not silently transfer approval between environments or regions. Examples discussed at the review meeting were explanatory and did not amend the numerical settings above.\n\nRecord D10 | service Orchid | environment staging | region EU | revision 30 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 74 | timeout_ms 1500 | max_retries 3.\nThe release coordinator distributed this record to the team named by its scope. Readers must distinguish an approved change from a draft under discussion. Older versions may still be useful when examining historical incidents. No statement in this review note creates an exception to the effective date or withdrawal recorded above.\n\nRecord D11 | service Orchid | environment production | region US | revision 31 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 75 | timeout_ms 1550 | max_retries 4.\nThe support team keeps separate folders for production and staging material. A copied page may mention another region during a discussion without governing that region. The record header is the authoritative source of scope and settings. All proposed changes must pass through the ordinary approval process before operators can rely on them.\n\nRecord D12 | service Orchid | environment staging | region EU | revision 32 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 76 | timeout_ms 1600 | max_retries 2.\nThe audit desk retained this page to explain the sequence of policy decisions. Document order is the order of filing, not a ranking of current authority. A future effective date must be respected even when a record is approved. A withdrawn record remains in the archive and should not be mistaken for an active one.\n\nRecord D13 | service Orchid | environment production | region EU | revision 5 | status approved | effective 2026-08-01 | withdrawn none | batch_limit 96 | timeout_ms 4200 | max_retries 3.\nThe operations reviewer checked the document identifier against the archive register. A training copy can remain on a desk after a newer record is filed. The archive does not silently transfer approval between environments or regions. Examples discussed at the review meeting were explanatory and did not amend the numerical settings above.\n\nRecord D14 | service Orchid | environment staging | region EU | revision 34 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 78 | timeout_ms 1700 | max_retries 4.\nThe release coordinator distributed this record to the team named by its scope. Readers must distinguish an approved change from a draft under discussion. Older versions may still be useful when examining historical incidents. No statement in this review note creates an exception to the effective date or withdrawal recorded above.\n\nRecord D15 | service Orchid | environment production | region US | revision 35 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 79 | timeout_ms 1750 | max_retries 2.\nThe support team keeps separate folders for production and staging material. A copied page may mention another region during a discussion without governing that region. The record header is the authoritative source of scope and settings. All proposed changes must pass through the ordinary approval process before operators can rely on them.\n\nRecord D16 | service Orchid | environment staging | region EU | revision 36 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 80 | timeout_ms 1800 | max_retries 3.\nThe audit desk retained this page to explain the sequence of policy decisions. Document order is the order of filing, not a ranking of current authority. A future effective date must be respected even when a record is approved. A withdrawn record remains in the archive and should not be mistaken for an active one.\n\nRecord D17 | service Orchid | environment production | region EU | revision 8 | status draft | effective 2026-08-09 | withdrawn none | batch_limit 160 | timeout_ms 2000 | max_retries 1.\nThe operations reviewer checked the document identifier against the archive register. A training copy can remain on a desk after a newer record is filed. The archive does not silently transfer approval between environments or regions. Examples discussed at the review meeting were explanatory and did not amend the numerical settings above.\n\nRecord D18 | service Orchid | environment staging | region EU | revision 38 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 82 | timeout_ms 1900 | max_retries 2.\nThe release coordinator distributed this record to the team named by its scope. Readers must distinguish an approved change from a draft under discussion. Older versions may still be useful when examining historical incidents. No statement in this review note creates an exception to the effective date or withdrawal recorded above.\n\nRecord D19 | service Orchid | environment production | region US | revision 39 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 83 | timeout_ms 1950 | max_retries 3.\nThe support team keeps separate folders for production and staging material. A copied page may mention another region during a discussion without governing that region. The record header is the authoritative source of scope and settings. All proposed changes must pass through the ordinary approval process before operators can rely on them.\n\nRecord D20 | service Orchid | environment production | region EU | revision 9 | status approved | effective 2026-09-01 | withdrawn none | batch_limit 192 | timeout_ms 1800 | max_retries 5.\nThe audit desk retained this page to explain the sequence of policy decisions. Document order is the order of filing, not a ranking of current authority. A future effective date must be respected even when a record is approved. A withdrawn record remains in the archive and should not be mistaken for an active one.\n\nRecord D21 | service Orchid | environment production | region US | revision 41 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 85 | timeout_ms 2050 | max_retries 2.\nThe operations reviewer checked the document identifier against the archive register. A training copy can remain on a desk after a newer record is filed. The archive does not silently transfer approval between environments or regions. Examples discussed at the review meeting were explanatory and did not amend the numerical settings above.\n\nRecord D22 | service Orchid | environment staging | region EU | revision 42 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 86 | timeout_ms 2100 | max_retries 3.\nThe release coordinator distributed this record to the team named by its scope. Readers must distinguish an approved change from a draft under discussion. Older versions may still be useful when examining historical incidents. No statement in this review note creates an exception to the effective date or withdrawal recorded above.\n\nRecord D23 | service Orchid | environment production | region EU | revision 10 | status approved | effective 2026-08-10 | withdrawn 2026-08-13 | batch_limit 128 | timeout_ms 3500 | max_retries 4.\nThe support team keeps separate folders for production and staging material. A copied page may mention another region during a discussion without governing that region. The record header is the authoritative source of scope and settings. All proposed changes must pass through the ordinary approval process before operators can rely on them.\n\nRecord D24 | service Orchid | environment staging | region EU | revision 44 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 88 | timeout_ms 2200 | max_retries 2.\nThe audit desk retained this page to explain the sequence of policy decisions. Document order is the order of filing, not a ranking of current authority. A future effective date must be respected even when a record is approved. A withdrawn record remains in the archive and should not be mistaken for an active one.\nARCHIVE END\n\nReturn record (the selected Dxx identifier), revision, batch_limit, timeout_ms, max_retries, and retry_budget_ms. Here retry_budget_ms is timeout_ms multiplied by max_retries: it covers only retry attempts and excludes the initial attempt. Take all settings from the SAME selected record. Return only the final JSON object with exactly the requested keys. Use JSON integers for all numerical values, never floats. Do not put explanations or Markdown around the final JSON.",
+      "expected": {
+        "record": "D13",
+        "revision": 5,
+        "batch_limit": 96,
+        "timeout_ms": 4200,
+        "max_retries": 3,
+        "retry_budget_ms": 12600
+      },
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Answer only from this policy archive. Select the authoritative record for service Orchid, environment production, region EU, as of 2026-08-15. A record is eligible only if all three scope fields match, status is approved, effective date is on or before the as-of date, and withdrawn is either none or a date strictly after the as-of date. Among eligible records select the HIGHEST revision number. Ineligible records do not suppress earlier eligible ones. Filing order and reviewer prose do not override these rules. All dates are ISO calendar dates.\n\nARCHIVE START\nRecord D01 | service Orchid | environment production | region US | revision 21 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 65 | timeout_ms 1050 | max_retries 3.\nThe operations reviewer checked the document identifier against the archive register. A training copy can remain on a desk after a newer record is filed. The archive does not silently transfer approval between environments or regions. Examples discussed at the review meeting were explanatory and did not amend the numerical settings above.\n\nRecord D02 | service Orchid | environment staging | region EU | revision 22 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 66 | timeout_ms 1100 | max_retries 4.\nThe release coordinator distributed this record to the team named by its scope. Readers must distinguish an approved change from a draft under discussion. Older versions may still be useful when examining historical incidents. No statement in this review note creates an exception to the effective date or withdrawal recorded above.\n\nRecord D03 | service Orchid | environment production | region EU | revision 1 | status approved | effective 2026-07-01 | withdrawn none | batch_limit 48 | timeout_ms 6000 | max_retries 2.\nThe support team keeps separate folders for production and staging material. A copied page may mention another region during a discussion without governing that region. The record header is the authoritative source of scope and settings. All proposed changes must pass through the ordinary approval process before operators can rely on them.\n\nRecord D04 | service Orchid | environment staging | region EU | revision 24 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 68 | timeout_ms 1200 | max_retries 3.\nThe audit desk retained this page to explain the sequence of policy decisions. Document order is the order of filing, not a ranking of current authority. A future effective date must be respected even when a record is approved. A withdrawn record remains in the archive and should not be mistaken for an active one.\n\nRecord D05 | service Orchid | environment production | region US | revision 25 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 69 | timeout_ms 1250 | max_retries 4.\nThe operations reviewer checked the document identifier against the archive register. A training copy can remain on a desk after a newer record is filed. The archive does not silently transfer approval between environments or regions. Examples discussed at the review meeting were explanatory and did not amend the numerical settings above.\n\nRecord D06 | service Orchid | environment staging | region EU | revision 26 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 70 | timeout_ms 1300 | max_retries 2.\nThe release coordinator distributed this record to the team named by its scope. Readers must distinguish an approved change from a draft under discussion. Older versions may still be useful when examining historical incidents. No statement in this review note creates an exception to the effective date or withdrawal recorded above.\n\nRecord D07 | service Orchid | environment production | region EU | revision 3 | status approved | effective 2026-07-18 | withdrawn none | batch_limit 72 | timeout_ms 5000 | max_retries 3.\nThe support team keeps separate folders for production and staging material. A copied page may mention another region during a discussion without governing that region. The record header is the authoritative source of scope and settings. All proposed changes must pass through the ordinary approval process before operators can rely on them.\n\nRecord D08 | service Orchid | environment staging | region EU | revision 28 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 72 | timeout_ms 1400 | max_retries 4.\nThe audit desk retained this page to explain the sequence of policy decisions. Document order is the order of filing, not a ranking of current authority. A future effective date must be respected even when a record is approved. A withdrawn record remains in the archive and should not be mistaken for an active one.\n\nRecord D09 | service Orchid | environment production | region US | revision 29 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 73 | timeout_ms 1450 | max_retries 2.\nThe operations reviewer checked the document identifier against the archive register. A training copy can remain on a desk after a newer record is filed. The archive does not silently transfer approval between environments or regions. Examples discussed at the review meeting were explanatory and did not amend the numerical settings above.\n\nRecord D10 | service Orchid | environment staging | region EU | revision 30 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 74 | timeout_ms 1500 | max_retries 3.\nThe release coordinator distributed this record to the team named by its scope. Readers must distinguish an approved change from a draft under discussion. Older versions may still be useful when examining historical incidents. No statement in this review note creates an exception to the effective date or withdrawal recorded above.\n\nRecord D11 | service Orchid | environment production | region US | revision 31 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 75 | timeout_ms 1550 | max_retries 4.\nThe support team keeps separate folders for production and staging material. A copied page may mention another region during a discussion without governing that region. The record header is the authoritative source of scope and settings. All proposed changes must pass through the ordinary approval process before operators can rely on them.\n\nRecord D12 | service Orchid | environment staging | region EU | revision 32 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 76 | timeout_ms 1600 | max_retries 2.\nThe audit desk retained this page to explain the sequence of policy decisions. Document order is the order of filing, not a ranking of current authority. A future effective date must be respected even when a record is approved. A withdrawn record remains in the archive and should not be mistaken for an active one.\n\nRecord D13 | service Orchid | environment production | region EU | revision 5 | status approved | effective 2026-08-01 | withdrawn none | batch_limit 96 | timeout_ms 4200 | max_retries 3.\nThe operations reviewer checked the document identifier against the archive register. A training copy can remain on a desk after a newer record is filed. The archive does not silently transfer approval between environments or regions. Examples discussed at the review meeting were explanatory and did not amend the numerical settings above.\n\nRecord D14 | service Orchid | environment staging | region EU | revision 34 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 78 | timeout_ms 1700 | max_retries 4.\nThe release coordinator distributed this record to the team named by its scope. Readers must distinguish an approved change from a draft under discussion. Older versions may still be useful when examining historical incidents. No statement in this review note creates an exception to the effective date or withdrawal recorded above.\n\nRecord D15 | service Orchid | environment production | region US | revision 35 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 79 | timeout_ms 1750 | max_retries 2.\nThe support team keeps separate folders for production and staging material. A copied page may mention another region during a discussion without governing that region. The record header is the authoritative source of scope and settings. All proposed changes must pass through the ordinary approval process before operators can rely on them.\n\nRecord D16 | service Orchid | environment staging | region EU | revision 36 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 80 | timeout_ms 1800 | max_retries 3.\nThe audit desk retained this page to explain the sequence of policy decisions. Document order is the order of filing, not a ranking of current authority. A future effective date must be respected even when a record is approved. A withdrawn record remains in the archive and should not be mistaken for an active one.\n\nRecord D17 | service Orchid | environment production | region EU | revision 8 | status draft | effective 2026-08-09 | withdrawn none | batch_limit 160 | timeout_ms 2000 | max_retries 1.\nThe operations reviewer checked the document identifier against the archive register. A training copy can remain on a desk after a newer record is filed. The archive does not silently transfer approval between environments or regions. Examples discussed at the review meeting were explanatory and did not amend the numerical settings above.\n\nRecord D18 | service Orchid | environment staging | region EU | revision 38 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 82 | timeout_ms 1900 | max_retries 2.\nThe release coordinator distributed this record to the team named by its scope. Readers must distinguish an approved change from a draft under discussion. Older versions may still be useful when examining historical incidents. No statement in this review note creates an exception to the effective date or withdrawal recorded above.\n\nRecord D19 | service Orchid | environment production | region US | revision 39 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 83 | timeout_ms 1950 | max_retries 3.\nThe support team keeps separate folders for production and staging material. A copied page may mention another region during a discussion without governing that region. The record header is the authoritative source of scope and settings. All proposed changes must pass through the ordinary approval process before operators can rely on them.\n\nRecord D20 | service Orchid | environment production | region EU | revision 9 | status approved | effective 2026-09-01 | withdrawn none | batch_limit 192 | timeout_ms 1800 | max_retries 5.\nThe audit desk retained this page to explain the sequence of policy decisions. Document order is the order of filing, not a ranking of current authority. A future effective date must be respected even when a record is approved. A withdrawn record remains in the archive and should not be mistaken for an active one.\n\nRecord D21 | service Orchid | environment production | region US | revision 41 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 85 | timeout_ms 2050 | max_retries 2.\nThe operations reviewer checked the document identifier against the archive register. A training copy can remain on a desk after a newer record is filed. The archive does not silently transfer approval between environments or regions. Examples discussed at the review meeting were explanatory and did not amend the numerical settings above.\n\nRecord D22 | service Orchid | environment staging | region EU | revision 42 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 86 | timeout_ms 2100 | max_retries 3.\nThe release coordinator distributed this record to the team named by its scope. Readers must distinguish an approved change from a draft under discussion. Older versions may still be useful when examining historical incidents. No statement in this review note creates an exception to the effective date or withdrawal recorded above.\n\nRecord D23 | service Orchid | environment production | region EU | revision 10 | status approved | effective 2026-08-10 | withdrawn 2026-08-13 | batch_limit 128 | timeout_ms 3500 | max_retries 4.\nThe support team keeps separate folders for production and staging material. A copied page may mention another region during a discussion without governing that region. The record header is the authoritative source of scope and settings. All proposed changes must pass through the ordinary approval process before operators can rely on them.\n\nRecord D24 | service Orchid | environment staging | region EU | revision 44 | status approved | effective 2026-08-03 | withdrawn none | batch_limit 88 | timeout_ms 2200 | max_retries 2.\nThe audit desk retained this page to explain the sequence of policy decisions. Document order is the order of filing, not a ranking of current authority. A future effective date must be respected even when a record is approved. A withdrawn record remains in the archive and should not be mistaken for an active one.\nARCHIVE END\n\nReturn record (the selected Dxx identifier), revision, batch_limit, timeout_ms, max_retries, and retry_budget_ms. Here retry_budget_ms is timeout_ms multiplied by max_retries: it covers only retry attempts and excludes the initial attempt. Take all settings from the SAME selected record. Return only the final JSON object with exactly the requested keys. Use JSON integers for all numerical values, never floats. Do not put explanations or Markdown around the final JSON."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "exact_cent_apportionment",
+      "kind": "executable-code",
+      "prompt": "Implement allocate_cents(total,weights). total is a nonnegative integer; weights is a list of nonnegative integers. Allocate total integer cents proportionally: floor each exact rational share, then give remaining cents one each in descending fractional-remainder order, ties to smaller original index. Return a list in original order without mutating weights. Avoid float rounding; integers may be arbitrarily large. Empty weights returns [] only when total=0, otherwise ValueError. Nonempty all-zero weights always raise ValueError. Return only self-contained Python 3 code using the standard library; no input/output.",
+      "reference": "def allocate_cents(total, weights):\n    if not weights:\n        if total: raise ValueError('empty')\n        return []\n    denominator=sum(weights)\n    if denominator==0: raise ValueError('zero')\n    result=[total*w//denominator for w in weights]\n    order=sorted(range(len(weights)),key=lambda i:(-(total*weights[i]%denominator),i))\n    for i in order[:total-sum(result)]: result[i]+=1\n    return result\n",
+      "test": "assert allocate_cents(2,[1,1,1])==[1,1,0]\nassert allocate_cents(10,[0,1,0,1])==[0,5,0,5]\nassert allocate_cents(0,[])==[]\nfor t,w in [(1,[]),(0,[0]),(9,[0,0])]:\n    try: allocate_cents(t,w); raise AssertionError('invalid')\n    except ValueError: pass\nfrom fractions import Fraction\nimport random\nr=random.Random(708)\nfor _ in range(120):\n    weights=[r.randrange(9) for _ in range(r.randrange(1,10))]\n    if not any(weights): weights[0]=1\n    total=r.randrange(100) if _<60 else 10**40+r.randrange(100)\n    shares=[Fraction(total*w,sum(weights)) for w in weights]\n    want=[int(x) for x in shares]\n    order=sorted(range(len(want)),key=lambda i:(-(shares[i]-want[i]),i))\n    for i in order[:total-sum(want)]: want[i]+=1\n    saved=list(weights); assert allocate_cents(total,weights)==want and weights==saved\n",
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Implement allocate_cents(total,weights). total is a nonnegative integer; weights is a list of nonnegative integers. Allocate total integer cents proportionally: floor each exact rational share, then give remaining cents one each in descending fractional-remainder order, ties to smaller original index. Return a list in original order without mutating weights. Avoid float rounding; integers may be arbitrarily large. Empty weights returns [] only when total=0, otherwise ValueError. Nonempty all-zero weights always raise ValueError. Return only self-contained Python 3 code using the standard library; no input/output."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "single_bad_modular_sensor",
+      "kind": "reasoning",
+      "prompt": "A secret integer n is between 40 and 75 inclusive. Four sensors report remainders: S3 says n mod 3 = 0; S5 says n mod 5 = 1; S7 says n mod 7 = 4; S11 says n mod 11 = 0. Exactly ONE of these four reported remainders is wrong, and the other three are exact. Find every n consistent with that statement and interval. Return candidates (the ascending list of all such integers), bad_sensor (the incorrect sensor label for the unique candidate), and correct_remainder (what that sensor should have reported). Return only the final JSON object with exactly the requested keys. Use JSON integers for all numerical values, never floats. Do not put explanations or Markdown around the final JSON.",
+      "expected": {
+        "candidates": [
+          66
+        ],
+        "bad_sensor": "S7",
+        "correct_remainder": 3
+      },
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "A secret integer n is between 40 and 75 inclusive. Four sensors report remainders: S3 says n mod 3 = 0; S5 says n mod 5 = 1; S7 says n mod 7 = 4; S11 says n mod 11 = 0. Exactly ONE of these four reported remainders is wrong, and the other three are exact. Find every n consistent with that statement and interval. Return candidates (the ascending list of all such integers), bad_sensor (the incorrect sensor label for the unique candidate), and correct_remainder (what that sensor should have reported). Return only the final JSON object with exactly the requested keys. Use JSON integers for all numerical values, never floats. Do not put explanations or Markdown around the final JSON."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "simultaneous_text_edits",
+      "kind": "executable-code",
+      "prompt": "Implement apply_edits(text,edits), where each edit is (start,end,replacement_string), using Python character indices into the ORIGINAL text and replacing [start,end). Validate 0<=start<=end<=len(text); invalid ranges raise ValueError. Nonempty replaced ranges must not overlap; insertions (start=end) strictly inside a replaced range are also invalid. Touching ranges and insertions at boundaries are allowed. Apply in (start,end,original_index) order: same-position insertions preserve input order and precede a replacement starting there. Return the new string, with all coordinates simultaneous, not sequential; do not mutate edits. Return only self-contained Python 3 code using the standard library; no input/output.",
+      "reference": "def apply_edits(text, edits):\n    for start,end,_ in edits:\n        if not 0<=start<=end<=len(text): raise ValueError('range')\n    ordered=sorted(enumerate(edits),key=lambda x:(x[1][0],x[1][1],x[0]))\n    cursor=0; parts=[]\n    for _,(start,end,replacement) in ordered:\n        if start<cursor: raise ValueError('overlap')\n        parts.extend((text[cursor:start],replacement)); cursor=end\n    parts.append(text[cursor:])\n    return ''.join(parts)\n",
+      "test": "assert apply_edits('abcdef',[(4,6,'Z'),(1,3,'XY')])=='aXYdZ'\nassert apply_edits('abc',[(1,2,'R'),(1,1,'X'),(1,1,'Y'),(2,2,'!')])=='aXYR!c'\nassert apply_edits('é終',[(0,1,'A'),(2,2,'🙂')])=='A終🙂'\nfor edits in [[(-1,0,'')],[(1,4,'')],[(2,1,'')],[(0,2,''),(1,3,'')],[(0,3,''),(1,1,'x')]]:\n    try: apply_edits('abc',edits); raise AssertionError('invalid')\n    except ValueError: pass\nimport random\nr=random.Random(709)\nfor _ in range(100):\n    text='abcdefghij'; edits=[]; expected=[]\n    for i,c in enumerate(text):\n        if r.randrange(2): edits.append((i,i,'+')); expected.append('+')\n        if r.randrange(3)==0: edits.append((i,i+1,c.upper())); expected.append(c.upper())\n        else: expected.append(c)\n    r.shuffle(edits); saved=list(edits)\n    assert apply_edits(text,edits)==''.join(expected) and edits==saved\n",
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Implement apply_edits(text,edits), where each edit is (start,end,replacement_string), using Python character indices into the ORIGINAL text and replacing [start,end). Validate 0<=start<=end<=len(text); invalid ranges raise ValueError. Nonempty replaced ranges must not overlap; insertions (start=end) strictly inside a replaced range are also invalid. Touching ranges and insertions at boundaries are allowed. Apply in (start,end,original_index) order: same-position insertions preserve input order and precede a replacement starting there. Return the new string, with all coordinates simultaneous, not sequential; do not mutate edits. Return only self-contained Python 3 code using the standard library; no input/output."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "event_window_counts",
+      "kind": "executable-code",
+      "prompt": "Implement window_counts(events,width), where width is a positive integer (otherwise ValueError) and events is an iterable of (integer_timestamp,hashable_key) in nondecreasing timestamp order. For each event (t,k), after including that event return how many events with key k seen so far have timestamps in (t-width,t]. Return these counts as a list. Equal timestamps count separately; do not include future events even if their timestamp equals t. Use at most O(n) expected time. Return only self-contained Python 3 code using the standard library; no input/output.",
+      "reference": "from collections import deque,Counter\ndef window_counts(events,width):\n    if width<=0: raise ValueError('width')\n    queue=deque(); counts=Counter(); result=[]\n    for t,k in events:\n        while queue and queue[0][0]<=t-width:\n            _,old=queue.popleft(); counts[old]-=1\n            if not counts[old]: del counts[old]\n        queue.append((t,k)); counts[k]+=1; result.append(counts[k])\n    return result\n",
+      "test": "assert window_counts([(0,'a'),(0,'a'),(1,'b'),(2,'a')],2)==[1,2,1,1]\nassert window_counts(iter([]),1)==[]\nfor w in [0,-1]:\n    try: window_counts([],w); raise AssertionError('width')\n    except ValueError: pass\nimport random\nr=random.Random(710)\nfor _ in range(120):\n    t=-4; events=[]\n    for i in range(r.randrange(60)):\n        t+=r.randrange(3); events.append((t,r.randrange(5)))\n    width=r.randrange(1,8)\n    want=[sum(t-width<s<=t and q==k for s,q in events[:i+1]) for i,(t,k) in enumerate(events)]\n    assert window_counts(iter(events),width)==want\nassert window_counts(((i,0) for i in range(30000)),5)[-1]==5\n",
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Implement window_counts(events,width), where width is a positive integer (otherwise ValueError) and events is an iterable of (integer_timestamp,hashable_key) in nondecreasing timestamp order. For each event (t,k), after including that event return how many events with key k seen so far have timestamps in (t-width,t]. Return these counts as a list. Equal timestamps count separately; do not include future events even if their timestamp equals t. Use at most O(n) expected time. Return only self-contained Python 3 code using the standard library; no input/output."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "integer_expression_parser",
+      "kind": "executable-code",
+      "prompt": "Implement evaluate(expression) without eval or exec. Support nonnegative ASCII integer literals, binary +,-,*, parentheses, and unary + or - (including chains). Multiplication has higher precedence than binary addition/subtraction; binary operators are left-associative, unary operators bind most tightly. Only ASCII space, tab and newline are allowed as whitespace; other whitespace characters are unsupported. They may occur BETWEEN tokens, not within one integer. Return an exact Python integer. Empty input, missing operands, implicit multiplication, unbalanced parentheses, unsupported characters or leftover tokens raise ValueError. Return only self-contained Python 3 code using the standard library; no input/output.",
+      "reference": "import re\ndef evaluate(expression):\n    tokens=re.findall(r'[0-9]+|[+*()-]|[^ \\t\\n]',expression); pos=0\n    def factor():\n        nonlocal pos\n        if pos>=len(tokens): raise ValueError('operand')\n        t=tokens[pos]; pos+=1\n        if t in ('+','-'):\n            v=factor(); return v if t=='+' else -v\n        if t=='(':\n            v=expr()\n            if pos>=len(tokens) or tokens[pos]!=')': raise ValueError('parenthesis')\n            pos+=1; return v\n        if re.fullmatch('[0-9]+',t): return int(t)\n        raise ValueError('token')\n    def term():\n        nonlocal pos\n        v=factor()\n        while pos<len(tokens) and tokens[pos]=='*': pos+=1; v*=factor()\n        return v\n    def expr():\n        nonlocal pos\n        v=term()\n        while pos<len(tokens) and tokens[pos] in ('+','-'):\n            op=tokens[pos]; pos+=1; w=term(); v=v+w if op=='+' else v-w\n        return v\n    result=expr()\n    if pos!=len(tokens): raise ValueError('leftovers')\n    return result\n",
+      "test": "import ast\nwith open('/work/generated.py',encoding='utf-8') as source:\n    tree=ast.parse(source.read())\nassert not any((isinstance(node,ast.Name) and node.id in ('eval','exec')) or\n               (isinstance(node,ast.Attribute) and node.attr in ('eval','exec'))\n               for node in ast.walk(tree)), 'eval/exec forbidden, including aliases'\nassert evaluate(' 20-5-3*2 ')==9\nassert evaluate('-(2+3)*--4 + +7')==-13\nassert evaluate('1--2')==3 and evaluate('00012')==12\nassert evaluate('1\\t+\\n2')==3\nfor s in ['', ' ', '1 2', '2(3)', '1+', '()', '(1', '1)', '2/1', 'a', '１', '*3', '1+\\u00a02', '1+\\r2']:\n    try: evaluate(s); raise AssertionError('invalid expression')\n    except ValueError: pass\nimport random\nr=random.Random(711)\ndef make(depth):\n    if not depth or r.randrange(4)==0:\n        value=r.randrange(30); return str(value),value\n    a,x=make(depth-1); b,y=make(depth-1); op=r.choice('+-*')\n    text='('+a+' '+op+' '+b+')'; value=x+y if op=='+' else x-y if op=='-' else x*y\n    if r.randrange(3)==0: return '-'+text,-value\n    return text,value\nfor _ in range(120):\n    expr,want=make(4); assert evaluate(expr)==want\n",
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Implement evaluate(expression) without eval or exec. Support nonnegative ASCII integer literals, binary +,-,*, parentheses, and unary + or - (including chains). Multiplication has higher precedence than binary addition/subtraction; binary operators are left-associative, unary operators bind most tightly. Only ASCII space, tab and newline are allowed as whitespace; other whitespace characters are unsupported. They may occur BETWEEN tokens, not within one integer. Return an exact Python integer. Empty input, missing operands, implicit multiplication, unbalanced parentheses, unsupported characters or leftover tokens raise ValueError. Return only self-contained Python 3 code using the standard library; no input/output."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    },
+    {
+      "id": "alias_chain_resolution",
+      "kind": "executable-code",
+      "prompt": "Implement resolve_aliases(mapping), a dict mapping string names to string targets. A target not present as a key is terminal. Return a new dict mapping EVERY original key to the terminal reached by repeatedly following mapping. Empty input returns {}. If ANY cycle exists, including a self-loop or a disconnected cycle, raise ValueError and do not mutate mapping. Targets may be empty strings. Support chains of at least 5000 keys without Python recursion-limit failures. Return only self-contained Python 3 code using the standard library; no input/output.",
+      "reference": "def resolve_aliases(mapping):\n    resolved={}\n    for key in mapping:\n        path=[]; seen=set(); current=key\n        while current in mapping and current not in resolved:\n            if current in seen: raise ValueError('cycle')\n            seen.add(current); path.append(current); current=mapping[current]\n        terminal=resolved.get(current,current)\n        for item in path: resolved[item]=terminal\n    return resolved\n",
+      "test": "assert resolve_aliases({'a':'b','b':'c','d':'b','x':''})=={'a':'c','b':'c','d':'c','x':''}\nassert resolve_aliases({})=={}\nfor m in [{'a':'a'},{'a':'end','b':'c','c':'b'},{'a':'b','b':'c','c':'a'}]:\n    saved=dict(m)\n    try: resolve_aliases(m); raise AssertionError('cycle')\n    except ValueError: pass\n    assert m==saved\nlong={str(i):str(i+1) for i in range(5000)}\nassert resolve_aliases(long)=={str(i):'5000' for i in range(5000)}\nimport random\nr=random.Random(712)\nfor n in range(1,70):\n    mapping={str(i):str(r.randrange(i+1,n+3)) for i in range(n)}; saved=dict(mapping)\n    want={}\n    for key in mapping:\n        cur=key\n        while cur in mapping: cur=mapping[cur]\n        want[key]=cur\n    assert resolve_aliases(mapping)==want and mapping==saved\n",
+      "request": {
+        "model": "qwen3.8-flash-next",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Implement resolve_aliases(mapping), a dict mapping string names to string targets. A target not present as a key is terminal. Return a new dict mapping EVERY original key to the terminal reached by repeatedly following mapping. Empty input returns {}. If ANY cycle exists, including a self-loop or a disconnected cycle, raise ValueError and do not mutate mapping. Targets may be empty strings. Support chains of at least 5000 keys without Python recursion-limit failures. Return only self-contained Python 3 code using the standard library; no input/output."
+          }
+        ],
+        "temperature": 0,
+        "seed": 1,
+        "n": 1,
+        "max_tokens": 3072,
+        "stream": false,
+        "reasoning_effort": "xhigh",
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        },
+        "verbose": true,
+        "return_tokens": true
+      }
+    }
+  ],
+  "maximum_requests_per_arm": 20,
+  "sources": {
+    "/home/funboy/ai-exp/strix-moe-cluster/scripts/qwen_iq3_quality.py": "8f779e53392536094546590d59ec86a84067e60e84d7f59a2a1e3a31cbb81063",
+    "/home/funboy/ai-exp/strix-moe-cluster/config/iq3_quality_code.py": "97d8c833ed75b3d6bb1857bf34a1caaa6b5ec62d405074948bd155b77f664067",
+    "/home/funboy/ai-exp/strix-moe-cluster/config/iq3_quality_reasoning.py": "2effab21f1a56f8c601a115ff6f310593ad94f17101dd2c553d2026e0dc67d92",
+    "/home/funboy/ai-exp/strix-moe-cluster/scripts/qwen_iq3_utility.py": "b378f2e049e2b45b7d9120362d8a9d67476c671b02be6939711bddd5f5f711ed",
+    "/home/funboy/ai-exp/strix-moe-cluster/scripts/qwen_iq3_speed.py": "6e52af3fc25b20811a0afb99112634499c0135730def05f74fcb1ea72499c8b1",
+    "/home/funboy/ai-exp/strix-moe-cluster/scripts/qualify.py": "b71b8b5471e3b571a5cd9a6f1dba20d7567d7f8c98f27fb2813ba0adce21c23f",
+    "/home/funboy/ai-exp/strix-moe-cluster/scripts/qwen_qualify.py": "6a9e52647cce15903b4630f1568de56f31630378d09a761e3593ee4612c1221b",
+    "/home/funboy/ai-exp/strix-ciru-tp2/scripts/quality.py": "63fa6c6db7e20e5f887fcba9513befad25fdd02fef2d843bf4f37c4ff8400b0b",
+    "/home/funboy/ai-exp/strix-ciru-tp2/scripts/benchmark.py": "f26eaa1e34cd51714191502cd806cdb586bb8f5be87922a8966e3f803844ca4d"
+  },
+  "policy": "One first attempt, xhigh, no repeated prompt, no repair; cap=INCOMPLETE",
+  "limit": "Local custom corpus, not official benchmark, broad intelligence, or exact qualification"
+}

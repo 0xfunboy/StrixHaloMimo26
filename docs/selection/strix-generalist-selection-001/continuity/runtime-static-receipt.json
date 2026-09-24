@@ -1,0 +1,19 @@
+{
+  "tools/server/server-context.cpp": {
+    "path": "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-runtime/tools/server/server-context.cpp",
+    "sha256": "c397822850d2a2ee768f4df9fc24bd8c41870b32ea5b3d58c5c8885f8c28e036"
+  },
+  "tools/server/server-schema.cpp": {
+    "path": "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-runtime/tools/server/server-schema.cpp",
+    "sha256": "c3d2899d2a078adae6c4971b3da825bad1aab9cda6b2af652e41e6aef1665274"
+  },
+  "common/arg.cpp": {
+    "path": "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-runtime/common/arg.cpp",
+    "sha256": "35208607f88a398b67b244363591d13c8f98bf8ba0a8674cad53c7f86109f682"
+  },
+  "common/speculative.cpp": {
+    "path": "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-runtime/common/speculative.cpp",
+    "sha256": "2e138ce6e1238eb7a7e5abbfb8bf9e16b02fc165e217ce98ce75778528468892"
+  },
+  "decision": "Same pinned process-level target-only/MTP support. HTTP toggles disabled; no numerical source edits."
+}

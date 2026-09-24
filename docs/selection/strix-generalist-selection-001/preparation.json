@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "preparation_commit": "87442a8e1b999e5f33165d0b6b563eac5248ab15",
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "files_verified": 74,
+  "verification_receipt": "continuity/reconciliation.json",
+  "models_started_at_receipt": false,
+  "erratum": "The prior final-answer SHA beginning 06c85aae227c was incorrect. The actual disk index is byte-identical to the preparation commit's Git blob. Original 74-file freeze unchanged."
+}

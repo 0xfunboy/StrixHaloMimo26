@@ -1,0 +1,213 @@
+{
+  "schema": "qwen-iq3-public-speed-v1",
+  "status": "COMPLETE",
+  "error": null,
+  "qualification": "NOT_PROMOTED",
+  "quality_equivalence": "NOT_ESTABLISHED",
+  "categories": {
+    "code": {
+      "measured": 3,
+      "complete": true,
+      "repeat": {
+        "status": "PASS",
+        "comparisons": [
+          {
+            "status": "PASS",
+            "first_diff_token_index": null,
+            "output_text_exact": true
+          },
+          {
+            "status": "PASS",
+            "first_diff_token_index": null,
+            "output_text_exact": true
+          }
+        ]
+      },
+      "reference": [],
+      "reference_status": "NOT_EVALUATED",
+      "exact_screen_pass": true,
+      "observed": {
+        "decode_tps": {
+          "n": 3,
+          "median": 23.486568656753295,
+          "min": 23.486547674271062,
+          "max": 23.491846389285577,
+          "sample_sd": 0.0030531754440229694,
+          "mad": 2.0982482233478095e-05,
+          "raw": [
+            23.486568656753295,
+            23.491846389285577,
+            23.486547674271062
+          ]
+        },
+        "http_e2e_tps": {
+          "n": 3,
+          "median": 23.455052142807997,
+          "min": 23.434296068156762,
+          "max": 23.461810729982343,
+          "sample_sd": 0.01433846662476478,
+          "mad": 0.006758587174346076,
+          "raw": [
+            23.434296068156762,
+            23.461810729982343,
+            23.455052142807997
+          ]
+        },
+        "http_wall_s": {
+          "n": 3,
+          "median": 42.63473787700059,
+          "min": 42.622456190991215,
+          "max": 42.672500044020126,
+          "sample_sd": 0.026080670668854215,
+          "mad": 0.012281686009373516,
+          "raw": [
+            42.672500044020126,
+            42.622456190991215,
+            42.63473787700059
+          ]
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1000,
+          "min": 1000,
+          "max": 1000,
+          "sample_sd": 0.0,
+          "mad": 0,
+          "raw": [
+            1000,
+            1000,
+            1000
+          ]
+        },
+        "prompt_tokens": {
+          "n": 3,
+          "median": 84,
+          "min": 84,
+          "max": 84,
+          "sample_sd": 0.0,
+          "mad": 0,
+          "raw": [
+            84,
+            84,
+            84
+          ]
+        }
+      },
+      "acceptance": [
+        null,
+        null,
+        null
+      ],
+      "finish_reasons": [
+        "length",
+        "length",
+        "length"
+      ],
+      "correctness_screened_decode_median": 23.486568656753295,
+      "quality": "SEPARATE_FUNCTIONAL_TASKS_REQUIRED",
+      "client_ttft_ms": null
+    },
+    "prose": {
+      "measured": 3,
+      "complete": true,
+      "repeat": {
+        "status": "PASS",
+        "comparisons": [
+          {
+            "status": "PASS",
+            "first_diff_token_index": null,
+            "output_text_exact": true
+          },
+          {
+            "status": "PASS",
+            "first_diff_token_index": null,
+            "output_text_exact": true
+          }
+        ]
+      },
+      "reference": [],
+      "reference_status": "NOT_EVALUATED",
+      "exact_screen_pass": true,
+      "observed": {
+        "decode_tps": {
+          "n": 3,
+          "median": 23.487347795991013,
+          "min": 23.48077173939869,
+          "max": 23.487990583361277,
+          "sample_sd": 0.003995193029649912,
+          "mad": 0.0006427873702641307,
+          "raw": [
+            23.487347795991013,
+            23.48077173939869,
+            23.487990583361277
+          ]
+        },
+        "http_e2e_tps": {
+          "n": 3,
+          "median": 23.44944203652781,
+          "min": 23.434783419405157,
+          "max": 23.45913730748341,
+          "sample_sd": 0.012260948844325895,
+          "mad": 0.009695270955599966,
+          "raw": [
+            23.434783419405157,
+            23.44944203652781,
+            23.45913730748341
+          ]
+        },
+        "http_wall_s": {
+          "n": 3,
+          "median": 42.644937923992984,
+          "min": 42.62731348100351,
+          "max": 42.67161262399168,
+          "sample_sd": 0.022303118915656256,
+          "mad": 0.0176244429894723,
+          "raw": [
+            42.67161262399168,
+            42.644937923992984,
+            42.62731348100351
+          ]
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1000,
+          "min": 1000,
+          "max": 1000,
+          "sample_sd": 0.0,
+          "mad": 0,
+          "raw": [
+            1000,
+            1000,
+            1000
+          ]
+        },
+        "prompt_tokens": {
+          "n": 3,
+          "median": 82,
+          "min": 82,
+          "max": 82,
+          "sample_sd": 0.0,
+          "mad": 0,
+          "raw": [
+            82,
+            82,
+            82
+          ]
+        }
+      },
+      "acceptance": [
+        null,
+        null,
+        null
+      ],
+      "finish_reasons": [
+        "length",
+        "length",
+        "length"
+      ],
+      "correctness_screened_decode_median": 23.487347795991013,
+      "quality": "SEPARATE_FUNCTIONAL_TASKS_REQUIRED",
+      "client_ttft_ms": null
+    }
+  }
+}

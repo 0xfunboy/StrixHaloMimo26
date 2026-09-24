@@ -1,0 +1,244 @@
+{
+  "schema": "qwen-native-qualification-v1",
+  "phase": "short",
+  "screening_pass": true,
+  "errors": [],
+  "metrics_by_category": {
+    "code": {
+      "category": "code",
+      "measured_requests": 2,
+      "native_validation_pass": true,
+      "repeat_status": "PASS",
+      "reference_status": "PASS",
+      "observed_median_decode_tps": 26.633421579713215,
+      "correctness_screened_median_decode_tps": 26.633421579713215,
+      "median_http_wall_s": 2.9865719264926156,
+      "median_http_e2e_tps": 21.429511867636784,
+      "acceptance": [
+        0.925,
+        0.925
+      ],
+      "ttft_ms": null,
+      "ttft_status": "NOT_MEASURED_NON_STREAMING",
+      "screening_pass": true
+    },
+    "prose": {
+      "category": "prose",
+      "measured_requests": 2,
+      "native_validation_pass": true,
+      "repeat_status": "PASS",
+      "reference_status": "PASS",
+      "observed_median_decode_tps": 23.388591765213363,
+      "correctness_screened_median_decode_tps": 23.388591765213363,
+      "median_http_wall_s": 3.205929074480082,
+      "median_http_e2e_tps": 19.971429971020086,
+      "acceptance": [
+        0.7916666666666666,
+        0.7916666666666666
+      ],
+      "ttft_ms": null,
+      "ttft_status": "NOT_MEASURED_NON_STREAMING",
+      "screening_pass": true
+    }
+  },
+  "records": [
+    {
+      "name": "warmup",
+      "category": null,
+      "excluded_warmup": true,
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 32,
+      "token_ID_count": 32,
+      "decode_tps": 30.07206625167215,
+      "http_wall_s": 1.6825686980155297,
+      "http_e2e_tps": 19.018539948913663,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 22,
+        "prompt_ms": 649.321,
+        "prompt_per_token_ms": 29.51459090909091,
+        "prompt_per_second": 33.88154703143746,
+        "predicted_n": 32,
+        "predicted_ms": 1030.857,
+        "predicted_per_token_ms": 33.25345161290323,
+        "predicted_per_second": 30.07206625167215,
+        "draft_n": 21,
+        "draft_n_accepted": 21
+      },
+      "acceptance": 1.0,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required"
+    },
+    {
+      "name": "code-1",
+      "category": "code",
+      "excluded_warmup": false,
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 64,
+      "token_ID_count": 64,
+      "decode_tps": 26.587551117732204,
+      "http_wall_s": 2.9969884179881774,
+      "http_e2e_tps": 21.35477054761593,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 44,
+        "prompt_ms": 472.963,
+        "prompt_per_token_ms": 10.74915909090909,
+        "prompt_per_second": 93.03053304381103,
+        "predicted_n": 64,
+        "predicted_ms": 2369.53,
+        "predicted_per_token_ms": 37.611587301587306,
+        "predicted_per_second": 26.587551117732204,
+        "draft_n": 40,
+        "draft_n_accepted": 37
+      },
+      "acceptance": 0.925,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": null,
+      "reference_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      }
+    },
+    {
+      "name": "code-2",
+      "category": "code",
+      "excluded_warmup": false,
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 64,
+      "token_ID_count": 64,
+      "decode_tps": 26.679292041694225,
+      "http_wall_s": 2.976155434997054,
+      "http_e2e_tps": 21.50425318765764,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 44,
+        "prompt_ms": 466.404,
+        "prompt_per_token_ms": 10.600090909090909,
+        "prompt_per_second": 94.33881356077563,
+        "predicted_n": 64,
+        "predicted_ms": 2361.382,
+        "predicted_per_token_ms": 37.48225396825397,
+        "predicted_per_second": 26.679292041694225,
+        "draft_n": 40,
+        "draft_n_accepted": 37
+      },
+      "acceptance": 0.925,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      },
+      "reference_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      }
+    },
+    {
+      "name": "prose-1",
+      "category": "prose",
+      "excluded_warmup": false,
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 64,
+      "token_ID_count": 64,
+      "decode_tps": 23.333246913900318,
+      "http_wall_s": 3.140109093976207,
+      "http_e2e_tps": 20.381457485911454,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 438.335,
+        "prompt_per_token_ms": 16.23462962962963,
+        "prompt_per_second": 61.59672396682903,
+        "predicted_n": 64,
+        "predicted_ms": 2700.01,
+        "predicted_per_token_ms": 42.85730158730159,
+        "predicted_per_second": 23.333246913900318,
+        "draft_n": 48,
+        "draft_n_accepted": 38
+      },
+      "acceptance": 0.7916666666666666,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": null,
+      "reference_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      }
+    },
+    {
+      "name": "prose-2",
+      "category": "prose",
+      "excluded_warmup": false,
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 64,
+      "token_ID_count": 64,
+      "decode_tps": 23.44393661652641,
+      "http_wall_s": 3.2717490549839567,
+      "http_e2e_tps": 19.56140245612872,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 27,
+        "prompt_ms": 432.534,
+        "prompt_per_token_ms": 16.019777777777776,
+        "prompt_per_second": 62.422838435822385,
+        "predicted_n": 64,
+        "predicted_ms": 2687.262,
+        "predicted_per_token_ms": 42.65495238095238,
+        "predicted_per_second": 23.44393661652641,
+        "draft_n": 48,
+        "draft_n_accepted": 38
+      },
+      "acceptance": 0.7916666666666666,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      },
+      "reference_comparison": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      }
+    }
+  ],
+  "reference": {
+    "directory": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c2-target-short",
+    "raw_sha256": {
+      "code-1-request.json": "3505613a040fd783aac1fa5d332acd8435beb75fd6dc06f0885b1e34f7d00170",
+      "code-1-response.json": "0c6b70fa0e7451cc6f3580300c1f609ebe378fefc9746c9a7c33ed1fc08a0920",
+      "code-1-result.json": "2ca8fbcc09c924d18c89ba826a6efcc638537492e49bb1bd3b9ff8cef36ea8a0",
+      "code-2-request.json": "3505613a040fd783aac1fa5d332acd8435beb75fd6dc06f0885b1e34f7d00170",
+      "code-2-response.json": "6275aa73a3a413ed8d5f688a800fd08fe40faefade133ddfaa43f240366471fa",
+      "code-2-result.json": "14da633ff6e9932e5b27a4403a5da1850abba5a2384f9222e7a1e63b176c918d",
+      "prose-1-request.json": "d6769e67b5bd4b24fc93180f9d4f187f8154dce757400e8e6dd540c00e9eb340",
+      "prose-1-response.json": "e2ceea8704087227f71e3e677b4d1f667c306677825a6ad01d21dcfbbe27b651",
+      "prose-1-result.json": "1fafdbb411967ea1dc7910a7c456a4a132df766c151e9a56958af8e282979208",
+      "prose-2-request.json": "d6769e67b5bd4b24fc93180f9d4f187f8154dce757400e8e6dd540c00e9eb340",
+      "prose-2-response.json": "b67dcbd44a890094efd61b56ce410ce7aefd50f657c4c5490ff62ded4f7d6eb9",
+      "prose-2-result.json": "46d7401699b1a0e275796826d25fdd55d31d2cfaaaef4d605b9d4516a400d590"
+    },
+    "protocol_sha256": "76de4f2d5d355ee7875f59727e6f3d996fbb8203971196dfa31f32c3318b9f93"
+  },
+  "qualification": "NOT_PROMOTED",
+  "quality_equivalence": "NOT_ESTABLISHED",
+  "api_smoke": "SEPARATE_REQUIRED",
+  "full_logits_correctness": "NOT_EVALUATED",
+  "runtime_identity_scope": "Controller-supplied pinned JSON, not live process attestation",
+  "request_mode": "raw_native_completion",
+  "no_retry": true,
+  "finished_unix": 1788684226.7380128
+}

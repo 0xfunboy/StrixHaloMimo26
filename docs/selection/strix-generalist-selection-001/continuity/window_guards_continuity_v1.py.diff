@@ -1,0 +1,15 @@
+--- window_guards.py
++++ window_guards_continuity_v1.py
+@@ -54,7 +54,11 @@
+     assert cfg['campaign']=='STRIX-GENERALIST-SELECTION-001'
+     manifest=json.loads((root/'source-manifest.json').read_text())
+     freeze=verify_freeze(root)
+-    if sha(run/'config.json')!=sha(root/manifest['runs'][cfg['profile']]['config']):raise RuntimeError('CONFIG_FREEZE_MISMATCH')
++    from mtp_process_v1 import verify_addendum
++    verify_addendum(root)
++    add=json.loads((root/'continuity/addendum.json').read_text())
++    config_path=add['config_by_run'].get(run.name)
++    if config_path is None or sha(run/'config.json')!=sha(root/config_path):raise RuntimeError('CONFIG_ADDENDUM_MISMATCH')
+     if command(['hostname']).strip()!='01-EVO-X3' or command(['id','-un']).strip()!='funboy':raise RuntimeError('NODE01_IDENTITY')
+     peer=command(SSH+['sh','-c',"'hostname; id -un; cat /proc/sys/kernel/random/boot_id'"])
+     if peer.splitlines()[:2]!=['02-EVO-X3','funboy']:raise RuntimeError('NODE02_IDENTITY')

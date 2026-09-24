@@ -1,0 +1,335 @@
+{
+  "schema": "qwen-iq3-public-speed-v1",
+  "status": "COMPLETE",
+  "error": null,
+  "qualification": "NOT_PROMOTED",
+  "quality_equivalence": "NOT_ESTABLISHED",
+  "categories": {
+    "code": {
+      "measured": 3,
+      "complete": true,
+      "repeat": {
+        "status": "FAIL",
+        "comparisons": [
+          {
+            "status": "FAIL",
+            "first_diff_token_index": 921,
+            "output_text_exact": false
+          },
+          {
+            "status": "FAIL",
+            "first_diff_token_index": 921,
+            "output_text_exact": false
+          }
+        ]
+      },
+      "reference": [
+        {
+          "status": "FAIL",
+          "comparisons": [
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            }
+          ]
+        },
+        {
+          "status": "FAIL",
+          "comparisons": [
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            }
+          ]
+        },
+        {
+          "status": "FAIL",
+          "comparisons": [
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 26,
+              "output_text_exact": false
+            }
+          ]
+        }
+      ],
+      "reference_status": "FAIL",
+      "exact_screen_pass": false,
+      "observed": {
+        "decode_tps": {
+          "n": 3,
+          "median": 81.00244539814891,
+          "min": 32.31866841133557,
+          "max": 94.37942645650885,
+          "sample_sd": 32.66137232542196,
+          "mad": 13.376981058359945,
+          "raw": [
+            32.31866841133557,
+            81.00244539814891,
+            94.37942645650885
+          ]
+        },
+        "http_e2e_tps": {
+          "n": 3,
+          "median": 79.95946188969235,
+          "min": 32.19253891685435,
+          "max": 92.8907069708429,
+          "sample_sd": 31.9717678448556,
+          "mad": 12.93124508115055,
+          "raw": [
+            32.19253891685435,
+            79.95946188969235,
+            92.8907069708429
+          ]
+        },
+        "http_wall_s": {
+          "n": 3,
+          "median": 12.506337291008094,
+          "min": 10.76533953298349,
+          "max": 31.06309827201767,
+          "sample_sd": 11.250062674846191,
+          "mad": 1.740997758024605,
+          "raw": [
+            31.06309827201767,
+            12.506337291008094,
+            10.76533953298349
+          ]
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1000,
+          "min": 1000,
+          "max": 1000,
+          "sample_sd": 0.0,
+          "mad": 0,
+          "raw": [
+            1000,
+            1000,
+            1000
+          ]
+        },
+        "prompt_tokens": {
+          "n": 3,
+          "median": 84,
+          "min": 84,
+          "max": 84,
+          "sample_sd": 0.0,
+          "mad": 0,
+          "raw": [
+            84,
+            84,
+            84
+          ]
+        }
+      },
+      "acceptance": [
+        0.5921787709497207,
+        0.879231473010064,
+        0.9319923371647509
+      ],
+      "finish_reasons": [
+        "length",
+        "length",
+        "length"
+      ],
+      "correctness_screened_decode_median": null,
+      "quality": "SEPARATE_FUNCTIONAL_TASKS_REQUIRED",
+      "client_ttft_ms": null
+    },
+    "prose": {
+      "measured": 3,
+      "complete": true,
+      "repeat": {
+        "status": "FAIL",
+        "comparisons": [
+          {
+            "status": "FAIL",
+            "first_diff_token_index": 160,
+            "output_text_exact": false
+          },
+          {
+            "status": "FAIL",
+            "first_diff_token_index": 160,
+            "output_text_exact": false
+          }
+        ]
+      },
+      "reference": [
+        {
+          "status": "FAIL",
+          "comparisons": [
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 13,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 13,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 13,
+              "output_text_exact": false
+            }
+          ]
+        },
+        {
+          "status": "FAIL",
+          "comparisons": [
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 13,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 13,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 13,
+              "output_text_exact": false
+            }
+          ]
+        },
+        {
+          "status": "FAIL",
+          "comparisons": [
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 13,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 13,
+              "output_text_exact": false
+            },
+            {
+              "status": "FAIL",
+              "first_diff_token_index": 13,
+              "output_text_exact": false
+            }
+          ]
+        }
+      ],
+      "reference_status": "FAIL",
+      "exact_screen_pass": false,
+      "observed": {
+        "decode_tps": {
+          "n": 3,
+          "median": 23.086579015931218,
+          "min": 22.86865455784761,
+          "max": 24.6471643696447,
+          "sample_sd": 0.9700528221283095,
+          "mad": 0.21792445808360839,
+          "raw": [
+            22.86865455784761,
+            23.086579015931218,
+            24.6471643696447
+          ]
+        },
+        "http_e2e_tps": {
+          "n": 3,
+          "median": 23.021285300652714,
+          "min": 22.819540406402684,
+          "max": 24.56468861991324,
+          "sample_sd": 0.9546672278320736,
+          "mad": 0.20174489425003017,
+          "raw": [
+            22.819540406402684,
+            23.021285300652714,
+            24.56468861991324
+          ]
+        },
+        "http_wall_s": {
+          "n": 3,
+          "median": 43.43806120901718,
+          "min": 40.70884086799924,
+          "max": 43.82209204000537,
+          "sample_sd": 1.6974714631363264,
+          "mad": 0.3840308309881948,
+          "raw": [
+            43.82209204000537,
+            43.43806120901718,
+            40.70884086799924
+          ]
+        },
+        "completion_tokens": {
+          "n": 3,
+          "median": 1000,
+          "min": 1000,
+          "max": 1000,
+          "sample_sd": 0.0,
+          "mad": 0,
+          "raw": [
+            1000,
+            1000,
+            1000
+          ]
+        },
+        "prompt_tokens": {
+          "n": 3,
+          "median": 82,
+          "min": 82,
+          "max": 82,
+          "sample_sd": 0.0,
+          "mad": 0,
+          "raw": [
+            82,
+            82,
+            82
+          ]
+        }
+      },
+      "acceptance": [
+        0.5962815405046481,
+        0.5186721991701245,
+        0.5505154639175258
+      ],
+      "finish_reasons": [
+        "length",
+        "length",
+        "length"
+      ],
+      "correctness_screened_decode_median": null,
+      "quality": "SEPARATE_FUNCTIONAL_TASKS_REQUIRED",
+      "client_ttft_ms": null
+    }
+  }
+}

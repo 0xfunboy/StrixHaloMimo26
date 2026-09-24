@@ -1,0 +1,42 @@
+--- launch.py
++++ launch_continuity_v1.py
+@@ -95,6 +95,21 @@
+ 
+ def dispatch(root,profile):
+     root=root.resolve();manifest=json.loads((root/'source-manifest.json').read_text());freeze=verify_freeze(root)
++    from mtp_process_v1 import verify_addendum
++    extension=verify_addendum(root)
++    add=json.loads((root/'continuity/addendum.json').read_text())
++    sealed=json.loads((root/'continuity/preparation.json').read_text())
++    if sealed['addendum_index_sha256']!=extension['addendum_index_sha256']:raise RuntimeError('ADDENDUM_PREPARATION_MISMATCH')
++    if profile=='T':
++        qrun=Path(manifest['runs']['Q']['run_dir'])
++        q=json.loads((qrun/'result.json').read_text())
++        off=json.loads((qrun/'mtp-off/summary.json').read_text())
++        if q.get('run_completion')!='PASS' or q.get('cleanup',{}).get('status')!='PASS' or off.get('records')!=12:raise RuntimeError('Q_NOT_QUALIFIED_FOR_MTP')
++        manifest['runs']['T']=add['mtp_run']
++        manifest['profiles']['T']={'status':'ADMITTED'}
++        manifest['order']=manifest['order']+['T']
++    elif profile=='Q':
++        manifest['runs']['Q']['config']='continuity/config-Q.json'
+     prep=json.loads((root/'preparation.json').read_text())
+     if prep['source_index_sha256']!=freeze['index_sha256']:raise RuntimeError('PREPARATION_INDEX_MISMATCH')
+     if json.loads((root/'preflight/peer-stage.json').read_text())['source_index_sha256']!=freeze['index_sha256']:raise RuntimeError('PEER_NOT_STAGED')
+@@ -123,7 +138,7 @@
+           '--property=RuntimeMaxSec='+str(info['supervisor_runtime_s']),'--property=TimeoutStopSec='+str(info['supervisor_stop_s']),
+           '--property=ExecStopPost=/usr/bin/python3 '+str(root/'sources/window_cleanup.py')+' '+info['run_id'],
+           '--property=StandardOutput=append:'+str(run/'supervisor.log'),'--property=StandardError=append:'+str(run/'supervisor.log'),
+-          '--','/usr/bin/python3',str(root/'sources/window_runner.py'),info['run_id']]
++          '--','/usr/bin/python3',str(root/('sources/window_runner_continuity_v1.py' if profile in ('Q','T') else 'sources/window_runner.py')),info['run_id']]
+     atomic(run/'dispatch.json',{'state':'INTENT','at':now(),'profile':profile,'source_index_sha256':freeze['index_sha256'],'preparation_commit':prep['preparation_commit'],'command':argv},exclusive=True)
+     try:
+         cp=subprocess.run(argv,capture_output=True,text=True,timeout=20)
+@@ -137,7 +152,7 @@
+ 
+ 
+ def main():
+-    p=argparse.ArgumentParser();p.add_argument('action',choices=['status','stage-peer','launch']);p.add_argument('profile',nargs='?',choices=['Q','M','D','O']);p.add_argument('--root',type=Path,default=ROOT);a=p.parse_args()
++    p=argparse.ArgumentParser();p.add_argument('action',choices=['status','stage-peer','launch']);p.add_argument('profile',nargs='?',choices=['Q','M','D','O','T']);p.add_argument('--root',type=Path,default=ROOT);a=p.parse_args()
+     if a.action=='status':result=reconcile(a.root)
+     elif a.action=='stage-peer':result=stage(a.root)
+     else:

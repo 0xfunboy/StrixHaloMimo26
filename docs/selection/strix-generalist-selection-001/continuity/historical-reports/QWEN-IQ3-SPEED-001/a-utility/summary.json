@@ -1,0 +1,556 @@
+{
+  "schema": "qwen-iq3-utility-v1",
+  "status": "COMPLETE",
+  "error": null,
+  "records": [
+    {
+      "id": "money_arithmetic",
+      "kind": "reasoning",
+      "metrics": {
+        "decode_tps": 23.324672906329265,
+        "http_e2e_tps": 22.017726775810424,
+        "http_wall_s": 22.073123395006405,
+        "completion_tokens": 486,
+        "prompt_tokens": 164,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 0,
+          "prompt_n": 164,
+          "prompt_ms": 1275.556,
+          "prompt_per_token_ms": 7.777780487804878,
+          "prompt_per_second": 128.571383773037,
+          "predicted_n": 486,
+          "predicted_ms": 20793.432,
+          "predicted_per_token_ms": 42.87305567010309,
+          "predicted_per_second": 23.324672906329265
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 486,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "answer": {
+          "subtotal_cents": 7440,
+          "discounted_cents": 6547,
+          "vat_cents": 1440,
+          "total_cents": 7987
+        }
+      }
+    },
+    {
+      "id": "shortest_path",
+      "kind": "reasoning",
+      "metrics": {
+        "decode_tps": 23.440624015541825,
+        "http_e2e_tps": 21.859091393722384,
+        "http_wall_s": 13.99875202900148,
+        "completion_tokens": 306,
+        "prompt_tokens": 162,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 120,
+          "prompt_ms": 917.898,
+          "prompt_per_token_ms": 7.649150000000001,
+          "prompt_per_second": 130.7334801906094,
+          "predicted_n": 306,
+          "predicted_ms": 13011.599,
+          "predicted_per_token_ms": 42.660980327868856,
+          "predicted_per_second": 23.440624015541825
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 306,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "answer": {
+          "path": [
+            "A",
+            "C",
+            "B",
+            "D",
+            "E"
+          ],
+          "cost": 10
+        }
+      }
+    },
+    {
+      "id": "lru_trace",
+      "kind": "reasoning",
+      "metrics": {
+        "decode_tps": 23.413997351101763,
+        "http_e2e_tps": 22.493877506642622,
+        "http_wall_s": 26.09598988998914,
+        "completion_tokens": 587,
+        "prompt_tokens": 168,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 126,
+          "prompt_ms": 966.381,
+          "prompt_per_token_ms": 7.669690476190476,
+          "prompt_per_second": 130.38335811651928,
+          "predicted_n": 587,
+          "predicted_ms": 25027.764,
+          "predicted_per_token_ms": 42.709494880546075,
+          "predicted_per_second": 23.413997351101763
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 587,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "answer": {
+          "hits": 2,
+          "misses": 7,
+          "evicted": [
+            "B",
+            "A",
+            "D",
+            "C"
+          ],
+          "lru_to_mru": [
+            "E",
+            "B",
+            "D"
+          ]
+        }
+      }
+    },
+    {
+      "id": "code_output_reasoning",
+      "kind": "reasoning",
+      "metrics": {
+        "decode_tps": 23.390988318774998,
+        "http_e2e_tps": 21.96907498371867,
+        "http_wall_s": 16.386670820997097,
+        "completion_tokens": 360,
+        "prompt_tokens": 202,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 160,
+          "prompt_ms": 938.826,
+          "prompt_per_token_ms": 5.8676625,
+          "prompt_per_second": 170.42561667444232,
+          "predicted_n": 360,
+          "predicted_ms": 15347.791,
+          "predicted_per_token_ms": 42.7515069637883,
+          "predicted_per_second": 23.390988318774998
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 360,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "answer": {
+          "printed_list": [
+            6,
+            3,
+            0,
+            6
+          ],
+          "printed_sum": 15
+        }
+      }
+    },
+    {
+      "id": "balanced",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 23.347412384622864,
+        "http_e2e_tps": 21.007014519761512,
+        "http_wall_s": 4.665108404995408,
+        "completion_tokens": 98,
+        "prompt_tokens": 42,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 0,
+          "prompt_n": 42,
+          "prompt_ms": 420.245,
+          "prompt_per_token_ms": 10.005833333333333,
+          "prompt_per_second": 99.94170067460647,
+          "predicted_n": 98,
+          "predicted_ms": 4154.636,
+          "predicted_per_token_ms": 42.83129896907217,
+          "predicted_per_second": 23.347412384622864
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 98,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LXzQ1MjFmYzI1MmI0YjRiNjE4Yjg0ODAzMTZmMmUwNjM2Cg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      }
+    },
+    {
+      "id": "rle",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 23.386951818201865,
+        "http_e2e_tps": 21.43484933632732,
+        "http_wall_s": 4.945217870990746,
+        "completion_tokens": 106,
+        "prompt_tokens": 47,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 0,
+          "prompt_n": 47,
+          "prompt_ms": 405.866,
+          "prompt_per_token_ms": 8.635446808510638,
+          "prompt_per_second": 115.80176708568838,
+          "predicted_n": 106,
+          "predicted_ms": 4489.683,
+          "predicted_per_token_ms": 42.75888571428571,
+          "predicted_per_second": 23.386951818201865
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 106,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LXzI0NmFiZTNhNWE5OTQ2MzM5MDEyNDkyY2Q1YjgzYzc2Cg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      }
+    },
+    {
+      "id": "merge_intervals",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 23.49853525796892,
+        "http_e2e_tps": 22.01340118666459,
+        "http_wall_s": 6.4506160949822515,
+        "completion_tokens": 142,
+        "prompt_tokens": 44,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 0,
+          "prompt_n": 44,
+          "prompt_ms": 405.742,
+          "prompt_per_token_ms": 9.221409090909091,
+          "prompt_per_second": 108.44329647904333,
+          "predicted_n": 142,
+          "predicted_ms": 6000.374,
+          "predicted_per_token_ms": 42.555843971631205,
+          "predicted_per_second": 23.49853525796892
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 142,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LXzllZTUyYzgxNDA0YjQxNGRiYjQ4ZjYxNTE3MWM5ZjFiCg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      }
+    },
+    {
+      "id": "lru",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 23.429428819020643,
+        "http_e2e_tps": 22.236771359450763,
+        "http_wall_s": 10.02843427201151,
+        "completion_tokens": 223,
+        "prompt_tokens": 62,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 0,
+          "prompt_n": 62,
+          "prompt_ms": 509.057,
+          "prompt_per_token_ms": 8.210596774193549,
+          "prompt_per_second": 121.79382662452339,
+          "predicted_n": 223,
+          "predicted_ms": 9475.263,
+          "predicted_per_token_ms": 42.68136486486487,
+          "predicted_per_second": 23.429428819020643
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 223,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LXzY2ZWE5ODVjNGRjNDQ1M2U4ODliMmQwYjkzNjMyNDcxCg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      }
+    },
+    {
+      "id": "csv_sum",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 23.31946714736611,
+        "http_e2e_tps": 20.864868652087612,
+        "http_wall_s": 4.025906005001161,
+        "completion_tokens": 84,
+        "prompt_tokens": 51,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 0,
+          "prompt_n": 51,
+          "prompt_ms": 417.843,
+          "prompt_per_token_ms": 8.193,
+          "prompt_per_second": 122.05541315757354,
+          "predicted_n": 84,
+          "predicted_ms": 3559.258,
+          "predicted_per_token_ms": 42.882626506024096,
+          "predicted_per_second": 23.31946714736611
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 84,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LX2QxNDZkOTE3ZjI0YTQ2MzViYzZjNzY1ZWU2NjZiZjEyCg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      }
+    },
+    {
+      "id": "regex_ip",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 23.487170511933186,
+        "http_e2e_tps": 21.76359111776719,
+        "http_wall_s": 5.743537420989014,
+        "completion_tokens": 125,
+        "prompt_tokens": 52,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 0,
+          "prompt_n": 52,
+          "prompt_ms": 419.948,
+          "prompt_per_token_ms": 8.075923076923077,
+          "prompt_per_second": 123.82485450579595,
+          "predicted_n": 125,
+          "predicted_ms": 5279.478,
+          "predicted_per_token_ms": 42.576435483870966,
+          "predicted_per_second": 23.487170511933186
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 125,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LXzY3MDRiYWE1ZmM4NDQyNGY4MTI2ZmQ2ZTEzNzI0ZDdhCg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      }
+    },
+    {
+      "id": "fib_arith",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 23.36812000459322,
+        "http_e2e_tps": 20.713489298621028,
+        "http_wall_s": 4.53810551398783,
+        "completion_tokens": 94,
+        "prompt_tokens": 67,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 0,
+          "prompt_n": 67,
+          "prompt_ms": 513.137,
+          "prompt_per_token_ms": 7.65876119402985,
+          "prompt_per_second": 130.56941908301295,
+          "predicted_n": 94,
+          "predicted_ms": 3979.781,
+          "predicted_per_token_ms": 42.793344086021506,
+          "predicted_per_second": 23.36812000459322
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 94,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LX2IzMGU5MWQzZTI5NzQzNjVhYzZlNGIwYzUzNmQyM2Q1Cg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      }
+    },
+    {
+      "id": "topo",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 23.3707147328281,
+        "http_e2e_tps": 22.078016168783527,
+        "http_wall_s": 9.058784923021449,
+        "completion_tokens": 200,
+        "prompt_tokens": 61,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 0,
+          "prompt_n": 61,
+          "prompt_ms": 498.426,
+          "prompt_per_token_ms": 8.170918032786885,
+          "prompt_per_second": 122.38526882626509,
+          "predicted_n": 200,
+          "predicted_ms": 8514.93,
+          "predicted_per_token_ms": 42.78859296482412,
+          "predicted_per_second": 23.3707147328281
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 200,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "returncode": 0,
+        "timed_out": false,
+        "stdout_base64": "SVEzX0NIRUNLX09LXzYzMzRmMmE4OGY3NzQzNWNiMzM1ZGQyYWE5ZjAxMDgwCg==",
+        "stderr_base64": "",
+        "isolation": "bwrap user/pid/net/ipc/uts namespaces; read-only Python/runtime only; no host home or model mounts",
+        "limits": {
+          "cpu_seconds": 3,
+          "wall_seconds": 8,
+          "address_space_bytes": 268435456,
+          "processes": 0,
+          "file_bytes": 1048576,
+          "tmpfs_bytes": 16777216,
+          "open_files": 32
+        }
+      }
+    }
+  ],
+  "attempted": 12,
+  "completed_responses": 12,
+  "planned": 12,
+  "counts": {
+    "PASS": 12,
+    "WRONG_ANSWER": 0,
+    "FAIL": 0,
+    "INCOMPLETE": 0,
+    "TIMEOUT": 0,
+    "BLOCKED_SANDBOX": 0
+  },
+  "intelligence_equivalence": "NOT_ESTABLISHED",
+  "qualification": "NOT_PROMOTED"
+}

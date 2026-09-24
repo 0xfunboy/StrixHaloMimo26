@@ -1,0 +1,159 @@
+{
+  "schema": "qwen-fa-replay-v1",
+  "status": "NON_PROMOTED",
+  "performance_qualification": false,
+  "mode": "ISOLATED_GPU_REPLAY",
+  "trace": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/replay-layer3-003/target.1414183.jsonl",
+  "binary": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/replay-layer3-003/target.1414183.fa.bin",
+  "ggml_base": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c2-bin/libggml-base.so.0.22.0",
+  "ggml_hip": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c2-bin/libggml-hip.so.0.22.0",
+  "trace_validation": {
+    "jsonl_records": 297,
+    "native_bytes": 805376,
+    "position": 46,
+    "endpoint_name": "kqv_out-3",
+    "observer_controls_exact": true
+  },
+  "operator_evaluations": 4,
+  "scope": "Original native spans/strides/op parameters. No model, network, sampling, promotion or performance measurement.",
+  "causal_limit": "Arms retain their own Q/K/V/mask; future cache rows can differ. Cross-arm difference alone does not isolate dispatch.",
+  "traced_first_query_m1_vs_m4": {
+    "logical_f32_elements": 6144,
+    "different_elements": 6144,
+    "byte_exact": false,
+    "nonfinite_elements": 0,
+    "max_abs": 0.004899084568023682,
+    "exact_finite": false
+  },
+  "backend": "ROCm0",
+  "arms": [
+    {
+      "capture": 1,
+      "query_count": 1,
+      "runs": [
+        {
+          "repeat": 1,
+          "output": "capture1-run1.bin",
+          "native_physical_span_byte_exact": true,
+          "physical_span_bytes": 24576,
+          "physical_span_note": "Includes padding; logical comparison is authoritative for computed values.",
+          "native_full_logical": {
+            "logical_f32_elements": 6144,
+            "different_elements": 0,
+            "byte_exact": true,
+            "nonfinite_elements": 0,
+            "max_abs": 0.0,
+            "exact_finite": true
+          },
+          "native_first_query": {
+            "logical_f32_elements": 6144,
+            "different_elements": 0,
+            "byte_exact": true,
+            "nonfinite_elements": 0,
+            "max_abs": 0.0,
+            "exact_finite": true
+          }
+        },
+        {
+          "repeat": 2,
+          "output": "capture1-run2.bin",
+          "native_physical_span_byte_exact": true,
+          "physical_span_bytes": 24576,
+          "physical_span_note": "Includes padding; logical comparison is authoritative for computed values.",
+          "native_full_logical": {
+            "logical_f32_elements": 6144,
+            "different_elements": 0,
+            "byte_exact": true,
+            "nonfinite_elements": 0,
+            "max_abs": 0.0,
+            "exact_finite": true
+          },
+          "native_first_query": {
+            "logical_f32_elements": 6144,
+            "different_elements": 0,
+            "byte_exact": true,
+            "nonfinite_elements": 0,
+            "max_abs": 0.0,
+            "exact_finite": true
+          },
+          "repeat_full_logical": {
+            "logical_f32_elements": 6144,
+            "different_elements": 0,
+            "byte_exact": true,
+            "nonfinite_elements": 0,
+            "max_abs": 0.0,
+            "exact_finite": true
+          }
+        }
+      ]
+    },
+    {
+      "capture": 2,
+      "query_count": 4,
+      "runs": [
+        {
+          "repeat": 1,
+          "output": "capture2-run1.bin",
+          "native_physical_span_byte_exact": false,
+          "physical_span_bytes": 98304,
+          "physical_span_note": "Includes padding; logical comparison is authoritative for computed values.",
+          "native_full_logical": {
+            "logical_f32_elements": 24576,
+            "different_elements": 24576,
+            "byte_exact": false,
+            "nonfinite_elements": 0,
+            "max_abs": 0.004899084568023682,
+            "exact_finite": false
+          },
+          "native_first_query": {
+            "logical_f32_elements": 6144,
+            "different_elements": 6144,
+            "byte_exact": false,
+            "nonfinite_elements": 0,
+            "max_abs": 0.004899084568023682,
+            "exact_finite": false
+          }
+        },
+        {
+          "repeat": 2,
+          "output": "capture2-run2.bin",
+          "native_physical_span_byte_exact": false,
+          "physical_span_bytes": 98304,
+          "physical_span_note": "Includes padding; logical comparison is authoritative for computed values.",
+          "native_full_logical": {
+            "logical_f32_elements": 24576,
+            "different_elements": 24576,
+            "byte_exact": false,
+            "nonfinite_elements": 0,
+            "max_abs": 0.004899084568023682,
+            "exact_finite": false
+          },
+          "native_first_query": {
+            "logical_f32_elements": 6144,
+            "different_elements": 6144,
+            "byte_exact": false,
+            "nonfinite_elements": 0,
+            "max_abs": 0.004899084568023682,
+            "exact_finite": false
+          },
+          "repeat_full_logical": {
+            "logical_f32_elements": 24576,
+            "different_elements": 0,
+            "byte_exact": true,
+            "nonfinite_elements": 0,
+            "max_abs": 0.0,
+            "exact_finite": true
+          }
+        }
+      ]
+    }
+  ],
+  "replayed_first_query_m1_vs_m4": {
+    "logical_f32_elements": 6144,
+    "different_elements": 0,
+    "byte_exact": true,
+    "nonfinite_elements": 0,
+    "max_abs": 0.0,
+    "exact_finite": true
+  }
+}

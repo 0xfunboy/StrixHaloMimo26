@@ -1,0 +1,141 @@
+{
+  "schema": "qwen-native-qualification-v1",
+  "phase": "measure",
+  "screening_pass": false,
+  "errors": [
+    {
+      "request": "code-1",
+      "error": "exact_output_comparison_failed"
+    }
+  ],
+  "metrics_by_category": {
+    "code": {
+      "category": "code",
+      "measured_requests": 1,
+      "native_validation_pass": false,
+      "repeat_status": "FAIL",
+      "reference_status": "FAIL",
+      "observed_median_decode_tps": null,
+      "correctness_screened_median_decode_tps": null,
+      "median_http_wall_s": null,
+      "median_http_e2e_tps": null,
+      "acceptance": [
+        0.8983050847457628
+      ],
+      "ttft_ms": null,
+      "ttft_status": "NOT_MEASURED_NON_STREAMING",
+      "screening_pass": false
+    },
+    "prose": {
+      "category": "prose",
+      "measured_requests": 0,
+      "native_validation_pass": false,
+      "repeat_status": "FAIL",
+      "reference_status": "FAIL",
+      "observed_median_decode_tps": null,
+      "correctness_screened_median_decode_tps": null,
+      "median_http_wall_s": null,
+      "median_http_e2e_tps": null,
+      "acceptance": [],
+      "ttft_ms": null,
+      "ttft_status": "NOT_MEASURED_NON_STREAMING",
+      "screening_pass": false
+    }
+  },
+  "records": [
+    {
+      "name": "warmup",
+      "category": null,
+      "excluded_warmup": true,
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 32,
+      "token_ID_count": 32,
+      "decode_tps": 30.120979456520367,
+      "http_wall_s": 1.5428368499851786,
+      "http_e2e_tps": 20.741013542882005,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 22,
+        "prompt_ms": 412.529,
+        "prompt_per_token_ms": 18.75131818181818,
+        "prompt_per_second": 53.32958410196616,
+        "predicted_n": 32,
+        "predicted_ms": 1029.183,
+        "predicted_per_token_ms": 33.199451612903225,
+        "predicted_per_second": 30.120979456520367,
+        "draft_n": 21,
+        "draft_n_accepted": 21
+      },
+      "acceptance": 1.0,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required"
+    },
+    {
+      "name": "code-1",
+      "category": "code",
+      "excluded_warmup": false,
+      "pass": true,
+      "errors": [],
+      "actual_tokens": 256,
+      "token_ID_count": 256,
+      "decode_tps": 25.698124833025172,
+      "http_wall_s": 10.63018238398945,
+      "http_e2e_tps": 24.082371379212837,
+      "native_timings": {
+        "cache_n": 0,
+        "prompt_n": 44,
+        "prompt_ms": 468.1,
+        "prompt_per_token_ms": 10.638636363636364,
+        "prompt_per_second": 93.99700918607134,
+        "predicted_n": 256,
+        "predicted_ms": 9922.903,
+        "predicted_per_token_ms": 38.913345098039215,
+        "predicted_per_second": 25.698124833025172,
+        "draft_n": 177,
+        "draft_n_accepted": 159
+      },
+      "acceptance": 0.8983050847457628,
+      "ttft_ms": null,
+      "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required",
+      "repeat_comparison": null,
+      "reference_comparison": {
+        "status": "FAIL",
+        "first_diff_token_index": 146,
+        "output_text_exact": false
+      }
+    }
+  ],
+  "reference": {
+    "directory": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-QUAL-001/c2-target-measure",
+    "raw_sha256": {
+      "code-1-request.json": "681357f04a90a1d48efe0e22e80c9783703499e7d7c586bea9c4bd6a2ccee870",
+      "code-1-response.json": "8d19a8f32a5101a4546b63db5b23ef58b76701e03a37af8c3ad1f99373bf0bb6",
+      "code-1-result.json": "f9b733b9e81b5212d49a581dae9ac085ebee4adcb311b24033397a9bd045e1a5",
+      "code-2-request.json": "681357f04a90a1d48efe0e22e80c9783703499e7d7c586bea9c4bd6a2ccee870",
+      "code-2-response.json": "43d3e6f40c6bda0aa76ff1ced24708ff5dc1ce8a6fb535d3df602338345ec933",
+      "code-2-result.json": "ac4bf13a83c177edaa6d0a6479524317d4fa985b418fe9d121afed51a2c8d5df",
+      "code-3-request.json": "681357f04a90a1d48efe0e22e80c9783703499e7d7c586bea9c4bd6a2ccee870",
+      "code-3-response.json": "e154975e898f23f681a887a4e651116f292693eea045bde592371791ed22cb37",
+      "code-3-result.json": "5a9a4a39ca1aea9dacbd4dec45184518f8ea2e7b3bfb97f1768f6a3ae60bc12d",
+      "prose-1-request.json": "9a2bfc652eeb364d7674fb100baa848ca72b1c34a86249fb17393118ed211b69",
+      "prose-1-response.json": "0112282508b2777bae9e68444965ab98da5d406c0a42abfce2b82985d13dbcb6",
+      "prose-1-result.json": "fe5352ef3ded6fb1234a1030d8442b5820e401e36771dc6d8ba40d0bb328577d",
+      "prose-2-request.json": "9a2bfc652eeb364d7674fb100baa848ca72b1c34a86249fb17393118ed211b69",
+      "prose-2-response.json": "aae90e2c1bde904ece5c4bb4618060c4095096759ced2abb8baff23829574813",
+      "prose-2-result.json": "9cc5c84490f8d9b4f22de3b0f450e092b6134f3667a935a2ddade49bfefe9a63",
+      "prose-3-request.json": "9a2bfc652eeb364d7674fb100baa848ca72b1c34a86249fb17393118ed211b69",
+      "prose-3-response.json": "35cfb797595fc1d12747f5900c8fd78e445feeeaba0c63fd6fcde3c06f0193fd",
+      "prose-3-result.json": "a1b0fd700cce282a897d74721cd39d8e00f02b2a3b33ebb7dfdf91d7f8ee8508"
+    },
+    "protocol_sha256": "b1e29d90668bb72a51d1c922555b54c64887043617e80620b5e6356b288ddaa4"
+  },
+  "qualification": "NOT_PROMOTED",
+  "quality_equivalence": "NOT_ESTABLISHED",
+  "api_smoke": "SEPARATE_REQUIRED",
+  "full_logits_correctness": "NOT_EVALUATED",
+  "runtime_identity_scope": "Controller-supplied pinned JSON, not live process attestation",
+  "request_mode": "raw_native_completion",
+  "no_retry": true,
+  "finished_unix": 1788684265.070715
+}

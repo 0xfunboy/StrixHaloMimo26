@@ -1,0 +1,48 @@
+{
+  "schema": "strix-generalist-window-v1",
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "campaign_root": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001",
+  "profile": "Q",
+  "run_id": "generalist-selection-001-Q-001",
+  "real_k2": true,
+  "use_compute_lock": true,
+  "allowed_k2_states": [
+    "READY"
+  ],
+  "quiesce_timeout_sec": 720,
+  "worker_runtime_sec": 55120,
+  "worker_stop_sec": 120,
+  "work_timeout_sec": 55000,
+  "restore_timeout_sec": 1200,
+  "rank_stagger_sec": 0,
+  "poll_sec": 2,
+  "reserved_ports": [
+    18431
+  ],
+  "rank0": {
+    "unit": "mimo26-gs001-q-r0-001",
+    "argv": [
+      "/usr/bin/env",
+      "-i",
+      "PATH=/home/funboy/StrixHaloClusterGLM/.engine/venv/bin:/usr/bin:/bin",
+      "LD_LIBRARY_PATH=/home/funboy/ai-exp/strix-generalist-selection-001/qwen-build/bin:/usr/lib/x86_64-linux-gnu",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "HF_HUB_OFFLINE=1",
+      "TRANSFORMERS_OFFLINE=1",
+      "TOKENIZERS_PARALLELISM=false",
+      "GS_ROOT=/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001",
+      "GS_RUN_DIR=/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-Q-001",
+      "GS_PROFILE=Q",
+      "PYTHONPATH=/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_core/share/amd_smi",
+      "HOME=/home/funboy",
+      "USER=funboy",
+      "LOGNAME=funboy",
+      "XDG_RUNTIME_DIR=/run/user/1000",
+      "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus",
+      "LANG=C.UTF-8",
+      "/home/funboy/StrixHaloClusterGLM/.engine/venv/bin/python",
+      "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/adapter_llama_continuity_v1.py"
+    ]
+  },
+  "rank1": null
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "strix-generalist-addendum-v1",
+  "at": "2026-09-24T10:11:56+0200",
+  "base_preparation_commit": "87442a8e1b999e5f33165d0b6b563eac5248ab15",
+  "base_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "authorization": "User continuity integration 2026-09-24; original mandate section 8",
+  "config_by_run": {
+    "generalist-selection-001-Q-001": "continuity/config-Q.json",
+    "generalist-selection-001-QMTP-001": "continuity/config-MTP.json"
+  },
+  "mtp_run": {
+    "run_id": "generalist-selection-001-QMTP-001",
+    "run_dir": "/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-QMTP-001",
+    "config": "continuity/config-MTP.json",
+    "supervisor_unit": "mimo26-gs001-supervisor-qmtp-001.service",
+    "supervisor_runtime_s": 57040,
+    "supervisor_stop_s": 1350
+  },
+  "max_additional_model_loads": 1,
+  "max_mtp_requests_per_mode": 12,
+  "max_mtp_output_tokens_per_mode": 2304,
+  "primary_32_requests_unchanged": true,
+  "primary_cases_scoring_unchanged": true,
+  "timeouts_unchanged": true,
+  "benchmark_input_tokens": {
+    "prose": 2111,
+    "code": 2636
+  },
+  "benchmark_reference_rule": "OFF preliminary references collected in Q load; eligible only after all six ON equivalence pairs pass. No replacement for any short or mismatching response.",
+  "trace_policy": "LLAMA_TRACE=1 in Q and MTP process; existing bounded native verification logs, no GPU profiler; benchmark numbers describe this explicit diagnostic-logging configuration."
+}

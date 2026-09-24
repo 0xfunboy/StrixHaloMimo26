@@ -1,0 +1,2090 @@
+{
+  "schema": "qwen-iq3-functional-offline-audit-v1",
+  "created_utc": "2026-09-06T16:38:57.824955+00:00",
+  "manifest_sha256": "bee9f07b13a17f90c144dfaf6bfc5e4a08ae983cc0ecb7faf1d8cea59a81d9a7",
+  "auditor_sha256": "057132d99ae5934582a1935a045898cfc35ca07b881d16b4c4387d1dea459b5a",
+  "a": {
+    "status": "COMPLETE",
+    "protocol_sha256": "10774fdf3764103603b1c87219e25254812f6f80a3f923abc80405c295312e7a",
+    "identity_contract": {
+      "runtime_sha256": {
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/llama-server": "a0f4a6e6650aaa22b48b017ccc201645fce940fea4ca157fcfff103939e2d626",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml-base.so.0.22.0": "5aa194f0908be9f67b292d83ccc234d82c228a81474706bb7b46b0b0b1530fe4",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml-cpu.so.0.22.0": "de229f3ec21bf003a6cbb1d273abbe72cbeb3b130b409deae52061313785e2e5",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml-hip.so.0.22.0": "a0722fe2dfcd83a9b15628e258b4f62c119db7e52c49a0cd1c0b6e95fa1c5641",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml-rpc.so.0.22.0": "a88c536e2669143790e9e51016297ea12d3583a8c0bdc737992ee19fb8aed8bd",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml.so.0.22.0": "1b00188a559e2e25815962a1bdf3b64c967791afef95965e350ac3864769e1bc",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libllama-bench-impl.so": "5b1d38e35dbc8ec0fb893d23603f5bae2119482412acf067b7cd2344d7c25217",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libllama-common.so.0.3.0": "6f0cefb25cb2c6d70d68b802170d8641ec2e9c0603a3948db693e68d0059d014",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libllama-server-impl.so": "7b1d6c0c5cd8c98134019e31c986130059cd6045236ea7fe51df5bdd85e9f71c",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libllama.so.0.3.0": "7ca320b7bbfb5106cf51992b1cd3d31d8fb5a355bfb872df3b6b98ad6c782e3f",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libmtmd.so.0.3.0": "088b7c197678ac5403504e5190d6468bae7007c0a79fd92f4f207596f05b21a1"
+      },
+      "model_sha256": {
+        "/home/funboy/models/gguf/qwen3.8-flash-next-unsloth-iq3-xxs/UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00001-of-00003.gguf": "268f81fdedf3149a538f252308927a4d5d1f6e062c178568a51e3b519744f8a8",
+        "/home/funboy/models/gguf/qwen3.8-flash-next-unsloth-iq3-xxs/UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00002-of-00003.gguf": "cfe600b236b88c7fad1613a5ca5e83b9f2beb63cbd44c32b2be50a44747c695f",
+        "/home/funboy/models/gguf/qwen3.8-flash-next-unsloth-iq3-xxs/UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00003-of-00003.gguf": "f1912ba34c79427d2295a58dcb2b732b5931af5bef7a373c60557a57d9ee7250",
+        "/home/funboy/models/gguf/qwen3.8-flash-next-mtp-easiix/mtp-Qwen3.8-Flash-Next-Q8_0.gguf": "9db03a687670608286e99b563fcc86d0ee76c8dd863f64b2afc0b54eb0eb975d"
+      },
+      "target_parameters": {
+        "ctx": 8192,
+        "kv_k": "f16",
+        "kv_v": "f16",
+        "placement": "SSD/mmap/lazy",
+        "batch": 8192,
+        "ubatch": 2048,
+        "threads": 4,
+        "parallel": 1,
+        "fa": "on",
+        "device": "ROCm0",
+        "graph": "build default HIP ON",
+        "load": "-lm mmap --tensor-read-lazy on",
+        "quant": "UD-IQ3_XXS",
+        "reasoning_preserve": true,
+        "verbosity": 4
+      },
+      "reasoning_effort": "xhigh"
+    },
+    "identity": {
+      "campaign": "QWEN-IQ3-QUALITY-002",
+      "mode": "target",
+      "runtime_sha256": {
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/llama-server": "a0f4a6e6650aaa22b48b017ccc201645fce940fea4ca157fcfff103939e2d626",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml-base.so.0.22.0": "5aa194f0908be9f67b292d83ccc234d82c228a81474706bb7b46b0b0b1530fe4",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml-cpu.so.0.22.0": "de229f3ec21bf003a6cbb1d273abbe72cbeb3b130b409deae52061313785e2e5",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml-hip.so.0.22.0": "a0722fe2dfcd83a9b15628e258b4f62c119db7e52c49a0cd1c0b6e95fa1c5641",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml-rpc.so.0.22.0": "a88c536e2669143790e9e51016297ea12d3583a8c0bdc737992ee19fb8aed8bd",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml.so.0.22.0": "1b00188a559e2e25815962a1bdf3b64c967791afef95965e350ac3864769e1bc",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libllama-bench-impl.so": "5b1d38e35dbc8ec0fb893d23603f5bae2119482412acf067b7cd2344d7c25217",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libllama-common.so.0.3.0": "6f0cefb25cb2c6d70d68b802170d8641ec2e9c0603a3948db693e68d0059d014",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libllama-server-impl.so": "7b1d6c0c5cd8c98134019e31c986130059cd6045236ea7fe51df5bdd85e9f71c",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libllama.so.0.3.0": "7ca320b7bbfb5106cf51992b1cd3d31d8fb5a355bfb872df3b6b98ad6c782e3f",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libmtmd.so.0.3.0": "088b7c197678ac5403504e5190d6468bae7007c0a79fd92f4f207596f05b21a1"
+      },
+      "model_sha256": {
+        "/home/funboy/models/gguf/qwen3.8-flash-next-unsloth-iq3-xxs/UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00001-of-00003.gguf": "268f81fdedf3149a538f252308927a4d5d1f6e062c178568a51e3b519744f8a8",
+        "/home/funboy/models/gguf/qwen3.8-flash-next-unsloth-iq3-xxs/UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00002-of-00003.gguf": "cfe600b236b88c7fad1613a5ca5e83b9f2beb63cbd44c32b2be50a44747c695f",
+        "/home/funboy/models/gguf/qwen3.8-flash-next-unsloth-iq3-xxs/UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00003-of-00003.gguf": "f1912ba34c79427d2295a58dcb2b732b5931af5bef7a373c60557a57d9ee7250",
+        "/home/funboy/models/gguf/qwen3.8-flash-next-mtp-easiix/mtp-Qwen3.8-Flash-Next-Q8_0.gguf": "9db03a687670608286e99b563fcc86d0ee76c8dd863f64b2afc0b54eb0eb975d"
+      },
+      "target_parameters": {
+        "ctx": 8192,
+        "kv_k": "f16",
+        "kv_v": "f16",
+        "placement": "SSD/mmap/lazy",
+        "batch": 8192,
+        "ubatch": 2048,
+        "threads": 4,
+        "parallel": 1,
+        "fa": "on",
+        "device": "ROCm0",
+        "graph": "build default HIP ON",
+        "load": "-lm mmap --tensor-read-lazy on",
+        "quant": "UD-IQ3_XXS",
+        "reasoning_preserve": true,
+        "verbosity": 4
+      },
+      "speculation": {},
+      "reasoning_effort": "xhigh",
+      "owner_attestation": {
+        "launcher_pid": 1558173,
+        "owner_nonce": "c6a1d0bad0d5a30a72d5809367da4da1",
+        "profile": "qwen-iq3-speed",
+        "campaign": "QWEN-IQ3-QUALITY-002",
+        "command": [
+          "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/llama-server",
+          "-m",
+          "/home/funboy/models/gguf/qwen3.8-flash-next-unsloth-iq3-xxs/UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00001-of-00003.gguf",
+          "--alias",
+          "qwen3.8-flash-next",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "18090",
+          "--device",
+          "ROCm0",
+          "-ngl",
+          "999",
+          "-fa",
+          "on",
+          "-ctk",
+          "f16",
+          "-ctv",
+          "f16",
+          "-lm",
+          "mmap",
+          "--tensor-read-lazy",
+          "on",
+          "-c",
+          "8192",
+          "-b",
+          "8192",
+          "-ub",
+          "2048",
+          "-t",
+          "4",
+          "--parallel",
+          "1",
+          "--jinja",
+          "--no-webui",
+          "-lv",
+          "4",
+          "--reasoning-preserve",
+          "--cors-origins",
+          "localhost",
+          "--chat-template-kwargs",
+          "{\"reasoning_effort\":\"xhigh\"}",
+          "--spec-type",
+          "none"
+        ],
+        "status": "ready_not_qualified",
+        "owned_units": [
+          {
+            "name": "strix-moe-api-qwen-iq3-001",
+            "remote": false,
+            "LoadState": "loaded",
+            "ActiveState": "active",
+            "InvocationID": "b4743ce88bd143c1ba61965aa18184a3",
+            "MainPID": "1558208"
+          }
+        ],
+        "runtime_seconds": 7200,
+        "preload_meminfo": {
+          "MemTotal": "       128134888 kB",
+          "MemFree": "        113241940 kB",
+          "MemAvailable": "   124857972 kB",
+          "Buffers": "          104516 kB",
+          "Cached": "         12317904 kB",
+          "SwapCached": "        16296 kB",
+          "Active": "         11955004 kB",
+          "Inactive": "        1641680 kB",
+          "Active(anon)": "     885272 kB",
+          "Inactive(anon)": "   288912 kB",
+          "Active(file)": "   11069732 kB",
+          "Inactive(file)": "  1352768 kB",
+          "Unevictable": "           0 kB",
+          "Mlocked": "               0 kB",
+          "SwapTotal": "       8388604 kB",
+          "SwapFree": "        4059956 kB",
+          "Zswap": "                 0 kB",
+          "Zswapped": "              0 kB",
+          "Dirty": "              2400 kB",
+          "Writeback": "             0 kB",
+          "AnonPages": "       1158288 kB",
+          "Mapped": "           262856 kB",
+          "Shmem": "               464 kB",
+          "KReclaimable": "     363852 kB",
+          "Slab": "             764884 kB",
+          "SReclaimable": "     363852 kB",
+          "SUnreclaim": "       401032 kB",
+          "KernelStack": "       20192 kB",
+          "PageTables": "        56376 kB",
+          "SecPageTables": "      5840 kB",
+          "NFS_Unstable": "          0 kB",
+          "Bounce": "                0 kB",
+          "WritebackTmp": "          0 kB",
+          "CommitLimit": "    72456048 kB",
+          "Committed_AS": "   11833684 kB",
+          "VmallocTotal": "   34359738367 kB",
+          "VmallocUsed": "       84924 kB",
+          "VmallocChunk": "          0 kB",
+          "Percpu": "            40192 kB",
+          "HardwareCorrupted": "     0 kB",
+          "AnonHugePages": "         0 kB",
+          "ShmemHugePages": "        0 kB",
+          "ShmemPmdMapped": "        0 kB",
+          "FileHugePages": "         0 kB",
+          "FilePmdMapped": "         0 kB",
+          "CmaTotal": "              0 kB",
+          "CmaFree": "         8890364 kB",
+          "Unaccepted": "            0 kB",
+          "Balloon": "               0 kB",
+          "HugePages_Total": "       0",
+          "HugePages_Free": "        0",
+          "HugePages_Rsvd": "        0",
+          "HugePages_Surp": "        0",
+          "Hugepagesize": "       2048 kB",
+          "Hugetlb": "               0 kB",
+          "DirectMap4k": "     1113288 kB",
+          "DirectMap2M": "    82403328 kB",
+          "DirectMap1G": "    49283072 kB"
+        },
+        "placement": "SSD/mmap/lazy",
+        "context": 8192,
+        "speculation": false,
+        "remote_model": false,
+        "environment": [
+          "PATH=/usr/bin:/bin",
+          "LD_LIBRARY_PATH=/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin:/home/funboy/ai-exp/runtimes/rocm-7.14-gfx1151/lib",
+          "HSA_OVERRIDE_GFX_VERSION=11.5.1",
+          "ROCBLAS_USE_HIPBLASLT=1",
+          "LLAMA_QSA_GATHER=1"
+        ]
+      },
+      "sidecar_sha_provenance": "Historical PLAN1118 SHA, not rehashed here; compatibleheader and localstat audited; sidecar not loaded in A",
+      "sidecar_stat": {
+        "st_dev": 66306,
+        "st_ino": 72359066,
+        "st_size": 4137429088,
+        "st_mtime_ns": 1787913022692593592,
+        "st_ctime_ns": 1787913031670932612
+      },
+      "ngram_note": "B uses source defaults n_match24/n_min48/n_max64 and state persists between requests; N4 is MTP only",
+      "previous_identity_sha256": "cb334bb36e2fc9972aa05d6afedeb4ef572044c9f460a5ee29ab2591f8b9ce75",
+      "previous_identity": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/a-identity.json"
+    },
+    "sandbox_preflight": {
+      "receipt_status": "PASS",
+      "marker_count": 1,
+      "unexpected_stdout_bytes": 0,
+      "stderr_text": "",
+      "scope": "Retained frozen-runner receipt checked; code not re-executed"
+    },
+    "aggregate": {
+      "all": {
+        "attempted": 20,
+        "pass": 8,
+        "counts": {
+          "INCOMPLETE": 12,
+          "PASS": 8
+        },
+        "http_seconds_all_attempts": 2006.0459611349215,
+        "http_seconds_correct_only": 375.2555186089303,
+        "http_seconds_per_correct_all_costs": 250.7557451418652,
+        "http_seconds_per_correct_excluding_failed_costs": 46.906939826116286,
+        "http_seconds_median_all_attempts": 135.69954801449785,
+        "completion_tokens": 45121,
+        "explicit_reasoning_count_available_tasks": 0,
+        "explicit_reasoning_tokens_partial_sum": 0
+      },
+      "reasoning": {
+        "attempted": 8,
+        "pass": 8,
+        "counts": {
+          "PASS": 8
+        },
+        "http_seconds_all_attempts": 375.2555186089303,
+        "http_seconds_correct_only": 375.2555186089303,
+        "http_seconds_per_correct_all_costs": 46.906939826116286,
+        "http_seconds_per_correct_excluding_failed_costs": 46.906939826116286,
+        "http_seconds_median_all_attempts": 47.80832306400407,
+        "completion_tokens": 8257,
+        "explicit_reasoning_count_available_tasks": 0,
+        "explicit_reasoning_tokens_partial_sum": 0
+      },
+      "executable-code": {
+        "attempted": 12,
+        "pass": 0,
+        "counts": {
+          "INCOMPLETE": 12
+        },
+        "http_seconds_all_attempts": 1630.7904425259912,
+        "http_seconds_correct_only": 0,
+        "http_seconds_per_correct_all_costs": null,
+        "http_seconds_per_correct_excluding_failed_costs": null,
+        "http_seconds_median_all_attempts": 135.81873910450668,
+        "completion_tokens": 36864,
+        "explicit_reasoning_count_available_tasks": 0,
+        "explicit_reasoning_tokens_partial_sum": 0
+      }
+    },
+    "tasks": [
+      {
+        "id": "ttl_lru_state",
+        "kind": "executable-code",
+        "http_seconds": 137.04297298498568,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 201,
+        "decode_tps": 22.633848053767295,
+        "http_e2e_tps": 22.416326303257925,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 13673,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "slot_constraint_schedule",
+        "kind": "reasoning",
+        "http_seconds": 24.387597412976902,
+        "http_status": 200,
+        "functional_status": "PASS",
+        "natural_finish": true,
+        "completion_tokens": 552,
+        "prompt_tokens": 206,
+        "decode_tps": 23.546581890994798,
+        "http_e2e_tps": 22.634455975818057,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 1406,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "PASS",
+          "plain_json_only": true
+        }
+      },
+      {
+        "id": "subtract_half_open",
+        "kind": "executable-code",
+        "http_seconds": 135.7453532469808,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 149,
+        "decode_tps": 22.780845580182888,
+        "http_e2e_tps": 22.630608904974256,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 11825,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "conditional_urn_fraction",
+        "kind": "reasoning",
+        "http_seconds": 20.63356902799569,
+        "http_status": 200,
+        "functional_status": "PASS",
+        "natural_finish": true,
+        "completion_tokens": 461,
+        "prompt_tokens": 202,
+        "decode_tps": 23.48564677250286,
+        "http_e2e_tps": 22.342232668255974,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 1208,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "PASS",
+          "plain_json_only": true
+        }
+      },
+      {
+        "id": "negative_path_cost",
+        "kind": "executable-code",
+        "http_seconds": 135.84276110399514,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 183,
+        "decode_tps": 22.7826733488621,
+        "http_e2e_tps": 22.61438132612907,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 13923,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "settlement_largest_remainder",
+        "kind": "reasoning",
+        "http_seconds": 79.23129021798377,
+        "http_status": 200,
+        "functional_status": "PASS",
+        "natural_finish": true,
+        "completion_tokens": 1804,
+        "prompt_tokens": 262,
+        "decode_tps": 23.156132580636157,
+        "http_e2e_tps": 22.768782321186176,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 4957,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "PASS",
+          "plain_json_only": true
+        }
+      },
+      {
+        "id": "escaped_pairs_parser",
+        "kind": "executable-code",
+        "http_seconds": 135.81129325198708,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 182,
+        "decode_tps": 22.781487589597326,
+        "http_e2e_tps": 22.619621140785014,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 13156,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "portfolio_dependency_optimum",
+        "kind": "reasoning",
+        "http_seconds": 73.25920092398883,
+        "http_status": 200,
+        "functional_status": "PASS",
+        "natural_finish": true,
+        "completion_tokens": 1673,
+        "prompt_tokens": 241,
+        "decode_tps": 23.218863549113003,
+        "http_e2e_tps": 22.8367219256984,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 4837,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "PASS",
+          "plain_json_only": true
+        }
+      },
+      {
+        "id": "stable_room_assignment",
+        "kind": "executable-code",
+        "http_seconds": 135.78227651698398,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 165,
+        "decode_tps": 22.795620111458483,
+        "http_e2e_tps": 22.624454964236417,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 13129,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "nested_transaction_state",
+        "kind": "reasoning",
+        "http_seconds": 46.17104475101223,
+        "http_status": 200,
+        "functional_status": "PASS",
+        "natural_finish": true,
+        "completion_tokens": 1045,
+        "prompt_tokens": 295,
+        "decode_tps": 23.322512119608206,
+        "http_e2e_tps": 22.63323270321038,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 2771,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "PASS",
+          "plain_json_only": true
+        }
+      },
+      {
+        "id": "fragmented_utf8",
+        "kind": "executable-code",
+        "http_seconds": 135.6537427820149,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 158,
+        "decode_tps": 22.80526418569304,
+        "http_e2e_tps": 22.64589193780276,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 13926,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "minimal_fault_diagnoses",
+        "kind": "reasoning",
+        "http_seconds": 28.21491048397729,
+        "http_status": 200,
+        "functional_status": "PASS",
+        "natural_finish": true,
+        "completion_tokens": 634,
+        "prompt_tokens": 221,
+        "decode_tps": 23.4237170574838,
+        "http_e2e_tps": 22.470388497600815,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 2006,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "PASS",
+          "plain_json_only": true
+        }
+      },
+      {
+        "id": "strict_netstrings",
+        "kind": "executable-code",
+        "http_seconds": 135.39273620099993,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 159,
+        "decode_tps": 22.85365449879361,
+        "http_e2e_tps": 22.689548096874283,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 5214,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "grounded_revision_selection",
+        "kind": "reasoning",
+        "http_seconds": 49.44560137699591,
+        "http_status": 200,
+        "functional_status": "PASS",
+        "natural_finish": true,
+        "completion_tokens": 854,
+        "prompt_tokens": 3106,
+        "decode_tps": 21.848980614421514,
+        "http_e2e_tps": 17.271505982680093,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 2627,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "PASS",
+          "plain_json_only": true
+        }
+      },
+      {
+        "id": "exact_cent_apportionment",
+        "kind": "executable-code",
+        "http_seconds": 135.90061071200762,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 167,
+        "decode_tps": 22.783585568373898,
+        "http_e2e_tps": 22.6047549301305,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 12429,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "single_bad_modular_sensor",
+        "kind": "reasoning",
+        "http_seconds": 53.912304413999664,
+        "http_status": 200,
+        "functional_status": "PASS",
+        "natural_finish": true,
+        "completion_tokens": 1234,
+        "prompt_tokens": 216,
+        "decode_tps": 23.362318081579662,
+        "http_e2e_tps": 22.889023450453017,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 3918,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "PASS",
+          "plain_json_only": true
+        }
+      },
+      {
+        "id": "simultaneous_text_edits",
+        "kind": "executable-code",
+        "http_seconds": 136.0042019750108,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 197,
+        "decode_tps": 22.753495219524737,
+        "http_e2e_tps": 22.587537409795946,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 13803,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "event_window_counts",
+        "kind": "executable-code",
+        "http_seconds": 135.81691277501523,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 168,
+        "decode_tps": 22.794481900539324,
+        "http_e2e_tps": 22.618685237595262,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 13162,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "integer_expression_parser",
+        "kind": "executable-code",
+        "http_seconds": 135.97701554201194,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 182,
+        "decode_tps": 22.744428675912015,
+        "http_e2e_tps": 22.592053427226926,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 12057,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "alias_chain_resolution",
+        "kind": "executable-code",
+        "http_seconds": 135.82056543399813,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 159,
+        "decode_tps": 22.785812251881534,
+        "http_e2e_tps": 22.61807694721191,
+        "acceptance": null,
+        "draft_n": 0,
+        "draft_accepted": 0,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 13605,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      }
+    ],
+    "memory": {
+      "scope": "Local node process only; snapshots include requests and Python sandbox gaps, not continuous peaks",
+      "files": [
+        "telemetry-before.json",
+        "ttl_lru_state-telemetry.json",
+        "slot_constraint_schedule-telemetry.json",
+        "subtract_half_open-telemetry.json",
+        "conditional_urn_fraction-telemetry.json",
+        "negative_path_cost-telemetry.json",
+        "settlement_largest_remainder-telemetry.json",
+        "escaped_pairs_parser-telemetry.json",
+        "portfolio_dependency_optimum-telemetry.json",
+        "stable_room_assignment-telemetry.json",
+        "nested_transaction_state-telemetry.json",
+        "fragmented_utf8-telemetry.json",
+        "minimal_fault_diagnoses-telemetry.json",
+        "strict_netstrings-telemetry.json",
+        "grounded_revision_selection-telemetry.json",
+        "exact_cent_apportionment-telemetry.json",
+        "single_bad_modular_sensor-telemetry.json",
+        "simultaneous_text_edits-telemetry.json",
+        "event_window_counts-telemetry.json",
+        "integer_expression_parser-telemetry.json",
+        "alias_chain_resolution-telemetry.json",
+        "telemetry-after.json"
+      ],
+      "pid": 1558208,
+      "process_starttime_ticks": 20394014,
+      "duration_s": 2006.307540604,
+      "sample_count": 22,
+      "major_faults_delta": 1026,
+      "process_rss_bytes": {
+        "before": 952102912,
+        "after": 11712991232,
+        "sampled_max": 11712991232
+      },
+      "process_swap_bytes_sampled_max": 0,
+      "mem_available_bytes_sampled_min": 62929522688,
+      "system_swap_used_bytes_sampled_max": 4431888384,
+      "gpu": {
+        "/sys/class/drm/card0/device": {
+          "mem_info_gtt_used": {
+            "before": 54189350912,
+            "after": 54587424768,
+            "sampled_max": 54588755968
+          },
+          "mem_info_vram_used": {
+            "before": 245485568,
+            "after": 246317056,
+            "sampled_max": 246317056
+          }
+        }
+      },
+      "uma_note": "RSS, GTT and VRAM describe overlapping UMA accounting; never added together"
+    },
+    "evidence_sha256": {
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/exact_cent_apportionment-result.json": "6376284c4fffa427df18d2a5e23ceddfa86ea5d483771a5dd0e2a8d49d76a3ac",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/settlement_largest_remainder-telemetry.json": "98291d3a2329cde1b4575e966ad30d872ede440411ddb0459ddbd27fdf210879",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/minimal_fault_diagnoses-result.json": "f9ba7657f367a9707342210204d4efecb899a0d6afd45d1c07007836ce89fea2",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/ttl_lru_state-raw.json": "da1719f8460cd366c61071714363043a8a9092b9f35ad002d5647e282a5c79d4",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/alias_chain_resolution-telemetry.json": "25941206d5cdcb56a5b57a55b24d441772b8827c1393238edf3e8639cc7a359f",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/slot_constraint_schedule-result.json": "35b4e4156dabecd389b39b7426bc581c7d6213d52b38e438d77a6c15f9ed8b2b",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/stable_room_assignment-result.json": "6db92aa47ea11c61cc35ce70af1f29603b971767f78ac28dd53a44d3451de1f6",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/grounded_revision_selection-intent.json": "2ed45cc9fea3efbd9096172a9d399f6b19bb812788fc7b030a8a7effd2738890",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/minimal_fault_diagnoses-intent.json": "dd25528d6ad82401319bcceaa18c998d6657685110ef885f07d82f1a849256bf",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/nested_transaction_state-intent.json": "fbd3cf136bf2dcd2927321c91f0a45ee8488f488a8d2cb4709d2cbf0a5045a48",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/conditional_urn_fraction-intent.json": "c017196dce7e586489fd07f0a781e30aca2742384c75fe50f0574657e655cd6a",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/nested_transaction_state-telemetry.json": "88c6ff5ea964dfc64109bdfcb8ccf21e47152aa36e8fc2e9c06a34df43f717d2",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/event_window_counts-intent.json": "85dbe2e4ea72f492a2798f9b1bd3efa5b6b99a1c940f70d004e3fd85a1385f48",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/simultaneous_text_edits-telemetry.json": "9a3a8990d3ff2ad34899c7defb94470b878ea8b4873ab0c4f3f469d57469b602",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/ttl_lru_state-intent.json": "53f43da15d0d4d1aaea1745675eaaf2f9a881858f0fdda6d9d969d216ab48a74",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/escaped_pairs_parser-intent.json": "458b39282cb99a378afbd4e59f68fd95f7e8f3311b6c166cbf8962421f2f0306",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/fragmented_utf8-raw.json": "15415942a1ae0241a3d0f961c576364380cd3291d7b235857ea34aff6bc5bcae",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/portfolio_dependency_optimum-result.json": "6da5631ef066c3271c08d832eb19d7b8d095c199823a63e8ddd06d357d0f8fc4",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/single_bad_modular_sensor-telemetry.json": "ba9605784de7ed8d9619cc2856f7accadc77c5b4e5f82a11662197013c0671f8",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/simultaneous_text_edits-intent.json": "ef04912797892999132eef6392c93589b5e28796a005c820a605daf7cb62e4c2",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/conditional_urn_fraction-raw.json": "fe9b9081d9bdf84316a8b864a17905acb8b6d229f4994a9593779113296fbbcd",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/conditional_urn_fraction-result.json": "4acf59e6969f19e10cb3ca121a3ea63d4af4652548b82ee1af993f9b5b57257c",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/stable_room_assignment-raw.json": "5a01d711c29656a5582aa39e873f6fa6a19163017dce24bc185b1d647e360daf",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/single_bad_modular_sensor-intent.json": "b819419d76adb7c003ac15e93c0f862a4c8985940a578a8815ddbe745831d2ef",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/grounded_revision_selection-telemetry.json": "c3c968d5109b376bd7405c7a68c0234bf107c20c7a2acc2dd65991c34db936b1",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/nested_transaction_state-result.json": "6b316e9ea3f794970a67d936121a26267d07c872c2417fa104e2cba623b576a2",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/ttl_lru_state-result.json": "caa61a00ec9a408bfb2605dbdf74b50cf003dd52dde7295dbc7b4b0a58cf6053",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/summary.json": "0185d6c3883ad111cd30d25c6618892dc3cfb2bb499e3cd7b9787cf625780e16",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/negative_path_cost-telemetry.json": "4af87af75f71b16abb51ce5d0ca4691941527995ce6af4b089958f8f33aa8b74",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/grounded_revision_selection-raw.json": "7b186bea6a9631f2f8d7b1ebc4871f9078a66488e48f7d3f96c1099d2fa2c570",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/settlement_largest_remainder-result.json": "7083a4cb887718104e30e56b2147a9820bcad4e20141b6079528b58d108a7627",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/settlement_largest_remainder-raw.json": "f4d3033c84ac7ba18bd7638ab522bc4586f80a075110c560d926dc3dd6eac100",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/settlement_largest_remainder-intent.json": "0cad7dfeca6eb731cb5cce4588d516545a38f276c19cb8ad4895ac7749f8fd86",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/sandbox-preflight.json": "b52175d1028ea7cd51c58ba7032dfe92e8d5170d98738da39673c7885b8cce1c",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/grounded_revision_selection-result.json": "2e353283f1cc2ae53eb62c697f11a74f5c8a38feb609fe293341130fc62c911c",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/slot_constraint_schedule-raw.json": "172493d2ae910cf5aa5039128d7ddd807f6b5481cfb3dcb23bb7874840b3405a",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/subtract_half_open-raw.json": "e7fe1784e29901487bd46d07776d29ea1b135e1736e4dd1c9238bc6d73cedeba",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/fragmented_utf8-result.json": "034a4d800164e87f95825d2d1673169992553efe13f0add4e20bcf0bdf252fb4",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/subtract_half_open-telemetry.json": "24c0412f934f480777c3bbef219861d9197963432bce9206bc5f89177b2e24b3",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/identity.json": "406127bf6aa4c5e81dcfd2dce7b81a7fea885d124b27ad646b1cffbe76aa6508",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/negative_path_cost-result.json": "1fd8332f248f54c95bc105154d858ad638d85511f1630f97e426484d5502f7a7",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/stable_room_assignment-telemetry.json": "dbc790b1b2d0f5827d864ad861eb7d7a4bdf2ec3e0b1a2ba2fd517ff5aec97cb",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/strict_netstrings-result.json": "311aa6c3b4f955e84dbbb13c984850eec89d9f69e39c53953cf7ed66396be73e",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/strict_netstrings-raw.json": "3577ff6181cfc1ecff4142358b654d1aa0dccc6405ef273e0f596189971c0596",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/portfolio_dependency_optimum-telemetry.json": "98d5868eb7e3df67761aaa56738ed180d917de51530c94136f854678ced3ad98",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/negative_path_cost-raw.json": "4d3186e327bdfbf8fcfe7b4045da9eca833a16864f3284bacaa474de334aa4bb",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/telemetry-after.json": "26597424e38896d47a9c757c2ba9e665b43c89724af7bc42b703370e6eaf8224",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/simultaneous_text_edits-result.json": "eb9aa0e2b27270a2accf725327d5a3311c037ca71b6bea5398238fb99b1c4142",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/nested_transaction_state-raw.json": "d5791c35053b38011c5d6c807fda95253b333451558ee4f71874288b7f54bce1",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/runtime-maps.json": "52d924e487ca2b7b6fd493f3a6be1fcb7fe556972f0daaa3765d0e0ae14d3d6a",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/minimal_fault_diagnoses-raw.json": "1bdd80fe65d16aeca29df87884f54a24449f508b97135c2a0ab0633e807f0bb1",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/integer_expression_parser-result.json": "e337f214debc9026431d55492e1d4d2e51ee6ca2b77b233b4aa8c79b99ebc3c8",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/subtract_half_open-intent.json": "f1254c37c8fdc70cdea9b35e009d464f9fefb171957e96d9c27716abfbe94ad7",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/fragmented_utf8-telemetry.json": "e25d52312ca11bce660e29ba926b79f8d40693dd85221f16ea30bf1ab7a6fd77",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/event_window_counts-telemetry.json": "127655a6a66c99c70fe426f912a9ef352bfeb3e27b16474b39a38195b2196590",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/alias_chain_resolution-result.json": "89b952a3b7392019948843e683d691ae1f31f28f1d4ea740cd901aee0a40d3fa",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/exact_cent_apportionment-telemetry.json": "a502da53ea00d7b1e2d617e16a57bc350745c37ecd95c88cbdc431d4bdcda0de",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/strict_netstrings-intent.json": "1d5b456e911f1829d13375d7cc83c838af7b80c0531461ecb536a1d9bdc76dc0",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/protocol.json": "10774fdf3764103603b1c87219e25254812f6f80a3f923abc80405c295312e7a",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/exact_cent_apportionment-raw.json": "5889b51e9b73da800b7d064425a1e6495f5d1071247a3c108d30818524c00fd6",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/portfolio_dependency_optimum-raw.json": "9f3e2934bd234cf80d411f3c70d7066585416326ce68b72c5deefedcd4ddc037",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/simultaneous_text_edits-raw.json": "546aae2226060a2d86b50c1ee5d62cb45bd4f84e1361a9636995d6c7242d6abf",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/event_window_counts-raw.json": "7d511bd230dcccc157612bd36a45bda712eedbf5580496cf68da10040436cd40",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/single_bad_modular_sensor-result.json": "f5be6e7fea4a56904111097bdcc658d0bb77db60928c0471b52da9b9e893b4d1",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/subtract_half_open-result.json": "5bf709849a3bcecda13ee9879554f4f318be9652ed488cece8b58469f05e70b2",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/ttl_lru_state-telemetry.json": "9e358d2d607ffb9953db677635af55ac2c9e13f016ab89b5b73c180c4fb6a7b0",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/escaped_pairs_parser-telemetry.json": "ab204a0da40cd3cd6a7da3d383ef16bb71e622743baaa2ee8ae869ff0dad991a",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/escaped_pairs_parser-raw.json": "64a730186d6f45c9d4d126d3f937e415b48ca4433f8212e0eda6f5b19939b5d7",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/event_window_counts-result.json": "115a427ad63b7d5174d63c2fd04bdf492797379c135769424a3f09099ffaf8ee",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/escaped_pairs_parser-result.json": "7a7200e1bd00af7e4ae3fcff5555f9cebc3e8737f4f1567a66a48029accf088d",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/negative_path_cost-intent.json": "43900f3c18226a96ba03aeb11279dedeae31ad245fa5da99e7ef4e34449ca034",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/slot_constraint_schedule-intent.json": "f17dde90b3d32a45d2e5ac67ae836c15d2d54612b3350a8e2d52a4c23f368825",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/alias_chain_resolution-raw.json": "e754437199493de87cf808c198a39ebbaa4d341ad2d0da334b4a81d4956c08c1",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/integer_expression_parser-telemetry.json": "dcc50c70e95176959790b0fd8b375f70c70d7aa9ecb6b730b3a7990664ccf26e",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/integer_expression_parser-intent.json": "464b20cf9efdde78bffa38796158a86334c13ba729d529206abb9222328a9892",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/fragmented_utf8-intent.json": "ea7262e264cafde653324153e4bcfe8085d8f6811b7d6f94dd689c78681491eb",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/telemetry-before.json": "8c2e43882c95cd6be36d866d6da56851a2fadb68be878e6cde1b13bd624cad41",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/minimal_fault_diagnoses-telemetry.json": "ad2a704d0c23d3c9456a6ce97945e36cabd7a016803bc956c7b122a71b9ac6f9",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/single_bad_modular_sensor-raw.json": "eaa3dd06302fb3c43920bf8bc3ab3cb84681c7f7093dba88428d12d113de7103",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/strict_netstrings-telemetry.json": "f19f8b5f54281f953c6c23609fbad6d3f5ef75bb58b6962730657bdf4abba740",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/exact_cent_apportionment-intent.json": "dd3c59f8d30d125dd74e3d7310619d49a0bab0ace40d63eae0adfc8fb40c2e24",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/integer_expression_parser-raw.json": "a42462ec08dfe0af196fb97d5b2a8a8efdd672b23dc0b6f7910cdab3f9c02fbb",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/stable_room_assignment-intent.json": "a630872b4706d45e66c1e71ebfca5ac5bf7195442a82475bef3ca95026008c44",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/slot_constraint_schedule-telemetry.json": "714bb736cf8a4ee4c467ce4234538797401db51fc547aea03d7de05ee32494df",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/portfolio_dependency_optimum-intent.json": "26826bd370356e385d1e2286c0b097279dd348c7dc1d152b09ec5c5aa72cc87b",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/conditional_urn_fraction-telemetry.json": "85bdf365843441af70a8b44b244aaf48ab1ff9434af8de718595ab9df43a6061",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/a/alias_chain_resolution-intent.json": "fab6329e3934560d6c21ad6d2d07cd3dcb911a091bd5f7eba5f015bd8a454e1b"
+    }
+  },
+  "b": {
+    "status": "COMPLETE",
+    "protocol_sha256": "e9da37ca8e9a313e2a1c7669c18005783b1e298fc5b9db85923a4df7730abaf8",
+    "identity_contract": {
+      "runtime_sha256": {
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/llama-server": "a0f4a6e6650aaa22b48b017ccc201645fce940fea4ca157fcfff103939e2d626",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml-base.so.0.22.0": "5aa194f0908be9f67b292d83ccc234d82c228a81474706bb7b46b0b0b1530fe4",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml-cpu.so.0.22.0": "de229f3ec21bf003a6cbb1d273abbe72cbeb3b130b409deae52061313785e2e5",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml-hip.so.0.22.0": "a0722fe2dfcd83a9b15628e258b4f62c119db7e52c49a0cd1c0b6e95fa1c5641",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml-rpc.so.0.22.0": "a88c536e2669143790e9e51016297ea12d3583a8c0bdc737992ee19fb8aed8bd",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml.so.0.22.0": "1b00188a559e2e25815962a1bdf3b64c967791afef95965e350ac3864769e1bc",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libllama-bench-impl.so": "5b1d38e35dbc8ec0fb893d23603f5bae2119482412acf067b7cd2344d7c25217",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libllama-common.so.0.3.0": "6f0cefb25cb2c6d70d68b802170d8641ec2e9c0603a3948db693e68d0059d014",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libllama-server-impl.so": "7b1d6c0c5cd8c98134019e31c986130059cd6045236ea7fe51df5bdd85e9f71c",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libllama.so.0.3.0": "7ca320b7bbfb5106cf51992b1cd3d31d8fb5a355bfb872df3b6b98ad6c782e3f",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libmtmd.so.0.3.0": "088b7c197678ac5403504e5190d6468bae7007c0a79fd92f4f207596f05b21a1"
+      },
+      "model_sha256": {
+        "/home/funboy/models/gguf/qwen3.8-flash-next-unsloth-iq3-xxs/UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00001-of-00003.gguf": "268f81fdedf3149a538f252308927a4d5d1f6e062c178568a51e3b519744f8a8",
+        "/home/funboy/models/gguf/qwen3.8-flash-next-unsloth-iq3-xxs/UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00002-of-00003.gguf": "cfe600b236b88c7fad1613a5ca5e83b9f2beb63cbd44c32b2be50a44747c695f",
+        "/home/funboy/models/gguf/qwen3.8-flash-next-unsloth-iq3-xxs/UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00003-of-00003.gguf": "f1912ba34c79427d2295a58dcb2b732b5931af5bef7a373c60557a57d9ee7250",
+        "/home/funboy/models/gguf/qwen3.8-flash-next-mtp-easiix/mtp-Qwen3.8-Flash-Next-Q8_0.gguf": "9db03a687670608286e99b563fcc86d0ee76c8dd863f64b2afc0b54eb0eb975d"
+      },
+      "target_parameters": {
+        "ctx": 8192,
+        "kv_k": "f16",
+        "kv_v": "f16",
+        "placement": "SSD/mmap/lazy",
+        "batch": 8192,
+        "ubatch": 2048,
+        "threads": 4,
+        "parallel": 1,
+        "fa": "on",
+        "device": "ROCm0",
+        "graph": "build default HIP ON",
+        "load": "-lm mmap --tensor-read-lazy on",
+        "quant": "UD-IQ3_XXS",
+        "reasoning_preserve": true,
+        "verbosity": 4
+      },
+      "reasoning_effort": "xhigh"
+    },
+    "identity": {
+      "campaign": "QWEN-IQ3-QUALITY-002",
+      "mode": "mtp",
+      "runtime_sha256": {
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/llama-server": "a0f4a6e6650aaa22b48b017ccc201645fce940fea4ca157fcfff103939e2d626",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml-base.so.0.22.0": "5aa194f0908be9f67b292d83ccc234d82c228a81474706bb7b46b0b0b1530fe4",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml-cpu.so.0.22.0": "de229f3ec21bf003a6cbb1d273abbe72cbeb3b130b409deae52061313785e2e5",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml-hip.so.0.22.0": "a0722fe2dfcd83a9b15628e258b4f62c119db7e52c49a0cd1c0b6e95fa1c5641",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml-rpc.so.0.22.0": "a88c536e2669143790e9e51016297ea12d3583a8c0bdc737992ee19fb8aed8bd",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libggml.so.0.22.0": "1b00188a559e2e25815962a1bdf3b64c967791afef95965e350ac3864769e1bc",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libllama-bench-impl.so": "5b1d38e35dbc8ec0fb893d23603f5bae2119482412acf067b7cd2344d7c25217",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libllama-common.so.0.3.0": "6f0cefb25cb2c6d70d68b802170d8641ec2e9c0603a3948db693e68d0059d014",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libllama-server-impl.so": "7b1d6c0c5cd8c98134019e31c986130059cd6045236ea7fe51df5bdd85e9f71c",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libllama.so.0.3.0": "7ca320b7bbfb5106cf51992b1cd3d31d8fb5a355bfb872df3b6b98ad6c782e3f",
+        "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/libmtmd.so.0.3.0": "088b7c197678ac5403504e5190d6468bae7007c0a79fd92f4f207596f05b21a1"
+      },
+      "model_sha256": {
+        "/home/funboy/models/gguf/qwen3.8-flash-next-unsloth-iq3-xxs/UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00001-of-00003.gguf": "268f81fdedf3149a538f252308927a4d5d1f6e062c178568a51e3b519744f8a8",
+        "/home/funboy/models/gguf/qwen3.8-flash-next-unsloth-iq3-xxs/UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00002-of-00003.gguf": "cfe600b236b88c7fad1613a5ca5e83b9f2beb63cbd44c32b2be50a44747c695f",
+        "/home/funboy/models/gguf/qwen3.8-flash-next-unsloth-iq3-xxs/UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00003-of-00003.gguf": "f1912ba34c79427d2295a58dcb2b732b5931af5bef7a373c60557a57d9ee7250",
+        "/home/funboy/models/gguf/qwen3.8-flash-next-mtp-easiix/mtp-Qwen3.8-Flash-Next-Q8_0.gguf": "9db03a687670608286e99b563fcc86d0ee76c8dd863f64b2afc0b54eb0eb975d"
+      },
+      "target_parameters": {
+        "ctx": 8192,
+        "kv_k": "f16",
+        "kv_v": "f16",
+        "placement": "SSD/mmap/lazy",
+        "batch": 8192,
+        "ubatch": 2048,
+        "threads": 4,
+        "parallel": 1,
+        "fa": "on",
+        "device": "ROCm0",
+        "graph": "build default HIP ON",
+        "load": "-lm mmap --tensor-read-lazy on",
+        "quant": "UD-IQ3_XXS",
+        "reasoning_preserve": true,
+        "verbosity": 4
+      },
+      "speculation": {
+        "type": "draft-mtp,ngram-mod",
+        "n_max": 4,
+        "p_min": 0.75
+      },
+      "reasoning_effort": "xhigh",
+      "owner_attestation": {
+        "launcher_pid": 1579336,
+        "owner_nonce": "906d0f444a65f8eb33a074078c151e27",
+        "profile": "qwen-iq3-speed",
+        "campaign": "QWEN-IQ3-QUALITY-002",
+        "command": [
+          "/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin/llama-server",
+          "-m",
+          "/home/funboy/models/gguf/qwen3.8-flash-next-unsloth-iq3-xxs/UD-IQ3_XXS/Qwen3.8-Flash-Next-UD-IQ3_XXS-00001-of-00003.gguf",
+          "--alias",
+          "qwen3.8-flash-next",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "18090",
+          "--device",
+          "ROCm0",
+          "-ngl",
+          "999",
+          "-fa",
+          "on",
+          "-ctk",
+          "f16",
+          "-ctv",
+          "f16",
+          "-lm",
+          "mmap",
+          "--tensor-read-lazy",
+          "on",
+          "-c",
+          "8192",
+          "-b",
+          "8192",
+          "-ub",
+          "2048",
+          "-t",
+          "4",
+          "--parallel",
+          "1",
+          "--jinja",
+          "--no-webui",
+          "-lv",
+          "4",
+          "--reasoning-preserve",
+          "--cors-origins",
+          "localhost",
+          "--chat-template-kwargs",
+          "{\"reasoning_effort\":\"xhigh\"}",
+          "-md",
+          "/home/funboy/models/gguf/qwen3.8-flash-next-mtp-easiix/mtp-Qwen3.8-Flash-Next-Q8_0.gguf",
+          "-ctkd",
+          "f16",
+          "-ctvd",
+          "f16",
+          "--spec-type",
+          "draft-mtp,ngram-mod",
+          "--spec-draft-n-max",
+          "4",
+          "--spec-draft-p-min",
+          "0.75"
+        ],
+        "status": "ready_not_qualified",
+        "owned_units": [
+          {
+            "name": "strix-moe-api-qwen-iq3-001",
+            "remote": false,
+            "LoadState": "loaded",
+            "ActiveState": "active",
+            "InvocationID": "0dab78451cf24841a0109ff75a63b714",
+            "MainPID": "1579376"
+          }
+        ],
+        "runtime_seconds": 7200,
+        "preload_meminfo": {
+          "MemTotal": "       128134888 kB",
+          "MemFree": "        64425320 kB",
+          "MemAvailable": "   124736420 kB",
+          "Buffers": "          111484 kB",
+          "Cached": "         60986736 kB",
+          "SwapCached": "        16208 kB",
+          "Active": "          2877100 kB",
+          "Inactive": "       59516236 kB",
+          "Active(anon)": "    1015292 kB",
+          "Inactive(anon)": "   280348 kB",
+          "Active(file)": "    1861808 kB",
+          "Inactive(file)": " 59235888 kB",
+          "Unevictable": "          16 kB",
+          "Mlocked": "               0 kB",
+          "SwapTotal": "       8388604 kB",
+          "SwapFree": "        4076284 kB",
+          "Zswap": "                 0 kB",
+          "Zswapped": "              0 kB",
+          "Dirty": "              1708 kB",
+          "Writeback": "             0 kB",
+          "AnonPages": "       1279176 kB",
+          "Mapped": "           276944 kB",
+          "Shmem": "              1040 kB",
+          "KReclaimable": "     383788 kB",
+          "Slab": "             786164 kB",
+          "SReclaimable": "     383788 kB",
+          "SUnreclaim": "       402376 kB",
+          "KernelStack": "       20304 kB",
+          "PageTables": "        62820 kB",
+          "SecPageTables": "      5844 kB",
+          "NFS_Unstable": "          0 kB",
+          "Bounce": "                0 kB",
+          "WritebackTmp": "          0 kB",
+          "CommitLimit": "    72456048 kB",
+          "Committed_AS": "   11966400 kB",
+          "VmallocTotal": "   34359738367 kB",
+          "VmallocUsed": "       84716 kB",
+          "VmallocChunk": "          0 kB",
+          "Percpu": "            40192 kB",
+          "HardwareCorrupted": "     0 kB",
+          "AnonHugePages": "         0 kB",
+          "ShmemHugePages": "        0 kB",
+          "ShmemPmdMapped": "        0 kB",
+          "FileHugePages": "         0 kB",
+          "FilePmdMapped": "         0 kB",
+          "CmaTotal": "              0 kB",
+          "CmaFree": "         1457564 kB",
+          "Unaccepted": "            0 kB",
+          "Balloon": "               0 kB",
+          "HugePages_Total": "       0",
+          "HugePages_Free": "        0",
+          "HugePages_Rsvd": "        0",
+          "HugePages_Surp": "        0",
+          "Hugepagesize": "       2048 kB",
+          "Hugetlb": "               0 kB",
+          "DirectMap4k": "     1113288 kB",
+          "DirectMap2M": "    82403328 kB",
+          "DirectMap1G": "    49283072 kB"
+        },
+        "placement": "SSD/mmap/lazy",
+        "context": 8192,
+        "speculation": true,
+        "remote_model": false,
+        "environment": [
+          "PATH=/usr/bin:/bin",
+          "LD_LIBRARY_PATH=/home/funboy/ai-exp/src/EngramHalo.cpp/build-hip/bin:/home/funboy/ai-exp/runtimes/rocm-7.14-gfx1151/lib",
+          "HSA_OVERRIDE_GFX_VERSION=11.5.1",
+          "ROCBLAS_USE_HIPBLASLT=1",
+          "LLAMA_QSA_GATHER=1"
+        ]
+      },
+      "sidecar_sha_provenance": "Historical PLAN1118 SHA, not rehashed here; compatible headers and unchanged stat. EasiiX sidecar loaded in B.",
+      "sidecar_stat": {
+        "st_dev": 66306,
+        "st_ino": 72359066,
+        "st_size": 4137429088,
+        "st_mtime_ns": 1787913022692593592,
+        "st_ctime_ns": 1787913031670932612
+      },
+      "ngram_note": "B uses source defaults n_match24/n_min48/n_max64 and state persists between requests; N4 is MTP only",
+      "previous_identity_sha256": "18ca5d782f52955cab204d6642306a8f2d184beb9ef0151dab743c4b4326fcad",
+      "previous_identity": "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-SPEED-001/b-identity.json"
+    },
+    "sandbox_preflight": {
+      "receipt_status": "PASS",
+      "marker_count": 1,
+      "unexpected_stdout_bytes": 0,
+      "stderr_text": "",
+      "scope": "Retained frozen-runner receipt checked; code not re-executed"
+    },
+    "aggregate": {
+      "all": {
+        "attempted": 20,
+        "pass": 8,
+        "counts": {
+          "INCOMPLETE": 12,
+          "PASS": 8
+        },
+        "http_seconds_all_attempts": 1905.228600221977,
+        "http_seconds_correct_only": 304.4713804839994,
+        "http_seconds_per_correct_all_costs": 238.15357502774714,
+        "http_seconds_per_correct_excluding_failed_costs": 38.05892256049992,
+        "http_seconds_median_all_attempts": 129.9913250404934,
+        "completion_tokens": 45146,
+        "explicit_reasoning_count_available_tasks": 0,
+        "explicit_reasoning_tokens_partial_sum": 0
+      },
+      "reasoning": {
+        "attempted": 8,
+        "pass": 8,
+        "counts": {
+          "PASS": 8
+        },
+        "http_seconds_all_attempts": 304.4713804839994,
+        "http_seconds_correct_only": 304.4713804839994,
+        "http_seconds_per_correct_all_costs": 38.05892256049992,
+        "http_seconds_per_correct_excluding_failed_costs": 38.05892256049992,
+        "http_seconds_median_all_attempts": 33.89464818299166,
+        "completion_tokens": 8282,
+        "explicit_reasoning_count_available_tasks": 0,
+        "explicit_reasoning_tokens_partial_sum": 0
+      },
+      "executable-code": {
+        "attempted": 12,
+        "pass": 0,
+        "counts": {
+          "INCOMPLETE": 12
+        },
+        "http_seconds_all_attempts": 1600.7572197379777,
+        "http_seconds_correct_only": 0,
+        "http_seconds_per_correct_all_costs": null,
+        "http_seconds_per_correct_excluding_failed_costs": null,
+        "http_seconds_median_all_attempts": 131.88314953401277,
+        "completion_tokens": 36864,
+        "explicit_reasoning_count_available_tasks": 0,
+        "explicit_reasoning_tokens_partial_sum": 0
+      }
+    },
+    "tasks": [
+      {
+        "id": "ttl_lru_state",
+        "kind": "executable-code",
+        "http_seconds": 132.98496255799546,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 201,
+        "decode_tps": 23.364573617035404,
+        "http_e2e_tps": 23.100356167414674,
+        "acceptance": 0.8545816733067729,
+        "draft_n": 1506,
+        "draft_accepted": 1287,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 13196,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "slot_constraint_schedule",
+        "kind": "reasoning",
+        "http_seconds": 18.215460770996287,
+        "http_status": 200,
+        "functional_status": "PASS",
+        "natural_finish": true,
+        "completion_tokens": 506,
+        "prompt_tokens": 206,
+        "decode_tps": 29.425711499136863,
+        "http_e2e_tps": 27.7786000783292,
+        "acceptance": 0.8936170212765957,
+        "draft_n": 329,
+        "draft_accepted": 294,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 1277,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "PASS",
+          "plain_json_only": true
+        }
+      },
+      {
+        "id": "subtract_half_open",
+        "kind": "executable-code",
+        "http_seconds": 131.96315939701162,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 149,
+        "decode_tps": 23.442526371830727,
+        "http_e2e_tps": 23.279224398969394,
+        "acceptance": 0.7920616113744076,
+        "draft_n": 1688,
+        "draft_accepted": 1337,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 12059,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "conditional_urn_fraction",
+        "kind": "reasoning",
+        "http_seconds": 16.686699756013695,
+        "http_status": 200,
+        "functional_status": "PASS",
+        "natural_finish": true,
+        "completion_tokens": 463,
+        "prompt_tokens": 202,
+        "decode_tps": 29.566845710343465,
+        "http_e2e_tps": 27.74664893416927,
+        "acceptance": 0.7747252747252747,
+        "draft_n": 364,
+        "draft_accepted": 282,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 1214,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "PASS",
+          "plain_json_only": true
+        }
+      },
+      {
+        "id": "negative_path_cost",
+        "kind": "executable-code",
+        "http_seconds": 129.90492399499635,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 183,
+        "decode_tps": 23.927300027103062,
+        "http_e2e_tps": 23.648064334484555,
+        "acceptance": 0.8272463768115942,
+        "draft_n": 1725,
+        "draft_accepted": 1427,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 13310,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "settlement_largest_remainder",
+        "kind": "reasoning",
+        "http_seconds": 58.09489341202425,
+        "http_status": 200,
+        "functional_status": "PASS",
+        "natural_finish": true,
+        "completion_tokens": 1729,
+        "prompt_tokens": 262,
+        "decode_tps": 30.504462787017996,
+        "http_e2e_tps": 29.76165198785163,
+        "acceptance": 0.8047722342733189,
+        "draft_n": 1383,
+        "draft_accepted": 1113,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 4799,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "PASS",
+          "plain_json_only": true
+        }
+      },
+      {
+        "id": "escaped_pairs_parser",
+        "kind": "executable-code",
+        "http_seconds": 128.7848874819756,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 182,
+        "decode_tps": 24.02704398321352,
+        "http_e2e_tps": 23.853730511896817,
+        "acceptance": 0.7949579831932773,
+        "draft_n": 1785,
+        "draft_accepted": 1419,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 13155,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "portfolio_dependency_optimum",
+        "kind": "reasoning",
+        "http_seconds": 72.63958361398545,
+        "http_status": 200,
+        "functional_status": "PASS",
+        "natural_finish": true,
+        "completion_tokens": 1883,
+        "prompt_tokens": 241,
+        "decode_tps": 26.389088232603577,
+        "http_e2e_tps": 25.92250542082488,
+        "acceptance": 0.8102481985588471,
+        "draft_n": 1249,
+        "draft_accepted": 1012,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 5572,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "PASS",
+          "plain_json_only": true
+        }
+      },
+      {
+        "id": "stable_room_assignment",
+        "kind": "executable-code",
+        "http_seconds": 130.7851972890203,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 165,
+        "decode_tps": 23.683292605422075,
+        "http_e2e_tps": 23.4888967840239,
+        "acceptance": 0.7391983342009371,
+        "draft_n": 1921,
+        "draft_accepted": 1420,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 12195,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "nested_transaction_state",
+        "kind": "reasoning",
+        "http_seconds": 33.588004153978545,
+        "http_status": 200,
+        "functional_status": "PASS",
+        "natural_finish": true,
+        "completion_tokens": 1051,
+        "prompt_tokens": 295,
+        "decode_tps": 32.69967793620062,
+        "http_e2e_tps": 31.29093336960028,
+        "acceptance": 0.8676293622141997,
+        "draft_n": 831,
+        "draft_accepted": 721,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 2947,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "PASS",
+          "plain_json_only": true
+        }
+      },
+      {
+        "id": "fragmented_utf8",
+        "kind": "executable-code",
+        "http_seconds": 137.00579921502504,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 158,
+        "decode_tps": 22.58026106369926,
+        "http_e2e_tps": 22.42240852285837,
+        "acceptance": 0.691129883843717,
+        "draft_n": 1894,
+        "draft_accepted": 1309,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 14310,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "minimal_fault_diagnoses",
+        "kind": "reasoning",
+        "http_seconds": 24.63380598500953,
+        "http_status": 200,
+        "functional_status": "PASS",
+        "natural_finish": true,
+        "completion_tokens": 681,
+        "prompt_tokens": 221,
+        "decode_tps": 28.967340303585395,
+        "http_e2e_tps": 27.6449364103302,
+        "acceptance": 0.7752808988764045,
+        "draft_n": 534,
+        "draft_accepted": 414,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 2146,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "PASS",
+          "plain_json_only": true
+        }
+      },
+      {
+        "id": "strict_netstrings",
+        "kind": "executable-code",
+        "http_seconds": 138.38102712199907,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 159,
+        "decode_tps": 22.392833756528237,
+        "http_e2e_tps": 22.199575071022362,
+        "acceptance": 0.7897623400365631,
+        "draft_n": 1641,
+        "draft_accepted": 1296,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 13002,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "grounded_revision_selection",
+        "kind": "reasoning",
+        "http_seconds": 34.20129221200477,
+        "http_status": 200,
+        "functional_status": "PASS",
+        "natural_finish": true,
+        "completion_tokens": 679,
+        "prompt_tokens": 3106,
+        "decode_tps": 27.067900787280678,
+        "http_e2e_tps": 19.853051042371685,
+        "acceptance": 0.7495798319327731,
+        "draft_n": 595,
+        "draft_accepted": 446,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 1920,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "PASS",
+          "plain_json_only": true
+        }
+      },
+      {
+        "id": "exact_cent_apportionment",
+        "kind": "executable-code",
+        "http_seconds": 130.07772608599043,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 167,
+        "decode_tps": 23.818945055278142,
+        "http_e2e_tps": 23.616649002375656,
+        "acceptance": 0.830166270783848,
+        "draft_n": 1684,
+        "draft_accepted": 1398,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 12871,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "single_bad_modular_sensor",
+        "kind": "reasoning",
+        "http_seconds": 46.41164057998685,
+        "http_status": 200,
+        "functional_status": "PASS",
+        "natural_finish": true,
+        "completion_tokens": 1290,
+        "prompt_tokens": 216,
+        "decode_tps": 28.505513638616698,
+        "http_e2e_tps": 27.794751141726728,
+        "acceptance": 0.7888774459320288,
+        "draft_n": 971,
+        "draft_accepted": 766,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 3950,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "PASS",
+          "plain_json_only": true
+        }
+      },
+      {
+        "id": "simultaneous_text_edits",
+        "kind": "executable-code",
+        "http_seconds": 131.59355574898655,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 197,
+        "decode_tps": 23.574620559918657,
+        "http_e2e_tps": 23.344608195402902,
+        "acceptance": 0.800910125142207,
+        "draft_n": 1758,
+        "draft_accepted": 1408,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 13704,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "event_window_counts",
+        "kind": "executable-code",
+        "http_seconds": 136.81473737198394,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 168,
+        "decode_tps": 22.636394114850063,
+        "http_e2e_tps": 22.453721426571,
+        "acceptance": 0.7253405994550409,
+        "draft_n": 1835,
+        "draft_accepted": 1331,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 13420,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "integer_expression_parser",
+        "kind": "executable-code",
+        "http_seconds": 131.80313967101392,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 182,
+        "decode_tps": 23.47592477026388,
+        "http_e2e_tps": 23.30748726978613,
+        "acceptance": 0.7911285794497473,
+        "draft_n": 1781,
+        "draft_accepted": 1409,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 12813,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      },
+      {
+        "id": "alias_chain_resolution",
+        "kind": "executable-code",
+        "http_seconds": 140.65810380197945,
+        "http_status": 200,
+        "functional_status": "INCOMPLETE",
+        "natural_finish": false,
+        "completion_tokens": 3072,
+        "prompt_tokens": 159,
+        "decode_tps": 22.00743273629913,
+        "http_e2e_tps": 21.840192046985127,
+        "acceptance": 0.7525575447570333,
+        "draft_n": 1564,
+        "draft_accepted": 1177,
+        "reasoning_usage": {
+          "explicit_reasoning_tokens": null,
+          "reasoning_characters": 13126,
+          "note": "Character count is not a tokenizer estimate; absent usage count remains null"
+        },
+        "instruction_compliance": {
+          "status": "NOT_ASSESSED_INCOMPLETE"
+        }
+      }
+    ],
+    "memory": {
+      "scope": "Local node process only; snapshots include requests and Python sandbox gaps, not continuous peaks",
+      "files": [
+        "telemetry-before.json",
+        "ttl_lru_state-telemetry.json",
+        "slot_constraint_schedule-telemetry.json",
+        "subtract_half_open-telemetry.json",
+        "conditional_urn_fraction-telemetry.json",
+        "negative_path_cost-telemetry.json",
+        "settlement_largest_remainder-telemetry.json",
+        "escaped_pairs_parser-telemetry.json",
+        "portfolio_dependency_optimum-telemetry.json",
+        "stable_room_assignment-telemetry.json",
+        "nested_transaction_state-telemetry.json",
+        "fragmented_utf8-telemetry.json",
+        "minimal_fault_diagnoses-telemetry.json",
+        "strict_netstrings-telemetry.json",
+        "grounded_revision_selection-telemetry.json",
+        "exact_cent_apportionment-telemetry.json",
+        "single_bad_modular_sensor-telemetry.json",
+        "simultaneous_text_edits-telemetry.json",
+        "event_window_counts-telemetry.json",
+        "integer_expression_parser-telemetry.json",
+        "alias_chain_resolution-telemetry.json",
+        "telemetry-after.json"
+      ],
+      "pid": 1579376,
+      "process_starttime_ticks": 20873075,
+      "duration_s": 1905.547892607,
+      "sample_count": 22,
+      "major_faults_delta": 70,
+      "process_rss_bytes": {
+        "before": 1844097024,
+        "after": 12923822080,
+        "sampled_max": 12999704576
+      },
+      "process_swap_bytes_sampled_max": 0,
+      "mem_available_bytes_sampled_min": 57701232640,
+      "system_swap_used_bytes_sampled_max": 4415770624,
+      "gpu": {
+        "/sys/class/drm/card0/device": {
+          "mem_info_gtt_used": {
+            "before": 58278838272,
+            "after": 58999717888,
+            "sampled_max": 58999795712
+          },
+          "mem_info_vram_used": {
+            "before": 243429376,
+            "after": 246743040,
+            "sampled_max": 246743040
+          }
+        }
+      },
+      "uma_note": "RSS, GTT and VRAM describe overlapping UMA accounting; never added together"
+    },
+    "evidence_sha256": {
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/exact_cent_apportionment-result.json": "30f0c0b73c5fa680099c9c32546cff8306a6b81abed1eedad1dad461590e0394",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/settlement_largest_remainder-telemetry.json": "12e9b3f055cc7f717c83cbe91372838857db4ea0890cd9c1aa54af01d265f98e",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/minimal_fault_diagnoses-result.json": "2135ae980d1a32f71bc70fc2588c6845962a55ab0f90cc5cbb01f96b697c104c",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/ttl_lru_state-raw.json": "587c8a899fecdc0c2951fde001b7285a92b0911e4e37b27dd6e43c2d270d4cd4",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/alias_chain_resolution-telemetry.json": "7e89222f755f84ff66407ee4a24cb89a0038d5ce82d709b48867aec54d9a806c",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/slot_constraint_schedule-result.json": "bef99c7c611bef658459aa32fdc0c24581c5ba849d92ee374e2e45f86b937161",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/stable_room_assignment-result.json": "244a8925c4d4c152d362468579c90f2918b458a3d47b2e3a7b89798aca841ad2",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/grounded_revision_selection-intent.json": "2ed45cc9fea3efbd9096172a9d399f6b19bb812788fc7b030a8a7effd2738890",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/minimal_fault_diagnoses-intent.json": "dd25528d6ad82401319bcceaa18c998d6657685110ef885f07d82f1a849256bf",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/nested_transaction_state-intent.json": "fbd3cf136bf2dcd2927321c91f0a45ee8488f488a8d2cb4709d2cbf0a5045a48",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/conditional_urn_fraction-intent.json": "c017196dce7e586489fd07f0a781e30aca2742384c75fe50f0574657e655cd6a",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/nested_transaction_state-telemetry.json": "77f07a87f454a7b17ec962446b3e08267b28d471fdc5c0ebc6fce8e9cb59dbc3",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/event_window_counts-intent.json": "85dbe2e4ea72f492a2798f9b1bd3efa5b6b99a1c940f70d004e3fd85a1385f48",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/simultaneous_text_edits-telemetry.json": "4f73e17827db3e40d29e80844967e33084445dda2e8083197bd6ba2bbf5fddba",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/ttl_lru_state-intent.json": "53f43da15d0d4d1aaea1745675eaaf2f9a881858f0fdda6d9d969d216ab48a74",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/escaped_pairs_parser-intent.json": "458b39282cb99a378afbd4e59f68fd95f7e8f3311b6c166cbf8962421f2f0306",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/fragmented_utf8-raw.json": "34f3e4276e49d6140f25c2c233292db27b5c459ccd16897810722ffbaaeeab7c",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/portfolio_dependency_optimum-result.json": "0fec89449b992999b63cc4ac7c9ef75ea2b8079b03ef573dfcdf42e4a8215250",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/single_bad_modular_sensor-telemetry.json": "4a852ebb8d690dd8a9ffe93ec6e88912312c255f7d7c6b0bb508326646a5e425",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/simultaneous_text_edits-intent.json": "ef04912797892999132eef6392c93589b5e28796a005c820a605daf7cb62e4c2",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/conditional_urn_fraction-raw.json": "5259e352e3593e7d1cadf0ec43c251be971f0369cfbac4db920f227c209dec81",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/conditional_urn_fraction-result.json": "795fa629a54363335f50eace03cac0c15849412e28a03569eca7ddb30d976c46",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/stable_room_assignment-raw.json": "e31386c62e431a510abb7cdc27a08161d89344311357ccda7bf9d583597b68ae",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/single_bad_modular_sensor-intent.json": "b819419d76adb7c003ac15e93c0f862a4c8985940a578a8815ddbe745831d2ef",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/grounded_revision_selection-telemetry.json": "080b94b923e1ec51171700b5916ae49dc57441c119043eae7a3486457563e759",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/nested_transaction_state-result.json": "eb15401abfe25614b30ebdd33fc2552a418de66e942e23a71daca2c46f36370e",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/ttl_lru_state-result.json": "f16aeef843d71f5d93015767fa76adffd110ca814a442cea8b2a07f08eca049f",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/summary.json": "3835022fc23fa9a2e3964fb057b98f6ed2beade8ecdd6d4b5cb5c577183182b5",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/negative_path_cost-telemetry.json": "012083e3fc5e2c4d646117bd9082e531bfae9619febad79aeffa484f23de1007",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/grounded_revision_selection-raw.json": "6d9e0fbc5042023b5bd948159ea59b18dae85f16e291664273f4c78550062eb6",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/settlement_largest_remainder-result.json": "b54d4628d6d5be970b8c8693c5f6fb8d685f7fc3958a24b9ca34b06156425e52",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/settlement_largest_remainder-raw.json": "313d6ab436983d22bb94345d139421d183cb0ea5f6445fcb4d20a3e817d12af1",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/settlement_largest_remainder-intent.json": "0cad7dfeca6eb731cb5cce4588d516545a38f276c19cb8ad4895ac7749f8fd86",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/sandbox-preflight.json": "49d54e3516b4890f51ba795596cd4697170b722ef66f469c431710f6962da8da",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/grounded_revision_selection-result.json": "cdcaef64b4b2b15cbda3e1d0647c426b94754d7182fd267483dc6b024ffa6aa7",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/slot_constraint_schedule-raw.json": "21b66aa7473c889cfab0862e728977d720ac23e0a76e053e04c8fc9d97ac4f36",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/subtract_half_open-raw.json": "ec7eff99cf6841a4b21ae00bfe29493a58c060a935199f2e55bac43a96b1ff25",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/fragmented_utf8-result.json": "def92afba6c46898b8148dc21077a7ab34fda19db06e1a3f036c480d3f0790af",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/subtract_half_open-telemetry.json": "edb4a41b606bde2b79513d5159a6895e0a7920283eef93d0d2b7ffb0ce8ede32",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/identity.json": "4c1d56cf60c24d31432fdb36abba2267c9b8804e1bf45649fee4d06d3b85bc4d",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/negative_path_cost-result.json": "b996a75c7524a58c159d1bb7ccb7bc15bed280be74aeaeb3686df4ec87dc47a1",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/stable_room_assignment-telemetry.json": "e7ceb8973f7f6d4da1ac99985d79ed2987945fbf1334e5b38244a81915522721",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/strict_netstrings-result.json": "620a2b70264ac47a06629c13bd5bc2a94800207af65569ef8116eb84f3e81b1d",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/strict_netstrings-raw.json": "21c05da328f4afc7610e98b5ec432a12981be4b2b1a133b5df8b2059b5db06db",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/portfolio_dependency_optimum-telemetry.json": "401399c4444e47c2c0b0d1908ca61b7e3a3e344feef1c27481ef9db067747929",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/negative_path_cost-raw.json": "14aca019fc74f16fc664277a6f6b74df7692a87fe8cea67a26285d35e77a6243",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/telemetry-after.json": "39819f3ef23ed0b3190f96a6cae8e0fda04a0c680dad66a2dd7fcf7d2e06a32b",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/simultaneous_text_edits-result.json": "99be28a01b18627a4c0f2b28e2094444a880cfd2a2e42146606bbe795094858c",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/nested_transaction_state-raw.json": "af4348101aa808ed39c2d338ebb6bcc9bf2c0e58ffed1dc9f276f16cc6c5885b",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/runtime-maps.json": "281f057a041e37a7483f5cb3119a85410e5e04007071e1cfde62be915aaf12f8",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/minimal_fault_diagnoses-raw.json": "c7b149ab0736169cc24f2b8842f6ba3531b217799c2be608099f56803f42c3bb",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/integer_expression_parser-result.json": "53fc9a7ec10744618e4485d59c087ad1da47baf671a2ef041d9f928cfc25bac1",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/subtract_half_open-intent.json": "f1254c37c8fdc70cdea9b35e009d464f9fefb171957e96d9c27716abfbe94ad7",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/fragmented_utf8-telemetry.json": "1b57f35a54acbeae9b26fe22bcac5cef77b056af2566e8091c30b1463d181ef7",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/event_window_counts-telemetry.json": "9dd3be617773c010a153c30b872af21d2db218898d57ebcd0724c95a8a66266f",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/alias_chain_resolution-result.json": "be234ea32752aa8432f79088530b952df030875c0f63b1b86b33e8befa6b663a",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/exact_cent_apportionment-telemetry.json": "5f1e1c843e90b21c2e962eb1762e266a84143c21db3f4e91407f25bec87e7507",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/strict_netstrings-intent.json": "1d5b456e911f1829d13375d7cc83c838af7b80c0531461ecb536a1d9bdc76dc0",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/protocol.json": "e9da37ca8e9a313e2a1c7669c18005783b1e298fc5b9db85923a4df7730abaf8",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/exact_cent_apportionment-raw.json": "3cc7234ade3acb14d1f46353390051ab481da00a48a00a82be201daef3a5d28a",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/portfolio_dependency_optimum-raw.json": "077e99c13a2a69f20916d81a2d4880276cb855b5ff4fb06061bc2087e91c5895",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/simultaneous_text_edits-raw.json": "c2c80054c971303012b0af4d2d6be944917501c59a735a1cd051d58e2bdf1574",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/event_window_counts-raw.json": "d92927ddd8373a94d3e470e864cd174dc03f4713da2e4294e77de3165a905ae0",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/single_bad_modular_sensor-result.json": "c6caa48877b04cc42793c627a569def190ed29ffa3e5c2922e059d8a783c972e",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/subtract_half_open-result.json": "f818f7f0338982135cc63084482fc36fca538493afe2b74700049d9452a34ab3",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/ttl_lru_state-telemetry.json": "e17500dcecb1b4e779ada9a36b4d5c2eef26496e65ccdc7a00faca654c048715",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/escaped_pairs_parser-telemetry.json": "b6a4c08aa9a373cdf572f0b48bd1c5b58fc55dd39d82e8ed55d0b3e346da3998",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/escaped_pairs_parser-raw.json": "73c536ceac0ddfc2e7cc8e3363638e67648c1528343bc14cc624b3173fb9d45b",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/event_window_counts-result.json": "3036832387d517bb84820b038011c8f8bd27a7845bd3dc7ee1aed714c638baa4",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/escaped_pairs_parser-result.json": "dcef3b9d2a8d4fbb936990c047b8ff4e27c04355485e2a79f0194dae0f9f0f2b",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/negative_path_cost-intent.json": "43900f3c18226a96ba03aeb11279dedeae31ad245fa5da99e7ef4e34449ca034",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/slot_constraint_schedule-intent.json": "f17dde90b3d32a45d2e5ac67ae836c15d2d54612b3350a8e2d52a4c23f368825",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/alias_chain_resolution-raw.json": "90f2b579d00e44f6eaeeceaad11555d335b551b2427106a392fe8cec35d51118",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/integer_expression_parser-telemetry.json": "035f603a4513f2d5cf4dc910fde6e2bc1a13289edc05f7a08dea614a8a40eb38",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/integer_expression_parser-intent.json": "464b20cf9efdde78bffa38796158a86334c13ba729d529206abb9222328a9892",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/fragmented_utf8-intent.json": "ea7262e264cafde653324153e4bcfe8085d8f6811b7d6f94dd689c78681491eb",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/telemetry-before.json": "89072064c8ebcc6d58cdeefa41da67d1b691f3c6c17554f338218957cac72c98",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/minimal_fault_diagnoses-telemetry.json": "31c297ac8e4a75065d5a7d041ce62cad846b11319df50d3c13512e006cc861a7",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/single_bad_modular_sensor-raw.json": "4e2527085b0cc7788ff05842f28c43ed6c69143b6af01de517f567b31379611c",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/strict_netstrings-telemetry.json": "2d38f031ff22e633a0937486c29af4d8bfe9c082684ab59b960f3063c49995f3",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/exact_cent_apportionment-intent.json": "dd3c59f8d30d125dd74e3d7310619d49a0bab0ace40d63eae0adfc8fb40c2e24",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/integer_expression_parser-raw.json": "ac9fd6dc28d38e48a4f660bfeac6b0377dcbcc5496879cb77039d115fcca74aa",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/stable_room_assignment-intent.json": "a630872b4706d45e66c1e71ebfca5ac5bf7195442a82475bef3ca95026008c44",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/slot_constraint_schedule-telemetry.json": "79dfcc88598d43b74a5ead02999edb229827a7111c256c2f3d736050ca54b9fa",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/portfolio_dependency_optimum-intent.json": "26826bd370356e385d1e2286c0b097279dd348c7dc1d152b09ec5c5aa72cc87b",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/conditional_urn_fraction-telemetry.json": "2b17c8777ea7eba7e04cf2c9bebab1769cbbfb8b73958790322b1c4cde55c2b8",
+      "/home/funboy/ai-exp/reports/moe-cluster/QWEN-IQ3-QUALITY-002/b/alias_chain_resolution-intent.json": "fab6329e3934560d6c21ad6d2d07cd3dcb911a091bd5f7eba5f015bd8a454e1b"
+    }
+  },
+  "comparison": [
+    {
+      "id": "ttl_lru_state",
+      "kind": "executable-code",
+      "a_status": "INCOMPLETE",
+      "b_status": "INCOMPLETE",
+      "http_a_over_b": 1.0305148067039573,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 49,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "slot_constraint_schedule",
+      "kind": "reasoning",
+      "a_status": "PASS",
+      "b_status": "PASS",
+      "http_a_over_b": 1.3388405442813858,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 162,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "subtract_half_open",
+      "kind": "executable-code",
+      "a_status": "INCOMPLETE",
+      "b_status": "INCOMPLETE",
+      "http_a_over_b": 1.0286609828625763,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 4,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "conditional_urn_fraction",
+      "kind": "reasoning",
+      "a_status": "PASS",
+      "b_status": "PASS",
+      "http_a_over_b": 1.2365278533018245,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 100,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "negative_path_cost",
+      "kind": "executable-code",
+      "a_status": "INCOMPLETE",
+      "b_status": "INCOMPLETE",
+      "http_a_over_b": 1.045709099596775,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 95,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "settlement_largest_remainder",
+      "kind": "reasoning",
+      "a_status": "PASS",
+      "b_status": "PASS",
+      "http_a_over_b": 1.3638253823112239,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 5,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "escaped_pairs_parser",
+      "kind": "executable-code",
+      "a_status": "INCOMPLETE",
+      "b_status": "INCOMPLETE",
+      "http_a_over_b": 1.0545592414404592,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 44,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "portfolio_dependency_optimum",
+      "kind": "reasoning",
+      "a_status": "PASS",
+      "b_status": "PASS",
+      "http_a_over_b": 1.0085300228770044,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 66,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "stable_room_assignment",
+      "kind": "executable-code",
+      "a_status": "INCOMPLETE",
+      "b_status": "INCOMPLETE",
+      "http_a_over_b": 1.038208293687249,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 124,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "nested_transaction_state",
+      "kind": "reasoning",
+      "a_status": "PASS",
+      "b_status": "PASS",
+      "http_a_over_b": 1.3746290056220327,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 11,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "fragmented_utf8",
+      "kind": "executable-code",
+      "a_status": "INCOMPLETE",
+      "b_status": "INCOMPLETE",
+      "http_a_over_b": 0.9901313926800416,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 164,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "minimal_fault_diagnoses",
+      "kind": "reasoning",
+      "a_status": "PASS",
+      "b_status": "PASS",
+      "http_a_over_b": 1.1453735773167564,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 28,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "strict_netstrings",
+      "kind": "executable-code",
+      "a_status": "INCOMPLETE",
+      "b_status": "INCOMPLETE",
+      "http_a_over_b": 0.9784053422412843,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 4,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "grounded_revision_selection",
+      "kind": "reasoning",
+      "a_status": "PASS",
+      "b_status": "PASS",
+      "http_a_over_b": 1.445723192869313,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 10,
+        "output_text_exact": false
+      },
+      "final_content_exact": false
+    },
+    {
+      "id": "exact_cent_apportionment",
+      "kind": "executable-code",
+      "a_status": "INCOMPLETE",
+      "b_status": "INCOMPLETE",
+      "http_a_over_b": 1.0447646557272061,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 73,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "single_bad_modular_sensor",
+      "kind": "reasoning",
+      "a_status": "PASS",
+      "b_status": "PASS",
+      "http_a_over_b": 1.1616116935380898,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 380,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "simultaneous_text_edits",
+      "kind": "executable-code",
+      "a_status": "INCOMPLETE",
+      "b_status": "INCOMPLETE",
+      "http_a_over_b": 1.0335171901155822,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 245,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "event_window_counts",
+      "kind": "executable-code",
+      "a_status": "INCOMPLETE",
+      "b_status": "INCOMPLETE",
+      "http_a_over_b": 0.9927067462457956,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 197,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "integer_expression_parser",
+      "kind": "executable-code",
+      "a_status": "INCOMPLETE",
+      "b_status": "INCOMPLETE",
+      "http_a_over_b": 1.031667499586248,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 39,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    },
+    {
+      "id": "alias_chain_resolution",
+      "kind": "executable-code",
+      "a_status": "INCOMPLETE",
+      "b_status": "INCOMPLETE",
+      "http_a_over_b": 0.9656078232449964,
+      "token_fidelity": {
+        "status": "FAIL",
+        "first_diff_token_index": 132,
+        "output_text_exact": false
+      },
+      "final_content_exact": true
+    }
+  ],
+  "limits": [
+    "Twenty custom first-attempt tasks, not general intelligence or a public SWE benchmark",
+    "No new GLM run on this corpus; historical four/eight-task screens are not comparable",
+    "A/B functional success does not establish token fidelity or repeatability",
+    "Non-streaming HTTP wall measured; client TTFT not measured; prompt_ms is not TTFT",
+    "Sandbox receipts checked offline, generated code not executed again",
+    "Task-length/token changes affect HTTP/decode comparisons; no equal-output speed guarantee"
+  ]
+}

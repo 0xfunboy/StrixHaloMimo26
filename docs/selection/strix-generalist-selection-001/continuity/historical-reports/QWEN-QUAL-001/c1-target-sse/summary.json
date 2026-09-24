@@ -1,0 +1,58 @@
+{
+  "pass": true,
+  "http_requests": 1,
+  "errors": [],
+  "ttft_ms": 455.4902529926039,
+  "qualified_ttft_ms": 455.4902529926039,
+  "http_wall_s": 2.1898051539901644,
+  "no_retry": true,
+  "api_chat_smoke": "SEPARATE",
+  "qualification": "NOT_PROMOTED",
+  "validation": {
+    "pass": true,
+    "errors": [],
+    "actual_tokens": 32,
+    "token_ID_count": 32,
+    "decode_tps": 17.876306339918543,
+    "http_wall_s": 2.1898051539901644,
+    "http_e2e_tps": 14.61317229146668,
+    "native_timings": {
+      "cache_n": 0,
+      "prompt_n": 44,
+      "prompt_ms": 453.678,
+      "prompt_per_token_ms": 10.310863636363637,
+      "prompt_per_second": 96.98508633876891,
+      "predicted_n": 32,
+      "predicted_ms": 1734.139,
+      "predicted_per_token_ms": 55.93996774193548,
+      "predicted_per_second": 17.876306339918543
+    },
+    "acceptance": null,
+    "ttft_ms": null,
+    "ttft_note": "NOT_MEASURED: native non-streaming completion; separate xhigh chat API smoke required"
+  },
+  "comparison": {
+    "status": "PASS",
+    "first_diff_token_index": null,
+    "output_text_exact": true
+  },
+  "ttft_definition": "Request start to first observed native SSE token-ID event (not headers or progress)",
+  "ttft_content_ms": 455.4902529926039,
+  "http_e2e_tps": 14.61317229146668,
+  "native_decode_tps": 17.876306339918543,
+  "native_timings": {
+    "cache_n": 0,
+    "prompt_n": 44,
+    "prompt_ms": 453.678,
+    "prompt_per_token_ms": 10.310863636363637,
+    "prompt_per_second": 96.98508633876891,
+    "predicted_n": 32,
+    "predicted_ms": 1734.139,
+    "predicted_per_token_ms": 55.93996774193548,
+    "predicted_per_second": 17.876306339918543
+  },
+  "termination": "NATIVE_FINAL_THEN_EOF",
+  "done_marker_seen": false,
+  "token_ID_coverage": "COMPLETE",
+  "coverage_note": "Incomplete UTF-8 may suppress native token-ID chunks; missing IDs are never inferred"
+}

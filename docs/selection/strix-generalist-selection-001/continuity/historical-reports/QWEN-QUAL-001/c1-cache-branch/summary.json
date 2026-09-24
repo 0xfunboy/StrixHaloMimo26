@@ -1,0 +1,164 @@
+{
+  "rows": [
+    {
+      "name": "cold-a",
+      "validation": {
+        "pass": true,
+        "errors": [],
+        "actual_tokens": 32,
+        "token_ID_count": 32,
+        "decode_tps": 29.706518760145737,
+        "http_wall_s": 1.8429038310132455,
+        "http_e2e_tps": 17.363901176767378,
+        "native_timings": {
+          "cache_n": 0,
+          "prompt_n": 97,
+          "prompt_ms": 798.085,
+          "prompt_per_token_ms": 8.227680412371134,
+          "prompt_per_second": 121.54093862182599,
+          "predicted_n": 32,
+          "predicted_ms": 1043.542,
+          "predicted_per_token_ms": 33.66264516129032,
+          "predicted_per_second": 29.706518760145737,
+          "draft_n": 22,
+          "draft_n_accepted": 22
+        },
+        "acceptance": 1.0,
+        "ttft_ms": null,
+        "ttft_note": "Non-streaming completion; measured only by separate chat smoke"
+      },
+      "cold_reference": null
+    },
+    {
+      "name": "cold-b",
+      "validation": {
+        "pass": true,
+        "errors": [],
+        "actual_tokens": 32,
+        "token_ID_count": 32,
+        "decode_tps": 22.340233102316105,
+        "http_wall_s": 2.1733203580079135,
+        "http_e2e_tps": 14.72401428629303,
+        "native_timings": {
+          "cache_n": 0,
+          "prompt_n": 97,
+          "prompt_ms": 784.291,
+          "prompt_per_token_ms": 8.085474226804124,
+          "prompt_per_second": 123.67858358695942,
+          "predicted_n": 32,
+          "predicted_ms": 1387.631,
+          "predicted_per_token_ms": 44.76229032258065,
+          "predicted_per_second": 22.340233102316105,
+          "draft_n": 21,
+          "draft_n_accepted": 17
+        },
+        "acceptance": 0.8095238095238095,
+        "ttft_ms": null,
+        "ttft_note": "Non-streaming completion; measured only by separate chat smoke"
+      },
+      "cold_reference": null
+    },
+    {
+      "name": "cached-a",
+      "validation": {
+        "pass": true,
+        "errors": [],
+        "actual_tokens": 32,
+        "token_ID_count": 32,
+        "decode_tps": 29.842010619905196,
+        "http_wall_s": 1.3294971970026381,
+        "http_e2e_tps": null,
+        "native_timings": {
+          "cache_n": 93,
+          "prompt_n": 4,
+          "prompt_ms": 289.36,
+          "prompt_per_token_ms": 72.34,
+          "prompt_per_second": 13.823610727121924,
+          "predicted_n": 32,
+          "predicted_ms": 1038.804,
+          "predicted_per_token_ms": 33.5098064516129,
+          "predicted_per_second": 29.842010619905196,
+          "draft_n": 22,
+          "draft_n_accepted": 22
+        },
+        "acceptance": 1.0,
+        "ttft_ms": null,
+        "ttft_note": "Non-streaming completion; measured only by separate chat smoke"
+      },
+      "cold_reference": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      }
+    },
+    {
+      "name": "cached-b",
+      "validation": {
+        "pass": true,
+        "errors": [],
+        "actual_tokens": 32,
+        "token_ID_count": 32,
+        "decode_tps": 24.20564491255906,
+        "http_wall_s": 1.5697255329869222,
+        "http_e2e_tps": null,
+        "native_timings": {
+          "cache_n": 93,
+          "prompt_n": 4,
+          "prompt_ms": 287.655,
+          "prompt_per_token_ms": 71.91375,
+          "prompt_per_second": 13.90554657489006,
+          "predicted_n": 32,
+          "predicted_ms": 1280.693,
+          "predicted_per_token_ms": 41.31267741935484,
+          "predicted_per_second": 24.20564491255906,
+          "draft_n": 21,
+          "draft_n_accepted": 17
+        },
+        "acceptance": 0.8095238095238095,
+        "ttft_ms": null,
+        "ttft_note": "Non-streaming completion; measured only by separate chat smoke"
+      },
+      "cold_reference": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      }
+    },
+    {
+      "name": "cached-a-repeat",
+      "validation": {
+        "pass": true,
+        "errors": [],
+        "actual_tokens": 32,
+        "token_ID_count": 32,
+        "decode_tps": 29.773281265306828,
+        "http_wall_s": 1.3288999189971946,
+        "http_e2e_tps": null,
+        "native_timings": {
+          "cache_n": 93,
+          "prompt_n": 4,
+          "prompt_ms": 286.472,
+          "prompt_per_token_ms": 71.618,
+          "prompt_per_second": 13.962970203021587,
+          "predicted_n": 32,
+          "predicted_ms": 1041.202,
+          "predicted_per_token_ms": 33.587161290322584,
+          "predicted_per_second": 29.773281265306828,
+          "draft_n": 22,
+          "draft_n_accepted": 22
+        },
+        "acceptance": 1.0,
+        "ttft_ms": null,
+        "ttft_note": "Non-streaming completion; measured only by separate chat smoke"
+      },
+      "cold_reference": {
+        "status": "PASS",
+        "first_diff_token_index": null,
+        "output_text_exact": true
+      }
+    }
+  ],
+  "output_repeat_pass": true,
+  "checkpoint_hidden_state_pass": "REQUIRES_STATE_AND_JOURNAL_AUDIT",
+  "qualification": "NOT_PROMOTED"
+}

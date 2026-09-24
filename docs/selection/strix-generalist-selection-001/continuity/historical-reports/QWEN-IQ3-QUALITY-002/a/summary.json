@@ -1,0 +1,798 @@
+{
+  "schema": "qwen-iq3-functional-v1",
+  "status": "COMPLETE",
+  "error": null,
+  "attempted": 20,
+  "completed": 20,
+  "planned": 20,
+  "records": [
+    {
+      "id": "ttl_lru_state",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 22.633848053767295,
+        "http_e2e_tps": 22.416326303257925,
+        "http_wall_s": 137.04297298498568,
+        "completion_tokens": 3072,
+        "prompt_tokens": 201,
+        "finish_reason": "length",
+        "native_timings": {
+          "cache_n": 0,
+          "prompt_n": 201,
+          "prompt_ms": 1355.351,
+          "prompt_per_token_ms": 6.743039800995025,
+          "prompt_per_second": 148.30106739877712,
+          "predicted_n": 3072,
+          "predicted_ms": 135681.745,
+          "predicted_per_token_ms": 44.181616737219144,
+          "predicted_per_second": 22.633848053767295
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 3072,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "INCOMPLETE",
+        "reason": "Pinned cap, no natural final answer; not a wrong-answer proof"
+      }
+    },
+    {
+      "id": "slot_constraint_schedule",
+      "kind": "reasoning",
+      "metrics": {
+        "decode_tps": 23.546581890994798,
+        "http_e2e_tps": 22.634455975818057,
+        "http_wall_s": 24.387597412976902,
+        "completion_tokens": 552,
+        "prompt_tokens": 206,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 164,
+          "prompt_ms": 905.508,
+          "prompt_per_token_ms": 5.521390243902439,
+          "prompt_per_second": 181.1138057311476,
+          "predicted_n": 552,
+          "predicted_ms": 23400.424,
+          "predicted_per_token_ms": 42.46900907441016,
+          "predicted_per_second": 23.546581890994798
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 552,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "answer": {
+          "order": [
+            "B",
+            "A",
+            "C",
+            "E",
+            "F",
+            "D"
+          ],
+          "slot_F": 5,
+          "feasible_orders": 1
+        }
+      }
+    },
+    {
+      "id": "subtract_half_open",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 22.780845580182888,
+        "http_e2e_tps": 22.630608904974256,
+        "http_wall_s": 135.7453532469808,
+        "completion_tokens": 3072,
+        "prompt_tokens": 149,
+        "finish_reason": "length",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 107,
+          "prompt_ms": 845.541,
+          "prompt_per_token_ms": 7.902252336448599,
+          "prompt_per_second": 126.54619941552212,
+          "predicted_n": 3072,
+          "predicted_ms": 134806.234,
+          "predicted_per_token_ms": 43.89652686421361,
+          "predicted_per_second": 22.780845580182888
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 3072,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "INCOMPLETE",
+        "reason": "Pinned cap, no natural final answer; not a wrong-answer proof"
+      }
+    },
+    {
+      "id": "conditional_urn_fraction",
+      "kind": "reasoning",
+      "metrics": {
+        "decode_tps": 23.48564677250286,
+        "http_e2e_tps": 22.342232668255974,
+        "http_wall_s": 20.63356902799569,
+        "completion_tokens": 461,
+        "prompt_tokens": 202,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 160,
+          "prompt_ms": 942.644,
+          "prompt_per_token_ms": 5.891525,
+          "prompt_per_second": 169.7353401708386,
+          "predicted_n": 461,
+          "predicted_ms": 19586.431,
+          "predicted_per_token_ms": 42.579197826086954,
+          "predicted_per_second": 23.48564677250286
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 461,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "answer": {
+          "eligible_sets": 54,
+          "favorable_sets": 24,
+          "numerator": 4,
+          "denominator": 9
+        }
+      }
+    },
+    {
+      "id": "negative_path_cost",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 22.7826733488621,
+        "http_e2e_tps": 22.61438132612907,
+        "http_wall_s": 135.84276110399514,
+        "completion_tokens": 3072,
+        "prompt_tokens": 183,
+        "finish_reason": "length",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 141,
+          "prompt_ms": 955.872,
+          "prompt_per_token_ms": 6.779234042553191,
+          "prompt_per_second": 147.5092899467711,
+          "predicted_n": 3072,
+          "predicted_ms": 134795.419,
+          "predicted_per_token_ms": 43.8930052100293,
+          "predicted_per_second": 22.7826733488621
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 3072,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "INCOMPLETE",
+        "reason": "Pinned cap, no natural final answer; not a wrong-answer proof"
+      }
+    },
+    {
+      "id": "settlement_largest_remainder",
+      "kind": "reasoning",
+      "metrics": {
+        "decode_tps": 23.156132580636157,
+        "http_e2e_tps": 22.768782321186176,
+        "http_wall_s": 79.23129021798377,
+        "completion_tokens": 1804,
+        "prompt_tokens": 262,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 220,
+          "prompt_ms": 1264.53,
+          "prompt_per_token_ms": 5.747863636363636,
+          "prompt_per_second": 173.97768340806465,
+          "predicted_n": 1804,
+          "predicted_ms": 77862.743,
+          "predicted_per_token_ms": 43.18510427066001,
+          "predicted_per_second": 23.156132580636157
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 1804,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "answer": {
+          "allocations": {
+            "A": 4376,
+            "B": 3126,
+            "C": 2501
+          },
+          "refund_total": 1199,
+          "fee_total": 220,
+          "final_balances": {
+            "A": 4267,
+            "B": 2285,
+            "C": 2032
+          }
+        }
+      }
+    },
+    {
+      "id": "escaped_pairs_parser",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 22.781487589597326,
+        "http_e2e_tps": 22.619621140785014,
+        "http_wall_s": 135.81129325198708,
+        "completion_tokens": 3072,
+        "prompt_tokens": 182,
+        "finish_reason": "length",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 140,
+          "prompt_ms": 910.722,
+          "prompt_per_token_ms": 6.505157142857143,
+          "prompt_per_second": 153.72418806177956,
+          "predicted_n": 3072,
+          "predicted_ms": 134802.435,
+          "predicted_per_token_ms": 43.89528980788017,
+          "predicted_per_second": 22.781487589597326
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 3072,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "INCOMPLETE",
+        "reason": "Pinned cap, no natural final answer; not a wrong-answer proof"
+      }
+    },
+    {
+      "id": "portfolio_dependency_optimum",
+      "kind": "reasoning",
+      "metrics": {
+        "decode_tps": 23.218863549113003,
+        "http_e2e_tps": 22.8367219256984,
+        "http_wall_s": 73.25920092398883,
+        "completion_tokens": 1673,
+        "prompt_tokens": 241,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 199,
+          "prompt_ms": 1142.005,
+          "prompt_per_token_ms": 5.738718592964824,
+          "prompt_per_second": 174.25492883130983,
+          "predicted_n": 1673,
+          "predicted_ms": 72010.415,
+          "predicted_per_token_ms": 43.06843002392344,
+          "predicted_per_second": 23.218863549113003
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 1673,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "answer": {
+          "items": [
+            "A",
+            "E",
+            "F"
+          ],
+          "cost": 9,
+          "value": 18,
+          "max_value_solution_count": 3
+        }
+      }
+    },
+    {
+      "id": "stable_room_assignment",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 22.795620111458483,
+        "http_e2e_tps": 22.624454964236417,
+        "http_wall_s": 135.78227651698398,
+        "completion_tokens": 3072,
+        "prompt_tokens": 165,
+        "finish_reason": "length",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 123,
+          "prompt_ms": 957.179,
+          "prompt_per_token_ms": 7.781943089430894,
+          "prompt_per_second": 128.50261027456725,
+          "predicted_n": 3072,
+          "predicted_ms": 134718.862,
+          "predicted_per_token_ms": 43.8680761966786,
+          "predicted_per_second": 22.795620111458483
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 3072,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "INCOMPLETE",
+        "reason": "Pinned cap, no natural final answer; not a wrong-answer proof"
+      }
+    },
+    {
+      "id": "nested_transaction_state",
+      "kind": "reasoning",
+      "metrics": {
+        "decode_tps": 23.322512119608206,
+        "http_e2e_tps": 22.63323270321038,
+        "http_wall_s": 46.17104475101223,
+        "completion_tokens": 1045,
+        "prompt_tokens": 295,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 253,
+          "prompt_ms": 1299.013,
+          "prompt_per_token_ms": 5.1344387351778655,
+          "prompt_per_second": 194.7632548711984,
+          "predicted_n": 1045,
+          "predicted_ms": 44763.617,
+          "predicted_per_token_ms": 42.877027777777776,
+          "predicted_per_second": 23.322512119608206
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 1045,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "answer": {
+          "x": 7,
+          "y": 12,
+          "reads": [
+            28,
+            21,
+            7,
+            19
+          ],
+          "snapshot_depth": 0
+        }
+      }
+    },
+    {
+      "id": "fragmented_utf8",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 22.80526418569304,
+        "http_e2e_tps": 22.64589193780276,
+        "http_wall_s": 135.6537427820149,
+        "completion_tokens": 3072,
+        "prompt_tokens": 158,
+        "finish_reason": "length",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 116,
+          "prompt_ms": 893.181,
+          "prompt_per_token_ms": 7.699836206896552,
+          "prompt_per_second": 129.87289250443078,
+          "predicted_n": 3072,
+          "predicted_ms": 134661.891,
+          "predicted_per_token_ms": 43.84952491045262,
+          "predicted_per_second": 22.80526418569304
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 3072,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "INCOMPLETE",
+        "reason": "Pinned cap, no natural final answer; not a wrong-answer proof"
+      }
+    },
+    {
+      "id": "minimal_fault_diagnoses",
+      "kind": "reasoning",
+      "metrics": {
+        "decode_tps": 23.4237170574838,
+        "http_e2e_tps": 22.470388497600815,
+        "http_wall_s": 28.21491048397729,
+        "completion_tokens": 634,
+        "prompt_tokens": 221,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 179,
+          "prompt_ms": 1084.134,
+          "prompt_per_token_ms": 6.056614525139665,
+          "prompt_per_second": 165.10874117037193,
+          "predicted_n": 634,
+          "predicted_ms": 27023.892,
+          "predicted_per_token_ms": 42.69177251184834,
+          "predicted_per_second": 23.4237170574838
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 634,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "answer": {
+          "min_faults": 2,
+          "diagnoses": [
+            [
+              "U",
+              "W"
+            ],
+            [
+              "V",
+              "X"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "strict_netstrings",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 22.85365449879361,
+        "http_e2e_tps": 22.689548096874283,
+        "http_wall_s": 135.39273620099993,
+        "completion_tokens": 3072,
+        "prompt_tokens": 159,
+        "finish_reason": "length",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 117,
+          "prompt_ms": 923.355,
+          "prompt_per_token_ms": 7.891923076923077,
+          "prompt_per_second": 126.71182806179637,
+          "predicted_n": 3072,
+          "predicted_ms": 134376.758,
+          "predicted_per_token_ms": 43.756677955063495,
+          "predicted_per_second": 22.85365449879361
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 3072,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "INCOMPLETE",
+        "reason": "Pinned cap, no natural final answer; not a wrong-answer proof"
+      }
+    },
+    {
+      "id": "grounded_revision_selection",
+      "kind": "reasoning",
+      "metrics": {
+        "decode_tps": 21.848980614421514,
+        "http_e2e_tps": 17.271505982680093,
+        "http_wall_s": 49.44560137699591,
+        "completion_tokens": 854,
+        "prompt_tokens": 3106,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 3064,
+          "prompt_ms": 10296.799,
+          "prompt_per_token_ms": 3.36057408616188,
+          "prompt_per_second": 297.56820541995626,
+          "predicted_n": 854,
+          "predicted_ms": 39040.723,
+          "predicted_per_token_ms": 45.76872567409144,
+          "predicted_per_second": 21.848980614421514
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 854,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "answer": {
+          "record": "D13",
+          "revision": 5,
+          "batch_limit": 96,
+          "timeout_ms": 4200,
+          "max_retries": 3,
+          "retry_budget_ms": 12600
+        }
+      }
+    },
+    {
+      "id": "exact_cent_apportionment",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 22.783585568373898,
+        "http_e2e_tps": 22.6047549301305,
+        "http_wall_s": 135.90061071200762,
+        "completion_tokens": 3072,
+        "prompt_tokens": 167,
+        "finish_reason": "length",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 125,
+          "prompt_ms": 981.116,
+          "prompt_per_token_ms": 7.848928,
+          "prompt_per_second": 127.40593365106676,
+          "predicted_n": 3072,
+          "predicted_ms": 134790.022,
+          "predicted_per_token_ms": 43.89124780201889,
+          "predicted_per_second": 22.783585568373898
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 3072,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "INCOMPLETE",
+        "reason": "Pinned cap, no natural final answer; not a wrong-answer proof"
+      }
+    },
+    {
+      "id": "single_bad_modular_sensor",
+      "kind": "reasoning",
+      "metrics": {
+        "decode_tps": 23.362318081579662,
+        "http_e2e_tps": 22.889023450453017,
+        "http_wall_s": 53.912304413999664,
+        "completion_tokens": 1234,
+        "prompt_tokens": 216,
+        "finish_reason": "stop",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 174,
+          "prompt_ms": 1031.752,
+          "prompt_per_token_ms": 5.929609195402299,
+          "prompt_per_second": 168.64517829866094,
+          "predicted_n": 1234,
+          "predicted_ms": 52777.297,
+          "predicted_per_token_ms": 42.80397161394971,
+          "predicted_per_second": 23.362318081579662
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 1234,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "PASS",
+        "answer": {
+          "candidates": [
+            66
+          ],
+          "bad_sensor": "S7",
+          "correct_remainder": 3
+        }
+      }
+    },
+    {
+      "id": "simultaneous_text_edits",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 22.753495219524737,
+        "http_e2e_tps": 22.587537409795946,
+        "http_wall_s": 136.0042019750108,
+        "completion_tokens": 3072,
+        "prompt_tokens": 197,
+        "finish_reason": "length",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 155,
+          "prompt_ms": 918.99,
+          "prompt_per_token_ms": 5.928967741935484,
+          "prompt_per_second": 168.66342397632184,
+          "predicted_n": 3072,
+          "predicted_ms": 134968.275,
+          "predicted_per_token_ms": 43.949291761641156,
+          "predicted_per_second": 22.753495219524737
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 3072,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "INCOMPLETE",
+        "reason": "Pinned cap, no natural final answer; not a wrong-answer proof"
+      }
+    },
+    {
+      "id": "event_window_counts",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 22.794481900539324,
+        "http_e2e_tps": 22.618685237595262,
+        "http_wall_s": 135.81691277501523,
+        "completion_tokens": 3072,
+        "prompt_tokens": 168,
+        "finish_reason": "length",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 126,
+          "prompt_ms": 974.784,
+          "prompt_per_token_ms": 7.736380952380952,
+          "prompt_per_second": 129.25940516052788,
+          "predicted_n": 3072,
+          "predicted_ms": 134725.589,
+          "predicted_per_token_ms": 43.870266688375125,
+          "predicted_per_second": 22.794481900539324
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 3072,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "INCOMPLETE",
+        "reason": "Pinned cap, no natural final answer; not a wrong-answer proof"
+      }
+    },
+    {
+      "id": "integer_expression_parser",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 22.744428675912015,
+        "http_e2e_tps": 22.592053427226926,
+        "http_wall_s": 135.97701554201194,
+        "completion_tokens": 3072,
+        "prompt_tokens": 182,
+        "finish_reason": "length",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 140,
+          "prompt_ms": 829.979,
+          "prompt_per_token_ms": 5.928421428571429,
+          "prompt_per_second": 168.67896657626275,
+          "predicted_n": 3072,
+          "predicted_ms": 135022.077,
+          "predicted_per_token_ms": 43.96681113643764,
+          "predicted_per_second": 22.744428675912015
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 3072,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "INCOMPLETE",
+        "reason": "Pinned cap, no natural final answer; not a wrong-answer proof"
+      }
+    },
+    {
+      "id": "alias_chain_resolution",
+      "kind": "executable-code",
+      "metrics": {
+        "decode_tps": 22.785812251881534,
+        "http_e2e_tps": 22.61807694721191,
+        "http_wall_s": 135.82056543399813,
+        "completion_tokens": 3072,
+        "prompt_tokens": 159,
+        "finish_reason": "length",
+        "native_timings": {
+          "cache_n": 42,
+          "prompt_n": 117,
+          "prompt_ms": 927.955,
+          "prompt_per_token_ms": 7.931239316239316,
+          "prompt_per_second": 126.0837001794268,
+          "predicted_n": 3072,
+          "predicted_ms": 134776.85,
+          "predicted_per_token_ms": 43.88695864539238,
+          "predicted_per_second": 22.785812251881534
+        },
+        "acceptance": null,
+        "speculation_observed": false,
+        "declared_mode": "target",
+        "token_ID_count": 3072,
+        "client_ttft_ms": null,
+        "ttft_status": "NOT_MEASURED_NON_STREAMING; prompt_ms is not TTFT"
+      },
+      "judgment": {
+        "status": "INCOMPLETE",
+        "reason": "Pinned cap, no natural final answer; not a wrong-answer proof"
+      }
+    }
+  ],
+  "aggregate": {
+    "all": {
+      "attempted_completed": 20,
+      "pass": 8,
+      "counts": {
+        "PASS": 8,
+        "WRONG_ANSWER": 0,
+        "CODE_FAIL": 0,
+        "SYNTAX_ERROR": 0,
+        "INCOMPLETE": 12,
+        "TIMEOUT": 0,
+        "BLOCKED_SANDBOX": 0,
+        "ERROR": 0
+      },
+      "http_seconds_all_attempts": 2006.0459611349215,
+      "http_seconds_per_correct_solution": 250.7557451418652
+    },
+    "reasoning": {
+      "attempted_completed": 8,
+      "pass": 8,
+      "counts": {
+        "PASS": 8,
+        "WRONG_ANSWER": 0,
+        "CODE_FAIL": 0,
+        "SYNTAX_ERROR": 0,
+        "INCOMPLETE": 0,
+        "TIMEOUT": 0,
+        "BLOCKED_SANDBOX": 0,
+        "ERROR": 0
+      },
+      "http_seconds_all_attempts": 375.2555186089303,
+      "http_seconds_per_correct_solution": 46.906939826116286
+    },
+    "executable-code": {
+      "attempted_completed": 12,
+      "pass": 0,
+      "counts": {
+        "PASS": 0,
+        "WRONG_ANSWER": 0,
+        "CODE_FAIL": 0,
+        "SYNTAX_ERROR": 0,
+        "INCOMPLETE": 12,
+        "TIMEOUT": 0,
+        "BLOCKED_SANDBOX": 0,
+        "ERROR": 0
+      },
+      "http_seconds_all_attempts": 1630.7904425259912,
+      "http_seconds_per_correct_solution": null
+    }
+  },
+  "finished_utc": "2026-09-06T15:21:49.817121+00:00",
+  "exact_qualification": "NOT_PROMOTED; historical token failures remain",
+  "limit": "Custom20-task first-attempt functional screen, not broad intelligence equivalence",
+  "http_seconds_all_attempted_requests": 2006.0459611349215,
+  "http_seconds_per_correct_including_transport_errors": 250.7557451418652
+}

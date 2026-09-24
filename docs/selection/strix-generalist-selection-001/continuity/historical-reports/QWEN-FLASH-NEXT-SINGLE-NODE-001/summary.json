@@ -1,0 +1,364 @@
+{
+  "completed_at": "2026-09-04T12:29:29.925+02:00",
+  "elapsed_s": 171.0249586379996,
+  "error": null,
+  "gate": {
+    "at_least_32_real_tokens": true,
+    "maximum_relative_spread": 0.1,
+    "minimum_decode_tps_each": 32.0,
+    "paging_allowed": false,
+    "required_measured_tokens_each": 400
+  },
+  "measured_decode_tps": [
+    35.696833502990216,
+    33.846025691932795
+  ],
+  "median_decode_tps": 34.771429597461506,
+  "memory": {
+    "max_gtt_used_bytes": 74392522752,
+    "max_process_rss_bytes": 32308264960,
+    "max_process_swap_bytes": 0,
+    "measured_major_faults": 0,
+    "min_mem_available_bytes_during_inference": 19118034944
+  },
+  "one_configuration_only": true,
+  "qualified_stable_no_paging": true,
+  "relative_spread": 0.05322783194374442,
+  "samples": [
+    {
+      "acceptance": 0.9010989010989011,
+      "content_sha256": "51ff74c8b50dffebf2fcbb162c695681a92e8688d0d6ffd22b9a1986eae2b7e0",
+      "decode_tps": 34.047828351760714,
+      "draft_accepted": 82,
+      "draft_n": 91,
+      "majflt_delta": 64,
+      "name": "warmup",
+      "post": {
+        "faults": {
+          "majflt": 966,
+          "minflt": 7971702
+        },
+        "gpu": {
+          "mem_info_gtt_total": 128849018880,
+          "mem_info_gtt_used": 74328551424,
+          "mem_info_vram_total": 1073741824,
+          "mem_info_vram_used": 243621888
+        },
+        "monotonic_s": 15669.361353352,
+        "phase": "warmup_post",
+        "pid": 138362,
+        "process": {
+          "VmHWM": 31782584320,
+          "VmRSS": 31782584320,
+          "VmSize": 117063983104,
+          "VmSwap": 0
+        },
+        "psi": {
+          "full_avg10": 0.0,
+          "full_avg300": 0.0,
+          "full_avg60": 0.01,
+          "full_total": 555754,
+          "some_avg10": 0.0,
+          "some_avg300": 0.0,
+          "some_avg60": 0.01,
+          "some_total": 558131
+        },
+        "smaps": {
+          "Private_Clean": 338460672,
+          "Private_Dirty": 31430189056,
+          "Pss": 31772589056,
+          "Pss_Anon": 788893696,
+          "Pss_File": 275291136,
+          "Rss": 31782584320
+        },
+        "system": {
+          "Cached": 48035000320,
+          "MemAvailable": 19601682432,
+          "MemFree": 1430949888,
+          "SwapFree": 8587546624,
+          "SwapTotal": 8589930496
+        },
+        "timestamp": "2026-09-04T12:29:02.153+02:00"
+      },
+      "pre": {
+        "faults": {
+          "majflt": 902,
+          "minflt": 7647333
+        },
+        "gpu": {
+          "mem_info_gtt_total": 128849018880,
+          "mem_info_gtt_used": 74147688448,
+          "mem_info_vram_total": 1073741824,
+          "mem_info_vram_used": 242450432
+        },
+        "monotonic_s": 15664.513729806,
+        "phase": "warmup_pre",
+        "pid": 138362,
+        "process": {
+          "VmHWM": 31144640512,
+          "VmRSS": 31121829888,
+          "VmSize": 116223361024,
+          "VmSwap": 0
+        },
+        "psi": {
+          "full_avg10": 0.0,
+          "full_avg300": 0.0,
+          "full_avg60": 0.01,
+          "full_total": 555754,
+          "some_avg10": 0.0,
+          "some_avg300": 0.0,
+          "some_avg60": 0.01,
+          "some_total": 558131
+        },
+        "smaps": {
+          "Private_Clean": 331620352,
+          "Private_Dirty": 30783340544,
+          "Pss": 31115428864,
+          "Pss_Anon": 491470848,
+          "Pss_File": 264979456,
+          "Rss": 31121829888
+        },
+        "system": {
+          "Cached": 47670521856,
+          "MemAvailable": 20801617920,
+          "MemFree": 2646859776,
+          "SwapFree": 8587546624,
+          "SwapTotal": 8589930496
+        },
+        "timestamp": "2026-09-04T12:28:57.305+02:00"
+      },
+      "prefill_tps": 165.48642666537955,
+      "prompt_tokens": 168,
+      "psi_some_total_delta_us": 0,
+      "requested_tokens": 128,
+      "stop_type": "limit",
+      "swap_free_delta_bytes": 0,
+      "tokens_predicted": 128,
+      "tokens_returned": 128
+    },
+    {
+      "acceptance": 0.9283276450511946,
+      "content_sha256": "d040630874b6b0a50f217388a71f094a2c8e35c016da3b6224a98a7524c4fce9",
+      "decode_tps": 35.696833502990216,
+      "draft_accepted": 272,
+      "draft_n": 293,
+      "majflt_delta": 0,
+      "name": "measured_1",
+      "post": {
+        "faults": {
+          "majflt": 966,
+          "minflt": 8064197
+        },
+        "gpu": {
+          "mem_info_gtt_total": 128849018880,
+          "mem_info_gtt_used": 74374688768,
+          "mem_info_vram_total": 1073741824,
+          "mem_info_vram_used": 243884032
+        },
+        "monotonic_s": 15681.775735246,
+        "phase": "measured_1_post",
+        "pid": 138362,
+        "process": {
+          "VmHWM": 32040394752,
+          "VmRSS": 32040394752,
+          "VmSize": 117351514112,
+          "VmSwap": 0
+        },
+        "psi": {
+          "full_avg10": 0.0,
+          "full_avg300": 0.0,
+          "full_avg60": 0.0,
+          "full_total": 555754,
+          "some_avg10": 0.0,
+          "some_avg300": 0.0,
+          "some_avg60": 0.0,
+          "some_total": 558131
+        },
+        "smaps": {
+          "Private_Clean": 338526208,
+          "Private_Dirty": 31687999488,
+          "Pss": 32030496768,
+          "Pss_Anon": 1046704128,
+          "Pss_File": 275388416,
+          "Rss": 32040394752
+        },
+        "system": {
+          "Cached": 48037486592,
+          "MemAvailable": 19378757632,
+          "MemFree": 1205354496,
+          "SwapFree": 8587550720,
+          "SwapTotal": 8589930496
+        },
+        "timestamp": "2026-09-04T12:29:14.567+02:00"
+      },
+      "pre": {
+        "faults": {
+          "majflt": 966,
+          "minflt": 7971702
+        },
+        "gpu": {
+          "mem_info_gtt_total": 128849018880,
+          "mem_info_gtt_used": 74328551424,
+          "mem_info_vram_total": 1073741824,
+          "mem_info_vram_used": 243621888
+        },
+        "monotonic_s": 15669.455119825,
+        "phase": "measured_1_pre",
+        "pid": 138362,
+        "process": {
+          "VmHWM": 31782584320,
+          "VmRSS": 31782584320,
+          "VmSize": 117063983104,
+          "VmSwap": 0
+        },
+        "psi": {
+          "full_avg10": 0.0,
+          "full_avg300": 0.0,
+          "full_avg60": 0.01,
+          "full_total": 555754,
+          "some_avg10": 0.0,
+          "some_avg300": 0.0,
+          "some_avg60": 0.01,
+          "some_total": 558131
+        },
+        "smaps": {
+          "Private_Clean": 338460672,
+          "Private_Dirty": 31430189056,
+          "Pss": 31772589056,
+          "Pss_Anon": 788893696,
+          "Pss_File": 275291136,
+          "Rss": 31782584320
+        },
+        "system": {
+          "Cached": 48035000320,
+          "MemAvailable": 19601682432,
+          "MemFree": 1430949888,
+          "SwapFree": 8587546624,
+          "SwapTotal": 8589930496
+        },
+        "timestamp": "2026-09-04T12:29:02.247+02:00"
+      },
+      "prefill_tps": 215.85274267269463,
+      "prompt_tokens": 217,
+      "psi_some_total_delta_us": 0,
+      "requested_tokens": 400,
+      "stop_type": "limit",
+      "swap_free_delta_bytes": 4096,
+      "tokens_predicted": 400,
+      "tokens_returned": 400
+    },
+    {
+      "acceptance": 0.8546099290780141,
+      "content_sha256": "0868421f856f6dc8478e5651f092619bb2ec12dc62f884372a2144d53e2c8dad",
+      "decode_tps": 33.846025691932795,
+      "draft_accepted": 241,
+      "draft_n": 282,
+      "majflt_delta": 0,
+      "name": "measured_2",
+      "post": {
+        "faults": {
+          "majflt": 966,
+          "minflt": 8159208
+        },
+        "gpu": {
+          "mem_info_gtt_total": 128849018880,
+          "mem_info_gtt_used": 74374574080,
+          "mem_info_vram_total": 1073741824,
+          "mem_info_vram_used": 244109312
+        },
+        "monotonic_s": 15695.064575604,
+        "phase": "measured_2_post",
+        "pid": 138362,
+        "process": {
+          "VmHWM": 32308293632,
+          "VmRSS": 32308293632,
+          "VmSize": 117608361984,
+          "VmSwap": 0
+        },
+        "psi": {
+          "full_avg10": 0.0,
+          "full_avg300": 0.0,
+          "full_avg60": 0.0,
+          "full_total": 555754,
+          "some_avg10": 0.0,
+          "some_avg300": 0.0,
+          "some_avg60": 0.0,
+          "some_total": 558131
+        },
+        "smaps": {
+          "Private_Clean": 338526208,
+          "Private_Dirty": 31955898368,
+          "Pss": 32298395648,
+          "Pss_Anon": 1314603008,
+          "Pss_File": 275388416,
+          "Rss": 32308293632
+        },
+        "system": {
+          "Cached": 48038481920,
+          "MemAvailable": 19222654976,
+          "MemFree": 1048154112,
+          "SwapFree": 8587550720,
+          "SwapTotal": 8589930496
+        },
+        "timestamp": "2026-09-04T12:29:27.856+02:00"
+      },
+      "pre": {
+        "faults": {
+          "majflt": 966,
+          "minflt": 8064197
+        },
+        "gpu": {
+          "mem_info_gtt_total": 128849018880,
+          "mem_info_gtt_used": 74374688768,
+          "mem_info_vram_total": 1073741824,
+          "mem_info_vram_used": 243884032
+        },
+        "monotonic_s": 15681.869453998,
+        "phase": "measured_2_pre",
+        "pid": 138362,
+        "process": {
+          "VmHWM": 32040394752,
+          "VmRSS": 32040394752,
+          "VmSize": 117351514112,
+          "VmSwap": 0
+        },
+        "psi": {
+          "full_avg10": 0.0,
+          "full_avg300": 0.0,
+          "full_avg60": 0.0,
+          "full_total": 555754,
+          "some_avg10": 0.0,
+          "some_avg300": 0.0,
+          "some_avg60": 0.0,
+          "some_total": 558131
+        },
+        "smaps": {
+          "Private_Clean": 338460672,
+          "Private_Dirty": 31687999488,
+          "Pss": 32030399488,
+          "Pss_Anon": 1046704128,
+          "Pss_File": 275291136,
+          "Rss": 32040394752
+        },
+        "system": {
+          "Cached": 48037486592,
+          "MemAvailable": 19378913280,
+          "MemFree": 1205510144,
+          "SwapFree": 8587550720,
+          "SwapTotal": 8589930496
+        },
+        "timestamp": "2026-09-04T12:29:14.661+02:00"
+      },
+      "prefill_tps": 206.57819792401662,
+      "prompt_tokens": 243,
+      "psi_some_total_delta_us": 0,
+      "requested_tokens": 400,
+      "stop_type": "limit",
+      "swap_free_delta_bytes": 0,
+      "tokens_predicted": 400,
+      "tokens_returned": 400
+    }
+  ],
+  "test": "QWEN-FLASH-NEXT-SINGLE-NODE-001",
+  "verdict": "PASS_TO_TEST_3"
+}
