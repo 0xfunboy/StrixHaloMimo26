@@ -1,0 +1,29 @@
+{
+  "rank0": {
+    "before": {
+      "LoadState": "not-found",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "InvocationID": "",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    },
+    "start_receipt": {
+      "ActiveState": "active",
+      "ExecMainStatus": "0",
+      "InvocationID": "4011bf4ff2bf4a36b97ffdc735013510",
+      "Result": "success",
+      "SubState": "running"
+    },
+    "after": {
+      "LoadState": "not-found",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "InvocationID": "",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    }
+  }
+}

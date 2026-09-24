@@ -1,0 +1,366 @@
+{
+  "cleanup": {
+    "status": "PASS",
+    "k2_state": "READY",
+    "at": "2026-09-24T12:43:29+0200",
+    "epoch": "1790246320305924015",
+    "target": {
+      "controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+      "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6",
+      "preset": "dspark-k2-gfx1151",
+      "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"
+    }
+  },
+  "initial_cause": "NORMAL_COMPLETION",
+  "load": {
+    "binary": {
+      "path": "/home/funboy/.local/share/haloclu-ds41/releases/ds4-speed-001-engram1/ds4-server",
+      "sha256": "8d977276c007bc2379349e9a4ebb5b6414d6d67f0b011f4cec49545e6131c663"
+    },
+    "command": [
+      "/home/funboy/.local/share/haloclu-ds41/releases/ds4-speed-001-engram1/ds4-server",
+      "--rocm",
+      "-m",
+      "/home/funboy/models/ds41/ds4-v41-q2/DeepSeek-V4.1-Flash-Q2.gguf",
+      "--ctx",
+      "16384",
+      "--tensor-parallel",
+      "--role",
+      "coordinator",
+      "--listen",
+      "10.55.0.1",
+      "9917",
+      "--transport",
+      "tcp",
+      "--batched-session",
+      "1",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "18433",
+      "--trace",
+      "/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-D-002/server-trace.log"
+    ],
+    "finished_at": "2026-09-24T11:22:49+0200",
+    "load_s": 132.3360888559837,
+    "memory_after": {
+      "gpu_sysfs": [
+        {
+          "device": "/sys/class/drm/card0/device",
+          "values": {
+            "gpu_busy_percent": "1",
+            "hwmon/hwmon5/freq1_input": "688000000",
+            "hwmon/hwmon5/power1_input": "12075000",
+            "hwmon/hwmon5/temp1_input": "44000",
+            "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+            "pp_dpm_sclk": "0: 600Mhz \n1: 688Mhz *\n2: 2900Mhz"
+          }
+        }
+      ],
+      "memory_bytes": {
+        "MemAvailable": 38911516672,
+        "MemTotal": 131210121216,
+        "SwapFree": 8019492864,
+        "SwapTotal": 8589930496
+      },
+      "observed_at": "2026-09-24T11:22:49+0200",
+      "process": {
+        "VmRSS": 34068131840,
+        "VmSize": 257967341568,
+        "VmSwap": 34746368,
+        "io": {
+          "cancelled_write_bytes": 0,
+          "rchar": 86509203744,
+          "read_bytes": 173225398272,
+          "syscr": 2996,
+          "syscw": 304,
+          "wchar": 315648,
+          "write_bytes": 20480
+        },
+        "majflt": 2077,
+        "minflt": 782826,
+        "pid": 777630,
+        "starttime_ticks": 24051704
+      },
+      "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+    },
+    "memory_before": {
+      "gpu_sysfs": [
+        {
+          "device": "/sys/class/drm/card0/device",
+          "values": {
+            "gpu_busy_percent": "0",
+            "hwmon/hwmon5/freq1_input": "605000000",
+            "hwmon/hwmon5/power1_input": "15073000",
+            "hwmon/hwmon5/temp1_input": "44000",
+            "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+            "pp_dpm_sclk": "0: 600Mhz \n1: 605Mhz *\n2: 2900Mhz"
+          }
+        }
+      ],
+      "memory_bytes": {
+        "MemAvailable": 128765050880,
+        "MemTotal": 131210121216,
+        "SwapFree": 8202604544,
+        "SwapTotal": 8589930496
+      },
+      "observed_at": "2026-09-24T11:20:36+0200",
+      "process": {
+        "VmRSS": 28999680,
+        "VmSize": 53612544,
+        "VmSwap": 0,
+        "io": {
+          "cancelled_write_bytes": 0,
+          "rchar": 97490789,
+          "read_bytes": 40230912,
+          "syscr": 855,
+          "syscw": 4,
+          "wchar": 1091,
+          "write_bytes": 4096
+        },
+        "majflt": 26,
+        "minflt": 21498,
+        "pid": 777626,
+        "starttime_ticks": 24051687
+      },
+      "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+    },
+    "model_identity_note": "Identity comes from pinned E1 binary, DeepSeek-V4.1 GGUF metadata/size and matching peer; API display ID is recorded separately.",
+    "peer_memory_after": {
+      "snapshot": {
+        "gpu_sysfs": [
+          {
+            "device": "/sys/class/drm/card1/device",
+            "values": {
+              "gpu_busy_percent": "1",
+              "hwmon/hwmon5/freq1_input": "664000000",
+              "hwmon/hwmon5/power1_input": "14042000",
+              "hwmon/hwmon5/temp1_input": "43000",
+              "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+              "pp_dpm_sclk": "0: 600Mhz \n1: 664Mhz *\n2: 2900Mhz"
+            }
+          }
+        ],
+        "memory_bytes": {
+          "MemAvailable": 39016923136,
+          "MemTotal": 131203895296,
+          "SwapFree": 8332013568,
+          "SwapTotal": 8589930496
+        },
+        "observed_at": "2026-09-24T11:22:49+0200",
+        "process": {
+          "VmRSS": 33126768640,
+          "VmSize": 257810292736,
+          "VmSwap": 33607680,
+          "io": {
+            "cancelled_write_bytes": 0,
+            "rchar": 86509250370,
+            "read_bytes": 173114322944,
+            "syscr": 3024,
+            "syscw": 297,
+            "wchar": 315287,
+            "write_bytes": 20480
+          },
+          "majflt": 1127,
+          "minflt": 783922,
+          "pid": 806730,
+          "starttime_ticks": 24051766
+        },
+        "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+      },
+      "status": "PASS",
+      "unit": "mimo26-gs001-d-r1-002",
+      "unit_state": {
+        "ActiveState": "active",
+        "InvocationID": "19e90ffb8ae6445f9e240fb8da646ad5",
+        "MainPID": "806730"
+      }
+    },
+    "pid": 777630,
+    "source_freeze": {
+      "files_checked": 74,
+      "index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+      "loaded_modules": {
+        "__main__": {
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/adapter_ds41_readiness_v1.py",
+          "sha256": "b4523c1d2337a2611ca8ac964fa78e9435cca0ce7a7242c7758ca33fa6675bad"
+        },
+        "common": {
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/common.py",
+          "sha256": "65dccf0c1437dbda7ef3c97121c8439fa7a388d75b000362a5dbf9c0a5004a9f"
+        },
+        "validate": {
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/validate.py",
+          "sha256": "34658bf68884e15daf3a972b7fc12591bed87854a512e9d401c7a5a3935aa9c9"
+        }
+      },
+      "status": "PASS"
+    },
+    "status": "PASS"
+  },
+  "quality": {
+    "note": "Technical collection/sanity, not task quality",
+    "postflight": [
+      {
+        "case_id": "SANITY-arithmetic",
+        "critical_violations": [],
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-extract",
+        "critical_violations": [],
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-json",
+        "critical_violations": [],
+        "diagnostics": {
+          "parsing": true,
+          "schema": true,
+          "schema_errors": [],
+          "value_errors": []
+        },
+        "parsed": {
+          "alpha": 7,
+          "beta": "blue"
+        },
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-italian",
+        "critical_violations": [],
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-english",
+        "critical_violations": [],
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-code_clamp",
+        "status": "PASS",
+        "tests": [
+          {
+            "actual": 5,
+            "error": null,
+            "index": 0,
+            "input_unchanged": true,
+            "pass": true
+          },
+          {
+            "actual": 0,
+            "error": null,
+            "index": 1,
+            "input_unchanged": true,
+            "pass": true
+          },
+          {
+            "actual": 10,
+            "error": null,
+            "index": 2,
+            "input_unchanged": true,
+            "pass": true
+          },
+          {
+            "actual": 3,
+            "error": null,
+            "index": 3,
+            "input_unchanged": true,
+            "pass": true
+          }
+        ]
+      }
+    ],
+    "preflight": [
+      {
+        "case_id": "SANITY-arithmetic",
+        "critical_violations": [],
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-extract",
+        "critical_violations": [],
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-json",
+        "critical_violations": [],
+        "diagnostics": {
+          "parsing": true,
+          "schema": true,
+          "schema_errors": [],
+          "value_errors": []
+        },
+        "parsed": {
+          "alpha": 7,
+          "beta": "blue"
+        },
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-italian",
+        "critical_violations": [],
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-english",
+        "critical_violations": [],
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-code_clamp",
+        "status": "PASS",
+        "tests": [
+          {
+            "actual": 5,
+            "error": null,
+            "index": 0,
+            "input_unchanged": true,
+            "pass": true
+          },
+          {
+            "actual": 0,
+            "error": null,
+            "index": 1,
+            "input_unchanged": true,
+            "pass": true
+          },
+          {
+            "actual": 10,
+            "error": null,
+            "index": 2,
+            "input_unchanged": true,
+            "pass": true
+          },
+          {
+            "actual": 3,
+            "error": null,
+            "index": 3,
+            "input_unchanged": true,
+            "pass": true
+          }
+        ]
+      }
+    ],
+    "status": "PASS"
+  },
+  "run_completion": "PASS",
+  "run_id": "generalist-selection-001-D-002",
+  "schema": "mimo26-window-result-v1",
+  "workers": {
+    "rank0": {
+      "ActiveState": "inactive",
+      "ExecMainStatus": "0",
+      "InvocationID": "",
+      "Result": "success",
+      "SubState": "dead"
+    },
+    "rank1": {
+      "ActiveState": "inactive",
+      "ExecMainStatus": "0",
+      "InvocationID": "",
+      "Result": "success",
+      "SubState": "dead"
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "cleanup": {
+    "status": "PASS",
+    "k2_state": "READY",
+    "at": "2026-09-24T11:19:59+0200",
+    "epoch": "1790241311047078402",
+    "target": {
+      "controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+      "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6",
+      "preset": "dspark-k2-gfx1151",
+      "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"
+    }
+  },
+  "initial_cause": "COORDINATOR_INTERRUPTED",
+  "load": {
+    "memory_before": {
+      "gpu_sysfs": [
+        {
+          "device": "/sys/class/drm/card0/device",
+          "values": {
+            "gpu_busy_percent": "0",
+            "hwmon/hwmon5/freq1_input": "606000000",
+            "hwmon/hwmon5/power1_input": "15003000",
+            "hwmon/hwmon5/temp1_input": "45000",
+            "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+            "pp_dpm_sclk": "0: 600Mhz \n1: 606Mhz *\n2: 2900Mhz"
+          }
+        }
+      ],
+      "memory_bytes": {
+        "MemAvailable": 128736464896,
+        "MemTotal": 131210121216,
+        "SwapFree": 8201334784,
+        "SwapTotal": 8589930496
+      },
+      "observed_at": "2026-09-24T11:01:11+0200",
+      "process": {
+        "VmRSS": 29003776,
+        "VmSize": 53469184,
+        "VmSwap": 0,
+        "io": {
+          "cancelled_write_bytes": 0,
+          "rchar": 68279298,
+          "read_bytes": 39899136,
+          "syscr": 563,
+          "syscw": 3,
+          "wchar": 27,
+          "write_bytes": 0
+        },
+        "majflt": 38,
+        "minflt": 15616,
+        "pid": 770324,
+        "starttime_ticks": 23935123
+      },
+      "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+    },
+    "source_freeze": {
+      "files_checked": 74,
+      "index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+      "loaded_modules": {
+        "__main__": {
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/adapter_ds41.py",
+          "sha256": "da337731a54954aa653383c7f41ad59b781b83a498b315ffd7774563418d0fe7"
+        },
+        "common": {
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/common.py",
+          "sha256": "65dccf0c1437dbda7ef3c97121c8439fa7a388d75b000362a5dbf9c0a5004a9f"
+        },
+        "validate": {
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/validate.py",
+          "sha256": "34658bf68884e15daf3a972b7fc12591bed87854a512e9d401c7a5a3935aa9c9"
+        }
+      },
+      "status": "PASS"
+    },
+    "started_at": "2026-09-24T11:01:11+0200",
+    "status": "IN_PROGRESS"
+  },
+  "quality": {
+    "status": "NOT_EVALUATED"
+  },
+  "run_completion": "INTERRUPTED",
+  "run_id": "generalist-selection-001-D-001",
+  "schema": "mimo26-window-result-v1",
+  "workers": {
+    "rank0": "RUNNING",
+    "rank1": "RUNNING"
+  }
+}

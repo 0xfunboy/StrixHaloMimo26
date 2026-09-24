@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "pid": 805600,
+  "rank": 0,
+  "load_s": 280.5142524969997,
+  "finished_at": "2026-09-24T16:17:27+0200",
+  "versions": {
+    "vllm": "0.1.0rc2.dev9+g9255fd9fb9.rocm100",
+    "torch": "2.13.0+rocm10.0.0",
+    "transformers": "5.16.1"
+  },
+  "kwargs": {
+    "model": "/home/funboy/models/MiMo-V2.6/official/MiMo-V2.6-Flash-RL",
+    "runner": "generate",
+    "trust_remote_code": true,
+    "language_model_only": true,
+    "tensor_parallel_size": 2,
+    "pipeline_parallel_size": 1,
+    "distributed_executor_backend": "external_launcher",
+    "dtype": "bfloat16",
+    "max_model_len": 16384,
+    "max_num_seqs": 1,
+    "max_num_batched_tokens": 512,
+    "kv_cache_memory_bytes": 4294967296,
+    "enforce_eager": true,
+    "disable_custom_all_reduce": true,
+    "enable_expert_parallel": false,
+    "enable_prefix_caching": false,
+    "seed": 101,
+    "moe_backend": "triton_unfused",
+    "disable_log_stats": false
+  },
+  "actual_cache_context": {
+    "max_model_len": 16384,
+    "kv_cache_memory_bytes": 4294967296,
+    "num_gpu_blocks": 11650,
+    "block_size": 16
+  },
+  "source_freeze": {
+    "status": "PASS",
+    "files_checked": 74,
+    "index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+    "loaded_modules": {
+      "__main__": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/adapter_original.py",
+        "sha256": "67410f02e49cd523b9e84280fe3e7564d067ff3fb41a1c86fb46009b2ed367d9"
+      },
+      "common": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/common.py",
+        "sha256": "65dccf0c1437dbda7ef3c97121c8439fa7a388d75b000362a5dbf9c0a5004a9f"
+      },
+      "validate": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/validate.py",
+        "sha256": "34658bf68884e15daf3a972b7fc12591bed87854a512e9d401c7a5a3935aa9c9"
+      }
+    }
+  },
+  "memory_before": {
+    "observed_at": "2026-09-24T16:12:42+0200",
+    "memory_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 128195006464,
+      "SwapTotal": 8589930496,
+      "SwapFree": 8186187776
+    },
+    "process": {
+      "VmSize": 47222784,
+      "VmRSS": 24154112,
+      "VmSwap": 0,
+      "pid": 805600,
+      "minflt": 24451,
+      "majflt": 0,
+      "starttime_ticks": 25804191,
+      "io": {
+        "rchar": 230901819,
+        "wchar": 0,
+        "syscr": 556,
+        "syscw": 0,
+        "read_bytes": 182079488,
+        "write_bytes": 0,
+        "cancelled_write_bytes": 0
+      }
+    },
+    "gpu_sysfs": [
+      {
+        "device": "/sys/class/drm/card0/device",
+        "values": {
+          "gpu_busy_percent": "0",
+          "pp_dpm_sclk": "0: 600Mhz \n1: 602Mhz *\n2: 2900Mhz",
+          "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+          "hwmon/hwmon5/freq1_input": "602000000",
+          "hwmon/hwmon5/power1_input": "16091000",
+          "hwmon/hwmon5/temp1_input": "41000"
+        }
+      }
+    ],
+    "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+  },
+  "memory_after": {
+    "observed_at": "2026-09-24T16:17:27+0200",
+    "memory_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 35809869824,
+      "SwapTotal": 8589930496,
+      "SwapFree": 6138081280
+    },
+    "process": {
+      "VmSize": 112774021120,
+      "VmRSS": 2497171456,
+      "VmSwap": 897884160,
+      "pid": 805600,
+      "minflt": 26522920,
+      "majflt": 398656,
+      "starttime_ticks": 25804191,
+      "io": {
+        "rchar": 1859669205,
+        "wchar": 25908540,
+        "syscr": 65418,
+        "syscw": 1097,
+        "read_bytes": 131689648128,
+        "write_bytes": 4005888,
+        "cancelled_write_bytes": 0
+      }
+    },
+    "gpu_sysfs": [
+      {
+        "device": "/sys/class/drm/card0/device",
+        "values": {
+          "gpu_busy_percent": "11",
+          "pp_dpm_sclk": "0: 600Mhz \n1: 881Mhz *\n2: 2900Mhz",
+          "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz *",
+          "hwmon/hwmon5/freq1_input": "881000000",
+          "hwmon/hwmon5/power1_input": "44001000",
+          "hwmon/hwmon5/temp1_input": "50000"
+        }
+      }
+    ],
+    "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+  },
+  "patch_sha256": "eeb66fefbf1b63459e5712c031399f2d24d9ac05956c97b4e979ad03b901be72"
+}

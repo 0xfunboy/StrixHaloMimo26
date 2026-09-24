@@ -1,0 +1,6 @@
+{
+  "returncode": 0,
+  "stdout": "{\n  \"state\": \"DISPATCHED\",\n  \"at\": \"2026-09-24T10:53:55+0200\",\n  \"returncode\": 0,\n  \"stdout\": \"\",\n  \"stderr\": \"Running as unit: mimo26-gs001-supervisor-m-001.service; invocation ID: 6873be3ac79e4339bf7a94b361ebc40b\\n\",\n  \"supervisor\": {\n    \"LoadState\": \"loaded\",\n    \"ActiveState\": \"active\",\n    \"SubState\": \"running\",\n    \"InvocationID\": \"6873be3ac79e4339bf7a94b361ebc40b\",\n    \"MainPID\": \"765775\",\n    \"Result\": \"success\",\n    \"ExecMainStatus\": \"0\"\n  }\n}\n",
+  "stderr": "",
+  "at": "2026-09-24T10:53:55.797872+02:00"
+}

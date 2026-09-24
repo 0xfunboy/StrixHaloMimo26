@@ -1,0 +1,39 @@
+{
+  "status": "CONTINUITY_EVALUATION_CHECK_PASS",
+  "gates": {
+    "EXPERIMENT_COLLECTION": "PARTIAL_OR_BLOCKED",
+    "SOURCE_FREEZE": "PASS",
+    "TASK_COUNT": 12,
+    "GENERAL_EQUIVALENCE": "NOT_ESTABLISHED",
+    "THINKING_CAUSAL_EFFECT": "NOT_ISOLATED",
+    "QUANTIZATION_ONLY_EFFECT": "NOT_ISOLATED",
+    "SAMPLED_VARIANCE": "NOT_EVALUATED",
+    "LONG_CONTEXT": "NOT_QUALIFIED",
+    "PRODUCTION_PROMOTION": "NOT_PERFORMED",
+    "MTP": "BLOCKED_OFF_REFERENCE_COLLECTOR",
+    "FINAL_RESIDENT": "PASS"
+  },
+  "quality": {
+    "Q": {
+      "INCOMPLETE_OUTPUT_CAP": 8,
+      "PASS": 3,
+      "FAIL_FORMAT": 1
+    },
+    "M": {
+      "NOT_RUN": 12
+    },
+    "D": {
+      "INCOMPLETE_OUTPUT_CAP": 9,
+      "PASS": 3
+    },
+    "O": {
+      "NOT_RUN": 12
+    }
+  },
+  "issues": {
+    "Q": [],
+    "M": [],
+    "D": [],
+    "O": []
+  }
+}

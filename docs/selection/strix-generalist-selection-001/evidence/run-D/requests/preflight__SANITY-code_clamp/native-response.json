@@ -1,0 +1,26 @@
+{
+  "id": "chatcmpl-36726465a7575d322a33c50b",
+  "object": "chat.completion",
+  "created": 1790241816,
+  "model": "deepseek-v4.1-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "def clamp(x, lo, hi):\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x",
+        "reasoning_content": "We need answer only Python code defining clamp(x, lo, hi). No imports, no other functions. Need concise. Ensure behavior. Could use if/elif. \"Do not call other functions\" means within definition no function calls. Return only Python code. Probably:\n\ndef clamp(x, lo, hi):\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x\n\nNeed only code, no markdown? User says Return only Python code. So final should be code, likely no fences? \"Return only Python code\" means don't wrap? Usually answer code block okay? They said only Python code, so raw text. We'll provide raw code. Ensure no calls. No imports. Fine."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 76,
+    "completion_tokens": 185,
+    "total_tokens": 261,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 76
+    }
+  }
+}

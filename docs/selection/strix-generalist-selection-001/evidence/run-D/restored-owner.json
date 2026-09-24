@@ -1,0 +1,40 @@
+{
+  "at": "2026-09-24T12:43:29+0200",
+  "owner": {
+    "owner": "DS41",
+    "state": "RUNNING",
+    "epoch": "1790246320305924015",
+    "ranks": {
+      "0": {
+        "unit": "ds41-rank0.service",
+        "invocation_id": "357dcbd907a7461abdec9463a3bcd50a",
+        "nonce": "10e134c70c11e420e146f320eb41647e"
+      },
+      "1": {
+        "unit": "ds41-rank1.service",
+        "invocation_id": "76cb577f752343a988e0d0d7bb4f522f",
+        "nonce": "f93c1fccf0a233c6520ab2842cabe3e8"
+      }
+    }
+  },
+  "units": {
+    "0": {
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "SubState": "running",
+      "InvocationID": "357dcbd907a7461abdec9463a3bcd50a",
+      "MainPID": "789284",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    },
+    "1": {
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "SubState": "running",
+      "InvocationID": "76cb577f752343a988e0d0d7bb4f522f",
+      "MainPID": "902244",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    }
+  }
+}

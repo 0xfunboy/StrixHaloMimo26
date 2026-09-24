@@ -1,0 +1,385 @@
+{
+  "schema": "strix-generalist-request-v1",
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "run_id": "generalist-selection-001-D-002",
+  "request_id": "generalist-selection-001-D-002/D/postflight/SANITY-extract",
+  "case_id": "SANITY-extract",
+  "request_key": "SANITY-extract",
+  "profile": "D",
+  "rank": 0,
+  "phase": "postflight",
+  "messages": [
+    {
+      "content": "You are a helpful assistant",
+      "role": "system"
+    },
+    {
+      "content": "Read this exact token: ZEBRA-4821. Return only that token.",
+      "role": "user"
+    }
+  ],
+  "rendered_text": "<｜begin▁of▁sentence｜><｜System｜>Reasoning Effort: 100 (range 1-100, the higher the value, the more thorough the reasoning)\n\nYou are a helpful assistant<｜User｜>Read this exact token: ZEBRA-4821. Return only that token.<｜Assistant｜><think>",
+  "input_token_ids": [
+    0,
+    128799,
+    77666,
+    288,
+    9504,
+    482,
+    28,
+    223,
+    1457,
+    343,
+    16801,
+    223,
+    19,
+    15,
+    1457,
+    14,
+    270,
+    4077,
+    270,
+    1990,
+    14,
+    270,
+    850,
+    15146,
+    270,
+    22805,
+    868,
+    3476,
+    477,
+    260,
+    11502,
+    22896,
+    128803,
+    8158,
+    566,
+    6319,
+    17840,
+    28,
+    1653,
+    18675,
+    7691,
+    15,
+    24980,
+    19,
+    16,
+    20870,
+    1353,
+    396,
+    17840,
+    16,
+    128804,
+    128821
+  ],
+  "input_ids_sha256": "c2b668b4edb99c866ed730b6755082c58ce05221aa89ab1cff301d428d6434ef",
+  "input_tokens": 52,
+  "output_cap": 1024,
+  "thinking": true,
+  "sampling": {
+    "frequency_penalty": 0.0,
+    "ignore_eos": false,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "repetition_penalty": 1.0,
+    "seed": 101,
+    "temperature": 1.0,
+    "top_k": 0,
+    "top_p": 0.95
+  },
+  "timeout_s": 1200,
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "native_response": {
+    "id": "chatcmpl-49a71f475950ad136ed906b6",
+    "object": "chat.completion",
+    "created": 1790246279,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "ZEBRA-4821",
+          "reasoning_content": "The user asks me to read an exact token and return only that token. The token is ZEBRA-4821. I should return only that token, no extra text.\n\nWait — is this a prompt injection or some kind of test? The system prompt is just \"You are a helpful assistant.\" The user says \"Read this exact token: ZEBRA-4821. Return only that token.\" This is straightforward. Return \"ZEBRA-4821\".\n\nNo hidden constraints. Just comply."
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 52,
+      "completion_tokens": 109,
+      "total_tokens": 161,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 52
+      }
+    }
+  },
+  "native_input_ids_echoed": null,
+  "input_validation": "NATIVE_TRACE_RENDER_COUNT_AND_SAME_BINARY_CPU_TOKENIZATION",
+  "output_token_ids": null,
+  "output_tokens": 109,
+  "finish_reason": "stop",
+  "completion_status": "COMPLETE",
+  "cache_reused_tokens": 0,
+  "cache_gate_pass": true,
+  "native_prompt_processed": 52,
+  "final_text": "ZEBRA-4821",
+  "reasoning_text": "The user asks me to read an exact token and return only that token. The token is ZEBRA-4821. I should return only that token, no extra text.\n\nWait — is this a prompt injection or some kind of test? The system prompt is just \"You are a helpful assistant.\" The user says \"Read this exact token: ZEBRA-4821. Return only that token.\" This is straightforward. Return \"ZEBRA-4821\".\n\nNo hidden constraints. Just comply.",
+  "reasoning_observed": true,
+  "reasoning_closed": true,
+  "reasoning_tokens_native": null,
+  "final_tokens_native": null,
+  "boundary_method": "native separate message.content/reasoning_content; no retokenized native-ID claim",
+  "request_latency_s": 7.954732800018974,
+  "observer": "HTTP caller: submit to complete nonstreaming response read",
+  "t_submit": 245151.894557845,
+  "t_done": 245159.849290645,
+  "engine_metrics": {
+    "prompt_engine_s": 1.054,
+    "prompt_engine_tps": 49.32,
+    "decode_engine_tps": null,
+    "decode_engine_total_rate_rounded": 15.82,
+    "native_log_prompt": {
+      "tokens": 52,
+      "tps": 49.32,
+      "seconds": 1.054,
+      "line": "0924 12:37:52 ds4-server: chat ctx=0..52:52 prefill chunk 52/52 (100.0%) chunk=0.00 t/s avg=49.32 t/s 1.054s"
+    },
+    "native_log_decode": {
+      "tokens": 109,
+      "tps": 15.82,
+      "seconds": 6.891,
+      "line": "0924 12:37:59 ds4-server: chat ctx=152..161:9 gen=109 decoding chunk=15.63 t/s avg=15.82 t/s 6.891s"
+    },
+    "precision": "Native log time rounded to 0.001 s; rates to 0.01 tok/s. Not reconstructed unrounded timestamps.",
+    "decode_contract": "Native log completion/elapsed since decode_t0 (includes first token); NOT post-first-token rate.",
+    "first_generated_token_s": null,
+    "first_final_token_s": null,
+    "client_ttft_s": null
+  },
+  "native_trace_audit": {
+    "request_sequence": 28,
+    "header": {
+      "kind": "chat",
+      "model": "deepseek-v4.1-flash",
+      "stream": "0",
+      "tools": "0",
+      "think_mode": "max",
+      "prompt_tokens": "52",
+      "effective_prompt_tokens": "52",
+      "cached_tokens": "0",
+      "max_tokens": "1024",
+      "temperature": "1.000",
+      "top_k": "0",
+      "top_p": "0.950",
+      "min_p": "0.000",
+      "ignore_eos": "0",
+      "seed": "101",
+      "stream_include_usage": "0",
+      "live_tokens_before": "67",
+      "live_prompt_common": "33",
+      "memory_token_reusable": "0",
+      "memory_miss_reason": "token-mismatch",
+      "tool_replay": "mem=0 disk=0 canonical=0 missing_ids=0",
+      "cache_source": "none",
+      "disk_cached_tokens": "0",
+      "first_mismatch_token": "33",
+      "token_window": "[25..42)"
+    },
+    "finish": "stop",
+    "generated_tokens": 109,
+    "engine_request_elapsed_s_rounded": 7.95,
+    "rendered_match": true,
+    "input_ids_note": "Exact trace rendering and count match tokens produced by the same pinned native CPU tokenizer; API does not echo the full ID list."
+  },
+  "resource_before": {
+    "observed_at": "2026-09-24T12:37:51+0200",
+    "memory_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 38177083392,
+      "SwapTotal": 8589930496,
+      "SwapFree": 8085303296
+    },
+    "process": {
+      "VmSize": 274369568768,
+      "VmRSS": 16105193472,
+      "VmSwap": 15699968,
+      "pid": 777630,
+      "minflt": 910180,
+      "majflt": 5139,
+      "starttime_ticks": 24051704,
+      "io": {
+        "rchar": 107848827861,
+        "wchar": 1693233,
+        "syscr": 12140100,
+        "syscw": 76370,
+        "read_bytes": 181652332544,
+        "write_bytes": 2310144,
+        "cancelled_write_bytes": 0
+      }
+    },
+    "gpu_sysfs": [
+      {
+        "device": "/sys/class/drm/card0/device",
+        "values": {
+          "gpu_busy_percent": "75",
+          "pp_dpm_sclk": "0: 600Mhz \n1: 2322Mhz *\n2: 2900Mhz",
+          "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+          "hwmon/hwmon5/freq1_input": "2322000000",
+          "hwmon/hwmon5/power1_input": "66023000",
+          "hwmon/hwmon5/temp1_input": "67000"
+        }
+      }
+    ],
+    "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+  },
+  "resource_after": {
+    "observed_at": "2026-09-24T12:37:59+0200",
+    "memory_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 38191509504,
+      "SwapTotal": 8589930496,
+      "SwapFree": 8085303296
+    },
+    "process": {
+      "VmSize": 274369568768,
+      "VmRSS": 16105193472,
+      "VmSwap": 15699968,
+      "pid": 777630,
+      "minflt": 910410,
+      "majflt": 5139,
+      "starttime_ticks": 24051704,
+      "io": {
+        "rchar": 107886418773,
+        "wchar": 1697572,
+        "syscr": 12161653,
+        "syscw": 76852,
+        "read_bytes": 181668651008,
+        "write_bytes": 2318336,
+        "cancelled_write_bytes": 0
+      }
+    },
+    "gpu_sysfs": [
+      {
+        "device": "/sys/class/drm/card0/device",
+        "values": {
+          "gpu_busy_percent": "92",
+          "pp_dpm_sclk": "0: 600Mhz \n1: 2755Mhz *\n2: 2900Mhz",
+          "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz *",
+          "hwmon/hwmon5/freq1_input": "2755000000",
+          "hwmon/hwmon5/power1_input": "78021000",
+          "hwmon/hwmon5/temp1_input": "74000"
+        }
+      }
+    ],
+    "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+  },
+  "peer_resource_before": {
+    "unit": "mimo26-gs001-d-r1-002",
+    "unit_state": {
+      "ActiveState": "active",
+      "InvocationID": "19e90ffb8ae6445f9e240fb8da646ad5",
+      "MainPID": "806730"
+    },
+    "snapshot": {
+      "observed_at": "2026-09-24T12:37:51+0200",
+      "memory_bytes": {
+        "MemTotal": 131203895296,
+        "MemAvailable": 38314250240,
+        "SwapTotal": 8589930496,
+        "SwapFree": 8328167424
+      },
+      "process": {
+        "VmSize": 274191405056,
+        "VmRSS": 13298970624,
+        "VmSwap": 30519296,
+        "pid": 806730,
+        "minflt": 910156,
+        "majflt": 1893,
+        "starttime_ticks": 24051766,
+        "io": {
+          "rchar": 91699567389,
+          "wchar": 490805,
+          "syscr": 11952512,
+          "syscw": 318,
+          "read_bytes": 181699125248,
+          "write_bytes": 20480,
+          "cancelled_write_bytes": 0
+        }
+      },
+      "gpu_sysfs": [
+        {
+          "device": "/sys/class/drm/card1/device",
+          "values": {
+            "gpu_busy_percent": "63",
+            "pp_dpm_sclk": "0: 600Mhz \n1: 2049Mhz *\n2: 2900Mhz",
+            "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+            "hwmon/hwmon5/freq1_input": "2049000000",
+            "hwmon/hwmon5/power1_input": "63003000",
+            "hwmon/hwmon5/temp1_input": "67000"
+          }
+        }
+      ],
+      "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+    },
+    "status": "PASS"
+  },
+  "peer_resource_after": {
+    "unit": "mimo26-gs001-d-r1-002",
+    "unit_state": {
+      "ActiveState": "active",
+      "InvocationID": "19e90ffb8ae6445f9e240fb8da646ad5",
+      "MainPID": "806730"
+    },
+    "snapshot": {
+      "observed_at": "2026-09-24T12:37:59+0200",
+      "memory_bytes": {
+        "MemTotal": 131203895296,
+        "MemAvailable": 38341906432,
+        "SwapTotal": 8589930496,
+        "SwapFree": 8328167424
+      },
+      "process": {
+        "VmSize": 274191405056,
+        "VmRSS": 13298970624,
+        "VmSwap": 30519296,
+        "pid": 806730,
+        "minflt": 910376,
+        "majflt": 1893,
+        "starttime_ticks": 24051766,
+        "io": {
+          "rchar": 91708719501,
+          "wchar": 490805,
+          "syscr": 11973732,
+          "syscw": 318,
+          "read_bytes": 181715828736,
+          "write_bytes": 20480,
+          "cancelled_write_bytes": 0
+        }
+      },
+      "gpu_sysfs": [
+        {
+          "device": "/sys/class/drm/card1/device",
+          "values": {
+            "gpu_busy_percent": "81",
+            "pp_dpm_sclk": "0: 600Mhz \n1: 2496Mhz *\n2: 2900Mhz",
+            "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+            "hwmon/hwmon5/freq1_input": "2496000000",
+            "hwmon/hwmon5/power1_input": "73033000",
+            "hwmon/hwmon5/temp1_input": "68000"
+          }
+        }
+      ],
+      "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+    },
+    "status": "PASS"
+  },
+  "error": null,
+  "final_chars": 10,
+  "final_bytes": 10,
+  "reasoning_chars": 412,
+  "persisted_at": "2026-09-24T12:37:59+0200",
+  "record_sha256": "d043a34244ef8228be6deaf859336871aa16ec0240e4f511d21c41d46d8bedd1"
+}

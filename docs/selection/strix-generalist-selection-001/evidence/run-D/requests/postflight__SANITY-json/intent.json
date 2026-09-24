@@ -1,0 +1,14 @@
+{
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "run_id": "generalist-selection-001-D-002",
+  "request_id": "generalist-selection-001-D-002/D/postflight/SANITY-json",
+  "case_id": "SANITY-json",
+  "request_key": "SANITY-json",
+  "profile": "D",
+  "rank": 0,
+  "phase": "postflight",
+  "state": "IN_FLIGHT",
+  "at": "2026-09-24T12:37:59+0200",
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "input_ids_sha256": "8eb4f3a59560a818a4e718d316d48a25c21b8be12c88f4b8cd30b40e6dcff344"
+}

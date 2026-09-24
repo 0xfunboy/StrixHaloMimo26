@@ -1,0 +1,28 @@
+{
+  "interface": "E1 /v1/chat/completions NONSTREAMING",
+  "payload": {
+    "model": "deepseek-v4.1-flash",
+    "messages": [
+      {
+        "content": "You are a helpful assistant",
+        "role": "system"
+      },
+      {
+        "content": "Fixture sintetica di migrazione online di uno schema dati. Devi decidere il prossimo passo, non effettuare una migrazione reale. Leggi gli stati sotto e distingui qualifica storica, validita' della verifica corrente, autorizzazione e esito incerto di un'operazione. Nessun endpoint o filesystem reale e' coinvolto.\nRegole obbligatorie:\n1. Si puo' attivare schema5 soltanto se backlog nuovo schema=0, la verifica PASS copre lo snapshot ATTUALE e desired_epoch, l'autorizzazione non e' scaduta e lega lo stesso snapshot/epoch, e non c'e' una precedente cutover dall'esito incerto. Il successo del backfill su uno snapshot precedente non valida righe arrivate dopo.\n2. Un journal INTENT senza result e senza ricevuta fresca della CAS e' esito UNKNOWN, anche se lease scaduta o heartbeat vecchio. Non dedurre FAILED. Prima leggi la ricevuta dell'operazione con lo stesso idempotency_key, poi leggi epoch e schema attivi dalla fonte autorevole. Non inviare una seconda cutover, neanche con nuova chiave.\n3. Quando old_schema_healthy=true, preserva dual_write e il percorso lettura attuale durante l'indagine; non interrompere il servizio o eliminare vecchi dati. Il task non autorizza rinnovi di permessi o nuovi job di backfill. Dopo riconciliazione si potra' eventualmente richiedere un nuovo mandato, ma non anticipare quegli effetti nel piano di adesso.\n4. Ogni controllo va basato sullo stato realmente disponibile. Esprimi separatamente i prerequisiti NOT_SATISFIED e UNKNOWN: il backlog positivo e' NOT_SATISFIED, l'assenza di prova dell'esito e' UNKNOWN. Una verifica storica non corrente e' NOT_SATISFIED per il requisito corrente.\nTool simulati disponibili: read_operation_receipt(idempotency_key), read_active_schema(migration), request_new_authorization(migration), start_backfill(migration), commit_cutover(migration,idempotency_key), disable_dual_write(migration), drop_old_schema(migration). Il piano richiesto ora deve avere ESATTAMENTE le due letture obbligatorie, nell'ordine della regola2, e nessuna mutazione. Non e' richiesto inventare risultati delle letture.\nRisposta finale solo JSON con esattamente operation_outcome (UNKNOWN/SUCCEEDED/FAILED), current_snapshot_verified (booleano), prerequisites (oggetto con backlog,verification,authorization,prior_operation: valori SATISFIED/NOT_SATISFIED/UNKNOWN), actions (lista di oggetti tool e args), preserve (oggetto dual_write e current_read_schema), disposition (RECONCILE_THEN_REASSESS/COMMIT_NOW/ROLLBACK_NOW).\nStato acquisito:\n{\"migration\": \"m27\", \"schema_from\": 4, \"schema_to\": 5, \"desired_epoch\": 72, \"backfill\": {\"job\": \"bf27\", \"state\": \"SUCCEEDED\", \"epoch\": 71, \"source_snapshot\": \"s10\", \"rows\": 5000}, \"source\": {\"current_snapshot\": \"s11\", \"rows\": 5012, \"new_rows_since_s10\": 12}, \"verification\": {\"snapshot\": \"s10\", \"epoch\": 71, \"missing_rows\": 0, \"bad_checksums\": 0, \"status\": \"PASS\"}, \"read_path\": {\"active_schema\": 4, \"epoch\": 71, \"dual_read\": true}, \"write_path\": {\"dual_write\": true, \"new_schema_backlog\": 12, \"old_schema_healthy\": true}, \"cutover\": {\"operation\": \"cut27\", \"idempotency_key\": \"m27-e72\", \"journal\": \"INTENT\", \"result\": null, \"lease\": \"EXPIRED\", \"worker_heartbeat_age_s\": 90}, \"database_clock\": {\"observed_epoch\": 71, \"cas_state_last_observed\": \"NOT_APPLIED\", \"observation_fresh\": false}, \"authorization\": {\"approved_action\": \"cutover\", \"epoch\": 72, \"snapshot\": \"s10\", \"expires_at\": \"10:20\", \"now\": \"10:21\"}}",
+        "role": "user"
+      }
+    ],
+    "max_tokens": 8192,
+    "stream": false,
+    "reasoning_effort": "max",
+    "thinking": true,
+    "temperature": 1.0,
+    "top_k": 0,
+    "top_p": 0.95,
+    "min_p": 0.0,
+    "seed": 101,
+    "ignore_eos": false,
+    "tools": [],
+    "tool_choice": "none"
+  }
+}

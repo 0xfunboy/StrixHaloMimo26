@@ -1,0 +1,155 @@
+{
+  "status": "PASS",
+  "observed_at": "2026-09-24T16:29:07+0200",
+  "controller": {
+    "state": "READY",
+    "preset": "dspark-k2-gfx1151",
+    "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513",
+    "owner": "DS41",
+    "owner_state": "RUNNING",
+    "epoch": "1790259544584609152",
+    "reason": "",
+    "ranks": [
+      {
+        "rank": 0,
+        "active": true,
+        "health_http": "200"
+      },
+      {
+        "rank": 1,
+        "active": true,
+        "health_http": "200"
+      }
+    ],
+    "paired_backend_http": "200"
+  },
+  "owner": {
+    "owner": "DS41",
+    "state": "RUNNING",
+    "epoch": "1790259544584609152",
+    "ranks": {
+      "0": {
+        "unit": "ds41-rank0.service",
+        "invocation_id": "cd011f622a5a46debd4a0b4ad1383bc9",
+        "nonce": "4b3e1d8557271cf691bfb7b9cd08aff8"
+      },
+      "1": {
+        "unit": "ds41-rank1.service",
+        "invocation_id": "b4ed81d2159b4d3e81854491b3b62625",
+        "nonce": "5ed3c077999561de26b48c6ab1b711b5"
+      }
+    }
+  },
+  "resident_units": {
+    "0": {
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "SubState": "running",
+      "InvocationID": "cd011f622a5a46debd4a0b4ad1383bc9",
+      "MainPID": "806984",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    },
+    "1": {
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "SubState": "running",
+      "InvocationID": "b4ed81d2159b4d3e81854491b3b62625",
+      "MainPID": "925716",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    }
+  },
+  "own_units": {
+    "Q:rank0": {
+      "LoadState": "not-found",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "InvocationID": "",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    },
+    "M:rank0": {
+      "LoadState": "loaded",
+      "ActiveState": "failed",
+      "SubState": "failed",
+      "InvocationID": "d83622a965bc4af5a1c60ff6b438eefe",
+      "MainPID": "0",
+      "Result": "exit-code",
+      "ExecMainStatus": "1"
+    },
+    "D:rank0": {
+      "LoadState": "not-found",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "InvocationID": "",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    },
+    "D:rank1": {
+      "LoadState": "not-found",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "InvocationID": "",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    },
+    "O:rank0": {
+      "LoadState": "loaded",
+      "ActiveState": "failed",
+      "SubState": "failed",
+      "InvocationID": "45f5c2f4882b4f64be7ba286fc1b34f1",
+      "MainPID": "0",
+      "Result": "exit-code",
+      "ExecMainStatus": "1"
+    },
+    "O:rank1": {
+      "LoadState": "loaded",
+      "ActiveState": "failed",
+      "SubState": "failed",
+      "InvocationID": "bbe11b201e21431f90b62d7b9920e2ec",
+      "MainPID": "0",
+      "Result": "exit-code",
+      "ExecMainStatus": "1"
+    },
+    "D_SETUP:rank0": {
+      "LoadState": "loaded",
+      "ActiveState": "failed",
+      "SubState": "failed",
+      "InvocationID": "6c3bd7292501479794315123c3026fd1",
+      "MainPID": "0",
+      "Result": "exit-code",
+      "ExecMainStatus": "143"
+    },
+    "D_SETUP:rank1": {
+      "LoadState": "not-found",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "InvocationID": "",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    }
+  },
+  "engine_processes": {
+    "NODE01": [
+      {
+        "pid": 807237,
+        "name": "VLLM::EngineCor",
+        "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/ds41-rank0.service"
+      }
+    ],
+    "NODE02": [
+      {
+        "pid": 925921,
+        "name": "VLLM::EngineCor",
+        "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/ds41-rank1.service"
+      }
+    ]
+  },
+  "lock_holders": [],
+  "note": "DS41 EngineCore cgroups are legitimate restored residents, not MiMo/Qwen residue. Read-only verification."
+}

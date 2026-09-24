@@ -1,0 +1,481 @@
+{
+  "observed_at": "2026-09-24T16:13:04.867741+02:00",
+  "host": "01-EVO-X3",
+  "profiles": {
+    "Q": {
+      "run_id": "generalist-selection-001-Q-001",
+      "run_dir": "/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-Q-001",
+      "exists": true,
+      "unit": {
+        "LoadState": "not-found",
+        "ActiveState": "inactive",
+        "SubState": "dead",
+        "InvocationID": "",
+        "MainPID": "0",
+        "Result": "success",
+        "ExecMainStatus": "0"
+      },
+      "completion": "PASS",
+      "initial_cause": "NORMAL_COMPLETION",
+      "cleanup": {
+        "status": "PASS",
+        "k2_state": "READY",
+        "at": "2026-09-24T10:53:53+0200",
+        "epoch": "1790239745036780819",
+        "target": {
+          "controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+          "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6",
+          "preset": "dspark-k2-gfx1151",
+          "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"
+        }
+      },
+      "load": {
+        "status": "PASS",
+        "load_s": 95.56661623797845,
+        "pid": 754146,
+        "error": null
+      },
+      "panel-progress.json": {
+        "phase": "postflight",
+        "records_completed": 32,
+        "panel_completed": 12,
+        "at": "2026-09-24T10:49:01+0200"
+      },
+      "progress-rank0.json": {
+        "last_request": "generalist-selection-001-Q-001/Q/postflight/SANITY-code_clamp",
+        "phase": "postflight",
+        "case_id": "SANITY-code_clamp",
+        "completion_status": "COMPLETE",
+        "updated_at": "2026-09-24T10:49:01+0200"
+      },
+      "mtp-off-blocker.json": {
+        "status": "BLOCKED",
+        "phase": "mtp_off_after_primary_complete",
+        "error": "RuntimeError:MTP_PROCESS_MODE_UNPROVEN:None",
+        "primary_records_preserved": 32,
+        "at": "2026-09-24T10:49:02+0200"
+      },
+      "sanity-pre.json": {
+        "status": "PASS",
+        "cases": 6
+      },
+      "sanity-post.json": {
+        "status": "PASS",
+        "cases": 6
+      },
+      "primary_records": 32,
+      "panel": [
+        {
+          "case_id": "CODE-IT",
+          "request_id": "generalist-selection-001-Q-001/Q/panel/CODE-IT",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 8192,
+          "final_chars": 0,
+          "request_latency_s": 271.1642027400085
+        },
+        {
+          "case_id": "CODE-EN",
+          "request_id": "generalist-selection-001-Q-001/Q/panel/CODE-EN",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 4096,
+          "final_chars": 0,
+          "request_latency_s": 134.98421032298938
+        },
+        {
+          "case_id": "DATA-IT",
+          "request_id": "generalist-selection-001-Q-001/Q/panel/DATA-IT",
+          "completion_status": "COMPLETE",
+          "output_tokens": 3339,
+          "final_chars": 671,
+          "request_latency_s": 111.1722335969971
+        },
+        {
+          "case_id": "DATA-EN",
+          "request_id": "generalist-selection-001-Q-001/Q/panel/DATA-EN",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 4096,
+          "final_chars": 0,
+          "request_latency_s": 137.18492731600418
+        },
+        {
+          "case_id": "MATH-IT",
+          "request_id": "generalist-selection-001-Q-001/Q/panel/MATH-IT",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 8192,
+          "final_chars": 0,
+          "request_latency_s": 270.5569128829811
+        },
+        {
+          "case_id": "MATH-EN",
+          "request_id": "generalist-selection-001-Q-001/Q/panel/MATH-EN",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 4096,
+          "final_chars": 0,
+          "request_latency_s": 134.24621887001558
+        },
+        {
+          "case_id": "DOCS-IT",
+          "request_id": "generalist-selection-001-Q-001/Q/panel/DOCS-IT",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 8192,
+          "final_chars": 0,
+          "request_latency_s": 273.1663266780088
+        },
+        {
+          "case_id": "DOCS-EN",
+          "request_id": "generalist-selection-001-Q-001/Q/panel/DOCS-EN",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 4096,
+          "final_chars": 0,
+          "request_latency_s": 136.12802761298371
+        },
+        {
+          "case_id": "SCI-IT",
+          "request_id": "generalist-selection-001-Q-001/Q/panel/SCI-IT",
+          "completion_status": "COMPLETE",
+          "output_tokens": 4050,
+          "final_chars": 505,
+          "request_latency_s": 133.3436825860117
+        },
+        {
+          "case_id": "SCI-EN",
+          "request_id": "generalist-selection-001-Q-001/Q/panel/SCI-EN",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 4096,
+          "final_chars": 0,
+          "request_latency_s": 134.82805378900957
+        },
+        {
+          "case_id": "OPS-IT",
+          "request_id": "generalist-selection-001-Q-001/Q/panel/OPS-IT",
+          "completion_status": "COMPLETE",
+          "output_tokens": 2563,
+          "final_chars": 537,
+          "request_latency_s": 85.35905708000064
+        },
+        {
+          "case_id": "OPS-EN",
+          "request_id": "generalist-selection-001-Q-001/Q/panel/OPS-EN",
+          "completion_status": "COMPLETE",
+          "output_tokens": 1833,
+          "final_chars": 651,
+          "request_latency_s": 61.030080346012255
+        }
+      ]
+    },
+    "M": {
+      "run_id": "generalist-selection-001-M-001",
+      "run_dir": "/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-M-001",
+      "exists": true,
+      "unit": {
+        "LoadState": "loaded",
+        "ActiveState": "failed",
+        "SubState": "failed",
+        "InvocationID": "6873be3ac79e4339bf7a94b361ebc40b",
+        "MainPID": "0",
+        "Result": "exit-code",
+        "ExecMainStatus": "32"
+      },
+      "completion": "FAILED",
+      "initial_cause": "WORKER_EXIT_R0_1_R1_0",
+      "cleanup": {
+        "status": "PASS",
+        "k2_state": "READY",
+        "at": "2026-09-24T11:01:01+0200",
+        "epoch": "1790240178624599071",
+        "target": {
+          "controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+          "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6",
+          "preset": "dspark-k2-gfx1151",
+          "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"
+        }
+      },
+      "load": {
+        "status": "PASS",
+        "load_s": 114.18077592900954,
+        "pid": 766173,
+        "error": null
+      },
+      "panel-progress.json": {
+        "phase": "preflight",
+        "records_completed": 5,
+        "panel_completed": 0,
+        "at": "2026-09-24T10:56:10+0200"
+      },
+      "progress-rank0.json": {
+        "last_request": "generalist-selection-001-M-001/M/preflight/SANITY-code_clamp",
+        "phase": "preflight",
+        "case_id": "SANITY-code_clamp",
+        "completion_status": "COMPLETE",
+        "updated_at": "2026-09-24T10:56:15+0200"
+      },
+      "fatal.json": {
+        "phase": "preflight",
+        "status": "TECHNICAL_ERROR",
+        "error": "RuntimeError:SANITY_PREFLIGHT_FAIL",
+        "at": "2026-09-24T10:56:15+0200"
+      },
+      "sanity-pre.json": {
+        "status": "FAIL",
+        "cases": 6
+      },
+      "primary_records": 6,
+      "panel": []
+    },
+    "D": {
+      "run_id": "generalist-selection-001-D-002",
+      "run_dir": "/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-D-002",
+      "exists": true,
+      "unit": {
+        "LoadState": "not-found",
+        "ActiveState": "inactive",
+        "SubState": "dead",
+        "InvocationID": "",
+        "MainPID": "0",
+        "Result": "success",
+        "ExecMainStatus": "0"
+      },
+      "completion": "PASS",
+      "initial_cause": "NORMAL_COMPLETION",
+      "cleanup": {
+        "status": "PASS",
+        "k2_state": "READY",
+        "at": "2026-09-24T12:43:29+0200",
+        "epoch": "1790246320305924015",
+        "target": {
+          "controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+          "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6",
+          "preset": "dspark-k2-gfx1151",
+          "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"
+        }
+      },
+      "load": {
+        "status": "PASS",
+        "load_s": 132.3360888559837,
+        "pid": 777630,
+        "error": null
+      },
+      "panel-progress.json": {
+        "phase": "postflight",
+        "records_completed": 32,
+        "panel_completed": 12,
+        "at": "2026-09-24T12:38:35+0200"
+      },
+      "progress-rank0.json": {
+        "last_request": "generalist-selection-001-D-002/D/postflight/SANITY-code_clamp",
+        "phase": "postflight",
+        "case_id": "SANITY-code_clamp",
+        "completion_status": "COMPLETE",
+        "updated_at": "2026-09-24T12:38:35+0200"
+      },
+      "sanity-pre.json": {
+        "status": "PASS",
+        "cases": 6
+      },
+      "sanity-post.json": {
+        "status": "PASS",
+        "cases": 6
+      },
+      "primary_records": 32,
+      "panel": [
+        {
+          "case_id": "CODE-IT",
+          "request_id": "generalist-selection-001-D-002/D/panel/CODE-IT",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 8192,
+          "final_chars": 0,
+          "request_latency_s": 539.2076123319857
+        },
+        {
+          "case_id": "CODE-EN",
+          "request_id": "generalist-selection-001-D-002/D/panel/CODE-EN",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 4096,
+          "final_chars": 0,
+          "request_latency_s": 272.3572214980086
+        },
+        {
+          "case_id": "DATA-IT",
+          "request_id": "generalist-selection-001-D-002/D/panel/DATA-IT",
+          "completion_status": "COMPLETE",
+          "output_tokens": 5752,
+          "final_chars": 340,
+          "request_latency_s": 381.73957914300263
+        },
+        {
+          "case_id": "DATA-EN",
+          "request_id": "generalist-selection-001-D-002/D/panel/DATA-EN",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 4096,
+          "final_chars": 0,
+          "request_latency_s": 284.97110364297987
+        },
+        {
+          "case_id": "MATH-IT",
+          "request_id": "generalist-selection-001-D-002/D/panel/MATH-IT",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 8192,
+          "final_chars": 0,
+          "request_latency_s": 535.0671103720088
+        },
+        {
+          "case_id": "MATH-EN",
+          "request_id": "generalist-selection-001-D-002/D/panel/MATH-EN",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 4096,
+          "final_chars": 0,
+          "request_latency_s": 269.02865953100263
+        },
+        {
+          "case_id": "DOCS-IT",
+          "request_id": "generalist-selection-001-D-002/D/panel/DOCS-IT",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 8192,
+          "final_chars": 0,
+          "request_latency_s": 560.0975476019958
+        },
+        {
+          "case_id": "DOCS-EN",
+          "request_id": "generalist-selection-001-D-002/D/panel/DOCS-EN",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 4096,
+          "final_chars": 0,
+          "request_latency_s": 273.64518566199695
+        },
+        {
+          "case_id": "SCI-IT",
+          "request_id": "generalist-selection-001-D-002/D/panel/SCI-IT",
+          "completion_status": "COMPLETE",
+          "output_tokens": 4405,
+          "final_chars": 422,
+          "request_latency_s": 292.44984852400376
+        },
+        {
+          "case_id": "SCI-EN",
+          "request_id": "generalist-selection-001-D-002/D/panel/SCI-EN",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 4096,
+          "final_chars": 0,
+          "request_latency_s": 271.02610926900525
+        },
+        {
+          "case_id": "OPS-IT",
+          "request_id": "generalist-selection-001-D-002/D/panel/OPS-IT",
+          "completion_status": "COMPLETE",
+          "output_tokens": 1474,
+          "final_chars": 435,
+          "request_latency_s": 106.63110371900257
+        },
+        {
+          "case_id": "OPS-EN",
+          "request_id": "generalist-selection-001-D-002/D/panel/OPS-EN",
+          "completion_status": "INCOMPLETE_OUTPUT_CAP",
+          "output_tokens": 4096,
+          "final_chars": 0,
+          "request_latency_s": 268.45884372800356
+        }
+      ]
+    },
+    "O": {
+      "run_id": "generalist-selection-001-O-001",
+      "run_dir": "/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-O-001",
+      "exists": true,
+      "unit": {
+        "LoadState": "loaded",
+        "ActiveState": "active",
+        "SubState": "running",
+        "InvocationID": "d6b3ceab8b014239888b9f47041646ed",
+        "MainPID": "805104",
+        "Result": "success",
+        "ExecMainStatus": "0"
+      },
+      "completion": "RUNNING",
+      "initial_cause": null,
+      "cleanup": {
+        "status": "PENDING"
+      },
+      "load": {
+        "status": "IN_PROGRESS",
+        "load_s": null,
+        "pid": null,
+        "error": null
+      }
+    },
+    "T": {
+      "run_id": "generalist-selection-001-QMTP-001",
+      "run_dir": "/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-QMTP-001",
+      "exists": false,
+      "unit": {
+        "LoadState": "not-found",
+        "ActiveState": "inactive",
+        "SubState": "dead",
+        "InvocationID": "",
+        "MainPID": "0",
+        "Result": "success",
+        "ExecMainStatus": "0"
+      }
+    },
+    "D_SETUP": {
+      "run_id": "generalist-selection-001-D-001",
+      "run_dir": "/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-D-001",
+      "exists": true,
+      "unit": {
+        "LoadState": "loaded",
+        "ActiveState": "failed",
+        "SubState": "failed",
+        "InvocationID": "fc1b2de966c14058a8e629179516d1bb",
+        "MainPID": "0",
+        "Result": "exit-code",
+        "ExecMainStatus": "143"
+      },
+      "completion": "INTERRUPTED",
+      "initial_cause": "COORDINATOR_INTERRUPTED",
+      "cleanup": {
+        "status": "PASS",
+        "k2_state": "READY",
+        "at": "2026-09-24T11:19:59+0200",
+        "epoch": "1790241311047078402",
+        "target": {
+          "controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+          "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6",
+          "preset": "dspark-k2-gfx1151",
+          "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"
+        }
+      },
+      "load": {
+        "status": "IN_PROGRESS",
+        "load_s": null,
+        "pid": null,
+        "error": null
+      },
+      "fatal.json": {
+        "phase": "load",
+        "status": "INTERRUPTED",
+        "signal": 15,
+        "at": "2026-09-24T11:15:09+0200"
+      }
+    }
+  },
+  "controller": {
+    "state": "OFF",
+    "preset": "dspark-k2-gfx1151",
+    "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513",
+    "owner": "NONE",
+    "owner_state": "OFF",
+    "epoch": "",
+    "reason": "",
+    "ranks": [
+      {
+        "rank": 0,
+        "active": false,
+        "health_http": "000"
+      },
+      {
+        "rank": 1,
+        "active": false,
+        "health_http": "000"
+      }
+    ],
+    "paired_backend_http": "000"
+  }
+}

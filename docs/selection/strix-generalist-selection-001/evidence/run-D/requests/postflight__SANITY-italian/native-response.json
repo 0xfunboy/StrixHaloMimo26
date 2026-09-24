@@ -1,0 +1,26 @@
+{
+  "id": "chatcmpl-ce87d783e4d62cd19940889a",
+  "object": "chat.completion",
+  "created": 1790246298,
+  "model": "deepseek-v4.1-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "cobalto",
+        "reasoning_content": "We need answer in Italian? User says: \"Nel testo seguente il colore dichiarato è cobalto. Rispondi solo con il nome del colore.\" Translation: In following text the declared color is cobalt. Answer only with name of color. But no text provided? Maybe trick? They say \"Nel testo seguente il colore dichiarato è cobalto.\" \"In the following text the declared color is cobalt. Respond only with the name of the color.\" There is no following text. Need respond only color name. The declared color is cobalt. In Italian color name \"cobalto\" or \"blu cobalto\"? They said \"il colore dichiarato è cobalto. Rispondi solo con il nome del colore.\" So answer only with name of color: cobalto. Need maybe \"cobalto\". Ensure no punctuation? Just \"cobalto\". Final."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 61,
+    "completion_tokens": 195,
+    "total_tokens": 256,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 61
+    }
+  }
+}

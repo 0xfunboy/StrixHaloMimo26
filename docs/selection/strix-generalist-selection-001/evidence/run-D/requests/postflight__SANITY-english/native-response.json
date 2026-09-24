@@ -1,0 +1,26 @@
+{
+  "id": "chatcmpl-65b0d2360f0170ac770a1d0e",
+  "object": "chat.completion",
+  "created": 1790246301,
+  "model": "deepseek-v4.1-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Bob",
+        "reasoning_content": "We need answer only name. Question: Alice is first and Bob is second. Who is second? Bob. Return only name. Need comply."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 52,
+    "completion_tokens": 31,
+    "total_tokens": 83,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 52
+    }
+  }
+}

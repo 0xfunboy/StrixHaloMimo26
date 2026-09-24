@@ -1,0 +1,14 @@
+{
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "run_id": "generalist-selection-001-Q-001",
+  "request_id": "generalist-selection-001-Q-001/Q/panel/SCI-IT",
+  "case_id": "SCI-IT",
+  "request_key": "SCI-IT",
+  "profile": "Q",
+  "rank": 0,
+  "phase": "panel",
+  "state": "IN_FLIGHT",
+  "at": "2026-09-24T10:39:43+0200",
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "input_ids_sha256": "c94fdde12e2c4f0a2de493c5290121a5bd975961ad821b1cee1b89b45fc1a56c"
+}

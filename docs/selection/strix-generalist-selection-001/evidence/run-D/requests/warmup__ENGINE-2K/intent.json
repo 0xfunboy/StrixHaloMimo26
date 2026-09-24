@@ -1,0 +1,14 @@
+{
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "run_id": "generalist-selection-001-D-002",
+  "request_id": "generalist-selection-001-D-002/D/warmup/ENGINE-2K",
+  "case_id": "ENGINE-2K",
+  "request_key": "ENGINE-2K",
+  "profile": "D",
+  "rank": 0,
+  "phase": "warmup",
+  "state": "IN_FLIGHT",
+  "at": "2026-09-24T12:31:16+0200",
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "input_ids_sha256": "d58e8bced3682603264cfed282fb50bc6573b92ad8fb61f8695bc9f67e7ae112"
+}

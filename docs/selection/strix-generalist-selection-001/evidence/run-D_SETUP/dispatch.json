@@ -1,0 +1,23 @@
+{
+  "state": "INTENT",
+  "at": "2026-09-24T11:01:01+0200",
+  "profile": "D",
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "preparation_commit": "87442a8e1b999e5f33165d0b6b563eac5248ab15",
+  "command": [
+    "systemd-run",
+    "--user",
+    "--unit=mimo26-gs001-supervisor-d-001.service",
+    "--property=Restart=no",
+    "--property=KillMode=control-group",
+    "--property=RuntimeMaxSec=57040",
+    "--property=TimeoutStopSec=1350",
+    "--property=ExecStopPost=/usr/bin/python3 /home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/window_cleanup.py generalist-selection-001-D-001",
+    "--property=StandardOutput=append:/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-D-001/supervisor.log",
+    "--property=StandardError=append:/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-D-001/supervisor.log",
+    "--",
+    "/usr/bin/python3",
+    "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/window_runner.py",
+    "generalist-selection-001-D-001"
+  ]
+}

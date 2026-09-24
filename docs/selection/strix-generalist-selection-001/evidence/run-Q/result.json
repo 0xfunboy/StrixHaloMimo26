@@ -1,0 +1,333 @@
+{
+  "cleanup": {
+    "status": "PASS",
+    "k2_state": "READY",
+    "at": "2026-09-24T10:53:53+0200",
+    "epoch": "1790239745036780819",
+    "target": {
+      "controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+      "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6",
+      "preset": "dspark-k2-gfx1151",
+      "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"
+    }
+  },
+  "initial_cause": "NORMAL_COMPLETION",
+  "load": {
+    "binary": {
+      "path": "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-build/bin/llama-server",
+      "sha256": "39221dfcb9363a093ec2c836ea293114a4521ade7f989c393fe4dbe0718b22dc"
+    },
+    "command": [
+      "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-build/bin/llama-server",
+      "-m",
+      "/home/funboy/models/gguf/qwen38-flash-next-agenticrequant/trunk-q5k-00001-of-00003.gguf",
+      "-ngl",
+      "all",
+      "--device",
+      "Vulkan0",
+      "--split-mode",
+      "none",
+      "-c",
+      "16384",
+      "-b",
+      "2048",
+      "-ub",
+      "2048",
+      "-np",
+      "1",
+      "--no-cont-batching",
+      "-fa",
+      "on",
+      "-ctk",
+      "f16",
+      "-ctv",
+      "f16",
+      "-lm",
+      "dio",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "18431",
+      "--spec-type",
+      "none",
+      "--reasoning",
+      "on",
+      "--reasoning-effort",
+      "xhigh",
+      "--reasoning-budget",
+      "-1",
+      "--metrics"
+    ],
+    "finished_at": "2026-09-24T10:14:53+0200",
+    "load_s": 95.56661623797845,
+    "memory_after": {
+      "gpu_sysfs": [
+        {
+          "device": "/sys/class/drm/card0/device",
+          "values": {
+            "gpu_busy_percent": "6",
+            "hwmon/hwmon5/freq1_input": "802000000",
+            "hwmon/hwmon5/power1_input": "23012000",
+            "hwmon/hwmon5/temp1_input": "43000",
+            "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+            "pp_dpm_sclk": "0: 600Mhz \n1: 802Mhz *\n2: 2900Mhz"
+          }
+        }
+      ],
+      "memory_bytes": {
+        "MemAvailable": 35253125120,
+        "MemTotal": 131210121216,
+        "SwapFree": 8247390208,
+        "SwapTotal": 8589930496
+      },
+      "observed_at": "2026-09-24T10:14:53+0200",
+      "process": {
+        "VmRSS": 29067620352,
+        "VmSize": 98882105344,
+        "VmSwap": 0,
+        "io": {
+          "cancelled_write_bytes": 0,
+          "rchar": 92345743043,
+          "read_bytes": 92423262208,
+          "syscr": 10944,
+          "syscw": 115,
+          "wchar": 120989,
+          "write_bytes": 364544
+        },
+        "majflt": 884,
+        "minflt": 14167589,
+        "pid": 754146,
+        "starttime_ticks": 23647794
+      },
+      "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+    },
+    "memory_before": {
+      "gpu_sysfs": [
+        {
+          "device": "/sys/class/drm/card0/device",
+          "values": {
+            "gpu_busy_percent": "0",
+            "hwmon/hwmon5/freq1_input": "604000000",
+            "hwmon/hwmon5/power1_input": "17002000",
+            "hwmon/hwmon5/temp1_input": "40000",
+            "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+            "pp_dpm_sclk": "0: 600Mhz \n1: 604Mhz *\n2: 2900Mhz"
+          }
+        }
+      ],
+      "memory_bytes": {
+        "MemAvailable": 128744570880,
+        "MemTotal": 131210121216,
+        "SwapFree": 8256774144,
+        "SwapTotal": 8589930496
+      },
+      "observed_at": "2026-09-24T10:13:17+0200",
+      "process": {
+        "VmRSS": 163745792,
+        "VmSize": 192929792,
+        "VmSwap": 0,
+        "io": {
+          "cancelled_write_bytes": 0,
+          "rchar": 153781422,
+          "read_bytes": 88936448,
+          "syscr": 915,
+          "syscw": 3,
+          "wchar": 27,
+          "write_bytes": 0
+        },
+        "majflt": 98,
+        "minflt": 60702,
+        "pid": 754143,
+        "starttime_ticks": 23647741
+      },
+      "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+    },
+    "pid": 754146,
+    "runtime_props": "native-props.json",
+    "source_freeze": {
+      "files_checked": 74,
+      "index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+      "loaded_modules": {
+        "__main__": {
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/adapter_llama_continuity_v1.py",
+          "sha256": "b6509878be1f89b1ea14c9464fadea1f913e7076d507cd3c2913009a79636045"
+        },
+        "common": {
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/common.py",
+          "sha256": "65dccf0c1437dbda7ef3c97121c8439fa7a388d75b000362a5dbf9c0a5004a9f"
+        },
+        "validate": {
+          "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/validate.py",
+          "sha256": "34658bf68884e15daf3a972b7fc12591bed87854a512e9d401c7a5a3935aa9c9"
+        }
+      },
+      "status": "PASS"
+    },
+    "status": "PASS"
+  },
+  "quality": {
+    "note": "Sanity/collection status, not task correctness",
+    "postflight": [
+      {
+        "case_id": "SANITY-arithmetic",
+        "critical_violations": [],
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-extract",
+        "critical_violations": [],
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-json",
+        "critical_violations": [],
+        "diagnostics": {
+          "parsing": true,
+          "schema": true,
+          "schema_errors": [],
+          "value_errors": []
+        },
+        "parsed": {
+          "alpha": 7,
+          "beta": "blue"
+        },
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-italian",
+        "critical_violations": [],
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-english",
+        "critical_violations": [],
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-code_clamp",
+        "status": "PASS",
+        "tests": [
+          {
+            "actual": 5,
+            "error": null,
+            "index": 0,
+            "input_unchanged": true,
+            "pass": true
+          },
+          {
+            "actual": 0,
+            "error": null,
+            "index": 1,
+            "input_unchanged": true,
+            "pass": true
+          },
+          {
+            "actual": 10,
+            "error": null,
+            "index": 2,
+            "input_unchanged": true,
+            "pass": true
+          },
+          {
+            "actual": 3,
+            "error": null,
+            "index": 3,
+            "input_unchanged": true,
+            "pass": true
+          }
+        ]
+      }
+    ],
+    "preflight": [
+      {
+        "case_id": "SANITY-arithmetic",
+        "critical_violations": [],
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-extract",
+        "critical_violations": [],
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-json",
+        "critical_violations": [],
+        "diagnostics": {
+          "parsing": true,
+          "schema": true,
+          "schema_errors": [],
+          "value_errors": []
+        },
+        "parsed": {
+          "alpha": 7,
+          "beta": "blue"
+        },
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-italian",
+        "critical_violations": [],
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-english",
+        "critical_violations": [],
+        "status": "PASS"
+      },
+      {
+        "case_id": "SANITY-code_clamp",
+        "status": "PASS",
+        "tests": [
+          {
+            "actual": 5,
+            "error": null,
+            "index": 0,
+            "input_unchanged": true,
+            "pass": true
+          },
+          {
+            "actual": 0,
+            "error": null,
+            "index": 1,
+            "input_unchanged": true,
+            "pass": true
+          },
+          {
+            "actual": 10,
+            "error": null,
+            "index": 2,
+            "input_unchanged": true,
+            "pass": true
+          },
+          {
+            "actual": 3,
+            "error": null,
+            "index": 3,
+            "input_unchanged": true,
+            "pass": true
+          }
+        ]
+      }
+    ],
+    "status": "PASS"
+  },
+  "run_completion": "PASS",
+  "run_id": "generalist-selection-001-Q-001",
+  "schema": "mimo26-window-result-v1",
+  "workers": {
+    "rank0": {
+      "ActiveState": "inactive",
+      "ExecMainStatus": "0",
+      "InvocationID": "",
+      "Result": "success",
+      "SubState": "dead"
+    },
+    "rank1": {
+      "ActiveState": "not-applicable",
+      "ExecMainStatus": "0",
+      "InvocationID": "",
+      "Result": "not-applicable",
+      "SubState": "not-applicable"
+    }
+  }
+}

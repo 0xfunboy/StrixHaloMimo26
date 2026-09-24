@@ -1,0 +1,14 @@
+{
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "run_id": "generalist-selection-001-D-002",
+  "request_id": "generalist-selection-001-D-002/D/postflight/SANITY-code_clamp",
+  "case_id": "SANITY-code_clamp",
+  "request_key": "SANITY-code_clamp",
+  "profile": "D",
+  "rank": 0,
+  "phase": "postflight",
+  "state": "IN_FLIGHT",
+  "at": "2026-09-24T12:38:22+0200",
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "input_ids_sha256": "4987a65b2e785b94f471ab2fd0bddc8e84ad6890d7dca310b7b95a32307d7509"
+}

@@ -1,0 +1,14 @@
+{
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "run_id": "generalist-selection-001-D-002",
+  "request_id": "generalist-selection-001-D-002/D/panel/SCI-EN",
+  "case_id": "SCI-EN",
+  "request_key": "SCI-EN",
+  "profile": "D",
+  "rank": 0,
+  "phase": "panel",
+  "state": "IN_FLIGHT",
+  "at": "2026-09-24T12:20:28+0200",
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "input_ids_sha256": "441abc01cad82cf4cc6afe58feb76869c071303a7cd8a2c2f99055db5c61815e"
+}

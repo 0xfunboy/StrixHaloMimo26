@@ -1,0 +1,14 @@
+{
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "run_id": "generalist-selection-001-Q-001",
+  "request_id": "generalist-selection-001-Q-001/Q/panel/CODE-EN",
+  "case_id": "CODE-EN",
+  "request_key": "CODE-EN",
+  "profile": "Q",
+  "rank": 0,
+  "phase": "panel",
+  "state": "IN_FLIGHT",
+  "at": "2026-09-24T10:19:45+0200",
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "input_ids_sha256": "2d5a63301baee93c8084a7c97edeacd6eb61b79109ae00f42694fd8da0beb121"
+}

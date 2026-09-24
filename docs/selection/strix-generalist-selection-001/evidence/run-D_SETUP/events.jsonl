@@ -1,0 +1,11 @@
+{"event": "RUN_START", "iso": "2026-09-24T11:01:01+0200", "pid": 769925, "ts": 1790240461.9642348}
+{"event": "K2_PRESTATE", "iso": "2026-09-24T11:01:02+0200", "state": "READY", "ts": 1790240462.6664968}
+{"event": "K2_QUIESCE_START", "iso": "2026-09-24T11:01:02+0200", "ts": 1790240462.6671367}
+{"event": "K2_QUIESCED", "iso": "2026-09-24T11:01:10+0200", "ts": 1790240470.5457816}
+{"event": "COMPUTE_LOCK_ACQUIRED", "iso": "2026-09-24T11:01:10+0200", "ts": 1790240470.5492537}
+{"event": "RANK1_STARTED", "invocation": "15acff0559054127b7c930f375536a75", "iso": "2026-09-24T11:01:11+0200", "ts": 1790240471.0070267}
+{"event": "RANK0_STARTED", "invocation": "6c3bd7292501479794315123c3026fd1", "iso": "2026-09-24T11:01:11+0200", "ts": 1790240471.0239074}
+{"event": "LOAD_OBSERVED", "iso": "2026-09-24T11:01:13+0200", "status": "IN_PROGRESS", "ts": 1790240473.3026361}
+{"event": "COORDINATOR_SIGNAL", "iso": "2026-09-24T11:15:09+0200", "signal": 15, "ts": 1790241309.838145}
+{"event": "CLEANUP_START", "iso": "2026-09-24T11:15:09+0200", "ts": 1790241309.9389253}
+{"at": "2026-09-24T11:19:59+0200", "epoch": "1790241311047078402", "event": "CLEANUP_DONE", "iso": "2026-09-24T11:19:59+0200", "k2_state": "READY", "status": "PASS", "target": {"controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh", "preset": "dspark-k2-gfx1151", "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6", "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"}, "ts": 1790241599.2238946}

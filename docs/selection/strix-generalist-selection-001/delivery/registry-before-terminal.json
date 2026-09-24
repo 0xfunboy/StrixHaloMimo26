@@ -1,0 +1,8 @@
+{
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "phase": "WINDOW_O",
+  "at": "2026-09-24T16:12:22+0200",
+  "run_id": "generalist-selection-001-O-001",
+  "dispatch_state": "DISPATCHED",
+  "next_exact_action": "Read the existing supervisor/run receipts until collection and restore are terminal; never redispatch an uncertain request."
+}

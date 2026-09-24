@@ -1,0 +1,6 @@
+0924 11:22:49 ds4-server: chat ctx=0..46:46 prompt start
+0924 11:22:50 ds4-server: chat ctx=0..46:46 prefill chunk 46/46 (100.0%) chunk=0.00 t/s avg=42.82 t/s 1.074s
+0924 11:22:50 ds4-server: chat ctx=0..46:46 prompt done 1.078s
+0924 11:22:52 ds4-server: chat ctx=46..67:21 gen=21 decoding chunk=15.73 t/s avg=15.73 t/s 1.335s
+0924 11:22:52 ds4-server: thinking live checkpoint remembered ctx=0..46:46 live=67 visible=268
+0924 11:22:52 ds4-server: chat ctx=0..46:46 gen=21 finish=stop 2.413s

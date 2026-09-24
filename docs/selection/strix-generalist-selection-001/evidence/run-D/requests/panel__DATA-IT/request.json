@@ -1,0 +1,28 @@
+{
+  "interface": "E1 /v1/chat/completions NONSTREAMING",
+  "payload": {
+    "model": "deepseek-v4.1-flash",
+    "messages": [
+      {
+        "content": "You are a helpful assistant",
+        "role": "system"
+      },
+      {
+        "content": "Fixture sintetica. Produci il consuntivo SLA di un servizio nella finestra [0,60) minuti, usando soltanto eventi ricevuti entro il cutoff 60 incluso. Gli interi rappresentano confini di minuto; tutti gli intervalli sono semiaperti. Non usare calendario o dati esterni.\nPrima elimina i record con received>60. Per ogni id incidente scegli la revisione numerica piu' alta fra i rimanenti; in caso di revisione pari scegli received maggiore e poi record lessicograficamente minore. CANCELLED annulla integralmente l'incidente, non soltanto la parte successiva alla ricezione. ACTIVE contribuisce con [start,end) intersecato con [0,60). effective_incident_ids elenca gli id ACTIVE con intersezione non vuota, cancelled_ids quelli il cui record scelto e' CANCELLED. ignored_after_cutoff elenca i record esclusi per received, non le versioni superate.\nUnisci gli intervalli di outage senza contare due volte le sovrapposizioni. La manutenzione esclude minuti soltanto se il suo stato e' APPROVED; REVOKED e DRAFT non escludono nulla. Anche gli intervalli di manutenzione vanno tagliati alla finestra e uniti. Intervalli adiacenti formano un unico intervallo. La manutenzione viene esclusa sia dal denominatore eligible_minutes sia dagli outage addebitabili. chargeable_outages e' la differenza fra l'unione degli outage e l'unione della manutenzione approvata. up_minutes=eligible_minutes-chargeable_down_minutes. availability_bp_floor e' floor(10000*up_minutes/eligible_minutes), calcolato senza arrotondamento al piu' vicino.\nRisposta finale: SOLO un JSON con esattamente le seguenti chiavi: effective_incident_ids, cancelled_ids, ignored_after_cutoff (liste ordinate lessicograficamente di stringhe); outage_union, excluded_maintenance, chargeable_outages (liste ordinate di coppie intere [inizio,fine], normalizzate e senza intervalli vuoti); eligible_minutes, chargeable_down_minutes, up_minutes, availability_bp_floor (interi). Niente correzione automatica dei dati o valutazione del servizio reale.\nIncidenti:\n[{\"record\": \"r1\", \"id\": \"i1\", \"revision\": 1, \"received\": 3, \"state\": \"ACTIVE\", \"start\": 5, \"end\": 12}, {\"record\": \"r2\", \"id\": \"i2\", \"revision\": 1, \"received\": 18, \"state\": \"ACTIVE\", \"start\": 9, \"end\": 18}, {\"record\": \"r3\", \"id\": \"i3\", \"revision\": 1, \"received\": 36, \"state\": \"ACTIVE\", \"start\": 26, \"end\": 35}, {\"record\": \"r4\", \"id\": \"i4\", \"revision\": 1, \"received\": 58, \"state\": \"ACTIVE\", \"start\": 50, \"end\": 65}, {\"record\": \"r5\", \"id\": \"i1\", \"revision\": 2, \"received\": 40, \"state\": \"ACTIVE\", \"start\": 5, \"end\": 15}, {\"record\": \"r6\", \"id\": \"i5\", \"revision\": 1, \"received\": 25, \"state\": \"ACTIVE\", \"start\": 20, \"end\": 24}, {\"record\": \"r7\", \"id\": \"i5\", \"revision\": 2, \"received\": 41, \"state\": \"CANCELLED\"}, {\"record\": \"r8\", \"id\": \"i2\", \"revision\": 2, \"received\": 45, \"state\": \"ACTIVE\", \"start\": 9, \"end\": 18}, {\"record\": \"r9\", \"id\": \"i4\", \"revision\": 2, \"received\": 61, \"state\": \"CANCELLED\"}]\nManutenzione:\n[{\"id\": \"m1\", \"state\": \"APPROVED\", \"start\": 10, \"end\": 14}, {\"id\": \"m2\", \"state\": \"APPROVED\", \"start\": 30, \"end\": 32}, {\"id\": \"m3\", \"state\": \"REVOKED\", \"start\": 45, \"end\": 48}, {\"id\": \"m4\", \"state\": \"APPROVED\", \"start\": 11, \"end\": 13}, {\"id\": \"m5\", \"state\": \"DRAFT\", \"start\": 41, \"end\": 43}]",
+        "role": "user"
+      }
+    ],
+    "max_tokens": 8192,
+    "stream": false,
+    "reasoning_effort": "max",
+    "thinking": true,
+    "temperature": 1.0,
+    "top_k": 0,
+    "top_p": 0.95,
+    "min_p": 0.0,
+    "seed": 101,
+    "ignore_eos": false,
+    "tools": [],
+    "tool_choice": "none"
+  }
+}

@@ -1,0 +1,4 @@
+{"file": "trunk-q5k-00001-of-00003.gguf", "status": "VERIFIED", "sha256": "89cfaf22a1284938a22698e9b610b1a7405d5148bd1ccf7f87afba5e9014652d"}
+{"file": "trunk-q5k-00002-of-00003.gguf", "status": "VERIFIED", "sha256": "558e3549bd7c03b6840c8ddcfb140e8ef321ae55ccdef1d59c8a8e36ab7b6027"}
+{"file": "trunk-q5k-00003-of-00003.gguf", "status": "VERIFIED", "sha256": "204f1e580f2ea9c069575beb7ed9a0d832a26359e74fb7d9d0d5cf107e107cac"}
+{"file": "mtp-Qwen3.8-Flash-Next-Q5_K-frspec-65k.gguf", "status": "VERIFIED", "sha256": "282764bf3ce11b1ff6c715d65b37d7d690eb782734127429d2af6bd72b4c48b9"}

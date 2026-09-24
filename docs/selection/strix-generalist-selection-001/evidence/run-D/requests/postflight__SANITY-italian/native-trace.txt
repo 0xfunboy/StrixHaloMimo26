@@ -1,0 +1,83 @@
+
+===== request 30 2026-09-24 12:38:05 =====
+kind: chat
+model: deepseek-v4.1-flash
+stream: 0
+tools: 0
+think_mode: max
+prompt_tokens: 61
+effective_prompt_tokens: 61
+cached_tokens: 0
+max_tokens: 1024
+temperature: 1.000
+top_k: 0
+top_p: 0.950
+min_p: 0.000
+ignore_eos: 0
+seed: 101
+stream_include_usage: 0
+
+--- cache decision ---
+live_tokens_before: 114
+prompt_tokens: 61
+live_prompt_common: 33
+memory_token_reusable: 0
+memory_miss_reason: token-mismatch
+tool_replay: mem=0 disk=0 canonical=0 missing_ids=0
+cache_source: none
+cached_tokens: 0
+disk_cached_tokens: 0
+
+first_mismatch_token: 33
+token_window: [25..42)
+     25 ==          live 22805 " reasoning" | prompt 22805 " reasoning"
+     26 ==          live 868 ")\n\n" | prompt 868 ")\n\n"
+     27 ==          live 3476 "You" | prompt 3476 "You"
+     28 ==          live 477 " are" | prompt 477 " are"
+     29 ==          live 260 " a" | prompt 260 " a"
+     30 ==          live 11502 " helpful" | prompt 11502 " helpful"
+     31 ==          live 22896 " assistant" | prompt 22896 " assistant"
+     32 ==          live 128803 "<｜User｜>" | prompt 128803 "<｜User｜>"
+     33 !=          live 25529 "Return" | prompt 84852 "Nel"
+     34 !=          live 1353 " only" | prompt 87444 " testo"
+     35 !=          live 6405 " valid" | prompt 24946 " segu"
+     36 !=          live 26639 " JSON" | prompt 6846 "ente"
+     37 !=          live 418 " with" | prompt 3493 " il"
+     38 !=          live 9045 " exactly" | prompt 1278 " col"
+     39 !=          live 1305 " these" | prompt 492 "ore"
+     40 !=          live 3785 " values" | prompt 27399 " dich"
+     41 !=          live 28 ":" | prompt 13640 "iar"
+
+--- raw request json ---
+{"model": "deepseek-v4.1-flash", "messages": [{"content": "You are a helpful assistant", "role": "system"}, {"content": "Nel testo seguente il colore dichiarato è cobalto. Rispondi solo con il nome del colore.", "role": "user"}], "max_tokens": 1024, "stream": false, "reasoning_effort": "max", "thinking": true, "temperature": 1.0, "top_k": 0, "top_p": 0.95, "min_p": 0.0, "seed": 101, "ignore_eos": false, "tools": [], "tool_choice": "none"}
+
+--- rendered prompt ---
+<｜begin▁of▁sentence｜><｜System｜>Reasoning Effort: 100 (range 1-100, the higher the value, the more thorough the reasoning)
+
+You are a helpful assistant<｜User｜>Nel testo seguente il colore dichiarato è cobalto. Rispondi solo con il nome del colore.<｜Assistant｜><think>
+
+--- generated text ---
+
+
+--- trace: prefill done; decode_max=1024 ctx_room=16323 ---
+
+We need answer in Italian? User says: "Nel testo seguente il colore dichiarato è cobalto. Rispondi solo con il nome del colore." Translation: In following text the declared color is cobalt. Answer only with name of color. But no text provided? Maybe trick? They say "Nel testo seguente il colore dichiarato è cobalto." "In the following text the declared color is cobalt. Respond only with the name of the color." There is no following text. Need respond only color name. The declared color is cobalt. In Italian color name "cobalto" or "blu cobalto"? They said "il colore dichiarato è cobalto. Rispondi solo con il nome del colore." So answer only with name of color: cobalto. Need maybe "cobalto". Ensure no punctuation? Just "cobalto". Final.</think>cobalto
+
+--- parsed message ---
+finish: stop
+generated_tokens: 195
+dsml_start: 0
+dsml_end: 0
+elapsed_sec: 13.519
+
+reasoning:
+We need answer in Italian? User says: "Nel testo seguente il colore dichiarato è cobalto. Rispondi solo con il nome del colore." Translation: In following text the declared color is cobalt. Answer only with name of color. But no text provided? Maybe trick? They say "Nel testo seguente il colore dichiarato è cobalto." "In the following text the declared color is cobalt. Respond only with the name of the color." There is no following text. Need respond only color name. The declared color is cobalt. In Italian color name "cobalto" or "blu cobalto"? They said "il colore dichiarato è cobalto. Rispondi solo con il nome del colore." So answer only with name of color: cobalto. Need maybe "cobalto". Ensure no punctuation? Just "cobalto". Final.
+
+content:
+cobalto
+
+===== end request 30 =====
+
+
+--- trace: thinking live checkpoint remembered: live=256 visible=322 ---
+

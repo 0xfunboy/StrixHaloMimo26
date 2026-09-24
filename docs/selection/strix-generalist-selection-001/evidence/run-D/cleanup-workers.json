@@ -1,0 +1,56 @@
+{
+  "rank0": {
+    "before": {
+      "LoadState": "not-found",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "InvocationID": "",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    },
+    "start_receipt": {
+      "ActiveState": "active",
+      "ExecMainStatus": "0",
+      "InvocationID": "cb2b1cfa74ae4cfb865d9b8c8ccdcf98",
+      "Result": "success",
+      "SubState": "running"
+    },
+    "after": {
+      "LoadState": "not-found",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "InvocationID": "",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    }
+  },
+  "rank1": {
+    "before": {
+      "LoadState": "not-found",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "InvocationID": "",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    },
+    "start_receipt": {
+      "ActiveState": "active",
+      "ExecMainStatus": "0",
+      "InvocationID": "19e90ffb8ae6445f9e240fb8da646ad5",
+      "Result": "success",
+      "SubState": "running"
+    },
+    "after": {
+      "LoadState": "not-found",
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "InvocationID": "",
+      "MainPID": "0",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    }
+  }
+}

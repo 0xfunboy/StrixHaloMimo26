@@ -1,0 +1,363 @@
+{
+  "profile": "Q",
+  "run_id": "generalist-selection-001-Q-001",
+  "source_freeze": {
+    "status": "PASS",
+    "files_checked": 74,
+    "index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+    "loaded_modules": {
+      "__main__": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/adapter_llama_continuity_v1.py",
+        "sha256": "b6509878be1f89b1ea14c9464fadea1f913e7076d507cd3c2913009a79636045"
+      },
+      "common": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/common.py",
+        "sha256": "65dccf0c1437dbda7ef3c97121c8439fa7a388d75b000362a5dbf9c0a5004a9f"
+      },
+      "validate": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/validate.py",
+        "sha256": "34658bf68884e15daf3a972b7fc12591bed87854a512e9d401c7a5a3935aa9c9"
+      }
+    }
+  },
+  "requests": [
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/preflight/SANITY-arithmetic",
+      "phase": "preflight",
+      "case_id": "SANITY-arithmetic",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/preflight/SANITY-extract",
+      "phase": "preflight",
+      "case_id": "SANITY-extract",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/preflight/SANITY-json",
+      "phase": "preflight",
+      "case_id": "SANITY-json",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/preflight/SANITY-italian",
+      "phase": "preflight",
+      "case_id": "SANITY-italian",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/preflight/SANITY-english",
+      "phase": "preflight",
+      "case_id": "SANITY-english",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/preflight/SANITY-code_clamp",
+      "phase": "preflight",
+      "case_id": "SANITY-code_clamp",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/panel/CODE-IT",
+      "phase": "panel",
+      "case_id": "CODE-IT",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/panel/CODE-EN",
+      "phase": "panel",
+      "case_id": "CODE-EN",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/panel/DATA-IT",
+      "phase": "panel",
+      "case_id": "DATA-IT",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/panel/DATA-EN",
+      "phase": "panel",
+      "case_id": "DATA-EN",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/panel/MATH-IT",
+      "phase": "panel",
+      "case_id": "MATH-IT",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/panel/MATH-EN",
+      "phase": "panel",
+      "case_id": "MATH-EN",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/panel/DOCS-IT",
+      "phase": "panel",
+      "case_id": "DOCS-IT",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/panel/DOCS-EN",
+      "phase": "panel",
+      "case_id": "DOCS-EN",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/panel/SCI-IT",
+      "phase": "panel",
+      "case_id": "SCI-IT",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/panel/SCI-EN",
+      "phase": "panel",
+      "case_id": "SCI-EN",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/panel/OPS-IT",
+      "phase": "panel",
+      "case_id": "OPS-IT",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/panel/OPS-EN",
+      "phase": "panel",
+      "case_id": "OPS-EN",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/warmup/ENGINE-2K",
+      "phase": "warmup",
+      "case_id": "ENGINE-2K",
+      "completion_status": "VALID_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/warmup/ENGINE-8K",
+      "phase": "warmup",
+      "case_id": "ENGINE-8K",
+      "completion_status": "VALID_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/benchmark/ENGINE-2K-r1",
+      "phase": "benchmark",
+      "case_id": "ENGINE-2K",
+      "completion_status": "VALID_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/benchmark/ENGINE-8K-r1",
+      "phase": "benchmark",
+      "case_id": "ENGINE-8K",
+      "completion_status": "VALID_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/benchmark/ENGINE-2K-r2",
+      "phase": "benchmark",
+      "case_id": "ENGINE-2K",
+      "completion_status": "VALID_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/benchmark/ENGINE-8K-r2",
+      "phase": "benchmark",
+      "case_id": "ENGINE-8K",
+      "completion_status": "VALID_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/benchmark/ENGINE-2K-r3",
+      "phase": "benchmark",
+      "case_id": "ENGINE-2K",
+      "completion_status": "VALID_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/benchmark/ENGINE-8K-r3",
+      "phase": "benchmark",
+      "case_id": "ENGINE-8K",
+      "completion_status": "VALID_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/postflight/SANITY-arithmetic",
+      "phase": "postflight",
+      "case_id": "SANITY-arithmetic",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/postflight/SANITY-extract",
+      "phase": "postflight",
+      "case_id": "SANITY-extract",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/postflight/SANITY-json",
+      "phase": "postflight",
+      "case_id": "SANITY-json",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/postflight/SANITY-italian",
+      "phase": "postflight",
+      "case_id": "SANITY-italian",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/postflight/SANITY-english",
+      "phase": "postflight",
+      "case_id": "SANITY-english",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-Q-001/Q/postflight/SANITY-code_clamp",
+      "phase": "postflight",
+      "case_id": "SANITY-code_clamp",
+      "completion_status": "COMPLETE"
+    }
+  ],
+  "sanity": {
+    "preflight": [
+      {
+        "case_id": "SANITY-arithmetic",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-extract",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-json",
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "alpha": 7,
+          "beta": "blue"
+        },
+        "diagnostics": {
+          "parsing": true,
+          "schema": true,
+          "schema_errors": [],
+          "value_errors": []
+        }
+      },
+      {
+        "case_id": "SANITY-italian",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-english",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-code_clamp",
+        "status": "PASS",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "error": null,
+            "actual": 5
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "error": null,
+            "actual": 0
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "error": null,
+            "actual": 10
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "error": null,
+            "actual": 3
+          }
+        ]
+      }
+    ],
+    "postflight": [
+      {
+        "case_id": "SANITY-arithmetic",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-extract",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-json",
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "alpha": 7,
+          "beta": "blue"
+        },
+        "diagnostics": {
+          "parsing": true,
+          "schema": true,
+          "schema_errors": [],
+          "value_errors": []
+        }
+      },
+      {
+        "case_id": "SANITY-italian",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-english",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-code_clamp",
+        "status": "PASS",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "error": null,
+            "actual": 5
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "error": null,
+            "actual": 0
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "error": null,
+            "actual": 10
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "error": null,
+            "actual": 3
+          }
+        ]
+      }
+    ]
+  },
+  "status": "COMPLETE",
+  "at": "2026-09-24T10:49:01+0200"
+}

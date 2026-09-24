@@ -1,0 +1,7 @@
+/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/transformers/modeling_rope_utils.py:1080: FutureWarning: `rope_config_validation` is deprecated and has been removed. Its functionality has been moved to RotaryEmbeddingConfigMixin.validate_rope method. PreTrainedConfig inherits this class, so please call self.validate_rope() instead. Also, make sure to use the new rope_parameters syntax. You can call self.standardize_rope_params() in the meantime.
+  warnings.warn(
+Q panel_max 1553 requests 32
+M panel_max 1503 requests 32
+D panel_max 1606 requests 32
+O panel_max 1503 requests 32
+{"status": "INPUT_PREPARATION_PASS", "profiles": ["Q", "M", "D", "O"], "cases": 12, "requests_per_profile": 32}

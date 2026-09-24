@@ -1,0 +1,28 @@
+{
+  "interface": "E1 /v1/chat/completions NONSTREAMING",
+  "payload": {
+    "model": "deepseek-v4.1-flash",
+    "messages": [
+      {
+        "content": "You are a helpful assistant",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic diagnostic decision problem. Do not infer medical or safety advice. A population of industrial cartridges has a latent fault with prior probability0.02. A and B are binary test outputs. Because the tests share a sensor, they are NOT conditionally independent. Use the JOINT probabilities in this table; do not multiply marginal test rates.\nFor faulty cartridges: P(A+,B+)=0.81; P(A+,B-)=0.09; P(A-,B+)=0.04; P(A-,B-)=0.06.\nFor healthy cartridges: P(A+,B+)=0.03; P(A+,B-)=0.07; P(A-,B+)=0.12; P(A-,B-)=0.78.\nThese probabilities are exact inputs for the task; no empirical sample counts or uncertainty model were supplied. Bayes rule uses the unconditional population prior above.\nFor each outcome ++ and +- calculate posterior probability of fault. A perfect inspection costs20credits, detects every fault and removes all downstream fault loss at no additional cost. Not inspecting costs1000credits if the cartridge is faulty and0 if healthy. Select INSPECT or SKIP for each outcome by minimum expected cost conditional on the observed outcome; ties would choose SKIP. Report the expected cost saved by the selected action compared with always skipping, separately for these outcomes.\nNow consider 10000 cartridges sampled from the population (use expected counts, not integers forced by rounding). Compute the expected number with outcome++, faulty among++, healthy among++, and faulty missed by a rule that INSPECTS ONLY ++. This latter rule must not inspect +- even if your earlier optimal decision would do so; these are two distinct policies. Report the total expected cost of that ++-only rule, including every inspection and losses for all uninspected faults.\nAlso compute the expected total cost of a policy that inspects BOTH ++ and +-, and the difference (both-policy cost minus ++-only cost). Explain the information limit by reporting sample_based_95pct_CI_available as a boolean and sampling_uncertainty_interval as null unless the supplied information determines a sample-based confidence interval. Do not invent a sample size used to estimate the table:10000 is the application population, not a validation sample.\nFinal response: one JSON object with exactly posterior_pp,posterior_pn,decision_pp,decision_pn,saving_pp,saving_pn,expected_pp,expected_faulty_pp,expected_healthy_pp,missed_faults_pp_only,total_cost_pp_only,total_cost_pp_or_pn,cost_difference,sample_based_95pct_CI_available,sampling_uncertainty_interval. Probability tolerance1e-8; count and cost tolerance0.01. Numeric values must be finite; decision values are INSPECT or SKIP. No commands to equipment.",
+        "role": "user"
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning_effort": "max",
+    "thinking": true,
+    "temperature": 1.0,
+    "top_k": 0,
+    "top_p": 0.95,
+    "min_p": 0.0,
+    "seed": 101,
+    "ignore_eos": false,
+    "tools": [],
+    "tool_choice": "none"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "returncode": 0,
+  "stdout": "DS41_START_CONFIRMED epoch=1790246320305924015 rank0_invocation=357dcbd907a7461abdec9463a3bcd50a rank1_invocation=76cb577f752343a988e0d0d7bb4f522f runtime_max_sec=infinity\n{\n  \"state\": \"READY\",\n  \"preset\": \"dspark-k2-gfx1151\",\n  \"release_id\": \"5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513\",\n  \"owner\": \"DS41\",\n  \"owner_state\": \"RUNNING\",\n  \"epoch\": \"1790246320305924015\",\n  \"reason\": \"\",\n  \"ranks\": [\n    {\n      \"rank\": 0,\n      \"active\": true,\n      \"health_http\": \"200\"\n    },\n    {\n      \"rank\": 1,\n      \"active\": true,\n      \"health_http\": \"200\"\n    }\n  ],\n  \"paired_backend_http\": \"200\"\n}\n",
+  "stderr": "Running as unit: ds41-rank0.service; invocation ID: 357dcbd907a7461abdec9463a3bcd50a\nRunning as unit: ds41-rank1.service; invocation ID: 76cb577f752343a988e0d0d7bb4f522f\n",
+  "at": "2026-09-24T12:43:25+0200"
+}

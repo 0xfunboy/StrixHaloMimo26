@@ -1,0 +1,28 @@
+{
+  "interface": "E1 /v1/chat/completions NONSTREAMING",
+  "payload": {
+    "model": "deepseek-v4.1-flash",
+    "messages": [
+      {
+        "content": "You are a helpful assistant",
+        "role": "system"
+      },
+      {
+        "content": "Esperimento termico SINTETICO con dati ideali, non un consiglio su un impianto reale. Un corpo a temperatura uniforme T scambia calore con un ambiente costante Ta=20 gradiC. Il modello valido nell intero intervallo e' C*dT/dt=P-k*(T-Ta), con C in J/K, k in W/K, P in W e tempo in secondi. C e k sono costanti positivi ma ignoti. Non ci sono cambi di fase, ritardi di misura o altri flussi. Le derivate misurate sotto sono istantanee esatte.\nEsperimento di identificazione: con P=120W, quando T=30C si misura dT/dt=0.16K/s; quando T=50C si misura dT/dt=0.08K/s. Usa entrambe le misure, non una capacita' ricavata ignorando le perdite. Per il modello a potenza costante, se x=T-Ta, x(t)=P/k+(x(0)-P/k)*exp(-k*t/C).\nSecondo esperimento, stesso corpo e ambiente, con P=60W costanti e Tiniziale=25C. Calcola: temperatura di equilibrio; tempo positivo necessario per raggiungere T=40C; energia elettrica immessa fino a quel momento; incremento di energia interna; energia ceduta all ambiente fino a quel momento. Conservazione dell energia: energia immessa = incremento interno + energia ceduta. Specifica inoltre se T=47C e' raggiungibile in un tempo finito con P60 e quello stato iniziale. Se non lo e', il tempo deve essere null, non negativo o infinito serializzato.\nValuta anche la proposta di usare la derivata INIZIALE del secondo esperimento come pendenza costante per stimare il tempo verso40C: calcola quella stima lineare e il suo errore percentuale firmato rispetto al tempo esatto, (lineare-esatto)/esatto*100. Non arrotondare i coefficienti durante i passaggi. Le temperature inC e differenze inK sono coerenti nel modello; non moltiplicare l energia per273.15.\nRisposta finale soltanto JSON con esattamente C_J_per_K,k_W_per_K,equilibrium_C,time_to_40_s,input_energy_J,stored_energy_J,lost_energy_J (numeri), reaches_47 (booleano),time_to_47_s (numero oppure null),initial_slope_K_per_s,linear_time_to_40_s,linear_error_percent (numeri), governing_assumptions (lista di stringhe). governing_assumptions deve contenere esattamente, in qualunque ordine, constant_environment,lumped_temperature,constant_C_and_k,constant_power. Precisione: errore assoluto<=0.01 sui numeri. Nessuna misura aggiuntiva o azione reale richiesta.",
+        "role": "user"
+      }
+    ],
+    "max_tokens": 8192,
+    "stream": false,
+    "reasoning_effort": "max",
+    "thinking": true,
+    "temperature": 1.0,
+    "top_k": 0,
+    "top_p": 0.95,
+    "min_p": 0.0,
+    "seed": 101,
+    "ignore_eos": false,
+    "tools": [],
+    "tool_choice": "none"
+  }
+}

@@ -1,0 +1,394 @@
+{
+  "schema": "strix-generalist-request-v1",
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "run_id": "generalist-selection-001-D-002",
+  "request_id": "generalist-selection-001-D-002/D/postflight/SANITY-italian",
+  "case_id": "SANITY-italian",
+  "request_key": "SANITY-italian",
+  "profile": "D",
+  "rank": 0,
+  "phase": "postflight",
+  "messages": [
+    {
+      "content": "You are a helpful assistant",
+      "role": "system"
+    },
+    {
+      "content": "Nel testo seguente il colore dichiarato è cobalto. Rispondi solo con il nome del colore.",
+      "role": "user"
+    }
+  ],
+  "rendered_text": "<｜begin▁of▁sentence｜><｜System｜>Reasoning Effort: 100 (range 1-100, the higher the value, the more thorough the reasoning)\n\nYou are a helpful assistant<｜User｜>Nel testo seguente il colore dichiarato è cobalto. Rispondi solo con il nome del colore.<｜Assistant｜><think>",
+  "input_token_ids": [
+    0,
+    128799,
+    77666,
+    288,
+    9504,
+    482,
+    28,
+    223,
+    1457,
+    343,
+    16801,
+    223,
+    19,
+    15,
+    1457,
+    14,
+    270,
+    4077,
+    270,
+    1990,
+    14,
+    270,
+    850,
+    15146,
+    270,
+    22805,
+    868,
+    3476,
+    477,
+    260,
+    11502,
+    22896,
+    128803,
+    84852,
+    87444,
+    24946,
+    6846,
+    3493,
+    1278,
+    492,
+    27399,
+    13640,
+    3693,
+    7269,
+    274,
+    3580,
+    1495,
+    16,
+    34773,
+    4908,
+    75,
+    15619,
+    399,
+    3493,
+    36550,
+    1543,
+    1278,
+    492,
+    16,
+    128804,
+    128821
+  ],
+  "input_ids_sha256": "c641a04d9a63777b9a91dc96c8ef1929e5ed8cdd38323bd6d635e6e5c138fba5",
+  "input_tokens": 61,
+  "output_cap": 1024,
+  "thinking": true,
+  "sampling": {
+    "frequency_penalty": 0.0,
+    "ignore_eos": false,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "repetition_penalty": 1.0,
+    "seed": 101,
+    "temperature": 1.0,
+    "top_k": 0,
+    "top_p": 0.95
+  },
+  "timeout_s": 1200,
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "native_response": {
+    "id": "chatcmpl-ce87d783e4d62cd19940889a",
+    "object": "chat.completion",
+    "created": 1790246298,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "cobalto",
+          "reasoning_content": "We need answer in Italian? User says: \"Nel testo seguente il colore dichiarato è cobalto. Rispondi solo con il nome del colore.\" Translation: In following text the declared color is cobalt. Answer only with name of color. But no text provided? Maybe trick? They say \"Nel testo seguente il colore dichiarato è cobalto.\" \"In the following text the declared color is cobalt. Respond only with the name of the color.\" There is no following text. Need respond only color name. The declared color is cobalt. In Italian color name \"cobalto\" or \"blu cobalto\"? They said \"il colore dichiarato è cobalto. Rispondi solo con il nome del colore.\" So answer only with name of color: cobalto. Need maybe \"cobalto\". Ensure no punctuation? Just \"cobalto\". Final."
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 61,
+      "completion_tokens": 195,
+      "total_tokens": 256,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 61
+      }
+    }
+  },
+  "native_input_ids_echoed": null,
+  "input_validation": "NATIVE_TRACE_RENDER_COUNT_AND_SAME_BINARY_CPU_TOKENIZATION",
+  "output_token_ids": null,
+  "output_tokens": 195,
+  "finish_reason": "stop",
+  "completion_status": "COMPLETE",
+  "cache_reused_tokens": 0,
+  "cache_gate_pass": true,
+  "native_prompt_processed": 61,
+  "final_text": "cobalto",
+  "reasoning_text": "We need answer in Italian? User says: \"Nel testo seguente il colore dichiarato è cobalto. Rispondi solo con il nome del colore.\" Translation: In following text the declared color is cobalt. Answer only with name of color. But no text provided? Maybe trick? They say \"Nel testo seguente il colore dichiarato è cobalto.\" \"In the following text the declared color is cobalt. Respond only with the name of the color.\" There is no following text. Need respond only color name. The declared color is cobalt. In Italian color name \"cobalto\" or \"blu cobalto\"? They said \"il colore dichiarato è cobalto. Rispondi solo con il nome del colore.\" So answer only with name of color: cobalto. Need maybe \"cobalto\". Ensure no punctuation? Just \"cobalto\". Final.",
+  "reasoning_observed": true,
+  "reasoning_closed": true,
+  "reasoning_tokens_native": null,
+  "final_tokens_native": null,
+  "boundary_method": "native separate message.content/reasoning_content; no retokenized native-ID claim",
+  "request_latency_s": 13.521468630002346,
+  "observer": "HTTP caller: submit to complete nonstreaming response read",
+  "t_submit": 245165.296809221,
+  "t_done": 245178.818277851,
+  "engine_metrics": {
+    "prompt_engine_s": 1.239,
+    "prompt_engine_tps": 49.25,
+    "decode_engine_tps": null,
+    "decode_engine_total_rate_rounded": 15.88,
+    "native_log_prompt": {
+      "tokens": 61,
+      "tps": 49.25,
+      "seconds": 1.239,
+      "line": "0924 12:38:06 ds4-server: chat ctx=0..61:61 prefill chunk 61/61 (100.0%) chunk=0.00 t/s avg=49.25 t/s 1.239s"
+    },
+    "native_log_decode": {
+      "tokens": 195,
+      "tps": 15.88,
+      "seconds": 12.276,
+      "line": "0924 12:38:18 ds4-server: chat ctx=211..256:45 gen=195 decoding chunk=15.81 t/s avg=15.88 t/s 12.276s"
+    },
+    "precision": "Native log time rounded to 0.001 s; rates to 0.01 tok/s. Not reconstructed unrounded timestamps.",
+    "decode_contract": "Native log completion/elapsed since decode_t0 (includes first token); NOT post-first-token rate.",
+    "first_generated_token_s": null,
+    "first_final_token_s": null,
+    "client_ttft_s": null
+  },
+  "native_trace_audit": {
+    "request_sequence": 30,
+    "header": {
+      "kind": "chat",
+      "model": "deepseek-v4.1-flash",
+      "stream": "0",
+      "tools": "0",
+      "think_mode": "max",
+      "prompt_tokens": "61",
+      "effective_prompt_tokens": "61",
+      "cached_tokens": "0",
+      "max_tokens": "1024",
+      "temperature": "1.000",
+      "top_k": "0",
+      "top_p": "0.950",
+      "min_p": "0.000",
+      "ignore_eos": "0",
+      "seed": "101",
+      "stream_include_usage": "0",
+      "live_tokens_before": "114",
+      "live_prompt_common": "33",
+      "memory_token_reusable": "0",
+      "memory_miss_reason": "token-mismatch",
+      "tool_replay": "mem=0 disk=0 canonical=0 missing_ids=0",
+      "cache_source": "none",
+      "disk_cached_tokens": "0",
+      "first_mismatch_token": "33",
+      "token_window": "[25..42)"
+    },
+    "finish": "stop",
+    "generated_tokens": 195,
+    "engine_request_elapsed_s_rounded": 13.519,
+    "rendered_match": true,
+    "input_ids_note": "Exact trace rendering and count match tokens produced by the same pinned native CPU tokenizer; API does not echo the full ID list."
+  },
+  "resource_before": {
+    "observed_at": "2026-09-24T12:38:04+0200",
+    "memory_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 38192746496,
+      "SwapTotal": 8589930496,
+      "SwapFree": 8085303296
+    },
+    "process": {
+      "VmSize": 274369568768,
+      "VmRSS": 16105193472,
+      "VmSwap": 15699968,
+      "pid": 777630,
+      "minflt": 910640,
+      "majflt": 5139,
+      "starttime_ticks": 24051704,
+      "io": {
+        "rchar": 107906930289,
+        "wchar": 1701479,
+        "syscr": 12174575,
+        "syscw": 77299,
+        "read_bytes": 181678501888,
+        "write_bytes": 2322432,
+        "cancelled_write_bytes": 0
+      }
+    },
+    "gpu_sysfs": [
+      {
+        "device": "/sys/class/drm/card0/device",
+        "values": {
+          "gpu_busy_percent": "78",
+          "pp_dpm_sclk": "0: 600Mhz \n1: 2428Mhz *\n2: 2900Mhz",
+          "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+          "hwmon/hwmon5/freq1_input": "2428000000",
+          "hwmon/hwmon5/power1_input": "68099000",
+          "hwmon/hwmon5/temp1_input": "67000"
+        }
+      }
+    ],
+    "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+  },
+  "resource_after": {
+    "observed_at": "2026-09-24T12:38:18+0200",
+    "memory_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 38198009856,
+      "SwapTotal": 8589930496,
+      "SwapFree": 8085303296
+    },
+    "process": {
+      "VmSize": 274369568768,
+      "VmRSS": 16105193472,
+      "VmSwap": 15699968,
+      "pid": 777630,
+      "minflt": 910870,
+      "majflt": 5139,
+      "starttime_ticks": 24051704,
+      "io": {
+        "rchar": 107973517049,
+        "wchar": 1706694,
+        "syscr": 12211422,
+        "syscw": 77896,
+        "read_bytes": 181703729152,
+        "write_bytes": 2330624,
+        "cancelled_write_bytes": 0
+      }
+    },
+    "gpu_sysfs": [
+      {
+        "device": "/sys/class/drm/card0/device",
+        "values": {
+          "gpu_busy_percent": "92",
+          "pp_dpm_sclk": "0: 600Mhz \n1: 2753Mhz *\n2: 2900Mhz",
+          "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz *",
+          "hwmon/hwmon5/freq1_input": "2753000000",
+          "hwmon/hwmon5/power1_input": "79014000",
+          "hwmon/hwmon5/temp1_input": "74000"
+        }
+      }
+    ],
+    "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+  },
+  "peer_resource_before": {
+    "unit": "mimo26-gs001-d-r1-002",
+    "unit_state": {
+      "ActiveState": "active",
+      "InvocationID": "19e90ffb8ae6445f9e240fb8da646ad5",
+      "MainPID": "806730"
+    },
+    "snapshot": {
+      "observed_at": "2026-09-24T12:38:05+0200",
+      "memory_bytes": {
+        "MemTotal": 131203895296,
+        "MemAvailable": 38333886464,
+        "SwapTotal": 8589930496,
+        "SwapFree": 8328167424
+      },
+      "process": {
+        "VmSize": 274191405056,
+        "VmRSS": 13298970624,
+        "VmSwap": 30519296,
+        "pid": 806730,
+        "minflt": 910596,
+        "majflt": 1893,
+        "starttime_ticks": 24051766,
+        "io": {
+          "rchar": 91713977569,
+          "wchar": 490805,
+          "syscr": 11986474,
+          "syscw": 318,
+          "read_bytes": 181725908992,
+          "write_bytes": 20480,
+          "cancelled_write_bytes": 0
+        }
+      },
+      "gpu_sysfs": [
+        {
+          "device": "/sys/class/drm/card1/device",
+          "values": {
+            "gpu_busy_percent": "66",
+            "pp_dpm_sclk": "0: 600Mhz \n1: 2155Mhz *\n2: 2900Mhz",
+            "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+            "hwmon/hwmon5/freq1_input": "2155000000",
+            "hwmon/hwmon5/power1_input": "63087000",
+            "hwmon/hwmon5/temp1_input": "67000"
+          }
+        }
+      ],
+      "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+    },
+    "status": "PASS"
+  },
+  "peer_resource_after": {
+    "unit": "mimo26-gs001-d-r1-002",
+    "unit_state": {
+      "ActiveState": "active",
+      "InvocationID": "19e90ffb8ae6445f9e240fb8da646ad5",
+      "MainPID": "806730"
+    },
+    "snapshot": {
+      "observed_at": "2026-09-24T12:38:18+0200",
+      "memory_bytes": {
+        "MemTotal": 131203895296,
+        "MemAvailable": 38354735104,
+        "SwapTotal": 8589930496,
+        "SwapFree": 8328167424
+      },
+      "process": {
+        "VmSize": 274191405056,
+        "VmRSS": 13298970624,
+        "VmSwap": 30519296,
+        "pid": 806730,
+        "minflt": 910816,
+        "majflt": 1893,
+        "starttime_ticks": 24051766,
+        "io": {
+          "rchar": 91729891469,
+          "wchar": 490805,
+          "syscr": 12022730,
+          "syscw": 318,
+          "read_bytes": 181751402496,
+          "write_bytes": 20480,
+          "cancelled_write_bytes": 0
+        }
+      },
+      "gpu_sysfs": [
+        {
+          "device": "/sys/class/drm/card1/device",
+          "values": {
+            "gpu_busy_percent": "79",
+            "pp_dpm_sclk": "0: 600Mhz \n1: 2454Mhz *\n2: 2900Mhz",
+            "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+            "hwmon/hwmon5/freq1_input": "2454000000",
+            "hwmon/hwmon5/power1_input": "70078000",
+            "hwmon/hwmon5/temp1_input": "68000"
+          }
+        }
+      ],
+      "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+    },
+    "status": "PASS"
+  },
+  "error": null,
+  "final_chars": 7,
+  "final_bytes": 7,
+  "reasoning_chars": 745,
+  "persisted_at": "2026-09-24T12:38:18+0200",
+  "record_sha256": "9133b6ec2f08a439e838f4430bc4c6c6e8cd869d1c01bb36b10b8c7a5f3c9eeb"
+}

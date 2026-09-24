@@ -1,0 +1,14 @@
+{
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "run_id": "generalist-selection-001-Q-001",
+  "request_id": "generalist-selection-001-Q-001/Q/panel/DATA-IT",
+  "case_id": "DATA-IT",
+  "request_key": "DATA-IT",
+  "profile": "Q",
+  "rank": 0,
+  "phase": "panel",
+  "state": "IN_FLIGHT",
+  "at": "2026-09-24T10:22:00+0200",
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "input_ids_sha256": "e0acef3c4a4c7aba7f6b0951f7c61946c8ebc39d6ff3768d6f67e5566121f043"
+}

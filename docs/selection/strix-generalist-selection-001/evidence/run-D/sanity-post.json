@@ -1,0 +1,76 @@
+{
+  "phase": "postflight",
+  "status": "PASS",
+  "tests": [
+    {
+      "case_id": "SANITY-arithmetic",
+      "status": "PASS",
+      "critical_violations": []
+    },
+    {
+      "case_id": "SANITY-extract",
+      "status": "PASS",
+      "critical_violations": []
+    },
+    {
+      "case_id": "SANITY-json",
+      "status": "PASS",
+      "critical_violations": [],
+      "parsed": {
+        "alpha": 7,
+        "beta": "blue"
+      },
+      "diagnostics": {
+        "parsing": true,
+        "schema": true,
+        "schema_errors": [],
+        "value_errors": []
+      }
+    },
+    {
+      "case_id": "SANITY-italian",
+      "status": "PASS",
+      "critical_violations": []
+    },
+    {
+      "case_id": "SANITY-english",
+      "status": "PASS",
+      "critical_violations": []
+    },
+    {
+      "case_id": "SANITY-code_clamp",
+      "status": "PASS",
+      "tests": [
+        {
+          "index": 0,
+          "pass": true,
+          "input_unchanged": true,
+          "error": null,
+          "actual": 5
+        },
+        {
+          "index": 1,
+          "pass": true,
+          "input_unchanged": true,
+          "error": null,
+          "actual": 0
+        },
+        {
+          "index": 2,
+          "pass": true,
+          "input_unchanged": true,
+          "error": null,
+          "actual": 10
+        },
+        {
+          "index": 3,
+          "pass": true,
+          "input_unchanged": true,
+          "error": null,
+          "actual": 3
+        }
+      ]
+    }
+  ],
+  "at": "2026-09-24T12:38:35+0200"
+}

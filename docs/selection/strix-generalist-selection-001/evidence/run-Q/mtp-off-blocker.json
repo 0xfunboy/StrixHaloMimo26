@@ -1,0 +1,7 @@
+{
+  "status": "BLOCKED",
+  "phase": "mtp_off_after_primary_complete",
+  "error": "RuntimeError:MTP_PROCESS_MODE_UNPROVEN:None",
+  "primary_records_preserved": 32,
+  "at": "2026-09-24T10:49:02+0200"
+}

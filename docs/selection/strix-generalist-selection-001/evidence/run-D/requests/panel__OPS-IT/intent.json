@@ -1,0 +1,14 @@
+{
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "run_id": "generalist-selection-001-D-002",
+  "request_id": "generalist-selection-001-D-002/D/panel/OPS-IT",
+  "case_id": "OPS-IT",
+  "request_key": "OPS-IT",
+  "profile": "D",
+  "rank": 0,
+  "phase": "panel",
+  "state": "IN_FLIGHT",
+  "at": "2026-09-24T12:25:00+0200",
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "input_ids_sha256": "2907042f7d3d8d6bf397bfe6064fee792f48f2ed1da3ad1de76da76288abba86"
+}

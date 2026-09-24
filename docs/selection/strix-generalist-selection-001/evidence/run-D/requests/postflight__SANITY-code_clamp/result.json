@@ -1,0 +1,409 @@
+{
+  "schema": "strix-generalist-request-v1",
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "run_id": "generalist-selection-001-D-002",
+  "request_id": "generalist-selection-001-D-002/D/postflight/SANITY-code_clamp",
+  "case_id": "SANITY-code_clamp",
+  "request_key": "SANITY-code_clamp",
+  "profile": "D",
+  "rank": 0,
+  "phase": "postflight",
+  "messages": [
+    {
+      "content": "You are a helpful assistant",
+      "role": "system"
+    },
+    {
+      "content": "Return only Python code defining clamp(x, lo, hi). It must return lo when x < lo, hi when x > hi, otherwise x. Do not import anything and do not call other functions.",
+      "role": "user"
+    }
+  ],
+  "rendered_text": "<｜begin▁of▁sentence｜><｜System｜>Reasoning Effort: 100 (range 1-100, the higher the value, the more thorough the reasoning)\n\nYou are a helpful assistant<｜User｜>Return only Python code defining clamp(x, lo, hi). It must return lo when x < lo, hi when x > hi, otherwise x. Do not import anything and do not call other functions.<｜Assistant｜><think>",
+  "input_token_ids": [
+    0,
+    128799,
+    77666,
+    288,
+    9504,
+    482,
+    28,
+    223,
+    1457,
+    343,
+    16801,
+    223,
+    19,
+    15,
+    1457,
+    14,
+    270,
+    4077,
+    270,
+    1990,
+    14,
+    270,
+    850,
+    15146,
+    270,
+    22805,
+    868,
+    3476,
+    477,
+    260,
+    11502,
+    22896,
+    128803,
+    25529,
+    1353,
+    15255,
+    4181,
+    23319,
+    43228,
+    4042,
+    14,
+    3330,
+    14,
+    19346,
+    797,
+    983,
+    2231,
+    1354,
+    3330,
+    1082,
+    1527,
+    818,
+    3330,
+    14,
+    19346,
+    1082,
+    1527,
+    1955,
+    19346,
+    14,
+    9694,
+    1527,
+    16,
+    4147,
+    554,
+    1662,
+    5657,
+    305,
+    696,
+    554,
+    1926,
+    915,
+    6177,
+    16,
+    128804,
+    128821
+  ],
+  "input_ids_sha256": "4987a65b2e785b94f471ab2fd0bddc8e84ad6890d7dca310b7b95a32307d7509",
+  "input_tokens": 76,
+  "output_cap": 1536,
+  "thinking": true,
+  "sampling": {
+    "frequency_penalty": 0.0,
+    "ignore_eos": false,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "repetition_penalty": 1.0,
+    "seed": 101,
+    "temperature": 1.0,
+    "top_k": 0,
+    "top_p": 0.95
+  },
+  "timeout_s": 1200,
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "native_response": {
+    "id": "chatcmpl-8f8107c3ae0357e3a36cc2ec",
+    "object": "chat.completion",
+    "created": 1790246315,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "def clamp(x, lo, hi):\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x",
+          "reasoning_content": "We need answer only Python code defining clamp(x, lo, hi). No imports, no other functions. Need concise. Ensure behavior. Could use if/elif. \"Do not call other functions\" means within definition no function calls. Return only Python code. Probably:\n\ndef clamp(x, lo, hi):\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x\n\nNeed only code, no markdown? User says Return only Python code. So final should be code, likely no fences? \"Return only Python code\" means don't wrap? Usually answer code block okay? They said only Python code, so raw text. We'll provide raw code. Ensure no calls. No imports. Fine."
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 76,
+      "completion_tokens": 185,
+      "total_tokens": 261,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 76
+      }
+    }
+  },
+  "native_input_ids_echoed": null,
+  "input_validation": "NATIVE_TRACE_RENDER_COUNT_AND_SAME_BINARY_CPU_TOKENIZATION",
+  "output_token_ids": null,
+  "output_tokens": 185,
+  "finish_reason": "stop",
+  "completion_status": "COMPLETE",
+  "cache_reused_tokens": 0,
+  "cache_gate_pass": true,
+  "native_prompt_processed": 76,
+  "final_text": "def clamp(x, lo, hi):\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x",
+  "reasoning_text": "We need answer only Python code defining clamp(x, lo, hi). No imports, no other functions. Need concise. Ensure behavior. Could use if/elif. \"Do not call other functions\" means within definition no function calls. Return only Python code. Probably:\n\ndef clamp(x, lo, hi):\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x\n\nNeed only code, no markdown? User says Return only Python code. So final should be code, likely no fences? \"Return only Python code\" means don't wrap? Usually answer code block okay? They said only Python code, so raw text. We'll provide raw code. Ensure no calls. No imports. Fine.",
+  "reasoning_observed": true,
+  "reasoning_closed": true,
+  "reasoning_tokens_native": null,
+  "final_tokens_native": null,
+  "boundary_method": "native separate message.content/reasoning_content; no retokenized native-ID claim",
+  "request_latency_s": 13.281288899015635,
+  "observer": "HTTP caller: submit to complete nonstreaming response read",
+  "t_submit": 245182.538659383,
+  "t_done": 245195.819948282,
+  "engine_metrics": {
+    "prompt_engine_s": 1.535,
+    "prompt_engine_tps": 49.52,
+    "decode_engine_tps": null,
+    "decode_engine_total_rate_rounded": 15.76,
+    "native_log_prompt": {
+      "tokens": 76,
+      "tps": 49.52,
+      "seconds": 1.535,
+      "line": "0924 12:38:23 ds4-server: chat ctx=0..76:76 prefill chunk 76/76 (100.0%) chunk=0.00 t/s avg=49.52 t/s 1.535s"
+    },
+    "native_log_decode": {
+      "tokens": 185,
+      "tps": 15.76,
+      "seconds": 11.74,
+      "line": "0924 12:38:35 ds4-server: chat ctx=226..261:35 gen=185 decoding chunk=16.44 t/s avg=15.76 t/s 11.740s"
+    },
+    "precision": "Native log time rounded to 0.001 s; rates to 0.01 tok/s. Not reconstructed unrounded timestamps.",
+    "decode_contract": "Native log completion/elapsed since decode_t0 (includes first token); NOT post-first-token rate.",
+    "first_generated_token_s": null,
+    "first_final_token_s": null,
+    "client_ttft_s": null
+  },
+  "native_trace_audit": {
+    "request_sequence": 32,
+    "header": {
+      "kind": "chat",
+      "model": "deepseek-v4.1-flash",
+      "stream": "0",
+      "tools": "0",
+      "think_mode": "max",
+      "prompt_tokens": "76",
+      "effective_prompt_tokens": "76",
+      "cached_tokens": "0",
+      "max_tokens": "1536",
+      "temperature": "1.000",
+      "top_k": "0",
+      "top_p": "0.950",
+      "min_p": "0.000",
+      "ignore_eos": "0",
+      "seed": "101",
+      "stream_include_usage": "0",
+      "live_tokens_before": "83",
+      "live_prompt_common": "33",
+      "memory_token_reusable": "0",
+      "memory_miss_reason": "token-mismatch",
+      "tool_replay": "mem=0 disk=0 canonical=0 missing_ids=0",
+      "cache_source": "none",
+      "disk_cached_tokens": "0",
+      "first_mismatch_token": "33",
+      "token_window": "[25..42)"
+    },
+    "finish": "stop",
+    "generated_tokens": 185,
+    "engine_request_elapsed_s_rounded": 13.279,
+    "rendered_match": true,
+    "input_ids_note": "Exact trace rendering and count match tokens produced by the same pinned native CPU tokenizer; API does not echo the full ID list."
+  },
+  "resource_before": {
+    "observed_at": "2026-09-24T12:38:22+0200",
+    "memory_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 38194245632,
+      "SwapTotal": 8589930496,
+      "SwapFree": 8085303296
+    },
+    "process": {
+      "VmSize": 274369568768,
+      "VmRSS": 16105193472,
+      "VmSwap": 15699968,
+      "pid": 777630,
+      "minflt": 911100,
+      "majflt": 5139,
+      "starttime_ticks": 24051704,
+      "io": {
+        "rchar": 107984905049,
+        "wchar": 1710256,
+        "syscr": 12219466,
+        "syscw": 78308,
+        "read_bytes": 181709852672,
+        "write_bytes": 2334720,
+        "cancelled_write_bytes": 0
+      }
+    },
+    "gpu_sysfs": [
+      {
+        "device": "/sys/class/drm/card0/device",
+        "values": {
+          "gpu_busy_percent": "76",
+          "pp_dpm_sclk": "0: 600Mhz \n1: 2373Mhz *\n2: 2900Mhz",
+          "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+          "hwmon/hwmon5/freq1_input": "2373000000",
+          "hwmon/hwmon5/power1_input": "67036000",
+          "hwmon/hwmon5/temp1_input": "67000"
+        }
+      }
+    ],
+    "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+  },
+  "resource_after": {
+    "observed_at": "2026-09-24T12:38:35+0200",
+    "memory_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 38192062464,
+      "SwapTotal": 8589930496,
+      "SwapFree": 8085303296
+    },
+    "process": {
+      "VmSize": 274369568768,
+      "VmRSS": 16105193472,
+      "VmSwap": 15699968,
+      "pid": 777630,
+      "minflt": 911330,
+      "majflt": 5139,
+      "starttime_ticks": 24051704,
+      "io": {
+        "rchar": 108048306417,
+        "wchar": 1715574,
+        "syscr": 12255240,
+        "syscw": 78891,
+        "read_bytes": 181737848832,
+        "write_bytes": 2347008,
+        "cancelled_write_bytes": 0
+      }
+    },
+    "gpu_sysfs": [
+      {
+        "device": "/sys/class/drm/card0/device",
+        "values": {
+          "gpu_busy_percent": "95",
+          "pp_dpm_sclk": "0: 600Mhz \n1: 2840Mhz *\n2: 2900Mhz",
+          "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz *",
+          "hwmon/hwmon5/freq1_input": "2840000000",
+          "hwmon/hwmon5/power1_input": "81060000",
+          "hwmon/hwmon5/temp1_input": "74000"
+        }
+      }
+    ],
+    "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+  },
+  "peer_resource_before": {
+    "unit": "mimo26-gs001-d-r1-002",
+    "unit_state": {
+      "ActiveState": "active",
+      "InvocationID": "19e90ffb8ae6445f9e240fb8da646ad5",
+      "MainPID": "806730"
+    },
+    "snapshot": {
+      "observed_at": "2026-09-24T12:38:22+0200",
+      "memory_bytes": {
+        "MemTotal": 131203895296,
+        "MemAvailable": 38360543232,
+        "SwapTotal": 8589930496,
+        "SwapFree": 8328167424
+      },
+      "process": {
+        "VmSize": 274191405056,
+        "VmRSS": 13298970624,
+        "VmSwap": 30519296,
+        "pid": 806730,
+        "minflt": 911036,
+        "majflt": 1893,
+        "starttime_ticks": 24051766,
+        "io": {
+          "rchar": 91733006477,
+          "wchar": 490805,
+          "syscr": 12030675,
+          "syscw": 318,
+          "read_bytes": 181757538304,
+          "write_bytes": 20480,
+          "cancelled_write_bytes": 0
+        }
+      },
+      "gpu_sysfs": [
+        {
+          "device": "/sys/class/drm/card1/device",
+          "values": {
+            "gpu_busy_percent": "64",
+            "pp_dpm_sclk": "0: 600Mhz \n1: 2091Mhz *\n2: 2900Mhz",
+            "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+            "hwmon/hwmon5/freq1_input": "2091000000",
+            "hwmon/hwmon5/power1_input": "63041000",
+            "hwmon/hwmon5/temp1_input": "67000"
+          }
+        }
+      ],
+      "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+    },
+    "status": "PASS"
+  },
+  "peer_resource_after": {
+    "unit": "mimo26-gs001-d-r1-002",
+    "unit_state": {
+      "ActiveState": "active",
+      "InvocationID": "19e90ffb8ae6445f9e240fb8da646ad5",
+      "MainPID": "806730"
+    },
+    "snapshot": {
+      "observed_at": "2026-09-24T12:38:35+0200",
+      "memory_bytes": {
+        "MemTotal": 131203895296,
+        "MemAvailable": 38358593536,
+        "SwapTotal": 8589930496,
+        "SwapFree": 8328167424
+      },
+      "process": {
+        "VmSize": 274191405056,
+        "VmRSS": 13298970624,
+        "VmSwap": 30519296,
+        "pid": 806730,
+        "minflt": 911256,
+        "majflt": 1893,
+        "starttime_ticks": 24051766,
+        "io": {
+          "rchar": 91748320405,
+          "wchar": 490805,
+          "syscr": 12065888,
+          "syscw": 318,
+          "read_bytes": 181785985024,
+          "write_bytes": 20480,
+          "cancelled_write_bytes": 0
+        }
+      },
+      "gpu_sysfs": [
+        {
+          "device": "/sys/class/drm/card1/device",
+          "values": {
+            "gpu_busy_percent": "81",
+            "pp_dpm_sclk": "0: 600Mhz \n1: 2496Mhz *\n2: 2900Mhz",
+            "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+            "hwmon/hwmon5/freq1_input": "2496000000",
+            "hwmon/hwmon5/power1_input": "72077000",
+            "hwmon/hwmon5/temp1_input": "68000"
+          }
+        }
+      ],
+      "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+    },
+    "status": "PASS"
+  },
+  "error": null,
+  "final_chars": 100,
+  "final_bytes": 100,
+  "reasoning_chars": 634,
+  "persisted_at": "2026-09-24T12:38:35+0200",
+  "record_sha256": "843de1996a1663cc24fe7d1f51867f7d5b1d0fa061be52b48d612b547120e27a"
+}

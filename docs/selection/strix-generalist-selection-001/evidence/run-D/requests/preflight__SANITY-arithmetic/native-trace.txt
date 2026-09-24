@@ -1,0 +1,63 @@
+
+===== request 1 2026-09-24 11:22:49 =====
+kind: chat
+model: deepseek-v4.1-flash
+stream: 0
+tools: 0
+think_mode: max
+prompt_tokens: 46
+effective_prompt_tokens: 46
+cached_tokens: 0
+max_tokens: 1024
+temperature: 1.000
+top_k: 0
+top_p: 0.950
+min_p: 0.000
+ignore_eos: 0
+seed: 101
+stream_include_usage: 0
+
+--- cache decision ---
+live_tokens_before: 0
+prompt_tokens: 46
+live_prompt_common: 0
+memory_token_reusable: 0
+memory_miss_reason: no-live-checkpoint
+tool_replay: mem=0 disk=0 canonical=0 missing_ids=0
+cache_source: none
+cached_tokens: 0
+disk_cached_tokens: 0
+
+--- raw request json ---
+{"model": "deepseek-v4.1-flash", "messages": [{"content": "You are a helpful assistant", "role": "system"}, {"content": "Compute 17*19. Return only the integer.", "role": "user"}], "max_tokens": 1024, "stream": false, "reasoning_effort": "max", "thinking": true, "temperature": 1.0, "top_k": 0, "top_p": 0.95, "min_p": 0.0, "seed": 101, "ignore_eos": false, "tools": [], "tool_choice": "none"}
+
+--- rendered prompt ---
+<｜begin▁of▁sentence｜><｜System｜>Reasoning Effort: 100 (range 1-100, the higher the value, the more thorough the reasoning)
+
+You are a helpful assistant<｜User｜>Compute 17*19. Return only the integer.<｜Assistant｜><think>
+
+--- generated text ---
+
+
+--- trace: prefill done; decode_max=1024 ctx_room=16338 ---
+
+We need answer only integer. 17*19 = 323. Need return only integer.</think>323
+
+--- parsed message ---
+finish: stop
+generated_tokens: 21
+dsml_start: 0
+dsml_end: 0
+elapsed_sec: 2.413
+
+reasoning:
+We need answer only integer. 17*19 = 323. Need return only integer.
+
+content:
+323
+
+===== end request 1 =====
+
+
+--- trace: thinking live checkpoint remembered: live=67 visible=268 ---
+

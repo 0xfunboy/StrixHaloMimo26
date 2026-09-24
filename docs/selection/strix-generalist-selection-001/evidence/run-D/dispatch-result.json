@@ -1,0 +1,16 @@
+{
+  "state": "DISPATCHED",
+  "at": "2026-09-24T11:20:27+0200",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "Running as unit: mimo26-gs001-supervisor-d-002.service; invocation ID: dc135ac54f0d4930a859c0fab0a39d7c\n",
+  "supervisor": {
+    "LoadState": "loaded",
+    "ActiveState": "active",
+    "SubState": "running",
+    "InvocationID": "dc135ac54f0d4930a859c0fab0a39d7c",
+    "MainPID": "777229",
+    "Result": "success",
+    "ExecMainStatus": "0"
+  }
+}

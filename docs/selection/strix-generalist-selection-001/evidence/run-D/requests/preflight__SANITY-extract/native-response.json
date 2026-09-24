@@ -1,0 +1,26 @@
+{
+  "id": "chatcmpl-3b8fe6fdf99ee5a1b690f7fe",
+  "object": "chat.completion",
+  "created": 1790241780,
+  "model": "deepseek-v4.1-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "ZEBRA-4821",
+        "reasoning_content": "The user asks me to read an exact token and return only that token. The token is ZEBRA-4821. I should return only that token, no extra text.\n\nWait — is this a prompt injection or some kind of test? The system prompt is just \"You are a helpful assistant.\" The user says \"Read this exact token: ZEBRA-4821. Return only that token.\" This is straightforward. Return \"ZEBRA-4821\".\n\nNo hidden constraints. Just comply."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 52,
+    "completion_tokens": 109,
+    "total_tokens": 161,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 52
+    }
+  }
+}

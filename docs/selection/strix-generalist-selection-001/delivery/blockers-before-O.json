@@ -1,0 +1,24 @@
+{
+  "M": {
+    "status": "BLOCKED",
+    "scope": "ISOLATED_TO_PROFILE",
+    "reason": "The sampled thinking-ON sanity code_clamp response defines a function with an assignment but no return statement. All four sandbox checks returned None. The other five sanity cases passed; zero panel requests were sent. The preregistered sanity admission gate failed; no semantic retry or source repair is permitted.",
+    "evidence": "continuity/M_SANITY_BLOCKER.md",
+    "native_receipts": ["/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-M-001/sanity-pre.json", "/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-M-001/requests/preflight__SANITY-code_clamp/result.json"],
+    "raw_fatal_label": "TECHNICAL_ERROR / SANITY_PREFLIGHT_FAIL",
+    "interpreted_cause": "SEMANTIC_SANITY_ADMISSION_FAILURE_NOT_DEMONSTRATED_RUNTIME_CORRUPTION",
+    "panel_requests_sent": 0,
+    "repeat": "NOT_PERFORMED",
+    "continue_other_profiles_only_after_restore": true
+  },
+  "MTP": {
+    "status": "BLOCKED",
+    "scope": "ISOLATED_TO_MTP",
+    "reason": "Our OFF collector expected an absent /props field. The actual native mode is default_generation_settings.params['speculative.types']='none'. Zero OFF reference completions were dispatched before the collector stopped; the primary Q load has ended, so ON lacks required matched references within the remaining load budget.",
+    "evidence": "continuity/MTP_COLLECTOR_BLOCKER.md",
+    "native_receipt": "/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-Q-001/mtp-off-blocker.json",
+    "quality_primary_unchanged": true,
+    "does_not_block_profiles": ["M", "D", "O"],
+    "extra_inference_to_recover": "NOT_AUTHORIZED_AUTOMATICALLY"
+  }
+}

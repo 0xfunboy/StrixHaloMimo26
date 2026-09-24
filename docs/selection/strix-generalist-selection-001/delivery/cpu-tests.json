@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "checks": [
+    "new exact copy",
+    "identical existing copy accepted",
+    "changed existing copy refused",
+    "active supervisor refused",
+    "terminal restored accepted",
+    "pending restore refused"
+  ],
+  "new_inference_calls": 0,
+  "scorer_changes": 0,
+  "source_sha256": "19792cc1d120524cf08256b5a0fc0d7afe75f4e3a83cf0ba0fe34a1c8546a5cc"
+}

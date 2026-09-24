@@ -1,0 +1,28 @@
+{
+  "interface": "E1 /v1/chat/completions NONSTREAMING",
+  "payload": {
+    "model": "deepseek-v4.1-flash",
+    "messages": [
+      {
+        "content": "You are a helpful assistant",
+        "role": "system"
+      },
+      {
+        "content": "Fixture sintetica di pianificazione energetica su quattro intervalli di un'ora, numerati 0,1,2,3. Determina il piano di costo minimo, verificando i tuoi totali. Tutti i dati di energia sono in kWh interi, i prezzi in centesimi/kWh; nessun flusso frazionario e nessun dato esterno.\nDomanda base per slot [2,1,3,1], produzione solare disponibile [0,3,0,1], prezzo di importazione [5,2,7,3]. Un solo job obbligatorio consuma 2 kWh in UN solo slot, scelto fra 1 e 2; non puo' essere frazionato o saltato. La domanda del job si somma alla base. Non si puo' esportare: grid[t] deve essere un intero fra 0 e 3. Il solare eccedente puo' essere tagliato: curtail[t] intero fra 0 e solar[t].\nLa batteria ha capacita' 3, energia iniziale 1 ed energia finale obbligatoria 1. Definisci battery_delta[t] positivo per CARICA e negativo per SCARICA; ogni delta e' intero fra -2 e 2. Il livello a fine slot e' il livello precedente piu' delta e deve stare in [0,3]. Efficienza unitaria, nessuna perdita o costo di degradazione; una singola variabile signed per slot impedisce carica e scarica simultanee.\nIl bilancio in ciascuno slot deve essere grid[t]+solar[t]-curtail[t] = base[t]+job_load[t]+battery_delta[t]. Il costo e' la somma grid[t]*price[t], non il valore della produzione solare. Ordine degli obiettivi: minimo costo; poi minima somma curtail; poi job_slot minore; poi battery_delta lessicograficamente minore. Distingui costo basso da piano fisicamente ammissibile: i vincoli di ogni slot e il livello finale valgono tutti.\nRestituisci solo JSON con esattamente job_slot (intero), battery_delta,grid,curtail,soc (liste di quattro interi; soc indica livelli DOPO ciascuno slot) e cost (intero). Il piano deve essere completo; niente pseudocodice e nessun solver invocabile. Questo piano e' solo un dato da valutare, non un comando a dispositivi.",
+        "role": "user"
+      }
+    ],
+    "max_tokens": 8192,
+    "stream": false,
+    "reasoning_effort": "max",
+    "thinking": true,
+    "temperature": 1.0,
+    "top_k": 0,
+    "top_p": 0.95,
+    "min_p": 0.0,
+    "seed": 101,
+    "ignore_eos": false,
+    "tools": [],
+    "tool_choice": "none"
+  }
+}

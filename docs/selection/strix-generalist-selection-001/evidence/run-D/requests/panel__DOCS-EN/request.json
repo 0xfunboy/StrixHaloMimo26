@@ -1,0 +1,28 @@
+{
+  "interface": "E1 /v1/chat/completions NONSTREAMING",
+  "payload": {
+    "model": "deepseek-v4.1-flash",
+    "messages": [
+      {
+        "content": "You are a helpful assistant",
+        "role": "system"
+      },
+      {
+        "content": "This is a synthetic primary-source incident dossier, not actual cluster telemetry. Reconstruct TX9 at reference cutoff10:00:20Z. Distinguish physical time, durability, caller outcome, number of effects and causal certainty. No summary containing the answers is supplied.\nFinal answer: one JSON object with only claims. Each requested claim has exactly value and citations (array of unique document IDs). Associate a sufficient set of pertinent sources with EACH claim. Do not cite every document indiscriminately; irrelevant transactions, unsupported chat hypotheses and evidence about another claim do not help.\nRequested claims: durable_commit_utc (HH:MM:SSZ string); client_timeout_utc (same format); commit_preceded_timeout (boolean); business_effect_count (integer); safe_recovery (enum SAME_KEY_LOOKUP,NEW_KEY_REEXECUTION,DATABASE_RESTART); physical_drop_cause (enum CONFIRMED_CABLE,UNKNOWN); uncalibrated_chat_proves_order (boolean). The safe-recovery claim concerns recovering the transaction result, not repairing the network. All dates are the same except where a record explicitly says previous day. Apply only the policy and offsets in the sources. No tool action is to be executed.\nSources:\n[{\"id\": \"N1\", \"kind\": \"network tap, reference-clock timestamps\", \"body\": \"Capture window09:59:50Z..10:00:30Z is complete. Transaction TX9: gateway request forwarded to DB at10:00:00Z. DB acknowledgement left DB at10:00:04Z. The first ACK was dropped on link L. Retransmitted ACK reached gateway at10:00:09Z. No DB rollback packet was observed. The tap cannot read transaction durability from encrypted packet contents.\"}, {\"id\": \"P1\", \"kind\": \"signed protocol specification\", \"body\": \"The reference UTC clock is the network-tap clock. The audit cutoff is10:00:20Z. A client-visible timeout is not proof of rollback. A durable commit requires an fsynced COMMIT in the database WAL for the transaction. Retrying a request may recover the stored response only by the same idempotency key; it must not create a new transaction. To decide how many business effects occurred use complete durable ledger rows, not HTTP status counts. A cause is CONFIRMED only if a controlled reproduction or direct component-failure evidence identifies the physical mechanism; temporal correlation alone leaves UNKNOWN.\"}, {\"id\": \"G1\", \"kind\": \"raw gateway log, gateway local clock\", \"body\": \"TX9/key K9 arrived local10:00:02Z. Caller deadline expired local10:00:07Z; gateway emitted HTTP504. DB success acknowledgement received local10:00:11Z; gateway stored success for K9. A repeat lookup using K9 atlocal10:00:14Z returned stored success without forwarding another transaction. Logs contain no request with a different key.\"}, {\"id\": \"D1\", \"kind\": \"database WAL export, database local clock\", \"body\": \"Complete WAL range coveringTX9. BEGIN TX9 local09:59:57Z. COMMIT TX9 local09:59:59Z; fsync completed at that same database-local instant. No ABORT or rollback record for TX9. Durable ledger export atdatabase-local10:00:10Z contains exactly one business-effect row for TX9 and no second row for K9.\"}, {\"id\": \"C1\", \"kind\": \"clock calibration record\", \"body\": \"During the entire observation window the gateway local clock is exactly reference UTC+2s; the database local clock is exactly reference UTC-3s. The offsets were measured before and after the window without drift. Chat timestamps are not calibrated. These offsets apply to G1 and D1, not to N1.\"}, {\"id\": \"H1\", \"kind\": \"maintenance chat\", \"body\": \"At chat10:00:01 someone typed: cable L looks loose, probably that caused it. No measurement, reproduction, inspection result or synchronized photograph accompanies the message. Another message suggested restarting the database after the504.\"}, {\"id\": \"I1\", \"kind\": \"complete inspection/reproduction register at cutoff\", \"body\": \"As of reference10:00:20Z no controlled reproduction, cable inspection report or direct physical component-failure measurement exists for link L. The log records a future appointment to inspect at11:00Z, not a completed inspection.\"}, {\"id\": \"R1\", \"kind\": \"unrelated transaction incident\", \"body\": \"Transaction TX8 on the previous day was rolled back after an HTTP504. Its database WAL showed ABORT. TX8 uses key K8 and a different link. It is not evidence about TX9.\"}]",
+        "role": "user"
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning_effort": "max",
+    "thinking": true,
+    "temperature": 1.0,
+    "top_k": 0,
+    "top_p": 0.95,
+    "min_p": 0.0,
+    "seed": 101,
+    "ignore_eos": false,
+    "tools": [],
+    "tool_choice": "none"
+  }
+}

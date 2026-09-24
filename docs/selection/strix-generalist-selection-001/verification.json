@@ -1,0 +1,220 @@
+{
+  "status": "PASS",
+  "at": "2026-09-24T16:29:10+0200",
+  "workflow": "AUTHORIZED_WINDOWS_TERMINAL_WITH_BLOCKERS",
+  "experiment_collection": "PARTIAL_OR_BLOCKED",
+  "source_freeze": {
+    "status": "PASS",
+    "base": {
+      "status": "PASS",
+      "files_checked": 74,
+      "index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+      "loaded_modules": {}
+    },
+    "addendum_index_sha256": "32b028506dd335d72569f7dad2d8aa5655e109c90d9c14b05f2df00ab66873e6"
+  },
+  "readiness_recovery": {
+    "status": "PASS",
+    "base": {
+      "status": "PASS",
+      "files_checked": 74,
+      "index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+      "loaded_modules": {}
+    },
+    "recovery_index_sha256": "a6dbb3034ea379ede71694a18487996d45335af3bf44e8811ef32a4fdaf0a91b",
+    "preparation_commit": "dba8594d2b20d7177b74fe3c8c4c5055a7996243"
+  },
+  "terminal_runs": {
+    "Q": {
+      "run_id": "generalist-selection-001-Q-001",
+      "completion": "PASS",
+      "cleanup": {
+        "status": "PASS",
+        "k2_state": "READY",
+        "at": "2026-09-24T10:53:53+0200",
+        "epoch": "1790239745036780819",
+        "target": {
+          "controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+          "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6",
+          "preset": "dspark-k2-gfx1151",
+          "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"
+        }
+      },
+      "supervisor": {
+        "LoadState": "not-found",
+        "ActiveState": "inactive",
+        "SubState": "dead",
+        "InvocationID": "",
+        "MainPID": "0",
+        "Result": "success",
+        "ExecMainStatus": "0"
+      }
+    },
+    "M": {
+      "run_id": "generalist-selection-001-M-001",
+      "completion": "FAILED",
+      "cleanup": {
+        "status": "PASS",
+        "k2_state": "READY",
+        "at": "2026-09-24T11:01:01+0200",
+        "epoch": "1790240178624599071",
+        "target": {
+          "controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+          "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6",
+          "preset": "dspark-k2-gfx1151",
+          "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"
+        }
+      },
+      "supervisor": {
+        "LoadState": "loaded",
+        "ActiveState": "failed",
+        "SubState": "failed",
+        "InvocationID": "6873be3ac79e4339bf7a94b361ebc40b",
+        "MainPID": "0",
+        "Result": "exit-code",
+        "ExecMainStatus": "32"
+      }
+    },
+    "D": {
+      "run_id": "generalist-selection-001-D-002",
+      "completion": "PASS",
+      "cleanup": {
+        "status": "PASS",
+        "k2_state": "READY",
+        "at": "2026-09-24T12:43:29+0200",
+        "epoch": "1790246320305924015",
+        "target": {
+          "controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+          "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6",
+          "preset": "dspark-k2-gfx1151",
+          "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"
+        }
+      },
+      "supervisor": {
+        "LoadState": "not-found",
+        "ActiveState": "inactive",
+        "SubState": "dead",
+        "InvocationID": "",
+        "MainPID": "0",
+        "Result": "success",
+        "ExecMainStatus": "0"
+      }
+    },
+    "O": {
+      "run_id": "generalist-selection-001-O-001",
+      "completion": "FAILED",
+      "cleanup": {
+        "status": "PASS",
+        "k2_state": "READY",
+        "at": "2026-09-24T16:23:52+0200",
+        "epoch": "1790259544584609152",
+        "target": {
+          "controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+          "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6",
+          "preset": "dspark-k2-gfx1151",
+          "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"
+        }
+      },
+      "supervisor": {
+        "LoadState": "loaded",
+        "ActiveState": "failed",
+        "SubState": "failed",
+        "InvocationID": "d6b3ceab8b014239888b9f47041646ed",
+        "MainPID": "0",
+        "Result": "exit-code",
+        "ExecMainStatus": "32"
+      }
+    },
+    "D_SETUP": {
+      "run_id": "generalist-selection-001-D-001",
+      "completion": "INTERRUPTED",
+      "cleanup": {
+        "status": "PASS",
+        "k2_state": "READY",
+        "at": "2026-09-24T11:19:59+0200",
+        "epoch": "1790241311047078402",
+        "target": {
+          "controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+          "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6",
+          "preset": "dspark-k2-gfx1151",
+          "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"
+        }
+      },
+      "supervisor": {
+        "LoadState": "loaded",
+        "ActiveState": "failed",
+        "SubState": "failed",
+        "InvocationID": "fc1b2de966c14058a8e629179516d1bb",
+        "MainPID": "0",
+        "Result": "exit-code",
+        "ExecMainStatus": "143"
+      }
+    }
+  },
+  "prefix_audit": {
+    "Q": {
+      "status": "PASS_FOR_RECORDED_PREFIX",
+      "records": 32,
+      "intents": 32,
+      "phases": {
+        "preflight": 6,
+        "panel": 12,
+        "warmup": 2,
+        "benchmark": 6,
+        "postflight": 6
+      },
+      "pending_requests": []
+    },
+    "M": {
+      "status": "PASS_FOR_RECORDED_PREFIX",
+      "records": 6,
+      "intents": 6,
+      "phases": {
+        "preflight": 6
+      },
+      "pending_requests": []
+    },
+    "D": {
+      "status": "PASS_FOR_RECORDED_PREFIX",
+      "records": 32,
+      "intents": 32,
+      "phases": {
+        "preflight": 6,
+        "panel": 12,
+        "warmup": 2,
+        "benchmark": 6,
+        "postflight": 6
+      },
+      "pending_requests": []
+    },
+    "O": {
+      "status": "PASS_FOR_RECORDED_PREFIX",
+      "records": 6,
+      "intents": 6,
+      "phases": {
+        "preflight": 6
+      },
+      "pending_requests": []
+    },
+    "O_peer": {
+      "status": "PASS_FOR_ALL_RECORDED_REQUESTS",
+      "records_per_rank": 6,
+      "not_extra_replicas": true,
+      "full_32_request_campaign": false
+    }
+  },
+  "preserved": {
+    "closed_campaigns": 741,
+    "scratch": 44
+  },
+  "archived_files": 569,
+  "archive_counts_by_node": {
+    "NODE01": 538,
+    "NODE02": 31
+  },
+  "CPU_RECALCULATION_CHECK": "CONTINUITY_EVALUATION_CHECK_PASS",
+  "final_live": "2026-09-24T16:29:07+0200",
+  "new_inference_calls_in_delivery": 0,
+  "model_actions_in_delivery": 0,
+  "limitations": "M/O stopped at separate frozen sanity gates; MTP lacks OFF references. No retries or invented panel results."
+}

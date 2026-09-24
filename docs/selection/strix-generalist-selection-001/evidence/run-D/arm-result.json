@@ -1,0 +1,363 @@
+{
+  "profile": "D",
+  "run_id": "generalist-selection-001-D-002",
+  "requests": [
+    {
+      "request_id": "generalist-selection-001-D-002/D/preflight/SANITY-arithmetic",
+      "phase": "preflight",
+      "case_id": "SANITY-arithmetic",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/preflight/SANITY-extract",
+      "phase": "preflight",
+      "case_id": "SANITY-extract",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/preflight/SANITY-json",
+      "phase": "preflight",
+      "case_id": "SANITY-json",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/preflight/SANITY-italian",
+      "phase": "preflight",
+      "case_id": "SANITY-italian",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/preflight/SANITY-english",
+      "phase": "preflight",
+      "case_id": "SANITY-english",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/preflight/SANITY-code_clamp",
+      "phase": "preflight",
+      "case_id": "SANITY-code_clamp",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/panel/CODE-IT",
+      "phase": "panel",
+      "case_id": "CODE-IT",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/panel/CODE-EN",
+      "phase": "panel",
+      "case_id": "CODE-EN",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/panel/DATA-IT",
+      "phase": "panel",
+      "case_id": "DATA-IT",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/panel/DATA-EN",
+      "phase": "panel",
+      "case_id": "DATA-EN",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/panel/MATH-IT",
+      "phase": "panel",
+      "case_id": "MATH-IT",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/panel/MATH-EN",
+      "phase": "panel",
+      "case_id": "MATH-EN",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/panel/DOCS-IT",
+      "phase": "panel",
+      "case_id": "DOCS-IT",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/panel/DOCS-EN",
+      "phase": "panel",
+      "case_id": "DOCS-EN",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/panel/SCI-IT",
+      "phase": "panel",
+      "case_id": "SCI-IT",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/panel/SCI-EN",
+      "phase": "panel",
+      "case_id": "SCI-EN",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/panel/OPS-IT",
+      "phase": "panel",
+      "case_id": "OPS-IT",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/panel/OPS-EN",
+      "phase": "panel",
+      "case_id": "OPS-EN",
+      "completion_status": "INCOMPLETE_OUTPUT_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/warmup/ENGINE-2K",
+      "phase": "warmup",
+      "case_id": "ENGINE-2K",
+      "completion_status": "VALID_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/warmup/ENGINE-8K",
+      "phase": "warmup",
+      "case_id": "ENGINE-8K",
+      "completion_status": "VALID_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/benchmark/ENGINE-2K-r1",
+      "phase": "benchmark",
+      "case_id": "ENGINE-2K",
+      "completion_status": "VALID_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/benchmark/ENGINE-8K-r1",
+      "phase": "benchmark",
+      "case_id": "ENGINE-8K",
+      "completion_status": "VALID_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/benchmark/ENGINE-2K-r2",
+      "phase": "benchmark",
+      "case_id": "ENGINE-2K",
+      "completion_status": "VALID_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/benchmark/ENGINE-8K-r2",
+      "phase": "benchmark",
+      "case_id": "ENGINE-8K",
+      "completion_status": "VALID_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/benchmark/ENGINE-2K-r3",
+      "phase": "benchmark",
+      "case_id": "ENGINE-2K",
+      "completion_status": "VALID_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/benchmark/ENGINE-8K-r3",
+      "phase": "benchmark",
+      "case_id": "ENGINE-8K",
+      "completion_status": "VALID_CAP"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/postflight/SANITY-arithmetic",
+      "phase": "postflight",
+      "case_id": "SANITY-arithmetic",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/postflight/SANITY-extract",
+      "phase": "postflight",
+      "case_id": "SANITY-extract",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/postflight/SANITY-json",
+      "phase": "postflight",
+      "case_id": "SANITY-json",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/postflight/SANITY-italian",
+      "phase": "postflight",
+      "case_id": "SANITY-italian",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/postflight/SANITY-english",
+      "phase": "postflight",
+      "case_id": "SANITY-english",
+      "completion_status": "COMPLETE"
+    },
+    {
+      "request_id": "generalist-selection-001-D-002/D/postflight/SANITY-code_clamp",
+      "phase": "postflight",
+      "case_id": "SANITY-code_clamp",
+      "completion_status": "COMPLETE"
+    }
+  ],
+  "sanity": {
+    "preflight": [
+      {
+        "case_id": "SANITY-arithmetic",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-extract",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-json",
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "alpha": 7,
+          "beta": "blue"
+        },
+        "diagnostics": {
+          "parsing": true,
+          "schema": true,
+          "schema_errors": [],
+          "value_errors": []
+        }
+      },
+      {
+        "case_id": "SANITY-italian",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-english",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-code_clamp",
+        "status": "PASS",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "error": null,
+            "actual": 5
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "error": null,
+            "actual": 0
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "error": null,
+            "actual": 10
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "error": null,
+            "actual": 3
+          }
+        ]
+      }
+    ],
+    "postflight": [
+      {
+        "case_id": "SANITY-arithmetic",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-extract",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-json",
+        "status": "PASS",
+        "critical_violations": [],
+        "parsed": {
+          "alpha": 7,
+          "beta": "blue"
+        },
+        "diagnostics": {
+          "parsing": true,
+          "schema": true,
+          "schema_errors": [],
+          "value_errors": []
+        }
+      },
+      {
+        "case_id": "SANITY-italian",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-english",
+        "status": "PASS",
+        "critical_violations": []
+      },
+      {
+        "case_id": "SANITY-code_clamp",
+        "status": "PASS",
+        "tests": [
+          {
+            "index": 0,
+            "pass": true,
+            "input_unchanged": true,
+            "error": null,
+            "actual": 5
+          },
+          {
+            "index": 1,
+            "pass": true,
+            "input_unchanged": true,
+            "error": null,
+            "actual": 0
+          },
+          {
+            "index": 2,
+            "pass": true,
+            "input_unchanged": true,
+            "error": null,
+            "actual": 10
+          },
+          {
+            "index": 3,
+            "pass": true,
+            "input_unchanged": true,
+            "error": null,
+            "actual": 3
+          }
+        ]
+      }
+    ]
+  },
+  "source_freeze": {
+    "status": "PASS",
+    "files_checked": 74,
+    "index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+    "loaded_modules": {
+      "__main__": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/adapter_ds41_readiness_v1.py",
+        "sha256": "b4523c1d2337a2611ca8ac964fa78e9435cca0ce7a7242c7758ca33fa6675bad"
+      },
+      "common": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/common.py",
+        "sha256": "65dccf0c1437dbda7ef3c97121c8439fa7a388d75b000362a5dbf9c0a5004a9f"
+      },
+      "validate": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/validate.py",
+        "sha256": "34658bf68884e15daf3a972b7fc12591bed87854a512e9d401c7a5a3935aa9c9"
+      }
+    }
+  },
+  "status": "COMPLETE",
+  "at": "2026-09-24T12:38:35+0200"
+}

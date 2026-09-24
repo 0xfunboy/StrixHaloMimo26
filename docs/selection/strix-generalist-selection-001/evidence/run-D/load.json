@@ -1,0 +1,186 @@
+{
+  "status": "PASS",
+  "load_s": 132.3360888559837,
+  "pid": 777630,
+  "finished_at": "2026-09-24T11:22:49+0200",
+  "command": [
+    "/home/funboy/.local/share/haloclu-ds41/releases/ds4-speed-001-engram1/ds4-server",
+    "--rocm",
+    "-m",
+    "/home/funboy/models/ds41/ds4-v41-q2/DeepSeek-V4.1-Flash-Q2.gguf",
+    "--ctx",
+    "16384",
+    "--tensor-parallel",
+    "--role",
+    "coordinator",
+    "--listen",
+    "10.55.0.1",
+    "9917",
+    "--transport",
+    "tcp",
+    "--batched-session",
+    "1",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18433",
+    "--trace",
+    "/home/funboy/.local/state/strixhalomimo26/windows/generalist-selection-001-D-002/server-trace.log"
+  ],
+  "binary": {
+    "path": "/home/funboy/.local/share/haloclu-ds41/releases/ds4-speed-001-engram1/ds4-server",
+    "sha256": "8d977276c007bc2379349e9a4ebb5b6414d6d67f0b011f4cec49545e6131c663"
+  },
+  "source_freeze": {
+    "status": "PASS",
+    "files_checked": 74,
+    "index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+    "loaded_modules": {
+      "__main__": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/adapter_ds41_readiness_v1.py",
+        "sha256": "b4523c1d2337a2611ca8ac964fa78e9435cca0ce7a7242c7758ca33fa6675bad"
+      },
+      "common": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/common.py",
+        "sha256": "65dccf0c1437dbda7ef3c97121c8439fa7a388d75b000362a5dbf9c0a5004a9f"
+      },
+      "validate": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/validate.py",
+        "sha256": "34658bf68884e15daf3a972b7fc12591bed87854a512e9d401c7a5a3935aa9c9"
+      }
+    }
+  },
+  "memory_before": {
+    "observed_at": "2026-09-24T11:20:36+0200",
+    "memory_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 128765050880,
+      "SwapTotal": 8589930496,
+      "SwapFree": 8202604544
+    },
+    "process": {
+      "VmSize": 53612544,
+      "VmRSS": 28999680,
+      "VmSwap": 0,
+      "pid": 777626,
+      "minflt": 21498,
+      "majflt": 26,
+      "starttime_ticks": 24051687,
+      "io": {
+        "rchar": 97490789,
+        "wchar": 1091,
+        "syscr": 855,
+        "syscw": 4,
+        "read_bytes": 40230912,
+        "write_bytes": 4096,
+        "cancelled_write_bytes": 0
+      }
+    },
+    "gpu_sysfs": [
+      {
+        "device": "/sys/class/drm/card0/device",
+        "values": {
+          "gpu_busy_percent": "0",
+          "pp_dpm_sclk": "0: 600Mhz \n1: 605Mhz *\n2: 2900Mhz",
+          "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+          "hwmon/hwmon5/freq1_input": "605000000",
+          "hwmon/hwmon5/power1_input": "15073000",
+          "hwmon/hwmon5/temp1_input": "44000"
+        }
+      }
+    ],
+    "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+  },
+  "memory_after": {
+    "observed_at": "2026-09-24T11:22:49+0200",
+    "memory_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 38911516672,
+      "SwapTotal": 8589930496,
+      "SwapFree": 8019492864
+    },
+    "process": {
+      "VmSize": 257967341568,
+      "VmRSS": 34068131840,
+      "VmSwap": 34746368,
+      "pid": 777630,
+      "minflt": 782826,
+      "majflt": 2077,
+      "starttime_ticks": 24051704,
+      "io": {
+        "rchar": 86509203744,
+        "wchar": 315648,
+        "syscr": 2996,
+        "syscw": 304,
+        "read_bytes": 173225398272,
+        "write_bytes": 20480,
+        "cancelled_write_bytes": 0
+      }
+    },
+    "gpu_sysfs": [
+      {
+        "device": "/sys/class/drm/card0/device",
+        "values": {
+          "gpu_busy_percent": "1",
+          "pp_dpm_sclk": "0: 600Mhz \n1: 688Mhz *\n2: 2900Mhz",
+          "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+          "hwmon/hwmon5/freq1_input": "688000000",
+          "hwmon/hwmon5/power1_input": "12075000",
+          "hwmon/hwmon5/temp1_input": "44000"
+        }
+      }
+    ],
+    "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+  },
+  "peer_memory_after": {
+    "unit": "mimo26-gs001-d-r1-002",
+    "unit_state": {
+      "ActiveState": "active",
+      "InvocationID": "19e90ffb8ae6445f9e240fb8da646ad5",
+      "MainPID": "806730"
+    },
+    "snapshot": {
+      "observed_at": "2026-09-24T11:22:49+0200",
+      "memory_bytes": {
+        "MemTotal": 131203895296,
+        "MemAvailable": 39016923136,
+        "SwapTotal": 8589930496,
+        "SwapFree": 8332013568
+      },
+      "process": {
+        "VmSize": 257810292736,
+        "VmRSS": 33126768640,
+        "VmSwap": 33607680,
+        "pid": 806730,
+        "minflt": 783922,
+        "majflt": 1127,
+        "starttime_ticks": 24051766,
+        "io": {
+          "rchar": 86509250370,
+          "wchar": 315287,
+          "syscr": 3024,
+          "syscw": 297,
+          "read_bytes": 173114322944,
+          "write_bytes": 20480,
+          "cancelled_write_bytes": 0
+        }
+      },
+      "gpu_sysfs": [
+        {
+          "device": "/sys/class/drm/card1/device",
+          "values": {
+            "gpu_busy_percent": "1",
+            "pp_dpm_sclk": "0: 600Mhz \n1: 664Mhz *\n2: 2900Mhz",
+            "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+            "hwmon/hwmon5/freq1_input": "664000000",
+            "hwmon/hwmon5/power1_input": "14042000",
+            "hwmon/hwmon5/temp1_input": "43000"
+          }
+        }
+      ],
+      "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+    },
+    "status": "PASS"
+  },
+  "model_identity_note": "Identity comes from pinned E1 binary, DeepSeek-V4.1 GGUF metadata/size and matching peer; API display ID is recorded separately."
+}

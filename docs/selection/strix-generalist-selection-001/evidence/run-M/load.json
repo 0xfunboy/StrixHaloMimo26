@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "load_s": 114.18077592900954,
+  "pid": 766173,
+  "finished_at": "2026-09-24T10:55:59+0200",
+  "command": [
+    "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/llama-server",
+    "-m",
+    "/home/funboy/models/MiMo-V2.6/mixed-gguf/MiMo-V2.6-Flash-RL-Mixed-Quant-GGUF/MQ-IQ2-XXS-XS-Q8-MM-BF16/MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00001-of-00004.gguf",
+    "--device",
+    "ROCm0",
+    "--split-mode",
+    "none",
+    "-ngl",
+    "all",
+    "-c",
+    "16384",
+    "-b",
+    "512",
+    "-ub",
+    "128",
+    "-np",
+    "1",
+    "--no-cont-batching",
+    "-fa",
+    "auto",
+    "-ctk",
+    "f16",
+    "-ctv",
+    "f16",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18432",
+    "--reasoning",
+    "on",
+    "--metrics"
+  ],
+  "binary": {
+    "path": "/home/funboy/.local/build/llama.cpp-mimo26-mixed-pin-gfx1151/bin/llama-server",
+    "sha256": "5898a81b08e919c507e09fb4252265c5ee3b8373cef13edc475cf267415cd8c7"
+  },
+  "source_freeze": {
+    "status": "PASS",
+    "files_checked": 74,
+    "index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+    "loaded_modules": {
+      "__main__": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/adapter_llama.py",
+        "sha256": "cebed9280e4272c3714c965d0ec0c3d997ccfecaa09e231e52c70188519a8ff1"
+      },
+      "common": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/common.py",
+        "sha256": "65dccf0c1437dbda7ef3c97121c8439fa7a388d75b000362a5dbf9c0a5004a9f"
+      },
+      "validate": {
+        "path": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/sources/validate.py",
+        "sha256": "34658bf68884e15daf3a972b7fc12591bed87854a512e9d401c7a5a3935aa9c9"
+      }
+    }
+  },
+  "memory_before": {
+    "observed_at": "2026-09-24T10:54:05+0200",
+    "memory_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 128677568512,
+      "SwapTotal": 8589930496,
+      "SwapFree": 8206254080
+    },
+    "process": {
+      "VmSize": 177491968,
+      "VmRSS": 145367040,
+      "VmSwap": 0,
+      "pid": 766170,
+      "minflt": 47256,
+      "majflt": 43,
+      "starttime_ticks": 23892492,
+      "io": {
+        "rchar": 137432518,
+        "wchar": 27,
+        "syscr": 629,
+        "syscw": 3,
+        "read_bytes": 100388864,
+        "write_bytes": 0,
+        "cancelled_write_bytes": 0
+      }
+    },
+    "gpu_sysfs": [
+      {
+        "device": "/sys/class/drm/card0/device",
+        "values": {
+          "gpu_busy_percent": "0",
+          "pp_dpm_sclk": "0: 600Mhz \n1: 608Mhz *\n2: 2900Mhz",
+          "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+          "hwmon/hwmon5/freq1_input": "608000000",
+          "hwmon/hwmon5/power1_input": "17060000",
+          "hwmon/hwmon5/temp1_input": "45000"
+        }
+      }
+    ],
+    "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+  },
+  "memory_after": {
+    "observed_at": "2026-09-24T10:55:59+0200",
+    "memory_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 39800406016,
+      "SwapTotal": 8589930496,
+      "SwapFree": 8209854464
+    },
+    "process": {
+      "VmSize": 96431345664,
+      "VmRSS": 1235959808,
+      "VmSwap": 0,
+      "pid": 766173,
+      "minflt": 244164,
+      "majflt": 11738,
+      "starttime_ticks": 23892533,
+      "io": {
+        "rchar": 87735687956,
+        "wchar": 305385,
+        "syscr": 87498,
+        "syscw": 194,
+        "read_bytes": 87909593088,
+        "write_bytes": 12288,
+        "cancelled_write_bytes": 0
+      }
+    },
+    "gpu_sysfs": [
+      {
+        "device": "/sys/class/drm/card0/device",
+        "values": {
+          "gpu_busy_percent": "13",
+          "pp_dpm_sclk": "0: 600Mhz \n1: 1451Mhz *\n2: 2900Mhz",
+          "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+          "hwmon/hwmon5/freq1_input": "1451000000",
+          "hwmon/hwmon5/power1_input": "26022000",
+          "hwmon/hwmon5/temp1_input": "45000"
+        }
+      }
+    ],
+    "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+  },
+  "runtime_props": "native-props.json"
+}

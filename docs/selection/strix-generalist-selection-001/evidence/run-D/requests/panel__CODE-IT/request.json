@@ -1,0 +1,28 @@
+{
+  "interface": "E1 /v1/chat/completions NONSTREAMING",
+  "payload": {
+    "model": "deepseek-v4.1-flash",
+    "messages": [
+      {
+        "content": "You are a helpful assistant",
+        "role": "system"
+      },
+      {
+        "content": "Fixture sintetica, nessun conto o servizio reale. Devi correggere una piccola libreria Python su DUE file, mantenendo le funzioni pubbliche. Non limitarti a spiegare i bug: restituisci i file corretti completi.\nContratto ledger.delta(balances, account, amount): balances e' un dict non vuoto di nomi di conto (stringhe non vuote) a saldi interi non negativi. account deve gia' esistere. amount e' un intero con segno; il saldo risultante non puo' essere negativo. bool non e' un intero valido. Ogni argomento invalido deve produrre ValueError. Restituisci un NUOVO dict; nessuna mutazione dell'input, anche in caso di errore.\nContratto batch.apply_batch(balances, operations, seen): seen e' un set di ID stringa non vuoti; operations e' una lista di dict. Valida balances e seen anche per una lista vuota. Ogni operazione deve avere un id stringa non vuoto. Se id e' gia' in seen o e' stato eseguito prima nello stesso batch, IGNORA tutta l'operazione dopo avere letto e validato il solo id: gli altri campi possono anche mancare. Altrimenti richiede source e destination distinti, esistenti, e amount intero strettamente positivo, non bool. Un trasferimento sposta amount da source a destination senza creare conti. Le operazioni sono sequenziali: le entrate precedenti possono finanziare uscite successive. Una operazione invalida, un tipo sbagliato, un conto ignoto o fondi insufficienti annullano l'intero batch mediante ValueError; nessun input puo' essere stato mutato. In successo restituisci una tuple (nuovi_saldi, nuovi_seen), rispettivamente dict e set, entrambi oggetti nuovi anche per batch vuoto.\nNon importare librerie standard o terze parti; batch.py puo' importare soltanto ledger. Il chiamante puo' riusare balances, operations e seen dopo il ritorno o l'eccezione. Preserva anche i conti mai citati e conserva la somma dei saldi. Le chiavi extra nelle operazioni non influiscono sul trasferimento.\nRisposta finale: un unico oggetto JSON con la sola chiave files, a sua volta con esattamente ledger.py e batch.py, i cui valori sono stringhe contenenti codice Python. Nessuna chiamata a tool reale.\nFile attuali:\n{\"ledger.py\": \"def delta(balances, account, amount):\\n    out = balances\\n    out[account] = out.get(account, 0) + amount\\n    return out\\n\", \"batch.py\": \"from ledger import delta\\n\\ndef apply_batch(balances, operations, seen):\\n    current = dict(balances)\\n    ids = seen\\n    for op in operations:\\n        if op['id'] in ids:\\n            continue\\n        current = delta(current, op['source'], -op['amount'])\\n        if current[op['source']] < 0:\\n            return balances, ids\\n        current = delta(current, op['destination'], op['amount'])\\n        ids.add(op['id'])\\n    return current, ids\\n\"}",
+        "role": "user"
+      }
+    ],
+    "max_tokens": 8192,
+    "stream": false,
+    "reasoning_effort": "max",
+    "thinking": true,
+    "temperature": 1.0,
+    "top_k": 0,
+    "top_p": 0.95,
+    "min_p": 0.0,
+    "seed": 101,
+    "ignore_eos": false,
+    "tools": [],
+    "tool_choice": "none"
+  }
+}

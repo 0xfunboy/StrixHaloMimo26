@@ -1,0 +1,6 @@
+{
+  "phase": "preflight",
+  "status": "TECHNICAL_ERROR",
+  "error": "RuntimeError:SANITY_PREFLIGHT_FAIL",
+  "at": "2026-09-24T16:18:24+0200"
+}

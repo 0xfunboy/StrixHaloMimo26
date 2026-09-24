@@ -1,0 +1,8 @@
+0924 12:31:16 ds4-server: live kv cache miss live=4849 prompt=2045 common=2 vision=match reason=token-mismatch
+0924 12:31:16 ds4-server: chat ctx=0..2045:2045 prompt start
+0924 12:31:51 ds4-server: chat ctx=0..2045:2045 prefill chunk 2045/2045 (100.0%) chunk=0.00 t/s avg=58.06 t/s 35.221s
+0924 12:31:51 ds4-server: chat ctx=0..2045:2045 prompt done 35.263s
+0924 12:31:54 ds4-server: chat ctx=2045..2095:50 gen=50 decoding chunk=15.36 t/s avg=15.36 t/s 3.255s
+0924 12:31:58 ds4-server: chat ctx=2095..2145:50 gen=100 decoding chunk=15.04 t/s avg=15.20 t/s 6.580s
+0924 12:31:59 ds4-server: chat ctx=2145..2173:28 gen=128 decoding chunk=15.30 t/s avg=15.22 t/s 8.410s
+0924 12:31:59 ds4-server: chat ctx=0..2045:2045 gen=128 finish=length 43.674s

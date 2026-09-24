@@ -1,0 +1,83 @@
+
+===== request 31 2026-09-24 12:38:18 =====
+kind: chat
+model: deepseek-v4.1-flash
+stream: 0
+tools: 0
+think_mode: max
+prompt_tokens: 52
+effective_prompt_tokens: 52
+cached_tokens: 0
+max_tokens: 1024
+temperature: 1.000
+top_k: 0
+top_p: 0.950
+min_p: 0.000
+ignore_eos: 0
+seed: 101
+stream_include_usage: 0
+
+--- cache decision ---
+live_tokens_before: 256
+prompt_tokens: 52
+live_prompt_common: 33
+memory_token_reusable: 0
+memory_miss_reason: token-mismatch
+tool_replay: mem=0 disk=0 canonical=0 missing_ids=0
+cache_source: none
+cached_tokens: 0
+disk_cached_tokens: 0
+
+first_mismatch_token: 33
+token_window: [25..42)
+     25 ==          live 22805 " reasoning" | prompt 22805 " reasoning"
+     26 ==          live 868 ")\n\n" | prompt 868 ")\n\n"
+     27 ==          live 3476 "You" | prompt 3476 "You"
+     28 ==          live 477 " are" | prompt 477 " are"
+     29 ==          live 260 " a" | prompt 260 " a"
+     30 ==          live 11502 " helpful" | prompt 11502 " helpful"
+     31 ==          live 22896 " assistant" | prompt 22896 " assistant"
+     32 ==          live 128803 "<｜User｜>" | prompt 128803 "<｜User｜>"
+     33 !=          live 84852 "Nel" | prompt 72585 "Alice"
+     34 !=          live 87444 " testo" | prompt 344 " is"
+     35 !=          live 24946 " segu" | prompt 1257 " first"
+     36 !=          live 6846 "ente" | prompt 305 " and"
+     37 !=          live 3493 " il" | prompt 16358 " Bob"
+     38 !=          live 1278 " col" | prompt 344 " is"
+     39 !=          live 492 "ore" | prompt 1957 " second"
+     40 !=          live 27399 " dich" | prompt 16 "."
+     41 !=          live 13640 "iar" | prompt 11780 " Who"
+
+--- raw request json ---
+{"model": "deepseek-v4.1-flash", "messages": [{"content": "You are a helpful assistant", "role": "system"}, {"content": "Alice is first and Bob is second. Who is second? Return only the name.", "role": "user"}], "max_tokens": 1024, "stream": false, "reasoning_effort": "max", "thinking": true, "temperature": 1.0, "top_k": 0, "top_p": 0.95, "min_p": 0.0, "seed": 101, "ignore_eos": false, "tools": [], "tool_choice": "none"}
+
+--- rendered prompt ---
+<｜begin▁of▁sentence｜><｜System｜>Reasoning Effort: 100 (range 1-100, the higher the value, the more thorough the reasoning)
+
+You are a helpful assistant<｜User｜>Alice is first and Bob is second. Who is second? Return only the name.<｜Assistant｜><think>
+
+--- generated text ---
+
+
+--- trace: prefill done; decode_max=1024 ctx_room=16332 ---
+
+We need answer only name. Question: Alice is first and Bob is second. Who is second? Bob. Return only name. Need comply.</think>Bob
+
+--- parsed message ---
+finish: stop
+generated_tokens: 31
+dsml_start: 0
+dsml_end: 0
+elapsed_sec: 2.945
+
+reasoning:
+We need answer only name. Question: Alice is first and Bob is second. Who is second? Bob. Return only name. Need comply.
+
+content:
+Bob
+
+===== end request 31 =====
+
+
+--- trace: thinking live checkpoint remembered: live=83 visible=299 ---
+

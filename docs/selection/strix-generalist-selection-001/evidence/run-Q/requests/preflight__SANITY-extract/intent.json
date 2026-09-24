@@ -1,0 +1,14 @@
+{
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "run_id": "generalist-selection-001-Q-001",
+  "request_id": "generalist-selection-001-Q-001/Q/preflight/SANITY-extract",
+  "case_id": "SANITY-extract",
+  "request_key": "SANITY-extract",
+  "profile": "Q",
+  "rank": 0,
+  "phase": "preflight",
+  "state": "IN_FLIGHT",
+  "at": "2026-09-24T10:14:56+0200",
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "input_ids_sha256": "d3d49fe59626cefbe60ce4123d17536d3b9bbb6a9268befbdba45550f7efb725"
+}

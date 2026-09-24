@@ -1,0 +1,14 @@
+{
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "run_id": "generalist-selection-001-Q-001",
+  "request_id": "generalist-selection-001-Q-001/Q/panel/DOCS-EN",
+  "case_id": "DOCS-EN",
+  "request_key": "DOCS-EN",
+  "profile": "Q",
+  "rank": 0,
+  "phase": "panel",
+  "state": "IN_FLIGHT",
+  "at": "2026-09-24T10:37:27+0200",
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "input_ids_sha256": "a78376ce59d8a387dfab50d2b6b72ad83a52fda1b13fa24b2398423511cd7039"
+}

@@ -1,0 +1,13 @@
+{"event": "RUN_START", "iso": "2026-09-24T16:12:22+0200", "pid": 805104, "ts": 1790259142.5683234}
+{"event": "K2_PRESTATE", "iso": "2026-09-24T16:12:23+0200", "state": "READY", "ts": 1790259143.3113923}
+{"event": "K2_QUIESCE_START", "iso": "2026-09-24T16:12:23+0200", "ts": 1790259143.312036}
+{"event": "K2_QUIESCED", "iso": "2026-09-24T16:12:34+0200", "ts": 1790259154.3938053}
+{"event": "COMPUTE_LOCK_ACQUIRED", "iso": "2026-09-24T16:12:34+0200", "ts": 1790259154.3978205}
+{"event": "RANK1_STARTED", "invocation": "bbe11b201e21431f90b62d7b9920e2ec", "iso": "2026-09-24T16:12:34+0200", "ts": 1790259154.864588}
+{"event": "RANK0_STARTED", "invocation": "45f5c2f4882b4f64be7ba286fc1b34f1", "iso": "2026-09-24T16:12:36+0200", "ts": 1790259156.8836713}
+{"event": "LOAD_OBSERVED", "iso": "2026-09-24T16:12:43+0200", "status": "IN_PROGRESS", "ts": 1790259163.4557827}
+{"event": "LOAD_OBSERVED", "iso": "2026-09-24T16:17:27+0200", "status": "PASS", "ts": 1790259447.819662}
+{"event": "QUALITY_OBSERVED", "iso": "2026-09-24T16:18:25+0200", "status": "FAIL", "tests_completed": 0, "ts": 1790259505.6931221}
+{"event": "WORKER_FAILURE", "iso": "2026-09-24T16:18:31+0200", "r0": 1, "r1": 0, "ts": 1790259511.1478264}
+{"event": "CLEANUP_START", "iso": "2026-09-24T16:18:31+0200", "ts": 1790259511.277073}
+{"at": "2026-09-24T16:23:52+0200", "epoch": "1790259544584609152", "event": "CLEANUP_DONE", "iso": "2026-09-24T16:23:52+0200", "k2_state": "READY", "status": "PASS", "target": {"controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh", "preset": "dspark-k2-gfx1151", "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6", "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"}, "ts": 1790259832.854323}

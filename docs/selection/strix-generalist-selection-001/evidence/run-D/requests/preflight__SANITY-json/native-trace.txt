@@ -1,0 +1,83 @@
+
+===== request 3 2026-09-24 11:23:00 =====
+kind: chat
+model: deepseek-v4.1-flash
+stream: 0
+tools: 0
+think_mode: max
+prompt_tokens: 56
+effective_prompt_tokens: 56
+cached_tokens: 0
+max_tokens: 1024
+temperature: 1.000
+top_k: 0
+top_p: 0.950
+min_p: 0.000
+ignore_eos: 0
+seed: 101
+stream_include_usage: 0
+
+--- cache decision ---
+live_tokens_before: 161
+prompt_tokens: 56
+live_prompt_common: 33
+memory_token_reusable: 0
+memory_miss_reason: token-mismatch
+tool_replay: mem=0 disk=0 canonical=0 missing_ids=0
+cache_source: none
+cached_tokens: 0
+disk_cached_tokens: 0
+
+first_mismatch_token: 33
+token_window: [25..42)
+     25 ==          live 22805 " reasoning" | prompt 22805 " reasoning"
+     26 ==          live 868 ")\n\n" | prompt 868 ")\n\n"
+     27 ==          live 3476 "You" | prompt 3476 "You"
+     28 ==          live 477 " are" | prompt 477 " are"
+     29 ==          live 260 " a" | prompt 260 " a"
+     30 ==          live 11502 " helpful" | prompt 11502 " helpful"
+     31 ==          live 22896 " assistant" | prompt 22896 " assistant"
+     32 ==          live 128803 "<｜User｜>" | prompt 128803 "<｜User｜>"
+     33 !=          live 8158 "Read" | prompt 25529 "Return"
+     34 !=          live 566 " this" | prompt 1353 " only"
+     35 !=          live 6319 " exact" | prompt 6405 " valid"
+     36 !=          live 17840 " token" | prompt 26639 " JSON"
+     37 !=          live 28 ":" | prompt 418 " with"
+     38 !=          live 1653 " Z" | prompt 9045 " exactly"
+     39 !=          live 18675 "EB" | prompt 1305 " these"
+     40 !=          live 7691 "RA" | prompt 3785 " values"
+     41 !=          live 15 "-" | prompt 28 ":"
+
+--- raw request json ---
+{"model": "deepseek-v4.1-flash", "messages": [{"content": "You are a helpful assistant", "role": "system"}, {"content": "Return only valid JSON with exactly these values: alpha is integer 7 and beta is string \"blue\".", "role": "user"}], "max_tokens": 1024, "stream": false, "reasoning_effort": "max", "thinking": true, "temperature": 1.0, "top_k": 0, "top_p": 0.95, "min_p": 0.0, "seed": 101, "ignore_eos": false, "tools": [], "tool_choice": "none"}
+
+--- rendered prompt ---
+<｜begin▁of▁sentence｜><｜System｜>Reasoning Effort: 100 (range 1-100, the higher the value, the more thorough the reasoning)
+
+You are a helpful assistant<｜User｜>Return only valid JSON with exactly these values: alpha is integer 7 and beta is string "blue".<｜Assistant｜><think>
+
+--- generated text ---
+
+
+--- trace: prefill done; decode_max=1024 ctx_room=16328 ---
+
+The user wants only valid JSON with exactly these values: alpha is integer 7, beta is string "blue". So output {"alpha":7,"beta":"blue"} with no extra text. Must be valid JSON. Return only that.</think>{"alpha":7,"beta":"blue"}
+
+--- parsed message ---
+finish: stop
+generated_tokens: 58
+dsml_start: 0
+dsml_end: 0
+elapsed_sec: 4.716
+
+reasoning:
+The user wants only valid JSON with exactly these values: alpha is integer 7, beta is string "blue". So output {"alpha":7,"beta":"blue"} with no extra text. Must be valid JSON. Return only that.
+
+content:
+{"alpha":7,"beta":"blue"}
+
+===== end request 3 =====
+
+
+--- trace: thinking live checkpoint remembered: live=114 visible=346 ---
+

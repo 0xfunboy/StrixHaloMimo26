@@ -1,0 +1,26 @@
+{
+  "id": "chatcmpl-2a29d5e4833073c2cb8cf5c4",
+  "object": "chat.completion",
+  "created": 1790241772,
+  "model": "deepseek-v4.1-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "323",
+        "reasoning_content": "We need answer only integer. 17*19 = 323. Need return only integer."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 46,
+    "completion_tokens": 21,
+    "total_tokens": 67,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 46
+    }
+  }
+}

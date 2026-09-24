@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "preparation_commit": "dba8594d2b20d7177b74fe3c8c4c5055a7996243",
+  "base_preparation_commit": "87442a8e1b999e5f33165d0b6b563eac5248ab15",
+  "base_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "recovery_index_sha256": "a6dbb3034ea379ede71694a18487996d45335af3bf44e8811ef32a4fdaf0a91b",
+  "files": 13,
+  "primary_input_sha256": "a8ec4d0f0984666d18f4b62966aa2adc28ac205a986ec4bb8185dc9729926622",
+  "model_requests_before_freeze": 0,
+  "correction_scope": "Single E1 readiness endpoint correction and new run/unit/trace identities. Same model, numerical binaries, primary requests, scoring and budgets."
+}

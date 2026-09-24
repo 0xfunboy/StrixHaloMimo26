@@ -1,0 +1,61 @@
+{
+  "rank0": {
+    "before": {
+      "LoadState": "loaded",
+      "ActiveState": "failed",
+      "SubState": "failed",
+      "InvocationID": "45f5c2f4882b4f64be7ba286fc1b34f1",
+      "MainPID": "0",
+      "Result": "exit-code",
+      "ExecMainStatus": "1"
+    },
+    "start_receipt": {
+      "ActiveState": "active",
+      "ExecMainStatus": "0",
+      "InvocationID": "45f5c2f4882b4f64be7ba286fc1b34f1",
+      "Result": "success",
+      "SubState": "running"
+    },
+    "after": {
+      "LoadState": "loaded",
+      "ActiveState": "failed",
+      "SubState": "failed",
+      "InvocationID": "45f5c2f4882b4f64be7ba286fc1b34f1",
+      "MainPID": "0",
+      "Result": "exit-code",
+      "ExecMainStatus": "1"
+    }
+  },
+  "rank1": {
+    "before": {
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "SubState": "running",
+      "InvocationID": "bbe11b201e21431f90b62d7b9920e2ec",
+      "MainPID": "918148",
+      "Result": "success",
+      "ExecMainStatus": "0"
+    },
+    "start_receipt": {
+      "ActiveState": "active",
+      "ExecMainStatus": "0",
+      "InvocationID": "bbe11b201e21431f90b62d7b9920e2ec",
+      "Result": "success",
+      "SubState": "running"
+    },
+    "stop": {
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "after": {
+      "LoadState": "loaded",
+      "ActiveState": "failed",
+      "SubState": "failed",
+      "InvocationID": "bbe11b201e21431f90b62d7b9920e2ec",
+      "MainPID": "0",
+      "Result": "exit-code",
+      "ExecMainStatus": "1"
+    }
+  }
+}

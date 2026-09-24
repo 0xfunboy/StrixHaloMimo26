@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "checks": [
+    "declared adapter effective config",
+    "declared adapter records retained",
+    "declared adapter verdict",
+    "unknown actual adapter effective config",
+    "unknown actual adapter records retained",
+    "unknown actual adapter verdict",
+    "other audit issue effective config",
+    "other audit issue records retained",
+    "other audit issue verdict",
+    "unrelated errors retained",
+    "M unchanged",
+    "base manifest unchanged",
+    "semantic scorer identity unchanged"
+  ],
+  "scoring_changes": 0,
+  "new_inference_calls": 0,
+  "kind": "metadata-only synthetic tests"
+}

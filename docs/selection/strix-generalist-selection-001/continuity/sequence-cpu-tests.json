@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "cases": {
+    "normal": {
+      "status": "PASS",
+      "returncode": 0,
+      "launches": [
+        "M",
+        "D",
+        "O",
+        "T"
+      ],
+      "terminal": "AUTHORIZED_WINDOWS_TERMINAL"
+    },
+    "initially_busy": {
+      "status": "PASS",
+      "returncode": 0,
+      "launches": [
+        "M",
+        "D",
+        "O",
+        "T"
+      ],
+      "terminal": "AUTHORIZED_WINDOWS_TERMINAL"
+    },
+    "semantic_fault": {
+      "status": "PASS",
+      "returncode": 6,
+      "launches": [],
+      "terminal": "BLOCKED_PROFILE_REQUIRES_CAUSAL_CLASSIFICATION"
+    },
+    "restore_fault": {
+      "status": "PASS",
+      "returncode": 4,
+      "launches": [],
+      "terminal": "BLOCKED_RESTORE"
+    },
+    "timeout": {
+      "status": "PASS",
+      "returncode": 2,
+      "launches": [
+        "M"
+      ],
+      "terminal": "BLOCKED_DISPATCH_TIMEOUT_RECONCILE_ONLY"
+    },
+    "no_off": {
+      "status": "PASS",
+      "returncode": 0,
+      "launches": [
+        "M",
+        "D",
+        "O"
+      ],
+      "terminal": "AUTHORIZED_WINDOWS_TERMINAL"
+    }
+  },
+  "new_inference_calls": 0,
+  "actual_launch_calls": 0,
+  "actual_service_changes": 0
+}

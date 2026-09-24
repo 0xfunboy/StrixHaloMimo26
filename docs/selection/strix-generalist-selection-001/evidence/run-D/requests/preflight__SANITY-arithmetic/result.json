@@ -1,0 +1,377 @@
+{
+  "schema": "strix-generalist-request-v1",
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "run_id": "generalist-selection-001-D-002",
+  "request_id": "generalist-selection-001-D-002/D/preflight/SANITY-arithmetic",
+  "case_id": "SANITY-arithmetic",
+  "request_key": "SANITY-arithmetic",
+  "profile": "D",
+  "rank": 0,
+  "phase": "preflight",
+  "messages": [
+    {
+      "content": "You are a helpful assistant",
+      "role": "system"
+    },
+    {
+      "content": "Compute 17*19. Return only the integer.",
+      "role": "user"
+    }
+  ],
+  "rendered_text": "<｜begin▁of▁sentence｜><｜System｜>Reasoning Effort: 100 (range 1-100, the higher the value, the more thorough the reasoning)\n\nYou are a helpful assistant<｜User｜>Compute 17*19. Return only the integer.<｜Assistant｜><think>",
+  "input_token_ids": [
+    0,
+    128799,
+    77666,
+    288,
+    9504,
+    482,
+    28,
+    223,
+    1457,
+    343,
+    16801,
+    223,
+    19,
+    15,
+    1457,
+    14,
+    270,
+    4077,
+    270,
+    1990,
+    14,
+    270,
+    850,
+    15146,
+    270,
+    22805,
+    868,
+    3476,
+    477,
+    260,
+    11502,
+    22896,
+    128803,
+    109268,
+    223,
+    1002,
+    12,
+    511,
+    16,
+    20870,
+    1353,
+    270,
+    9132,
+    16,
+    128804,
+    128821
+  ],
+  "input_ids_sha256": "4246b44e2a70c6c0b4f23765934c75d782813deb316224aadf89ce643171d30e",
+  "input_tokens": 46,
+  "output_cap": 1024,
+  "thinking": true,
+  "sampling": {
+    "frequency_penalty": 0.0,
+    "ignore_eos": false,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "repetition_penalty": 1.0,
+    "seed": 101,
+    "temperature": 1.0,
+    "top_k": 0,
+    "top_p": 0.95
+  },
+  "timeout_s": 1200,
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "native_response": {
+    "id": "chatcmpl-2a29d5e4833073c2cb8cf5c4",
+    "object": "chat.completion",
+    "created": 1790241772,
+    "model": "deepseek-v4.1-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "323",
+          "reasoning_content": "We need answer only integer. 17*19 = 323. Need return only integer."
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 46,
+      "completion_tokens": 21,
+      "total_tokens": 67,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 46
+      }
+    }
+  },
+  "native_input_ids_echoed": null,
+  "input_validation": "NATIVE_TRACE_RENDER_COUNT_AND_SAME_BINARY_CPU_TOKENIZATION",
+  "output_token_ids": null,
+  "output_tokens": 21,
+  "finish_reason": "stop",
+  "completion_status": "COMPLETE",
+  "cache_reused_tokens": 0,
+  "cache_gate_pass": true,
+  "native_prompt_processed": 46,
+  "final_text": "323",
+  "reasoning_text": "We need answer only integer. 17*19 = 323. Need return only integer.",
+  "reasoning_observed": true,
+  "reasoning_closed": true,
+  "reasoning_tokens_native": null,
+  "final_tokens_native": null,
+  "boundary_method": "native separate message.content/reasoning_content; no retokenized native-ID claim",
+  "request_latency_s": 2.4288267029915005,
+  "observer": "HTTP caller: submit to complete nonstreaming response read",
+  "t_submit": 240649.810317099,
+  "t_done": 240652.239143802,
+  "engine_metrics": {
+    "prompt_engine_s": 1.074,
+    "prompt_engine_tps": 42.82,
+    "decode_engine_tps": null,
+    "decode_engine_total_rate_rounded": 15.73,
+    "native_log_prompt": {
+      "tokens": 46,
+      "tps": 42.82,
+      "seconds": 1.074,
+      "line": "0924 11:22:50 ds4-server: chat ctx=0..46:46 prefill chunk 46/46 (100.0%) chunk=0.00 t/s avg=42.82 t/s 1.074s"
+    },
+    "native_log_decode": {
+      "tokens": 21,
+      "tps": 15.73,
+      "seconds": 1.335,
+      "line": "0924 11:22:52 ds4-server: chat ctx=46..67:21 gen=21 decoding chunk=15.73 t/s avg=15.73 t/s 1.335s"
+    },
+    "precision": "Native log time rounded to 0.001 s; rates to 0.01 tok/s. Not reconstructed unrounded timestamps.",
+    "decode_contract": "Native log completion/elapsed since decode_t0 (includes first token); NOT post-first-token rate.",
+    "first_generated_token_s": null,
+    "first_final_token_s": null,
+    "client_ttft_s": null
+  },
+  "native_trace_audit": {
+    "request_sequence": 1,
+    "header": {
+      "kind": "chat",
+      "model": "deepseek-v4.1-flash",
+      "stream": "0",
+      "tools": "0",
+      "think_mode": "max",
+      "prompt_tokens": "46",
+      "effective_prompt_tokens": "46",
+      "cached_tokens": "0",
+      "max_tokens": "1024",
+      "temperature": "1.000",
+      "top_k": "0",
+      "top_p": "0.950",
+      "min_p": "0.000",
+      "ignore_eos": "0",
+      "seed": "101",
+      "stream_include_usage": "0",
+      "live_tokens_before": "0",
+      "live_prompt_common": "0",
+      "memory_token_reusable": "0",
+      "memory_miss_reason": "no-live-checkpoint",
+      "tool_replay": "mem=0 disk=0 canonical=0 missing_ids=0",
+      "cache_source": "none",
+      "disk_cached_tokens": "0"
+    },
+    "finish": "stop",
+    "generated_tokens": 21,
+    "engine_request_elapsed_s_rounded": 2.413,
+    "rendered_match": true,
+    "input_ids_note": "Exact trace rendering and count match tokens produced by the same pinned native CPU tokenizer; API does not echo the full ID list."
+  },
+  "resource_before": {
+    "observed_at": "2026-09-24T11:22:49+0200",
+    "memory_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 38908157952,
+      "SwapTotal": 8589930496,
+      "SwapFree": 8019492864
+    },
+    "process": {
+      "VmSize": 257967341568,
+      "VmRSS": 34068131840,
+      "VmSwap": 34746368,
+      "pid": 777630,
+      "minflt": 782826,
+      "majflt": 2077,
+      "starttime_ticks": 24051704,
+      "io": {
+        "rchar": 86509203744,
+        "wchar": 315648,
+        "syscr": 2996,
+        "syscw": 304,
+        "read_bytes": 173225398272,
+        "write_bytes": 20480,
+        "cancelled_write_bytes": 0
+      }
+    },
+    "gpu_sysfs": [
+      {
+        "device": "/sys/class/drm/card0/device",
+        "values": {
+          "gpu_busy_percent": "1",
+          "pp_dpm_sclk": "0: 600Mhz \n1: 668Mhz *\n2: 2900Mhz",
+          "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+          "hwmon/hwmon5/freq1_input": "668000000",
+          "hwmon/hwmon5/power1_input": "12039000",
+          "hwmon/hwmon5/temp1_input": "44000"
+        }
+      }
+    ],
+    "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+  },
+  "resource_after": {
+    "observed_at": "2026-09-24T11:22:52+0200",
+    "memory_bytes": {
+      "MemTotal": 131210121216,
+      "MemAvailable": 38789464064,
+      "SwapTotal": 8589930496,
+      "SwapFree": 8075751424
+    },
+    "process": {
+      "VmSize": 258142871552,
+      "VmRSS": 34121048064,
+      "VmSwap": 33341440,
+      "pid": 777630,
+      "minflt": 791244,
+      "majflt": 2534,
+      "starttime_ticks": 24051704,
+      "io": {
+        "rchar": 86523003559,
+        "wchar": 493358,
+        "syscr": 9216,
+        "syscw": 387,
+        "read_bytes": 173268115456,
+        "write_bytes": 24576,
+        "cancelled_write_bytes": 0
+      }
+    },
+    "gpu_sysfs": [
+      {
+        "device": "/sys/class/drm/card0/device",
+        "values": {
+          "gpu_busy_percent": "83",
+          "pp_dpm_sclk": "0: 600Mhz \n1: 2507Mhz *\n2: 2900Mhz",
+          "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+          "hwmon/hwmon5/freq1_input": "2507000000",
+          "hwmon/hwmon5/power1_input": "69030000",
+          "hwmon/hwmon5/temp1_input": "53000"
+        }
+      }
+    ],
+    "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+  },
+  "peer_resource_before": {
+    "unit": "mimo26-gs001-d-r1-002",
+    "unit_state": {
+      "ActiveState": "active",
+      "InvocationID": "19e90ffb8ae6445f9e240fb8da646ad5",
+      "MainPID": "806730"
+    },
+    "snapshot": {
+      "observed_at": "2026-09-24T11:22:49+0200",
+      "memory_bytes": {
+        "MemTotal": 131203895296,
+        "MemAvailable": 38997614592,
+        "SwapTotal": 8589930496,
+        "SwapFree": 8332013568
+      },
+      "process": {
+        "VmSize": 257810292736,
+        "VmRSS": 33126768640,
+        "VmSwap": 33607680,
+        "pid": 806730,
+        "minflt": 783922,
+        "majflt": 1127,
+        "starttime_ticks": 24051766,
+        "io": {
+          "rchar": 86509250370,
+          "wchar": 315287,
+          "syscr": 3024,
+          "syscw": 297,
+          "read_bytes": 173114322944,
+          "write_bytes": 20480,
+          "cancelled_write_bytes": 0
+        }
+      },
+      "gpu_sysfs": [
+        {
+          "device": "/sys/class/drm/card1/device",
+          "values": {
+            "gpu_busy_percent": "1",
+            "pp_dpm_sclk": "0: 600Mhz \n1: 653Mhz *\n2: 2900Mhz",
+            "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+            "hwmon/hwmon5/freq1_input": "653000000",
+            "hwmon/hwmon5/power1_input": "15014000",
+            "hwmon/hwmon5/temp1_input": "43000"
+          }
+        }
+      ],
+      "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+    },
+    "status": "PASS"
+  },
+  "peer_resource_after": {
+    "unit": "mimo26-gs001-d-r1-002",
+    "unit_state": {
+      "ActiveState": "active",
+      "InvocationID": "19e90ffb8ae6445f9e240fb8da646ad5",
+      "MainPID": "806730"
+    },
+    "snapshot": {
+      "observed_at": "2026-09-24T11:22:52+0200",
+      "memory_bytes": {
+        "MemTotal": 131203895296,
+        "MemAvailable": 38915276800,
+        "SwapTotal": 8589930496,
+        "SwapFree": 8332013568
+      },
+      "process": {
+        "VmSize": 257942962176,
+        "VmRSS": 33176342528,
+        "VmSwap": 33026048,
+        "pid": 806730,
+        "minflt": 792223,
+        "majflt": 1387,
+        "starttime_ticks": 24051766,
+        "io": {
+          "rchar": 86517362629,
+          "wchar": 490799,
+          "syscr": 9166,
+          "syscw": 312,
+          "read_bytes": 173153402880,
+          "write_bytes": 20480,
+          "cancelled_write_bytes": 0
+        }
+      },
+      "gpu_sysfs": [
+        {
+          "device": "/sys/class/drm/card1/device",
+          "values": {
+            "gpu_busy_percent": "71",
+            "pp_dpm_sclk": "0: 600Mhz \n1: 2232Mhz *\n2: 2900Mhz",
+            "pp_dpm_mclk": "0: 400Mhz \n1: 800Mhz \n2: 1000Mhz",
+            "hwmon/hwmon5/freq1_input": "2232000000",
+            "hwmon/hwmon5/power1_input": "63024000",
+            "hwmon/hwmon5/temp1_input": "47000"
+          }
+        }
+      ],
+      "resource_scope": "Point snapshots, not continuous peaks or proof of no throttling"
+    },
+    "status": "PASS"
+  },
+  "error": null,
+  "final_chars": 3,
+  "final_bytes": 3,
+  "reasoning_chars": 67,
+  "persisted_at": "2026-09-24T11:22:52+0200",
+  "record_sha256": "4ca33611dfb24ec35d2c2d065d492afa85ef105d409bd8ef8f6b84624f9392fb"
+}

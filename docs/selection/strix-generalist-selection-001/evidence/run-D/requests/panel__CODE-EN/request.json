@@ -1,0 +1,28 @@
+{
+  "interface": "E1 /v1/chat/completions NONSTREAMING",
+  "payload": {
+    "model": "deepseek-v4.1-flash",
+    "messages": [
+      {
+        "content": "You are a helpful assistant",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic library repair, not a real metering deployment. Correct BOTH Python files below while preserving their public functions. Return complete replacement code, not a diagnosis alone.\nThe grid consists of half-open intervals [origin_ms+i*width_ms, origin_ms+(i+1)*width_ms) for every integer i, including negative i. All times and width are Python integers but NOT bool. width_ms must be positive. bucket_at returns the integer index containing the time. intersecting returns increasing integer indices of every grid interval intersecting [start_ms,end_ms); return [] when start_ms==end_ms; start_ms>end_ms raises ValueError. These functions must validate their own arguments and raise ValueError for invalid ones. Use integer arithmetic, not floating point division, including for large integers beyond 2**53.\nmeter.summarize(events,width_ms,origin_ms,start_ms,end_ms) must validate all arguments and every event, including events outside the selected range. events must be a list of dictionaries. Every event requires timestamp_ms as integer-not-bool and bytes as nonnegative integer-not-bool. Extra event keys are ignored. Missing keys or invalid types raise ValueError. Each list entry is a distinct event, including exact duplicates. Include only events whose timestamp lies in [start_ms,end_ms). Return every intersecting grid bucket, including zero-activity buckets. Each bucket has exactly index (integer), bytes (integer sum), events (integer count). Return buckets in increasing index order. total_bytes and total_events equal the selected events, not all input events. Never mutate the input list or its dictionaries, including on failures. Valid empty intervals return an empty list of buckets and zero totals, after still validating the input events. For these fixtures the output has at most 100 buckets.\nDo not import standard/third-party libraries; meter.py may import only windows. Final answer: one JSON object with only files, containing exactly windows.py and meter.py as Python source strings.\nCurrent files:\n{\"windows.py\": \"def bucket_at(timestamp_ms, width_ms, origin_ms):\\n    return int((timestamp_ms - origin_ms) / width_ms)\\n\\ndef intersecting(start_ms, end_ms, width_ms, origin_ms):\\n    first = bucket_at(start_ms, width_ms, origin_ms)\\n    last = bucket_at(end_ms, width_ms, origin_ms)\\n    return list(range(first, last + 1))\\n\", \"meter.py\": \"from windows import bucket_at, intersecting\\n\\ndef summarize(events, width_ms, origin_ms, start_ms, end_ms):\\n    bins = {}\\n    for event in events:\\n        if start_ms <= event['timestamp_ms'] <= end_ms:\\n            i = bucket_at(event['timestamp_ms'], width_ms, origin_ms)\\n            bins[i] = bins.get(i, 0) + event['bytes']\\n    return {'buckets': [{'index': str(i), 'bytes': n} for i, n in sorted(bins.items())],\\n            'total_bytes': sum(bins.values()), 'total_events': len(events)}\\n\"}",
+        "role": "user"
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning_effort": "max",
+    "thinking": true,
+    "temperature": 1.0,
+    "top_k": 0,
+    "top_p": 0.95,
+    "min_p": 0.0,
+    "seed": 101,
+    "ignore_eos": false,
+    "tools": [],
+    "tool_choice": "none"
+  }
+}

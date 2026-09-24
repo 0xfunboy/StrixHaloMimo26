@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "preparation_commit": "efae11dae82e322f581db0de1d3ad0226e5ce37d",
+  "base_preparation_commit": "87442a8e1b999e5f33165d0b6b563eac5248ab15",
+  "base_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "addendum_index_sha256": "32b028506dd335d72569f7dad2d8aa5655e109c90d9c14b05f2df00ab66873e6",
+  "base_files": 74,
+  "additive_files": 15,
+  "peer_receipt": "preflight/peer-stage.json",
+  "cpu_receipt": "continuity/cpu-tests.json",
+  "freeze_receipt": "continuity/freeze-receipt.json",
+  "models_started_at_receipt": false
+}

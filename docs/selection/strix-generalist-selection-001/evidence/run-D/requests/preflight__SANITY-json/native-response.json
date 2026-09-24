@@ -1,0 +1,26 @@
+{
+  "id": "chatcmpl-57ac836164a2b3a6ac1fa8b3",
+  "object": "chat.completion",
+  "created": 1790241785,
+  "model": "deepseek-v4.1-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"alpha\":7,\"beta\":\"blue\"}",
+        "reasoning_content": "The user wants only valid JSON with exactly these values: alpha is integer 7, beta is string \"blue\". So output {\"alpha\":7,\"beta\":\"blue\"} with no extra text. Must be valid JSON. Return only that."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 56,
+    "completion_tokens": 58,
+    "total_tokens": 114,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 56
+    }
+  }
+}

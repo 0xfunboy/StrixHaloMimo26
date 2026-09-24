@@ -1,0 +1,14 @@
+{
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "run_id": "generalist-selection-001-Q-001",
+  "request_id": "generalist-selection-001-Q-001/Q/postflight/SANITY-english",
+  "case_id": "SANITY-english",
+  "request_key": "SANITY-english",
+  "profile": "Q",
+  "rank": 0,
+  "phase": "postflight",
+  "state": "IN_FLIGHT",
+  "at": "2026-09-24T10:48:54+0200",
+  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
+  "input_ids_sha256": "caa641dd6823c13002c1a201d3f088239e9f01f95e63093bba6b6dc61ceb4bf1"
+}

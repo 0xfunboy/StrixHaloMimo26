@@ -1,0 +1,52 @@
+{
+  "Q": {
+    "status": "PASS_FOR_RECORDED_PREFIX",
+    "records": 32,
+    "intents": 32,
+    "phases": {
+      "preflight": 6,
+      "panel": 12,
+      "warmup": 2,
+      "benchmark": 6,
+      "postflight": 6
+    },
+    "pending_requests": []
+  },
+  "M": {
+    "status": "PASS_FOR_RECORDED_PREFIX",
+    "records": 6,
+    "intents": 6,
+    "phases": {
+      "preflight": 6
+    },
+    "pending_requests": []
+  },
+  "D": {
+    "status": "PASS_FOR_RECORDED_PREFIX",
+    "records": 32,
+    "intents": 32,
+    "phases": {
+      "preflight": 6,
+      "panel": 12,
+      "warmup": 2,
+      "benchmark": 6,
+      "postflight": 6
+    },
+    "pending_requests": []
+  },
+  "O": {
+    "status": "PASS_FOR_RECORDED_PREFIX",
+    "records": 6,
+    "intents": 6,
+    "phases": {
+      "preflight": 6
+    },
+    "pending_requests": []
+  },
+  "O_peer": {
+    "status": "PASS_FOR_ALL_RECORDED_REQUESTS",
+    "records_per_rank": 6,
+    "not_extra_replicas": true,
+    "full_32_request_campaign": false
+  }
+}

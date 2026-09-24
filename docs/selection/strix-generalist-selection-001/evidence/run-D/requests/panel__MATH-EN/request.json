@@ -1,0 +1,28 @@
+{
+  "interface": "E1 /v1/chat/completions NONSTREAMING",
+  "payload": {
+    "model": "deepseek-v4.1-flash",
+    "messages": [
+      {
+        "content": "You are a helpful assistant",
+        "role": "system"
+      },
+      {
+        "content": "Synthetic robust production allocation with three batch types A,B,C. Choose integer batch counts [a,b,c]. Counts are each between 0 and 4 inclusive; A and B each require at least one batch, and a+b+c<=6. These are mandatory constraints, not preferences.\nPer-batch resource1 consumption is [3,2,1], resource2 [1,3,2], labor [2,1,2]. Capacity limits are resource1<=12, resource2<=11, labor<=10. Units are indivisible planning units and cannot be borrowed between resources.\nDeliverable output depends on which one of two scenarios occurs. Scenario1 output per batch is [2,1,2], scenario2 [1,2,2]. The same production decision must guarantee at least 8 output units in EACH scenario independently. Do not average the scenarios, weight them by a guessed probability, or use one scenario to compensate another. No recourse production is available.\nGross contribution per batch is [11,9,8] credits. A fixed setup charge of 3 is paid once if any B batches are produced; a fixed charge of 2 is paid once if any C batches are produced; A has no setup charge. These are per-type setup charges, not per-batch deductions.\nChoose the feasible plan with maximum net profit (gross minus setup charges). Break equal-profit ties by lower resource2 usage, then fewer total batches, then lexicographically smaller [a,b,c]. Report actual resource usage and both guaranteed outputs as arithmetic totals of your proposed plan, not a lower bound or the capacities themselves.\nFinal answer must be one JSON object with exactly batches (three integers), resource1,resource2,labor,scenario1,scenario2,profit (integers). All totals and all constraints must be correct for a pass. There is at least one feasible complete plan. No tools or optimizer are provided to you. The output is simulated, not an order to a factory.",
+        "role": "user"
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning_effort": "max",
+    "thinking": true,
+    "temperature": 1.0,
+    "top_k": 0,
+    "top_p": 0.95,
+    "min_p": 0.0,
+    "seed": 101,
+    "ignore_eos": false,
+    "tools": [],
+    "tool_choice": "none"
+  }
+}

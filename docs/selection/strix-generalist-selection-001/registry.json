@@ -1,8 +1,42 @@
 {
   "campaign": "STRIX-GENERALIST-SELECTION-001",
-  "phase": "FROZEN_PENDING_PREPARATION_COMMIT",
-  "at": "2026-09-24T08:43:51+0200",
-  "source_index_sha256": "06c85aae8b6a323a09067725cbf7656fd9cd19df56918c50d95881e0d3284604",
-  "models_started": false,
-  "next_exact_action": "Commit only the prepared selection files, record preparation.json, verify peer frozen bytes, then launch Q through the frozen supervisor."
+  "phase": "TERMINAL_WITH_BLOCKERS",
+  "at": "2026-09-24T16:40:18.286272+02:00",
+  "experiment_collection": "PARTIAL_OR_BLOCKED",
+  "runs": {
+    "Q": {
+      "run_id": "generalist-selection-001-Q-001",
+      "completion": "PASS",
+      "cleanup": "PASS",
+      "restored_at": "2026-09-24T10:53:53+0200"
+    },
+    "M": {
+      "run_id": "generalist-selection-001-M-001",
+      "completion": "FAILED",
+      "cleanup": "PASS",
+      "restored_at": "2026-09-24T11:01:01+0200"
+    },
+    "D": {
+      "run_id": "generalist-selection-001-D-002",
+      "completion": "PASS",
+      "cleanup": "PASS",
+      "restored_at": "2026-09-24T12:43:29+0200"
+    },
+    "O": {
+      "run_id": "generalist-selection-001-O-001",
+      "completion": "FAILED",
+      "cleanup": "PASS",
+      "restored_at": "2026-09-24T16:23:52+0200"
+    },
+    "D_SETUP": {
+      "run_id": "generalist-selection-001-D-001",
+      "completion": "INTERRUPTED",
+      "cleanup": "PASS",
+      "restored_at": "2026-09-24T11:19:59+0200"
+    }
+  },
+  "active_requests": 0,
+  "MTP": "BLOCKED_OFF_REFERENCE_COLLECTOR",
+  "verification": "verification.json",
+  "next_exact_action": "Deliver the verified report and local commit, then stop. No further model run, retry, deployment, push or HaloPipe port is authorized."
 }

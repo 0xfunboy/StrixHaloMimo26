@@ -1,0 +1,74 @@
+{
+  "status": "BLOCKED_PROFILE_REQUIRES_CAUSAL_CLASSIFICATION",
+  "observed_at": "2026-09-24T11:20:04.028911+02:00",
+  "phases": [
+    {
+      "profile": "Q",
+      "run_id": "generalist-selection-001-Q-001",
+      "status": "PASS",
+      "restore": {
+        "status": "PASS",
+        "k2_state": "READY",
+        "at": "2026-09-24T10:53:53+0200",
+        "epoch": "1790239745036780819",
+        "target": {
+          "controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+          "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6",
+          "preset": "dspark-k2-gfx1151",
+          "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"
+        }
+      },
+      "at": "2026-09-24T10:53:55.440603+02:00"
+    },
+    {
+      "profile": "M",
+      "run_id": "generalist-selection-001-M-001",
+      "status": "FAILED",
+      "restore": {
+        "status": "PASS",
+        "k2_state": "READY",
+        "at": "2026-09-24T11:01:01+0200",
+        "epoch": "1790240178624599071",
+        "target": {
+          "controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+          "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6",
+          "preset": "dspark-k2-gfx1151",
+          "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"
+        }
+      },
+      "at": "2026-09-24T11:01:01.580155+02:00"
+    }
+  ],
+  "script": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/continuity/continue_sequence.py",
+  "profile": "D",
+  "run_id": "generalist-selection-001-D-001",
+  "unit": {
+    "LoadState": "loaded",
+    "ActiveState": "failed",
+    "SubState": "failed",
+    "InvocationID": "fc1b2de966c14058a8e629179516d1bb",
+    "MainPID": "0",
+    "Result": "exit-code",
+    "ExecMainStatus": "143"
+  },
+  "run_completion": "INTERRUPTED",
+  "cleanup": {
+    "status": "PASS",
+    "k2_state": "READY",
+    "at": "2026-09-24T11:19:59+0200",
+    "epoch": "1790241311047078402",
+    "target": {
+      "controller": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6/runtime/ds41/serve-controller.sh",
+      "release": "/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6",
+      "preset": "dspark-k2-gfx1151",
+      "release_id": "5bdfed698ab97b6230db3fe8a7e37ff8e9b3d513"
+    }
+  },
+  "progress": {},
+  "fatal": {
+    "phase": "load",
+    "status": "INTERRUPTED",
+    "signal": 15,
+    "at": "2026-09-24T11:15:09+0200"
+  }
+}
