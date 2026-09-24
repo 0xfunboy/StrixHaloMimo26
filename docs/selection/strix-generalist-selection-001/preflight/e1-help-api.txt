@@ -1,0 +1,19 @@
+ds4-server
+Serve one loaded DwarfStar model through OpenAI, Responses, Anthropic, and completion-compatible HTTP APIs.
+
+Usage: ds4-server [options]
+
+HTTP API
+  --host HOST                    Bind address. Default: 127.0.0.1
+  --port N                       Bind port. Default: 8000
+  --cors                         Add Access-Control-Allow-* headers for browser JS clients.
+  --trace FILE                   Write prompts, cache decisions, output, and tool calls.
+  --batched-session N            Keep N resident sessions and batch decode-ready requests.
+  --mixed-prefill-quantum N      Prefill chunk while generations are active. Default: 128; GLM-5.3 minimum: 1024
+Endpoints: /v1/chat/completions, /v1/responses, /v1/completions, and /v1/messages.
+Model endpoint aliases include deepseek-v4-flash and deepseek-v4-pro; both serve the loaded GGUF.
+
+Examples
+  local API                      ./ds4-server --ctx 100000 --kv-disk-dir ~/.ds4/server-kv --kv-disk-space-mb 8192
+  curl                           curl http://127.0.0.1:8000/v1/models
+

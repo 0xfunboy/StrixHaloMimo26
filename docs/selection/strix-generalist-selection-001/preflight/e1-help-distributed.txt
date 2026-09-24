@@ -1,0 +1,36 @@
+ds4-server
+Serve one loaded DwarfStar model through OpenAI, Responses, Anthropic, and completion-compatible HTTP APIs.
+
+Usage: ds4-server [options]
+
+Distributed Inference
+
+Distributed mode runs one logical session across several machines by assigning contiguous model layer ranges to workers. Workers own their layer slice and KV-cache shard; the coordinator owns the prompt, sampling loop, and client/API flow. Start workers first, then start the coordinator. The coordinator waits for a complete route and streams hidden states through the workers.
+
+  --role ROLE                    Distributed role: coordinator or worker.
+  --layers A:B                   Inclusive layer slice, e.g. 0:20 or 21:output.
+  --listen HOST PORT             Coordinator listen address; workers may use it for their data listener.
+  --coordinator HOST PORT        Coordinator address for --role worker.
+  --dist-prefill-chunk N         Coordinator prefill pipeline chunk size. Default: session cap.
+  --dist-prefill-window N        Max prefill chunks in flight. Default: workers+2, capped at 8.
+  --dist-activation-bits N       Hidden-state transport width: 32, 16, or 8. Default: 32
+  --dist-replay-check            Diagnostic: reset and replay prompt, then compare logits.
+  --debug                        Print coordinator route/debug logs.
+
+Tensor Parallelism
+
+Tensor parallelism uses the same coordinator/worker addresses as distributed mode, but always runs one 50/50 worker. Add --tensor-parallel, omit --layers, start the worker, then start the coordinator.
+
+  --tensor-parallel              Switch --role/--listen/--coordinator to two-machine tensor parallelism.
+  --transport auto|rdma|tcp      Tensor gate transport. Default: auto
+  --rdma-port N                  Select the local active Ethernet verbs port. Default: 1
+  --rdma-device NAME             Select a verbs device when auto-detection is ambiguous.
+  --rdma-gid-index N             Select the local verbs GID index.
+  --tensor-parallel-token-prefill
+      GLM diagnostic: prefill one token at a time for exact arithmetic.
+  --debug-hash N                 Cross-check hidden state every N tokens.
+
+Examples
+  worker                         ./ds4 --role worker --layers 21:output --coordinator 192.168.0.181 9000 -m ds4flash.gguf
+  coordinator                    ./ds4 --role coordinator --layers 0:20 --listen 0.0.0.0 9000 -p "Hello" -m ds4flash.gguf
+

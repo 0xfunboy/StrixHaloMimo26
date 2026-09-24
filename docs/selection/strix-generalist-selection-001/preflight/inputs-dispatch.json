@@ -1,0 +1,32 @@
+{
+  "state": "DISPATCHED",
+  "command": [
+    "systemd-run",
+    "--user",
+    "--unit=strix-generalist001-inputs-cpu-001.service",
+    "--property=Restart=no",
+    "--property=RuntimeMaxSec=600",
+    "--property=TimeoutStopSec=20",
+    "--property=MemoryMax=3G",
+    "--property=CPUQuota=200%",
+    "--property=KillMode=control-group",
+    "--property=StandardOutput=append:/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/preflight/inputs-cpu.log",
+    "--property=StandardError=append:/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/preflight/inputs-cpu.log",
+    "--",
+    "/usr/bin/env",
+    "LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_core/lib:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_libraries/lib:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/torch/lib",
+    "PATH=/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_devel/bin:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib/llvm/bin:/home/funboy/StrixHaloClusterGLM/.engine/venv/bin:/usr/local/bin:/usr/bin:/bin",
+    "PYTHONPATH=/home/funboy/StrixHaloMimo26/docs/mimo26/quality-holdout-002/sources:/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/_rocm_sdk_core/share/amd_smi",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "HF_HUB_OFFLINE=1",
+    "TRANSFORMERS_OFFLINE=1",
+    "TOKENIZERS_PARALLELISM=false",
+    "/home/funboy/StrixHaloClusterGLM/.engine/venv/bin/python",
+    "/home/funboy/StrixHaloMimo26/scripts/selection/generalist001/prepare_inputs.py",
+    "--root",
+    "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001"
+  ],
+  "rc": 0,
+  "stderr": "Running as unit: strix-generalist001-inputs-cpu-001.service; invocation ID: be293e0b477e4c1ea279d1f3c6034de5\n",
+  "at": "2026-09-24T07:31:57.867976+02:00"
+}

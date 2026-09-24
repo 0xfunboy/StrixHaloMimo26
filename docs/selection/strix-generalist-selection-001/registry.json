@@ -1,0 +1,10 @@
+{
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "phase": "ASSET_ACQUISITION_AND_CPU_PROTOCOL_PREPARATION",
+  "created_at": "2026-09-24T06:46:57.077616+02:00",
+  "entry_head": "e6a814336e6f37e88b1cd3a5fab23fc5b299635d",
+  "inference_dispatched": false,
+  "next_exact_action": "Reconcile the existing selected weight acquisition; complete independent 12-case panel and frozen adapters before any model window.",
+  "qwen_build": "PASS",
+  "qwen_acquisition_unit": "strix-generalist001-qwen-weights-001.service"
+}

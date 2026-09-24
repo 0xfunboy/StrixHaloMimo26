@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "admission_expected_resident",
+      "pass": true
+    },
+    {
+      "name": "owner_guard_owner",
+      "pass": true
+    },
+    {
+      "name": "owner_guard_epoch",
+      "pass": true
+    },
+    {
+      "name": "owner_guard_state",
+      "pass": true
+    },
+    {
+      "name": "foreign_peer_invocation",
+      "pass": true
+    },
+    {
+      "name": "busy_resident",
+      "pass": true
+    },
+    {
+      "name": "unknown_peer_health",
+      "pass": true
+    },
+    {
+      "name": "one_rank_done_does_not_finish",
+      "pass": true
+    },
+    {
+      "name": "both_rank_done_finishes",
+      "pass": true
+    },
+    {
+      "name": "single_rank_done_finishes",
+      "pass": true
+    },
+    {
+      "name": "peer_failure_stops",
+      "pass": true
+    },
+    {
+      "name": "rank0_failure_stops",
+      "pass": true
+    },
+    {
+      "name": "native_D_trace_accepts_exact",
+      "pass": true
+    },
+    {
+      "name": "native_D_trace_cache",
+      "pass": true
+    },
+    {
+      "name": "native_D_trace_thinking",
+      "pass": true
+    },
+    {
+      "name": "native_D_trace_tools",
+      "pass": true
+    },
+    {
+      "name": "native_D_trace_sampling",
+      "pass": true
+    },
+    {
+      "name": "native_D_trace_prompt",
+      "pass": true
+    },
+    {
+      "name": "native_D_raw_payload",
+      "pass": true
+    },
+    {
+      "name": "native_D_renderer_disagreement",
+      "pass": true
+    },
+    {
+      "name": "native_D_missing_terminal",
+      "pass": true
+    },
+    {
+      "name": "D_native_rounded_metric_contract",
+      "pass": true
+    },
+    {
+      "name": "D_incomplete_native_metric_not_filled",
+      "pass": true
+    },
+    {
+      "name": "native_decoding_preserves_zero_and_excludes_EOS",
+      "pass": true
+    },
+    {
+      "name": "M_direct_final_not_repaired_into_reasoning",
+      "pass": true
+    },
+    {
+      "name": "raw_record_native_consistency",
+      "pass": true
+    },
+    {
+      "name": "raw_output_count_mutation_rejected",
+      "pass": true
+    },
+    {
+      "name": "blocked_admission_does_not_transition_resident",
+      "pass": true
+    },
+    {
+      "name": "cleanup_preserves_initial_failure",
+      "pass": true
+    },
+    {
+      "name": "empty_stats_null",
+      "pass": true
+    },
+    {
+      "name": "median_not_best_of",
+      "pass": true
+    }
+  ],
+  "new_model_calls": 0,
+  "lifecycle_transitions": "MOCKED_ONLY"
+}

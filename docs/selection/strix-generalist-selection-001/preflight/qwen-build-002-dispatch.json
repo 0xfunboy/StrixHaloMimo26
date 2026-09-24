@@ -1,0 +1,23 @@
+{
+  "status": "DISPATCHED",
+  "returncode": 0,
+  "stderr": "Running as unit: strix-generalist001-qwen-build-002.service; invocation ID: dffdadf939bd410694840b9cb38d1eeb\n",
+  "at": "2026-09-24T07:00:04.219625+02:00",
+  "command": [
+    "systemd-run",
+    "--user",
+    "--unit=strix-generalist001-qwen-build-002.service",
+    "--property=Restart=no",
+    "--property=RuntimeMaxSec=1800",
+    "--property=TimeoutStopSec=30",
+    "--property=MemoryMax=6G",
+    "--property=CPUQuota=400%",
+    "--property=TasksMax=512",
+    "--property=KillMode=control-group",
+    "--property=StandardOutput=append:/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/preflight/qwen-build-002-unit.log",
+    "--property=StandardError=append:/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/preflight/qwen-build-002-unit.log",
+    "--",
+    "/usr/bin/python3",
+    "/home/funboy/StrixHaloMimo26/scripts/selection/generalist001_build_qwen_002.py"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "revision": "a8f44737ecc6bbd406d796d1e402b312f00d1564",
+  "archive": "/home/funboy/ai-exp/strix-generalist-selection-001/e1-source-a8f4473.tar",
+  "archive_sha256": "f8db043da669a2617d659e8324988977bde91182463c6a4ad7154fc6bcf47c27",
+  "whole_archive_complete": true,
+  "bulk_unpack": "PARTIAL_TOOL_TAR_ENOSYS_NOT_RETRIED",
+  "selected_source_bytes_verified": {
+    "ds4.c": "8203873e7870ffc16b5d30bd40db96b5a5a7d615ba21b3be7fbe1c08cdc72d9e",
+    "ds4.h": "f76c2f65a7a187133b05d78392a94b83440b400f95bc0467e0507c217a1d7afc",
+    "ds4_server.c": "76f6dbfde62f50f548421e00e8501472af0c9f27551ccaaef71b02eae3073896",
+    "ds4_help.c": "94867d5cba04d55f0387bd4927f16513684d05cc709a6ca46212352725c28ec4",
+    "ds4_cli.c": "15fc13922d75891ca8301214ee121e9c8026c9a9095afacd7d19265d0014da9f",
+    "ds4_engram.c": "be2ae2aa985319f3eb182f96b4f3be0608d77ad384ac72793edf6c9789629869",
+    "ds4_engram.h": "a709961948a6b2f52113a00a2407faa5fd348a63dd4fc8ecaa3e5ad09a8bbf35",
+    "ds4_prompt_prefix.c": "61826ac373e18fe8e8876d3661a014975cf17629baeedf3084ed5f4a1aff0e48",
+    "ds4_prompt_prefix.h": "3c5806bf5ed3e451adbf5487ac7105ca32a549c4e1e17d7c61883b52e570b7b1",
+    "ds4_tp.c": "7f2c3a4336f774651cd2752a8c74859b75529e11da58a04a5db4f36415243291",
+    "ds4_tp.h": "17b8c12b87ac70aeeaefdb5a1d31a98346b9d0194cc5d607bebd8797923c7395",
+    "ds4_tp_io.h": "fc4573ec98326cd1dbcb1d93200851ec1426b6cbf587810f223f35ac528c62d0",
+    "ds4_tool_text.h": "a9c09f4a4d1cf2a3260d9c539de222cd949b5cd7710c7bf17ec9be5bc58bd159",
+    "MODEL_CARD.md": "ef1969bf9d673421d1e567df88e01d04d7f00594c5153799921829bdcd3234ad",
+    "README.md": "b60357a9f47e56fb29c744ec5ef3c3aa5f546ba8c13114c6713dbf27a0b287e0",
+    "STRIXHALO.md": "0c091f214d16d4e7a99460b34db6f9eb4213b44858fdc99762380f48ef44e9ff",
+    "Makefile": "0a046e8099e98f22d848a822cd81dca677792249de987703ceb20debfebfa83f"
+  },
+  "runtime_unchanged": true
+}

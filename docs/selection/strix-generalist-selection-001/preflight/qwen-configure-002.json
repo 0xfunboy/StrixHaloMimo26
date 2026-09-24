@@ -1,0 +1,24 @@
+{
+  "command": [
+    "cmake",
+    "-S",
+    "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-runtime",
+    "-B",
+    "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-build",
+    "-G",
+    "Ninja",
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DGGML_VULKAN=ON",
+    "-DGGML_HIP=OFF",
+    "-DGGML_CUDA=OFF",
+    "-DLLAMA_CURL=OFF",
+    "-DLLAMA_BUILD_TESTS=OFF",
+    "-DLLAMA_BUILD_EXAMPLES=OFF",
+    "-DLLAMA_BUILD_SERVER=ON",
+    "-DCMAKE_PREFIX_PATH=/home/funboy/ai-exp/strix-generalist-selection-001/deps",
+    "-DGGML_CCACHE=OFF"
+  ],
+  "status": "PASS",
+  "returncode": 0,
+  "at": "2026-09-24T06:54:03.586667+02:00"
+}

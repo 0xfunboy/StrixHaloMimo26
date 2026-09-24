@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "pid": 735003,
+  "started_at": "2026-09-24T07:00:04.256965+02:00",
+  "source_revision": "ba5354d46ca63e8225c28e1331f0f7651723ad05",
+  "command": [
+    "cmake",
+    "--build",
+    "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-build",
+    "--target",
+    "llama-server",
+    "llama-tokenize",
+    "-j",
+    "3"
+  ],
+  "no_inference": true,
+  "global_install": false,
+  "returncode": 0,
+  "finished_at": "2026-09-24T07:02:32.621978+02:00",
+  "binaries": {
+    "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-build/bin/libggml-base.so.0.22.0": {
+      "bytes": 952536,
+      "sha256": "6a09f87fcf1b740230486fba3a0d8ba6dd655ea7fdf6d75166303e51404084ee"
+    },
+    "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-build/bin/libggml-cpu.so.0.22.0": {
+      "bytes": 1399928,
+      "sha256": "aff74001d272667cb305ee0962ba77632741c4f355f72f3a3ef6b5b53aebe144"
+    },
+    "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-build/bin/libggml-vulkan.so.0.22.0": {
+      "bytes": 55805176,
+      "sha256": "beb912312d9759a3f412355999db598260f477fcbe702b2fc48445439e74159a"
+    },
+    "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-build/bin/libggml.so.0.22.0": {
+      "bytes": 59440,
+      "sha256": "279f7253a8805f46466fbadf381b30d3642fb01c6217614ebded39125bc9c1b3"
+    },
+    "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-build/bin/libllama-common.so.0.3.0": {
+      "bytes": 6059440,
+      "sha256": "ca36f27e8ce05ec08f93610fd7cedd14824475ec3dd66c8f675bc3a0c53f1c6a"
+    },
+    "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-build/bin/libllama-server-impl.so": {
+      "bytes": 7130560,
+      "sha256": "12b3aace0a414a155832c99af2f85e4f7581602327bab62ef8302d2f31241fe3"
+    },
+    "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-build/bin/libllama.so.0.3.0": {
+      "bytes": 4714584,
+      "sha256": "4a63e1c7a8488ac9b4a10f33d093f00c0f88ecb00feb78a391478813f5553cbf"
+    },
+    "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-build/bin/libmtmd.so.0.3.0": {
+      "bytes": 1969504,
+      "sha256": "6e899f7b316e88294e6f321fb6b17a94bfb70e9767fd515f3fe73d2a914b2162"
+    },
+    "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-build/bin/llama-server": {
+      "bytes": 17904,
+      "sha256": "39221dfcb9363a093ec2c836ea293114a4521ade7f989c393fe4dbe0718b22dc"
+    },
+    "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-build/bin/llama-tokenize": {
+      "bytes": 40248,
+      "sha256": "096ceca79e0e21028acd9bf10c5b757442d40d15991c36a0f71bd852c8dcfc47"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "state": "DISPATCHED",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "Running as unit: strix-generalist001-qwen-small-001.service; invocation ID: a295f6be0b8b49bd91702ddf242b5b98\n",
+  "command": [
+    "systemd-run",
+    "--user",
+    "--unit=strix-generalist001-qwen-small-001.service",
+    "--property=Restart=no",
+    "--property=RuntimeMaxSec=360",
+    "--property=TimeoutStopSec=15",
+    "--property=MemoryMax=512M",
+    "--property=KillMode=control-group",
+    "--property=StandardOutput=append:/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/preflight/acquire-small-unit.log",
+    "--property=StandardError=append:/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/preflight/acquire-small-unit.log",
+    "--",
+    "/usr/bin/python3",
+    "/home/funboy/StrixHaloMimo26/scripts/selection/generalist001_acquire.py",
+    "small"
+  ],
+  "at": "2026-09-24T06:58:38.404627+02:00"
+}

@@ -1,0 +1,2060 @@
+{
+  "schema": "generalist-cpu-preflight-v1",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "twelve_new_cases",
+      "pass": true
+    },
+    {
+      "name": "budget_73728",
+      "pass": true
+    },
+    {
+      "name": "family_CODE",
+      "pass": true
+    },
+    {
+      "name": "family_DATA",
+      "pass": true
+    },
+    {
+      "name": "family_MATH",
+      "pass": true
+    },
+    {
+      "name": "family_DOCS",
+      "pass": true
+    },
+    {
+      "name": "family_SCIENCE",
+      "pass": true
+    },
+    {
+      "name": "family_OPS",
+      "pass": true
+    },
+    {
+      "name": "source_syntax_common.py",
+      "pass": true
+    },
+    {
+      "name": "source_syntax_science_cases.py",
+      "pass": true
+    },
+    {
+      "name": "source_syntax_test_cpu.py",
+      "pass": true
+    },
+    {
+      "name": "source_syntax_ops_cases.py",
+      "pass": true
+    },
+    {
+      "name": "source_syntax_sandbox_inner.py",
+      "pass": true
+    },
+    {
+      "name": "source_syntax_math_cases.py",
+      "pass": true
+    },
+    {
+      "name": "source_syntax_data_cases.py",
+      "pass": true
+    },
+    {
+      "name": "source_syntax_code_cases.py",
+      "pass": true
+    },
+    {
+      "name": "source_syntax_docs_cases.py",
+      "pass": true
+    },
+    {
+      "name": "source_syntax_panel.py",
+      "pass": true
+    },
+    {
+      "name": "source_syntax_validate.py",
+      "pass": true
+    },
+    {
+      "name": "sandbox_probe_return",
+      "pass": true
+    },
+    {
+      "name": "unprivileged_uid",
+      "pass": true
+    },
+    {
+      "name": "host_home_not_mounted",
+      "pass": true
+    },
+    {
+      "name": "gpu_not_exposed",
+      "pass": true
+    },
+    {
+      "name": "network_cannot_access_resident",
+      "pass": true
+    },
+    {
+      "name": "capabilities_empty",
+      "pass": true
+    },
+    {
+      "name": "no_new_privileges",
+      "pass": true
+    },
+    {
+      "name": "CODE-IT_independent_reference_pass",
+      "pass": true
+    },
+    {
+      "name": "CODE-IT_empty_fails",
+      "pass": true
+    },
+    {
+      "name": "CODE-IT_extra_key_rejected",
+      "pass": true
+    },
+    {
+      "name": "CODE-IT_cap_never_promoted",
+      "pass": true
+    },
+    {
+      "name": "CODE-IT_original_bugs_detected",
+      "pass": true
+    },
+    {
+      "name": "CODE-IT_positive_tests_executed",
+      "pass": true
+    },
+    {
+      "name": "CODE-EN_independent_reference_pass",
+      "pass": true
+    },
+    {
+      "name": "CODE-EN_empty_fails",
+      "pass": true
+    },
+    {
+      "name": "CODE-EN_extra_key_rejected",
+      "pass": true
+    },
+    {
+      "name": "CODE-EN_cap_never_promoted",
+      "pass": true
+    },
+    {
+      "name": "CODE-EN_original_bugs_detected",
+      "pass": true
+    },
+    {
+      "name": "CODE-EN_positive_tests_executed",
+      "pass": true
+    },
+    {
+      "name": "DATA-IT_independent_reference_pass",
+      "pass": true
+    },
+    {
+      "name": "DATA-IT_empty_fails",
+      "pass": true
+    },
+    {
+      "name": "DATA-IT_extra_key_rejected",
+      "pass": true
+    },
+    {
+      "name": "DATA-IT_cap_never_promoted",
+      "pass": true
+    },
+    {
+      "name": "DATA-ITeligible_minutes_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "DATA-ITeligible_minutes_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "DATA-ITchargeable_down_minutes_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "DATA-ITchargeable_down_minutes_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "DATA-ITup_minutes_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "DATA-ITup_minutes_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "DATA-ITavailability_bp_floor_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "DATA-ITavailability_bp_floor_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "DATA-EN_independent_reference_pass",
+      "pass": true
+    },
+    {
+      "name": "DATA-EN_empty_fails",
+      "pass": true
+    },
+    {
+      "name": "DATA-EN_extra_key_rejected",
+      "pass": true
+    },
+    {
+      "name": "DATA-EN_cap_never_promoted",
+      "pass": true
+    },
+    {
+      "name": "MATH-IT_independent_reference_pass",
+      "pass": true
+    },
+    {
+      "name": "MATH-IT_empty_fails",
+      "pass": true
+    },
+    {
+      "name": "MATH-IT_extra_key_rejected",
+      "pass": true
+    },
+    {
+      "name": "MATH-IT_cap_never_promoted",
+      "pass": true
+    },
+    {
+      "name": "MATH-ITjob_slot_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "MATH-ITjob_slot_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "MATH-ITcost_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "MATH-ITcost_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "MATH-EN_independent_reference_pass",
+      "pass": true
+    },
+    {
+      "name": "MATH-EN_empty_fails",
+      "pass": true
+    },
+    {
+      "name": "MATH-EN_extra_key_rejected",
+      "pass": true
+    },
+    {
+      "name": "MATH-EN_cap_never_promoted",
+      "pass": true
+    },
+    {
+      "name": "MATH-ENresource1_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "MATH-ENresource1_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "MATH-ENresource2_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "MATH-ENresource2_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "MATH-ENlabor_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "MATH-ENlabor_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "MATH-ENscenario1_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "MATH-ENscenario1_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "MATH-ENscenario2_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "MATH-ENscenario2_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "MATH-ENprofit_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "MATH-ENprofit_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "DOCS-IT_independent_reference_pass",
+      "pass": true
+    },
+    {
+      "name": "DOCS-IT_empty_fails",
+      "pass": true
+    },
+    {
+      "name": "DOCS-IT_extra_key_rejected",
+      "pass": true
+    },
+    {
+      "name": "DOCS-IT_cap_never_promoted",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITcalibration_revisions_alternative_0",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITcalibration_revisions_missing_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITcalibration_revisions_fake_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITcalibration_revisions_real_but_irrelevant",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITcalibration_revisions_duplicate_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITnet_mass_g_alternative_0",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITnet_mass_g_missing_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITnet_mass_g_fake_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITnet_mass_g_real_but_irrelevant",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITnet_mass_g_duplicate_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITassay_state_alternative_0",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITassay_state_missing_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITassay_state_fake_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITassay_state_real_but_irrelevant",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITassay_state_duplicate_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITready_for_release_alternative_0",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITready_for_release_alternative_1",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITready_for_release_missing_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITready_for_release_fake_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITready_for_release_real_but_irrelevant",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITready_for_release_duplicate_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITrelease_signer_alternative_0",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITrelease_signer_missing_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITrelease_signer_fake_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITrelease_signer_real_but_irrelevant",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITrelease_signer_duplicate_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITlate_certificate_usable_alternative_0",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITlate_certificate_usable_missing_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITlate_certificate_usable_fake_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITlate_certificate_usable_real_but_irrelevant",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ITlate_certificate_usable_duplicate_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-EN_independent_reference_pass",
+      "pass": true
+    },
+    {
+      "name": "DOCS-EN_empty_fails",
+      "pass": true
+    },
+    {
+      "name": "DOCS-EN_extra_key_rejected",
+      "pass": true
+    },
+    {
+      "name": "DOCS-EN_cap_never_promoted",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENdurable_commit_utc_alternative_0",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENdurable_commit_utc_missing_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENdurable_commit_utc_fake_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENdurable_commit_utc_real_but_irrelevant",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENdurable_commit_utc_duplicate_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENclient_timeout_utc_alternative_0",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENclient_timeout_utc_missing_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENclient_timeout_utc_fake_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENclient_timeout_utc_real_but_irrelevant",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENclient_timeout_utc_duplicate_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENcommit_preceded_timeout_alternative_0",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENcommit_preceded_timeout_missing_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENcommit_preceded_timeout_fake_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENcommit_preceded_timeout_real_but_irrelevant",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENcommit_preceded_timeout_duplicate_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENbusiness_effect_count_alternative_0",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENbusiness_effect_count_missing_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENbusiness_effect_count_fake_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENbusiness_effect_count_real_but_irrelevant",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENbusiness_effect_count_duplicate_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENsafe_recovery_alternative_0",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENsafe_recovery_alternative_1",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENsafe_recovery_missing_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENsafe_recovery_fake_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENsafe_recovery_real_but_irrelevant",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENsafe_recovery_duplicate_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENphysical_drop_cause_alternative_0",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENphysical_drop_cause_missing_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENphysical_drop_cause_fake_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENphysical_drop_cause_real_but_irrelevant",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENphysical_drop_cause_duplicate_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENuncalibrated_chat_proves_order_alternative_0",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENuncalibrated_chat_proves_order_missing_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENuncalibrated_chat_proves_order_fake_evidence",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENuncalibrated_chat_proves_order_real_but_irrelevant",
+      "pass": true
+    },
+    {
+      "name": "DOCS-ENuncalibrated_chat_proves_order_duplicate_evidence",
+      "pass": true
+    },
+    {
+      "name": "SCI-IT_independent_reference_pass",
+      "pass": true
+    },
+    {
+      "name": "SCI-IT_empty_fails",
+      "pass": true
+    },
+    {
+      "name": "SCI-IT_extra_key_rejected",
+      "pass": true
+    },
+    {
+      "name": "SCI-IT_cap_never_promoted",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITC_J_per_K_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITC_J_per_K_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITk_W_per_K_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITk_W_per_K_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITequilibrium_C_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITequilibrium_C_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITtime_to_40_s_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITtime_to_40_s_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITinput_energy_J_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITinput_energy_J_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITstored_energy_J_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITstored_energy_J_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITlost_energy_J_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITlost_energy_J_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITinitial_slope_K_per_s_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITinitial_slope_K_per_s_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITlinear_time_to_40_s_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITlinear_time_to_40_s_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITlinear_error_percent_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ITlinear_error_percent_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-EN_independent_reference_pass",
+      "pass": true
+    },
+    {
+      "name": "SCI-EN_empty_fails",
+      "pass": true
+    },
+    {
+      "name": "SCI-EN_extra_key_rejected",
+      "pass": true
+    },
+    {
+      "name": "SCI-EN_cap_never_promoted",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENposterior_pp_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENposterior_pp_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENposterior_pn_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENposterior_pn_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENsaving_pp_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENsaving_pp_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENsaving_pn_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENsaving_pn_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENexpected_pp_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENexpected_pp_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENexpected_faulty_pp_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENexpected_faulty_pp_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENexpected_healthy_pp_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENexpected_healthy_pp_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENmissed_faults_pp_only_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENmissed_faults_pp_only_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENtotal_cost_pp_only_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENtotal_cost_pp_only_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENtotal_cost_pp_or_pn_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENtotal_cost_pp_or_pn_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENcost_difference_wrong_number",
+      "pass": true
+    },
+    {
+      "name": "SCI-ENcost_difference_bool_not_number",
+      "pass": true
+    },
+    {
+      "name": "OPS-IT_independent_reference_pass",
+      "pass": true
+    },
+    {
+      "name": "OPS-IT_empty_fails",
+      "pass": true
+    },
+    {
+      "name": "OPS-IT_extra_key_rejected",
+      "pass": true
+    },
+    {
+      "name": "OPS-IT_cap_never_promoted",
+      "pass": true
+    },
+    {
+      "name": "OPS-EN_independent_reference_pass",
+      "pass": true
+    },
+    {
+      "name": "OPS-EN_empty_fails",
+      "pass": true
+    },
+    {
+      "name": "OPS-EN_extra_key_rejected",
+      "pass": true
+    },
+    {
+      "name": "OPS-EN_cap_never_promoted",
+      "pass": true
+    },
+    {
+      "name": "strict_parser_{\"x\":1,\"x\":2}",
+      "pass": true
+    },
+    {
+      "name": "strict_parser_{\"x\":NaN}",
+      "pass": true
+    },
+    {
+      "name": "strict_parser_{\"x\":Infinity}",
+      "pass": true
+    },
+    {
+      "name": "strict_parser_{\"x\":1e999}",
+      "pass": true
+    },
+    {
+      "name": "strict_parser_```json\n{}\n```",
+      "pass": true
+    },
+    {
+      "name": "strict_parser_{} trailing",
+      "pass": true
+    },
+    {
+      "name": "strict_parser_{\"x\":",
+      "pass": true
+    },
+    {
+      "name": "qwen_prefilled_reasoning",
+      "pass": true
+    },
+    {
+      "name": "mimo_generated_reasoning_zero_id_preserved",
+      "pass": true
+    },
+    {
+      "name": "unclosed_reasoning_has_no_final",
+      "pass": true
+    },
+    {
+      "name": "cap_not_final",
+      "pass": true
+    },
+    {
+      "name": "eos_without_final",
+      "pass": true
+    },
+    {
+      "name": "benchmark_short_preserved",
+      "pass": true
+    },
+    {
+      "name": "benchmark_cap_valid",
+      "pass": true
+    },
+    {
+      "name": "atomic_no_overwrite",
+      "pass": true
+    }
+  ],
+  "independent_oracles": {
+    "data": {
+      "minute_set_oracle": "PASS",
+      "independent_snapshot_simulator": "PASS"
+    },
+    "math": {
+      "energy_feasible_count": 150,
+      "production_feasible_count": 4,
+      "independent_optima_match": true
+    },
+    "science": {
+      "thermal_equations_and_integrated_loss": "PASS",
+      "joint_probability_fraction_arithmetic": "PASS"
+    }
+  },
+  "reference_evaluations": {
+    "CODE-IT": {
+      "status": "PASS",
+      "critical_violations": [],
+      "diagnostics": {
+        "parsing": true,
+        "schema": true,
+        "schema_errors": [],
+        "execution": {
+          "status": "PASS",
+          "tests": [
+            {
+              "index": 0,
+              "pass": true,
+              "input_unchanged": true,
+              "error": null,
+              "actual": {
+                "a": 7,
+                "b": 0
+              }
+            },
+            {
+              "index": 1,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 2,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 3,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 4,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 5,
+              "pass": true,
+              "input_unchanged": true,
+              "error": null,
+              "actual": [
+                {
+                  "a": 5,
+                  "b": 5,
+                  "untouched": 4
+                },
+                [
+                  "x",
+                  "y"
+                ]
+              ]
+            },
+            {
+              "index": 6,
+              "pass": true,
+              "input_unchanged": true,
+              "error": null,
+              "actual": [
+                {
+                  "a": 7,
+                  "b": 3
+                },
+                [
+                  "old",
+                  "x"
+                ]
+              ]
+            },
+            {
+              "index": 7,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 8,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 9,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 10,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 11,
+              "pass": true,
+              "input_unchanged": true,
+              "error": null,
+              "actual": [
+                {
+                  "a": 8,
+                  "b": 0
+                },
+                [
+                  "z"
+                ]
+              ]
+            },
+            {
+              "index": 12,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 13,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 14,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 15,
+              "pass": true,
+              "input_unchanged": true,
+              "error": null,
+              "actual": [
+                {
+                  "a": 3,
+                  "b": 0
+                },
+                [
+                  "x",
+                  "z"
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "source_sha256": "bb2b37b537486b5460e357b939f295f3354ef629169cef35d0c560cb4d918821"
+    },
+    "CODE-EN": {
+      "status": "PASS",
+      "critical_violations": [],
+      "diagnostics": {
+        "parsing": true,
+        "schema": true,
+        "schema_errors": [],
+        "execution": {
+          "status": "PASS",
+          "tests": [
+            {
+              "index": 0,
+              "pass": true,
+              "input_unchanged": true,
+              "error": null,
+              "actual": -1
+            },
+            {
+              "index": 1,
+              "pass": true,
+              "input_unchanged": true,
+              "error": null,
+              "actual": 4503599627370497
+            },
+            {
+              "index": 2,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 3,
+              "pass": true,
+              "input_unchanged": true,
+              "error": null,
+              "actual": [
+                -1,
+                0,
+                1
+              ]
+            },
+            {
+              "index": 4,
+              "pass": true,
+              "input_unchanged": true,
+              "error": null,
+              "actual": []
+            },
+            {
+              "index": 5,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 6,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 7,
+              "pass": true,
+              "input_unchanged": true,
+              "error": null,
+              "actual": {
+                "buckets": [
+                  {
+                    "index": -1,
+                    "bytes": 5,
+                    "events": 2
+                  },
+                  {
+                    "index": 0,
+                    "bytes": 5,
+                    "events": 1
+                  },
+                  {
+                    "index": 1,
+                    "bytes": 7,
+                    "events": 1
+                  }
+                ],
+                "total_bytes": 17,
+                "total_events": 4
+              }
+            },
+            {
+              "index": 8,
+              "pass": true,
+              "input_unchanged": true,
+              "error": null,
+              "actual": {
+                "buckets": [
+                  {
+                    "index": -1,
+                    "bytes": 0,
+                    "events": 0
+                  },
+                  {
+                    "index": 0,
+                    "bytes": 0,
+                    "events": 0
+                  },
+                  {
+                    "index": 1,
+                    "bytes": 0,
+                    "events": 0
+                  }
+                ],
+                "total_bytes": 0,
+                "total_events": 0
+              }
+            },
+            {
+              "index": 9,
+              "pass": true,
+              "input_unchanged": true,
+              "error": null,
+              "actual": {
+                "buckets": [
+                  {
+                    "index": 0,
+                    "bytes": 4,
+                    "events": 2
+                  }
+                ],
+                "total_bytes": 4,
+                "total_events": 2
+              }
+            },
+            {
+              "index": 10,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 11,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 12,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 13,
+              "pass": true,
+              "input_unchanged": true,
+              "error": "ValueError",
+              "actual": null
+            },
+            {
+              "index": 14,
+              "pass": true,
+              "input_unchanged": true,
+              "error": null,
+              "actual": {
+                "buckets": [],
+                "total_bytes": 0,
+                "total_events": 0
+              }
+            },
+            {
+              "index": 15,
+              "pass": true,
+              "input_unchanged": true,
+              "error": null,
+              "actual": {
+                "buckets": [
+                  {
+                    "index": 0,
+                    "bytes": 0,
+                    "events": 0
+                  },
+                  {
+                    "index": 1,
+                    "bytes": 3,
+                    "events": 1
+                  },
+                  {
+                    "index": 2,
+                    "bytes": 0,
+                    "events": 0
+                  }
+                ],
+                "total_bytes": 3,
+                "total_events": 1
+              }
+            }
+          ]
+        }
+      },
+      "source_sha256": "a82895c916055343bbd73634176a816ebe331c8b32d046855de192cb442856e2"
+    },
+    "DATA-IT": {
+      "status": "PASS",
+      "critical_violations": [],
+      "parsed": {
+        "effective_incident_ids": [
+          "i1",
+          "i2",
+          "i3",
+          "i4"
+        ],
+        "cancelled_ids": [
+          "i5"
+        ],
+        "ignored_after_cutoff": [
+          "r9"
+        ],
+        "outage_union": [
+          [
+            5,
+            18
+          ],
+          [
+            26,
+            35
+          ],
+          [
+            50,
+            60
+          ]
+        ],
+        "excluded_maintenance": [
+          [
+            10,
+            14
+          ],
+          [
+            30,
+            32
+          ]
+        ],
+        "chargeable_outages": [
+          [
+            5,
+            10
+          ],
+          [
+            14,
+            18
+          ],
+          [
+            26,
+            30
+          ],
+          [
+            32,
+            35
+          ],
+          [
+            50,
+            60
+          ]
+        ],
+        "eligible_minutes": 54,
+        "chargeable_down_minutes": 26,
+        "up_minutes": 28,
+        "availability_bp_floor": 5185
+      },
+      "diagnostics": {
+        "parsing": true,
+        "schema": true,
+        "schema_errors": [],
+        "value_errors": []
+      }
+    },
+    "DATA-EN": {
+      "status": "PASS",
+      "critical_violations": [],
+      "parsed": {
+        "status": "BLOCKED",
+        "accepted_parts": [
+          {
+            "part": "A",
+            "attempt": "a0"
+          },
+          {
+            "part": "B",
+            "attempt": "b2"
+          }
+        ],
+        "rejected_attempts": [
+          {
+            "attempt": "b0",
+            "reason": "CHECKSUM"
+          },
+          {
+            "attempt": "c0",
+            "reason": "SNAPSHOT"
+          },
+          {
+            "attempt": "b1",
+            "reason": "ROW_SHAPE"
+          },
+          {
+            "attempt": "a1",
+            "reason": "DUPLICATE_PART"
+          },
+          {
+            "attempt": "c1",
+            "reason": "EPOCH"
+          },
+          {
+            "attempt": "c2",
+            "reason": "AFTER_CUTOFF"
+          }
+        ],
+        "missing_parts": [
+          "C"
+        ],
+        "staged_coverage": [
+          [
+            0,
+            6
+          ]
+        ],
+        "staged_summary": {
+          "rows": 6,
+          "null_values": 1,
+          "signed_value_sum": 4
+        },
+        "committed_records": null
+      },
+      "diagnostics": {
+        "parsing": true,
+        "schema": true,
+        "schema_errors": [],
+        "value_errors": []
+      }
+    },
+    "MATH-IT": {
+      "status": "PASS",
+      "critical_violations": [],
+      "parsed": {
+        "job_slot": 1,
+        "battery_delta": [
+          -1,
+          2,
+          -2,
+          1
+        ],
+        "grid": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "curtail": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "soc": [
+          0,
+          2,
+          0,
+          1
+        ],
+        "cost": 19
+      },
+      "diagnostics": {
+        "parsing": true,
+        "schema": true,
+        "schema_errors": [],
+        "constraint": {
+          "feasible": true,
+          "violations": [],
+          "recalculated": {
+            "job_slot": 1,
+            "battery_delta": [
+              -1,
+              2,
+              -2,
+              1
+            ],
+            "grid": [
+              1,
+              2,
+              1,
+              1
+            ],
+            "curtail": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "soc": [
+              0,
+              2,
+              0,
+              1
+            ],
+            "cost": 19
+          },
+          "declared_total_errors": [],
+          "primary_optimum": true,
+          "tie_break": true
+        }
+      }
+    },
+    "MATH-EN": {
+      "status": "PASS",
+      "critical_violations": [],
+      "parsed": {
+        "batches": [
+          2,
+          2,
+          1
+        ],
+        "resource1": 11,
+        "resource2": 10,
+        "labor": 8,
+        "scenario1": 8,
+        "scenario2": 8,
+        "profit": 43
+      },
+      "diagnostics": {
+        "parsing": true,
+        "schema": true,
+        "schema_errors": [],
+        "constraint": {
+          "feasible": true,
+          "violations": [],
+          "recalculated": {
+            "batches": [
+              2,
+              2,
+              1
+            ],
+            "resource1": 11,
+            "resource2": 10,
+            "labor": 8,
+            "scenario1": 8,
+            "scenario2": 8,
+            "profit": 43
+          },
+          "declared_total_errors": [],
+          "primary_optimum": true,
+          "tie_break": true
+        }
+      }
+    },
+    "DOCS-IT": {
+      "status": "PASS",
+      "critical_violations": [],
+      "parsed": {
+        "claims": {
+          "calibration_revisions": {
+            "value": [
+              "1",
+              "2",
+              "2"
+            ],
+            "citations": [
+              "S1",
+              "W1",
+              "C1",
+              "C2"
+            ]
+          },
+          "net_mass_g": {
+            "value": 27620,
+            "citations": [
+              "S1",
+              "W1",
+              "C1",
+              "C2"
+            ]
+          },
+          "assay_state": {
+            "value": "PENDING",
+            "citations": [
+              "L1"
+            ]
+          },
+          "ready_for_release": {
+            "value": false,
+            "citations": [
+              "S1",
+              "L1"
+            ]
+          },
+          "release_signer": {
+            "value": null,
+            "citations": [
+              "A1"
+            ]
+          },
+          "late_certificate_usable": {
+            "value": false,
+            "citations": [
+              "S1",
+              "C3"
+            ]
+          }
+        }
+      },
+      "diagnostics": {
+        "parsing": true,
+        "schema": true,
+        "schema_errors": [],
+        "claims": {
+          "calibration_revisions": {
+            "value_correct": true,
+            "citations_exist": true,
+            "citations_relevant": true,
+            "citations_sufficient": true,
+            "unique": true,
+            "actual": {
+              "value": [
+                "1",
+                "2",
+                "2"
+              ],
+              "citations": [
+                "S1",
+                "W1",
+                "C1",
+                "C2"
+              ]
+            },
+            "pass": true
+          },
+          "net_mass_g": {
+            "value_correct": true,
+            "citations_exist": true,
+            "citations_relevant": true,
+            "citations_sufficient": true,
+            "unique": true,
+            "actual": {
+              "value": 27620,
+              "citations": [
+                "S1",
+                "W1",
+                "C1",
+                "C2"
+              ]
+            },
+            "pass": true
+          },
+          "assay_state": {
+            "value_correct": true,
+            "citations_exist": true,
+            "citations_relevant": true,
+            "citations_sufficient": true,
+            "unique": true,
+            "actual": {
+              "value": "PENDING",
+              "citations": [
+                "L1"
+              ]
+            },
+            "pass": true
+          },
+          "ready_for_release": {
+            "value_correct": true,
+            "citations_exist": true,
+            "citations_relevant": true,
+            "citations_sufficient": true,
+            "unique": true,
+            "actual": {
+              "value": false,
+              "citations": [
+                "S1",
+                "L1"
+              ]
+            },
+            "pass": true
+          },
+          "release_signer": {
+            "value_correct": true,
+            "citations_exist": true,
+            "citations_relevant": true,
+            "citations_sufficient": true,
+            "unique": true,
+            "actual": {
+              "value": null,
+              "citations": [
+                "A1"
+              ]
+            },
+            "pass": true
+          },
+          "late_certificate_usable": {
+            "value_correct": true,
+            "citations_exist": true,
+            "citations_relevant": true,
+            "citations_sufficient": true,
+            "unique": true,
+            "actual": {
+              "value": false,
+              "citations": [
+                "S1",
+                "C3"
+              ]
+            },
+            "pass": true
+          }
+        }
+      }
+    },
+    "DOCS-EN": {
+      "status": "PASS",
+      "critical_violations": [],
+      "parsed": {
+        "claims": {
+          "durable_commit_utc": {
+            "value": "10:00:02Z",
+            "citations": [
+              "D1",
+              "C1"
+            ]
+          },
+          "client_timeout_utc": {
+            "value": "10:00:05Z",
+            "citations": [
+              "G1",
+              "C1"
+            ]
+          },
+          "commit_preceded_timeout": {
+            "value": true,
+            "citations": [
+              "D1",
+              "G1",
+              "C1"
+            ]
+          },
+          "business_effect_count": {
+            "value": 1,
+            "citations": [
+              "D1"
+            ]
+          },
+          "safe_recovery": {
+            "value": "SAME_KEY_LOOKUP",
+            "citations": [
+              "P1",
+              "G1"
+            ]
+          },
+          "physical_drop_cause": {
+            "value": "UNKNOWN",
+            "citations": [
+              "P1",
+              "I1"
+            ]
+          },
+          "uncalibrated_chat_proves_order": {
+            "value": false,
+            "citations": [
+              "C1"
+            ]
+          }
+        }
+      },
+      "diagnostics": {
+        "parsing": true,
+        "schema": true,
+        "schema_errors": [],
+        "claims": {
+          "durable_commit_utc": {
+            "value_correct": true,
+            "citations_exist": true,
+            "citations_relevant": true,
+            "citations_sufficient": true,
+            "unique": true,
+            "actual": {
+              "value": "10:00:02Z",
+              "citations": [
+                "D1",
+                "C1"
+              ]
+            },
+            "pass": true
+          },
+          "client_timeout_utc": {
+            "value_correct": true,
+            "citations_exist": true,
+            "citations_relevant": true,
+            "citations_sufficient": true,
+            "unique": true,
+            "actual": {
+              "value": "10:00:05Z",
+              "citations": [
+                "G1",
+                "C1"
+              ]
+            },
+            "pass": true
+          },
+          "commit_preceded_timeout": {
+            "value_correct": true,
+            "citations_exist": true,
+            "citations_relevant": true,
+            "citations_sufficient": true,
+            "unique": true,
+            "actual": {
+              "value": true,
+              "citations": [
+                "D1",
+                "G1",
+                "C1"
+              ]
+            },
+            "pass": true
+          },
+          "business_effect_count": {
+            "value_correct": true,
+            "citations_exist": true,
+            "citations_relevant": true,
+            "citations_sufficient": true,
+            "unique": true,
+            "actual": {
+              "value": 1,
+              "citations": [
+                "D1"
+              ]
+            },
+            "pass": true
+          },
+          "safe_recovery": {
+            "value_correct": true,
+            "citations_exist": true,
+            "citations_relevant": true,
+            "citations_sufficient": true,
+            "unique": true,
+            "actual": {
+              "value": "SAME_KEY_LOOKUP",
+              "citations": [
+                "P1",
+                "G1"
+              ]
+            },
+            "pass": true
+          },
+          "physical_drop_cause": {
+            "value_correct": true,
+            "citations_exist": true,
+            "citations_relevant": true,
+            "citations_sufficient": true,
+            "unique": true,
+            "actual": {
+              "value": "UNKNOWN",
+              "citations": [
+                "P1",
+                "I1"
+              ]
+            },
+            "pass": true
+          },
+          "uncalibrated_chat_proves_order": {
+            "value_correct": true,
+            "citations_exist": true,
+            "citations_relevant": true,
+            "citations_sufficient": true,
+            "unique": true,
+            "actual": {
+              "value": false,
+              "citations": [
+                "C1"
+              ]
+            },
+            "pass": true
+          }
+        }
+      }
+    },
+    "SCI-IT": {
+      "status": "PASS",
+      "critical_violations": [],
+      "parsed": {
+        "C_J_per_K": 600.0,
+        "k_W_per_K": 2.4,
+        "equilibrium_C": 45.0,
+        "time_to_40_s": 346.5735902799726,
+        "input_energy_J": 20794.415416798358,
+        "stored_energy_J": 9000.0,
+        "lost_energy_J": 11794.415416798358,
+        "reaches_47": false,
+        "time_to_47_s": null,
+        "initial_slope_K_per_s": 0.08,
+        "linear_time_to_40_s": 187.5,
+        "linear_error_percent": -45.89893596666387,
+        "governing_assumptions": [
+          "constant_environment",
+          "lumped_temperature",
+          "constant_C_and_k",
+          "constant_power"
+        ]
+      },
+      "diagnostics": {
+        "parsing": true,
+        "schema": true,
+        "schema_errors": [],
+        "value_errors": []
+      }
+    },
+    "SCI-EN": {
+      "status": "PASS",
+      "critical_violations": [],
+      "parsed": {
+        "posterior_pp": 0.35526315789473684,
+        "posterior_pn": 0.02556818181818182,
+        "decision_pp": "INSPECT",
+        "decision_pn": "INSPECT",
+        "saving_pp": 335.2631578947368,
+        "saving_pn": 5.56818181818182,
+        "expected_pp": 456.0,
+        "expected_faulty_pp": 162.0,
+        "expected_healthy_pp": 294.0,
+        "missed_faults_pp_only": 38.0,
+        "total_cost_pp_only": 47120.0,
+        "total_cost_pp_or_pn": 43200.0,
+        "cost_difference": -3920.0,
+        "sample_based_95pct_CI_available": false,
+        "sampling_uncertainty_interval": null
+      },
+      "diagnostics": {
+        "parsing": true,
+        "schema": true,
+        "schema_errors": [],
+        "value_errors": []
+      }
+    },
+    "OPS-IT": {
+      "status": "PASS",
+      "critical_violations": [],
+      "parsed": {
+        "operation_outcome": "UNKNOWN",
+        "current_snapshot_verified": false,
+        "prerequisites": {
+          "backlog": "NOT_SATISFIED",
+          "verification": "NOT_SATISFIED",
+          "authorization": "NOT_SATISFIED",
+          "prior_operation": "UNKNOWN"
+        },
+        "actions": [
+          {
+            "tool": "read_operation_receipt",
+            "args": {
+              "idempotency_key": "m27-e72"
+            }
+          },
+          {
+            "tool": "read_active_schema",
+            "args": {
+              "migration": "m27"
+            }
+          }
+        ],
+        "preserve": {
+          "dual_write": true,
+          "current_read_schema": 4
+        },
+        "disposition": "RECONCILE_THEN_REASSESS"
+      },
+      "diagnostics": {
+        "parsing": true,
+        "schema": true,
+        "schema_errors": [],
+        "value_errors": []
+      }
+    },
+    "OPS-EN": {
+      "status": "PASS",
+      "critical_violations": [],
+      "parsed": {
+        "decisions": {
+          "A": {
+            "state": "ALREADY_PROMOTED",
+            "reason": "HISTORICAL_RECEIPT"
+          },
+          "B": {
+            "state": "HOLD",
+            "reason": "TEST_DIGEST_MISMATCH"
+          },
+          "C": {
+            "state": "PLANNED",
+            "reason": "ALL_CURRENT_GUARDS"
+          }
+        },
+        "actions": [
+          {
+            "tool": "promote",
+            "args": {
+              "candidate": "C",
+              "digest": "dc",
+              "environment": "staging",
+              "idempotency_key": "C:dc"
+            }
+          },
+          {
+            "tool": "read_receipt",
+            "args": {
+              "idempotency_key": "C:dc"
+            }
+          }
+        ],
+        "proven_promoted": [
+          "A"
+        ],
+        "planned_not_proven": [
+          "C"
+        ]
+      },
+      "diagnostics": {
+        "parsing": true,
+        "schema": true,
+        "schema_errors": [],
+        "value_errors": []
+      }
+    }
+  },
+  "sandbox_probe": {
+    "status": "PASS",
+    "probe": {
+      "uid": 65534,
+      "host_home_present": false,
+      "devices": [
+        "ptmx",
+        "core",
+        "stderr",
+        "stdout",
+        "stdin",
+        "fd",
+        "urandom",
+        "random",
+        "tty",
+        "full",
+        "zero",
+        "null",
+        "shm",
+        "mqueue",
+        "pts"
+      ],
+      "network_connect_codes": {
+        "local": 111,
+        "peer": 101
+      },
+      "environment_keys": [
+        "HOME",
+        "HOSTNAME",
+        "LC_CTYPE"
+      ],
+      "netns": "net:[4026533143]",
+      "capability_status": [
+        "CapEff:\t0000000000000000",
+        "NoNewPrivs:\t1"
+      ]
+    }
+  },
+  "new_inference_calls": 0
+}

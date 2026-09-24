@@ -1,0 +1,43 @@
+{
+  "repository": "drluoto/Qwen3.8-Flash-Next-AgenticRequant-Q5K-GGUF",
+  "revision": "d69cf601fafd166c9d39caa0ab41fd1ab51a0763",
+  "observed_at": "2026-09-24T06:46:57.726426+02:00",
+  "http_status": 200,
+  "files": [
+    {
+      "rfilename": "README.md",
+      "blobId": "1c64ca997e7df5bbc8eb8b667e07a7ef2135a986",
+      "size": 8097
+    },
+    {
+      "rfilename": "trunk-q5k-00001-of-00003.gguf",
+      "blobId": "6e34bc7f9b7c7e97f8bd58d9f30b2b1daa314517",
+      "size": 10946624,
+      "lfs": {
+        "sha256": "89cfaf22a1284938a22698e9b610b1a7405d5148bd1ccf7f87afba5e9014652d",
+        "size": 10946624,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "trunk-q5k-00002-of-00003.gguf",
+      "blobId": "fff443f67b1a1ff490b72268ef33c667e42e3c83",
+      "size": 49408344736,
+      "lfs": {
+        "sha256": "558e3549bd7c03b6840c8ddcfb140e8ef321ae55ccdef1d59c8a8e36ab7b6027",
+        "size": 49408344736,
+        "pointerSize": 136
+      }
+    },
+    {
+      "rfilename": "trunk-q5k-00003-of-00003.gguf",
+      "blobId": "260be806eabad5b1bba1e1fb8dec0d2ea385a9cc",
+      "size": 42910384064,
+      "lfs": {
+        "sha256": "204f1e580f2ea9c069575beb7ed9a0d832a26359e74fb7d9d0d5cf107e107cac",
+        "size": 42910384064,
+        "pointerSize": 136
+      }
+    }
+  ]
+}

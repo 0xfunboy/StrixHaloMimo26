@@ -1,0 +1,24 @@
+{
+  "state": "DISPATCHED",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "Running as unit: strix-generalist001-qwen-weights-001.service; invocation ID: 2e8dda36951445f6a7a5c5bc73f22dd5\n",
+  "command": [
+    "systemd-run",
+    "--user",
+    "--unit=strix-generalist001-qwen-weights-001.service",
+    "--property=Restart=no",
+    "--property=RuntimeMaxSec=21600",
+    "--property=TimeoutStopSec=30",
+    "--property=MemoryMax=512M",
+    "--property=CPUQuota=100%",
+    "--property=KillMode=control-group",
+    "--property=StandardOutput=append:/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/preflight/acquire-weights-unit.log",
+    "--property=StandardError=append:/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/preflight/acquire-weights-unit.log",
+    "--",
+    "/usr/bin/python3",
+    "/home/funboy/StrixHaloMimo26/scripts/selection/generalist001_acquire.py",
+    "weights"
+  ],
+  "at": "2026-09-24T07:04:52.796638+02:00"
+}

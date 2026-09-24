@@ -1,0 +1,20 @@
+{
+  "status": "FAIL",
+  "pid": 730142,
+  "started_at": "2026-09-24T06:55:41.911161+02:00",
+  "source_revision": "ba5354d46ca63e8225c28e1331f0f7651723ad05",
+  "command": [
+    "cmake",
+    "--build",
+    "/home/funboy/ai-exp/strix-generalist-selection-001/qwen-build",
+    "--target",
+    "llama-server",
+    "llama-tokenize",
+    "-j",
+    "3"
+  ],
+  "no_inference": true,
+  "global_install": false,
+  "returncode": 1,
+  "finished_at": "2026-09-24T06:57:06.669516+02:00"
+}

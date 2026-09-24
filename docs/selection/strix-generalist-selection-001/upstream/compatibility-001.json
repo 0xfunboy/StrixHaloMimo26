@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "compatibility_intervention": 1,
+  "reason": "One missing-header integration issue: CMake package lookup alone did not propagate include path; isolated explicit include path added, no arithmetic/source changes.",
+  "repository": "https://github.com/KhronosGroup/SPIRV-Headers.git",
+  "revision": "04f10f650d514df88b76d25e83db360142c7b174",
+  "tag": "vulkan-sdk-1.4.341.0",
+  "install_prefix": "/home/funboy/ai-exp/strix-generalist-selection-001/deps",
+  "system_install": false,
+  "started_at": "2026-09-24T06:53:30.445614+02:00",
+  "finished_at": "2026-09-24T07:04:52.787117+02:00",
+  "source_changes": "NONE",
+  "scope": "Missing header-only build dependency installed only under campaign deps prefix",
+  "header_compile_probe": "PASS",
+  "compile_include": "/home/funboy/ai-exp/strix-generalist-selection-001/deps/include",
+  "build_receipt": "preflight/qwen-build-002.json"
+}

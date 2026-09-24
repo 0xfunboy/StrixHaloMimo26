@@ -1,0 +1,47 @@
+{
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "at": "2026-09-24T06:56:28.688456+02:00",
+  "files": [
+    {
+      "repository": "drluoto/Qwen3.8-Flash-Next-AgenticRequant-Q5K-GGUF",
+      "revision": "d69cf601fafd166c9d39caa0ab41fd1ab51a0763",
+      "filename": "trunk-q5k-00001-of-00003.gguf",
+      "size": 10946624,
+      "sha256": "89cfaf22a1284938a22698e9b610b1a7405d5148bd1ccf7f87afba5e9014652d",
+      "destination": "/home/funboy/models/gguf/qwen38-flash-next-agenticrequant/trunk-q5k-00001-of-00003.gguf"
+    },
+    {
+      "repository": "drluoto/Qwen3.8-Flash-Next-AgenticRequant-Q5K-GGUF",
+      "revision": "d69cf601fafd166c9d39caa0ab41fd1ab51a0763",
+      "filename": "trunk-q5k-00002-of-00003.gguf",
+      "size": 49408344736,
+      "sha256": "558e3549bd7c03b6840c8ddcfb140e8ef321ae55ccdef1d59c8a8e36ab7b6027",
+      "destination": "/home/funboy/models/gguf/qwen38-flash-next-agenticrequant/trunk-q5k-00002-of-00003.gguf"
+    },
+    {
+      "repository": "drluoto/Qwen3.8-Flash-Next-AgenticRequant-Q5K-GGUF",
+      "revision": "d69cf601fafd166c9d39caa0ab41fd1ab51a0763",
+      "filename": "trunk-q5k-00003-of-00003.gguf",
+      "size": 42910384064,
+      "sha256": "204f1e580f2ea9c069575beb7ed9a0d832a26359e74fb7d9d0d5cf107e107cac",
+      "destination": "/home/funboy/models/gguf/qwen38-flash-next-agenticrequant/trunk-q5k-00003-of-00003.gguf"
+    },
+    {
+      "repository": "drluoto/Qwen3.8-Flash-Next-MTP-GGUF",
+      "revision": "ac875a98457a8effe8fb83de8f3701421f507a24",
+      "filename": "mtp-Qwen3.8-Flash-Next-Q5_K-frspec-65k.gguf",
+      "size": 2700078432,
+      "sha256": "282764bf3ce11b1ff6c715d65b37d7d690eb782734127429d2af6bd72b4c48b9",
+      "destination": "/home/funboy/models/gguf/qwen38-flash-next-agenticrequant/mtp-Qwen3.8-Flash-Next-Q5_K-frspec-65k.gguf"
+    }
+  ],
+  "selected_weight_bytes": 95029753856,
+  "ceiling_weight_bytes": 118111600640,
+  "filesystem_available_bytes": 188801855488,
+  "workspace_and_log_allowance_bytes": 12884901888,
+  "minimum_free_after_bytes": 64424509440,
+  "projected_free_after_bytes": 80887199744,
+  "space_gate_pass": true,
+  "assets_absent": true,
+  "download_dispatched": false
+}

@@ -1,0 +1,1366 @@
+{
+  "status": "PASS",
+  "at": "2026-09-24T07:32:03+0200",
+  "profiles": {
+    "Q": [
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-arithmetic",
+        "request_key": "SANITY-arithmetic",
+        "input_tokens": 71,
+        "input_bytes": 363,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-extract",
+        "request_key": "SANITY-extract",
+        "input_tokens": 77,
+        "input_bytes": 382,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-json",
+        "request_key": "SANITY-json",
+        "input_tokens": 79,
+        "input_bytes": 419,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-italian",
+        "request_key": "SANITY-italian",
+        "input_tokens": 78,
+        "input_bytes": 413,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-english",
+        "request_key": "SANITY-english",
+        "input_tokens": 75,
+        "input_bytes": 394,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-code_clamp",
+        "request_key": "SANITY-code_clamp",
+        "input_tokens": 99,
+        "input_bytes": 490,
+        "cap": 1536,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "CODE-IT",
+        "request_key": "CODE-IT",
+        "input_tokens": 712,
+        "input_bytes": 3064,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "CODE-EN",
+        "request_key": "CODE-EN",
+        "input_tokens": 701,
+        "input_bytes": 3205,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "DATA-IT",
+        "request_key": "DATA-IT",
+        "input_tokens": 1062,
+        "input_bytes": 3530,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "DATA-EN",
+        "request_key": "DATA-EN",
+        "input_tokens": 1553,
+        "input_bytes": 5088,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "MATH-IT",
+        "request_key": "MATH-IT",
+        "input_tokens": 546,
+        "input_bytes": 2164,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "MATH-EN",
+        "request_key": "MATH-EN",
+        "input_tokens": 471,
+        "input_bytes": 2117,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "DOCS-IT",
+        "request_key": "DOCS-IT",
+        "input_tokens": 1365,
+        "input_bytes": 4792,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "DOCS-EN",
+        "request_key": "DOCS-EN",
+        "input_tokens": 1098,
+        "input_bytes": 4615,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "SCI-IT",
+        "request_key": "SCI-IT",
+        "input_tokens": 662,
+        "input_bytes": 2555,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "SCI-EN",
+        "request_key": "SCI-EN",
+        "input_tokens": 656,
+        "input_bytes": 2919,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "OPS-IT",
+        "request_key": "OPS-IT",
+        "input_tokens": 976,
+        "input_bytes": 3726,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "OPS-EN",
+        "request_key": "OPS-EN",
+        "input_tokens": 756,
+        "input_bytes": 3486,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "warmup",
+        "case_id": "ENGINE-2K",
+        "request_key": "ENGINE-2K",
+        "input_tokens": 2111,
+        "input_bytes": 11882,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "warmup",
+        "case_id": "ENGINE-8K",
+        "request_key": "ENGINE-8K",
+        "input_tokens": 8329,
+        "input_bytes": 46809,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-2K",
+        "request_key": "ENGINE-2K-r1",
+        "input_tokens": 2111,
+        "input_bytes": 11882,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-8K",
+        "request_key": "ENGINE-8K-r1",
+        "input_tokens": 8329,
+        "input_bytes": 46809,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-2K",
+        "request_key": "ENGINE-2K-r2",
+        "input_tokens": 2111,
+        "input_bytes": 11882,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-8K",
+        "request_key": "ENGINE-8K-r2",
+        "input_tokens": 8329,
+        "input_bytes": 46809,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-2K",
+        "request_key": "ENGINE-2K-r3",
+        "input_tokens": 2111,
+        "input_bytes": 11882,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-8K",
+        "request_key": "ENGINE-8K-r3",
+        "input_tokens": 8329,
+        "input_bytes": 46809,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-arithmetic",
+        "request_key": "SANITY-arithmetic",
+        "input_tokens": 71,
+        "input_bytes": 363,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-extract",
+        "request_key": "SANITY-extract",
+        "input_tokens": 77,
+        "input_bytes": 382,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-json",
+        "request_key": "SANITY-json",
+        "input_tokens": 79,
+        "input_bytes": 419,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-italian",
+        "request_key": "SANITY-italian",
+        "input_tokens": 78,
+        "input_bytes": 413,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-english",
+        "request_key": "SANITY-english",
+        "input_tokens": 75,
+        "input_bytes": 394,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-code_clamp",
+        "request_key": "SANITY-code_clamp",
+        "input_tokens": 99,
+        "input_bytes": 490,
+        "cap": 1536,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      }
+    ],
+    "M": [
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-arithmetic",
+        "request_key": "SANITY-arithmetic",
+        "input_tokens": 29,
+        "input_bytes": 144,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-extract",
+        "request_key": "SANITY-extract",
+        "input_tokens": 35,
+        "input_bytes": 163,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-json",
+        "request_key": "SANITY-json",
+        "input_tokens": 37,
+        "input_bytes": 200,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-italian",
+        "request_key": "SANITY-italian",
+        "input_tokens": 41,
+        "input_bytes": 194,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-english",
+        "request_key": "SANITY-english",
+        "input_tokens": 33,
+        "input_bytes": 175,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-code_clamp",
+        "request_key": "SANITY-code_clamp",
+        "input_tokens": 57,
+        "input_bytes": 271,
+        "cap": 1536,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "CODE-IT",
+        "request_key": "CODE-IT",
+        "input_tokens": 760,
+        "input_bytes": 2845,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "CODE-EN",
+        "request_key": "CODE-EN",
+        "input_tokens": 654,
+        "input_bytes": 2986,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "DATA-IT",
+        "request_key": "DATA-IT",
+        "input_tokens": 1095,
+        "input_bytes": 3311,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "DATA-EN",
+        "request_key": "DATA-EN",
+        "input_tokens": 1503,
+        "input_bytes": 4869,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "MATH-IT",
+        "request_key": "MATH-IT",
+        "input_tokens": 582,
+        "input_bytes": 1945,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "MATH-EN",
+        "request_key": "MATH-EN",
+        "input_tokens": 424,
+        "input_bytes": 1898,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "DOCS-IT",
+        "request_key": "DOCS-IT",
+        "input_tokens": 1469,
+        "input_bytes": 4573,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "DOCS-EN",
+        "request_key": "DOCS-EN",
+        "input_tokens": 1052,
+        "input_bytes": 4396,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "SCI-IT",
+        "request_key": "SCI-IT",
+        "input_tokens": 698,
+        "input_bytes": 2336,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "SCI-EN",
+        "request_key": "SCI-EN",
+        "input_tokens": 607,
+        "input_bytes": 2700,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "OPS-IT",
+        "request_key": "OPS-IT",
+        "input_tokens": 1021,
+        "input_bytes": 3507,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "OPS-EN",
+        "request_key": "OPS-EN",
+        "input_tokens": 705,
+        "input_bytes": 3267,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "warmup",
+        "case_id": "ENGINE-2K",
+        "request_key": "ENGINE-2K",
+        "input_tokens": 2080,
+        "input_bytes": 11877,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "warmup",
+        "case_id": "ENGINE-8K",
+        "request_key": "ENGINE-8K",
+        "input_tokens": 8213,
+        "input_bytes": 46804,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-2K",
+        "request_key": "ENGINE-2K-r1",
+        "input_tokens": 2080,
+        "input_bytes": 11877,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-8K",
+        "request_key": "ENGINE-8K-r1",
+        "input_tokens": 8213,
+        "input_bytes": 46804,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-2K",
+        "request_key": "ENGINE-2K-r2",
+        "input_tokens": 2080,
+        "input_bytes": 11877,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-8K",
+        "request_key": "ENGINE-8K-r2",
+        "input_tokens": 8213,
+        "input_bytes": 46804,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-2K",
+        "request_key": "ENGINE-2K-r3",
+        "input_tokens": 2080,
+        "input_bytes": 11877,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-8K",
+        "request_key": "ENGINE-8K-r3",
+        "input_tokens": 8213,
+        "input_bytes": 46804,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-arithmetic",
+        "request_key": "SANITY-arithmetic",
+        "input_tokens": 29,
+        "input_bytes": 144,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-extract",
+        "request_key": "SANITY-extract",
+        "input_tokens": 35,
+        "input_bytes": 163,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-json",
+        "request_key": "SANITY-json",
+        "input_tokens": 37,
+        "input_bytes": 200,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-italian",
+        "request_key": "SANITY-italian",
+        "input_tokens": 41,
+        "input_bytes": 194,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-english",
+        "request_key": "SANITY-english",
+        "input_tokens": 33,
+        "input_bytes": 175,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-code_clamp",
+        "request_key": "SANITY-code_clamp",
+        "input_tokens": 57,
+        "input_bytes": 271,
+        "cap": 1536,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      }
+    ],
+    "D": [
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-arithmetic",
+        "request_key": "SANITY-arithmetic",
+        "input_tokens": 46,
+        "input_bytes": 237,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-extract",
+        "request_key": "SANITY-extract",
+        "input_tokens": 52,
+        "input_bytes": 256,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-json",
+        "request_key": "SANITY-json",
+        "input_tokens": 56,
+        "input_bytes": 293,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-italian",
+        "request_key": "SANITY-italian",
+        "input_tokens": 61,
+        "input_bytes": 287,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-english",
+        "request_key": "SANITY-english",
+        "input_tokens": 52,
+        "input_bytes": 268,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-code_clamp",
+        "request_key": "SANITY-code_clamp",
+        "input_tokens": 76,
+        "input_bytes": 364,
+        "cap": 1536,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "panel",
+        "case_id": "CODE-IT",
+        "request_key": "CODE-IT",
+        "input_tokens": 784,
+        "input_bytes": 2938,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "panel",
+        "case_id": "CODE-EN",
+        "request_key": "CODE-EN",
+        "input_tokens": 680,
+        "input_bytes": 3079,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "panel",
+        "case_id": "DATA-IT",
+        "request_key": "DATA-IT",
+        "input_tokens": 1115,
+        "input_bytes": 3404,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "panel",
+        "case_id": "DATA-EN",
+        "request_key": "DATA-EN",
+        "input_tokens": 1606,
+        "input_bytes": 4962,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "panel",
+        "case_id": "MATH-IT",
+        "request_key": "MATH-IT",
+        "input_tokens": 590,
+        "input_bytes": 2038,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "panel",
+        "case_id": "MATH-EN",
+        "request_key": "MATH-EN",
+        "input_tokens": 443,
+        "input_bytes": 1991,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "panel",
+        "case_id": "DOCS-IT",
+        "request_key": "DOCS-IT",
+        "input_tokens": 1381,
+        "input_bytes": 4666,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "panel",
+        "case_id": "DOCS-EN",
+        "request_key": "DOCS-EN",
+        "input_tokens": 1057,
+        "input_bytes": 4489,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "panel",
+        "case_id": "SCI-IT",
+        "request_key": "SCI-IT",
+        "input_tokens": 672,
+        "input_bytes": 2429,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "panel",
+        "case_id": "SCI-EN",
+        "request_key": "SCI-EN",
+        "input_tokens": 647,
+        "input_bytes": 2793,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "panel",
+        "case_id": "OPS-IT",
+        "request_key": "OPS-IT",
+        "input_tokens": 1044,
+        "input_bytes": 3600,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "panel",
+        "case_id": "OPS-EN",
+        "request_key": "OPS-EN",
+        "input_tokens": 753,
+        "input_bytes": 3360,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "warmup",
+        "case_id": "ENGINE-2K",
+        "request_key": "ENGINE-2K",
+        "input_tokens": 2045,
+        "input_bytes": 11864,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "warmup",
+        "case_id": "ENGINE-8K",
+        "request_key": "ENGINE-8K",
+        "input_tokens": 8154,
+        "input_bytes": 46791,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-2K",
+        "request_key": "ENGINE-2K-r1",
+        "input_tokens": 2045,
+        "input_bytes": 11864,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-8K",
+        "request_key": "ENGINE-8K-r1",
+        "input_tokens": 8154,
+        "input_bytes": 46791,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-2K",
+        "request_key": "ENGINE-2K-r2",
+        "input_tokens": 2045,
+        "input_bytes": 11864,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-8K",
+        "request_key": "ENGINE-8K-r2",
+        "input_tokens": 8154,
+        "input_bytes": 46791,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-2K",
+        "request_key": "ENGINE-2K-r3",
+        "input_tokens": 2045,
+        "input_bytes": 11864,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-8K",
+        "request_key": "ENGINE-8K-r3",
+        "input_tokens": 8154,
+        "input_bytes": 46791,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-arithmetic",
+        "request_key": "SANITY-arithmetic",
+        "input_tokens": 46,
+        "input_bytes": 237,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-extract",
+        "request_key": "SANITY-extract",
+        "input_tokens": 52,
+        "input_bytes": 256,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-json",
+        "request_key": "SANITY-json",
+        "input_tokens": 56,
+        "input_bytes": 293,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-italian",
+        "request_key": "SANITY-italian",
+        "input_tokens": 61,
+        "input_bytes": 287,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-english",
+        "request_key": "SANITY-english",
+        "input_tokens": 52,
+        "input_bytes": 268,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-code_clamp",
+        "request_key": "SANITY-code_clamp",
+        "input_tokens": 76,
+        "input_bytes": 364,
+        "cap": 1536,
+        "thinking": true,
+        "roundtrip": "NATIVE_METADATA_ONLY"
+      }
+    ],
+    "O": [
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-arithmetic",
+        "request_key": "SANITY-arithmetic",
+        "input_tokens": 29,
+        "input_bytes": 144,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-extract",
+        "request_key": "SANITY-extract",
+        "input_tokens": 35,
+        "input_bytes": 163,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-json",
+        "request_key": "SANITY-json",
+        "input_tokens": 37,
+        "input_bytes": 200,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-italian",
+        "request_key": "SANITY-italian",
+        "input_tokens": 41,
+        "input_bytes": 194,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-english",
+        "request_key": "SANITY-english",
+        "input_tokens": 33,
+        "input_bytes": 175,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "preflight",
+        "case_id": "SANITY-code_clamp",
+        "request_key": "SANITY-code_clamp",
+        "input_tokens": 57,
+        "input_bytes": 271,
+        "cap": 1536,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "CODE-IT",
+        "request_key": "CODE-IT",
+        "input_tokens": 760,
+        "input_bytes": 2845,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "CODE-EN",
+        "request_key": "CODE-EN",
+        "input_tokens": 654,
+        "input_bytes": 2986,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "DATA-IT",
+        "request_key": "DATA-IT",
+        "input_tokens": 1095,
+        "input_bytes": 3311,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "DATA-EN",
+        "request_key": "DATA-EN",
+        "input_tokens": 1503,
+        "input_bytes": 4869,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "MATH-IT",
+        "request_key": "MATH-IT",
+        "input_tokens": 582,
+        "input_bytes": 1945,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "MATH-EN",
+        "request_key": "MATH-EN",
+        "input_tokens": 424,
+        "input_bytes": 1898,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "DOCS-IT",
+        "request_key": "DOCS-IT",
+        "input_tokens": 1469,
+        "input_bytes": 4573,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "DOCS-EN",
+        "request_key": "DOCS-EN",
+        "input_tokens": 1052,
+        "input_bytes": 4396,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "SCI-IT",
+        "request_key": "SCI-IT",
+        "input_tokens": 698,
+        "input_bytes": 2336,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "SCI-EN",
+        "request_key": "SCI-EN",
+        "input_tokens": 607,
+        "input_bytes": 2700,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "OPS-IT",
+        "request_key": "OPS-IT",
+        "input_tokens": 1021,
+        "input_bytes": 3507,
+        "cap": 8192,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "panel",
+        "case_id": "OPS-EN",
+        "request_key": "OPS-EN",
+        "input_tokens": 705,
+        "input_bytes": 3267,
+        "cap": 4096,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "warmup",
+        "case_id": "ENGINE-2K",
+        "request_key": "ENGINE-2K",
+        "input_tokens": 2080,
+        "input_bytes": 11877,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "warmup",
+        "case_id": "ENGINE-8K",
+        "request_key": "ENGINE-8K",
+        "input_tokens": 8213,
+        "input_bytes": 46804,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-2K",
+        "request_key": "ENGINE-2K-r1",
+        "input_tokens": 2080,
+        "input_bytes": 11877,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-8K",
+        "request_key": "ENGINE-8K-r1",
+        "input_tokens": 8213,
+        "input_bytes": 46804,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-2K",
+        "request_key": "ENGINE-2K-r2",
+        "input_tokens": 2080,
+        "input_bytes": 11877,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-8K",
+        "request_key": "ENGINE-8K-r2",
+        "input_tokens": 8213,
+        "input_bytes": 46804,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-2K",
+        "request_key": "ENGINE-2K-r3",
+        "input_tokens": 2080,
+        "input_bytes": 11877,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "benchmark",
+        "case_id": "ENGINE-8K",
+        "request_key": "ENGINE-8K-r3",
+        "input_tokens": 8213,
+        "input_bytes": 46804,
+        "cap": 128,
+        "thinking": false,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-arithmetic",
+        "request_key": "SANITY-arithmetic",
+        "input_tokens": 29,
+        "input_bytes": 144,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-extract",
+        "request_key": "SANITY-extract",
+        "input_tokens": 35,
+        "input_bytes": 163,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-json",
+        "request_key": "SANITY-json",
+        "input_tokens": 37,
+        "input_bytes": 200,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-italian",
+        "request_key": "SANITY-italian",
+        "input_tokens": 41,
+        "input_bytes": 194,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-english",
+        "request_key": "SANITY-english",
+        "input_tokens": 33,
+        "input_bytes": 175,
+        "cap": 1024,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      },
+      {
+        "phase": "postflight",
+        "case_id": "SANITY-code_clamp",
+        "request_key": "SANITY-code_clamp",
+        "input_tokens": 57,
+        "input_bytes": 271,
+        "cap": 1536,
+        "thinking": true,
+        "roundtrip": "TEMPLATE_ID_EQUALS_RENDER_ENCODE"
+      }
+    ]
+  },
+  "delimiters": {
+    "Q": {
+      "open": [
+        248068
+      ],
+      "close": [
+        248069
+      ]
+    },
+    "M": {
+      "open": [
+        151667
+      ],
+      "close": [
+        151668
+      ]
+    }
+  },
+  "reference_tokens": {
+    "CODE-IT": {
+      "Q": 470,
+      "M": 470
+    },
+    "CODE-EN": {
+      "Q": 470,
+      "M": 470
+    },
+    "DATA-IT": {
+      "Q": 171,
+      "M": 171
+    },
+    "DATA-EN": {
+      "Q": 181,
+      "M": 181
+    },
+    "MATH-IT": {
+      "Q": 76,
+      "M": 76
+    },
+    "MATH-EN": {
+      "Q": 56,
+      "M": 57
+    },
+    "DOCS-IT": {
+      "Q": 165,
+      "M": 165
+    },
+    "DOCS-EN": {
+      "Q": 190,
+      "M": 190
+    },
+    "SCI-IT": {
+      "Q": 224,
+      "M": 224
+    },
+    "SCI-EN": {
+      "Q": 232,
+      "M": 232
+    },
+    "OPS-IT": {
+      "Q": 143,
+      "M": 144
+    },
+    "OPS-EN": {
+      "Q": 155,
+      "M": 156
+    }
+  },
+  "mimo_pair_identical": true,
+  "context": 16384,
+  "panel_cap_total": 73728,
+  "native_D_tokenizer": "existing E1 --cpu --dump-tokens metadata path, no inference"
+}

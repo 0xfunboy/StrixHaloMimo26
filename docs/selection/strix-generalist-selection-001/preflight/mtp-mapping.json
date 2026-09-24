@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "at": "2026-09-24T08:24:05+0200",
+  "maps": [
+    {
+      "name": "d2t",
+      "count": 65536,
+      "min": 0,
+      "max": 248069,
+      "unique": true,
+      "nonnegative": true,
+      "values_sha256": "3f7c935bd291afc8942b8ee453ee0756fffe0e9232d377e72fda2c9d1e135d13"
+    }
+  ],
+  "scope": "Read only the small I64 remapping tensor; no model inference, output equivalence or sampled-distribution claim."
+}

@@ -1,0 +1,23 @@
+{
+  "repository": "drluoto/Qwen3.8-Flash-Next-MTP-GGUF",
+  "revision": "ac875a98457a8effe8fb83de8f3701421f507a24",
+  "observed_at": "2026-09-24T06:46:58.024160+02:00",
+  "http_status": 200,
+  "files": [
+    {
+      "rfilename": "README.md",
+      "blobId": "a4ebfcc05f81908c0973271ac83a3c2b6296fa31",
+      "size": 7849
+    },
+    {
+      "rfilename": "mtp-Qwen3.8-Flash-Next-Q5_K-frspec-65k.gguf",
+      "blobId": "2d258fad8e116e01565720120ae7ccecd15a0444",
+      "size": 2700078432,
+      "lfs": {
+        "sha256": "282764bf3ce11b1ff6c715d65b37d7d690eb782734127429d2af6bd72b4c48b9",
+        "size": 2700078432,
+        "pointerSize": 135
+      }
+    }
+  ]
+}

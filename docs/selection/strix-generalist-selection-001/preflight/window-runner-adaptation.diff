@@ -1,0 +1,104 @@
+--- qualified-002/window_runner.py
++++ generalist001/window_runner.py
+@@ -11,6 +11,8 @@
+ import sys
+ import time
+ from pathlib import Path
++
++from window_guards import preflight
+ 
+ STATE_ROOT=Path("/home/funboy/.local/state/strixhalomimo26/windows")
+ REL=Path("/home/funboy/.local/share/haloclu-ds41/releases/k2-prefill-5bdfed6")
+@@ -58,13 +60,13 @@
+     cp=subprocess.run(
+         [str(K2),"status"],
+         env={**os.environ,"DS41_ROOT":str(REL)},
+-        capture_output=True,text=True,
++        capture_output=True,text=True,timeout=30,
+     )
+     try: return json.loads(cp.stdout)
+     except Exception: return {"state":"UNKNOWN","rc":cp.returncode,"stdout":cp.stdout,"stderr":cp.stderr}
+ 
+ 
+-def run_cmd(cmd:list[str],timeout:float|None=None,**kw):
++def run_cmd(cmd:list[str],timeout:float|None=30,**kw):
+     return subprocess.run(cmd,timeout=timeout,**kw)
+ 
+ 
+@@ -93,24 +95,25 @@
+ 
+ def main()->int:
+     ap=argparse.ArgumentParser(); ap.add_argument("run_id"); a=ap.parse_args()
++    if not a.run_id.startswith("generalist-selection-001-"):
++        raise ValueError("not a selection campaign run")
+     run=STATE_ROOT/a.run_id
+     cfg=read_json(run/"config.json")
+     if cfg is None: raise SystemExit(f"missing config: {run/'config.json'}")
+     run.mkdir(parents=True,exist_ok=True)
+ 
+     # Per-run idempotency lock. Readback/reconnect never launches another copy.
+-    rlock=(run/"run.lock").open("w")
++    rlock=(run/"run.lock").open("a")
+     try: fcntl.flock(rlock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+     except BlockingIOError:
+-        update_result(run,run_completion="DUPLICATE_REJECTED",initial_cause="RUN_LOCK_BUSY")
+         return 90
+ 
+     launches=run/"launch-count.txt"
+     n=int(launches.read_text().strip() or "0") if launches.exists() else 0
+-    launches.write_text(str(n+1)+"\n")
+     if n:
+-        update_result(run,run_completion="DUPLICATE_REJECTED",initial_cause="RUN_ID_ALREADY_USED")
+         return 91
++    with launches.open("x") as f:
++        f.write("1\n"); f.flush(); os.fsync(f.fileno())
+ 
+     event(run,"RUN_START",pid=os.getpid())
+     update_result(run,run_completion="RUNNING",initial_cause=None,
+@@ -131,7 +134,12 @@
+         raise SystemExit(128+sig)
+     signal.signal(signal.SIGTERM,on_signal); signal.signal(signal.SIGINT,on_signal)
+ 
+-    pre=k2_status()
++    try:
++        admission=preflight(Path(cfg["campaign_root"]),run,cfg)
++    except Exception as exc:
++        update_result(run,run_completion="BLOCKED",initial_cause="ADMISSION:"+str(exc))
++        return 19
++    pre=admission["controller"]
+     atomic_json(run/"k2-before.json",pre)
+     event(run,"K2_PRESTATE",state=pre.get("state"))
+     allowed=cfg.get("allowed_k2_states",["READY","OFF"])
+@@ -154,7 +162,7 @@
+ 
+     clock=None
+     if cfg.get("use_compute_lock", True):
+-        clock=CLUSTER_LOCK.open("w")
++        clock=CLUSTER_LOCK.open("a")
+         try: fcntl.flock(clock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+         except BlockingIOError:
+             update_result(run,run_completion="FAILED",initial_cause="COMPUTE_LOCK_BUSY")
+@@ -258,7 +266,10 @@
+                       tests_completed=len(q.get("tests",[])))
+         terminal0=s0.get("ActiveState") in {"inactive","failed"}
+         terminal1=(r1 is not None and s1.get("ActiveState") in {"inactive","failed"})
+-        if terminal0 or terminal1:
++        failed0=terminal0 and (s0.get("Result") not in {"success",""} or s0.get("ExecMainStatus") not in {"0",None,""})
++        failed1=terminal1 and (s1.get("Result") not in {"success",""} or s1.get("ExecMainStatus") not in {"0",None,""})
++        all_terminal=terminal0 and (r1 is None or terminal1)
++        if all_terminal or failed0 or failed1:
+             time.sleep(1)
+             s0=unit_state_local(r0["unit"])
+             if r1 is not None:
+@@ -274,9 +285,9 @@
+             final_load=read_json(run/"load.json",{"status":"NOT_EVALUATED"})
+             update_result(run,workers={"rank0":s0,"rank1":s1},
+                           quality=final_quality,load=final_load)
+-            if r0rc==0 and r1rc==0:
++            if r0rc==0 and r1rc==0 and all_terminal:
+                 quality=final_quality
+-                if quality.get("status")=="NOT_EVALUATED":
++                if quality.get("status")!="PASS" or final_load.get("status")!="PASS" or not (run/"arm-result.json").exists():
+                     update_result(run,run_completion="FAILED",initial_cause="QUALITY_MISSING",
+                                   quality=quality)
+                     return 31

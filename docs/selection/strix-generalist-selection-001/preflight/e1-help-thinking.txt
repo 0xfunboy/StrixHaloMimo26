@@ -1,0 +1,16 @@
+ds4-server
+Serve one loaded DwarfStar model through OpenAI, Responses, Anthropic, and completion-compatible HTTP APIs.
+
+Usage: ds4-server [options]
+
+Server Thinking Defaults
+DeepSeek-compatible chat requests default to high-effort thinking.
+reasoning_effort=max or output_config.effort=max requests Think Max.
+Think Max requires --ctx >= 393216; smaller contexts use high.
+thinking={type:disabled}, think=false, or model=deepseek-chat selects non-thinking mode.
+In thinking mode, client sampling knobs are ignored like the official API.
+
+Examples
+  local API                      ./ds4-server --ctx 100000 --kv-disk-dir ~/.ds4/server-kv --kv-disk-space-mb 8192
+  curl                           curl http://127.0.0.1:8000/v1/models
+

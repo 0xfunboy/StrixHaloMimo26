@@ -1,0 +1,59 @@
+{
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "mode": "weights",
+  "status": "PASS",
+  "pid": 737371,
+  "started_at": "2026-09-24T07:04:52.844568+02:00",
+  "files": [
+    {
+      "filename": "trunk-q5k-00001-of-00003.gguf",
+      "destination": "/home/funboy/models/gguf/qwen38-flash-next-agenticrequant/trunk-q5k-00001-of-00003.gguf",
+      "size": 10946624,
+      "revision": "d69cf601fafd166c9d39caa0ab41fd1ab51a0763",
+      "status": "VERIFIED",
+      "attempt": 1,
+      "bytes_present": 10946624,
+      "updated_at": "2026-09-24T07:04:52.845824+02:00",
+      "sha256": "89cfaf22a1284938a22698e9b610b1a7405d5148bd1ccf7f87afba5e9014652d",
+      "completed_at": "2026-09-24T07:04:55.269155+02:00"
+    },
+    {
+      "filename": "trunk-q5k-00002-of-00003.gguf",
+      "destination": "/home/funboy/models/gguf/qwen38-flash-next-agenticrequant/trunk-q5k-00002-of-00003.gguf",
+      "size": 49408344736,
+      "revision": "d69cf601fafd166c9d39caa0ab41fd1ab51a0763",
+      "status": "VERIFIED",
+      "attempt": 1,
+      "bytes_present": 49408344736,
+      "updated_at": "2026-09-24T07:35:28.273427+02:00",
+      "sha256": "558e3549bd7c03b6840c8ddcfb140e8ef321ae55ccdef1d59c8a8e36ab7b6027",
+      "completed_at": "2026-09-24T07:36:09.616830+02:00"
+    },
+    {
+      "filename": "trunk-q5k-00003-of-00003.gguf",
+      "destination": "/home/funboy/models/gguf/qwen38-flash-next-agenticrequant/trunk-q5k-00003-of-00003.gguf",
+      "size": 42910384064,
+      "revision": "d69cf601fafd166c9d39caa0ab41fd1ab51a0763",
+      "status": "VERIFIED",
+      "attempt": 1,
+      "bytes_present": 42910384064,
+      "updated_at": "2026-09-24T08:02:40.583725+02:00",
+      "sha256": "204f1e580f2ea9c069575beb7ed9a0d832a26359e74fb7d9d0d5cf107e107cac",
+      "completed_at": "2026-09-24T08:03:31.745800+02:00"
+    },
+    {
+      "filename": "mtp-Qwen3.8-Flash-Next-Q5_K-frspec-65k.gguf",
+      "destination": "/home/funboy/models/gguf/qwen38-flash-next-agenticrequant/mtp-Qwen3.8-Flash-Next-Q5_K-frspec-65k.gguf",
+      "size": 2700078432,
+      "revision": "ac875a98457a8effe8fb83de8f3701421f507a24",
+      "status": "VERIFIED",
+      "attempt": 1,
+      "bytes_present": 2700078432,
+      "updated_at": "2026-09-24T08:06:00.986541+02:00",
+      "sha256": "282764bf3ce11b1ff6c715d65b37d7d690eb782734127429d2af6bd72b4c48b9",
+      "completed_at": "2026-09-24T08:06:03.760165+02:00"
+    }
+  ],
+  "weight_limit_bytes": 118111600640,
+  "finished_at": "2026-09-24T08:06:03.761111+02:00"
+}

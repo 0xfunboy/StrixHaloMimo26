@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/home/funboy/.local/share/haloclu-ds41/releases/ds4-speed-001-engram1/ds4",
+    "--cpu",
+    "-m",
+    "/home/funboy/models/ds41/ds4-v41-q2/DeepSeek-V4.1-Flash-Q2.gguf",
+    "--dump-tokens",
+    "--think-max",
+    "-c",
+    "16384",
+    "-p",
+    "Compute 17*19. Return only the integer."
+  ],
+  "returncode": 0,
+  "at": "2026-09-24T07:00:35.486102+02:00",
+  "stdout": "[0, 128799, 77666, 288, 9504, 482, 28, 223, 1457, 343, 16801, 223, 19, 15, 1457, 14, 270, 4077, 270, 1990, 14, 270, 850, 15146, 270, 22805, 868, 3476, 477, 260, 11502, 22896, 128803, 109268, 223, 1002, 12, 511, 16, 20870, 1353, 270, 9132, 16, 128804, 128821]\n     0  <\uff5cbegin\u2581of\u2581sentence\uff5c>\n128799  <\uff5cSystem\uff5c>\n 77666  Reason\n   288  ing\n  9504  \u0120Eff\n   482  ort\n    28  :\n   223  \u0120\n  1457  100\n   343  \u0120(\n 16801  range\n   223  \u0120\n    19  1\n    15  -\n  1457  100\n    14  ,\n   270  \u0120the\n  4077  \u0120higher\n   270  \u0120the\n  1990  \u0120value\n    14  ,\n   270  \u0120the\n   850  \u0120more\n 15146  \u0120thorough\n   270  \u0120the\n 22805  \u0120reasoning\n   868  )\u010a\u010a\n  3476  You\n   477  \u0120are\n   260  \u0120a\n 11502  \u0120helpful\n 22896  \u0120assistant\n128803  <\uff5cUser\uff5c>\n109268  Compute\n   223  \u0120\n  1002  17\n    12  *\n   511  19\n    16  .\n 20870  \u0120Return\n  1353  \u0120only\n   270  \u0120the\n  9132  \u0120integer\n    16  .\n128804  <\uff5cAssistant\uff5c>\n128821  <think>\n",
+  "stderr": "",
+  "mode": "CPU_METADATA_TOKENIZATION_NO_INFERENCE"
+}

@@ -1,0 +1,14 @@
+M False '<|im_start|>user\nCompute 17*19. Return only the integer.<|im_end|><|im_start|>assistant\n<think></think>'
+IDS [151644, 872, 198, 46254, 220, 16, 22, 9, 16, 24, 13, 3411, 1172, 279, 7546, 13, 151645, 151644, 77091, 198, 151667, 151668]
+DELIMITER [151667] [151668]
+M True '<|im_start|>user\nCompute 17*19. Return only the integer.<|im_end|><|im_start|>assistant\n'
+IDS [151644, 872, 198, 46254, 220, 16, 22, 9, 16, 24, 13, 3411, 1172, 279, 7546, 13, 151645, 151644, 77091, 198]
+DELIMITER [151667] [151668]
+Q False '<|im_start|>user\nCompute 17*19. Return only the integer.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n'
+IDS [248045, 846, 198, 44712, 220, 16, 22, 9, 16, 24, 13, 3301, 1132, 279, 7308, 13, 248046, 198, 248045, 74455, 198, 248068, 271, 248069, 271]
+DELIMITER [248068] [248069]
+Q True '<|im_start|>system\nReasoning effort is set to xhigh. Please think carefully through the task, validate key assumptions, consider plausible alternatives, and prioritize correctness, consistency, and clarity in the final answer.<|im_end|>\n<|im_start|>user\nCompute 17*19. Return only the integer.<|im_end|>\n<|im_start|>assistant\n<think>\n'
+IDS [248045, 8678, 198, 24342, 286, 4879, 369, 716, 310, 830, 11553, 13, 5044, 1683, 15060, 1472, 279, 3274, 11, 9307, 1328, 30800, 11, 2814, 47675, 25605, 11, 321, 60445, 55404, 11, 27224, 11, 321, 30246, 303, 279, 1534, 4087, 13, 248046, 198, 248045, 846, 198, 44712, 220, 16, 22, 9, 16, 24, 13, 3301, 1132, 279, 7308, 13, 248046, 198, 248045, 74455, 198, 248068, 198]
+DELIMITER [248068] [248069]
+/home/funboy/StrixHaloClusterGLM/.engine/venv/lib/python3.14/site-packages/transformers/modeling_rope_utils.py:1080: FutureWarning: `rope_config_validation` is deprecated and has been removed. Its functionality has been moved to RotaryEmbeddingConfigMixin.validate_rope method. PreTrainedConfig inherits this class, so please call self.validate_rope() instead. Also, make sure to use the new rope_parameters syntax. You can call self.standardize_rope_params() in the meantime.
+  warnings.warn(

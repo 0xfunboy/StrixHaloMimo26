@@ -1,0 +1,119 @@
+{
+  "campaign": "STRIX-GENERALIST-SELECTION-001",
+  "mode": "small",
+  "status": "PASS",
+  "pid": 734859,
+  "started_at": "2026-09-24T06:58:38.446387+02:00",
+  "files": [
+    {
+      "filename": "README.md",
+      "destination": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/upstream/qwen-target/README.md",
+      "size": 8097,
+      "revision": "d69cf601fafd166c9d39caa0ab41fd1ab51a0763",
+      "status": "VERIFIED",
+      "attempt": 1,
+      "bytes_present": 8097,
+      "updated_at": "2026-09-24T06:58:38.447664+02:00",
+      "sha256": "3e988f7704c94a3bcc03a991130b3096d78eeda4f2ec46eb99a0c10d0811fb1e",
+      "completed_at": "2026-09-24T06:58:39.007280+02:00"
+    },
+    {
+      "filename": "README.md",
+      "destination": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/upstream/qwen-mtp/README.md",
+      "size": 7849,
+      "revision": "ac875a98457a8effe8fb83de8f3701421f507a24",
+      "status": "VERIFIED",
+      "attempt": 1,
+      "bytes_present": 7849,
+      "updated_at": "2026-09-24T06:58:39.008468+02:00",
+      "sha256": "f54075de4244ab0cdc45b41a7b5bf53e318ce77ebbec97681b2e694693d579c7",
+      "completed_at": "2026-09-24T06:58:39.483400+02:00"
+    },
+    {
+      "filename": "LICENSE",
+      "destination": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/upstream/qwen-official/LICENSE",
+      "size": 3235,
+      "revision": "de4b8e4d43b917e7706784d8bb445c9af86a3540",
+      "status": "VERIFIED",
+      "attempt": 1,
+      "bytes_present": 3235,
+      "updated_at": "2026-09-24T06:58:39.484721+02:00",
+      "sha256": "a0dc422560841fd68e06d974907f8b4c709bca44a67daad2b528437bdf676c08",
+      "completed_at": "2026-09-24T06:58:39.863307+02:00"
+    },
+    {
+      "filename": "README.md",
+      "destination": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/upstream/qwen-official/README.md",
+      "size": 65155,
+      "revision": "de4b8e4d43b917e7706784d8bb445c9af86a3540",
+      "status": "VERIFIED",
+      "attempt": 1,
+      "bytes_present": 65155,
+      "updated_at": "2026-09-24T06:58:39.864407+02:00",
+      "sha256": "35ca37ccc366f1ba478dab33841a2c0c18ce53fd62f291ca05341f7728b225b2",
+      "completed_at": "2026-09-24T06:58:40.305705+02:00"
+    },
+    {
+      "filename": "chat_template.jinja",
+      "destination": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/upstream/qwen-official/chat_template.jinja",
+      "size": 8952,
+      "revision": "de4b8e4d43b917e7706784d8bb445c9af86a3540",
+      "status": "VERIFIED",
+      "attempt": 1,
+      "bytes_present": 8952,
+      "updated_at": "2026-09-24T06:58:40.306671+02:00",
+      "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+      "completed_at": "2026-09-24T06:58:40.706816+02:00"
+    },
+    {
+      "filename": "config.json",
+      "destination": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/upstream/qwen-official/config.json",
+      "size": 4745,
+      "revision": "de4b8e4d43b917e7706784d8bb445c9af86a3540",
+      "status": "VERIFIED",
+      "attempt": 1,
+      "bytes_present": 4745,
+      "updated_at": "2026-09-24T06:58:40.707781+02:00",
+      "sha256": "889658f2508e8c61d409b02e70e0d78d8d4452ec65aaafbe129805d213d2e74b",
+      "completed_at": "2026-09-24T06:58:41.097436+02:00"
+    },
+    {
+      "filename": "generation_config.json",
+      "destination": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/upstream/qwen-official/generation_config.json",
+      "size": 202,
+      "revision": "de4b8e4d43b917e7706784d8bb445c9af86a3540",
+      "status": "VERIFIED",
+      "attempt": 1,
+      "bytes_present": 202,
+      "updated_at": "2026-09-24T06:58:41.098694+02:00",
+      "sha256": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+      "completed_at": "2026-09-24T06:58:41.488364+02:00"
+    },
+    {
+      "filename": "tokenizer.json",
+      "destination": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/upstream/qwen-official/tokenizer.json",
+      "size": 12809320,
+      "revision": "de4b8e4d43b917e7706784d8bb445c9af86a3540",
+      "status": "VERIFIED",
+      "attempt": 1,
+      "bytes_present": 12809320,
+      "updated_at": "2026-09-24T06:58:41.489547+02:00",
+      "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+      "completed_at": "2026-09-24T06:58:43.258141+02:00"
+    },
+    {
+      "filename": "tokenizer_config.json",
+      "destination": "/home/funboy/StrixHaloMimo26/docs/selection/strix-generalist-selection-001/upstream/qwen-official/tokenizer_config.json",
+      "size": 17928,
+      "revision": "de4b8e4d43b917e7706784d8bb445c9af86a3540",
+      "status": "VERIFIED",
+      "attempt": 1,
+      "bytes_present": 17928,
+      "updated_at": "2026-09-24T06:58:43.258962+02:00",
+      "sha256": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+      "completed_at": "2026-09-24T06:58:43.649056+02:00"
+    }
+  ],
+  "weight_limit_bytes": 118111600640,
+  "finished_at": "2026-09-24T06:58:43.650205+02:00"
+}
