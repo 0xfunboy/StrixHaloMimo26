@@ -1,0 +1,114 @@
+From 97845c4f1ffae096d22ad772df396550f9f78306 Mon Sep 17 00:00:00 2001
+From: 0xfunboy <159235197+0xfunboy@users.noreply.github.com>
+Date: Tue, 22 Sep 2026 09:27:55 +0200
+Subject: [PATCH] mimo2: preserve V2.6 routed experts as MXFP4
+
+---
+ conversion/mimo.py | 70 +++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 69 insertions(+), 1 deletion(-)
+
+diff --git a/conversion/mimo.py b/conversion/mimo.py
+index 15dbeb7e7..5532f12bb 100644
+--- a/conversion/mimo.py
++++ b/conversion/mimo.py
+@@ -5,12 +5,13 @@ import re
+ 
+ from typing import Any, Callable, Iterable, TYPE_CHECKING
+ 
++import numpy as np
+ import torch
+ 
+ if TYPE_CHECKING:
+     from torch import Tensor
+ 
+-from .base import MmprojModel, ModelBase, TextModel, gguf
++from .base import LazyTorchTensor, MmprojModel, ModelBase, TextModel, gguf, logger
+ 
+ 
+ @ModelBase.register("MiMoV2FlashForCausalLM", "MiMoV2ForCausalLM")
+@@ -169,6 +170,68 @@ class MimoV2Model(TextModel):
+ 
+     _experts: list[dict[str, Tensor]] | None = None
+ 
++    def _write_mxfp4_expert_tensor(self, bid: int, proj: str, tensor_key: gguf.MODEL_TENSOR) -> list[str]:
++        n_experts = self.hparams["n_routed_experts"]
++        data: np.ndarray | None = None
++        consumed: list[str] = []
++
++        for xid in range(n_experts):
++            weight_name = f"model.layers.{bid}.mlp.experts.{xid}.{proj}.weight"
++            scale_name = weight_name + "_scale"
++            if weight_name not in self.model_tensors or scale_name not in self.model_tensors:
++                raise KeyError(f"Missing MiMo MXFP4 expert tensors for {weight_name}")
++
++            weight = LazyTorchTensor.to_eager(self.model_tensors[weight_name]())
++            scale = LazyTorchTensor.to_eager(self.model_tensors[scale_name]())
++            if weight.dtype != torch.uint8 or scale.dtype != torch.uint8:
++                raise TypeError(
++                    f"MiMo MXFP4 expects uint8 packed weight/scale for {weight_name}, "
++                    f"got {weight.dtype}/{scale.dtype}"
++                )
++
++            packed = self.repack_mxfp4_blocks(weight, scale)
++            if data is None:
++                data = np.empty((n_experts, *packed.shape), dtype=packed.dtype)
++            data[xid] = packed
++            consumed.extend((weight_name, scale_name))
++
++        assert data is not None
++        new_name = self.format_tensor_name(tensor_key, bid)
++        shape = gguf.quant_shape_from_byte_shape(data.shape, gguf.GGMLQuantizationType.MXFP4)
++        logger.info(
++            f"{new_name}: repacked MiMo routed experts to MXFP4, "
++            f"shape = {{{', '.join(str(n) for n in reversed(shape))}}}"
++        )
++        self.gguf_writer.add_tensor(new_name, data, raw_dtype=gguf.GGMLQuantizationType.MXFP4)
++        return consumed
++
++    def _prepare_v26_mxfp4_experts(self) -> bool:
++        quant_config = self.hparams.get("quantization_config")
++        if not isinstance(quant_config, dict):
++            return False
++        if quant_config.get("quant_method") != "fp8" or str(quant_config.get("store_dtype") or "").lower() != "mxfp4":
++            return False
++
++        n_layer = self.hparams["num_hidden_layers"]
++        moe_freq = self.hparams.get("moe_layer_freq")
++        consumed: list[str] = []
++        proj_map = (
++            ("gate_proj", gguf.MODEL_TENSOR.FFN_GATE_EXP),
++            ("up_proj", gguf.MODEL_TENSOR.FFN_UP_EXP),
++            ("down_proj", gguf.MODEL_TENSOR.FFN_DOWN_EXP),
++        )
++
++        for bid in range(n_layer):
++            if moe_freq is not None and not moe_freq[bid]:
++                continue
++            for proj, tensor_key in proj_map:
++                consumed.extend(self._write_mxfp4_expert_tensor(bid, proj, tensor_key))
++
++        for name in consumed:
++            del self.model_tensors[name]
++        logger.info("MiMo-V2.6: preserved routed experts as lossless GGUF MXFP4")
++        return True
++
+     @classmethod
+     def filter_tensors(cls, item: tuple[str, Callable[[], Tensor]]) -> tuple[str, Callable[[], Tensor]] | None:
+         name, gen = item
+@@ -221,8 +284,13 @@ class MimoV2Model(TextModel):
+         yield from super().modify_tensors(data_torch, name, bid)
+ 
+     def prepare_tensors(self):
++        v26_mxfp4 = self._prepare_v26_mxfp4_experts()
+         super().prepare_tensors()
+ 
++        if v26_mxfp4:
++            self._is_mxfp4 = True
++            self.ftype = gguf.LlamaFileType.MOSTLY_MXFP4_MOE
++
+         if self._experts is not None:
+             # flatten `list[dict[str, Tensor]]` into `list[str]`
+             experts = [k for d in self._experts for k in d.keys()]
+-- 
+2.53.0
+

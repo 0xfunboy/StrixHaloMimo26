@@ -1,0 +1,16 @@
+{
+  "variant": "MQ-IQ2-XXS-XS-Q8-MM-BF16",
+  "source": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
+  "source_revision": "3b38d063180c3e4aed9691fdc735f3d10b266ee4",
+  "expert_gate_up": "IQ2_XXS",
+  "expert_down": "IQ2_XS",
+  "dense_attention_embeddings_output_MTP": "Q8_0",
+  "routers_norms_sinks": "F32",
+  "media": "BF16 with F32 controls",
+  "dflash": "Q8_0 with F32 controls",
+  "layer_promotions": [],
+  "importance_matrix": "calibration/imatrix.gguf",
+  "imatrix_sha256": "265cc19bc1470b95a9157d3b2fab893f325a9e2b6ef414cdbdfac4326c9ef8e3",
+  "unobserved_expert_policy": "Raw zero counts retained; pinned quantizer uses uniform importance weights for those experts only. See final-imatrix-coverage.json.",
+  "serving_status": "ds4 MiMo family integration in progress; native inference and DGX Spark qualification are not yet verified."
+}

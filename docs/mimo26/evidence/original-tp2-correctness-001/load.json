@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "load_s": 172.70001309200597,
+  "finished_at": "2026-09-22T19:03:24+0200",
+  "tp": 2,
+  "pp": 1,
+  "moe_backend": "triton_unfused",
+  "kv_cache_memory_bytes": 1073741824
+}

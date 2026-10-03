@@ -1,0 +1,40 @@
+{
+  "variant": "MQ-IQ2-XXS-XS-Q8-MM-BF16",
+  "weights": [
+    {
+      "file": "MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00001-of-00004.gguf",
+      "bytes": 22470644192,
+      "sha256": "388d09c34fc87f3ef990a19c670efbf3a542b28a0a8c619140a3a299321dae9d"
+    },
+    {
+      "file": "MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00002-of-00004.gguf",
+      "bytes": 22464695232,
+      "sha256": "83bd3c37bff0541c5b9b76462a50ba112c506f80f8ab48a6d28e55830035ee3f"
+    },
+    {
+      "file": "MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00003-of-00004.gguf",
+      "bytes": 22464695232,
+      "sha256": "aafd233222b53d1e17bc4a1419d5dc6c58e8a1db352b0078e72425d9c296baef"
+    },
+    {
+      "file": "MiMo-V2.6-Flash-RL-MQ-IQ2-XXS-XS-Q8-00004-of-00004.gguf",
+      "bytes": 21377729024,
+      "sha256": "940833b0947024b26fe64149c54c78c489065fdcb84ec596ecd262425c0ff7f6"
+    },
+    {
+      "file": "mmproj-MiMo-V2.6-Flash-RL-BF16.gguf",
+      "bytes": 2748509792,
+      "sha256": "7fd51cbab2e7a7c73b1d4dd2d7457dcf8175cb84db75ca8e96ff1750760b3709"
+    },
+    {
+      "file": "MiMo-V2.6-Flash-RL-DFlash-Q8_0.gguf",
+      "bytes": 1565911104,
+      "sha256": "06a56d466017739918f2e1c9b771f08ac5cb92d7ea2173bbb5537a82284a7d8c"
+    }
+  ],
+  "weight_file_bytes": 93092184576,
+  "main_tensor_payload_bytes": 88771782144,
+  "imatrix_sha256": "265cc19bc1470b95a9157d3b2fab893f325a9e2b6ef414cdbdfac4326c9ef8e3",
+  "quality_report": "quality-status.json",
+  "scope": "Artifact structural integrity evidence; runtime qualification is separate."
+}
