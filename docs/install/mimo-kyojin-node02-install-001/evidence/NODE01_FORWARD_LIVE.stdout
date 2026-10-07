@@ -1,0 +1,95 @@
+{
+  "schema": "mimo-kyojin-node01-forward-final-v1",
+  "status": "PASS",
+  "observed_at": 1791371106.0854502,
+  "unit": {
+    "ActiveState": "active",
+    "SubState": "running",
+    "InvocationID": "9243de0049f84d54ad51324fe5352b05",
+    "MainPID": "1693836",
+    "Result": "success",
+    "NRestarts": "0"
+  },
+  "health": {
+    "status": "ok",
+    "model": "mimo-mopd-kyojin",
+    "generator": true,
+    "dflash_loaded": true,
+    "ctx": 40960,
+    "ndt": 7,
+    "lossless": true,
+    "spec_gate": null
+  },
+  "models": {
+    "object": "list",
+    "data": [
+      {
+        "id": "mimo-mopd-kyojin",
+        "object": "model",
+        "created": 0,
+        "owned_by": "local"
+      }
+    ]
+  },
+  "slots": [
+    {
+      "id": 0,
+      "id_task": 3,
+      "n_ctx": 40960,
+      "is_processing": false,
+      "n_prompt_tokens": 13,
+      "prompt": "<|im_start|>user\nReply with exactly CLIENT_READY.<|im_end|><|im_start|>assistant\n"
+    }
+  ],
+  "q18": {
+    "status": "COMPLETE",
+    "exact": true,
+    "content": "FORWARD_READY",
+    "usage": {
+      "prompt_tokens": 13,
+      "completion_tokens": 18,
+      "total_tokens": 31
+    },
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 13,
+      "prompt_ms": 347.90754318237305,
+      "predicted_n": 19,
+      "predicted_ms": 487.6086711883545,
+      "prompt_per_second": 37.36624932327323,
+      "predicted_per_second": 38.96567293131799,
+      "accepted_draft_tokens": 12,
+      "rejected_draft_tokens": 3
+    }
+  },
+  "q19": {
+    "status": "COMPLETE",
+    "exact": true,
+    "content": "CLIENT_READY",
+    "usage": {
+      "prompt_tokens": 13,
+      "completion_tokens": 16,
+      "total_tokens": 29
+    },
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 13,
+      "prompt_ms": 902.8720855712891,
+      "predicted_n": 17,
+      "predicted_ms": 370.6643581390381,
+      "prompt_per_second": 14.39849587527595,
+      "predicted_per_second": 45.86359499292137,
+      "accepted_draft_tokens": 12,
+      "rejected_draft_tokens": 0
+    }
+  },
+  "remote_commit": "5231cb3effd2961b0eafa05ed5355e3f69523417",
+  "remote_git_status": "## main",
+  "ledger": {
+    "phase": "COMPLETE",
+    "starts": 4,
+    "requests": 17,
+    "charged_output_tokens": 2847
+  },
+  "generation_requests_sent_by_this_verifier": 0
+}

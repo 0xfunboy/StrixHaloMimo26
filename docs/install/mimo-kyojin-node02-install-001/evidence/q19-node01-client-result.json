@@ -1,0 +1,26 @@
+{
+  "id": "q19-node01-client",
+  "status": "COMPLETE",
+  "exact": true,
+  "content": "CLIENT_READY",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 13,
+    "completion_tokens": 16,
+    "total_tokens": 29
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 13,
+    "prompt_ms": 902.8720855712891,
+    "predicted_n": 17,
+    "predicted_ms": 370.6643581390381,
+    "prompt_per_second": 14.39849587527595,
+    "predicted_per_second": 45.86359499292137,
+    "accepted_draft_tokens": 12,
+    "rejected_draft_tokens": 0
+  },
+  "actual_tokens": 16,
+  "path": "Node01 repository client -> loopback SSH forward -> Node02",
+  "completed_at": 1791367160.1662629
+}

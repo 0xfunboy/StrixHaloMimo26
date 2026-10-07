@@ -1,0 +1,14 @@
+[Unit]
+Description=Private NODE01 forwarding to MiMo Kyojin on NODE02
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ssh -NT -o IdentityAgent=none -o BatchMode=yes -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -L 127.0.0.1:18571:127.0.0.1:18571 02-evo-x3-tb
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=yes
+
+# Deliberately manual/static. Do not enable at boot in this mandate.

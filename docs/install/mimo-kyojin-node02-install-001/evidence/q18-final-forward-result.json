@@ -1,0 +1,43 @@
+{
+  "id": "q18-final-forward",
+  "status": "COMPLETE",
+  "http_status": 200,
+  "elapsed_s": 0.8569077689899132,
+  "response": {
+    "id": "chatcmpl-1dc856cab479496da0d9faeb09537ca3",
+    "object": "chat.completion",
+    "created": 1791367062,
+    "model": "mimo-mopd-kyojin",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "FORWARD_READY",
+          "reasoning_content": "The user wants me to reply with exactly \"FORWARD_READY\"."
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 13,
+      "completion_tokens": 18,
+      "total_tokens": 31
+    },
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 13,
+      "prompt_ms": 347.90754318237305,
+      "predicted_n": 19,
+      "predicted_ms": 487.6086711883545,
+      "prompt_per_second": 37.36624932327323,
+      "predicted_per_second": 38.96567293131799,
+      "accepted_draft_tokens": 12,
+      "rejected_draft_tokens": 3
+    }
+  },
+  "actual_tokens": 18,
+  "exact": true,
+  "path": "NODE01 loopback -> SSH forward -> NODE02 loopback",
+  "completed_at": 1791367081.2699816
+}

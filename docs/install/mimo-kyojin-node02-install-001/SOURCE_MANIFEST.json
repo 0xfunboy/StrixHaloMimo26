@@ -1,0 +1,117 @@
+{
+  "schema": "mimo-kyojin-node02-install-001-source-manifest-v1",
+  "engine_commit": "a3ac00d4a32148229e66c0916fcc3282bf47a3d9",
+  "model_revision": "f895a38f1a3401cf61c8e6f8a9d1decca5198bde",
+  "model_verification_receipt_sha256": "bca27af0fc62804299dc2b72bb9ac86f243657a5f40ae191be7b0c05b93f94d7",
+  "runtime_identity_sha256": "99096e7cb0229e9960e46eafff8c21aafe29e9ec4f0f420d016c74fc568b1877",
+  "files": {
+    ".gitignore": {
+      "sha256": "7d64640787fd204ed7be1e047fb7fd8b5b84834dd41448ef1e66c032379185a5",
+      "bytes": 92
+    },
+    "bin/budget.py": {
+      "sha256": "902fb3047dd7becd785ad192a6d6cc8a973ff075bc5e370a256dc0df0f2717ee",
+      "bytes": 2439
+    },
+    "bin/build-delivery.py": {
+      "sha256": "a70b2c96e00e0147cdab9457d1c3c75a223fd9845c15ba1bc7c0ac921897255a",
+      "bytes": 18826
+    },
+    "bin/download-model": {
+      "sha256": "3f5c104233fc0b3bdbc14509b1e65400dce55364eff830a19aa10d27afbf6540",
+      "bytes": 1744
+    },
+    "bin/launch-server": {
+      "sha256": "1d426e4ff34923d5edd19374c379111b62faac28afe274b67056c5b23c1fb7cb",
+      "bytes": 2833
+    },
+    "bin/memory-guard": {
+      "sha256": "7b8414070bf9143047ceec2b052a1097b8e1f017c120c80aa7ae7cb020a24644",
+      "bytes": 969
+    },
+    "bin/mimo": {
+      "sha256": "837e56114a79b0c479583316cd9ad42d8558a57389c28e7925a4e8652640e36d",
+      "bytes": 5876
+    },
+    "bin/mimo-client.py": {
+      "sha256": "4b88d8a26e17da86271ea2e643d4b049f834887bb7d382d7de253c19b26a260d",
+      "bytes": 2407
+    },
+    "bin/prepare-runtime": {
+      "sha256": "5ec6f6324c88ddf52cbfe85a5ffeb7564db61c909552fc6c996d14d7276c8562",
+      "bytes": 4204
+    },
+    "bin/qualify.py": {
+      "sha256": "b676545f2f5ca431fda93f2a206eb3851e1e22fdef185f381e6aba3392906468",
+      "bytes": 20681
+    },
+    "bin/resume-base-qualification.py": {
+      "sha256": "a1e1e2327944bdc77206098698a64e8703426f11a214aff6fdc55702a990b8ec",
+      "bytes": 6259
+    },
+    "bin/resume-cancel-recovery.py": {
+      "sha256": "97c04a313fcf193fb1dfd43d665e12d1120786d21f2eab78e08fd5f41e4d8903",
+      "bytes": 7417
+    },
+    "bin/resume-long-qualification.py": {
+      "sha256": "bbd95ad5ec4dd201ff8098de61a625e1cc08726a033c54d38478fc88cb1bec05",
+      "bytes": 10821
+    },
+    "bin/verify-model.py": {
+      "sha256": "0068d27438f54e1a4f0d17130377d37a43ef635c3c25bf694894a7f18d994751",
+      "bytes": 1816
+    },
+    "config/model-manifest.json": {
+      "sha256": "35b7f6fde6958cd0887d694058bcc71b78bb1e6749c48a929cb61f435073000e",
+      "bytes": 8413
+    },
+    "config/profiles.json": {
+      "sha256": "b3bce84acbc2f34e04494e404d28fef6ce1b7590772c220c390018aa88b00c63",
+      "bytes": 302
+    },
+    "config/source-lock.json": {
+      "sha256": "b9933bf21bea60fb20fad9a2075a3a43ad70cb58b1fbd8ecfe8cc1781a2a85c3",
+      "bytes": 998
+    },
+    "config/runtime-constraints.txt": {
+      "sha256": "612d66788ddbe24809c83fe6f13512022c129b1586292abbbfa31717f7851ec8",
+      "bytes": 68
+    },
+    "config/systemd/mimo-kyojin-download.service": {
+      "sha256": "a7bf4c85dd384904ccd014e29a4292c91665218739dca4eec330dedbc765c0ae",
+      "bytes": 361
+    },
+    "config/systemd/mimo-kyojin-runtime-prepare.service": {
+      "sha256": "f819b066b9ca716e30f398a44affeb1609220a34055ef85160e798e3c54fc7ac",
+      "bytes": 308
+    },
+    "config/systemd/mimo-kyojin.service": {
+      "sha256": "05df4d2c8be5123ec256ce74df360eb0ec363a4d858ed6c863c6e180d8a2cc06",
+      "bytes": 571
+    },
+    "patches/0001-mimo-observability-and-cancel.patch": {
+      "sha256": "e63b01302fd5cb9d5c9a1fa46387959166d06b6b0eba382f6c673d1230684606",
+      "bytes": 4033
+    },
+    "docs/install/mimo-kyojin-node02-install-001/CHECKPOINT.json": {
+      "sha256": "a10954dd1bbb2095bde93b65f82d80801c4a30e87451345d72e52b312c213610",
+      "bytes": 1320
+    },
+    "docs/install/mimo-kyojin-node02-install-001/PLAN.md": {
+      "sha256": "7e86e46be68589e1a5f1797f498b6a957d5a0f352affc7216182255ff5845662",
+      "bytes": 6176
+    },
+    "docs/install/mimo-kyojin-node02-install-001/README_USO.md": {
+      "sha256": "270a1eeeb91f9d14a23aba438d3106af1443b2ab49b19e393e8390d3ee8c4f79",
+      "bytes": 2309
+    },
+    "docs/install/mimo-kyojin-node02-install-001/REPORT.md": {
+      "sha256": "2c3df5a8bf183615ba37f352405860ee0c26f5d160b949287e42ac795929f67f",
+      "bytes": 4889
+    },
+    "docs/install/mimo-kyojin-node02-install-001/RESULTS.json": {
+      "sha256": "72c90a7e2693ff69e24aa87d9c1adf5ff0f0ea7047914ecc0f325752df959c36",
+      "bytes": 21450
+    }
+  }
+}

@@ -1,0 +1,701 @@
+{
+  "schema": "mimo-kyojin-node02-install-001-results-v1",
+  "status": "COMPLETE_BASE_READY_LONG_BLOCKED_MEMORY_GUARD",
+  "resident": {
+    "node": "02-EVO-X3",
+    "service": "mimo-kyojin.service",
+    "unit": {
+      "LoadState": "loaded",
+      "ActiveState": "active",
+      "SubState": "running",
+      "FragmentPath": "/home/funboy/.config/systemd/user/mimo-kyojin.service",
+      "InvocationID": "1286885f0d6b443e9e61df22d5a29189",
+      "MainPID": "973531",
+      "Result": "success",
+      "NRestarts": "0"
+    },
+    "api": "http://127.0.0.1:18571/v1",
+    "model_id": "mimo-mopd-kyojin",
+    "profile": "base",
+    "context": 40960,
+    "health": {
+      "status": "ok",
+      "model": "mimo-mopd-kyojin",
+      "generator": true,
+      "dflash_loaded": true,
+      "ctx": 40960,
+      "ndt": 7,
+      "lossless": true,
+      "spec_gate": null
+    },
+    "models": {
+      "object": "list",
+      "data": [
+        {
+          "id": "mimo-mopd-kyojin",
+          "object": "model",
+          "created": 0,
+          "owned_by": "local"
+        }
+      ]
+    },
+    "slots": [
+      {
+        "id": 0,
+        "id_task": 3,
+        "n_ctx": 40960,
+        "is_processing": false,
+        "n_prompt_tokens": 13,
+        "prompt": "<|im_start|>user\nReply with exactly CLIENT_READY.<|im_end|><|im_start|>assistant\n"
+      }
+    ],
+    "manual_static": true,
+    "enabled_at_boot": false
+  },
+  "pins": {
+    "engine_repo": "https://github.com/Yamz-Labs/kyojin.git",
+    "engine_commit": "a3ac00d4a32148229e66c0916fcc3282bf47a3d9",
+    "model_repo": "yamz-labs/MiMo-V2.6-Flash-MOPD-EXL3-Yamz",
+    "model_revision": "f895a38f1a3401cf61c8e6f8a9d1decca5198bde",
+    "model_total_bytes": 105777615424,
+    "model_file_count": 37,
+    "model_verification": "PASS",
+    "runtime_checkpoint": "COMPLETE",
+    "runtime_identity": [
+      "python 3.12.15 (main, Oct  3 2026, 01:03:07) [Clang 22.1.3 ]",
+      "torch 2.12.0a0+rocm7.13.0a20260411 hip 7.13.60980",
+      "arch gfx1151",
+      "hsa_preload /home/funboy/StrixHaloMimoKyojin/.venv/lib/python3.12/site-packages/_rocm_sdk_devel/lib/libhsa-runtime64.so.1",
+      "extension /home/funboy/StrixHaloMimoKyojin/.engine/kyojin-src/exllamav3_ext.cpython-312-x86_64-linux-gnu.so"
+    ],
+    "extension_sha256": "d724fa6fe09f100d24b04148975e521babb72ab0eb88a4322acd18e21209f2f4",
+    "patch_file": "patches/0001-mimo-observability-and-cancel.patch",
+    "patch_sha256": "e63b01302fd5cb9d5c9a1fa46387959166d06b6b0eba382f6c673d1230684606",
+    "patched_serve_sha256": "fee3293cf5960d04b1680421d982a391005b5b1409e8b044c22110006a105b4a"
+  },
+  "base": {
+    "smoke": {
+      "status": "COMPLETE",
+      "content": "BASE_READY"
+    },
+    "stream": {
+      "status": "COMPLETE",
+      "content_chars": 126
+    },
+    "thinking": {
+      "reasoning_chars": 42,
+      "content_chars": 94,
+      "finish_reason": "stop",
+      "content_sha256": "00c2b12e9d1f9c40e6a4e74d4223a99f06b524f463dbb51ad7fffb95db3cc43c"
+    },
+    "thinking_contract": {
+      "rendered_sha256": "0d93bffcc81b5cbd8f616dd20b69b057035ca89f3ac35fae9bd3c7c082334d64",
+      "generation_prompt": "<|im_start|>user\nReturn 2+2.<|im_end|><|im_start|>assistant\n",
+      "implicit_empty_think": false,
+      "reasoning_effort_forwarded": false,
+      "high_level_available": false
+    },
+    "dflash": {
+      "loaded": true,
+      "accepted_draft_tokens": 31,
+      "rejected_draft_tokens": 3,
+      "observed": true,
+      "lossless_env": true,
+      "plain_parity": "NOT_RUN_START_BUDGET_PRESERVED"
+    },
+    "performance": {
+      "8k": {
+        "rows": [
+          {
+            "id": "q08-perf-8k-r1",
+            "offline_tokens": 8180,
+            "cache_n": 0,
+            "prompt_n": 8180,
+            "prompt_ms": 11837.033987045288,
+            "predicted_n": 11,
+            "predicted_ms": 542.435884475708,
+            "prompt_per_second": 691.0514922025545,
+            "predicted_per_second": 20.278894363030687,
+            "accepted_draft_tokens": 1,
+            "rejected_draft_tokens": 0,
+            "elapsed_s": 12.4195721069118
+          },
+          {
+            "id": "q09-perf-8k-r2",
+            "offline_tokens": 8180,
+            "cache_n": 0,
+            "prompt_n": 8180,
+            "prompt_ms": 11873.76093864441,
+            "predicted_n": 9,
+            "predicted_ms": 479.2904853820801,
+            "prompt_per_second": 688.9139879326125,
+            "predicted_per_second": 18.777756443100248,
+            "accepted_draft_tokens": 0,
+            "rejected_draft_tokens": 0,
+            "elapsed_s": 12.399185350979678
+          },
+          {
+            "id": "q10-perf-8k-r3",
+            "offline_tokens": 8180,
+            "cache_n": 0,
+            "prompt_n": 8180,
+            "prompt_ms": 11878.829717636108,
+            "predicted_n": 11,
+            "predicted_ms": 504.35447692871094,
+            "prompt_per_second": 688.620023557996,
+            "predicted_per_second": 21.810057218060184,
+            "accepted_draft_tokens": 2,
+            "rejected_draft_tokens": 0,
+            "elapsed_s": 12.426206753007136
+          }
+        ],
+        "median_prompt_tps": 688.9139879326125,
+        "range_prompt_tps": [
+          688.620023557996,
+          691.0514922025545
+        ],
+        "median_decode_tps": 20.278894363030687,
+        "range_decode_tps": [
+          18.777756443100248,
+          21.810057218060184
+        ],
+        "cache_n": [
+          0,
+          0,
+          0
+        ],
+        "accepted_draft_tokens": [
+          1,
+          0,
+          2
+        ],
+        "rejected_draft_tokens": [
+          0,
+          0,
+          0
+        ]
+      },
+      "32k": {
+        "rows": [
+          {
+            "id": "q12-perf-32k-r1",
+            "offline_tokens": 32757,
+            "cache_n": 0,
+            "prompt_n": 32757,
+            "prompt_ms": 53520.26891708374,
+            "predicted_n": 1,
+            "predicted_ms": 76.42412185668945,
+            "prompt_per_second": 612.048494202239,
+            "predicted_per_second": 13.084873933850368,
+            "accepted_draft_tokens": 0,
+            "rejected_draft_tokens": 0,
+            "elapsed_s": 53.7241243791068
+          },
+          {
+            "id": "q13-perf-32k-r2",
+            "offline_tokens": 32757,
+            "cache_n": 0,
+            "prompt_n": 32757,
+            "prompt_ms": 53630.99670410156,
+            "predicted_n": 9,
+            "predicted_ms": 624.3569850921631,
+            "prompt_per_second": 610.7848448301321,
+            "predicted_per_second": 14.414830321264821,
+            "accepted_draft_tokens": 1,
+            "rejected_draft_tokens": 0,
+            "elapsed_s": 54.38186800992116
+          },
+          {
+            "id": "q14-perf-32k-r3",
+            "offline_tokens": 32757,
+            "cache_n": 0,
+            "prompt_n": 32757,
+            "prompt_ms": 53591.21227264404,
+            "predicted_n": 9,
+            "predicted_ms": 625.1375675201416,
+            "prompt_per_second": 611.2382723001213,
+            "predicted_per_second": 14.396831141827075,
+            "accepted_draft_tokens": 1,
+            "rejected_draft_tokens": 0,
+            "elapsed_s": 54.36137006804347
+          }
+        ],
+        "median_prompt_tps": 611.2382723001213,
+        "range_prompt_tps": [
+          610.7848448301321,
+          612.048494202239
+        ],
+        "median_decode_tps": 14.396831141827075,
+        "range_decode_tps": [
+          13.084873933850368,
+          14.414830321264821
+        ],
+        "cache_n": [
+          0,
+          0,
+          0
+        ],
+        "accepted_draft_tokens": [
+          0,
+          1,
+          1
+        ],
+        "rejected_draft_tokens": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "performance_limit": "The 8K/32K requests stopped naturally after 1-11 output tokens; native prefill is useful, but decode figures are descriptive and are not comparable to published fixed-128-token runs.",
+    "cancel_recovery": {
+      "schema": "mimo-kyojin-cancel-recovery-v1",
+      "cancel": {
+        "id": "q03b-cancel-recovery",
+        "status": "CANCELLED",
+        "elapsed_s": 43.42139846691862,
+        "drained": true,
+        "captured_bytes": 443,
+        "generated_delta_observed": true,
+        "probe_errors": [],
+        "health": {
+          "status": "ok",
+          "model": "mimo-mopd-kyojin",
+          "generator": true,
+          "dflash_loaded": true,
+          "ctx": 40960,
+          "ndt": 7,
+          "lossless": true,
+          "spec_gate": null
+        },
+        "memory": {
+          "memavailable": 15842692,
+          "swapfree": 8257416,
+          "swaptotal": 8388604,
+          "mem_info_gtt_total": 128849018880,
+          "mem_info_gtt_used": 109063118848,
+          "label": "request-q03b-cancel-recovery",
+          "at": 1791366972.280458
+        }
+      },
+      "recovery": {
+        "id": "q04-recovery",
+        "status": "COMPLETE",
+        "finish_reason": "stop",
+        "content": "RECOVERY_READY",
+        "reasoning_chars": 57,
+        "exact": true,
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 14,
+          "prompt_ms": 1237.7278804779053,
+          "predicted_n": 19,
+          "predicted_ms": 399.25098419189453,
+          "prompt_per_second": 11.311048430608503,
+          "predicted_per_second": 47.589112493879064,
+          "accepted_draft_tokens": 14,
+          "rejected_draft_tokens": 0
+        }
+      },
+      "health_after": {
+        "status": "ok",
+        "model": "mimo-mopd-kyojin",
+        "generator": true,
+        "dflash_loaded": true,
+        "ctx": 40960,
+        "ndt": 7,
+        "lossless": true,
+        "spec_gate": null
+      },
+      "slots_after": [
+        {
+          "id": 0,
+          "id_task": 1,
+          "n_ctx": 40960,
+          "is_processing": false,
+          "n_prompt_tokens": 14,
+          "prompt": "<|im_start|>user\nReply with exactly RECOVERY_READY.<|im_end|><|im_start|>assistant\n"
+        }
+      ],
+      "memory_after": {
+        "memavailable": 15803892,
+        "swapfree": 8257416,
+        "swaptotal": 8388604,
+        "mem_info_gtt_total": 128849018880,
+        "mem_info_gtt_used": 109065351168,
+        "label": "cancel-recovery-complete",
+        "at": 1791366973.9845266
+      },
+      "ledger": {
+        "schema": "mimo-kyojin-ledger-v1",
+        "phase": "QUALIFICATION",
+        "limits": {
+          "starts": 4,
+          "requests": 18,
+          "output_tokens": 120000
+        },
+        "starts": [
+          {
+            "n": 1,
+            "profile": "base",
+            "state": "READY",
+            "at": 1791358413.6980484,
+            "settled_at": 1791358514.2075405
+          },
+          {
+            "n": 2,
+            "profile": "base",
+            "state": "READY",
+            "at": 1791358554.655449,
+            "settled_at": 1791358594.8315883
+          },
+          {
+            "n": 3,
+            "profile": "long",
+            "state": "LONG_MEMORY_GUARD",
+            "at": 1791366652.8788736,
+            "settled_at": 1791366806.3293452
+          },
+          {
+            "n": 4,
+            "profile": "base",
+            "state": "READY",
+            "at": 1791366806.362963,
+            "settled_at": 1791366846.5682101
+          }
+        ],
+        "requests": [
+          {
+            "id": "q01-base-smoke",
+            "kind": "smoke",
+            "cap": 256,
+            "state": "COMPLETE",
+            "at": 1791358514.2653081,
+            "actual_tokens": 16,
+            "settled_at": 1791358517.7425406
+          },
+          {
+            "id": "q02-stream",
+            "kind": "stream",
+            "cap": 256,
+            "state": "COMPLETE",
+            "at": 1791358517.7575133,
+            "actual_tokens": 38,
+            "settled_at": 1791358520.2691607
+          },
+          {
+            "id": "q03-cancel",
+            "kind": "cancel",
+            "cap": 2048,
+            "state": "ERROR",
+            "at": 1791358520.3248637,
+            "settled_at": 1791358538.476089
+          },
+          {
+            "id": "q05-thinking",
+            "kind": "thinking",
+            "cap": 1024,
+            "state": "COMPLETE",
+            "at": 1791366138.5445797,
+            "actual_tokens": 81,
+            "settled_at": 1791366143.2101898
+          },
+          {
+            "id": "q06-dflash-work",
+            "kind": "dflash-work",
+            "cap": 256,
+            "state": "COMPLETE",
+            "at": 1791366143.230516,
+            "actual_tokens": 40,
+            "settled_at": 1791366144.6831186
+          },
+          {
+            "id": "q07-warmup-8k",
+            "kind": "warmup-8k",
+            "cap": 32,
+            "state": "COMPLETE",
+            "at": 1791366144.7528288,
+            "actual_tokens": 9,
+            "settled_at": 1791366233.1870475
+          },
+          {
+            "id": "q08-perf-8k-r1",
+            "kind": "performance-8k",
+            "cap": 128,
+            "state": "COMPLETE",
+            "at": 1791366233.2685838,
+            "actual_tokens": 11,
+            "settled_at": 1791366245.717587
+          },
+          {
+            "id": "q09-perf-8k-r2",
+            "kind": "performance-8k",
+            "cap": 128,
+            "state": "COMPLETE",
+            "at": 1791366245.805294,
+            "actual_tokens": 9,
+            "settled_at": 1791366258.2358658
+          },
+          {
+            "id": "q10-perf-8k-r3",
+            "kind": "performance-8k",
+            "cap": 128,
+            "state": "COMPLETE",
+            "at": 1791366258.3317053,
+            "actual_tokens": 11,
+            "settled_at": 1791366270.781927
+          },
+          {
+            "id": "q11-warmup-32k",
+            "kind": "warmup-32k",
+            "cap": 32,
+            "state": "COMPLETE",
+            "at": 1791366271.1084242,
+            "actual_tokens": 1,
+            "settled_at": 1791366324.7901347
+          },
+          {
+            "id": "q12-perf-32k-r1",
+            "kind": "performance-32k",
+            "cap": 128,
+            "state": "COMPLETE",
+            "at": 1791366325.2163053,
+            "actual_tokens": 1,
+            "settled_at": 1791366378.960805
+          },
+          {
+            "id": "q13-perf-32k-r2",
+            "kind": "performance-32k",
+            "cap": 128,
+            "state": "COMPLETE",
+            "at": 1791366379.3663208,
+            "actual_tokens": 9,
+            "settled_at": 1791366433.76395
+          },
+          {
+            "id": "q14-perf-32k-r3",
+            "kind": "performance-32k",
+            "cap": 128,
+            "state": "COMPLETE",
+            "at": 1791366434.1084852,
+            "actual_tokens": 9,
+            "settled_at": 1791366488.4901695
+          },
+          {
+            "id": "q03b-cancel-recovery",
+            "kind": "cancel-recovery",
+            "cap": 512,
+            "state": "CANCELLED",
+            "at": 1791366928.8505182,
+            "settled_at": 1791366972.2741537
+          },
+          {
+            "id": "q04-recovery",
+            "kind": "recovery",
+            "cap": 2048,
+            "state": "COMPLETE",
+            "at": 1791366972.3006108,
+            "actual_tokens": 18,
+            "settled_at": 1791366973.9755044
+          }
+        ],
+        "charged_output_tokens": 2813
+      },
+      "completed_at": 1791366973.9853082
+    },
+    "forwarded_smoke": {
+      "status": "COMPLETE",
+      "content": "FORWARD_READY",
+      "exact": true,
+      "elapsed_s": 0.8569077689899132,
+      "usage": {
+        "prompt_tokens": 13,
+        "completion_tokens": 18,
+        "total_tokens": 31
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 13,
+        "prompt_ms": 347.90754318237305,
+        "predicted_n": 19,
+        "predicted_ms": 487.6086711883545,
+        "prompt_per_second": 37.36624932327323,
+        "predicted_per_second": 38.96567293131799,
+        "accepted_draft_tokens": 12,
+        "rejected_draft_tokens": 3
+      }
+    },
+    "node01_client": {
+      "id": "q19-node01-client",
+      "status": "COMPLETE",
+      "exact": true,
+      "content": "CLIENT_READY",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 13,
+        "completion_tokens": 16,
+        "total_tokens": 29
+      },
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 13,
+        "prompt_ms": 902.8720855712891,
+        "predicted_n": 17,
+        "predicted_ms": 370.6643581390381,
+        "prompt_per_second": 14.39849587527595,
+        "predicted_per_second": 45.86359499292137,
+        "accepted_draft_tokens": 12,
+        "rejected_draft_tokens": 0
+      },
+      "actual_tokens": 16,
+      "path": "Node01 repository client -> loopback SSH forward -> Node02",
+      "completed_at": 1791367160.1662629
+    }
+  },
+  "long": {
+    "status": "BLOCKED_MEMORY_GUARD",
+    "context": 196608,
+    "admission": {
+      "schema": "mimo-kyojin-long-admission-v1",
+      "status": "BLOCKED_MEMORY_GUARD",
+      "profile": "long",
+      "context": 196608,
+      "start_number": 3,
+      "unit_invocation_id": "5308b6d7f75a4f37b05696398953b3fb",
+      "main_pid": 972309,
+      "service_exit": "signal=TERM",
+      "duration_s": 46.608,
+      "memory_peak_bytes": 56693568307,
+      "swap_peak_bytes": 2684354560,
+      "ready": false,
+      "requests_sent": 0,
+      "reason": "memory-guard terminated the owned MiMo process after MemAvailable crossed the mandatory 8 GiB floor during LONG initialization",
+      "observed_at": 1791366806.3340237,
+      "decision": "RESTORE_BASE_WITH_RESERVED_START_4"
+    },
+    "code64": "NOT_RUN",
+    "document128": "NOT_RUN",
+    "decision": "BASE_RESTORED_AND_LEFT_AVAILABLE",
+    "base_restore": {
+      "schema": "mimo-kyojin-base-restore-v1",
+      "status": "READY",
+      "profile": "base",
+      "mode": "dflash",
+      "health": {
+        "status": "ok",
+        "model": "mimo-mopd-kyojin",
+        "generator": true,
+        "dflash_loaded": true,
+        "ctx": 40960,
+        "ndt": 7,
+        "lossless": true,
+        "spec_gate": null
+      },
+      "slots": [
+        {
+          "id": 0,
+          "id_task": -1,
+          "n_ctx": 40960,
+          "is_processing": false,
+          "n_prompt_tokens": 0,
+          "prompt": ""
+        }
+      ],
+      "unit": {
+        "ActiveState": "active",
+        "SubState": "running",
+        "InvocationID": "1286885f0d6b443e9e61df22d5a29189",
+        "MainPID": "973531",
+        "Result": "success",
+        "NRestarts": "0"
+      },
+      "at": 1791366846.6405134
+    }
+  },
+  "budgets": {
+    "starts": {
+      "used": 4,
+      "limit": 4,
+      "records": [
+        {
+          "n": 1,
+          "profile": "base",
+          "state": "READY",
+          "at": 1791358413.6980484,
+          "settled_at": 1791358514.2075405
+        },
+        {
+          "n": 2,
+          "profile": "base",
+          "state": "READY",
+          "at": 1791358554.655449,
+          "settled_at": 1791358594.8315883
+        },
+        {
+          "n": 3,
+          "profile": "long",
+          "state": "LONG_MEMORY_GUARD",
+          "at": 1791366652.8788736,
+          "settled_at": 1791366806.3293452
+        },
+        {
+          "n": 4,
+          "profile": "base",
+          "state": "READY",
+          "at": 1791366806.362963,
+          "settled_at": 1791366846.5682101
+        }
+      ]
+    },
+    "requests": {
+      "used": 17,
+      "limit": 18
+    },
+    "charged_output_tokens": {
+      "used": 2847,
+      "limit": 120000
+    },
+    "ledger_phase": "COMPLETE"
+  },
+  "resources_final": {
+    "memory": {
+      "memavailable_kb": 15849840,
+      "swaptotal_kb": 8388604,
+      "swapfree_kb": 8267964,
+      "mem_info_gtt_total_bytes": 128849018880,
+      "mem_info_gtt_used_bytes": 109067558912
+    },
+    "disk_home": {
+      "path": "/home/funboy",
+      "total_bytes": 1966736678912,
+      "free_bytes": 831847645184
+    },
+    "disk_models": {
+      "path": "/home/funboy/models",
+      "total_bytes": 1966736678912,
+      "free_bytes": 831847645184
+    }
+  },
+  "network": {
+    "node02_bind": "127.0.0.1:18571",
+    "node01_forward": "mimo-kyojin-forward-node02.service",
+    "node01_forward_test": "PASS_Q18_FORWARD_READY",
+    "node01_repository_client_test": "PASS_Q19_CLIENT_READY",
+    "windows_command": "ssh -p 7777 -N -o ExitOnForwardFailure=yes -L 127.0.0.1:18571:127.0.0.1:18571 funboy@192.168.1.12"
+  },
+  "limitations": [
+    "LONG196608 was not admitted: the mandatory memory guard stopped the owned process before READY.",
+    "No 64K code or 128K document request was sent because LONG was not technically admissible.",
+    "The separate DFlash/plain exact-parity start was not run; all four allowed starts were consumed by BASE, recovery, LONG admission and BASE restore.",
+    "reasoning_effort is not forwarded by this server; native reasoning was observed, but no separate HIGH level exists.",
+    "8K/32K decode medians use very short natural continuations and are not fixed-output benchmark equivalents.",
+    "The external Windows SSH hop was documented from the verified listener/configuration; generation was proven through the NODE01 private forward and repository client."
+  ],
+  "gufo_node01_preservation": {
+    "expected_model_invocation": "db5abd0b75c9404e8e09b217e93c9c51",
+    "expected_workbench_invocation": "32b7c76849a54704bb56fce19f908451",
+    "qwen_requests": 0,
+    "qwen_restarts": 0
+  },
+  "completed_at": "2026-10-07T12:04:59.180009+02:00"
+}

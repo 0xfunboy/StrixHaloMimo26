@@ -1,0 +1,55 @@
+{
+  "schema": "mimo-kyojin-node02-install-001-checkpoint-v1",
+  "phase": "FINAL",
+  "status": "COMPLETE_BASE_READY_LONG_BLOCKED_MEMORY_GUARD",
+  "resident_profile": "base",
+  "resident_context": 40960,
+  "long_status": "BLOCKED_MEMORY_GUARD",
+  "node01_forward": "ACTIVE_VERIFIED",
+  "budget": {
+    "starts": {
+      "used": 4,
+      "limit": 4,
+      "records": [
+        {
+          "n": 1,
+          "profile": "base",
+          "state": "READY",
+          "at": 1791358413.6980484,
+          "settled_at": 1791358514.2075405
+        },
+        {
+          "n": 2,
+          "profile": "base",
+          "state": "READY",
+          "at": 1791358554.655449,
+          "settled_at": 1791358594.8315883
+        },
+        {
+          "n": 3,
+          "profile": "long",
+          "state": "LONG_MEMORY_GUARD",
+          "at": 1791366652.8788736,
+          "settled_at": 1791366806.3293452
+        },
+        {
+          "n": 4,
+          "profile": "base",
+          "state": "READY",
+          "at": 1791366806.362963,
+          "settled_at": 1791366846.5682101
+        }
+      ]
+    },
+    "requests": {
+      "used": 17,
+      "limit": 18
+    },
+    "charged_output_tokens": {
+      "used": 2847,
+      "limit": 120000
+    },
+    "ledger_phase": "COMPLETE"
+  },
+  "updated_at": "2026-10-07T12:04:59.180009+02:00"
+}

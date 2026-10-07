@@ -1,0 +1,24 @@
+{
+  "schema": "mimo-kyojin-source-lock-v1",
+  "engine_repo": "https://github.com/Yamz-Labs/kyojin.git",
+  "engine_commit": "a3ac00d4a32148229e66c0916fcc3282bf47a3d9",
+  "engine_patch": "patches/0001-mimo-observability-and-cancel.patch",
+  "model_repo": "yamz-labs/MiMo-V2.6-Flash-MOPD-EXL3-Yamz",
+  "model_revision_full": "f895a38f1a3401cf61c8e6f8a9d1decca5198bde",
+  "model_dir": "/home/funboy/models/MiMo-V2.6-MOPD-EXL3-Yamz/f895a38f1a3401cf61c8e6f8a9d1decca5198bde",
+  "model_manifest": "config/model-manifest.json",
+  "service": "mimo-kyojin.service",
+  "api": "http://127.0.0.1:18571/v1",
+  "model_id": "mimo-mopd-kyojin",
+  "dflash": {
+    "enabled": true,
+    "drafter": "drafter/",
+    "ndt": 7,
+    "dynamic_draft": true,
+    "draft_confidence": 0.6,
+    "spec_gate": false,
+    "lossless": true
+  },
+  "engine_patch_sha256": "e63b01302fd5cb9d5c9a1fa46387959166d06b6b0eba382f6c673d1230684606",
+  "patched_serve_sha256": "fee3293cf5960d04b1680421d982a391005b5b1409e8b044c22110006a105b4a"
+}

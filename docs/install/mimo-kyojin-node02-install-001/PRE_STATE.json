@@ -1,0 +1,26 @@
+{
+  "schema": "mimo-kyojin-node02-install-001-prestate-v1",
+  "observed_at": "2026-10-07T08:40:16+0200",
+  "node01": {
+    "hostname": "01-EVO-X3",
+    "qwen_gufo": {
+      "ActiveState": "active",
+      "SubState": "running",
+      "InvocationID": "db5abd0b75c9404e8e09b217e93c9c51",
+      "MainPID": "1579891",
+      "NRestarts": "0"
+    },
+    "haloclu": {
+      "ActiveState": "active",
+      "SubState": "running",
+      "InvocationID": "32b7c76849a54704bb56fce19f908451",
+      "MainPID": "1671090",
+      "NRestarts": "0"
+    }
+  },
+  "node02_target": "02-EVO-X3",
+  "deployment": "/home/funboy/StrixHaloMimoKyojin",
+  "model_repo": "yamz-labs/MiMo-V2.6-Flash-MOPD-EXL3-Yamz",
+  "model_revision": "f895a38f1a3401cf61c8e6f8a9d1decca5198bde",
+  "engine_commit": "a3ac00d4a32148229e66c0916fcc3282bf47a3d9"
+}
